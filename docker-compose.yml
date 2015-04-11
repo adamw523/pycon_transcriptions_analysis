@@ -1,0 +1,9 @@
+ipython:
+  build: ipython/
+  environment:
+    PASSWORD: "password"
+  ports:
+    - "8889:8888"
+  volumes:
+    - ./notebooks:/notebooks
+    - .:/work
