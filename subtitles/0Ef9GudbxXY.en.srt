@@ -1,0 +1,2343 @@
+1
+00:00:00,020 --> 00:00:07,020
+American accent Guido van Rossum yeah
+
+2
+00:00:14,230 --> 00:00:17,910
+you know one of the things that I love
+about we know is that he is always
+
+3
+00:00:17,910 --> 00:00:19,520
+willing to share his pinion
+
+4
+00:00:19,520 --> 00:00:25,939
+and so I was thinking about what
+
+5
+00:00:25,939 --> 00:00:28,980
+it will I was thinking that the first
+question that I
+
+6
+00:00:28,980 --> 00:00:32,180
+that the time I ask you just sort of
+Kiko vertically as whether even have
+
+7
+00:00:32,180 --> 00:00:33,420
+Python 2.8
+
+8
+00:00:33,420 --> 00:00:36,949
+ob and sell
+
+9
+00:00:36,949 --> 00:00:40,510
+we know is truly
+
+10
+00:00:40,510 --> 00:00:45,360
+he is the his a not only been in it
+never did care for life
+
+11
+00:00:45,360 --> 00:00:48,550
+but he is part he is the guiding force
+
+12
+00:00:48,550 --> 00:00:51,879
+that helps keep us all in line least
+
+13
+00:00:51,879 --> 00:00:55,309
+it least programming language wise so
+without further ado
+
+14
+00:00:55,309 --> 00:01:02,309
+Guido van Rossum the
+
+15
+00:01:05,799 --> 00:01:11,290
+thank you fan well van too hard act to
+follow so I'm not even going to try
+
+16
+00:01:11,290 --> 00:01:15,140
+I I have a question for the organization
+
+17
+00:01:15,140 --> 00:01:20,670
+is it possible to have microphones out
+there so some people can
+
+18
+00:01:20,670 --> 00:01:23,880
+ask questions or am I too late with that
+request
+
+19
+00:01:23,880 --> 00:01:28,720
+there are microphones okay on an island
+go to my father slide
+
+20
+00:01:28,720 --> 00:01:32,830
+so to be honest
+
+21
+00:01:32,830 --> 00:01:36,560
+I always stress out for a keynote
+
+22
+00:01:36,560 --> 00:01:39,690
+and is here and was worse
+
+23
+00:01:39,690 --> 00:01:42,710
+and I had total complete mental block
+
+24
+00:01:42,710 --> 00:01:45,979
+because the thing i really wanna do if
+
+25
+00:01:45,979 --> 00:01:49,890
+give you another super technical excited
+talk about to let
+
+26
+00:01:49,890 --> 00:01:54,429
+a sin que el cap 250 3156 buck
+
+27
+00:01:54,429 --> 00:01:59,229
+there were like three or four talks in
+the regular program already dead
+
+28
+00:01:59,229 --> 00:02:00,960
+explained it better than I could
+
+29
+00:02:00,960 --> 00:02:04,060
+I did that talked last year I did it
+again
+
+30
+00:02:04,060 --> 00:02:07,759
+at the San Francisco buy from me
+defended by did it again at the Bay Area
+
+31
+00:02:07,759 --> 00:02:09,079
+pie from the interest group
+
+32
+00:02:09,079 --> 00:02:13,950
+I really don't want to certif repeat
+myself in that way
+
+33
+00:02:13,950 --> 00:02:17,590
+so I was really thinking
+
+34
+00:02:17,590 --> 00:02:21,730
+oh my god what can I do maybe maybe I
+should just read from fan mail
+
+35
+00:02:21,730 --> 00:02:26,790
+because I get a lot of fan mail
+
+36
+00:02:26,790 --> 00:02:32,420
+and if if you're if you've got a
+certified certain type of brain
+
+37
+00:02:32,420 --> 00:02:36,739
+its all very funny but
+
+38
+00:02:36,739 --> 00:02:40,170
+actually then I thought about it and I
+thought moment probably some of the
+
+39
+00:02:40,170 --> 00:02:42,430
+people who wrote me that fan mail
+
+40
+00:02:42,430 --> 00:02:45,709
+are India's audience and I don't want to
+embarrass you
+
+41
+00:02:45,709 --> 00:02:50,480
+I don't want to embarrass myself and
+maybe it's not actually that funny
+
+42
+00:02:50,480 --> 00:02:55,730
+so I collected I asked on Twitter what
+should I talk about
+
+43
+00:02:55,730 --> 00:02:58,910
+I said have racked my brain every time I
+had sorta
+
+44
+00:02:58,910 --> 00:03:04,519
+a brainwave all I should talk about that
+I just added to a list and then finally
+
+45
+00:03:04,519 --> 00:03:09,620
+a lacked last night I collected all
+lists I had
+
+46
+00:03:09,620 --> 00:03:13,450
+women text file I thought oh I'm going
+to become randomly
+
+47
+00:03:13,450 --> 00:03:18,230
+so the first thing I'm going to do is
+actually write the code that will
+
+48
+00:03:18,230 --> 00:03:19,560
+randomly pick
+
+49
+00:03:19,560 --> 00:03:25,239
+something from the less now they'll give
+me some time to grieve
+
+50
+00:03:25,239 --> 00:03:30,849
+also at I would love to take questions
+and as you can see
+
+51
+00:03:30,849 --> 00:03:36,310
+I today I'm making a choice to only take
+questions from women in the audience
+
+52
+00:03:36,310 --> 00:03:40,040
+because throughout the conference I've
+been
+
+53
+00:03:40,040 --> 00:03:43,709
+attacked by people with questions and
+they were almost all man so I think the
+
+54
+00:03:43,709 --> 00:03:48,459
+women have Sardar there a lil behind and
+they can catch up here
+
+55
+00:03:48,459 --> 00:03:52,280
+Island see how can I find my
+
+56
+00:03:52,280 --> 00:03:57,209
+you I bingo
+
+57
+00:03:57,209 --> 00:04:04,209
+okay let's see will win either random
+number generator I think
+
+58
+00:04:04,790 --> 00:04:09,060
+so year
+
+59
+00:04:09,060 --> 00:04:14,580
+near display how do that that is very
+sad
+
+60
+00:04:14,580 --> 00:04:21,580
+%uh PowerPoint too clever one sec
+
+61
+00:04:30,950 --> 00:04:34,860
+now handling it
+
+62
+00:04:34,860 --> 00:04:39,680
+you see that yeah so
+
+63
+00:04:39,680 --> 00:04:45,370
+a see what what was the rest of the plan
+and let's define a function
+
+64
+00:04:45,370 --> 00:04:50,320
+analysts big question
+
+65
+00:04:50,320 --> 00:04:54,630
+now
+
+66
+00:04:54,630 --> 00:05:01,500
+like see for 11 global variable okay we
+have a list of questions
+
+67
+00:05:01,500 --> 00:05:05,420
+but is not yet initialized
+
+68
+00:05:05,420 --> 00:05:08,760
+actually I can K you know I wanna I
+wanted
+
+69
+00:05:08,760 --> 00:05:14,540
+uninitialized initially and
+
+70
+00:05:14,540 --> 00:05:17,590
+you can you get you cancer to get a peek
+in
+
+71
+00:05:17,590 --> 00:05:20,990
+into my brain by hearing me talk about
+what im
+
+72
+00:05:20,990 --> 00:05:24,630
+what im doing well programming so we
+have a list of questions and we do
+
+73
+00:05:24,630 --> 00:05:25,420
+something like
+
+74
+00:05:25,420 --> 00:05:28,590
+if list of questions is
+
+75
+00:05:28,590 --> 00:05:32,070
+Mt we're gonna have to initialize it
+
+76
+00:05:32,070 --> 00:05:35,630
+so what show we initialize it to
+
+77
+00:05:35,630 --> 00:05:39,780
+questions is open and some file
+
+78
+00:05:39,780 --> 00:05:44,750
+so what was that
+
+79
+00:05:44,750 --> 00:05:51,250
+II
+
+80
+00:05:51,250 --> 00:05:58,250
+classy I'm so glad we at least we have
+static type analysis here
+
+81
+00:05:58,330 --> 00:06:04,760
+live static type analysis we should we
+should
+
+82
+00:06:04,760 --> 00:06:07,880
+all have that in in our software and
+opinionated
+
+83
+00:06:07,880 --> 00:06:11,300
+to Co programmer who
+
+84
+00:06:11,300 --> 00:06:18,260
+tells you when you're screwing up
+
+85
+00:06:18,260 --> 00:06:18,760
+the
+
+86
+00:06:18,760 --> 00:06:23,490
+K E and we're going to use return around
+
+87
+00:06:23,490 --> 00:06:30,490
+choice
+
+88
+00:06:32,099 --> 00:06:39,099
+left chill chill just tried this
+
+89
+00:06:44,459 --> 00:06:47,629
+let's try to slow slow see if I can
+remember how to run it
+
+90
+00:06:47,629 --> 00:06:50,869
+source must be saved sure
+
+91
+00:06:50,869 --> 00:06:57,869
+yeah
+
+92
+00:07:04,400 --> 00:07:07,350
+I know several have you already saw this
+coming so
+
+93
+00:07:07,350 --> 00:07:12,690
+I'm
+
+94
+00:07:12,690 --> 00:07:18,610
+on this issue really weird
+
+95
+00:07:18,610 --> 00:07:23,970
+clearly in Heidelberg I can't I can't
+get my cock cursor care where I want
+
+96
+00:07:23,970 --> 00:07:30,970
+I so this is this is certif
+
+97
+00:07:31,350 --> 00:07:36,169
+this is a taste of what students trying
+to learn Python
+
+98
+00:07:36,169 --> 00:07:39,300
+are going through in real life sometimes
+
+99
+00:07:39,300 --> 00:07:43,120
+and somehow I managed to solve my
+problem
+
+100
+00:07:43,120 --> 00:07:47,410
+yes and
+
+101
+00:07:47,410 --> 00:07:52,940
+CA and run geekdom
+
+102
+00:07:52,940 --> 00:07:55,940
+it I think they're worth
+
+103
+00:07:55,940 --> 00:08:00,090
+airline that just said geekdom in my
+list the question so let me see what I
+
+104
+00:08:00,090 --> 00:08:00,620
+can
+
+105
+00:08:00,620 --> 00:08:03,889
+add live about geekdom I
+
+106
+00:08:03,889 --> 00:08:06,970
+I'm a terrible geek myself I mean
+
+107
+00:08:06,970 --> 00:08:11,580
+cool earth would you write such a stupid
+program in front of 2,000 people
+
+108
+00:08:11,580 --> 00:08:16,700
+and think they can get away with it then
+stabbed is like as sign up absolute
+
+109
+00:08:16,700 --> 00:08:17,720
+total
+
+110
+00:08:17,720 --> 00:08:23,110
+lack of social skills last last night I
+discovered one ive one ive mining
+
+111
+00:08:23,110 --> 00:08:28,520
+Eagles charms is I do not know how to
+extract myself from a conversation
+
+112
+00:08:28,520 --> 00:08:31,640
+many of you have profited from that many
+
+113
+00:08:31,640 --> 00:08:35,450
+others accuse have wondered when
+
+114
+00:08:35,450 --> 00:08:40,340
+I was ever done Kayla different let's
+let's pick a different question
+
+115
+00:08:40,340 --> 00:08:47,340
+and again probably just type it here
+oppose the idea of exception
+
+116
+00:08:49,100 --> 00:08:52,710
+expression that sounds like a half-assed
+
+117
+00:08:52,710 --> 00:08:56,490
+question but I think what it comes from
+and it's probably one of those things I
+
+118
+00:08:56,490 --> 00:08:58,140
+copied and pasted from Twitter
+
+119
+00:08:58,140 --> 00:09:01,490
+there's being a very elaborate pap
+
+120
+00:09:01,490 --> 00:09:05,430
+that propose that we
+
+121
+00:09:05,430 --> 00:09:09,860
+at a new type of expression to Python
+against its gonna have to be added to by
+
+122
+00:09:09,860 --> 00:09:11,000
+2035
+
+123
+00:09:11,000 --> 00:09:14,780
+if we're going to do it and it would
+like
+
+124
+00:09:14,780 --> 00:09:18,020
+let them actually hey I have I can't I P
+I can
+
+125
+00:09:18,020 --> 00:09:21,710
+can show what it was supposed to look
+like something like axe
+
+126
+00:09:21,710 --> 00:09:25,250
+is the the of by
+
+127
+00:09:25,250 --> 00:09:31,620
+days for X there the
+
+128
+00:09:31,620 --> 00:09:34,820
+slit settlers a.m. accepted the key
+error
+
+129
+00:09:34,820 --> 00:09:40,170
+and if it was a key error will say
+
+130
+00:09:40,170 --> 00:09:44,480
+its none out his lead is not currently
+valid syntax 0
+
+131
+00:09:44,480 --> 00:09:48,320
+but that's what it would look like
+
+132
+00:09:48,320 --> 00:09:51,910
+and their hall that the
+
+133
+00:09:51,910 --> 00:09:56,120
+the PAP goes on at Lang in all the
+incredibly
+
+134
+00:09:56,120 --> 00:10:01,580
+good use cases where currently you have
+to write a four-line try except flock to
+
+135
+00:10:01,580 --> 00:10:02,810
+do some very simple
+
+136
+00:10:02,810 --> 00:10:07,180
+seeing and we have a whole bunch of
+methods in the standard library on
+
+137
+00:10:07,180 --> 00:10:09,060
+various functions objects
+
+138
+00:10:09,060 --> 00:10:12,760
+that are only dare
+
+139
+00:10:12,760 --> 00:10:16,740
+according to the author of this pap
+offers to
+
+140
+00:10:16,740 --> 00:10:20,570
+to certify deal with the fact that you
+you can't
+
+141
+00:10:20,570 --> 00:10:23,780
+caption exception certificates Eisley
+
+142
+00:10:23,780 --> 00:10:27,100
+and I'm still I'm still
+
+143
+00:10:27,100 --> 00:10:30,620
+against this idea I think its on
+
+144
+00:10:30,620 --> 00:10:37,310
+ugly syntactic wards to at this and the
+call on in the syntax drives me nuts but
+
+145
+00:10:37,310 --> 00:10:37,680
+any
+
+146
+00:10:37,680 --> 00:10:40,790
+other sin tax proposal that has has been
+sir def
+
+147
+00:10:40,790 --> 00:10:44,580
+considered for the PAP looks even not
+clear to me
+
+148
+00:10:44,580 --> 00:10:48,910
+and I really don't think that there is a
+big problem
+
+149
+00:10:48,910 --> 00:10:52,480
+to beast that that's being solved here
+the problem is
+
+150
+00:10:52,480 --> 00:10:57,080
+that sometimes people 12 food everything
+in one line
+
+151
+00:10:57,080 --> 00:11:00,310
+and I think that's just that certain
+
+152
+00:11:00,310 --> 00:11:03,430
+burge you should try to resist and just
+be
+
+153
+00:11:03,430 --> 00:11:07,970
+take a pause take a breath its
+
+154
+00:11:07,970 --> 00:11:12,970
+okee to to spend a few extra words were
+not were not pearl
+
+155
+00:11:12,970 --> 00:11:19,809
+I
+
+156
+00:11:19,809 --> 00:11:23,459
+enough on that topic let's pick another
+question DVD
+
+157
+00:11:23,459 --> 00:11:28,540
+who here even knows what KVS oh that's
+awesome
+
+158
+00:11:28,540 --> 00:11:31,720
+who has ever used TV
+
+159
+00:11:31,720 --> 00:11:36,610
+well soak EV is more popular than I
+thought
+
+160
+00:11:36,610 --> 00:11:40,089
+I don't know if any of the key people
+developers are here
+
+161
+00:11:40,089 --> 00:11:43,759
+TV is Inc the Redis
+
+162
+00:11:43,759 --> 00:11:47,110
+great tool that you can use to write hi
+phone code
+
+163
+00:11:47,110 --> 00:11:50,279
+on your mobile devices and
+
+164
+00:11:50,279 --> 00:11:54,660
+it has back and is actually it has
+certif implementations are back and what
+
+165
+00:11:54,660 --> 00:11:55,189
+you can
+
+166
+00:11:55,189 --> 00:11:58,920
+wanna call them that run on my OS or on
+iPad
+
+167
+00:11:58,920 --> 00:12:03,550
+on iPhone but also on Android then you
+can also run your program
+
+168
+00:12:03,550 --> 00:12:06,999
+and in the browser on the desktop
+
+169
+00:12:06,999 --> 00:12:10,079
+and I'm I may be mentioning some
+
+170
+00:12:10,079 --> 00:12:14,730
+use cases that aren't actually yet
+implemented the TV certif
+
+171
+00:12:14,730 --> 00:12:17,800
+lets you write beautiful
+
+172
+00:12:17,800 --> 00:12:22,149
+user interface applications that will
+run on a variety of platforms including
+
+173
+00:12:22,149 --> 00:12:23,870
+mobile devices
+
+174
+00:12:23,870 --> 00:12:27,769
+unfortunately when I talk to the people
+
+175
+00:12:27,769 --> 00:12:32,309
+at home at work at Dropbox who are
+developing
+
+176
+00:12:32,309 --> 00:12:38,189
+aP's former for mobile devices Dropbox
+just launched a few new apt for mobile
+
+177
+00:12:38,189 --> 00:12:39,339
+devices this week
+
+178
+00:12:39,339 --> 00:12:44,509
+day said well we would love to be able
+to use that but it's not fast enough
+
+179
+00:12:44,509 --> 00:12:48,689
+and I think the key people
+
+180
+00:12:48,689 --> 00:12:52,189
+deserve incredible kudos for
+
+181
+00:12:52,189 --> 00:12:58,249
+starting it but they need help they need
+a need more technical expertise
+
+182
+00:12:58,249 --> 00:13:04,179
+for all those different phone platforms
+and for Python to help to make it faster
+
+183
+00:13:04,179 --> 00:13:04,889
+to help
+
+184
+00:13:04,889 --> 00:13:07,899
+maybe build a community around TV that
+is
+
+185
+00:13:07,899 --> 00:13:13,949
+is larger so that keep you can actually
+be successful because pipe from
+
+186
+00:13:13,949 --> 00:13:20,360
+doesn't have a story for mobile devices
+and if TV is the only story for mobile
+
+187
+00:13:20,360 --> 00:13:22,179
+devices we have we need to
+
+188
+00:13:22,179 --> 00:13:25,360
+worked a lot on that story so if you
+have
+
+189
+00:13:25,360 --> 00:13:29,829
+into rest in hacking on something
+incredibly cool
+
+190
+00:13:29,829 --> 00:13:34,720
+that will benefit everybody who is go
+who was eventually going to
+
+191
+00:13:34,720 --> 00:13:38,179
+be using mobile devices and mobile
+devices
+
+192
+00:13:38,179 --> 00:13:42,339
+will get better and lots of things will
+will sort of
+
+193
+00:13:42,339 --> 00:13:45,339
+open up once you support mobile devices
+
+194
+00:13:45,339 --> 00:13:49,519
+we gotta get Python in the phones and
+waiting for
+
+195
+00:13:49,519 --> 00:13:53,850
+boon to mobile or Mozilla mobile OS
+
+196
+00:13:53,850 --> 00:13:56,990
+I don't think that that's it that's been
+
+197
+00:13:56,990 --> 00:14:01,290
+the sort of the successful strategy for
+actually getting pie from on the phones
+
+198
+00:14:01,290 --> 00:14:05,129
+enough about that question
+
+199
+00:14:05,129 --> 00:14:08,999
+worse the next one how awesome despite
+
+200
+00:14:08,999 --> 00:14:14,549
+3.4 yet have you checked it out yet it
+is awesome
+
+201
+00:14:14,549 --> 00:14:21,549
+it is the best pipe from ever
+
+202
+00:14:24,700 --> 00:14:27,570
+and its incredibly accessible it is
+
+203
+00:14:27,570 --> 00:14:33,360
+also easier than effort to port code
+from by 2022 Piper flee or to write
+
+204
+00:14:33,360 --> 00:14:36,560
+coded works both in by phone to and pie
+from the
+
+205
+00:14:36,560 --> 00:14:39,680
+3.4 is
+
+206
+00:14:39,680 --> 00:14:43,580
+the biggest step I would say
+
+207
+00:14:43,580 --> 00:14:46,700
+towards making everyone happy
+
+208
+00:14:46,700 --> 00:14:52,910
+and police go used by complete at fort
+even if your main project is still
+
+209
+00:14:52,910 --> 00:14:54,350
+written in Python to
+
+210
+00:14:54,350 --> 00:14:57,650
+start getting yourself used to biking
+
+211
+00:14:57,650 --> 00:15:01,310
+3 download fifa leader for installers as
+the
+
+212
+00:15:01,310 --> 00:15:04,890
+ultimate Python interpreter arm every
+system you have
+
+213
+00:15:04,890 --> 00:15:08,230
+play around with it the number I folks
+
+214
+00:15:08,230 --> 00:15:11,950
+are very close to switching to buy
+completely already
+
+215
+00:15:11,950 --> 00:15:15,250
+of your web developer using flask for
+Django
+
+216
+00:15:15,250 --> 00:15:20,080
+well there are some theoretical
+Portsmouth
+
+217
+00:15:20,080 --> 00:15:25,470
+it's still hard but give it a try and if
+you find something that doesn't work
+
+218
+00:15:25,470 --> 00:15:26,800
+with by completely wrapped
+
+219
+00:15:26,800 --> 00:15:30,890
+help someone make it work
+
+220
+00:15:30,890 --> 00:15:34,170
+as as fam said we are this community and
+we can
+
+221
+00:15:34,170 --> 00:15:39,280
+we can make it happen yes we can we can
+all work on being a community and its us
+
+222
+00:15:39,280 --> 00:15:40,170
+an arson
+
+223
+00:15:40,170 --> 00:15:43,660
+community community but there's lot of
+software that needs to be
+
+224
+00:15:43,660 --> 00:15:47,650
+improved and fixed and and and sometimes
+thrown away
+
+225
+00:15:47,650 --> 00:15:51,690
+and that's that's what this community is
+for so
+
+226
+00:15:51,690 --> 00:15:55,460
+please help us anyone have a question
+yet
+
+227
+00:15:55,460 --> 00:16:01,090
+you're not a woman
+
+228
+00:16:01,090 --> 00:16:08,090
+p.m. can you get your girlfriend to ask
+that question
+
+229
+00:16:09,680 --> 00:16:11,900
+all sorts of yes
+
+230
+00:16:11,900 --> 00:16:18,900
+other side I'm curious what you think
+the worst part
+
+231
+00:16:19,340 --> 00:16:24,220
+contributing see python is today you
+mean the
+
+232
+00:16:24,220 --> 00:16:27,750
+though the worst part of the experience
+of of trying to contribute
+
+233
+00:16:27,750 --> 00:16:32,490
+whatever is the biggest headache 30
+
+234
+00:16:32,490 --> 00:16:36,790
+perform well for me personally there
+aren't very many headaches
+
+235
+00:16:36,790 --> 00:16:41,130
+what's the Serta but what I worry about
+most
+
+236
+00:16:41,130 --> 00:16:44,580
+is that it is so incredibly difficult
+
+237
+00:16:44,580 --> 00:16:48,580
+to get started and it
+
+238
+00:16:48,580 --> 00:16:52,490
+it used to be that that So Def when I
+first wrote
+
+239
+00:16:52,490 --> 00:16:58,610
+see pipe bomb I mean it was the most
+complex code I had ever written but I
+
+240
+00:16:58,610 --> 00:17:02,740
+try to write it as sort of a
+straightforward and simple and clear as
+
+241
+00:17:02,740 --> 00:17:03,520
+possible
+
+242
+00:17:03,520 --> 00:17:08,240
+and four years people said wow you got
+it you gotta read the C code for Python
+
+243
+00:17:08,240 --> 00:17:12,290
+because it's so clear you can actually
+understand how language works
+
+244
+00:17:12,290 --> 00:17:15,380
+but then generations of people have
+
+245
+00:17:15,380 --> 00:17:20,290
+added contributions and we added unique
+code in
+
+246
+00:17:20,290 --> 00:17:25,080
+various slow things were improve so they
+were faster and there's a
+
+247
+00:17:25,080 --> 00:17:29,680
+custom memory allocator and the code is
+actually not straightforward at
+
+248
+00:17:29,680 --> 00:17:34,230
+all anymore and so it's very easy to
+
+249
+00:17:34,230 --> 00:17:37,880
+certif think oh here's
+
+250
+00:17:37,880 --> 00:17:41,320
+fearsome here's a little bug in Python I
+bet I can fix that
+
+251
+00:17:41,320 --> 00:17:45,240
+let's look it up in the source code and
+be completely overwhelmed
+
+252
+00:17:45,240 --> 00:17:50,240
+and sir if you find well I also talked
+to a lot of people who say well
+
+253
+00:17:50,240 --> 00:17:54,340
+and piping program I don't knowingly see
+so it sort of
+
+254
+00:17:54,340 --> 00:17:58,100
+which which is shocking for me because
+when I wrote
+
+255
+00:17:58,100 --> 00:18:01,100
+when I started hi farm I mean every
+
+256
+00:18:01,100 --> 00:18:05,600
+everybody was a C programmer and then
+maybe they would also learn some other
+
+257
+00:18:05,600 --> 00:18:07,360
+languages like Perl Python
+
+258
+00:18:07,360 --> 00:18:14,330
+so what certif I do know exactly what we
+can do to get people
+
+259
+00:18:14,330 --> 00:18:19,040
+into contributing more but I agree there
+is
+
+260
+00:18:19,040 --> 00:18:22,900
+dairies a difficulty in getting started
+and
+
+261
+00:18:22,900 --> 00:18:26,690
+and here I'm just talking about the
+technical difficulty understanding the
+
+262
+00:18:26,690 --> 00:18:29,550
+code in finding out how it's organized
+and
+
+263
+00:18:29,550 --> 00:18:32,810
+finding where did being that
+
+264
+00:18:32,810 --> 00:18:36,630
+jury view you see something wrong
+happening
+
+265
+00:18:36,630 --> 00:18:39,770
+figuring out where in the C code that
+
+266
+00:18:39,770 --> 00:18:43,560
+that wrong decision is being made is far
+from from simple
+
+267
+00:18:43,560 --> 00:18:47,220
+you may have to run a debugger you may
+have to
+
+268
+00:18:47,220 --> 00:18:51,240
+grab all the source for magic strings on
+
+269
+00:18:51,240 --> 00:18:55,690
+if often certif in
+
+270
+00:18:55,690 --> 00:18:59,300
+indirect phenomena Rotterdam there's
+just the line of code it does the wrong
+
+271
+00:18:59,300 --> 00:18:59,980
+thing
+
+272
+00:18:59,980 --> 00:19:06,740
+so unfortunately that puts the bar for
+successful contributions very high and
+
+273
+00:19:06,740 --> 00:19:09,810
+this is even before we get to the point
+of well
+
+274
+00:19:09,810 --> 00:19:13,510
+if you have fixed something can
+successfully
+
+275
+00:19:13,510 --> 00:19:17,570
+now you have to come convince accord
+report developer
+
+276
+00:19:17,570 --> 00:19:20,780
+to give your patch the light of day
+
+277
+00:19:20,780 --> 00:19:24,120
+look at your bug report looked at your
+patch
+
+278
+00:19:24,120 --> 00:19:29,550
+give you feedback help you sort of make
+it also work on all the other platforms
+
+279
+00:19:29,550 --> 00:19:30,560
+we care about
+
+280
+00:19:30,560 --> 00:19:33,840
+so I would I would love if we could
+
+281
+00:19:33,840 --> 00:19:38,090
+certain if this move now that process
+and
+
+282
+00:19:38,090 --> 00:19:41,400
+it used to be that I was the one who did
+
+283
+00:19:41,400 --> 00:19:46,170
+all that and intuitive I would sometimes
+take shortcuts now they're
+
+284
+00:19:46,170 --> 00:19:50,860
+there are too many contributions and too
+many open bugs and too many
+
+285
+00:19:50,860 --> 00:19:55,010
+lingering patches for me to be very
+successful in
+
+286
+00:19:55,010 --> 00:19:58,800
+taken care of all that even though I I
+want to
+
+287
+00:19:58,800 --> 00:20:03,760
+bud everyone else who is assertive
+really knowledgeable and I'll
+
+288
+00:20:03,760 --> 00:20:08,480
+basically all the people who can review
+your patch
+
+289
+00:20:08,480 --> 00:20:13,030
+are already very busy and so the
+question is how do we can grow
+
+290
+00:20:13,030 --> 00:20:17,550
+that several people how do we get more
+people
+
+291
+00:20:17,550 --> 00:20:22,540
+into the core certif and it's a high bar
+to pass you have to
+
+292
+00:20:22,540 --> 00:20:27,300
+sorta first win the trust of the
+existing core developers because
+
+293
+00:20:27,300 --> 00:20:31,940
+week we also don't want a bunch of
+newbies
+
+294
+00:20:31,940 --> 00:20:37,180
+certified changing pipe bomb and add new
+features that
+
+295
+00:20:37,180 --> 00:20:40,990
+don't actually work or will will
+distract
+
+296
+00:20:40,990 --> 00:20:45,930
+a other users more break on certain
+platform so there is
+
+297
+00:20:45,930 --> 00:20:48,930
+there is a real certify reason for for
+having
+
+298
+00:20:48,930 --> 00:20:53,170
+thorough technical review for all
+contributions but at the same time
+
+299
+00:20:53,170 --> 00:20:58,820
+duck that review process and the process
+of getting new people involved has
+
+300
+00:20:58,820 --> 00:20:59,870
+become very
+
+301
+00:20:59,870 --> 00:21:02,910
+heavyweight and cumbersome to that that
+is
+
+302
+00:21:02,910 --> 00:21:06,980
+as is something done does worry me and
+thanks for for asking
+
+303
+00:21:06,980 --> 00:21:13,980
+thank you
+
+304
+00:21:14,100 --> 00:21:17,090
+so discussions about up high country for
+
+305
+00:21:17,090 --> 00:21:22,110
+when I had teach a class arm we often
+have this conversation and what version
+
+306
+00:21:22,110 --> 00:21:23,450
+up I found two years
+
+307
+00:21:23,450 --> 00:21:26,720
+and we often a
+
+308
+00:21:26,720 --> 00:21:30,610
+do not use and 34 without 27
+
+309
+00:21:30,610 --> 00:21:34,240
+re I go through the process of
+explaining at the hard thing for new
+
+310
+00:21:34,240 --> 00:21:36,510
+people to understand why we would be
+using
+
+311
+00:21:36,510 --> 00:21:41,100
+why you would want to use 27 over 34
+when in every other aspect of our lives
+
+312
+00:21:41,100 --> 00:21:43,610
+are always wanna be on the newest and
+greatest and best
+
+313
+00:21:43,610 --> 00:21:47,730
+so my question for you is am
+
+314
+00:21:47,730 --> 00:21:51,530
+with small incremental changes that are
+happening in the community as people
+
+315
+00:21:51,530 --> 00:21:52,679
+upgrade libraries
+
+316
+00:21:52,679 --> 00:21:55,830
+arm when you see the tipping point
+happening
+
+317
+00:21:55,830 --> 00:21:59,559
+where there's a large majority side have
+
+318
+00:21:59,559 --> 00:22:04,570
+Mitt taking a lot of action to move over
+234 cuz I i mean
+
+319
+00:22:04,570 --> 00:22:09,799
+maybe I'm wrong but I personally feel
+like it hasn't gained as much momentum
+
+320
+00:22:09,799 --> 00:22:11,299
+as as I would help
+
+321
+00:22:11,299 --> 00:22:14,770
+that's a very valid concern
+
+322
+00:22:14,770 --> 00:22:19,280
+a I am personally
+
+323
+00:22:19,280 --> 00:22:23,030
+very optimistic that this will sort
+itself
+
+324
+00:22:23,030 --> 00:22:27,130
+out now how exactly will it will it sort
+itself out
+
+325
+00:22:27,130 --> 00:22:30,400
+my mice are def what
+
+326
+00:22:30,400 --> 00:22:34,600
+what I see I talk to people in different
+sup communities
+
+327
+00:22:34,600 --> 00:22:39,919
+I talk to educators I talk to scientists
+I talked to web developers I talk to
+
+328
+00:22:39,919 --> 00:22:41,630
+says Matt administrators
+
+329
+00:22:41,630 --> 00:22:44,870
+and everybody
+
+330
+00:22:44,870 --> 00:22:48,700
+actually assertive has a different view
+
+331
+00:22:48,700 --> 00:22:52,610
+there are people who say well when I
+teach a class
+
+332
+00:22:52,610 --> 00:22:56,190
+I don't use any third party libraries
+
+333
+00:22:56,190 --> 00:23:00,179
+and I just use the turtle module that in
+the standard library
+
+334
+00:23:00,179 --> 00:23:03,490
+and I'm so happy with Python 3 because
+like
+
+335
+00:23:03,490 --> 00:23:08,730
+these can things that used to always
+dread my students over in class when I
+
+336
+00:23:08,730 --> 00:23:10,690
+was using buy from two to teach have
+
+337
+00:23:10,690 --> 00:23:14,840
+all gone away you can thank you for
+listening to our complains about cloud
+
+338
+00:23:14,840 --> 00:23:15,809
+bite into
+
+339
+00:23:15,809 --> 00:23:18,980
+and changing the input function and this
+and that
+
+340
+00:23:18,980 --> 00:23:23,230
+and so Darius a group of people who are
+
+341
+00:23:23,230 --> 00:23:27,240
+really have the game there other people
+who
+
+342
+00:23:27,240 --> 00:23:30,900
+right large certif new code
+
+343
+00:23:30,900 --> 00:23:36,160
+and dayy d like to do everything
+themselves
+
+344
+00:23:36,160 --> 00:23:41,700
+and they also say oh wow let I can use
+the a sync i/o library in Python 3.3 or
+
+345
+00:23:41,700 --> 00:23:42,850
+3.4
+
+346
+00:23:42,850 --> 00:23:48,340
+I'm so excited I'm going to write my
+whole new framework based on Python 3
+
+347
+00:23:48,340 --> 00:23:52,860
+using a single i/o I'm super excited
+about this
+
+348
+00:23:52,860 --> 00:23:56,950
+then there are two people who have
+sixteen million lines of code
+
+349
+00:23:56,950 --> 00:24:02,760
+written by 3,000 certif mediocre skilled
+programmers
+
+350
+00:24:02,760 --> 00:24:07,720
+and ended its all Python 2.7 button
+
+351
+00:24:07,720 --> 00:24:12,260
+have a bit is probably actually was
+written in the days of item 2.3
+
+352
+00:24:12,260 --> 00:24:17,040
+only just by the grace of God skill is
+compatible with 2.7
+
+353
+00:24:17,040 --> 00:24:20,770
+or every once in a while there the
+someone fixes it when it
+
+354
+00:24:20,770 --> 00:24:23,950
+when it breaks but not before the break
+
+355
+00:24:23,950 --> 00:24:27,380
+and those people have no
+
+356
+00:24:27,380 --> 00:24:33,100
+did Eric they're just completely
+overwhelmed by how
+
+357
+00:24:33,100 --> 00:24:37,070
+on earth are we going to get this much
+code in
+
+358
+00:24:37,070 --> 00:24:41,450
+it written in a dynamic language where
+there are no type declarations the
+
+359
+00:24:41,450 --> 00:24:42,630
+compiler is
+
+360
+00:24:42,630 --> 00:24:47,840
+okay with almost anything you type how
+are we going to get this code ported
+
+361
+00:24:47,840 --> 00:24:49,010
+over to pipe from
+
+362
+00:24:49,010 --> 00:24:53,559
+3 and and certif still be assured that
+the output
+
+363
+00:24:53,559 --> 00:24:57,100
+is correct because thats really what we
+care about
+
+364
+00:24:57,100 --> 00:25:00,300
+and and so I think they're there is
+
+365
+00:25:00,300 --> 00:25:03,480
+any credible spectrum
+
+366
+00:25:03,480 --> 00:25:08,240
+it turns out from talking to various
+people in the numerical or scientific by
+
+367
+00:25:08,240 --> 00:25:09,210
+from world
+
+368
+00:25:09,210 --> 00:25:13,409
+but does guys are actually had over the
+web developers
+
+369
+00:25:13,409 --> 00:25:18,530
+the number by a world has more
+successfully not only ported
+
+370
+00:25:18,530 --> 00:25:24,080
+the software but is in the process of
+porting the community to Python 3
+
+371
+00:25:24,080 --> 00:25:27,740
+they asked for a matrix multiply
+operator in Python 3
+
+372
+00:25:27,740 --> 00:25:32,130
+they're getting it in 3.5 which is still
+a year and a half down the road
+
+373
+00:25:32,130 --> 00:25:35,340
+but they're already excited about it and
+
+374
+00:25:35,340 --> 00:25:41,570
+and that by itself is giving them a lot
+of motivation to serve be ready when
+
+375
+00:25:41,570 --> 00:25:43,450
+that matrix multiply operator
+
+376
+00:25:43,450 --> 00:25:46,929
+arrives in the language at
+
+377
+00:25:46,929 --> 00:25:51,530
+my colleagues at Dropbox are not so
+excited about porting to buy for free
+
+378
+00:25:51,530 --> 00:25:53,190
+because they've got
+
+379
+00:25:53,190 --> 00:25:56,440
+a huge live code base and and there are
+like
+
+380
+00:25:56,440 --> 00:26:00,159
+dozens of developers who add more to it
+every day
+
+381
+00:26:00,159 --> 00:26:04,250
+many of those developers have sort of
+tunnel vision their focus on one
+
+382
+00:26:04,250 --> 00:26:05,840
+particular feature
+
+383
+00:26:05,840 --> 00:26:12,840
+or one particular abstraction and
+there's no one who has a good overview
+
+384
+00:26:13,030 --> 00:26:16,419
+over serb what what would happen if we
+try to run this
+
+385
+00:26:16,419 --> 00:26:21,010
+in the pipe roughly and even with
+smaller code base is that we have a drop
+
+386
+00:26:21,010 --> 00:26:23,840
+box that are somewhat separate from that
+
+387
+00:26:23,840 --> 00:26:29,000
+a we've we found out
+
+388
+00:26:29,000 --> 00:26:33,800
+if you if you certify use every hack in
+the book
+
+389
+00:26:33,800 --> 00:26:37,590
+dead and then many of those hacks are
+going to do not work
+
+390
+00:26:37,590 --> 00:26:42,419
+with the next version of pipe Anna
+
+391
+00:26:42,419 --> 00:26:46,030
+what are we going to do about it
+patience
+
+392
+00:26:46,030 --> 00:26:50,440
+let certif don't
+
+393
+00:26:50,440 --> 00:26:55,240
+don't worry you don't bang your head
+against the wall because you're behind
+
+394
+00:26:55,240 --> 00:26:56,559
+curve
+
+395
+00:26:56,559 --> 00:27:00,780
+there are plenty of people who are
+skilled happily running Windows XP on
+
+396
+00:27:00,780 --> 00:27:02,620
+their computers to
+
+397
+00:27:02,620 --> 00:27:07,179
+maybe mate maybe not so happily after
+Microsoft the
+
+398
+00:27:07,179 --> 00:27:10,470
+stop the support but never lasts
+
+399
+00:27:10,470 --> 00:27:14,669
+lead they're still running XP
+
+400
+00:27:14,669 --> 00:27:19,340
+but it will be many many years before
+buy from 27 is sort of
+
+401
+00:27:19,340 --> 00:27:22,460
+abandoned by the pie from poor
+developers
+
+402
+00:27:22,460 --> 00:27:26,500
+I admit that when we first planned title
+3
+
+403
+00:27:26,500 --> 00:27:31,750
+and the transition we thought that five
+years was a really long time because for
+
+404
+00:27:31,750 --> 00:27:33,559
+me personally i
+
+405
+00:27:33,559 --> 00:27:37,270
+I'm bad at predicting in the future and
+I'm really bad at looking
+
+406
+00:27:37,270 --> 00:27:40,820
+say five years or more when people ask
+me what
+
+407
+00:27:40,820 --> 00:27:44,820
+gonna happen in 10 years I just throw my
+hands up in the air
+
+408
+00:27:44,820 --> 00:27:49,530
+so we lead Sep what we thought was a
+conservative
+
+409
+00:27:49,530 --> 00:27:55,620
+trajectory for how long we would support
+by from 27
+
+410
+00:27:55,620 --> 00:28:00,120
+there is a PAP that declares the end of
+life or buy from 27 something like May
+
+411
+00:28:00,120 --> 00:28:02,510
+2015 which is actually
+
+412
+00:28:02,510 --> 00:28:07,350
+in a little over a year we just had a
+long discussion about that topic
+
+413
+00:28:07,350 --> 00:28:10,390
+at the language said summit earlier this
+week
+
+414
+00:28:10,390 --> 00:28:15,050
+and we're going to update that perhaps
+and we're going to make it clear that
+
+415
+00:28:15,050 --> 00:28:19,590
+well was still want everyone to think
+about moving and we're going to
+
+416
+00:28:19,590 --> 00:28:23,809
+certif helped people port and I hope
+many of you
+
+417
+00:28:23,809 --> 00:28:28,159
+went to for example Tracy vers talk
+about porting to buy perfectly and a
+
+418
+00:28:28,159 --> 00:28:30,070
+specific strategy of
+
+419
+00:28:30,070 --> 00:28:35,270
+writing single source code that can
+execute correctly both on the vital to
+
+420
+00:28:35,270 --> 00:28:40,159
+and buy from 384 for high enough
+versions of iPhone to
+
+421
+00:28:40,159 --> 00:28:43,480
+the and we're going to pour more
+resources
+
+422
+00:28:43,480 --> 00:28:49,380
+in helping people make certain if that
+porting process successful
+
+423
+00:28:49,380 --> 00:28:55,909
+but the help is not going to come in the
+form of compromise versions of Python
+
+424
+00:28:55,909 --> 00:28:59,360
+to help is going to come in the form of
+tools
+
+425
+00:28:59,360 --> 00:29:02,790
+less specific port help importing
+
+426
+00:29:02,790 --> 00:29:07,520
+stragglers in the that certain if the
+dependency ecosystem like if there's a
+
+427
+00:29:07,520 --> 00:29:10,470
+particular module it still hasn't been
+
+428
+00:29:10,470 --> 00:29:14,460
+4 to Dubai from three and it is holding
+people back
+
+429
+00:29:14,460 --> 00:29:19,890
+and the PSF or other organizations that
+have have some
+
+430
+00:29:19,890 --> 00:29:24,340
+interested in this will be able to help
+
+431
+00:29:24,340 --> 00:29:27,540
+and so what
+
+432
+00:29:27,540 --> 00:29:31,690
+what you can do yourself is a don't
+panic
+
+433
+00:29:31,690 --> 00:29:34,710
+Bebo opportunistic certif
+
+434
+00:29:34,710 --> 00:29:38,309
+you probably have a whole bunch of
+different pipe from projects
+
+435
+00:29:38,309 --> 00:29:42,440
+see if there's one review projects where
+you can use by completely answered have
+
+436
+00:29:42,440 --> 00:29:46,570
+become comfortable with print as a
+function and learn to use all the cool
+
+437
+00:29:46,570 --> 00:29:47,899
+new
+
+438
+00:29:47,899 --> 00:29:53,520
+as a unico support and that bites for
+his is taxed
+
+439
+00:29:53,520 --> 00:29:59,000
+and so five years from now I'll be
+standing here again and I'll I'll be
+
+440
+00:29:59,000 --> 00:30:02,550
+looking back and I think we'll be in a
+much
+
+441
+00:30:02,550 --> 00:30:06,970
+much better situation and fifteen years
+from now we'll all
+
+442
+00:30:06,970 --> 00:30:10,810
+sort of look back and laugh about when
+we were also worried about
+
+443
+00:30:10,810 --> 00:30:17,310
+the by from two to three transition and
+I never wanna do another transition
+
+444
+00:30:17,310 --> 00:30:22,100
+in the same way fortunately software
+changes so fast and
+
+445
+00:30:22,100 --> 00:30:26,470
+need to have better tools become
+available that what Everton next
+
+446
+00:30:26,470 --> 00:30:30,330
+step is that we're going to have to take
+beyond 3
+
+447
+00:30:30,330 --> 00:30:34,679
+and will be able to plan taking that
+step in a very different way and we
+
+448
+00:30:34,679 --> 00:30:36,220
+won't
+
+449
+00:30:36,220 --> 00:30:39,300
+have have to have discussions like that
+
+450
+00:30:39,300 --> 00:30:46,300
+biz you
+
+451
+00:30:49,420 --> 00:30:53,190
+paid what's up we don't I am a byproduct
+
+452
+00:30:53,190 --> 00:30:56,880
+graduate student and I love iPhone
+especially a scientific Python stack
+
+453
+00:30:56,880 --> 00:31:00,809
+however I do not love installing it and
+
+454
+00:31:00,809 --> 00:31:04,420
+I was wondering and it kinda makes it
+very easy UN actually meant just
+
+455
+00:31:04,420 --> 00:31:07,090
+mentioned that there's plans to
+introduce meters implication
+
+456
+00:31:07,090 --> 00:31:11,270
+in the future are there any other plans
+to integrate I done with other blaster
+
+457
+00:31:11,270 --> 00:31:16,250
+and kill libraries in the future to make
+to integrate the scientific libraries
+
+458
+00:31:16,250 --> 00:31:22,450
+with arm for Python I'm not really the
+right person to
+
+459
+00:31:22,450 --> 00:31:25,690
+to answered after and
+
+460
+00:31:25,690 --> 00:31:30,220
+my understanding is that there are
+several companies
+
+461
+00:31:30,220 --> 00:31:34,720
+in the scientific numeric by from the
+world who are competing in the
+
+462
+00:31:34,720 --> 00:31:35,270
+tournament
+
+463
+00:31:35,270 --> 00:31:38,350
+building the best magar superjumbo
+
+464
+00:31:38,350 --> 00:31:42,290
+sumo installers the include as much
+
+465
+00:31:42,290 --> 00:31:45,910
+third-party numerical software
+
+466
+00:31:45,910 --> 00:31:49,490
+as as they can manage their are
+
+467
+00:31:49,490 --> 00:31:52,570
+installers both from and fart and from
+
+468
+00:31:52,570 --> 00:31:56,169
+Anna continuum
+
+469
+00:31:56,169 --> 00:32:02,070
+that that claim to solve your problem I
+don't and and I'm not and scientist in
+
+470
+00:32:02,070 --> 00:32:03,370
+that sense myself
+
+471
+00:32:03,370 --> 00:32:08,950
+I have never had the opportunity to try
+it but I hear from a lot of other people
+
+472
+00:32:08,950 --> 00:32:12,140
+dad their actually doing very well
+
+473
+00:32:12,140 --> 00:32:16,100
+with nose installers and maybe some of
+it
+
+474
+00:32:16,100 --> 00:32:19,730
+is well at the latest version of the
+installer will be even better
+
+475
+00:32:19,730 --> 00:32:22,799
+but I think you have great
+
+476
+00:32:22,799 --> 00:32:28,429
+deal of reason for optimism there thank
+you
+
+477
+00:32:28,429 --> 00:32:35,429
+you're welcome on
+
+478
+00:32:37,750 --> 00:32:42,570
+I went to Julie pagano's excellent talk
+yesterday on imposter syndrome and one
+
+479
+00:32:42,570 --> 00:32:45,390
+of the things she spoke about was taking
+your heroes
+
+480
+00:32:45,390 --> 00:32:48,700
+ahh pedestals and making them seem like
+a
+
+481
+00:32:48,700 --> 00:32:52,860
+regular human beings again so the
+question that I wanted to ask you
+
+482
+00:32:52,860 --> 00:32:57,800
+is are there times in either Python or
+other software projects are other things
+
+483
+00:32:57,800 --> 00:33:00,880
+you work on that you feel intimidated or
+
+484
+00:33:00,880 --> 00:33:05,740
+like you don't have the skills that you
+need or any of the other things that
+
+485
+00:33:05,740 --> 00:33:07,910
+especially people just getting started
+
+486
+00:33:07,910 --> 00:33:10,929
+feel when they try to contribute back to
+the community
+
+487
+00:33:10,929 --> 00:33:14,010
+I have a lot of that
+
+488
+00:33:14,010 --> 00:33:18,390
+all the time I can be incredibly
+insecure
+
+489
+00:33:18,390 --> 00:33:21,460
+one news item that that Sir def
+
+490
+00:33:21,460 --> 00:33:25,120
+touts the virtues of Perl 6 can
+
+491
+00:33:25,120 --> 00:33:32,120
+can game make me sleep mad
+
+492
+00:33:35,179 --> 00:33:39,139
+someone asked me this morning while I
+was walking to the hotel
+
+493
+00:33:39,139 --> 00:33:42,539
+about they have like Edward
+
+494
+00:33:42,539 --> 00:33:47,249
+they have one obnoxious Java programmer
+and the Java programmers always showing
+
+495
+00:33:47,249 --> 00:33:51,169
+of the superior tools in the Java world
+like he can attach
+
+496
+00:33:51,169 --> 00:33:57,369
+a debugger to a running process and
+extracted stack traces in n/a me gently
+
+497
+00:33:57,369 --> 00:33:58,239
+start
+
+498
+00:33:58,239 --> 00:34:03,330
+certif hyperventilating and thinking oh
+my gosh
+
+499
+00:34:03,330 --> 00:34:07,789
+why don't we have that and then I
+realized old well yeah
+
+500
+00:34:07,789 --> 00:34:11,040
+lived wing where and pie chart room and
+then
+
+501
+00:34:11,040 --> 00:34:14,300
+komodo probably all do that too because
+
+502
+00:34:14,300 --> 00:34:17,830
+is just a matter of a little bit of
+technology we don't have an interest in
+
+503
+00:34:17,830 --> 00:34:19,250
+our library but really
+
+504
+00:34:19,250 --> 00:34:22,240
+we hardly have a debugger in the
+standard library I'm probably the only
+
+505
+00:34:22,240 --> 00:34:23,190
+person
+
+506
+00:34:23,190 --> 00:34:26,990
+who who is still the bugs using just BB
+
+507
+00:34:26,990 --> 00:34:31,560
+as it is in the standard library so
+
+508
+00:34:31,560 --> 00:34:34,820
+if you want me off up my panda style
+
+509
+00:34:34,820 --> 00:34:37,750
+I'll happily come off
+
+510
+00:34:37,750 --> 00:34:44,750
+thank you you outcome
+
+511
+00:34:46,110 --> 00:34:48,480
+and that's all the time we have thank
+you so much
+
+512
+00:34:48,480 --> 00:34:49,490
+you're welcome
+

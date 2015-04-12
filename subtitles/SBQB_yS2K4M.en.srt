@@ -1,0 +1,3504 @@
+1
+00:00:05,710 --> 00:00:07,009
+good afternoon everybody
+
+2
+00:00:07,009 --> 00:00:10,400
+thank you so much for coming in joining
+us today after lunch
+
+3
+00:00:10,400 --> 00:00:15,210
+I know you are quite sleepy but I hope
+this is going to be a very exciting talk
+
+4
+00:00:15,210 --> 00:00:18,310
+arm Hitech is going to be talking to
+
+5
+00:00:18,310 --> 00:00:21,960
+us a little bad about like access al
+
+6
+00:00:21,960 --> 00:00:25,269
+you now that thing years please a big
+
+7
+00:00:25,269 --> 00:00:32,269
+round of applause frantic and Estonia's
+
+8
+00:00:34,780 --> 00:00:37,989
+cell shot quick poll are whilst the
+difference between
+
+9
+00:00:37,989 --> 00:00:41,489
+SSL and TLS okay
+
+10
+00:00:41,489 --> 00:00:44,649
+mechanic it's good the S a few cedar shy
+
+11
+00:00:44,649 --> 00:00:48,250
+or in a very right room so I Munich
+
+12
+00:00:48,250 --> 00:00:54,629
+this is how I look on internet arm but
+I'm not allowed on Twitter
+
+13
+00:00:54,629 --> 00:00:57,809
+are writing some other sort of the
+program a good am doing infrastructure
+
+14
+00:00:57,809 --> 00:01:01,250
+at a small but friendly German opposing
+company called are a major
+
+15
+00:01:01,250 --> 00:01:05,580
+where if you speak German to get you all
+remains from but I want you to talk
+
+16
+00:01:05,580 --> 00:01:06,290
+about myself
+
+17
+00:01:06,290 --> 00:01:10,100
+I'm here to tell you I'll let those
+shiny look i cant to tell you that
+
+18
+00:01:10,100 --> 00:01:12,229
+you're safe because of military-grade
+encryption
+
+19
+00:01:12,229 --> 00:01:15,939
+our ally in fact I
+
+20
+00:01:15,939 --> 00:01:19,640
+you're on the road never really slept
+and why the statement seem to
+
+21
+00:01:19,640 --> 00:01:22,689
+bits a controversial last week I assure
+you
+
+22
+00:01:22,689 --> 00:01:26,630
+arm that in the grand scheme of things
+absolutely nothing changed since last
+
+23
+00:01:26,630 --> 00:01:27,360
+Sunday
+
+24
+00:01:27,360 --> 00:01:30,990
+I'm arm you simply need to know how
+things
+
+25
+00:01:30,990 --> 00:01:34,880
+fits together in are two assess and
+minimize risks
+
+26
+00:01:34,880 --> 00:01:38,820
+and up uke you and your your search of
+TLS
+
+27
+00:01:38,820 --> 00:01:42,329
+and others al can do much more damage
+than any but will ever do
+
+28
+00:01:42,329 --> 00:01:45,369
+so before it
+
+29
+00:01:45,369 --> 00:01:50,240
+do our first trip to better and I'm
+introduces only got the right down today
+
+30
+00:01:50,240 --> 00:01:54,270
+every other link and project and for
+material I will be mentioned today
+
+31
+00:01:54,270 --> 00:01:58,490
+will be there especially more mature to
+dive deeper into our concept I'm
+
+32
+00:01:58,490 --> 00:02:00,049
+introducing because at him
+
+33
+00:02:00,049 --> 00:02:03,090
+my thing forty minutes for a such
+complex
+
+34
+00:02:03,090 --> 00:02:06,790
+I'm topic like RTLS way too little
+
+35
+00:02:06,790 --> 00:02:10,340
+cell now just relax and enjoy the show
+
+36
+00:02:10,340 --> 00:02:15,349
+what it why is the state of as all sorry
+maybe should start at Ground Zero
+
+37
+00:02:15,349 --> 00:02:18,900
+and discuss what it actually is so what
+as al
+
+38
+00:02:18,900 --> 00:02:23,170
+and what elle has it to do with Hillis I
+think those terms are best explained
+
+39
+00:02:23,170 --> 00:02:25,110
+with a short history lesson because
+
+40
+00:02:25,110 --> 00:02:30,170
+everybody loves history lessons and all
+particular one starts in the mid 90s
+
+41
+00:02:30,170 --> 00:02:34,250
+when it gets thought it might be pretty
+cool if entering a credit card number
+
+42
+00:02:34,250 --> 00:02:37,269
+on the internet would entail people
+buying drugs of your money
+
+43
+00:02:37,269 --> 00:02:40,440
+and so in 1995 they released their
+
+44
+00:02:40,440 --> 00:02:45,040
+completely host as a2 as the foundation
+for a GPS
+
+45
+00:02:45,040 --> 00:02:48,290
+but as it stands for Secure not for us
+as outcome
+
+46
+00:02:48,290 --> 00:02:51,690
+and the fix the most rock burst martz
+
+47
+00:02:51,690 --> 00:02:54,830
+one year later it has all three and
+
+48
+00:02:54,830 --> 00:02:58,659
+another three years later it finally
+became an official
+
+49
+00:02:58,659 --> 00:03:02,150
+ATF standard and was renamed to key last
+
+50
+00:03:02,150 --> 00:03:06,050
+so again as El is a product from
+netscape
+
+51
+00:03:06,050 --> 00:03:11,150
+from 1996 TLS San official standard for
+fifteen years now
+
+52
+00:03:11,150 --> 00:03:14,739
+cell are basically a trick to inherit
+the name
+
+53
+00:03:14,739 --> 00:03:17,810
+but everybody knows that deliberations
+are always awesome
+
+54
+00:03:17,810 --> 00:03:22,340
+and I wanted to reach everyone I could
+so if I had to trick you into the name
+
+55
+00:03:22,340 --> 00:03:25,580
+I hope you learn to first thing today
+and will stop saying as a cell in a
+
+56
+00:03:25,580 --> 00:03:26,220
+future
+
+57
+00:03:26,220 --> 00:03:30,090
+you and 2006 and 2008
+
+58
+00:03:30,090 --> 00:03:34,069
+though largely ignored killers 1.1 and
+1.2 have been released
+
+59
+00:03:34,069 --> 00:03:37,890
+both fixed several security problems
+
+60
+00:03:37,890 --> 00:03:41,170
+brought really nice features but nobody
+cared
+
+61
+00:03:41,170 --> 00:03:45,000
+fast-forward last year for some polar
+unreasoning
+
+62
+00:03:45,000 --> 00:03:48,379
+people started scrutinizing on security
+habits again and what their phone calls
+
+63
+00:03:48,379 --> 00:03:49,819
+really not very good
+
+64
+00:03:49,819 --> 00:03:56,819
+so 41 all mainstream browser support is
+only TLS 12 last year so kilos won from
+
+65
+00:03:57,030 --> 00:03:58,040
+1999
+
+66
+00:03:58,040 --> 00:04:01,680
+and the discoveries from arm
+
+67
+00:04:01,680 --> 00:04:04,900
+last year change everything the times
+are just using TLS
+
+68
+00:04:04,900 --> 00:04:10,549
+are gone arm for price of Greta makes me
+barry a suspicious than reassured and
+
+69
+00:04:10,549 --> 00:04:11,290
+some softer
+
+70
+00:04:11,290 --> 00:04:14,760
+claims to be secure because of TLS
+actually
+
+71
+00:04:14,760 --> 00:04:17,900
+the mostly safe as a salvage make me RR
+suspicious
+
+72
+00:04:17,900 --> 00:04:21,780
+sup you really need to know roughly
+
+73
+00:04:21,780 --> 00:04:24,940
+what you doing because this technology
+has still very shop
+
+74
+00:04:24,940 --> 00:04:29,550
+edges and getting it wrong can have very
+grave consequences
+
+75
+00:04:29,550 --> 00:04:33,220
+sup 10 Steelers actually want to provide
+you with
+
+76
+00:04:33,220 --> 00:04:37,139
+first just pure entity using
+certificates so you can verify
+
+77
+00:04:37,139 --> 00:04:40,389
+Europe connecting to do appear you
+actually wanted to connect
+
+78
+00:04:40,389 --> 00:04:45,009
+another some crook who tricked you into
+connecting to server
+
+79
+00:04:45,009 --> 00:04:48,650
+don't get to confidentiality using
+encryption
+
+80
+00:04:48,650 --> 00:04:52,840
+saw people a disturbing on red rope
+which is not
+
+81
+00:04:52,840 --> 00:04:56,729
+arming and a dark magic can sniff out
+your secret in a password
+
+82
+00:04:56,729 --> 00:05:00,570
+this is what most people think of
+anything else as LTL as encrypt are
+
+83
+00:05:00,570 --> 00:05:04,240
+cryptography in general but is only a
+third of the whole package
+
+84
+00:05:04,240 --> 00:05:08,520
+the test pattern is I am message
+integrity
+
+85
+00:05:08,520 --> 00:05:12,220
+saw I yet it the protocols able to
+detect
+
+86
+00:05:12,220 --> 00:05:16,060
+when packages arrive mangled order
+
+87
+00:05:16,060 --> 00:05:19,840
+multiple times are not at all sought
+thats
+
+88
+00:05:19,840 --> 00:05:22,970
+that's basically key lesson at natural
+now
+
+89
+00:05:22,970 --> 00:05:27,470
+let's look om how to use those and
+explain for details along the way
+
+90
+00:05:27,470 --> 00:05:30,949
+sup after spot to be able to from
+
+91
+00:05:30,949 --> 00:05:34,110
+spot reversed smells of parochial issues
+such
+
+92
+00:05:34,110 --> 00:05:37,650
+and you will not want to be awarded on
+
+93
+00:05:37,650 --> 00:05:41,550
+and will start its servers unless noted
+I'm sticking to open SSL
+
+94
+00:05:41,550 --> 00:05:44,740
+throughout the rest of the talk because
+that's what we'll most likely be using
+
+95
+00:05:44,740 --> 00:05:46,880
+where you like it or not
+
+96
+00:05:46,880 --> 00:05:50,020
+sock an if you deploy server software
+
+97
+00:05:50,020 --> 00:05:54,090
+it's a duty to ensure the maximum
+security for users because they can
+
+98
+00:05:54,090 --> 00:05:57,220
+neater see more affect your setup
+
+99
+00:05:57,220 --> 00:06:00,949
+so the first step is to use at least
+halfway
+
+100
+00:06:00,949 --> 00:06:04,000
+up-to-date versions of their party
+software if you deploy anything already
+
+101
+00:06:04,000 --> 00:06:05,560
+threatens today
+
+102
+00:06:05,560 --> 00:06:10,199
+W negligent lazy and should subduing so
+and I'm generously assuming
+
+103
+00:06:10,199 --> 00:06:13,550
+that your installed all the security
+back backport
+
+104
+00:06:13,550 --> 00:06:16,729
+pages from your solutions these are
+
+105
+00:06:16,729 --> 00:06:20,660
+the future releases you need to have a a
+half a secure setup
+
+106
+00:06:20,660 --> 00:06:24,100
+a few TLS if if you don't
+
+107
+00:06:24,100 --> 00:06:27,120
+use that they're eleven back ports
+there's obviously no up
+
+108
+00:06:27,120 --> 00:06:31,440
+no way you're deploying Obama's as a
+Alderden 1.0 0.1
+
+109
+00:06:31,440 --> 00:06:35,130
+G which came alt Monday if you may have
+
+110
+00:06:35,130 --> 00:06:38,560
+hurt so
+
+111
+00:06:38,560 --> 00:06:43,180
+on the for think you do when a client
+connects to you is that you present them
+
+112
+00:06:43,180 --> 00:06:44,650
+a certificate that's safe
+
+113
+00:06:44,650 --> 00:06:49,050
+Rio are which declined should verify
+
+114
+00:06:49,050 --> 00:06:52,800
+arm in order to make the climb a tree
+trust the certificate to senate
+
+115
+00:06:52,800 --> 00:06:56,539
+it has to be signed by a trusted third
+party called
+
+116
+00:06:56,539 --> 00:06:59,979
+our certificate authority RCA
+
+117
+00:06:59,979 --> 00:07:03,360
+the set of all public either all trusted
+CA's
+
+118
+00:07:03,360 --> 00:07:07,030
+that can be used to verify the
+certificate the signatures
+
+119
+00:07:07,030 --> 00:07:10,470
+is what we call a trust that the basal
+trust store or
+
+120
+00:07:10,470 --> 00:07:14,639
+system curing depends on architecture
+and a um operating system
+
+121
+00:07:14,639 --> 00:07:18,430
+outscored and to proof the certificates
+actually yours
+
+122
+00:07:18,430 --> 00:07:21,650
+after all you send it out to everyone so
+
+123
+00:07:21,650 --> 00:07:26,380
+a secret keep a long siege certificate
+this key is then used for signatures
+
+124
+00:07:26,380 --> 00:07:30,440
+that can be verified with the
+certificate and the proof that you're
+
+125
+00:07:30,440 --> 00:07:33,490
+actually in a procession of the secret
+key
+
+126
+00:07:33,490 --> 00:07:38,300
+already for mister roberts. heartbeat so
+I'm
+
+127
+00:07:38,300 --> 00:07:42,470
+in the simplest case CS bout should be
+verified that a certain host name
+
+128
+00:07:42,470 --> 00:07:43,880
+belongs to you by checking
+
+129
+00:07:43,880 --> 00:07:47,300
+that you get the money and control
+against freedom and it's called host
+
+130
+00:07:47,300 --> 00:07:48,220
+memory vacation
+
+131
+00:07:48,220 --> 00:07:51,539
+and all certificates are really cheap
+and Tom
+
+132
+00:07:51,539 --> 00:07:55,069
+you take the you can get them in for
+free nowadays
+
+133
+00:07:55,069 --> 00:07:58,759
+on our side of the spectrum is Extended
+Validation that obviously also means
+
+134
+00:07:58,759 --> 00:08:00,139
+extend the payment
+
+135
+00:08:00,139 --> 00:08:04,530
+and arm but get a company name into you
+all bar
+
+136
+00:08:04,530 --> 00:08:07,870
+and it's basically or is to know
+information about the validity
+
+137
+00:08:07,870 --> 00:08:11,250
+plus signature from personal for party
+equal certificate
+
+138
+00:08:11,250 --> 00:08:15,180
+your job now is to make sure your
+certificate setup is trustworthy because
+
+139
+00:08:15,180 --> 00:08:15,889
+a TLS
+
+140
+00:08:15,889 --> 00:08:19,340
+its rebirth less if connecting plants
+have no way to verify
+
+141
+00:08:19,340 --> 00:08:22,729
+your identity sup you won't get
+
+142
+00:08:22,729 --> 00:08:26,389
+a certificate from signed by a trusted
+third party arm
+
+143
+00:08:26,389 --> 00:08:29,250
+when you get a supply chain filed with
+contains one or more intermediate
+
+144
+00:08:29,250 --> 00:08:30,569
+certificates
+
+145
+00:08:30,569 --> 00:08:34,450
+the complete the trust past 21 so in
+this case are that
+
+146
+00:08:34,450 --> 00:08:37,510
+and trustee a signed some komodo
+certificate which
+
+147
+00:08:37,510 --> 00:08:41,029
+and kept intern find some 100 promoter
+certificate which in turn
+
+148
+00:08:41,029 --> 00:08:44,060
+finally site my certificate now when a
+client connects
+
+149
+00:08:44,060 --> 00:08:47,640
+it gets all three of them and it can
+verify to trust chain
+
+150
+00:08:47,640 --> 00:08:50,790
+so take care of the trust chain
+forgetting chain certificates is a
+
+151
+00:08:50,790 --> 00:08:52,750
+typical rookie mistake
+
+152
+00:08:52,750 --> 00:08:56,360
+and sure the certificate is valid for to
+host them up a server
+
+153
+00:08:56,360 --> 00:09:00,120
+and finally make sure that the
+certificate is not
+
+154
+00:09:00,120 --> 00:09:03,370
+X expired because arthritis people make
+fun of you
+
+155
+00:09:03,370 --> 00:09:07,600
+there's enough like not use plugins and
+everything will for you in time so don't
+
+156
+00:09:07,600 --> 00:09:09,970
+let it happen
+
+157
+00:09:09,970 --> 00:09:13,399
+next is able as a to chances are it's
+not necessary
+
+158
+00:09:13,399 --> 00:09:17,140
+bad for infant above Apple's a mess as
+El still needs that
+
+159
+00:09:17,140 --> 00:09:20,839
+but I'm suggesting in any way that you
+should deploy servers analyst and
+
+160
+00:09:20,839 --> 00:09:22,930
+because it through shouldn't
+
+161
+00:09:22,930 --> 00:09:26,839
+so arm if you don't have to support some
+entiende operating system like Windows
+
+162
+00:09:26,839 --> 00:09:27,779
+XP
+
+163
+00:09:27,779 --> 00:09:32,300
+miss a bus 03 as well and finally
+disable TLS compression to a white crime
+
+164
+00:09:32,300 --> 00:09:33,200
+attacks
+
+165
+00:09:33,200 --> 00:09:37,339
+that's about it the next objective is to
+configure Cyprus it such a
+
+166
+00:09:37,339 --> 00:09:40,480
+every client gets the best possible
+encryption and the best in this case
+
+167
+00:09:40,480 --> 00:09:41,839
+means
+
+168
+00:09:41,839 --> 00:09:45,230
+the most secure and also the fastest
+
+169
+00:09:45,230 --> 00:09:48,300
+I pursued is just a tubal there is
+cryptographic primitives
+
+170
+00:09:48,300 --> 00:09:52,620
+one of them being a separate self that
+are used together to secure connection
+
+171
+00:09:52,620 --> 00:09:57,029
+and other wanted to serve as the last
+say about which supply pursued is used
+
+172
+00:09:57,029 --> 00:10:01,410
+so use the powerful powerful good and
+thus efforts up
+
+173
+00:10:01,410 --> 00:10:06,320
+is the easiest to explain little star
+them you can just imagine as a black box
+
+174
+00:10:06,320 --> 00:10:10,720
+it takes a plain-text paint if they
+don't and a key as import
+
+175
+00:10:10,720 --> 00:10:14,000
+and return cipher text which should be
+ideally interest
+
+176
+00:10:14,000 --> 00:10:18,680
+indistinguishable from random data as
+output kill snipers are symmetric
+
+177
+00:10:18,680 --> 00:10:21,990
+that meets if you want to decry just
+never text arm
+
+178
+00:10:21,990 --> 00:10:25,740
+there 11 function of the same for Neath
+exact same key as the sender to
+
+179
+00:10:25,740 --> 00:10:29,930
+be able to be cryptid so far I think
+it's pretty straightforward
+
+180
+00:10:29,930 --> 00:10:33,709
+these give up complicated on because
+most diverse
+
+181
+00:10:33,709 --> 00:10:36,970
+on not maybe on most but though
+currently most
+
+182
+00:10:36,970 --> 00:10:40,720
+popular once our blog re-entered I miss
+you can just put
+
+183
+00:10:40,720 --> 00:10:44,279
+1 gigabyte move into it and reading for
+a separate text come out
+
+184
+00:10:44,279 --> 00:10:47,510
+if your data is bigger number saffir
+text then up
+
+185
+00:10:47,510 --> 00:10:51,630
+site for books I S which usually is 128
+bits nowadays
+
+186
+00:10:51,630 --> 00:10:54,640
+you have to chop it up a bit smaller you
+have to pet it so
+
+187
+00:10:54,640 --> 00:10:58,839
+obviously usually have to do both and um
+
+188
+00:10:58,839 --> 00:11:01,959
+the most common way for to do that is
+are separable chaining
+
+189
+00:11:01,959 --> 00:11:05,899
+bitch unfortunately what's implement
+that and ethical suspect poorly
+
+190
+00:11:05,899 --> 00:11:09,000
+in TLS which piece does with a wide
+variety of attacks
+
+191
+00:11:09,000 --> 00:11:12,399
+I think the most known one is beast
+
+192
+00:11:12,399 --> 00:11:16,899
+cell the most common way it I'm to miss
+a white that
+
+193
+00:11:16,899 --> 00:11:22,200
+at are still clan site fixes and through
+ciphers like rc4 in the past
+
+194
+00:11:22,200 --> 00:11:26,240
+and touch up twenty and future arm
+
+195
+00:11:26,240 --> 00:11:30,540
+yet it's basically that current state
+then kill us 1.2 brought
+
+196
+00:11:30,540 --> 00:11:33,769
+a shiny remote call to go lock on
+promote which
+
+197
+00:11:33,769 --> 00:11:38,769
+does much more than just are chipping
+and putting but more about that later
+
+198
+00:11:38,769 --> 00:11:43,149
+now we know what's my purse %uh are
+which one to use
+
+199
+00:11:43,149 --> 00:11:46,839
+sup I would say that the to best current
+SciVerse
+
+200
+00:11:46,839 --> 00:11:50,149
+are ates 128 in a goal a contra mode
+
+201
+00:11:50,149 --> 00:11:53,860
+and a stream cipher catch up 20% from
+dan Bernstein
+
+202
+00:11:53,860 --> 00:11:57,769
+now ASU cm is better in heart rate and
+trisha is better in software
+
+203
+00:11:57,769 --> 00:12:01,430
+so ideally you'd support both and the
+clan decide which one to use and is
+
+204
+00:12:01,430 --> 00:12:03,269
+actually what Google does now a days
+
+205
+00:12:03,269 --> 00:12:06,990
+unfortunately it's not three Leah
+available to us mere mortals
+
+206
+00:12:06,990 --> 00:12:10,670
+so simple catch up twenty is not an open
+is ahead its
+
+207
+00:12:10,670 --> 00:12:14,790
+own in chrome up as far as I know they
+are working on it to get it out
+
+208
+00:12:14,790 --> 00:12:19,459
+until then ATSG cm it is for now
+
+209
+00:12:19,459 --> 00:12:24,200
+so even for to latest Safari and IE
+browser still have to fall back to AES
+
+210
+00:12:24,200 --> 00:12:30,250
+CBC same pfeiffer different mode works
+perfectly fine details 1.1 and 1.2
+
+211
+00:12:30,250 --> 00:12:34,269
+I'm not so much on ps1 again beast I'm
+concerts
+
+212
+00:12:34,269 --> 00:12:38,920
+so I you don't have really much choice
+it them hoping that the client
+
+213
+00:12:38,920 --> 00:12:43,570
+has the relevant existence inode which
+fortunately by now
+
+214
+00:12:43,570 --> 00:12:49,870
+are is true for all mainstream browser
+so a poor Celeste wanted
+
+215
+00:12:49,870 --> 00:12:53,040
+sup and if you need to support engine
+clients rate
+
+216
+00:12:53,040 --> 00:12:57,209
+in those XP in a paroled but there on
+earth I would suggest triple the switch
+
+217
+00:12:57,209 --> 00:12:57,990
+is a decent
+
+218
+00:12:57,990 --> 00:13:01,260
+but very slow cipher the three basically
+means that it's
+
+219
+00:13:01,260 --> 00:13:04,490
+takes the DS I phrase it three times so
+you can imagine it's not the most
+
+220
+00:13:04,490 --> 00:13:05,060
+efficient
+
+221
+00:13:05,060 --> 00:13:09,050
+efficient thing to do and as it you
+don't need anything else
+
+222
+00:13:09,050 --> 00:13:12,420
+to support everything you will ever
+encounter in a net
+
+223
+00:13:12,420 --> 00:13:15,820
+and especially wary of the following
+once so experts I first for
+
+224
+00:13:15,820 --> 00:13:17,500
+intentionally written and
+
+225
+00:13:17,500 --> 00:13:20,750
+when expert of crypto software arm
+
+226
+00:13:20,750 --> 00:13:25,459
+from the US their poems restricted so
+where the middle coast at designed to be
+
+227
+00:13:25,459 --> 00:13:27,120
+easily credible
+
+228
+00:13:27,120 --> 00:13:30,800
+DS is the Dez attention pfeiffer
+
+229
+00:13:30,800 --> 00:13:34,480
+with 56 bikies are also it can be.
+
+230
+00:13:34,480 --> 00:13:37,589
+would force pretty easily so awarded
+also
+
+231
+00:13:37,589 --> 00:13:40,949
+and finally RC force a bit more
+complicated
+
+232
+00:13:40,949 --> 00:13:45,089
+some people considered as the syllable
+the two of the most problems
+
+233
+00:13:45,089 --> 00:13:48,209
+does I'll beach till book Cyprus
+
+234
+00:13:48,209 --> 00:13:51,860
+have are shown over the years but on the
+other hand own little cryptographer
+
+235
+00:13:51,860 --> 00:13:54,870
+I know of arabs I'm
+
+236
+00:13:54,870 --> 00:13:59,160
+of the opinion that it may be broken
+waste that a national agencies
+
+237
+00:13:59,160 --> 00:14:03,329
+maybe already able to decipher it all it
+it will be very soon so
+
+238
+00:14:03,329 --> 00:14:07,470
+based on what I've heard from people who
+are way more smart and I am
+
+239
+00:14:07,470 --> 00:14:11,019
+a general and white against that cell
+
+240
+00:14:11,019 --> 00:14:14,060
+north to encrypt and decrypt Cyprus
+needs a key
+
+241
+00:14:14,060 --> 00:14:17,820
+and since you're of talking about
+symmetric encryption
+
+242
+00:14:17,820 --> 00:14:22,079
+it has even to be displayed in two key
+so either way to agree Inc
+
+243
+00:14:22,079 --> 00:14:25,139
+on key East over for to encrypt them
+
+244
+00:14:25,139 --> 00:14:29,260
+connection which is not contribute yet
+so we have a nice checking a problem
+
+245
+00:14:29,260 --> 00:14:33,250
+fortunately math come to rescue am gates
+are several ways to
+
+246
+00:14:33,250 --> 00:14:36,449
+are exchange keys over and in secure
+line
+
+247
+00:14:36,449 --> 00:14:41,250
+with alec you the keys and often three
+are currently deployed
+
+248
+00:14:41,250 --> 00:14:44,800
+first there's are 8 which is not just a
+company that took a lot of money from
+
+249
+00:14:44,800 --> 00:14:45,720
+the NSA
+
+250
+00:14:45,720 --> 00:14:49,120
+but its its also I'll
+
+251
+00:14:49,120 --> 00:14:53,350
+a public key cryptosystem so medical it
+you have a public yes secret keyed
+
+252
+00:14:53,350 --> 00:14:56,370
+public you for encrypting secret you for
+the crippling
+
+253
+00:14:56,370 --> 00:15:00,620
+straightforward the you that in kilotons
+of very straightforward took
+
+254
+00:15:00,620 --> 00:15:05,040
+but as soon as a secret key
+
+255
+00:15:05,040 --> 00:15:12,040
+bleeds out of the server I am
+
+256
+00:15:12,519 --> 00:15:18,070
+I prepared at 10 but
+
+257
+00:15:18,070 --> 00:15:23,089
+all future and past communications
+become plain text attacker
+
+258
+00:15:23,089 --> 00:15:28,220
+so we say it like perfect forward
+secrecy ordered its not PFS
+
+259
+00:15:28,220 --> 00:15:31,720
+this bears repeating our one court order
+one CE
+
+260
+00:15:31,720 --> 00:15:35,990
+are once they're a break-in and the
+thief can decipher everything they
+
+261
+00:15:35,990 --> 00:15:37,940
+captured kept rebel capture
+
+262
+00:15:37,940 --> 00:15:41,089
+this is really bad no but its path to
+peep
+
+263
+00:15:41,089 --> 00:15:44,389
+so especially operation folks really
+like it
+
+264
+00:15:44,389 --> 00:15:47,920
+on Dell turned it used to be a are a
+formal diffie-hellman
+
+265
+00:15:47,920 --> 00:15:51,050
+which is PFS but slow so apps don't Los
+
+266
+00:15:51,050 --> 00:15:54,430
+don't like slow and
+
+267
+00:15:54,430 --> 00:15:57,620
+finally nowadays we have though are
+
+268
+00:15:57,620 --> 00:16:01,100
+relatively new is CDH here is just that
+the crib to
+
+269
+00:16:01,100 --> 00:16:05,410
+version of th you which means it's
+faster and it's better to more secure
+
+270
+00:16:05,410 --> 00:16:10,009
+and you should really do everything
+humanly possible to ensure perfect for
+
+271
+00:16:10,009 --> 00:16:12,139
+secrecy to everyone
+
+272
+00:16:12,139 --> 00:16:15,610
+and for that you will you need eat both
+eche and DH
+
+273
+00:16:15,610 --> 00:16:19,070
+E and since CDH is faster s
+
+274
+00:16:19,070 --> 00:16:23,029
+suggest to prefer prefer it and ours a
+should be really just a fallback
+
+275
+00:16:23,029 --> 00:16:27,740
+its should really on if you have to
+
+276
+00:16:27,740 --> 00:16:31,110
+so finally
+
+277
+00:16:31,110 --> 00:16:34,740
+message authentication codes or max our
+youth message integrity
+
+278
+00:16:34,740 --> 00:16:38,550
+messages in TLS just means RTLS records
+or
+
+279
+00:16:38,550 --> 00:16:43,190
+a lump of data that is sent out and arm
+received an impact
+
+280
+00:16:43,190 --> 00:16:46,630
+the up makes I'm not kill a specific
+don't let the broad
+
+281
+00:16:46,630 --> 00:16:50,180
+a message comp are confusing anyways
+
+282
+00:16:50,180 --> 00:16:53,350
+song they combine some magic crop dust
+
+283
+00:16:53,350 --> 00:16:57,449
+together with our shared secret key is
+to ensure both the integrity
+
+284
+00:16:57,449 --> 00:17:00,519
+and the authenticity of single messages
+so
+
+285
+00:17:00,519 --> 00:17:03,639
+if you have a message you know it at
+this exact message how you had
+
+286
+00:17:03,639 --> 00:17:07,130
+arm will send by the person who knows
+
+287
+00:17:07,130 --> 00:17:10,400
+the shared secret key in that or
+
+288
+00:17:10,400 --> 00:17:15,100
+sup pls uses a so-called keyed hash make
+your age make for that
+
+289
+00:17:15,100 --> 00:17:18,329
+you at least arm and before that as
+
+290
+00:17:18,329 --> 00:17:21,400
+you something similar but slightly
+different
+
+291
+00:17:21,400 --> 00:17:24,789
+them and kill us 1.2 com
+
+292
+00:17:24,789 --> 00:17:28,199
+it was introduced that some efforts can
+bring to own Mac
+
+293
+00:17:28,199 --> 00:17:31,669
+with them and this is very
+aforementioned de la contra mode tryin
+
+294
+00:17:31,669 --> 00:17:32,929
+speak ass
+
+295
+00:17:32,929 --> 00:17:36,990
+it integrates to message authentication
+within the cipher mode
+
+296
+00:17:36,990 --> 00:17:41,890
+which means it's not an ex extra step it
+can be a nicely implemented in hardware
+
+297
+00:17:41,890 --> 00:17:44,940
+this is the future sup
+
+298
+00:17:44,940 --> 00:17:48,350
+finally if your list does not contain
+only are throng
+
+299
+00:17:48,350 --> 00:17:52,990
+perfect forward secure certain a Cyprus
+make sure that your own list and order
+
+300
+00:17:52,990 --> 00:17:53,929
+of Cyprus
+
+301
+00:17:53,929 --> 00:17:57,080
+has the higher priority casts its
+
+302
+00:17:57,080 --> 00:18:01,330
+its first light left the latest and
+greatest arm yes implementation
+
+303
+00:18:01,330 --> 00:18:05,580
+if the Klein sense you a list with ours
+a triple than a top
+
+304
+00:18:05,580 --> 00:18:09,580
+and you comply although you could both
+have done the CDH a yes DCM
+
+305
+00:18:09,580 --> 00:18:13,590
+top and you're done wife told you here
+
+306
+00:18:13,590 --> 00:18:17,539
+you're basically done however thinking
+and you've got it right
+
+307
+00:18:17,539 --> 00:18:20,760
+does mean absolutely nothing you need to
+test a result
+
+308
+00:18:20,760 --> 00:18:24,570
+on desk really a much lot of confusing
+stuff that can happen the for example
+
+309
+00:18:24,570 --> 00:18:26,240
+just run into our
+
+310
+00:18:26,240 --> 00:18:30,160
+rail slash central 6.5 which has a
+decent
+
+311
+00:18:30,160 --> 00:18:33,370
+up messes oh now but the engine X is
+
+312
+00:18:33,370 --> 00:18:36,840
+to compile against the OPP although
+missus all that means that almost as old
+
+313
+00:18:36,840 --> 00:18:37,630
+house you
+
+314
+00:18:37,630 --> 00:18:41,740
+oh yeah I can do is to be achieved no
+problem and then you scan your own are
+
+315
+00:18:41,740 --> 00:18:45,160
+engine expand nato soon open so that
+
+316
+00:18:45,160 --> 00:18:48,460
+always tested and if your service HTTPS
+
+317
+00:18:48,460 --> 00:18:52,470
+it's your lucky day because then you can
+just use the Qantas as is also a test
+
+318
+00:18:52,470 --> 00:18:55,590
+and sis is a pretty common case I
+figured
+
+319
+00:18:55,590 --> 00:18:59,820
+I'm going to show you how to reduce
+output using the results of my home page
+
+320
+00:18:59,820 --> 00:19:03,630
+I like to ask stressed that they test
+much more them I will be able to talk
+
+321
+00:19:03,630 --> 00:19:04,570
+about
+
+322
+00:19:04,570 --> 00:19:08,400
+so after i've done the basics and three
+years go back and get it as green as
+
+323
+00:19:08,400 --> 00:19:09,010
+possible
+
+324
+00:19:09,010 --> 00:19:12,140
+always m from a plus it's not that hard
+
+325
+00:19:12,140 --> 00:19:18,460
+sup this certificate as valid from my
+homepage both with and without trouble W
+
+326
+00:19:18,460 --> 00:19:21,679
+it valid from March until next May
+
+327
+00:19:21,679 --> 00:19:25,350
+and as a for KR a key and this case to
+meet Starz
+
+328
+00:19:25,350 --> 00:19:29,470
+a is used for are cryptographic
+signature us not for key exchange the
+
+329
+00:19:29,470 --> 00:19:30,419
+same algorithm
+
+330
+00:19:30,419 --> 00:19:34,390
+but the different use cases and it has
+completely different implications
+
+331
+00:19:34,390 --> 00:19:37,710
+other possibilities would be a ideas s
+which nobody uses
+
+332
+00:19:37,710 --> 00:19:41,260
+and ECDs a richest gaining some traction
+lately
+
+333
+00:19:41,260 --> 00:19:45,049
+because it's pastor truth about arm
+
+334
+00:19:45,049 --> 00:19:49,230
+its grossly under supported by both CA
+ce and clients
+
+335
+00:19:49,230 --> 00:19:54,770
+so you first have to find a c8 science
+hooky and then your have to find
+
+336
+00:19:54,770 --> 00:19:58,950
+I now and then you have to do a dual
+threat to get set up like Google last
+
+337
+00:19:58,950 --> 00:19:59,580
+saw you
+
+338
+00:19:59,580 --> 00:20:02,850
+support both um
+
+339
+00:20:02,850 --> 00:20:06,789
+as farce a key step for case the current
+state-of-the-art key size
+
+340
+00:20:06,789 --> 00:20:12,169
+2k is badly enough and 1k is a serious
+security problem
+
+341
+00:20:12,169 --> 00:20:16,240
+sup it whilst issued by the como to see
+a and they signed a certificate using
+
+342
+00:20:16,240 --> 00:20:17,460
+ours in shot to
+
+343
+00:20:17,460 --> 00:20:21,570
+which is nice shot to it which should be
+our striving in OI days
+
+344
+00:20:21,570 --> 00:20:25,110
+show one has been mostly are being
+deprecated in but honest
+
+345
+00:20:25,110 --> 00:20:31,030
+so 00 it has no Extended Validation
+because I don't support it kinda Reckitt
+
+346
+00:20:31,030 --> 00:20:34,320
+and um it's not revoked and that
+
+347
+00:20:34,320 --> 00:20:38,500
+stuff its trust that which is wonderful
+self protocols
+
+348
+00:20:38,500 --> 00:20:41,600
+always ensure that kills 1.1 1.1
+
+349
+00:20:41,600 --> 00:20:46,640
+are ek active and as a tourist inactive
+
+350
+00:20:46,640 --> 00:20:50,570
+because we have customers the demand
+minutes XP support you now
+
+351
+00:20:50,570 --> 00:20:53,900
+you have to keep as a three on but if
+you don't
+
+352
+00:20:53,900 --> 00:20:57,480
+don't carry that burden drop it
+
+353
+00:20:57,480 --> 00:21:01,330
+sup seven suites Terry go their dis-
+currently
+
+354
+00:21:01,330 --> 00:21:05,220
+best widely supported Cyprus it if you
+want to have it up there
+
+355
+00:21:05,220 --> 00:21:08,480
+you know it's readable nice sup let's
+look in detail
+
+356
+00:21:08,480 --> 00:21:11,690
+it is the fast and forward security 384
+key exchange
+
+357
+00:21:11,690 --> 00:21:14,780
+it uses Rs a four signatures
+
+358
+00:21:14,780 --> 00:21:20,610
+which is not something you can configure
+its depending on the type of Yuki
+
+359
+00:21:20,610 --> 00:21:24,350
+arm yes I first already priced 8 yes 128
+
+360
+00:21:24,350 --> 00:21:27,789
+in Golconda mode and finally to use a
+shot 256
+
+361
+00:21:27,789 --> 00:21:31,419
+for a key derivation are
+
+362
+00:21:31,419 --> 00:21:35,539
+if the cipher will there are classical
+one that uses
+
+363
+00:21:35,539 --> 00:21:39,549
+external age make it would also use dis
+hashing function for age Mac
+
+364
+00:21:39,549 --> 00:21:44,700
+isn't so it wont arm as you can see the
+Cyprus strictly prefer earth
+
+365
+00:21:44,700 --> 00:21:49,130
+PFS I first all over non PFS once
+
+366
+00:21:49,130 --> 00:21:52,710
+which are again just because 1106 Peter
+
+367
+00:21:52,710 --> 00:21:56,860
+now heartthrob the privilege bro the
+view if you are deploying something
+
+368
+00:21:56,860 --> 00:21:59,890
+different than about applications
+compared to
+
+369
+00:21:59,890 --> 00:22:02,909
+I use six some some SATs are
+
+370
+00:22:02,909 --> 00:22:06,230
+especially males the server setups which
+are some
+
+371
+00:22:06,230 --> 00:22:10,370
+in turn set up in the nineties and it's
+the running
+
+372
+00:22:10,370 --> 00:22:14,480
+it can look like a sweet dream so your
+mileage may vary very here
+
+373
+00:22:14,480 --> 00:22:18,210
+sup a thought about writing plan for
+their next and turns out
+
+374
+00:22:18,210 --> 00:22:22,120
+that browsers aside the translators of
+TLS Syniverse triple all
+
+375
+00:22:22,120 --> 00:22:25,840
+just slightly off because they're on one
+job
+
+376
+00:22:25,840 --> 00:22:29,640
+verify verified a certificate to serve a
+sense you
+
+377
+00:22:29,640 --> 00:22:33,940
+is it valid or is it expired it does the
+trust invalidate
+
+378
+00:22:33,940 --> 00:22:37,669
+and finally is the certificate valid for
+the hostname
+
+379
+00:22:37,669 --> 00:22:40,900
+you want to connect to especially host
+the modifications
+
+380
+00:22:40,900 --> 00:22:45,590
+Sina such a pathetic state there's even
+a scientific paper about it helped
+
+381
+00:22:45,590 --> 00:22:47,429
+foster does not verify hostnames
+
+382
+00:22:47,429 --> 00:22:50,490
+saw and unfortunately it
+
+383
+00:22:50,490 --> 00:22:55,600
+ok matters I'll has no little part in a
+says Khloe solar thermal stress change
+
+384
+00:22:55,600 --> 00:22:58,730
+first thing is that certificate
+verification up im
+
+385
+00:22:58,730 --> 00:23:02,750
+I guess what you have to tell Obama's
+explicitly which the age to trust
+
+386
+00:23:02,750 --> 00:23:06,570
+and unfortunately it trust or so how the
+platform dependent every less held
+
+387
+00:23:06,570 --> 00:23:07,470
+elsewhere
+
+388
+00:23:07,470 --> 00:23:11,330
+fortunately there is a function on
+properly configured systems
+
+389
+00:23:11,330 --> 00:23:16,690
+in other read your default Russia ca3
+compared and Pat
+
+390
+00:23:16,690 --> 00:23:20,600
+not for some very odd reason arm it
+completely under command that I had to
+
+391
+00:23:20,600 --> 00:23:21,789
+dive into darkness
+
+392
+00:23:21,789 --> 00:23:24,940
+a source go to our verify what's
+actually doing
+
+393
+00:23:24,940 --> 00:23:28,260
+and also near Oxford file and directory
+bests
+
+394
+00:23:28,260 --> 00:23:33,169
+trust source which basically means that
+does not work on Windows or west 10
+
+395
+00:23:33,169 --> 00:23:37,299
+well and as if ab muscles of cycle some
+bad enough
+
+396
+00:23:37,299 --> 00:23:41,809
+our the year operating system vendors
+make it you know a bit more miserable
+
+397
+00:23:41,809 --> 00:23:44,860
+soft of
+
+398
+00:23:44,860 --> 00:23:48,570
+do you have to install your trash out a
+visit by hand are you get very
+
+399
+00:23:48,570 --> 00:23:54,120
+beard errors so for previous do you have
+to install see a rude and assess
+
+400
+00:23:54,120 --> 00:23:57,120
+on keepin redhead you have to first
+glimpse of
+
+401
+00:23:57,120 --> 00:24:01,510
+across but from consistency because the
+pictures the set name:
+
+402
+00:24:01,510 --> 00:24:04,850
+om are sent you can either use
+
+403
+00:24:04,850 --> 00:24:08,370
+Apple's engine up messes oh that you
+shouldn't and figure out the crux of the
+
+404
+00:24:08,370 --> 00:24:09,789
+page to entrust elation
+
+405
+00:24:09,789 --> 00:24:13,990
+agent which cost me like a week of my
+life
+
+406
+00:24:13,990 --> 00:24:17,460
+and are you going home brew which
+picture does something nice
+
+407
+00:24:17,460 --> 00:24:21,440
+I'll they just create a copy on
+installation of the system trust other
+
+408
+00:24:21,440 --> 00:24:23,409
+base and use that that it's not optimal
+
+409
+00:24:23,409 --> 00:24:27,059
+because if you change something to
+assist in kitchen for a reason it's not
+
+410
+00:24:27,059 --> 00:24:29,440
+reflect that but it's better than
+nothing
+
+411
+00:24:29,440 --> 00:24:32,710
+for Renault stairs min Thurston pappy
+I'm which Ruth
+
+412
+00:24:32,710 --> 00:24:36,059
+very fine and finally if you want to
+dodge the bullet completely
+
+413
+00:24:36,059 --> 00:24:39,679
+which sometimes is the best I you can
+just use 35 from pie PI
+
+414
+00:24:39,679 --> 00:24:44,169
+which is a python package of months of
+trust database
+
+415
+00:24:44,169 --> 00:24:47,980
+so going on to a hot summer vacation
+
+416
+00:24:47,980 --> 00:24:53,190
+it is even worse because ok mothers out
+literally say yes
+
+417
+00:24:53,190 --> 00:24:57,210
+there's absolutely no assistance
+whatsoever from old masters else I'd
+
+418
+00:24:57,210 --> 00:25:01,220
+to verify better a certificate is valid
+for a hostname
+
+419
+00:25:01,220 --> 00:25:05,279
+nothing there isn't information on their
+argumentation
+
+420
+00:25:05,279 --> 00:25:09,900
+so everyone has implemented themselves
+using our cease
+
+421
+00:25:09,900 --> 00:25:13,830
+and %ah bogus are advice from Steak
+overflow and
+
+422
+00:25:13,830 --> 00:25:18,340
+up of course it's raining security
+problems all the time
+
+423
+00:25:18,340 --> 00:25:21,990
+I meant I think the peter is no
+exception sup
+
+424
+00:25:21,990 --> 00:25:25,059
+failing to verify certificates is really
+bet
+
+425
+00:25:25,059 --> 00:25:28,840
+because it makes 63 miss a special tool
+man in a middle attacks
+
+426
+00:25:28,840 --> 00:25:32,549
+so if you don't verify birth certificate
+that all bitch
+
+427
+00:25:32,549 --> 00:25:35,750
+as I'd like to remind you est the up as
+to our default
+
+428
+00:25:35,750 --> 00:25:38,950
+you for behavior I can pretend to be a
+Google
+
+429
+00:25:38,950 --> 00:25:42,110
+with the south and certificate I can't
+read in five seconds
+
+430
+00:25:42,110 --> 00:25:46,000
+if you go to fight a certificate I don't
+compare hostnames agassi be a Google
+
+431
+00:25:46,000 --> 00:25:49,799
+I just have to use the certificate of my
+home page was perfectly trustworthy
+
+432
+00:25:49,799 --> 00:25:50,460
+invalid
+
+433
+00:25:50,460 --> 00:25:53,919
+Justin for hosting but you want now
+because he didn't look
+
+434
+00:25:53,919 --> 00:25:57,570
+so but if I'll thinks
+
+435
+00:25:57,570 --> 00:26:01,520
+on if there's only one thing you take
+away from the store please let it be
+
+436
+00:26:01,520 --> 00:26:02,309
+this
+
+437
+00:26:02,309 --> 00:26:05,360
+everything else is that if a crisis just
+Monday in
+
+438
+00:26:05,360 --> 00:26:09,880
+limit acceptable ciphers to strong once
+four times with pre-configured service
+
+439
+00:26:09,880 --> 00:26:11,270
+like every day
+
+440
+00:26:11,270 --> 00:26:15,059
+and there's a bus is a2 thats all
+
+441
+00:26:15,059 --> 00:26:19,200
+and yet so if you do it it the perfect
+storm of ignorant on one side
+
+442
+00:26:19,200 --> 00:26:22,880
+and operating systems and opposite all
+making it unnecessarily hard on the
+
+443
+00:26:22,880 --> 00:26:24,600
+other
+
+444
+00:26:24,600 --> 00:26:30,130
+stop and real finish with the weakest
+link up a security cheney users
+
+445
+00:26:30,130 --> 00:26:34,039
+up you
+
+446
+00:26:34,039 --> 00:26:38,080
+they can make everything fall apart art
+no matter how much the rest of the
+
+447
+00:26:38,080 --> 00:26:39,140
+spektr ice to
+
+448
+00:26:39,140 --> 00:26:42,600
+keep them secure and usually starts with
+for the middle misconceptions
+
+449
+00:26:42,600 --> 00:26:46,720
+sup what the skills that you want to do
+for you for example
+
+450
+00:26:46,720 --> 00:26:51,010
+it's nice that you connection to your
+mail so are you up Tessera secured the
+
+451
+00:26:51,010 --> 00:26:52,240
+latest and greatest cipher
+
+452
+00:26:52,240 --> 00:26:55,600
+that's great because people won't be
+able to steal passwords
+
+453
+00:26:55,600 --> 00:26:59,059
+art keep doing it but from the
+
+454
+00:26:59,059 --> 00:27:04,000
+person disconnect but that your pot nice
+connected using a plain-text connection
+
+455
+00:27:04,000 --> 00:27:04,510
+are
+
+456
+00:27:04,510 --> 00:27:07,539
+some intermediate server is compromised
+which happens
+
+457
+00:27:07,539 --> 00:27:11,470
+are you confidentiality level for this
+conversation is zero
+
+458
+00:27:11,470 --> 00:27:14,909
+and since you can tell if that's
+happening you have to always assumed to
+
+459
+00:27:14,909 --> 00:27:16,380
+burst
+
+460
+00:27:16,380 --> 00:27:19,450
+out killers only offers security for
+direct Pierce
+
+461
+00:27:19,450 --> 00:27:24,090
+you will need some additional are layer
+security if you need confidentiality for
+
+462
+00:27:24,090 --> 00:27:26,820
+n2 and connections for example or PGP
+for email
+
+463
+00:27:26,820 --> 00:27:30,000
+RTR fall up for chat
+
+464
+00:27:30,000 --> 00:27:33,309
+then there's the problem that certain
+data can't be interrupted
+
+465
+00:27:33,309 --> 00:27:36,820
+if you serve a job site you broke over
+HTTPS
+
+466
+00:27:36,820 --> 00:27:40,240
+take you'll still know that you're doing
+at the cast your DNS queries in a
+
+467
+00:27:40,240 --> 00:27:41,179
+traffic patterns which
+
+468
+00:27:41,179 --> 00:27:44,179
+all give you away for that you will need
+BPN
+
+469
+00:27:44,179 --> 00:27:47,690
+or poor to get to your privacy but
+
+470
+00:27:47,690 --> 00:27:52,279
+I'm bpm route all your traffic 30
+network
+
+471
+00:27:52,279 --> 00:27:55,309
+so arm you better make sure that you
+trust them
+
+472
+00:27:55,309 --> 00:27:59,450
+and this just as well for example
+applies to content delivery networks
+
+473
+00:27:59,450 --> 00:28:03,760
+succeed in pryor's can read oil traffic
+unencrypted because
+
+474
+00:28:03,760 --> 00:28:07,020
+they do TLS termination for you so arm
+
+475
+00:28:07,020 --> 00:28:10,460
+St could sniff oil pipe yeah I password
+if they wanted to
+
+476
+00:28:10,460 --> 00:28:13,899
+which Dept don't want to go to great
+guys as Donald told me but
+
+477
+00:28:13,899 --> 00:28:17,029
+they could sup does another reason
+
+478
+00:28:17,029 --> 00:28:21,490
+to never ever reuse passwords in any
+case because you never know which the
+
+479
+00:28:21,490 --> 00:28:24,049
+party is gonna see it
+
+480
+00:28:24,049 --> 00:28:29,399
+sup makes are if you have a click away
+such warning
+
+481
+00:28:29,399 --> 00:28:33,850
+you may have been MIT and you
+
+482
+00:28:33,850 --> 00:28:36,870
+they're awesome book investigative arm
+Inc and then
+
+483
+00:28:36,870 --> 00:28:39,890
+use your best judgment so I am
+
+484
+00:28:39,890 --> 00:28:43,870
+if the certificate mismatches just the
+supplement like here
+
+485
+00:28:43,870 --> 00:28:48,610
+and you know to circumstances like that
+twister didn't support us and I in 2014
+
+486
+00:28:48,610 --> 00:28:52,710
+them you're probably fine if the
+certificate is OK
+
+487
+00:28:52,710 --> 00:28:57,130
+and arm just expired five minutes ago
+you're probably find two-income
+
+488
+00:28:57,130 --> 00:29:01,850
+to some snarky tweets them make fun of
+people on IRC
+
+489
+00:29:01,850 --> 00:29:04,950
+but if you don't understand what's going
+on there
+
+490
+00:29:04,950 --> 00:29:09,950
+never accept always decline man in the
+middle a text ap really really easy
+
+491
+00:29:09,950 --> 00:29:14,340
+on public networks all it takes is that
+it's a rogue DHCP server
+
+492
+00:29:14,340 --> 00:29:18,450
+cell and the next level of picking
+mindlessly is the sum crook
+
+493
+00:29:18,450 --> 00:29:22,220
+tricks you into installing day root
+certificate into your trust other base
+
+494
+00:29:22,220 --> 00:29:26,380
+because that means it every other I'll
+certificate is signed
+
+495
+00:29:26,380 --> 00:29:30,039
+with that will be considered trustworthy
+by your system
+
+496
+00:29:30,039 --> 00:29:34,840
+so we will never ever get a morning
+Quinta MITM you
+
+497
+00:29:34,840 --> 00:29:38,010
+and if the user doesn't screw up
+
+498
+00:29:38,010 --> 00:29:42,080
+there's so much that can move wrong so
+trust on a business
+
+499
+00:29:42,080 --> 00:29:45,740
+assist quick recap is are with a brozak
+barry's
+
+500
+00:29:45,740 --> 00:29:50,380
+I try to determine that a certificate
+chain it got from the server
+
+501
+00:29:50,380 --> 00:29:54,500
+is ultimately signed by trust 30 CA and
+it happens to be true
+
+502
+00:29:54,500 --> 00:29:58,649
+that you browse a trustee a switch make
+us some discomfort to
+
+503
+00:29:58,649 --> 00:30:02,279
+this means at the United States
+Department of Defense
+
+504
+00:30:02,279 --> 00:30:06,309
+can easily sign any certificate in a
+vote for any host them in a row
+
+505
+00:30:06,309 --> 00:30:09,580
+and there will be a a nice little lock
+in your
+
+506
+00:30:09,580 --> 00:30:14,140
+not bar and fought like China standing
+back or something
+
+507
+00:30:14,140 --> 00:30:18,049
+every country has some CAD CAM
+compromise
+
+508
+00:30:18,049 --> 00:30:22,779
+and it alone unheard of of CA's being
+hacked
+
+509
+00:30:22,779 --> 00:30:26,399
+making fatal mistakes being forced to
+cooperate with authorities
+
+510
+00:30:26,399 --> 00:30:29,779
+or simply belonging to corporations
+those priorities maybe not quite match
+
+511
+00:30:29,779 --> 00:30:30,409
+yours
+
+512
+00:30:30,409 --> 00:30:33,419
+so for example just Wiley examples
+
+513
+00:30:33,419 --> 00:30:37,220
+Microsoft and Google are both CA ce
+whatever it means to you
+
+514
+00:30:37,220 --> 00:30:41,059
+and this wall system is just broken
+
+515
+00:30:41,059 --> 00:30:48,059
+sup
+
+516
+00:30:49,029 --> 00:30:53,880
+speaking of broking
+
+517
+00:30:53,880 --> 00:30:57,190
+let's talk a lot path now and its
+
+518
+00:30:57,190 --> 00:31:02,240
+let me sabra simple rule of thumb: as
+i've seen people love to scrubbed TLS
+
+519
+00:31:02,240 --> 00:31:06,330
+thought if it somehow possible lead
+battle-tested saw for Hannah lead for
+
+520
+00:31:06,330 --> 00:31:07,210
+you
+
+521
+00:31:07,210 --> 00:31:11,210
+especially if you just deploying that
+applications a properly configured
+
+522
+00:31:11,210 --> 00:31:16,070
+engine X Apache in front of it most
+really save you a lot of grief
+
+523
+00:31:16,070 --> 00:31:19,370
+I am there but what is it and
+
+524
+00:31:19,370 --> 00:31:23,110
+there's to plan your information on the
+internet how to our
+
+525
+00:31:23,110 --> 00:31:26,960
+how to configure improperly which is
+simply not true for some random
+
+526
+00:31:26,960 --> 00:31:31,279
+patton more you on pipe EI which just
+ended killer support because someone ask
+
+527
+00:31:31,279 --> 00:31:32,940
+for it on my bike trigger
+
+528
+00:31:32,940 --> 00:31:36,820
+but since life you were in that simple
+
+529
+00:31:36,820 --> 00:31:40,159
+let's get our hands dirty anyway by 50%
+less
+
+530
+00:31:40,159 --> 00:31:43,179
+landscape can be roughly divided into
+two parts on one side
+
+531
+00:31:43,179 --> 00:31:47,159
+as the standard libraries as italian
+mature I don't underside
+
+532
+00:31:47,159 --> 00:31:50,529
+are espy must sell and we'll start with
+a
+
+533
+00:31:50,529 --> 00:31:54,720
+include batteries it turns out that in
+all versions before 3.3
+
+534
+00:31:54,720 --> 00:31:58,600
+a pretty rusty arm
+
+535
+00:31:58,600 --> 00:32:02,490
+and money even that even the latest
+Chinese version 3.4
+
+536
+00:32:02,490 --> 00:32:06,179
+has due to backwards compatibility
+requirements
+
+537
+00:32:06,179 --> 00:32:09,529
+pretty terrible default so for example
+host number to get you still up
+
+538
+00:32:09,529 --> 00:32:13,070
+in all the code is der at mad at the
+situation
+
+539
+00:32:13,070 --> 00:32:16,269
+you wish for unpacking to because
+
+540
+00:32:16,269 --> 00:32:20,190
+I'm the coverage of of messes else
+
+541
+00:32:20,190 --> 00:32:24,090
+API really really poor so it's
+impossible
+
+542
+00:32:24,090 --> 00:32:27,750
+too bright forward secure servers in
+Obama to celebre says
+
+543
+00:32:27,750 --> 00:32:31,429
+a model which means you should never
+ever right as killer servers
+
+544
+00:32:31,429 --> 00:32:34,500
+with opens me the can start library
+
+545
+00:32:34,500 --> 00:32:38,409
+it's also missing a bunch of option so
+you can disable as a to you can't
+
+546
+00:32:38,409 --> 00:32:38,990
+disable
+
+547
+00:32:38,990 --> 00:32:42,549
+are kiss compression it's all a reset
+
+548
+00:32:42,549 --> 00:32:45,809
+and finally arm it bound
+
+549
+00:32:45,809 --> 00:32:49,029
+Tudor are open SSL your papers is
+
+550
+00:32:49,029 --> 00:32:52,529
+built against so if you want then you up
+messes elders in
+
+551
+00:32:52,529 --> 00:32:55,789
+you have to recompile apartment which is
+not very nice
+
+552
+00:32:55,789 --> 00:32:59,909
+also missing 2.7 is host memory for
+cation ma'am I think stress enough how
+
+553
+00:32:59,909 --> 00:33:00,899
+important this
+
+554
+00:33:00,899 --> 00:33:04,279
+so that has been edit in Python 3.2
+
+555
+00:33:04,279 --> 00:33:08,350
+and fortunately and has been back ported
+for piping to answer bail on pipe EI
+
+556
+00:33:08,350 --> 00:33:11,799
+however you have to remember install it
+use it it's double
+
+557
+00:33:11,799 --> 00:33:14,950
+up in piled miss L
+
+558
+00:33:14,950 --> 00:33:18,659
+comes from a talent stomach libraries
+I'll support was even worse than what
+
+559
+00:33:18,659 --> 00:33:19,240
+you have
+
+560
+00:33:19,240 --> 00:33:22,760
+now I think it even started his left for
+and hat you make the state
+
+561
+00:33:22,760 --> 00:33:26,110
+how much quite sure they're arm
+
+562
+00:33:26,110 --> 00:33:30,890
+drunk on all relevant path in Greece and
+although it has been a bit dormant or to
+
+563
+00:33:30,890 --> 00:33:31,659
+time
+
+564
+00:33:31,659 --> 00:33:36,019
+om it has a much better are API coverage
+then marched at library
+
+565
+00:33:36,019 --> 00:33:39,179
+on I thing to the only notable omission
+
+566
+00:33:39,179 --> 00:33:43,299
+of TCD sorry on another long mission is
+currently CDH
+
+567
+00:33:43,299 --> 00:33:46,890
+you for servers about the pirate pull
+requests they are
+
+568
+00:33:46,890 --> 00:33:51,990
+and I am I have high hopes the discs
+will get merged in its Prince
+
+569
+00:33:51,990 --> 00:33:55,720
+but what's more important and you
+project give piled missus L
+
+570
+00:33:55,720 --> 00:34:01,179
+I knew my god cryptography if you've
+been to talk of Poland Jerrett
+
+571
+00:34:01,179 --> 00:34:06,039
+arm if you learn you should watch the
+video because it's highly interesting
+
+572
+00:34:06,039 --> 00:34:09,300
+you may have already heard about it it's
+a bunch of piping people with more time
+
+573
+00:34:09,300 --> 00:34:10,020
+and sense
+
+574
+00:34:10,020 --> 00:34:13,089
+and with %uh average favor
+
+575
+00:34:13,089 --> 00:34:16,649
+a bad life the decisions arm came
+together to write
+
+576
+00:34:16,649 --> 00:34:21,500
+a pattern cripple a break without food
+guns be cast we don't have such thing
+
+577
+00:34:21,500 --> 00:34:25,829
+om a site product update a pipe I
+friendly see if I bindings
+
+578
+00:34:25,829 --> 00:34:30,619
+problem as a cell so and it's trivial to
+choose the opposite other room
+
+579
+00:34:30,619 --> 00:34:33,990
+and arm a bike ends like secure
+transport
+
+580
+00:34:33,990 --> 00:34:37,790
+are in the works so get your go to fail
+in patent to
+
+581
+00:34:37,790 --> 00:34:42,810
+am arm the skiff poemas are some serious
+momentum a cast
+
+582
+00:34:42,810 --> 00:34:46,399
+nigga throughout all their rusty see
+coat and
+
+583
+00:34:46,399 --> 00:34:50,230
+stuck concentrate on building Peyton
+obstructions on public debts or pay
+
+584
+00:34:50,230 --> 00:34:52,409
+almost cell is something less release
+
+585
+00:34:52,409 --> 00:34:56,750
+a patent only version which a patent
+only package which is nice
+
+586
+00:34:56,750 --> 00:35:03,150
+Anna what unfortunately missing their as
+hot summer vacation
+
+587
+00:35:03,150 --> 00:35:06,570
+maybe see a pattern here although
+
+588
+00:35:06,570 --> 00:35:10,720
+in this case poems that three tries to
+be a prepper for API so
+
+589
+00:35:10,720 --> 00:35:15,240
+M I would cut them some slack here bad
+yeah
+
+590
+00:35:15,240 --> 00:35:19,099
+but again how does on poppy I sorus
+identity gives do just that
+
+591
+00:35:19,099 --> 00:35:22,750
+plus some more obscure race 2 verify the
+identity of a server
+
+592
+00:35:22,750 --> 00:35:27,680
+arm which nobody will ever use but they
+are specified in RFC so there it is
+
+593
+00:35:27,680 --> 00:35:30,910
+and again the blood in install
+
+594
+00:35:30,910 --> 00:35:34,599
+use and let's look at
+
+595
+00:35:34,599 --> 00:35:38,220
+I knowledge through somewhat first you
+
+596
+00:35:38,220 --> 00:35:42,160
+let's look at common frameworks and
+packages and how will behave tell us
+
+597
+00:35:42,160 --> 00:35:46,420
+on since the Oct ok sorry
+
+598
+00:35:46,420 --> 00:35:50,240
+are they will serve it service again %um
+pledge event G unicorn
+
+599
+00:35:50,240 --> 00:35:53,990
+and tornado all suffer from the same
+disease which is called star Larry
+
+600
+00:35:53,990 --> 00:35:58,730
+up they cannot have PFS they cannot have
+good default because it
+
+601
+00:35:58,730 --> 00:36:04,339
+they can't use it options sop put an
+engine X in front all of them
+
+602
+00:36:04,339 --> 00:36:07,500
+arm twist that you its
+
+603
+00:36:07,500 --> 00:36:12,800
+then
+
+604
+00:36:12,800 --> 00:36:17,910
+on it's probably one of the few alleged
+reasons to cope with TLS yourself since
+
+605
+00:36:17,910 --> 00:36:19,790
+its used to implement much more
+
+606
+00:36:19,790 --> 00:36:25,210
+protocols than just arm just HTTPS
+
+607
+00:36:25,210 --> 00:36:29,510
+arm a little known fact of to assist
+those ships had a nice risky containers
+
+608
+00:36:29,510 --> 00:36:32,599
+so in other words you can be plotted
+your
+
+609
+00:36:32,599 --> 00:36:35,770
+you can deploy HTTPS but applications
+with it
+
+610
+00:36:35,770 --> 00:36:39,810
+I without putting anything in front of
+it and still have great healer support
+
+611
+00:36:39,810 --> 00:36:45,270
+and I can assure you arm that the plane
+was kept on Twitter does not mean that
+
+612
+00:36:45,270 --> 00:36:46,950
+you have to use called XT for arts
+
+613
+00:36:46,950 --> 00:36:51,660
+or use can look at the new coats
+
+614
+00:36:51,660 --> 00:36:56,010
+cell finally micro is key it's not
+packed with pacific despite the
+
+615
+00:36:56,010 --> 00:36:57,369
+convincing name
+
+616
+00:36:57,369 --> 00:37:01,060
+I'm so they just went on and brought
+them see themselves
+
+617
+00:37:01,060 --> 00:37:05,230
+so that made a masters of their own fate
+and indeed their implementation looks
+
+618
+00:37:05,230 --> 00:37:06,589
+pretty much fully featured
+
+619
+00:37:06,589 --> 00:37:10,079
+I personally with all still always put
+an injection from it
+
+620
+00:37:10,079 --> 00:37:13,730
+because I have a general distrust
+towards arm
+
+621
+00:37:13,730 --> 00:37:17,790
+ok masses are using CP coat I'll your
+mileage may vary but
+
+622
+00:37:17,790 --> 00:37:21,160
+shouldn't really saw the only way to fix
+
+623
+00:37:21,160 --> 00:37:25,230
+only thread acres there is to your move
+to Python 3 write your own SSL support
+
+624
+00:37:25,230 --> 00:37:26,650
+like my crew risky
+
+625
+00:37:26,650 --> 00:37:32,390
+or arm and poor to impaled myself
+
+626
+00:37:32,390 --> 00:37:37,900
+as long as we stay on our on standard
+library of patent to
+
+627
+00:37:37,900 --> 00:37:42,400
+now gonna stay well maybe not but I've
+talk about the letter
+
+628
+00:37:42,400 --> 00:37:46,750
+so client site event and you meant are
+they are just as bad as before
+
+629
+00:37:46,750 --> 00:37:50,000
+although it is possible to do better.
+despite a standard library
+
+630
+00:37:50,000 --> 00:37:53,240
+and tornado shows how the ship I'm not
+entirely audited
+
+631
+00:37:53,240 --> 00:37:57,130
+trust database from a tool up and depend
+on the hostname a chip
+
+632
+00:37:57,130 --> 00:38:00,280
+hostname matching arm back port from pie
+PI
+
+633
+00:38:00,280 --> 00:38:03,470
+so they verify certificates and
+hostnames by
+
+634
+00:38:03,470 --> 00:38:08,109
+d-fort imagine with on writing a paper
+engage in a truck from Peyton ideas
+
+635
+00:38:08,109 --> 00:38:12,460
+but on the other hand this to run into
+problems like the inability to
+
+636
+00:38:12,460 --> 00:38:16,710
+disable as a tour because that option
+has been added in Python 3.2
+
+637
+00:38:16,710 --> 00:38:20,700
+that causes some really funny a roasting
+a try to connect to certain service
+
+638
+00:38:20,700 --> 00:38:24,570
+on August 10 which still has as a to
+incite to just get a protocol are only
+
+639
+00:38:24,570 --> 00:38:27,599
+don't know what's happening there
+
+640
+00:38:27,599 --> 00:38:31,240
+om yeah to STATS a client site is
+
+641
+00:38:31,240 --> 00:38:36,070
+complicated but for reasons you might
+think defer to also man kamel case just
+
+642
+00:38:36,070 --> 00:38:38,520
+government after a while
+
+643
+00:38:38,520 --> 00:38:42,130
+it's complicated because nobody left
+them glitter conspired with all current
+
+644
+00:38:42,130 --> 00:38:46,170
+Release Manager a hawk all to sabotage
+my preparations
+
+645
+00:38:46,170 --> 00:38:49,310
+on you frankly started
+
+646
+00:38:49,310 --> 00:38:53,589
+to pull all nighters after he saw my
+original slide 22 just had to use a
+
+647
+00:38:53,589 --> 00:38:54,849
+third-party library
+
+648
+00:38:54,849 --> 00:38:58,690
+from the dentist for two threat and arm
+
+649
+00:38:58,690 --> 00:39:01,730
+the current state as of this morning
+when I checked the last time
+
+650
+00:39:01,730 --> 00:39:04,760
+I'm is that there are
+
+651
+00:39:04,760 --> 00:39:10,380
+up in up in low-level waste to verify
+all %uh think so the plumbing his status
+
+652
+00:39:10,380 --> 00:39:11,400
+is great
+
+653
+00:39:11,400 --> 00:39:14,670
+I wondered high-level API Slyke ATP
+agent or
+
+654
+00:39:14,670 --> 00:39:19,170
+as island point are still oblivious by
+default
+
+655
+00:39:19,170 --> 00:39:23,710
+are this is not optimal bad at least it
+is possible to write secure code which
+
+656
+00:39:23,710 --> 00:39:23,990
+is
+
+657
+00:39:23,990 --> 00:39:27,079
+was not before Sabha 414 not 0
+
+658
+00:39:27,079 --> 00:39:31,300
+and yet we take this issue 3 seriously
+so R
+
+659
+00:39:31,300 --> 00:39:34,920
+this is going to get fixed its all its
+all underway
+
+660
+00:39:34,920 --> 00:39:38,890
+am i expect to that fourteen point one
+will be pretty good
+
+661
+00:39:38,890 --> 00:39:42,930
+what's never going to be good this
+system will embrace your lip
+
+662
+00:39:42,930 --> 00:39:46,609
+comp it doesn't verify anything I
+
+663
+00:39:46,609 --> 00:39:51,210
+it doesn't said any options just hands
+all but you ever have to open the HTTPS
+
+664
+00:39:51,210 --> 00:39:54,550
+you're aware that insert is requests
+
+665
+00:39:54,550 --> 00:39:59,980
+I'm something
+
+666
+00:39:59,980 --> 00:40:03,859
+oh man I have to carry up something %uh
+the request is great because it simply
+
+667
+00:40:03,859 --> 00:40:04,839
+PI I'm
+
+668
+00:40:04,839 --> 00:40:08,089
+already ate like even more is that it
+uses Europe 3
+
+669
+00:40:08,089 --> 00:40:12,040
+to get the best possible results cell it
+always very bright
+
+670
+00:40:12,040 --> 00:40:15,630
+verify certificate always very feisty
+hostnames
+
+671
+00:40:15,630 --> 00:40:18,940
+and everything just gets better
+beautiful piled missus elena few under
+
+672
+00:40:18,940 --> 00:40:21,540
+our modules
+
+673
+00:40:21,540 --> 00:40:24,599
+yeah thought let me sum up to kill us
+
+674
+00:40:24,599 --> 00:40:28,770
+out of pipes if you can use requests for
+HTTPS curry's
+
+675
+00:40:28,770 --> 00:40:31,940
+make sure you're using in the pile
+misses a bike Marin
+
+676
+00:40:31,940 --> 00:40:35,089
+and red Kia sorus interested
+
+677
+00:40:35,089 --> 00:40:39,220
+if you need Lolo TLS use the latest
+version of piled missus 0
+
+678
+00:40:39,220 --> 00:40:43,349
+it's greatly superior to pipe B-two's as
+only you and it will follow unfaithful
+
+679
+00:40:43,349 --> 00:40:45,460
+if you have a part to play in three
+
+680
+00:40:45,460 --> 00:40:48,510
+final it you still pat me too standard
+library
+
+681
+00:40:48,510 --> 00:40:51,510
+only for a client and only have to
+really need to a arm
+
+682
+00:40:51,510 --> 00:40:55,780
+and it leads to say whatever you use
+make sure you use the relevant back
+
+683
+00:40:55,780 --> 00:40:59,380
+ports and tools to verify all the things
+
+684
+00:40:59,380 --> 00:41:03,040
+soft let's answer a question from the
+very beginning why is the state of
+
+685
+00:41:03,040 --> 00:41:07,020
+SSL sorry
+
+686
+00:41:07,020 --> 00:41:11,510
+it's alright because people still say
+SSL although it's been a plea for 15
+
+687
+00:41:11,510 --> 00:41:14,099
+years
+
+688
+00:41:14,099 --> 00:41:18,730
+it's alright because implementations are
+terrible
+
+689
+00:41:18,730 --> 00:41:24,700
+all of them I'm not sure if you expected
+me to ran for an hour
+
+690
+00:41:24,700 --> 00:41:28,500
+about how and why implementations are
+terrible in my bed been fun
+
+691
+00:41:28,500 --> 00:41:33,410
+but I am it for the reconstructive way
+to I love my speaking pamphlets
+
+692
+00:41:33,410 --> 00:41:37,349
+leave it at that if the state of a
+message I'll makes you angry
+
+693
+00:41:37,349 --> 00:41:41,930
+which redshirt I consider donating for a
+project or tell your boss to donate to
+
+694
+00:41:41,930 --> 00:41:45,540
+the project because it's literally three
+guys and one of them gross full-time
+
+695
+00:41:45,540 --> 00:41:49,349
+so it's better than it could be
+
+696
+00:41:49,349 --> 00:41:53,510
+salt it sorry because you just run to
+lead software
+
+697
+00:41:53,510 --> 00:41:57,869
+the click certain I'll certificates
+morning awake and out the mercy of third
+
+698
+00:41:57,869 --> 00:41:58,810
+parties
+
+699
+00:41:58,810 --> 00:42:02,720
+and other parties let them down
+regularly service from completely
+
+700
+00:42:02,720 --> 00:42:04,410
+outdated software
+
+701
+00:42:04,410 --> 00:42:08,280
+that is confused configured completely
+poorly
+
+702
+00:42:08,280 --> 00:42:12,819
+clients and verify anything although if
+their only job and
+
+703
+00:42:12,819 --> 00:42:16,329
+we're not talking yell so obscure free
+very here this January
+
+704
+00:42:16,329 --> 00:42:19,670
+I O active found forty percent of Tesla
+banking aP's
+
+705
+00:42:19,670 --> 00:42:23,369
+to be vulnerable to make him a text and
+up
+
+706
+00:42:23,369 --> 00:42:26,980
+finally it sorry because patents in the
+forefront of being terrible
+
+707
+00:42:26,980 --> 00:42:30,349
+the current state really is sorry even
+without heartbeat
+
+708
+00:42:30,349 --> 00:42:34,550
+artist the title of this talk is not the
+tension bed but there's help
+
+709
+00:42:34,550 --> 00:42:38,240
+for the vault people started to Karen
+question for that's probably be by your
+
+710
+00:42:38,240 --> 00:42:39,329
+here
+
+711
+00:42:39,329 --> 00:42:44,960
+arm acceptance is always the first step
+
+712
+00:42:44,960 --> 00:42:47,810
+good ap
+
+713
+00:42:47,810 --> 00:42:53,910
+standard library support the better by
+making it uses the 3.3 release
+
+714
+00:42:53,910 --> 00:42:57,000
+so if you're ever near the reason for
+patent 3 for your boss
+
+715
+00:42:57,000 --> 00:43:00,400
+here you go and even for Python 2.7
+
+716
+00:43:00,400 --> 00:43:03,940
+Nick colon is working on a pet that
+should bring in SS among your roughly
+
+717
+00:43:03,940 --> 00:43:04,480
+into
+
+718
+00:43:04,480 --> 00:43:08,780
+out to 2014 so there goes who argument
+for Python 3 a.m.
+
+719
+00:43:08,780 --> 00:43:14,850
+arm I've already mentioned a
+cryptographer project much much more
+
+720
+00:43:14,850 --> 00:43:16,320
+than that in a proud tradition
+
+721
+00:43:16,320 --> 00:43:20,640
+of the piping packaging authority a
+python cryptography authority from
+
+722
+00:43:20,640 --> 00:43:24,350
+formed on a bit obvious already adopted
+several projects
+
+723
+00:43:24,350 --> 00:43:27,900
+and it's supposed to be a once a place
+for solid purpose of her fur pie from
+
+724
+00:43:27,900 --> 00:43:31,960
+at this is a real huge deal because the
+standard library simply moves
+
+725
+00:43:31,960 --> 00:43:35,570
+too slowly to a response to the pressing
+issues of security
+
+726
+00:43:35,570 --> 00:43:38,620
+arm but hope also means there's work to
+do
+
+727
+00:43:38,620 --> 00:43:42,030
+therefore I call selection
+
+728
+00:43:42,030 --> 00:43:45,430
+stop believing that the look I can't
+makes you and your data safe
+
+729
+00:43:45,430 --> 00:43:49,210
+do not click away certificates warnings
+away do not in Seoul Roque
+
+730
+00:43:49,210 --> 00:43:54,440
+route certificates be a critical user
+configure or service properly
+
+731
+00:43:54,440 --> 00:43:59,330
+install security updates immediately if
+you connect to servers
+
+732
+00:43:59,330 --> 00:44:02,840
+verify the circum- you verify
+certificate
+
+733
+00:44:02,840 --> 00:44:06,800
+and hostnames and finally help us to get
+paid out of this mess
+
+734
+00:44:06,800 --> 00:44:10,410
+pixel libraries fix your software report
+backs upstream
+
+735
+00:44:10,410 --> 00:44:13,680
+huh a few pics he's backs there's really
+a lot of two to do
+
+736
+00:44:13,680 --> 00:44:16,840
+and that's all I have for you today
+
+737
+00:44:16,840 --> 00:44:20,640
+I hope you learn something and more
+importantly I eager to fix things
+
+738
+00:44:20,640 --> 00:44:25,560
+now so go out stay atop H follow me on
+Twitter get a comment from our media
+
+739
+00:44:25,560 --> 00:44:28,680
+and look out for a trip to open space
+that will have it probably tomorrow
+
+740
+00:44:28,680 --> 00:44:35,680
+thank you
+
+741
+00:44:43,980 --> 00:44:44,829
+thank you very much
+
+742
+00:44:44,829 --> 00:44:48,680
+unfortunately we have no time for
+questions but where will you be
+
+743
+00:44:48,680 --> 00:44:51,980
+in Eq yet catch me our kitchen outside
+
+744
+00:44:51,980 --> 00:44:55,329
+I will have a real cryptographer next to
+me will arm
+
+745
+00:44:55,329 --> 00:44:58,890
+hook kick me if I'm gonna say something
+wrong
+
+746
+00:44:58,890 --> 00:45:02,150
+I would have been more comfortable two
+and three on the record anyway so
+
+747
+00:45:02,150 --> 00:45:03,809
+catch me outside him thank you very much
+

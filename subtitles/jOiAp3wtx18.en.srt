@@ -1,0 +1,1693 @@
+1
+00:00:07,130 --> 00:00:08,270
+welcome everyone
+
+2
+00:00:08,270 --> 00:00:11,299
+and we've got a great speaker ahead of
+us and
+
+3
+00:00:11,299 --> 00:00:15,100
+this is no I can't ritz with Python
+packaging
+
+4
+00:00:15,100 --> 00:00:22,100
+as I cased alright welcome
+
+5
+00:00:24,270 --> 00:00:27,490
+I apologize for any one that saw this
+was originally called
+
+6
+00:00:27,490 --> 00:00:31,210
+what's coming in by the packaging but
+unfortunately or fortunately in the
+
+7
+00:00:31,210 --> 00:00:32,759
+roughly six months since I wrote the
+
+8
+00:00:32,759 --> 00:00:36,140
+proposal most the stuff that I was going
+to say is coming soon is actually
+
+9
+00:00:36,140 --> 00:00:36,640
+happened
+
+10
+00:00:36,640 --> 00:00:40,540
+so this will be more of a a review of
+the last 18 to 24 months
+
+11
+00:00:40,540 --> 00:00:45,720
+think it's a real estate to trade for
+months
+
+12
+00:00:45,720 --> 00:00:48,720
+by the vaccine development but first a
+little bit about me
+
+13
+00:00:48,720 --> 00:00:52,120
+on the infrastructure lead for the final
+topper foundation where the organizers
+
+14
+00:00:52,120 --> 00:00:52,899
+up icon
+
+15
+00:00:52,899 --> 00:00:57,219
+by day I do server automation operations
+work for balance payments
+
+16
+00:00:57,219 --> 00:01:00,250
+very involved the chef community and I
+really like making things
+
+17
+00:01:00,250 --> 00:01:04,989
+also disclaimer this list is not in any
+specific order not chronological number
+
+18
+00:01:04,989 --> 00:01:09,399
+importance it's just the order that I
+could we've best presentation so don't
+
+19
+00:01:09,399 --> 00:01:11,039
+take this as an endorsement or
+
+20
+00:01:11,039 --> 00:01:14,909
+disparagement of any particular features
+to getting started with a couple
+
+21
+00:01:14,909 --> 00:01:18,340
+org chart changes in Python community
+the first major one
+
+22
+00:01:18,340 --> 00:01:21,759
+was the creation of the Python packaging
+authority or pie PA
+
+23
+00:01:21,759 --> 00:01:25,770
+on this is now a group operating outside
+the seat height on development team
+
+24
+00:01:25,770 --> 00:01:29,109
+although there is some overlap some
+people were to spend both groups that's
+
+25
+00:01:29,109 --> 00:01:31,319
+handling most of the non-standard the
+packaging
+
+26
+00:01:31,319 --> 00:01:35,450
+troll development in organizations such
+things like pip setup tools virtual and
+
+27
+00:01:35,450 --> 00:01:39,139
+all that now lives under the pikey a
+umbrella organization
+
+28
+00:01:39,139 --> 00:01:43,990
+second was the appointment love new
+packaging DFL Nick cop-one
+
+29
+00:01:43,990 --> 00:01:47,259
+arm hope where pronounce that correctly
+democrat for me
+
+30
+00:01:47,259 --> 00:01:52,029
+earlier but never sure these things
+anyway he was appointed by kedo as the
+
+31
+00:01:52,029 --> 00:01:55,969
+packaging the DFL just means that he can
+directly except perhaps related for
+
+32
+00:01:55,969 --> 00:01:56,700
+packaging
+
+33
+00:01:56,700 --> 00:02:00,369
+without the discussion moving on the
+Python dev anyone's on Python dove
+
+34
+00:02:00,369 --> 00:02:02,509
+probably understand why this is a very
+good thing
+
+35
+00:02:02,509 --> 00:02:05,739
+additionally rich Jones has taken back
+
+36
+00:02:05,739 --> 00:02:09,050
+the man to love PDF l4 the Python
+package index itself
+
+37
+00:02:09,050 --> 00:02:13,060
+so he is back on the saddle for managing
+
+38
+00:02:13,060 --> 00:02:17,030
+anything where we need to break
+compatibility we do try to file perhaps
+
+39
+00:02:17,030 --> 00:02:18,480
+and he's allowed to accept those
+
+40
+00:02:18,480 --> 00:02:21,480
+necessary on the actual features
+
+41
+00:02:21,480 --> 00:02:25,310
+I most you probably use the Python
+package indexer pipes GI for short
+
+42
+00:02:25,310 --> 00:02:29,080
+either host your own packages or two
+find libraries to use amid a lot of
+
+43
+00:02:29,080 --> 00:02:30,010
+improvements to that
+
+44
+00:02:30,010 --> 00:02:33,130
+biggest one in my mind is
+
+45
+00:02:33,130 --> 00:02:36,580
+a lot of TLS improvements we actually
+use each
+
+46
+00:02:36,580 --> 00:02:39,680
+yes now arm and we support all the
+latest goody is like
+
+47
+00:02:39,680 --> 00:02:43,240
+strips transport security say
+automatically default %eh
+
+48
+00:02:43,240 --> 00:02:47,450
+yes trying to keep it much more secure I
+we also offer perfect forward secrecy so
+
+49
+00:02:47,450 --> 00:02:47,790
+that
+
+50
+00:02:47,790 --> 00:02:51,540
+if keys are leaked how that ever
+happened I no one can be crept past
+
+51
+00:02:51,540 --> 00:02:52,770
+record a traffic
+
+52
+00:02:52,770 --> 00:02:56,150
+on this one not actually
+
+53
+00:02:56,150 --> 00:02:59,540
+as recent as some this %uh for
+mentioning but a lot of people don't
+
+54
+00:02:59,540 --> 00:03:00,380
+know exists
+
+55
+00:03:00,380 --> 00:03:04,860
+there is a chase on API of sorts for the
+Python package index image that slash
+
+56
+00:03:04,860 --> 00:03:05,620
+chase on
+
+57
+00:03:05,620 --> 00:03:09,290
+tienda by their package for version URL
+you'll get all the data of that page
+
+58
+00:03:09,290 --> 00:03:13,570
+NJ some format so if you have a reason
+to need all the packaging information
+
+59
+00:03:13,570 --> 00:03:14,750
+you could ever possibly want
+
+60
+00:03:14,750 --> 00:03:17,780
+his real easy way to grab it I we now
+have a
+
+61
+00:03:17,780 --> 00:03:21,060
+CDN powering are the paperback to tax
+
+62
+00:03:21,060 --> 00:03:24,870
+so its run by fast Lee who gloriously
+sponsors it for us
+
+63
+00:03:24,870 --> 00:03:28,620
+they do a jew distributed caching system
+based around varnish
+
+64
+00:03:28,620 --> 00:03:32,260
+with in automated static fallback so if
+our servers
+
+65
+00:03:32,260 --> 00:03:36,410
+self-destruct we move to a the
+Bandersnatch managed
+
+66
+00:03:36,410 --> 00:03:41,530
+static nearer in another data center
+misled to vastly improve performance
+
+67
+00:03:41,530 --> 00:03:45,220
+for people that don't live outside the
+US since the servers are no longer a
+
+68
+00:03:45,220 --> 00:03:46,060
+single box
+
+69
+00:03:46,060 --> 00:03:49,310
+somewhere in Oregon and just generally
+improve stability
+
+70
+00:03:49,310 --> 00:03:52,800
+I because of the CDN
+
+71
+00:03:52,800 --> 00:03:55,750
+and combined with the fact that a lot of
+the public mirrors were becoming
+
+72
+00:03:55,750 --> 00:03:57,180
+increasingly fragile
+
+73
+00:03:57,180 --> 00:04:00,890
+many of them were breaking or no longer
+updating had to be kicked every couple
+
+74
+00:04:00,890 --> 00:04:02,230
+weeks are they fall under sink
+
+75
+00:04:02,230 --> 00:04:06,090
+with no deprecated the public near
+network have you previously read article
+
+76
+00:04:06,090 --> 00:04:07,940
+couple Moss is wonderful post on
+
+77
+00:04:07,940 --> 00:04:12,010
+how to use mir's please disregard all of
+that are my love to to take up in a very
+
+78
+00:04:12,010 --> 00:04:13,330
+glad that he wrote that
+
+79
+00:04:13,330 --> 00:04:17,470
+but no longer needed on we've removed
+the DNS entries for them
+
+80
+00:04:17,470 --> 00:04:21,459
+and tip no longer ship support from
+public near network and we have
+
+81
+00:04:21,459 --> 00:04:23,469
+deprecated in your authenticity ATI
+
+82
+00:04:23,469 --> 00:04:29,479
+that have been removed but I'd believe
+it schedule removed in September
+
+83
+00:04:29,479 --> 00:04:33,919
+also topic amir's up 3-1 client has been
+the workhorse for maintaining
+
+84
+00:04:33,919 --> 00:04:37,590
+local an internal mirrors for a very
+long time it's now largely considered
+
+85
+00:04:37,590 --> 00:04:40,439
+deprecated in favor a vendor snatch
+
+86
+00:04:40,439 --> 00:04:44,020
+if you'd like to maintain a local here
+in it certainly encourage it if you have
+
+87
+00:04:44,020 --> 00:04:47,479
+large-scale deployments or if you just
+don't want to worry about us being down
+
+88
+00:04:47,479 --> 00:04:49,520
+even though fortunately that's now very
+rare
+
+89
+00:04:49,520 --> 00:04:53,520
+Bandersnatch is definitely the tool use
+a DEP TRAI is also somewhat recent
+
+90
+00:04:53,520 --> 00:04:54,259
+addition
+
+91
+00:04:54,259 --> 00:04:57,770
+its primary function is not nearing but
+it can act as a
+
+92
+00:04:57,770 --> 00:05:01,430
+partial hearing tool sewers better
+snatch large is used for keeping there
+
+93
+00:05:01,430 --> 00:05:02,349
+is a the entire
+
+94
+00:05:02,349 --> 00:05:05,409
+Python package index dope I heard FBI
+
+95
+00:05:05,409 --> 00:05:10,150
+can mirror only what you accessed
+through it as a caching proxy
+
+96
+00:05:10,150 --> 00:05:14,159
+and finally warehouse so warehouse grew
+out of the now-defunct Creteil project
+
+97
+00:05:14,159 --> 00:05:16,960
+so don't go to create I only more think
+it's now being used by some other
+
+98
+00:05:16,960 --> 00:05:18,080
+company
+
+99
+00:05:18,080 --> 00:05:21,930
+but it is going to turn into I don't act
+index 2.0
+
+100
+00:05:21,930 --> 00:05:25,150
+we have a demo site up at Warehouse top
+I found at work
+
+101
+00:05:25,150 --> 00:05:28,169
+it currently supports package
+installation
+
+102
+00:05:28,169 --> 00:05:32,439
+search and most of the TI's you cannot
+yet upload packages to it
+
+103
+00:05:32,439 --> 00:05:37,659
+and I think user authentication is being
+added very shortly
+
+104
+00:05:37,659 --> 00:05:41,499
+onto how do you actually get packages
+from those servers
+
+105
+00:05:41,499 --> 00:05:45,740
+so again you might notice a pattern here
+I think some the most important stuff is
+
+106
+00:05:45,740 --> 00:05:46,669
+around safety
+
+107
+00:05:46,669 --> 00:05:51,279
+possibly added in pip TLS verification
+and we've deprecated external links and
+
+108
+00:05:51,279 --> 00:05:52,539
+dependency links
+
+109
+00:05:52,539 --> 00:05:55,210
+just means that you can now actually be
+relatively certain that you'll be
+
+110
+00:05:55,210 --> 00:05:56,279
+downloading packages:
+
+111
+00:05:56,279 --> 00:06:01,319
+in a safe and verified matter
+
+112
+00:06:01,319 --> 00:06:07,110
+also pepper 453 landed when Python 2.4
+shipped or is it landed a little earlier
+
+113
+00:06:07,110 --> 00:06:08,309
+but is now live
+
+114
+00:06:08,309 --> 00:06:11,520
+for those that don't know insure pip is
+
+115
+00:06:11,520 --> 00:06:15,559
+the module that we're shipping basically
+meaning it is now part of the pipe on
+
+116
+00:06:15,559 --> 00:06:16,419
+standard library
+
+117
+00:06:16,419 --> 00:06:19,539
+are not quite actually lives in a
+slightly different category but socially
+
+118
+00:06:19,539 --> 00:06:20,349
+speaking
+
+119
+00:06:20,349 --> 00:06:24,650
+if someone installs Python 3.4 on any
+platform be it from the source tarballs
+
+120
+00:06:24,650 --> 00:06:28,589
+or in red hat or any other platform is
+expected the PIP will be available
+
+121
+00:06:28,589 --> 00:06:32,599
+%uh this means we now can finally put
+easy install to bed
+
+122
+00:06:32,599 --> 00:06:39,599
+this is a very very nice thing
+
+123
+00:06:39,909 --> 00:06:46,240
+no more easy and stop it
+
+124
+00:06:46,240 --> 00:06:49,279
+on two wheels so for those
+
+125
+00:06:49,279 --> 00:06:52,240
+that have played with them a little bit
+you've probably seen their basally
+
+126
+00:06:52,240 --> 00:06:54,599
+simplified installation format
+
+127
+00:06:54,599 --> 00:06:58,229
+notably they don't require executing any
+codes
+
+128
+00:06:58,229 --> 00:07:02,729
+the wheels grew out of the old setup
+tools eg concept
+
+129
+00:07:02,729 --> 00:07:08,189
+instead of having a source distribution
+file the pic downloads unpacked and run
+
+130
+00:07:08,189 --> 00:07:10,819
+setup i install which is what it does
+now
+
+131
+00:07:10,819 --> 00:07:14,029
+that the the wheel format has things
+effectively
+
+132
+00:07:14,029 --> 00:07:17,369
+in the floor mat they need to be when
+they're installed on the system's a pic
+
+133
+00:07:17,369 --> 00:07:18,039
+unjust
+
+134
+00:07:18,039 --> 00:07:21,979
+on Packers a file in a very specific way
+but you don't have to actually
+
+135
+00:07:21,979 --> 00:07:25,020
+run any codes do installs this means
+that
+
+136
+00:07:25,020 --> 00:07:28,779
+ok this means that installs are
+
+137
+00:07:28,779 --> 00:07:32,050
+faster and much safer since you're not
+executing arbitrary code from the
+
+138
+00:07:32,050 --> 00:07:33,039
+internet
+
+139
+00:07:33,039 --> 00:07:37,339
+turns out that's not always a good idea
+downside wheels are definitely still
+
+140
+00:07:37,339 --> 00:07:41,520
+feel that development if you have pure
+Python stuff they're wonderful you
+
+141
+00:07:41,520 --> 00:07:42,319
+should use them now
+
+142
+00:07:42,319 --> 00:07:45,619
+if you have see extensions or other
+binary packages
+
+143
+00:07:45,619 --> 00:07:49,099
+you may want to look and play with them
+a little bit before you
+
+144
+00:07:49,099 --> 00:07:53,059
+you going whole hog on Windows and OSX
+because they have
+
+145
+00:07:53,059 --> 00:07:56,419
+very stable and long-term platform level
+ADI's
+
+146
+00:07:56,419 --> 00:07:59,960
+it's relatively easy to know that if you
+compile one channel work on another
+
+147
+00:07:59,960 --> 00:08:03,349
+that's not quite the case with 1x
+unfortunately the wheel center doesn't
+
+148
+00:08:03,349 --> 00:08:05,479
+currently have any way to express the
+
+149
+00:08:05,479 --> 00:08:09,339
+complexity is when Xavi's I but we are
+working on that
+
+150
+00:08:09,339 --> 00:08:12,729
+if you'd like to get started with wheel
+today you can just pick install we'll
+
+151
+00:08:12,729 --> 00:08:17,979
+and instead of doing Estes store be just
+as you can to be dis real
+
+152
+00:08:17,979 --> 00:08:21,659
+and finally on the getting side is a
+tool called conduct this was written by
+
+153
+00:08:21,659 --> 00:08:23,020
+continuing analytics
+
+154
+00:08:23,020 --> 00:08:27,499
+relatively new entrant into the
+installer field and maintain
+
+155
+00:08:27,499 --> 00:08:30,960
+made aimed mainly at scientific
+environments
+
+156
+00:08:30,960 --> 00:08:33,969
+it can use a general-purpose installer
+but there are some security concerns are
+
+157
+00:08:33,969 --> 00:08:36,330
+still working out so I wouldn't
+necessarily recommend that much you need
+
+158
+00:08:36,330 --> 00:08:36,780
+its
+
+159
+00:08:36,780 --> 00:08:41,120
+a extra features which are largely based
+around
+
+160
+00:08:41,120 --> 00:08:45,510
+scientific packages which need large
+binary
+
+161
+00:08:45,510 --> 00:08:48,570
+barred binary installations things like
+psychic learn UNFPA
+
+162
+00:08:48,570 --> 00:08:51,500
+live side by things like that where you
+really don't wanna be compiling the
+
+163
+00:08:51,500 --> 00:08:52,790
+source largely
+
+164
+00:08:52,790 --> 00:08:56,080
+because of time and complexity
+constraints if you're not doing
+
+165
+00:08:56,080 --> 00:08:59,060
+heavy number crunching scientific
+analysis you may not need to be using
+
+166
+00:08:59,060 --> 00:09:01,330
+Honda
+
+167
+00:09:01,330 --> 00:09:05,640
+onto using packages so you've downloaded
+them it has done some stuff depending on
+
+168
+00:09:05,640 --> 00:09:06,260
+the format
+
+169
+00:09:06,260 --> 00:09:09,510
+now you actually use packages so Vienna
+
+170
+00:09:09,510 --> 00:09:14,180
+is the evolution a virtual int it
+shipped in Python 3.3
+
+171
+00:09:14,180 --> 00:09:17,600
+the script you call is slightly
+different now Heidi Anderson a virtual
+
+172
+00:09:17,600 --> 00:09:19,200
+and but otherwise the internals
+
+173
+00:09:19,200 --> 00:09:24,690
+a are vastly cleaned up and the usage is
+largely the same
+
+174
+00:09:24,690 --> 00:09:28,220
+distribute is gone a big thanks to PG
+for
+
+175
+00:09:28,220 --> 00:09:32,070
+helping to emerge setup tools and the
+community for distribute back together
+
+176
+00:09:32,070 --> 00:09:35,960
+like I said before they're both now
+operating under the party a and have
+
+177
+00:09:35,960 --> 00:09:39,520
+resumed using the setup tools name
+anywhere where you were installing
+
+178
+00:09:39,520 --> 00:09:45,050
+distribute any kind of Scripture
+anything just replace it settles
+
+179
+00:09:45,050 --> 00:09:49,380
+and finally just utils to it did briefly
+and up to the standard library
+
+180
+00:09:49,380 --> 00:09:52,740
+under the name packaging however it
+ended up being removed because there are
+
+181
+00:09:52,740 --> 00:09:55,770
+some concerns when a plantation xanax no
+longer under development
+
+182
+00:09:55,770 --> 00:10:00,810
+so if you were waiting for just a little
+too sorry to disappoint them
+
+183
+00:10:00,810 --> 00:10:04,750
+and now making packages
+
+184
+00:10:04,750 --> 00:10:08,730
+so improvements the meta-data tip now
+supports the idea pre-release is so if
+
+185
+00:10:08,730 --> 00:10:09,890
+you upload something
+
+186
+00:10:09,890 --> 00:10:13,520
+with dash alpha or dash beta people
+understand that and will only install
+
+187
+00:10:13,520 --> 00:10:14,630
+them if
+
+188
+00:10:14,630 --> 00:10:18,210
+specifically requested by the end user
+means that you can do pre-release
+
+189
+00:10:18,210 --> 00:10:19,760
+testing and release candidates and
+
+190
+00:10:19,760 --> 00:10:23,510
+same manner there's also kept for 26
+creatively named
+
+191
+00:10:23,510 --> 00:10:27,710
+meta-data 2.0 this is my trying to take
+all the meta-data that we should have
+
+192
+00:10:27,710 --> 00:10:30,690
+crammed into packages in weird places
+over the years
+
+193
+00:10:30,690 --> 00:10:36,030
+put in one place but in Jason format
+have standardized values
+
+194
+00:10:36,030 --> 00:10:40,620
+as far as applauding packages %uh so a
+lot of people use Python setup.py upload
+
+195
+00:10:40,620 --> 00:10:41,640
+as their uploader
+
+196
+00:10:41,640 --> 00:10:46,170
+on there is a new project called twining
+which is trying to pull all that update
+
+197
+00:10:46,170 --> 00:10:46,720
+lauder
+
+198
+00:10:46,720 --> 00:10:50,450
+upload logic out of dis utils the
+measure this is we can update it
+
+199
+00:10:50,450 --> 00:10:54,650
+in a much faster way that we can
+standard library we're not worried about
+
+200
+00:10:54,650 --> 00:10:58,800
+maintaining compatibility and things
+like that the same way
+
+201
+00:10:58,800 --> 00:11:02,610
+twine I would highly recommend using it
+now just utils for example does not
+
+202
+00:11:02,610 --> 00:11:03,190
+support
+
+203
+00:11:03,190 --> 00:11:06,270
+TLS verification uploads doesn't support
+
+204
+00:11:06,270 --> 00:11:09,480
+the upload a previously created
+artifacts things like that
+
+205
+00:11:09,480 --> 00:11:12,400
+definitely check it out I'm probably
+doing was offered a service even
+
+206
+00:11:12,400 --> 00:11:15,470
+mentioning it because it was shut down
+due to non use
+
+207
+00:11:15,470 --> 00:11:21,800
+but I S H has been removed I'm sorry to
+be four hundred people than ever used it
+
+208
+00:11:21,800 --> 00:11:25,680
+and finally the died up previously
+called The Hitchhiker's Guide to
+
+209
+00:11:25,680 --> 00:11:29,340
+packaging now the Python packaging user
+guide is available at package and %uh
+
+210
+00:11:29,340 --> 00:11:30,440
+Python org
+
+211
+00:11:30,440 --> 00:11:33,210
+it's basically an expanded version
+everything I'm talking about here i
+
+212
+00:11:33,210 --> 00:11:36,450
+different checking out
+
+213
+00:11:36,450 --> 00:11:40,030
+and the few things that are still coming
+soon like a mention meditated 2.0
+
+214
+00:11:40,030 --> 00:11:43,800
+is still under active discussion it sort
+of the blocker right now for
+
+215
+00:11:43,800 --> 00:11:47,760
+most future efforts everyone's trying to
+sort of centralize around getting meta
+
+216
+00:11:47,760 --> 00:11:48,470
+data 2.0
+
+217
+00:11:48,470 --> 00:11:52,590
+before we all go often use all the new
+meta data in new and exciting ways
+
+218
+00:11:52,590 --> 00:11:55,800
+to other things that her right on the
+cusp of being
+
+219
+00:11:55,800 --> 00:11:58,910
+discussed his estas 2.0 real 2.0
+
+220
+00:11:58,910 --> 00:12:02,390
+I'm like I said the wheel format has
+some issues with binary compatibility
+
+221
+00:12:02,390 --> 00:12:06,140
+yes just format hasn't changed and what
+twelve years now
+
+222
+00:12:06,140 --> 00:12:09,590
+things like that its it's about time for
+those both to get our a once-over
+
+223
+00:12:09,590 --> 00:12:12,220
+especially in light of the new metadata
+format
+
+224
+00:12:12,220 --> 00:12:15,520
+so if you're interested in pursuing
+those discussions I will have
+
+225
+00:12:15,520 --> 00:12:19,580
+slides for you in a moment and also
+coming soon like I mentioned warehouse
+
+226
+00:12:19,580 --> 00:12:23,400
+the hope is that sometime in the next
+six months range that will be full
+
+227
+00:12:23,400 --> 00:12:24,330
+featured enough to
+
+228
+00:12:24,330 --> 00:12:27,780
+replace the existing project code base
+at which point we will
+
+229
+00:12:27,780 --> 00:12:31,870
+just switch it from warehoused apartment
+or it.i to 500 organ welcome our new
+
+230
+00:12:31,870 --> 00:12:33,310
+warehouse overlords
+
+231
+00:12:33,310 --> 00:12:36,240
+I do definitely recommend that if you
+have anything that's doing a lot of
+
+232
+00:12:36,240 --> 00:12:39,150
+non-standard scripting or using a judge
+directly
+
+233
+00:12:39,150 --> 00:12:42,500
+on I P I did you try them with the
+warehouse top 100 or test site and
+
+234
+00:12:42,500 --> 00:12:43,240
+report any bugs
+
+235
+00:12:43,240 --> 00:12:48,120
+fine so when we do that switch over you
+will not be suddenly surprise and broken
+
+236
+00:12:48,120 --> 00:12:52,250
+so what if you'd like to help us out so
+like I mentioned the pikey a team has
+
+237
+00:12:52,250 --> 00:12:53,860
+taken over a lot of projects
+
+238
+00:12:53,860 --> 00:12:58,300
+they are sort of split though some stuff
+is up and get help but notably pip
+
+239
+00:12:58,300 --> 00:13:02,260
+virtual and warehouse are all manage
+into the pipe he ate organization on get
+
+240
+00:13:02,260 --> 00:13:03,010
+help
+
+241
+00:13:03,010 --> 00:13:06,060
+and setup tools heiii the old code base
+
+242
+00:13:06,060 --> 00:13:10,570
+and the wheel libraries and tooling are
+under the pikey organization on
+
+243
+00:13:10,570 --> 00:13:11,380
+pickpocket
+
+244
+00:13:11,380 --> 00:13:14,090
+so if you're looking about these
+projects just make sure you end up in
+
+245
+00:13:14,090 --> 00:13:16,280
+the repository
+
+246
+00:13:16,280 --> 00:13:19,280
+there's also an IRC channel on freenode
+IRC
+
+247
+00:13:19,280 --> 00:13:23,450
+pound I T A a lot of the packaging
+developers both from the pikey eighty
+
+248
+00:13:23,450 --> 00:13:25,250
+men from the standard the team even
+though most
+
+249
+00:13:25,250 --> 00:13:28,460
+those are the same people hang out in
+their so if you have any questions would
+
+250
+00:13:28,460 --> 00:13:28,960
+like to
+
+251
+00:13:28,960 --> 00:13:32,650
+learn more about how to help just jump
+in there we also have the
+
+252
+00:13:32,650 --> 00:13:35,910
+venerable old issue till signaling
+listed still going strong
+
+253
+00:13:35,910 --> 00:13:39,130
+it is definitely the primary
+communication point for most packaging
+
+254
+00:13:39,130 --> 00:13:40,210
+discussions
+
+255
+00:13:40,210 --> 00:13:43,920
+there used to be another mailing list if
+you were on it you got a notification
+
+256
+00:13:43,920 --> 00:13:47,650
+this catalog sega has been merged into
+this detail saying that was the old
+
+257
+00:13:47,650 --> 00:13:51,970
+heiii specific mailing list so long live
+digital sig
+
+258
+00:13:51,970 --> 00:13:55,310
+and finally sprints warehouse team a few
+of them anyway
+
+259
+00:13:55,310 --> 00:13:58,750
+will be here and will be sprinting
+during the pike on Sprint's on warehouse
+
+260
+00:13:58,750 --> 00:14:00,020
+if you'd like to join them
+
+261
+00:14:00,020 --> 00:14:06,160
+fine Richard Jones or any of the other
+pipe CA folks and asked me how about
+
+262
+00:14:06,160 --> 00:14:10,550
+analytic lows with just a few shutouts a
+first doll stuffed most you have never
+
+263
+00:14:10,550 --> 00:14:11,060
+heard
+
+264
+00:14:11,060 --> 00:14:14,400
+Donald stuffed and unfortunately wasn't
+able to make up to Montreal
+
+265
+00:14:14,400 --> 00:14:18,220
+but I counted he has worked on at least
+90 percent of the things that I
+
+266
+00:14:18,220 --> 00:14:19,230
+mentioned today
+
+267
+00:14:19,230 --> 00:14:22,400
+and basically runs Python packaging
+makes all this happen
+
+268
+00:14:22,400 --> 00:14:29,400
+we all owe him a beer
+
+269
+00:14:30,120 --> 00:14:33,370
+and another shutout for nicaraguan a for
+taking the way
+
+270
+00:14:33,370 --> 00:14:37,190
+love being the packaging BD FL on
+shoulders I have certainly disagree with
+
+271
+00:14:37,190 --> 00:14:39,370
+in the past but he is the hero Gotham
+needs
+
+272
+00:14:39,370 --> 00:14:44,940
+and finally our sponsors I just a quick
+shout out to some response urs fastly
+
+273
+00:14:44,940 --> 00:14:46,180
+Rackspace dine
+
+274
+00:14:46,180 --> 00:14:49,890
+King Dom Pedro the DreamHost and
+everyone else if I didn't get you into
+
+275
+00:14:49,890 --> 00:14:50,710
+my slide notes
+
+276
+00:14:50,710 --> 00:14:54,730
+without them we wouldn't be able to run
+heiii or any of our other PSS services
+
+277
+00:14:54,730 --> 00:15:01,730
+so a big thank you to all of our
+sponsors and thank you
+
+278
+00:15:04,370 --> 00:15:05,620
+and it has the questions
+
+279
+00:15:05,620 --> 00:15:09,310
+you could just go to Microcenter make
+sure you step toward Mike could you
+
+280
+00:15:09,310 --> 00:15:12,560
+actually go back to Donald slide cuz
+he's on our team. I wanted to get a
+
+281
+00:15:12,560 --> 00:15:13,810
+picture that to santo
+
+282
+00:15:13,810 --> 00:15:18,050
+thank you know as a
+
+283
+00:15:18,050 --> 00:15:21,610
+frequent power up library perpetrator I
+wonder should I upload
+
+284
+00:15:21,610 --> 00:15:25,860
+Estes and wheels now yes you should
+definitely still be uploading assests
+
+285
+00:15:25,860 --> 00:15:26,450
+will be
+
+286
+00:15:26,450 --> 00:15:30,630
+a long time before everyone's installers
+are updated sport wheels
+
+287
+00:15:30,630 --> 00:15:35,180
+so legacy is legacy and there's no
+downside uploading both something sports
+
+288
+00:15:35,180 --> 00:15:35,680
+we'll
+
+289
+00:15:35,680 --> 00:15:40,070
+will use real and life will be great and
+otherwise you get status quo
+
+290
+00:15:40,070 --> 00:15:44,670
+could be worse I you mention that you're
+going to be doing some improvements to
+
+291
+00:15:44,670 --> 00:15:45,710
+the lawn Xabi
+
+292
+00:15:45,710 --> 00:15:49,310
+tagging are can you give us any teasers
+about what that might look like
+
+293
+00:15:49,310 --> 00:15:53,810
+is it going to be partly for 25 hours is
+just in the air at this point
+
+294
+00:15:53,810 --> 00:15:57,380
+it's very much in the air there's a lot
+of competing discussions about how best
+
+295
+00:15:57,380 --> 00:15:58,210
+to handle it
+
+296
+00:15:58,210 --> 00:16:01,480
+and I don't feel qualified to report on
+those
+
+297
+00:16:01,480 --> 00:16:04,940
+in my preparations for pie thompson's
+like I said above the organizers I've
+
+298
+00:16:04,940 --> 00:16:07,180
+been a little bit analyst for about two
+weeks now
+
+299
+00:16:07,180 --> 00:16:10,320
+which is a long time these days which
+trickle
+
+300
+00:16:10,320 --> 00:16:14,810
+that's that's a long time the world
+packaging hi
+
+301
+00:16:14,810 --> 00:16:17,930
+do you know if there are any plans for
+virtual improper
+
+302
+00:16:17,930 --> 00:16:22,120
+to become part of the standard library I
+don't think so nor have I heard any
+
+303
+00:16:22,120 --> 00:16:25,560
+desire expressed on the part of the
+march on proper authors
+
+304
+00:16:25,560 --> 00:16:30,140
+stuff ending up in the Central Library
+drastically limits its ability to
+
+305
+00:16:30,140 --> 00:16:34,080
+to change and evolve over time so its it
+is a mixed blessing
+
+306
+00:16:34,080 --> 00:16:38,400
+a virtual unfortunately was stable and
+often did exactly one thing to do with
+
+307
+00:16:38,400 --> 00:16:41,690
+that was so it's not really big deal but
+virtually rappers that myself growing
+
+308
+00:16:41,690 --> 00:16:42,260
+cell
+
+309
+00:16:42,260 --> 00:16:47,240
+not sure that would really be dust so I
+just checked and evidence
+
+310
+00:16:47,240 --> 00:16:50,850
+still has incher disabled and 2.4
+
+311
+00:16:50,850 --> 00:16:55,150
+their three per package do you know if
+there's plans to
+
+312
+00:16:55,150 --> 00:17:00,310
+reinstate that there's a fix Nikon but
+so areas waving his hand
+
+313
+00:17:00,310 --> 00:17:03,410
+so so the I I kind of lost a little bit
+
+314
+00:17:03,410 --> 00:17:06,620
+the deal is that the end goal is that
+
+315
+00:17:06,620 --> 00:17:10,800
+if you install python 3.4 you get insure
+paper is the way that we are supporting
+
+316
+00:17:10,800 --> 00:17:11,089
+that
+
+317
+00:17:11,089 --> 00:17:14,240
+for our sources traditions but the
+
+318
+00:17:14,240 --> 00:17:17,430
+the actual pet only specified that
+people be available some
+
+319
+00:17:17,430 --> 00:17:21,390
+or distributors like Debbie and Red Hat
+would prefer to not use interpret
+
+320
+00:17:21,390 --> 00:17:22,339
+because they want to continue
+
+321
+00:17:22,339 --> 00:17:26,650
+managed via their tooling so instead
+most of them are changing the Python
+
+322
+00:17:26,650 --> 00:17:30,350
+virtual package to depend on the actual
+fight on and on the pay package
+
+323
+00:17:30,350 --> 00:17:34,390
+so that they can continue the to like if
+they have to do security releases or
+
+324
+00:17:34,390 --> 00:17:38,390
+certainly anyone that has the long-term
+support releases can continue to use
+
+325
+00:17:38,390 --> 00:17:39,700
+their trolling for that
+
+326
+00:17:39,700 --> 00:17:43,540
+but you can still if you installed by
+the way for and keep is not available
+
+327
+00:17:43,540 --> 00:17:44,190
+and working
+
+328
+00:17:44,190 --> 00:17:47,970
+it's about yet there is one thing with I
+am
+
+329
+00:17:47,970 --> 00:17:51,210
+I don't know if it's been fixed but at
+least when you called pay bien
+
+330
+00:17:51,210 --> 00:17:56,990
+it would fail because it couldn't find
+incher there's an open Debian bug on
+
+331
+00:17:56,990 --> 00:17:57,340
+that
+
+332
+00:17:57,340 --> 00:18:01,690
+great thank you to questions
+
+333
+00:18:01,690 --> 00:18:04,800
+may be out at my ignorance with Kanda
+but
+
+334
+00:18:04,800 --> 00:18:08,510
+a scientist at wills theoretically
+should solve the problem of distributing
+
+335
+00:18:08,510 --> 00:18:11,480
+all that buying repeal trades so your ex
+and
+
+336
+00:18:11,480 --> 00:18:15,810
+oh this is primarily for scientific
+computing could you elaborate on these
+
+337
+00:18:15,810 --> 00:18:19,240
+will we need Kanda and what would be its
+role these
+
+338
+00:18:19,240 --> 00:18:22,460
+distribution business I would certainly
+love if Khan there was no longer
+
+339
+00:18:22,460 --> 00:18:23,970
+necessary book on the
+
+340
+00:18:23,970 --> 00:18:27,280
+does a lot more than just managing
+haifong stuff
+
+341
+00:18:27,280 --> 00:18:32,220
+it's really designed to be are
+installing work low tool for scientists
+
+342
+00:18:32,220 --> 00:18:33,420
+and number crunchers
+
+343
+00:18:33,420 --> 00:18:37,890
+but don't wanna know the details what
+Python package even is
+
+344
+00:18:37,890 --> 00:18:41,500
+arledge wanna to push a couple buttons
+and run something and they get
+
+345
+00:18:41,500 --> 00:18:45,450
+environments do their computing I would
+certainly love it ends up being at that
+
+346
+00:18:45,450 --> 00:18:48,770
+point but like I said conder can also
+install stuff it's not quite unrelated I
+
+347
+00:18:48,770 --> 00:18:49,160
+think
+
+348
+00:18:49,160 --> 00:18:52,320
+so I'm not sure that would really be in
+scope
+
+349
+00:18:52,320 --> 00:18:55,170
+others definitely been talk at some
+point francis conrad is a meditative
+
+350
+00:18:55,170 --> 00:18:55,830
+servers
+
+351
+00:18:55,830 --> 00:18:58,910
+we would love to eventually merge that
+into warehouse so that it can be a
+
+352
+00:18:58,910 --> 00:19:01,340
+single ecosystem even if it's too
+insular tools
+
+353
+00:19:01,340 --> 00:19:04,730
+and never got Mexican questions thank
+
+354
+00:19:04,730 --> 00:19:08,490
+what would you recommend to you
+
+355
+00:19:08,490 --> 00:19:13,470
+holes private packages to host private
+packages and set up like pushing to pipe
+
+356
+00:19:13,470 --> 00:19:14,330
+I it's
+
+357
+00:19:14,330 --> 00:19:17,620
+de PI unequivocally it is the best tool
+
+358
+00:19:17,620 --> 00:19:23,230
+by leaps and bounds thanks thanks very
+much
+
+359
+00:19:23,230 --> 00:19:27,260
+we have a little time for questions
+going wants going to whites
+
+360
+00:19:27,260 --> 00:19:30,300
+okay kept on this time and
+
+361
+00:19:30,300 --> 00:19:31,570
+take now
+

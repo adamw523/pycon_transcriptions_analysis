@@ -1,0 +1,2117 @@
+1
+00:00:15,070 --> 00:00:17,510
+I will come again 20
+
+2
+00:00:17,510 --> 00:00:20,720
+continuing our Harward centric om track
+
+3
+00:00:20,720 --> 00:00:24,380
+we have covering Scott she's the lead
+developer for temple
+
+4
+00:00:24,380 --> 00:00:28,110
+automation I G is here to give us a
+crash course on the
+
+5
+00:00:28,110 --> 00:00:35,110
+internet Internet of Things so let's
+give her an okay
+
+6
+00:00:38,320 --> 00:00:41,800
+um so a quick and dirty guide putting
+things on the internet
+
+7
+00:00:41,800 --> 00:00:46,699
+you guys having fun it's a bit dated and
+at the end of the day sry have
+
+8
+00:00:46,699 --> 00:00:50,149
+ton of fun again right so
+
+9
+00:00:50,149 --> 00:00:54,930
+in Cincy I wanted to write an intro sir
+tutorial where
+
+10
+00:00:54,930 --> 00:00:58,440
+I I talked about shouted do
+
+11
+00:00:58,440 --> 00:01:02,270
+different stuff with hardware and
+improve promise is when you go and look
+
+12
+00:01:02,270 --> 00:01:02,969
+at some of the
+
+13
+00:01:02,969 --> 00:01:06,960
+tutorials out there there's a bunch of
+stories and how to do little tiny
+
+14
+00:01:06,960 --> 00:01:11,670
+20 things with her and there's lots of
+tutorials but how did the web stuff
+
+15
+00:01:11,670 --> 00:01:15,270
+and it's because people tend to break
+off used right there's people who do
+
+16
+00:01:15,270 --> 00:01:18,390
+massive let's kill stuff and then
+there's people who
+
+17
+00:01:18,390 --> 00:01:22,440
+tended the bill more hardware stuff
+robotics and computer vision and that's
+
+18
+00:01:22,440 --> 00:01:26,170
+what items I'm and you know every time
+
+19
+00:01:26,170 --> 00:01:29,659
+I go and build a marxist grow and build
+some is a hardware
+
+20
+00:01:29,659 --> 00:01:33,390
+almost immediately as he was a stunner
+as it's being billed Italy you
+
+21
+00:01:33,390 --> 00:01:37,820
+give it away Hugo doing something with
+it cited
+
+22
+00:01:37,820 --> 00:01:42,900
+think yes gotta figure so I wanted to
+rate like a really simple
+
+23
+00:01:42,900 --> 00:01:47,470
+introductory experience for building
+something like that how do I take a a
+
+24
+00:01:47,470 --> 00:01:49,220
+simple object nicotine
+
+25
+00:01:49,220 --> 00:01:52,540
+so the brew the problem is is that you
+have to
+
+26
+00:01:52,540 --> 00:01:55,650
+figure out what you want put on the
+Internet
+
+27
+00:01:55,650 --> 00:01:59,570
+and stuff that sells really well stuff
+that deals with pets
+
+28
+00:01:59,570 --> 00:02:02,740
+so I decided to put pats on the Internet
+
+29
+00:02:02,740 --> 00:02:06,920
+and I don't have cats I don't have hogs
+
+30
+00:02:06,920 --> 00:02:12,030
+I used to working in neuroscience loan
+and I kinda fell in love with rats
+
+31
+00:02:12,030 --> 00:02:15,730
+cuz you can leave them for a week and
+they have all the best qualities dogs
+
+32
+00:02:15,730 --> 00:02:16,840
+and cats and their
+
+33
+00:02:16,840 --> 00:02:20,340
+compact in is a deal with so I decided
+to
+
+34
+00:02:20,340 --> 00:02:23,570
+put rats on the internet which is rate
+because
+
+35
+00:02:23,570 --> 00:02:28,019
+rats support all sorts of wireless
+protocols in interface standards
+
+36
+00:02:28,019 --> 00:02:28,630
+and
+
+37
+00:02:28,630 --> 00:02:31,840
+and you know they're just they're super
+easy where I'll
+
+38
+00:02:31,840 --> 00:02:35,760
+wat they are totally not easy to wire up
+on anything
+
+39
+00:02:35,760 --> 00:02:39,210
+they have no standard interfaces except
+
+40
+00:02:39,210 --> 00:02:42,460
+for one and that standard interface
+
+41
+00:02:42,460 --> 00:02:46,520
+was thought up by this Harvard
+psychologist
+
+42
+00:02:46,520 --> 00:02:49,780
+and his name was BF skinner and shaky
+
+43
+00:02:49,780 --> 00:02:53,190
+and so BF Skinner's will back was it
+sees a psychologist and he wants to
+
+44
+00:02:53,190 --> 00:02:55,960
+train animals a cute ass so we can see
+how will
+
+45
+00:02:55,960 --> 00:02:59,790
+how they were from this house and how
+they change when we changed their
+
+46
+00:02:59,790 --> 00:03:00,400
+environment
+
+47
+00:03:00,400 --> 00:03:04,420
+and so he built this thing called
+skinner box
+
+48
+00:03:04,420 --> 00:03:07,590
+it's also public operant conditioning
+conditioning chamber
+
+49
+00:03:07,590 --> 00:03:12,170
+and so the skinner box you you guys may
+be familiar with this from work
+
+50
+00:03:12,170 --> 00:03:15,230
+is that it's either a light grey buzzer
+
+51
+00:03:15,230 --> 00:03:18,290
+and the rat is supposed to hear the
+light and buzzer
+
+52
+00:03:18,290 --> 00:03:21,840
+and its post to respond to that by
+pushing a lever
+
+53
+00:03:21,840 --> 00:03:25,550
+and then it gets and there's an there's
+further
+
+54
+00:03:25,550 --> 00:03:28,590
+other way you can train routes where you
+
+55
+00:03:28,590 --> 00:03:32,340
+elected by the bottom the cage any shock
+come in and they personally for and then
+
+56
+00:03:32,340 --> 00:03:33,070
+you stopped the like
+
+57
+00:03:33,070 --> 00:03:36,940
+occasion I wasn't gonna do that cuz
+that's not cool on
+
+58
+00:03:36,940 --> 00:03:40,110
+so from the street just basic
+conditioning you
+
+59
+00:03:40,110 --> 00:03:43,340
+you build a primitive to do real science
+you real biology into
+
+60
+00:03:43,340 --> 00:03:47,330
+the owner science and you can also just
+play with your pet so I would go by on a
+
+61
+00:03:47,330 --> 00:03:48,160
+six in their
+
+62
+00:03:48,160 --> 00:03:51,940
+their ten thousand dollars I'm not even
+kidding you it's a weaver
+
+63
+00:03:51,940 --> 00:03:57,060
+a buzzer a computer it's ten thousand
+dollars
+
+64
+00:03:57,060 --> 00:04:00,640
+this is the quote I got for doing and
+this is actually like a huge problem
+
+65
+00:04:00,640 --> 00:04:01,410
+because like
+
+66
+00:04:01,410 --> 00:04:05,090
+the NIH and the NSF he people to do
+
+67
+00:04:05,090 --> 00:04:08,310
+research like this and you can't just
+have one rack know you have to do
+
+68
+00:04:08,310 --> 00:04:10,080
+massive parallel
+
+69
+00:04:10,080 --> 00:04:13,850
+Brett testing at scale to get your
+doctor so you're looking at like
+
+70
+00:04:13,850 --> 00:04:17,220
+tens a skinner box on
+
+71
+00:04:17,220 --> 00:04:21,570
+so I decided books you I can use for
+herbs I and I totally did and it's it's
+
+72
+00:04:21,570 --> 00:04:22,970
+super to do it last year
+
+73
+00:04:22,970 --> 00:04:27,660
+Europe icon everyone got a Raspberry Pi
+you know you get a Raspberry Pi for
+
+74
+00:04:27,660 --> 00:04:30,870
+30 bucks I got a Raspberry Pi IR camera
+
+75
+00:04:30,870 --> 00:04:34,780
+so I resplendent like night vision it's
+like the poor man's night vision camera
+
+76
+00:04:34,780 --> 00:04:38,760
+and that was right there as rip my 30
+bucks a
+
+77
+00:04:38,760 --> 00:04:43,190
+a couple of metric bolts on couple bucks
+hardware store
+
+78
+00:04:43,190 --> 00:04:47,800
+five-dollar she stepper motor a resistor
+a buzzer
+
+79
+00:04:47,800 --> 00:04:52,169
+and the Shipholding Ellen 2803 which is
+like a stepper driver
+
+80
+00:04:52,169 --> 00:04:55,820
+autistic little signals that have our
+current make me the pic signals but
+
+81
+00:04:55,820 --> 00:05:00,160
+what the current and a switch and then a
+lotta
+
+82
+00:05:00,160 --> 00:05:03,930
+really awesome 3d printer parts I had a
+friend from the internet help me do some
+
+83
+00:05:03,930 --> 00:05:04,800
+chemicals I'm
+
+84
+00:05:04,800 --> 00:05:08,310
+and we basically started building the
+pits skinner box so
+
+85
+00:05:08,310 --> 00:05:12,600
+is a food hopper in the hopper basically
+stupid streets the rats
+
+86
+00:05:12,600 --> 00:05:17,750
+others the mounting brackets to hold up
+to wreckage there's a lever in just a
+
+87
+00:05:17,750 --> 00:05:21,169
+simple not the camera in this all goes
+inside a Tupperware I
+
+88
+00:05:21,169 --> 00:05:26,690
+to get my kitchen on in so inside the
+choppers were in mount it all the harder
+
+89
+00:05:26,690 --> 00:05:30,750
+so the harbor is super easy it's just a
+Raspberry Pi
+
+90
+00:05:30,750 --> 00:05:34,370
+a breakout board and this controller
+circuit proper sisters
+
+91
+00:05:34,370 --> 00:05:37,729
+switch in a buzzer and so the mounted
+
+92
+00:05:37,729 --> 00:05:41,720
+all in you deploy it so you have to
+deploy her dislike me to play soccer
+
+93
+00:05:41,720 --> 00:05:44,940
+so I deployed it with my pets & wanted
+see how they would do
+
+94
+00:05:44,940 --> 00:05:48,229
+so once the heart was built like know
+how do you
+
+95
+00:05:48,229 --> 00:05:51,800
+build the software to do T interact with
+it right and
+
+96
+00:05:51,800 --> 00:05:55,720
+such as interactive it but interact with
+it oversee yourself or over web browser
+
+97
+00:05:55,720 --> 00:05:56,580
+process just like
+
+98
+00:05:56,580 --> 00:06:01,390
+running a simple script so first the
+plaintiff spec out what you want to do
+
+99
+00:06:01,390 --> 00:06:05,280
+so what I wanted I wanted to display the
+images on the camera
+
+100
+00:06:05,280 --> 00:06:08,979
+a record the activity over time a
+
+101
+00:06:08,979 --> 00:06:12,450
+be able to remote control feed the pets
+that's a pic excelerate
+
+102
+00:06:12,450 --> 00:06:17,479
+and then I also wanted to run in record
+actual science experiments ripe
+
+103
+00:06:17,479 --> 00:06:21,310
+buzz the buzzer iraq responded pushes a
+lever and I record whether it did so
+
+104
+00:06:21,310 --> 00:06:22,110
+correctly or not
+
+105
+00:06:22,110 --> 00:06:25,630
+and finally I wanted to display all of
+those results
+
+106
+00:06:25,630 --> 00:06:28,940
+a you know in something I could I just
+so like it daily digest
+
+107
+00:06:28,940 --> 00:06:33,880
+results so to do all the second half
+with you can figure out what tools from
+
+108
+00:06:33,880 --> 00:06:35,340
+the paper ecosystem IQ's
+
+109
+00:06:35,340 --> 00:06:39,050
+so to run the motor in the buzzer in the
+switch that's simply
+
+110
+00:06:39,050 --> 00:06:42,610
+GPIO library right repin and a friend
+
+111
+00:06:42,610 --> 00:06:47,550
+I had to run the camera I just used a
+library hope I camera which is
+
+112
+00:06:47,550 --> 00:06:52,190
+just simple Raspberry Pi camera
+interface open CV which is a computer
+
+113
+00:06:52,190 --> 00:06:52,930
+vision library
+
+114
+00:06:52,930 --> 00:06:56,000
+and number I which is a numerical
+processing library
+
+115
+00:06:56,000 --> 00:06:59,840
+during experiments I have none pie
+
+116
+00:06:59,840 --> 00:07:03,350
+which just this manassas Mongo which
+
+117
+00:07:03,350 --> 00:07:06,830
+store the data and map but limb you he
+an
+
+118
+00:07:06,830 --> 00:07:11,680
+bill Mongo on Raspberry Pi I'm just
+gonna warn you it takes like 12 hours
+
+119
+00:07:11,680 --> 00:07:14,900
+and it doesn't really work well but it
+does run
+
+120
+00:07:14,900 --> 00:07:19,650
+and then finally to display everything I
+just use a simple
+
+121
+00:07:19,650 --> 00:07:24,490
+Python by a lap dance and bootstrap
+gobble up seconds
+
+122
+00:07:24,490 --> 00:07:27,800
+I am so roughly how does this all work
+so
+
+123
+00:07:27,800 --> 00:07:30,110
+from Inter perspective how do you put
+all these parts together make an
+
+124
+00:07:30,110 --> 00:07:31,320
+interesting
+
+125
+00:07:31,320 --> 00:07:35,240
+so you start off by building the harbour
+interface which is just a thread
+
+126
+00:07:35,240 --> 00:07:38,730
+running and you you create a couple
+methods to get into that threatens a
+
+127
+00:07:38,730 --> 00:07:41,900
+here on the motorway enough to feed the
+rats he
+
+128
+00:07:41,900 --> 00:07:46,919
+has a switch impressed a similarly you
+build a camera interface and its entire
+
+129
+00:07:46,919 --> 00:07:48,100
+job his trainer Fred
+
+130
+00:07:48,100 --> 00:07:51,930
+grab an image once a second and I
+actually wanted to monitor activity
+
+131
+00:07:51,930 --> 00:07:55,889
+so I if the image edition is processing
+right def it
+
+132
+00:07:55,889 --> 00:08:00,060
+from the last image received in see if I
+can measure the activity the rents
+
+133
+00:08:00,060 --> 00:08:03,600
+and then with you have that done you
+just do
+
+134
+00:08:03,600 --> 00:08:07,669
+a it little tiny science threat right to
+this shut
+
+135
+00:08:07,669 --> 00:08:12,930
+the search job is to watch say okay how
+long has it been since are an experiment
+
+136
+00:08:12,930 --> 00:08:15,860
+it will look at its watch say okay I
+need to run it's very three minutes now
+
+137
+00:08:15,860 --> 00:08:17,150
+it's time so
+
+138
+00:08:17,150 --> 00:08:20,900
+run the buzzer went for the rat
+responded if it doesn't respond in
+
+139
+00:08:20,900 --> 00:08:25,180
+30 seconds while the experiment to fail
+and then
+
+140
+00:08:25,180 --> 00:08:29,100
+to tie all this together remember what
+happened you created date: interface to
+
+141
+00:08:29,100 --> 00:08:33,500
+rendered results and save your data well
+you just sorta low this all into
+
+142
+00:08:33,500 --> 00:08:38,550
+about a web server set up some call
+backs and it runs
+
+143
+00:08:38,550 --> 00:08:42,370
+okay so you guys wanna see code say yes
+
+144
+00:08:42,370 --> 00:08:49,370
+you have Cinco today right stockpot
+
+145
+00:08:51,199 --> 00:08:54,459
+alright so this is the main web server
+and so this I don't going to want to
+
+146
+00:08:54,459 --> 00:08:55,350
+show you guys
+
+147
+00:08:55,350 --> 00:08:58,690
+an actual demo the hardware so built in
+anticipation
+
+148
+00:08:58,690 --> 00:09:02,570
+on so this is really really simple I
+just import the four models I just
+
+149
+00:09:02,570 --> 00:09:03,120
+talked about
+
+150
+00:09:03,120 --> 00:09:06,490
+and I'll go over those on detail but
+I'll give you the over here
+
+151
+00:09:06,490 --> 00:09:10,640
+there's a simple Jason encoder for a
+message scheme that passes to Peru
+
+152
+00:09:10,640 --> 00:09:13,020
+WebSocket to the front and the page
+
+153
+00:09:13,020 --> 00:09:17,640
+um then I have a pilot all tax rate and
+so these are basically there
+
+154
+00:09:17,640 --> 00:09:22,120
+tour Ron and say whenever an event
+happens and hardware
+
+155
+00:09:22,120 --> 00:09:25,140
+Hall up in toss this either to
+
+156
+00:09:25,140 --> 00:09:31,020
+a locking interface among new or push it
+to the website
+
+157
+00:09:31,020 --> 00:09:35,130
+once it's done with these in place I
+basically create my objects me for
+
+158
+00:09:35,130 --> 00:09:36,320
+objects
+
+159
+00:09:36,320 --> 00:09:41,240
+on and for all this project user really
+really simple call back mechanism
+
+160
+00:09:41,240 --> 00:09:46,570
+so this is just lists love first-class
+functions being passed back and forth
+
+161
+00:09:46,570 --> 00:09:50,000
+so I say like hey here's my a political
+writer
+
+162
+00:09:50,000 --> 00:09:53,660
+the run experiments he's really like
+your data whenever you get
+
+163
+00:09:53,660 --> 00:09:57,470
+something that you want to save like say
+a passive interest a love interest our
+
+164
+00:09:57,470 --> 00:09:58,490
+experiment
+
+165
+00:09:58,490 --> 00:10:02,160
+said it there as a toilet hey whenever
+you get a pass around
+
+166
+00:10:02,160 --> 00:10:05,940
+say polyp the front end and send a pic
+
+167
+00:10:05,940 --> 00:10:09,780
+and so I go through and I i said all
+these fence right so PASOK spirit-filled
+
+168
+00:10:09,780 --> 00:10:13,589
+experiment some early on from the
+hardware I say
+
+169
+00:10:13,589 --> 00:10:17,150
+whenever a button is pressed whenever it
+comes up
+
+170
+00:10:17,150 --> 00:10:21,120
+notify the front end I log data to the
+database
+
+171
+00:10:21,120 --> 00:10:24,560
+and also tell the experimenter that hey
+a button when up so
+
+172
+00:10:24,560 --> 00:10:28,480
+if you're actually trying to look into
+burma with my blog
+
+173
+00:10:28,480 --> 00:10:32,820
+insiders analogies for buzzer and the
+feeder and some relief for the camera
+
+174
+00:10:32,820 --> 00:10:36,740
+motion so whenever the camera motion
+it's a motion update
+
+175
+00:10:36,740 --> 00:10:40,810
+everyone's a sec senator division
+updates to
+
+176
+00:10:40,810 --> 00:10:45,070
+you basically tell everything to start
+sterile your friends
+
+177
+00:10:45,070 --> 00:10:50,040
+and so you go through in its after this
+it's a standard bottle webster
+
+178
+00:10:50,040 --> 00:10:54,520
+so set your routes for your images
+JavaScript and CSS a split strap
+
+179
+00:10:54,520 --> 00:10:59,290
+in this case just make it look pretty so
+if your air pigeons
+
+180
+00:10:59,290 --> 00:11:03,110
+on note actually get the events to
+happen so one of the things you want
+
+181
+00:11:03,110 --> 00:11:05,570
+rightist have a controller so you wanna
+be able to click
+
+182
+00:11:05,570 --> 00:11:09,180
+burns and have the box buzz you wanna
+pick buzz in your web page
+
+183
+00:11:09,180 --> 00:11:12,870
+have the box but so all I did as I set
+up a row
+
+184
+00:11:12,870 --> 00:11:17,950
+so whenever you post to this route you
+just called a hard winter faces a bus
+
+185
+00:11:17,950 --> 00:11:21,760
+and Ike is all true and how I do that
+works well
+
+186
+00:11:21,760 --> 00:11:24,870
+some early on running the feeder you
+just
+
+187
+00:11:24,870 --> 00:11:29,850
+call this you post to this feed them and
+it'll dispense
+
+188
+00:11:29,850 --> 00:11:33,589
+pictures same thing and a lot of the
+stuff after this is pretty cut-and-dried
+
+189
+00:11:33,589 --> 00:11:37,250
+way this is a mighty the generate
+activist this
+
+190
+00:11:37,250 --> 00:11:41,100
+generates your plot right this is this
+is the rats activity every day
+
+191
+00:11:41,100 --> 00:11:45,550
+just simply polymath it'll see file to
+your image map
+
+192
+00:11:45,550 --> 00:11:49,060
+which is not great but it's a quick and
+dirty way to get this done
+
+193
+00:11:49,060 --> 00:11:52,770
+and render the bottle template
+
+194
+00:11:52,770 --> 00:11:56,330
+similar again for a past bill
+
+195
+00:11:56,330 --> 00:12:00,100
+table stop that generates statistics
+
+196
+00:12:00,100 --> 00:12:05,339
+on the everyday is wrong and a couple
+more to surf experience
+
+197
+00:12:05,339 --> 00:12:11,660
+here's a little bit me so this is gonna
+be
+
+198
+00:12:11,660 --> 00:12:14,899
+here where we actually set up the
+WebSocket to push data to the web
+
+199
+00:12:14,899 --> 00:12:17,240
+front-end
+
+200
+00:12:17,240 --> 00:12:20,230
+finally and this is just a little bit of
+a helpful thing is that you set up a
+
+201
+00:12:20,230 --> 00:12:22,850
+signal handler so when you post on the
+web server
+
+202
+00:12:22,850 --> 00:12:26,600
+you shut down all the hardware threads
+their setin Damon mode which
+
+203
+00:12:26,600 --> 00:12:30,190
+should kill it but it's usually good
+option doubt it nice clean
+
+204
+00:12:30,190 --> 00:12:33,670
+orderly way so then we can also
+
+205
+00:12:33,670 --> 00:12:39,580
+look at the hardware interface
+
+206
+00:12:39,580 --> 00:12:43,700
+that looks like this and this is super
+simple
+
+207
+00:12:43,700 --> 00:12:48,540
+wrote it in afternoon and basically what
+you do is you initialize a threat
+
+208
+00:12:48,540 --> 00:12:52,390
+like I said he said it is a Damon so
+that it dies when you kill the web
+
+209
+00:12:52,390 --> 00:12:53,730
+server
+
+210
+00:12:53,730 --> 00:12:56,890
+then you have some pins the sets on
+Raspberry Pi have
+
+211
+00:12:56,890 --> 00:13:00,700
+I think a dozen or so maybe GPIO pins
+
+212
+00:13:00,700 --> 00:13:04,500
+so you set the GPIO pins to oils that
+are going to be used to
+
+213
+00:13:04,500 --> 00:13:08,399
+run your stepper motor or the quarter
+the
+
+214
+00:13:08,399 --> 00:13:12,570
+pin that'll be used to run your buzzer
+or the pin that is connected to
+
+215
+00:13:12,570 --> 00:13:16,730
+your switch so I said all those up with
+the output
+
+216
+00:13:16,730 --> 00:13:20,500
+set all the ones that are up at the
+buzzer and
+
+217
+00:13:20,500 --> 00:13:24,640
+the stepper motor and I set the input
+for the the trigger switch
+
+218
+00:13:24,640 --> 00:13:27,580
+and then I certain internal state
+variables to the way this is all gonna
+
+219
+00:13:27,580 --> 00:13:28,860
+work
+
+220
+00:13:28,860 --> 00:13:32,100
+is that whenever you wanna
+
+221
+00:13:32,100 --> 00:13:35,200
+dispense food or run the buzzer you set
+a flag
+
+222
+00:13:35,200 --> 00:13:39,390
+and so at the flag inside a mean we'll
+be inside the Fred
+
+223
+00:13:39,390 --> 00:13:42,760
+you just say you countdown so you do it
+we know
+
+224
+00:13:42,760 --> 00:13:46,180
+roughly this is not completely time
+accurate that you say
+
+225
+00:13:46,180 --> 00:13:49,990
+roughly five times a second I want you
+to countdown
+
+226
+00:13:49,990 --> 00:13:55,339
+and keep running the buzzer seastar you
+sir at 5:00 p.m. ring the buzzer five
+
+227
+00:13:55,339 --> 00:13:59,050
+for 3 to one in the trip
+
+228
+00:13:59,050 --> 00:14:02,430
+and that's in this year threat am
+
+229
+00:14:02,430 --> 00:14:05,700
+along with that I also set up some some
+call backs
+
+230
+00:14:05,700 --> 00:14:09,550
+so these contacts are there to notify
+
+231
+00:14:09,550 --> 00:14:13,160
+other either models or the NAP when
+
+232
+00:14:13,160 --> 00:14:17,459
+an event a prince so like whenever I
+dispense food
+
+233
+00:14:17,459 --> 00:14:20,940
+somebody can accept the call back to
+sleep immune function
+
+234
+00:14:20,940 --> 00:14:24,680
+itself was called back here and whenever
+adjustments but I'll call the function
+
+235
+00:14:24,680 --> 00:14:25,380
+and say okay
+
+236
+00:14:25,380 --> 00:14:28,760
+i'd dismissed it as long as everyone
+does is relatively quickly
+
+237
+00:14:28,760 --> 00:14:32,430
+it's not a big deal so you can see that
+here
+
+238
+00:14:32,430 --> 00:14:36,339
+so when a cop spence this will check if
+the flag for this meeting is
+
+239
+00:14:36,339 --> 00:14:41,120
+up if it's not well so we searched reset
+our step
+
+240
+00:14:41,120 --> 00:14:45,709
+we bring the bike up and then we just
+call up years
+
+241
+00:14:45,709 --> 00:14:49,010
+similar for buzzing same deal
+
+242
+00:14:49,010 --> 00:14:52,839
+this is where we set the call backs and
+this is where we actually set the
+
+243
+00:14:52,839 --> 00:14:57,080
+stepmother so stepper motors are to send
+there
+
+244
+00:14:57,080 --> 00:15:01,760
+basically two pairs oil and user
+alternate how the quills running in that
+
+245
+00:15:01,760 --> 00:15:02,769
+causes it to step
+
+246
+00:15:02,769 --> 00:15:06,110
+so you need for pants and you can filter
+
+247
+00:15:06,110 --> 00:15:09,990
+so here I have a basically a single step
+
+248
+00:15:09,990 --> 00:15:13,870
+where I say that this ban Hien this been
+hyping this pen hei
+
+249
+00:15:13,870 --> 00:15:19,040
+is go through the employer and they
+stopped another
+
+250
+00:15:19,040 --> 00:15:24,410
+and I have a nice interface for the
+buttons and finally a shutdown mechanism
+
+251
+00:15:24,410 --> 00:15:27,570
+just that sets all the Pens hi if
+
+252
+00:15:27,570 --> 00:15:30,570
+this is just a good point for building
+stop if you're
+
+253
+00:15:30,570 --> 00:15:33,950
+using 03 hire some other interface
+
+254
+00:15:33,950 --> 00:15:37,060
+to to build hardware what are the
+greatest things you can do is
+
+255
+00:15:37,060 --> 00:15:40,730
+run the iPod notebook and bring all your
+GPIO pins
+
+256
+00:15:40,730 --> 00:15:44,480
+in is and you can interactively bring
+them up and down really really easy and
+
+257
+00:15:44,480 --> 00:15:45,040
+as your
+
+258
+00:15:45,040 --> 00:15:49,260
+you know if a circuit boar a reporters
+at the new trade but what's going on
+
+259
+00:15:49,260 --> 00:15:51,709
+can bring them up and bring them down
+and actually you know put your
+
+260
+00:15:51,709 --> 00:15:53,000
+multimeter on the inside
+
+261
+00:15:53,000 --> 00:15:56,760
+yes came up okay sort
+
+262
+00:15:56,760 --> 00:16:00,750
+um so then you just run everything and
+
+263
+00:16:00,750 --> 00:16:04,060
+the space which exit see if the plans
+are up does the bookkeeping
+
+264
+00:16:04,060 --> 00:16:08,100
+and sends it on its merry way arm
+
+265
+00:16:08,100 --> 00:16:11,480
+and finally there's the bitter logic for
+the button so but prices are actually
+
+266
+00:16:11,480 --> 00:16:14,470
+really you're just looking for a higher
+low signal but
+
+267
+00:16:14,470 --> 00:16:17,660
+usually don't want to detect higher
+locus is affects what you actually wanna
+
+268
+00:16:17,660 --> 00:16:22,540
+detectors the derivative right gone from
+zero to one or 120
+
+269
+00:16:22,540 --> 00:16:25,769
+so I basically have a little method here
+that looks without and then
+
+270
+00:16:25,769 --> 00:16:30,140
+does the public
+
+271
+00:16:30,140 --> 00:16:33,430
+so that's a now take a look at the
+camera interface
+
+272
+00:16:33,430 --> 00:16:36,620
+so the camera interface is is again
+super simple
+
+273
+00:16:36,620 --> 00:16:39,700
+seem sorta idea running Fred
+
+274
+00:16:39,700 --> 00:16:44,209
+on in this case I'm not really gonna
+basket for anything it's just gonna go
+
+275
+00:16:44,209 --> 00:16:47,890
+run and take a photo once a second
+
+276
+00:16:47,890 --> 00:16:51,350
+and every time it actually gets a photo
+it's gonna save it to a regular
+
+277
+00:16:51,350 --> 00:16:55,620
+director in wet saree and it's also
+going to calculate the motion between
+
+278
+00:16:55,620 --> 00:16:57,110
+the previous rain
+
+279
+00:16:57,110 --> 00:17:00,760
+so this calculation right here
+miscalculate motion
+
+280
+00:17:00,760 --> 00:17:05,280
+basically what you do is you say okay
+here's last image I to
+
+281
+00:17:05,280 --> 00:17:08,620
+used to initialize it but you say here's
+a last-minute and here's the image
+
+282
+00:17:08,620 --> 00:17:09,530
+you're just a
+
+283
+00:17:09,530 --> 00:17:13,790
+and you you literally take every single
+pixel in use a proper planning other
+
+284
+00:17:13,790 --> 00:17:18,079
+if things are moving activities going on
+that difference will be
+
+285
+00:17:18,079 --> 00:17:22,100
+if nothing's going on if you the same
+image and if you have the same image
+
+286
+00:17:22,100 --> 00:17:22,870
+twice
+
+287
+00:17:22,870 --> 00:17:26,649
+the difference is going to be really
+really small so I do as i convert
+
+288
+00:17:26,649 --> 00:17:29,940
+of the images the previous one and the
+current one to grayscale
+
+289
+00:17:29,940 --> 00:17:33,890
+subtract them to one another take the
+absolute value
+
+290
+00:17:33,890 --> 00:17:37,460
+and take them you know that and that's
+my early promotion or be here
+
+291
+00:17:37,460 --> 00:17:40,830
+movement I also do a little bit of
+temporal filtering
+
+292
+00:17:40,830 --> 00:17:43,899
+as if you do that rebbe
+
+293
+00:17:43,899 --> 00:17:48,090
+Israel really rough mechanism so few
+average this out over a couple frames
+
+294
+00:17:48,090 --> 00:17:51,230
+you get much better results on
+
+295
+00:17:51,230 --> 00:17:54,120
+getting images of the Raspberry Pi
+camera is a little bit different than
+
+296
+00:17:54,120 --> 00:17:58,750
+say a standard USB camera what you do is
+you create a stream
+
+297
+00:17:58,750 --> 00:18:01,990
+and you basically pipe the PNG
+
+298
+00:18:01,990 --> 00:18:06,210
+how to the Raspberry Pi into the stream
+and then you can use numb plated decode
+
+299
+00:18:06,210 --> 00:18:07,540
+that stream
+
+300
+00:18:07,540 --> 00:18:11,260
+push into you a data buffer and then you
+can
+
+301
+00:18:11,260 --> 00:18:14,550
+then use that data buffer inside the
+open CVT binding
+
+302
+00:18:14,550 --> 00:18:18,679
+to either save the image do some
+processing or
+
+303
+00:18:18,679 --> 00:18:22,780
+but every need so once you have
+basically these two functions get image
+
+304
+00:18:22,780 --> 00:18:26,760
+and Capulet motion that the mean for the
+becomes C breezy
+
+305
+00:18:26,760 --> 00:18:29,860
+get an image accurate motion wait a
+second get image
+
+306
+00:18:29,860 --> 00:18:34,710
+Catholic mission with them so how we
+doing on time
+
+307
+00:18:34,710 --> 00:18:38,780
+at so
+
+308
+00:18:38,780 --> 00:18:42,740
+X so here is where the science Apple's
+
+309
+00:18:42,740 --> 00:18:45,990
+as I'm gonna go through this really
+quick so
+
+310
+00:18:45,990 --> 00:18:49,020
+same with primitive same sets a call
+back
+
+311
+00:18:49,020 --> 00:18:53,929
+and the only interesting thing here is
+that I pass in the hardware to
+
+312
+00:18:53,929 --> 00:18:57,870
+I'm so the hardware basically are the
+hardware interface and so all this thing
+
+313
+00:18:57,870 --> 00:18:59,550
+does is it basically
+
+314
+00:18:59,550 --> 00:19:03,800
+looks for two things it which is watch
+every few minutes it does this time did
+
+315
+00:19:03,800 --> 00:19:07,450
+says this happen Rep
+
+316
+00:19:07,450 --> 00:19:10,580
+or it's been this long run another
+experiment were it has been a sponsor
+
+317
+00:19:10,580 --> 00:19:13,320
+running expect government experiment
+
+318
+00:19:13,320 --> 00:19:16,700
+and if the experiments running and the
+Rev she's a lever
+
+319
+00:19:16,700 --> 00:19:20,610
+and stop experiment record results
+
+320
+00:19:20,610 --> 00:19:25,520
+and final aim we have data interface and
+this is super simple
+
+321
+00:19:25,520 --> 00:19:29,639
+it's just a connection to Munger
+determines on
+
+322
+00:19:29,639 --> 00:19:33,320
+and a bunch really simple functions that
+shoved it in the Mongo
+
+323
+00:19:33,320 --> 00:19:36,590
+whenever you call them so it's just and
+this is a extremely primitive but it's
+
+324
+00:19:36,590 --> 00:19:36,860
+just
+
+325
+00:19:36,860 --> 00:19:41,419
+login experiment lot abuts and reporter
+timestamp
+
+326
+00:19:41,419 --> 00:19:45,200
+to display video you basically go
+unanswered Mongo pay has it been
+
+327
+00:19:45,200 --> 00:19:48,250
+give me all the data for 24 hours that
+is just buzz presses
+
+328
+00:19:48,250 --> 00:19:51,679
+or for is button presses or just buzzes
+
+329
+00:19:51,679 --> 00:19:54,740
+or experiments and
+
+330
+00:19:54,740 --> 00:19:58,950
+to generate from this for the user you
+just go in clear all that data
+
+331
+00:19:58,950 --> 00:20:02,000
+and use map partly to render so
+
+332
+00:20:02,000 --> 00:20:05,380
+just release a full partnering no
+
+333
+00:20:05,380 --> 00:20:08,799
+if you really want to be fancy should do
+this in javascript but the Python
+
+334
+00:20:08,799 --> 00:20:12,790
+comments 0 that's been pipe problem the
+other thing you should know
+
+335
+00:20:12,790 --> 00:20:16,690
+about using matplotlib have to set the
+back end
+
+336
+00:20:16,690 --> 00:20:20,330
+it met but we've actually usually once a
+runner interactive mode see have to
+
+337
+00:20:20,330 --> 00:20:24,190
+change this flag to get around quickly
+
+338
+00:20:24,190 --> 00:20:27,799
+okay so is it enough you custom you
+wanna see
+
+339
+00:20:27,799 --> 00:20:31,070
+some demo and have some fun so is my rat
+
+340
+00:20:31,070 --> 00:20:36,710
+my human rat assistant
+
+341
+00:20:36,710 --> 00:20:38,200
+alright so I'm gonna
+
+342
+00:20:38,200 --> 00:20:42,850
+basically months ago to you this is on
+the high side veces station
+
+343
+00:20:42,850 --> 00:20:49,850
+alright so we're gonna pretend that it's
+
+344
+00:20:51,110 --> 00:20:54,800
+regular day at my house and i've left to
+go to work and I'm sitting around and
+
+345
+00:20:54,800 --> 00:20:56,770
+what we grab a rat just kinda have it
+
+346
+00:20:56,770 --> 00:21:00,420
+have a crime is rule
+
+347
+00:21:00,420 --> 00:21:03,440
+should run around in the cage
+
+348
+00:21:03,440 --> 00:21:10,440
+and so we will go to wreck
+
+349
+00:21:11,670 --> 00:21:15,960
+so we are now connected to the web
+server on the Raspberry Pi with the rat
+
+350
+00:21:15,960 --> 00:21:19,040
+up rat will you push that lever right
+there
+
+351
+00:21:19,040 --> 00:21:24,480
+we thank you
+
+352
+00:21:24,480 --> 00:21:29,440
+so than a button press they came up to
+the website and maybe we should
+
+353
+00:21:29,440 --> 00:21:32,840
+would you guys like to take a look at
+this rap and see what's going on
+
+354
+00:21:32,840 --> 00:21:39,170
+we can just do that
+
+355
+00:21:39,170 --> 00:21:46,170
+at least
+
+356
+00:21:47,100 --> 00:21:51,299
+up you're buzzing an experience running
+we hit the lever for
+
+357
+00:21:51,299 --> 00:21:55,260
+excellent we go
+
+358
+00:21:55,260 --> 00:21:58,679
+so live feed %uh rack
+
+359
+00:21:58,679 --> 00:22:02,169
+arm we can also look at your activity so
+
+360
+00:22:02,169 --> 00:22:06,610
+caveat here I just kill them on a daily
+basis is not all day it's just
+
+361
+00:22:06,610 --> 00:22:09,950
+units the past couple minutes the sex
+abuse I can surrender
+
+362
+00:22:09,950 --> 00:22:14,380
+but so this can this is just the
+activity of the rat over the past two
+
+363
+00:22:14,380 --> 00:22:15,410
+minutes what's been here
+
+364
+00:22:15,410 --> 00:22:18,750
+we can you actually revisit this in a
+second on
+
+365
+00:22:18,750 --> 00:22:22,210
+we can also look at the experimental
+results it a buzz again here in a second
+
+366
+00:22:22,210 --> 00:22:29,210
+so and fail
+
+367
+00:22:31,100 --> 00:22:32,640
+okay so you personally for once
+
+368
+00:22:32,640 --> 00:22:39,640
+once X
+
+369
+00:22:42,160 --> 00:22:45,270
+Iran's on well I guess in the meantime
+
+370
+00:22:45,270 --> 00:22:49,200
+I will but
+
+371
+00:22:49,200 --> 00:22:52,740
+manually
+
+372
+00:22:52,740 --> 00:22:56,570
+I don't know how far back can you hear
+that excellent
+
+373
+00:22:56,570 --> 00:23:00,059
+it's that annoying II I had to move it
+out of my better
+
+374
+00:23:00,059 --> 00:23:07,059
+so I can also be you feet its
+
+375
+00:23:10,539 --> 00:23:13,710
+and week we can actually see how you
+been doing over the course of the day
+
+376
+00:23:13,710 --> 00:23:17,970
+so we can see how many times you done
+correct presence and
+
+377
+00:23:17,970 --> 00:23:21,100
+number time she bad bad process so today
+you bill
+
+378
+00:23:21,100 --> 00:23:24,919
+10 times your past place the total
+number
+
+379
+00:23:24,919 --> 00:23:28,929
+experiments is to her present correct
+number twenty dispense
+
+380
+00:23:28,929 --> 00:23:32,139
+to an emergency press that button number
+times the
+
+381
+00:23:32,139 --> 00:23:35,210
+buzzers boast and I can also see
+
+382
+00:23:35,210 --> 00:23:42,210
+the Chorley for your activity J
+
+383
+00:23:45,440 --> 00:23:51,150
+will you be my RBI
+
+384
+00:23:51,150 --> 00:23:51,640
+on
+
+385
+00:23:51,640 --> 00:23:56,020
+and so thats about you have any
+
+386
+00:23:56,020 --> 00:24:02,200
+any questions user ok ok this is all
+
+387
+00:24:02,200 --> 00:24:05,500
+okay software I've actually put all the
+hardware to
+
+388
+00:24:05,500 --> 00:24:08,880
+a fun thing ever so it is all free
+though work it
+
+389
+00:24:08,880 --> 00:24:12,309
+fix it mess with that build something
+else
+
+390
+00:24:12,309 --> 00:24:15,470
+good
+
+391
+00:24:15,470 --> 00:24:22,470
+think you can bring
+
+392
+00:24:22,559 --> 00:24:25,590
+as if you have any questions Mike you up
+front so
+
+393
+00:24:25,590 --> 00:24:32,260
+police comin ask your question thanks
+that's very
+
+394
+00:24:32,260 --> 00:24:35,540
+users but the Raspberry Pi specifically
+
+395
+00:24:35,540 --> 00:24:39,190
+use use for use to
+
+396
+00:24:39,190 --> 00:24:42,600
+regular us xiiso
+
+397
+00:24:42,600 --> 00:24:45,840
+you certainly could insisted it sheep is
+a hard
+
+398
+00:24:45,840 --> 00:24:49,950
+three dollars you could she's a big
+alone you could run up a no Board
+
+399
+00:24:49,950 --> 00:24:54,550
+do any up you can run a web server and
+people easily passed in
+
+400
+00:24:54,550 --> 00:25:00,390
+wonderful I don't wanna be when extra
+the other question get back to squeak
+
+401
+00:25:00,390 --> 00:25:04,200
+design ok I'll
+
+402
+00:25:04,200 --> 00:25:07,940
+you really know me well
+
+403
+00:25:07,940 --> 00:25:12,040
+you really yummy you just needed right
+text usage
+
+404
+00:25:12,040 --> 00:25:15,120
+keeping the pictures sec yes
+
+405
+00:25:15,120 --> 00:25:18,540
+it's not like dumping picturing onel
+
+406
+00:25:18,540 --> 00:25:22,720
+certainly there's like it's completely
+mean I there's no there's no reason
+
+407
+00:25:22,720 --> 00:25:25,960
+really then two other show some
+principles a hey I'm pushing this today
+
+408
+00:25:25,960 --> 00:25:26,380
+to bed
+
+409
+00:25:26,380 --> 00:25:29,400
+and yes you can get with a text file
+into be probably
+
+410
+00:25:29,400 --> 00:25:32,900
+better easier more robust in a lot of
+other stuff but I wanted
+
+411
+00:25:32,900 --> 00:25:37,580
+write some code that was actually a
+little bit something that you could
+
+412
+00:25:37,580 --> 00:25:39,140
+build upon to do something slightly more
+
+413
+00:25:39,140 --> 00:25:44,029
+to rate things
+
+414
+00:25:44,029 --> 00:25:47,559
+I and that was my question to
+
+415
+00:25:47,559 --> 00:25:51,710
+Brett so tell us more about how
+
+416
+00:25:51,710 --> 00:25:55,269
+to put my uncle under excuse me had to
+put my
+
+417
+00:25:55,269 --> 00:25:59,330
+go on to it he said it was hard overuse
+it is actually a couple tutorials and it
+
+418
+00:25:59,330 --> 00:26:02,519
+was pretty straightforward you want to
+start out with table or
+
+419
+00:26:02,519 --> 00:26:06,730
+jst heard and it will fail you will
+
+420
+00:26:06,730 --> 00:26:10,889
+not keep the state a long time or you
+need to replicate it across something
+
+421
+00:26:10,889 --> 00:26:11,639
+else but no
+
+422
+00:26:11,639 --> 00:26:14,529
+on a day-to-day basis if you're
+repeating once a day it seems really
+
+423
+00:26:14,529 --> 00:26:15,340
+robust
+
+424
+00:26:15,340 --> 00:26:19,090
+once it's running but it seems like when
+the hi comes down it comes back up there
+
+425
+00:26:19,090 --> 00:26:20,049
+seems to be issues
+
+426
+00:26:20,049 --> 00:26:23,299
+until where we find the project
+
+427
+00:26:23,299 --> 00:26:27,720
+but so it's all up on it and so if you
+
+428
+00:26:27,720 --> 00:26:31,210
+should be on my blog here fairly quickly
+but it's only getting
+
+429
+00:26:31,210 --> 00:26:35,299
+as a result
+
+430
+00:26:35,299 --> 00:26:39,509
+expire so we're still winning up my
+friend used in mechanical engineering
+
+431
+00:26:39,509 --> 00:26:42,440
+we're still having problems with this
+thing here and these are actually really
+
+432
+00:26:42,440 --> 00:26:43,549
+hard the food poppers
+
+433
+00:26:43,549 --> 00:26:46,580
+really hard to build 11 p.m. kicks
+because they're
+
+434
+00:26:46,580 --> 00:26:51,990
+like kid tested or approved her you know
+it you it does actually proprietary
+
+435
+00:26:51,990 --> 00:26:55,629
+Science Plan sugar pallets that they
+normally feed rats and those
+
+436
+00:26:55,629 --> 00:26:58,440
+aside from the box being ten thousand
+dollars those might as well be ten
+
+437
+00:26:58,440 --> 00:26:59,450
+thousand dollars for
+
+438
+00:26:59,450 --> 00:27:04,070
+sugar pellets us but getting that food
+to move through its actually
+
+439
+00:27:04,070 --> 00:27:07,200
+you could use a lot harder than you
+think it would be you when you're
+
+440
+00:27:07,200 --> 00:27:08,230
+running up a 3d printer
+
+441
+00:27:08,230 --> 00:27:12,619
+community stuff I'm but probably have
+some shaping behavior here
+
+442
+00:27:12,619 --> 00:27:15,919
+cool project
+
+443
+00:27:15,919 --> 00:27:19,580
+one thing you might think about in some
+rabbit
+
+444
+00:27:19,580 --> 00:27:22,990
+just to keep easy is IBM has an MQ TT
+
+445
+00:27:22,990 --> 00:27:26,649
+queuing system which is made raised
+wasn't
+
+446
+00:27:26,649 --> 00:27:30,019
+is this muscle queuing system yeah
+actually only
+
+447
+00:27:30,019 --> 00:27:34,879
+a shoes systems for doing hundreds
+arrest papers definitely might prefer
+
+448
+00:27:34,879 --> 00:27:38,820
+for actually been using Ross a lot for
+doing bigger real work project
+
+449
+00:27:38,820 --> 00:27:42,309
+and I i cant talk enough about how
+
+450
+00:27:42,309 --> 00:27:45,799
+awesome ross's ross's robot operating
+system
+
+451
+00:27:45,799 --> 00:27:48,850
+if you guys have not play with it go
+play with it cuz it is
+
+452
+00:27:48,850 --> 00:27:51,860
+Haas its rawson
+
+453
+00:27:51,860 --> 00:27:58,389
+any other questions you
+
+454
+00:27:58,389 --> 00:27:59,669
+period it's been
+

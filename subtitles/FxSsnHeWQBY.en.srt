@@ -1,0 +1,3902 @@
+1
+00:00:04,359 --> 00:00:06,670
+right good afternoon everybody
+
+2
+00:00:06,670 --> 00:00:09,100
+you for coming I'd like to introduce not
+bad
+
+3
+00:00:09,100 --> 00:00:16,100
+other who's going to talk about getting
+started with testing
+
+4
+00:00:18,370 --> 00:00:19,210
+hello everyone
+
+5
+00:00:19,210 --> 00:00:23,950
+on so this talk two starts at one forty
+but the printed program says 155
+
+6
+00:00:23,950 --> 00:00:27,730
+there's gonna be some people coming in
+late and you can all make friends by
+
+7
+00:00:27,730 --> 00:00:31,410
+palling up with them later in explaining
+what they missed in the first 15 minutes
+
+8
+00:00:31,410 --> 00:00:35,559
+I'm gonna live code on the screen it
+might be difficult to read your two
+
+9
+00:00:35,559 --> 00:00:38,770
+options are to move forward or to use
+the Billy you are at the bottom which
+
+10
+00:00:38,770 --> 00:00:42,000
+will take you to a page on my website
+which has all the slides in the code
+
+11
+00:00:42,000 --> 00:00:47,790
+and even the text if you want to follow
+along so my goal here today is to show
+
+12
+00:00:47,790 --> 00:00:49,489
+you a way to test your code
+
+13
+00:00:49,489 --> 00:00:53,340
+I'm assuming that you have not written
+tests before and you are
+
+14
+00:00:53,340 --> 00:00:57,309
+just curious let's say and that you want
+to figure out how to do it
+
+15
+00:00:57,309 --> 00:01:00,719
+arms on going to show you a way to test
+code there's lots of different ways to
+
+16
+00:01:00,719 --> 00:01:01,120
+do it
+
+17
+00:01:01,120 --> 00:01:04,140
+and if you talk to testing experts-- the
+public and tell you that this is all
+
+18
+00:01:04,140 --> 00:01:07,869
+the wrong way to do it maybe but this is
+a way to get you started I want to
+
+19
+00:01:07,869 --> 00:01:09,350
+remove the mystery
+
+20
+00:01:09,350 --> 00:01:16,070
+from writing test first a little bit of
+philosophy about this wide test
+
+21
+00:01:16,070 --> 00:01:20,390
+testing automated testing is the best
+way we know
+
+22
+00:01:20,390 --> 00:01:24,000
+to figure out if code works when I wanna
+hope
+
+23
+00:01:24,000 --> 00:01:27,880
+10 trying to show you in this talk is to
+look away look at tests as
+
+24
+00:01:27,880 --> 00:01:31,780
+a solution to a very important problem
+that you have your written some code
+
+25
+00:01:31,780 --> 00:01:34,940
+and the problem you have is that you
+don't know if it works and tests are the
+
+26
+00:01:34,940 --> 00:01:36,270
+solution to that problem
+
+27
+00:01:36,270 --> 00:01:39,630
+some people approach tests as a a check
+of
+
+28
+00:01:39,630 --> 00:01:43,220
+on some sort of form that they need to
+complete before they can go home at the
+
+29
+00:01:43,220 --> 00:01:43,910
+end of the day
+
+30
+00:01:43,910 --> 00:01:47,149
+it's just sort of paperwork to get done
+and that's the wrong way to look at it
+
+31
+00:01:47,149 --> 00:01:49,450
+you'll be very unhappy if you write
+tests that way
+
+32
+00:01:49,450 --> 00:01:52,869
+testing is a very serious problem too
+threat
+
+33
+00:01:52,869 --> 00:01:55,470
+it's a serious solution to a very
+serious problem and if you approach it
+
+34
+00:01:55,470 --> 00:01:56,149
+as such
+
+35
+00:01:56,149 --> 00:02:00,170
+as real engineering you'll get a lot of
+benefit from it it will save you time
+
+36
+00:02:00,170 --> 00:02:03,630
+because you won't have to go back and
+fix problems later and I'll give you
+
+37
+00:02:03,630 --> 00:02:06,539
+better code because the tests will
+actually help you write better
+
+38
+00:02:06,539 --> 00:02:11,630
+more modular code to begin with most
+importantly for me it removes fear
+
+39
+00:02:11,630 --> 00:02:15,040
+from the drilling process if you've ever
+approached a large piece of code and had
+
+40
+00:02:15,040 --> 00:02:15,709
+to change it
+
+41
+00:02:15,709 --> 00:02:19,160
+and thought that you were certain to
+fuck things up and
+
+42
+00:02:19,160 --> 00:02:23,319
+make the code not work anymore testing
+as a way to make sure that you will not
+
+43
+00:02:23,319 --> 00:02:24,189
+do that anymore
+
+44
+00:02:24,189 --> 00:02:27,280
+it turns fear into boredom as a way that
+I've heard it but
+
+45
+00:02:27,280 --> 00:02:31,159
+be and the other way to think about is a
+debugging is very hard but testing is
+
+46
+00:02:31,159 --> 00:02:31,719
+easy
+
+47
+00:02:31,719 --> 00:02:34,879
+so testing is a really good way to rate
+really good code
+
+48
+00:02:34,879 --> 00:02:39,969
+this is most developers first impression
+up testing
+
+49
+00:02:39,969 --> 00:02:44,799
+they know that they should be doing it
+but they're not doing it
+
+50
+00:02:44,799 --> 00:02:48,129
+and so they feel bad and and just like
+our poor developer here
+
+51
+00:02:48,129 --> 00:02:51,950
+they're paralyzed by this feeling of
+inadequacy
+
+52
+00:02:51,950 --> 00:02:55,140
+and uncertainty and doubt about what
+they should be doing
+
+53
+00:02:55,140 --> 00:02:58,859
+and and and they feel bad and I don't
+want you to feel bad
+
+54
+00:02:58,859 --> 00:03:02,090
+testing is hard
+
+55
+00:03:02,090 --> 00:03:05,290
+it's a lot of work people and by people
+I mean you
+
+56
+00:03:05,290 --> 00:03:08,719
+will not want to actually do it but it
+pays off
+
+57
+00:03:08,719 --> 00:03:12,750
+so if you approach it as and engineering
+task to solve a problem that you really
+
+58
+00:03:12,750 --> 00:03:14,140
+haven't you want to solve
+
+59
+00:03:14,140 --> 00:03:18,890
+it will work out for you the reality is
+that the universe is a chaotic place
+
+60
+00:03:18,890 --> 00:03:23,849
+so here's another poor developer she vet
+recognizes that the universe is full of
+
+61
+00:03:23,849 --> 00:03:26,120
+chaos that is trying to attack her code
+
+62
+00:03:26,120 --> 00:03:29,819
+okay you know how it is you write a
+program it seems to work great
+
+63
+00:03:29,819 --> 00:03:33,469
+and a week later who knows what's
+happened to it some gremlin has gone to
+
+64
+00:03:33,469 --> 00:03:34,739
+it and it no longer works
+
+65
+00:03:34,739 --> 00:03:38,040
+tests are the defense against us our
+developer here has thus
+
+66
+00:03:38,040 --> 00:03:42,069
+us a spear and shield those are the
+tests I'm gonna teach you how to write
+
+67
+00:03:42,069 --> 00:03:43,109
+them and use them
+
+68
+00:03:43,109 --> 00:03:46,230
+our goal for this talk is to get these
+two developers
+
+69
+00:03:46,230 --> 00:03:52,219
+happy and confident that the ant so the
+road map there are three main parts that
+
+70
+00:03:52,219 --> 00:03:53,219
+were gonna talk about today
+
+71
+00:03:53,219 --> 00:03:56,939
+the first part was we're gonna grow some
+tests organically will take some real
+
+72
+00:03:56,939 --> 00:03:57,639
+code
+
+73
+00:03:57,639 --> 00:04:01,780
+and we'll just start testing it serve ad
+hoc making up as we go along and talking
+
+74
+00:04:01,780 --> 00:04:04,689
+about what we like and don't like about
+the way those tests are coming out
+
+75
+00:04:04,689 --> 00:04:08,249
+and then we'll bump them the main piece
+to the talk is talking about the unit
+
+76
+00:04:08,249 --> 00:04:11,249
+test library in a standard Martin Stan
+library
+
+77
+00:04:11,249 --> 00:04:14,549
+that is the way that the right way to
+write tests and I'll show you that some
+
+78
+00:04:14,549 --> 00:04:17,040
+key bits and pieces of the unit test
+module
+
+79
+00:04:17,040 --> 00:04:20,829
+arm and show you how to use them to
+build your test
+
+80
+00:04:20,829 --> 00:04:24,050
+and then I want to get into a kind
+advanced topic mocks
+
+81
+00:04:24,050 --> 00:04:26,990
+which is something that you don't often
+see an obvious talk but it's a really
+
+82
+00:04:26,990 --> 00:04:29,490
+really powerful tool for making your
+tests
+
+83
+00:04:29,490 --> 00:04:32,830
+much more powerful and flexible
+
+84
+00:04:32,830 --> 00:04:36,560
+so let's start from first principles and
+grow some tests so here is our stock
+
+85
+00:04:36,560 --> 00:04:39,599
+portfolio class in again if you can't
+read the code there is a billy link at
+
+86
+00:04:39,599 --> 00:04:40,289
+the bottom
+
+87
+00:04:40,289 --> 00:04:45,400
+Billy um slash hi test 0 where you can
+see the code
+
+88
+00:04:45,400 --> 00:04:49,259
+so there's a stock portfolio class is
+very simple we define a class
+
+89
+00:04:49,259 --> 00:04:52,789
+it keeps a list I've bomb to Paul's name
+shares price
+
+90
+00:04:52,789 --> 00:04:56,020
+you can buy some shares for certain
+amount which will append that
+
+91
+00:04:56,020 --> 00:05:00,289
+I'll stock lot to the list and the later
+you can ask what is the cost to the
+
+92
+00:05:00,289 --> 00:05:02,830
+portfolio original cost which is simply
+the sum
+
+93
+00:05:02,830 --> 00:05:06,280
+I've the shares times the price for all
+the stocks in our portfolio
+
+94
+00:05:06,280 --> 00:05:10,389
+very simple code how do we test it well
+the first test is
+
+95
+00:05:10,389 --> 00:05:13,139
+be excuse me just launched the
+interactive interpreter and you start
+
+96
+00:05:13,139 --> 00:05:14,580
+fooling around with that you make
+
+97
+00:05:14,580 --> 00:05:18,250
+an empty portfolio you can see that it's
+cost 0 and then you can buy 100 shares
+
+98
+00:05:18,250 --> 00:05:20,470
+of IBM stock and you see that the cost
+
+99
+00:05:20,470 --> 00:05:24,000
+is gone up and then you buy 100 shares
+HP stock in the cut the cost is going up
+
+100
+00:05:24,000 --> 00:05:24,860
+some more
+
+101
+00:05:24,860 --> 00:05:28,240
+so this is really good so a good thing
+here is we're testing our coach let's be
+
+102
+00:05:28,240 --> 00:05:29,000
+honest
+
+103
+00:05:29,000 --> 00:05:32,389
+their developers who have not gotten
+this far right be
+
+104
+00:05:32,389 --> 00:05:35,099
+so right off the bat let's just
+congratulate ourselves that we are
+
+105
+00:05:35,099 --> 00:05:37,050
+actually testing our code
+
+106
+00:05:37,050 --> 00:05:40,580
+but the bad thing is that this is not a
+repeatable process if we change the
+
+107
+00:05:40,580 --> 00:05:41,590
+implementation
+
+108
+00:05:41,590 --> 00:05:44,770
+we're gonna have to go and do this again
+and and we won't remember what it is we
+
+109
+00:05:44,770 --> 00:05:47,810
+tested it will probably miss the case
+and that's where the bug will be
+
+110
+00:05:47,810 --> 00:05:50,810
+it's also labor-intensive you have to
+type this out every time
+
+111
+00:05:50,810 --> 00:05:53,300
+and you don't know if it's right you're
+going to get your calculator and see if
+
+112
+00:05:53,300 --> 00:05:54,930
+the risk you take work separate
+
+113
+00:05:54,930 --> 00:06:00,030
+so let's fix some %uh those problems the
+second test will write a python file
+
+114
+00:06:00,030 --> 00:06:02,979
+and will importer portfolio class will
+basically do the exact same things we
+
+115
+00:06:02,979 --> 00:06:04,979
+just did in the interactive interpreter
+
+116
+00:06:04,979 --> 00:06:07,849
+will print out with the cost is that the
+empty portfolio and then after we buy
+
+117
+00:06:07,849 --> 00:06:09,430
+100 shares of IBM
+
+118
+00:06:09,430 --> 00:06:12,470
+and that's good and we can see that you
+know the stock price is going up up
+
+119
+00:06:12,470 --> 00:06:17,050
+for the IBM stock and then after you buy
+the HP stock goes up
+
+120
+00:06:17,050 --> 00:06:20,470
+that's good we're testing the code it's
+now repeatable we can run that Python
+
+121
+00:06:20,470 --> 00:06:21,949
+file any time we like
+
+122
+00:06:21,949 --> 00:06:24,759
+it's very low effort it doesn't take
+much to run that file but we still don't
+
+123
+00:06:24,759 --> 00:06:25,509
+know if it's right
+
+124
+00:06:25,509 --> 00:06:29,759
+we have to look at that output and you
+know is it right that comes up to 21 263
+
+125
+00:06:29,759 --> 00:06:32,139
+if to get the calculator again
+
+126
+00:06:32,139 --> 00:06:36,259
+all right let's add some more to our
+tests so now here we've got is we got
+
+127
+00:06:36,259 --> 00:06:39,810
+um a portfolio cost where week print out
+what it should be
+
+128
+00:06:39,810 --> 00:06:42,409
+and then we can print out what it should
+be and can print out what it should be
+
+129
+00:06:42,409 --> 00:06:44,960
+and here we can see that it's printing
+those results
+
+130
+00:06:44,960 --> 00:06:49,979
+apologize for the code going up the side
+of the screen
+
+131
+00:06:49,979 --> 00:06:54,120
+now it's even better we got repeatable
+tests with low effort we've got x better
+
+132
+00:06:54,120 --> 00:06:57,879
+its be better because we got explicit
+expected results we stop to check the
+
+133
+00:06:57,879 --> 00:07:01,240
+results ourselves here the line of code
+if it were wrong we just have to look
+
+134
+00:07:01,240 --> 00:07:04,159
+and see if the two numbers were the same
+or if they were different
+
+135
+00:07:04,159 --> 00:07:07,060
+by the computers and telling us whether
+the number was right it just showing us
+
+136
+00:07:07,060 --> 00:07:08,259
+the actual result
+
+137
+00:07:08,259 --> 00:07:12,610
+an expected Brisbane expected result so
+again let's add a little bit more to our
+
+138
+00:07:12,610 --> 00:07:13,479
+test
+
+139
+00:07:13,479 --> 00:07:16,500
+keep in mind these are not the way
+you're supposed to write test
+
+140
+00:07:16,500 --> 00:07:20,310
+K this is you exploring the the problem
+writing good test
+
+141
+00:07:20,310 --> 00:07:23,990
+I'm gonna show you with the unit test
+how to do this the right way
+
+142
+00:07:23,990 --> 00:07:26,849
+but here now what we've done is we've
+taken our cost and in addition to
+
+143
+00:07:26,849 --> 00:07:28,750
+printing a message about what it should
+be
+
+144
+00:07:28,750 --> 00:07:32,280
+we use an assert statement to assert
+that the cost should be zero if you
+
+145
+00:07:32,280 --> 00:07:35,120
+haven't used the assert statement before
+takes a condition
+
+146
+00:07:35,120 --> 00:07:38,599
+and if the condition is true it simply
+carries on executing the next statement
+
+147
+00:07:38,599 --> 00:07:42,819
+but if the condition is false it raises
+an exception
+
+148
+00:07:42,819 --> 00:07:47,900
+so here we can make an assertion that
+the cost must be zero
+
+149
+00:07:47,900 --> 00:07:51,270
+because our tester passing the assertion
+never happen so now we have a repeatable
+
+150
+00:07:51,270 --> 00:07:52,530
+test with low effort
+
+151
+00:07:52,530 --> 00:07:56,050
+we have explicit expected results and
+results are checked automatically
+
+152
+00:07:56,050 --> 00:08:00,710
+good be the problem is that if the test
+fails
+
+153
+00:08:00,710 --> 00:08:04,150
+arm it will actually throwing assertion
+error and
+
+154
+00:08:04,150 --> 00:08:07,590
+the tests will stop this blue coat is
+actually incorrect it should be an
+
+155
+00:08:07,590 --> 00:08:09,400
+assertion error there
+
+156
+00:08:09,400 --> 00:08:13,120
+so it if one of those assertion fails
+the entire program will stop in you will
+
+157
+00:08:13,120 --> 00:08:14,550
+run the rest the tests
+
+158
+00:08:14,550 --> 00:08:17,939
+so if you with this for a real program
+the word doing many test you have a
+
+159
+00:08:17,939 --> 00:08:20,689
+hundred or thousand reading 10,000
+checks to make
+
+160
+00:08:20,689 --> 00:08:23,710
+at the second one failed you'd never
+find out about the rest of them
+
+161
+00:08:23,710 --> 00:08:28,949
+well we really like is for each check to
+be run completely independently
+
+162
+00:08:28,949 --> 00:08:31,819
+so as you can see this is getting
+complicated right if we wanted to
+
+163
+00:08:31,819 --> 00:08:35,150
+approach that problem of how do we make
+the tests run independently of each
+
+164
+00:08:35,150 --> 00:08:36,050
+other
+
+165
+00:08:36,050 --> 00:08:39,409
+that would be yet more engineering to
+put into these tests
+
+166
+00:08:39,409 --> 00:08:42,690
+that's gonna grow its gonna become a
+real program with real engineering
+
+167
+00:08:42,690 --> 00:08:46,000
+typically engineers when they find their
+encountering problems that other people
+
+168
+00:08:46,000 --> 00:08:48,440
+have encountered the gaunt find a
+library to help them solve those
+
+169
+00:08:48,440 --> 00:08:51,210
+problems
+
+170
+00:08:51,210 --> 00:08:55,020
+that libraries unit test or get that to
+that in a second but first let's talk
+
+171
+00:08:55,020 --> 00:08:57,680
+about the characteristics we want from
+test
+
+172
+00:08:57,680 --> 00:09:00,970
+we won our tests to be automated so
+they'll be low effort
+
+173
+00:09:00,970 --> 00:09:03,850
+and they'll be repeatable because if
+they're too hard to run after too
+
+174
+00:09:03,850 --> 00:09:06,590
+confusing to run your not gonna run them
+
+175
+00:09:06,590 --> 00:09:10,880
+we want them to be fast for the same
+reason we want them to be reliable
+
+176
+00:09:10,880 --> 00:09:14,610
+remember the point of a test as you want
+to run it and have it tell you something
+
+177
+00:09:14,610 --> 00:09:15,750
+you don't know
+
+178
+00:09:15,750 --> 00:09:19,010
+if you doubt the test then you haven't
+really gained anything
+
+179
+00:09:19,010 --> 00:09:22,370
+now you've simply move the question from
+tips to Mike just my code work
+
+180
+00:09:22,370 --> 00:09:25,830
+to do it to my tests work and %um
+release of anything
+
+181
+00:09:25,830 --> 00:09:29,680
+so you need your tests to be reliable
+you need to you need to believe them
+
+182
+00:09:29,680 --> 00:09:32,110
+when they say the something doesn't work
+
+183
+00:09:32,110 --> 00:09:34,710
+and when they tell you it doesn't work
+you'd like them to be as informative as
+
+184
+00:09:34,710 --> 00:09:37,760
+possible because if you think about the
+workflow the workflow as you run your
+
+185
+00:09:37,760 --> 00:09:38,500
+tests
+
+186
+00:09:38,500 --> 00:09:42,040
+and if any one of them fails you're
+going to immediately try and figure out
+
+187
+00:09:42,040 --> 00:09:45,740
+what what is broken in your code and so
+the more clues you can get from your
+
+188
+00:09:45,740 --> 00:09:49,210
+tests the better off you're going to be
+doing that the bugging exercise
+
+189
+00:09:49,210 --> 00:09:53,610
+and lastly they should be focused your
+tests should exercise as little code is
+
+190
+00:09:53,610 --> 00:09:54,520
+possible
+
+191
+00:09:54,520 --> 00:09:57,900
+which is a little counterintuitive
+usually be one any line of code we
+
+192
+00:09:57,900 --> 00:10:02,120
+right to do as much as possible but with
+test 31 each test to be as focused as
+
+193
+00:10:02,120 --> 00:10:02,930
+possible
+
+194
+00:10:02,930 --> 00:10:06,300
+because if it fails and you dive into
+your code to debug the problem
+
+195
+00:10:06,300 --> 00:10:09,580
+the less code it runs the more but
+narrowly focused you're debugging
+
+196
+00:10:09,580 --> 00:10:11,530
+caskets
+
+197
+00:10:11,530 --> 00:10:15,570
+so this is what we want our cast and now
+we can talk about how unit test actually
+
+198
+00:10:15,570 --> 00:10:20,310
+gives us these properties
+
+199
+00:10:20,310 --> 00:10:25,290
+to unit test is a lot module in the
+Python standard library
+
+200
+00:10:25,290 --> 00:10:28,940
+it is the infrastructure that you use
+for well-structured test then it is the
+
+201
+00:10:28,940 --> 00:10:32,050
+lingua franca for tests it is based on
+the same
+
+202
+00:10:32,050 --> 00:10:36,110
+arm patterns as J unit and an unit NCP
+key unit
+
+203
+00:10:36,110 --> 00:10:39,790
+and a lot of protesting libraries across
+many different languages
+
+204
+00:10:39,790 --> 00:10:43,200
+for that reason unit test has kinda job
+a flavor to it
+
+205
+00:10:43,200 --> 00:10:46,110
+which a lot of people pay finished as
+don't quite like which is why there are
+
+206
+00:10:46,110 --> 00:10:47,870
+alternative ways running tests
+
+207
+00:10:47,870 --> 00:10:50,970
+but we're gonna talk about unit test
+here because it is the it is
+
+208
+00:10:50,970 --> 00:10:54,180
+the way everyone starts out running
+tests on all the test runners in test
+
+209
+00:10:54,180 --> 00:10:58,660
+tool support these test
+
+210
+00:10:58,660 --> 00:11:02,460
+so this is an actual unit test to write
+a unit test
+
+211
+00:11:02,460 --> 00:11:06,880
+and by unit test by the way I just mean
+an automated test
+
+212
+00:11:06,880 --> 00:11:10,470
+you import the unit test module you
+import your caps your code
+
+213
+00:11:10,470 --> 00:11:14,460
+under test and then you're going to find
+a class and your classes derived from
+
+214
+00:11:14,460 --> 00:11:16,070
+unit test that test case
+
+215
+00:11:16,070 --> 00:11:20,720
+so all your tests will be in a class the
+drugs from test case
+
+216
+00:11:20,720 --> 00:11:24,420
+and the test themselves we methods will
+be methods in this class that start with
+
+217
+00:11:24,420 --> 00:11:28,140
+the word test so here we have a method
+called test by one stock
+
+218
+00:11:28,140 --> 00:11:31,820
+and its gonna do the test we did before
+we put make an empty portfolio
+
+219
+00:11:31,820 --> 00:11:35,570
+we buy 100 shares of IBM and then we can
+make an assertion that the cost is what
+
+220
+00:11:35,570 --> 00:11:37,600
+it should be
+
+221
+00:11:37,600 --> 00:11:40,640
+the way you run tests with unit test is
+that you
+
+222
+00:11:40,640 --> 00:11:44,150
+use Python basham unit test if you
+haven't seen the dash implied it means
+
+223
+00:11:44,150 --> 00:11:47,890
+instead of running Python code that you
+find in a file I'm gonna name
+
+224
+00:11:47,890 --> 00:11:51,450
+you gonna run python code in a module
+I'm gonna name and so by running
+
+225
+00:11:51,450 --> 00:11:55,390
+you the unit test module as your main
+program it knows how to actually take
+
+226
+00:11:55,390 --> 00:11:57,330
+the next argument test port 1
+
+227
+00:11:57,330 --> 00:12:01,760
+important that and find the tests in it
+so we will automatically find the test
+
+228
+00:12:01,760 --> 00:12:04,510
+class and the test methods and run them
+
+229
+00:12:04,510 --> 00:12:08,550
+this week single dot means that iran one
+test and then it tells you that around
+
+230
+00:12:08,550 --> 00:12:09,380
+one test
+
+231
+00:12:09,380 --> 00:12:15,900
+and everything went okay so that ran
+your test and the test pabst
+
+232
+00:12:15,900 --> 00:12:19,180
+behind the scenes what actually happens
+is unit test
+
+233
+00:12:19,180 --> 00:12:22,540
+instantiate your pup portfolio test
+class to get a test case
+
+234
+00:12:22,540 --> 00:12:25,580
+object and then it runs the test method
+
+235
+00:12:25,580 --> 00:12:29,190
+inside a try except block if you got an
+assertion error
+
+236
+00:12:29,190 --> 00:12:32,570
+if your assertion failed: then a record
+the failed test
+
+237
+00:12:32,570 --> 00:12:36,530
+but otherwise a record to success test
+so conceptually it's very simple
+
+238
+00:12:36,530 --> 00:12:39,680
+and this is perhaps how you might
+approach the problem if you're building
+
+239
+00:12:39,680 --> 00:12:42,660
+on the earlier examples and trying to
+solve this problem yourself
+
+240
+00:12:42,660 --> 00:12:45,930
+wrap each a certain a try except and
+catch the assertion error in print
+
+241
+00:12:45,930 --> 00:12:47,300
+something out for felt
+
+242
+00:12:47,300 --> 00:12:51,310
+but unit test will do all this for you
+
+243
+00:12:51,310 --> 00:12:55,290
+art let's add some more tests so here of
+course there's more conditions that we
+
+244
+00:12:55,290 --> 00:12:56,650
+have to test so
+
+245
+00:12:56,650 --> 00:12:59,800
+will also test the empty case the
+portfolio should be zero
+
+246
+00:12:59,800 --> 00:13:03,290
+here's the buy one stock that we had
+before and will also test buying to
+
+247
+00:13:03,290 --> 00:13:05,670
+stocks
+
+248
+00:13:05,670 --> 00:13:09,480
+I'm so we buy two stocks in assert the
+cost is that
+
+249
+00:13:09,480 --> 00:13:13,110
+now you see we have a dot dot dot dot
+dot dot dot is not me leaving things out
+
+250
+00:13:13,110 --> 00:13:15,430
+of this code example that is literally
+three
+
+251
+00:13:15,430 --> 00:13:20,630
+dots that unit test prints once for each
+test to get a dot for every past test
+
+252
+00:13:20,630 --> 00:13:24,490
+I'm some people who are really into test
+talk about being dot addicted
+
+253
+00:13:24,490 --> 00:13:29,510
+the just wanna see lots not much about
+because every dot means a test the past
+
+254
+00:13:29,510 --> 00:13:35,230
+and it tells you that ran 3.8 oz it went
+okay
+
+255
+00:13:35,230 --> 00:13:38,950
+under the covers what happens again is
+it makes a test case object
+
+256
+00:13:38,950 --> 00:13:43,170
+and it runs a test method and then it
+makes a whole new test case object to
+
+257
+00:13:43,170 --> 00:13:46,120
+run the second method
+
+258
+00:13:46,120 --> 00:13:49,220
+and then it makes a third test case
+object
+
+259
+00:13:49,220 --> 00:13:52,760
+to run the third method this is a very
+different way of using classes usually
+
+260
+00:13:52,760 --> 00:13:56,130
+with classes you make one object to
+represent a thing then you call many
+
+261
+00:13:56,130 --> 00:13:57,090
+methods on it
+
+262
+00:13:57,090 --> 00:14:01,440
+here gonna make a class that has many
+methods each method gets called once
+
+263
+00:14:01,440 --> 00:14:05,220
+on a separate object from each other
+every other method
+
+264
+00:14:05,220 --> 00:14:08,370
+but you can see this gives us test
+isolation so not only do we have a try
+
+265
+00:14:08,370 --> 00:14:10,420
+except blocker on every test method
+
+266
+00:14:10,420 --> 00:14:14,020
+so the run independently but because
+each one of them is running a brand new
+
+267
+00:14:14,020 --> 00:14:14,680
+test case
+
+268
+00:14:14,680 --> 00:14:18,190
+object it's very difficult to do
+anything in the first test with going to
+
+269
+00:14:18,190 --> 00:14:20,470
+affect the outcome of the second Test
+
+270
+00:14:20,470 --> 00:14:24,310
+test isolation is all about making sure
+that every test
+
+271
+00:14:24,310 --> 00:14:28,080
+is independent of every other test if
+you do something in test one
+
+272
+00:14:28,080 --> 00:14:32,800
+and it passes and you then but its side
+effect is visible in test two
+
+273
+00:14:32,800 --> 00:14:36,390
+how do you know the test two is really
+testing when it suppose to test
+
+274
+00:14:36,390 --> 00:14:39,640
+so the idea is to keep the test
+independent of each other and to make
+
+275
+00:14:39,640 --> 00:14:42,490
+sure that failure doesn't stop the next
+tests from happening
+
+276
+00:14:42,490 --> 00:14:45,670
+so we keep them all completely isolated
+in theory you should be able to have a
+
+277
+00:14:45,670 --> 00:14:48,010
+10,000 test test suite
+
+278
+00:14:48,010 --> 00:14:51,840
+and be able to run any single pass out a
+bit all by itself
+
+279
+00:14:51,840 --> 00:14:55,570
+and have that test passed just as a
+four-run along with all its nine hundred
+
+280
+00:14:55,570 --> 00:14:57,270
+ninety nine thousand
+
+281
+00:14:57,270 --> 00:15:00,450
+up however many it is brothers and
+sisters
+
+282
+00:15:00,450 --> 00:15:03,760
+it's hard to do arithmetic on stage p
+
+283
+00:15:03,760 --> 00:15:06,880
+now what a spill you look like so
+suppose we had a
+
+284
+00:15:06,880 --> 00:15:10,380
+either broken or test code or broken the
+10th product code itself
+
+285
+00:15:10,380 --> 00:15:14,160
+when you run the cook the test still
+getting seven dot will get an F
+
+286
+00:15:14,160 --> 00:15:18,110
+the F means failure okay so here what
+we've done is we had a search in that
+
+287
+00:15:18,110 --> 00:15:19,640
+was wrong we had the wrong
+
+288
+00:15:19,640 --> 00:15:23,440
+price in there or something and it
+raises an assertion error so
+
+289
+00:15:23,440 --> 00:15:26,860
+what happens is all the tests run you
+get an F for every failed test in a
+
+290
+00:15:26,860 --> 00:15:28,690
+doctor every passing test
+
+291
+00:15:28,690 --> 00:15:32,340
+and then at the end every failed test
+Prince a stack trace to get a full stack
+
+292
+00:15:32,340 --> 00:15:33,020
+trace
+
+293
+00:15:33,020 --> 00:15:36,290
+it's not printed when it fails because
+that would interrupt the whole field of
+
+294
+00:15:36,290 --> 00:15:37,290
+dots thing
+
+295
+00:15:37,290 --> 00:15:41,390
+to get all the dots naps and then you
+get all of the failure stack trace backs
+
+296
+00:15:41,390 --> 00:15:44,940
+and those trace back to very useful
+because thats part the debugging clues
+
+297
+00:15:44,940 --> 00:15:50,950
+the hell to go and find out what product
+code has failed
+
+298
+00:15:50,950 --> 00:15:54,720
+so this is better because the failed
+tests didn't stop the other test
+
+299
+00:15:54,720 --> 00:15:57,910
+but it's bad because we don't actually
+know exactly what field you're right we
+
+300
+00:15:57,910 --> 00:15:58,680
+can see that the
+
+301
+00:15:58,680 --> 00:16:04,180
+the cost was not seventeen 648 we don't
+know what the cost actually was
+
+302
+00:16:04,180 --> 00:16:07,310
+well you coulda been zero it could have
+been seventeen 649 we don't have that
+
+303
+00:16:07,310 --> 00:16:10,050
+information
+
+304
+00:16:10,050 --> 00:16:13,240
+so instead of using an assert statement
+
+305
+00:16:13,240 --> 00:16:18,410
+about units test a test case objects
+could you methods called a certain equal
+
+306
+00:16:18,410 --> 00:16:19,230
+for instance
+
+307
+00:16:19,230 --> 00:16:22,860
+so here you can see that we've got our
+test by one stock method
+
+308
+00:16:22,860 --> 00:16:26,450
+and instead using assert statement which
+called a method on the test case subject
+
+309
+00:16:26,450 --> 00:16:27,330
+itself
+
+310
+00:16:27,330 --> 00:16:30,580
+and instead of using an equality
+operator we pass the two values and to
+
+311
+00:16:30,580 --> 00:16:31,410
+assert equal
+
+312
+00:16:31,410 --> 00:16:34,950
+so this is kinda stylized compared to
+what you're used to
+
+313
+00:16:34,950 --> 00:16:38,410
+but the advantage is that when the
+assertion fails
+
+314
+00:16:38,410 --> 00:16:42,420
+they can actually print out the value it
+got and the value expected
+
+315
+00:16:42,420 --> 00:16:45,430
+so we can see the assertion failed
+because 17 600
+
+316
+00:16:45,430 --> 00:16:49,290
+is not equal to 17 648 and that's a clue
+17-6
+
+317
+00:16:49,290 --> 00:16:53,090
+17 600 is the thing that went wrong week
+and now we have a piece of information
+
+318
+00:16:53,090 --> 00:16:56,730
+that can help us diagnose and about the
+problem
+
+319
+00:16:56,730 --> 00:17:00,820
+so the unit test module gives you a lot
+of stuff assert helpers assert equal not
+
+320
+00:17:00,820 --> 00:17:04,069
+equal assert that this is true this is
+false that that isn't bad
+
+321
+00:17:04,069 --> 00:17:07,130
+that this is almost equal to that for
+floating-point et cetera et cetera et
+
+322
+00:17:07,130 --> 00:17:07,819
+cetera
+
+323
+00:17:07,819 --> 00:17:11,059
+are reg X matching all sorts of
+interesting assertion helpers
+
+324
+00:17:11,059 --> 00:17:15,160
+for you to write your tests in a way
+that the test runner can give you lots
+
+325
+00:17:15,160 --> 00:17:18,419
+information
+
+326
+00:17:18,419 --> 00:17:22,500
+one pro tip that BP large projects often
+get to but people rarely do with the
+
+327
+00:17:22,500 --> 00:17:23,459
+very beginning
+
+328
+00:17:23,459 --> 00:17:26,699
+make your own base class to drive all
+your test cases from
+
+329
+00:17:26,699 --> 00:17:30,330
+so here we have done is they've created
+a class called portfolio test case drive
+
+330
+00:17:30,330 --> 00:17:31,629
+from test case
+
+331
+00:17:31,629 --> 00:17:34,759
+it doesn't have any test methods in
+itself a test method remember starts
+
+332
+00:17:34,759 --> 00:17:36,049
+with test underscore
+
+333
+00:17:36,049 --> 00:17:40,090
+but it has this helper assert cost
+people and here instead of passing into
+
+334
+00:17:40,090 --> 00:17:41,450
+numbers to assert equal
+
+335
+00:17:41,450 --> 00:17:45,460
+I can pass in a portfolio and a cost and
+then this method will assert that pitot
+
+336
+00:17:45,460 --> 00:17:48,070
+cost is equal to the number was passed
+in
+
+337
+00:17:48,070 --> 00:17:51,690
+and so now I've raised the level of
+discourse up into my own domain instead
+
+338
+00:17:51,690 --> 00:17:55,320
+reading tests this yr two numbers are
+equal I can write tests that assert that
+
+339
+00:17:55,320 --> 00:17:57,730
+the cost of a portfolio was able to
+something
+
+340
+00:17:57,730 --> 00:18:01,950
+so here can I can say a professor cost
+equal love p is equal to 0
+
+341
+00:18:01,950 --> 00:18:04,629
+and I still get the nice assertion
+because I'm using a certain people under
+
+342
+00:18:04,629 --> 00:18:05,539
+the covers
+
+343
+00:18:05,539 --> 00:18:08,750
+and I get the a ser cost legal method
+because I've derived from portfolio test
+
+344
+00:18:08,750 --> 00:18:09,559
+case
+
+345
+00:18:09,559 --> 00:18:13,610
+these base classes tend to grow over
+time and especially if you're focused on
+
+346
+00:18:13,610 --> 00:18:16,639
+that kinda base class then you have an
+opportunity to rate really good
+
+347
+00:18:16,639 --> 00:18:18,570
+domain-specific helpers
+
+348
+00:18:18,570 --> 00:18:22,340
+for instance it's very common in web
+testing to say I got a response back
+
+349
+00:18:22,340 --> 00:18:26,029
+I want to assert both that it is a two
+hundred response it successful
+
+350
+00:18:26,029 --> 00:18:29,940
+and that it has this word in it well why
+not just have a method that says
+
+351
+00:18:29,940 --> 00:18:33,870
+assert word in response and do the 200
+check in there as well and you have one
+
+352
+00:18:33,870 --> 00:18:35,710
+line in each of your tests rather than
+to
+
+353
+00:18:35,710 --> 00:18:39,820
+because your helper method has taken on
+some that domain-specific knowledge that
+
+354
+00:18:39,820 --> 00:18:43,539
+arm you can use over and over again
+
+355
+00:18:43,539 --> 00:18:46,769
+this is one of the things I noticed
+about tests as people approached them as
+
+356
+00:18:46,769 --> 00:18:50,759
+wrote boilerplate rather than code to
+engineer as if it were really code you
+
+357
+00:18:50,759 --> 00:18:51,460
+cared about
+
+358
+00:18:51,460 --> 00:18:54,850
+you're allowed to refactor tests and
+move common pieces and two helpers
+
+359
+00:18:54,850 --> 00:18:59,059
+and functions and classes to help you
+build those tests
+
+360
+00:18:59,059 --> 00:19:02,909
+by the way there's a third possible
+outcome besides dot and F
+
+361
+00:19:02,909 --> 00:19:06,450
+and that is an he and he happens if any
+exception other than assertion error
+
+362
+00:19:06,450 --> 00:19:07,929
+comes up
+
+363
+00:19:07,929 --> 00:19:10,659
+so here for example you see that for
+some reason in our test we called this
+
+364
+00:19:10,659 --> 00:19:13,669
+by xx method which doesn't exist
+
+365
+00:19:13,669 --> 00:19:16,779
+it doesn't have that ought to be to
+roast brazen act to be there that test
+
+366
+00:19:16,779 --> 00:19:17,820
+ended with an E
+
+367
+00:19:17,820 --> 00:19:21,590
+and the reason that's distinguished is a
+good test should either successfully
+
+368
+00:19:21,590 --> 00:19:22,289
+pass
+
+369
+00:19:22,289 --> 00:19:25,769
+orchard fail in an assertion if it fails
+and some other way
+
+370
+00:19:25,769 --> 00:19:29,559
+that really means that the test dropped
+the ball write the test should have a
+
+371
+00:19:29,559 --> 00:19:30,889
+thing its hands and say
+
+372
+00:19:30,889 --> 00:19:34,149
+it failed err it succeeded but if
+another exception happened then
+
+373
+00:19:34,149 --> 00:19:36,330
+something is truly wrong with your test
+
+374
+00:19:36,330 --> 00:19:41,460
+and you have to go and fix the test
+
+375
+00:19:41,460 --> 00:19:45,210
+by the way this brings up one imp are
+tricky thing for beginners which is
+
+376
+00:19:45,210 --> 00:19:46,759
+negative testing
+
+377
+00:19:46,759 --> 00:19:49,929
+let's say you want to call a function
+method a method and you want to it
+
+378
+00:19:49,929 --> 00:19:53,169
+test that it raises the exception you
+expected
+
+379
+00:19:53,169 --> 00:19:56,529
+you can just call the function here we
+are trying to call the by method with
+
+380
+00:19:56,529 --> 00:19:57,960
+the wrong number of arguments
+
+381
+00:19:57,960 --> 00:20:01,500
+so it should raise an exception if we
+wanted to test that we can simply
+
+382
+00:20:01,500 --> 00:20:06,500
+run this test method this way because
+that will actually raise the exception
+
+383
+00:20:06,500 --> 00:20:09,649
+will actually get an error result
+because the type there'll be raised by
+
+384
+00:20:09,649 --> 00:20:10,659
+the by
+
+385
+00:20:10,659 --> 00:20:13,860
+Tigers exactly what we want to happen
+but we haven't managed to a search of
+
+386
+00:20:13,860 --> 00:20:18,159
+the exception happens we should be
+managed to make the assumption happen
+
+387
+00:20:18,159 --> 00:20:21,730
+unit test has a way to do this there's a
+self-taught assert raises
+
+388
+00:20:21,730 --> 00:20:25,549
+method that you can use as a context
+manager in the with statement
+
+389
+00:20:25,549 --> 00:20:29,620
+so that you can put the key dot byline
+into the with statement
+
+390
+00:20:29,620 --> 00:20:33,120
+and you can assert that it raises the
+type error and that with statement will
+
+391
+00:20:33,120 --> 00:20:34,879
+catch that exception for you
+
+392
+00:20:34,879 --> 00:20:39,100
+and it will check that the exception was
+actually the type where the you expected
+
+393
+00:20:39,100 --> 00:20:45,999
+and the test will pass
+
+394
+00:20:45,999 --> 00:20:49,029
+let's just look while another method to
+our portfolio o'clock class
+
+395
+00:20:49,029 --> 00:20:52,350
+we're gonna add a cell method so the
+cell method is going to take a name in
+
+396
+00:20:52,350 --> 00:20:53,149
+some shares
+
+397
+00:20:53,149 --> 00:20:57,830
+and going to find that holding and its
+gonna subtract that many shares from
+
+398
+00:20:57,830 --> 00:21:02,769
+the portfolio to test cell we're gonna
+make a portfolio we're gonna put some
+
+399
+00:21:02,769 --> 00:21:06,269
+things in a to it we're gonna try to
+upsell 50 shares a Microsoft just cost
+
+400
+00:21:06,269 --> 00:21:07,539
+should have gone down
+
+401
+00:21:07,539 --> 00:21:11,440
+I if we try to sell Microsoft but we try
+to some more than we had this going to
+
+402
+00:21:11,440 --> 00:21:12,629
+get a value error
+
+403
+00:21:12,629 --> 00:21:15,950
+if we're try to sell IBM and we haven't
+even bought IBM we're gonna get a value
+
+404
+00:21:15,950 --> 00:21:16,929
+error
+
+405
+00:21:16,929 --> 00:21:20,860
+but notice there's a lot of repetition
+here and again just like any code that
+
+406
+00:21:20,860 --> 00:21:24,159
+you write if you see repetitions if you
+can squinted code and you can see a
+
+407
+00:21:24,159 --> 00:21:25,210
+repeating pattern
+
+408
+00:21:25,210 --> 00:21:28,120
+that means that there's stuff that you
+can re factor and the same is true of
+
+409
+00:21:28,120 --> 00:21:29,169
+your tests
+
+410
+00:21:29,169 --> 00:21:32,049
+than anything else just because you feel
+like you're tester boilerplate that
+
+411
+00:21:32,049 --> 00:21:33,610
+doesn't mean they should be boilerplate
+
+412
+00:21:33,610 --> 00:21:36,909
+you should make them as expressive as
+possible so we want to reef after all
+
+413
+00:21:36,909 --> 00:21:38,980
+that code out
+
+414
+00:21:38,980 --> 00:21:42,830
+likely the unit test gives us a way to
+do this a class can define a set up
+
+415
+00:21:42,830 --> 00:21:45,860
+method and the setup method is invoked
+before
+
+416
+00:21:45,860 --> 00:21:49,509
+each test method so they hear the setup
+method is the finding a self-taught
+
+417
+00:21:49,509 --> 00:21:53,110
+keefe which is a portfolio object and
+we're gonna buy the three stocks we
+
+418
+00:21:53,110 --> 00:21:53,799
+wanna buy
+
+419
+00:21:53,799 --> 00:21:57,779
+and then when the it within each have
+our test methods we can simply access
+
+420
+00:21:57,779 --> 00:22:00,570
+the self-taught P that was created by
+set up
+
+421
+00:22:00,570 --> 00:22:04,279
+so here we can't have much shorter tests
+that are much more descriptive what they
+
+422
+00:22:04,279 --> 00:22:06,769
+want to do
+
+423
+00:22:06,769 --> 00:22:10,110
+what's happening under the covers is
+that for each time that we create a test
+
+424
+00:22:10,110 --> 00:22:10,970
+case subject
+
+425
+00:22:10,970 --> 00:22:14,999
+we're gonna call the setup method by the
+way it could fail and give you an he
+
+426
+00:22:14,999 --> 00:22:15,840
+alpert
+
+427
+00:22:15,840 --> 00:22:19,370
+but if it succeeds will call the test
+method will record the failure in the
+
+428
+00:22:19,370 --> 00:22:22,629
+air and success as always and by the way
+there's also a tear down method that
+
+429
+00:22:22,629 --> 00:22:24,919
+we're getting booked at the end of olive
+you tests
+
+430
+00:22:24,919 --> 00:22:28,360
+arm to clean up whatever the setup did
+we didn't need one for the previous
+
+431
+00:22:28,360 --> 00:22:31,710
+example because I was just creating in
+memory objects but if you were creating
+
+432
+00:22:31,710 --> 00:22:35,789
+files on disk you clean them up in the
+tear-down method
+
+433
+00:22:35,789 --> 00:22:39,620
+to set-up and tear-down also give us a
+great way to create isolate it s the
+
+434
+00:22:39,620 --> 00:22:41,830
+established context they have a place to
+look for
+
+435
+00:22:41,830 --> 00:22:44,950
+common pre and post work to live and
+they give you a solution even with
+
+436
+00:22:44,950 --> 00:22:45,639
+failures
+
+437
+00:22:45,639 --> 00:22:48,789
+and as a pointer of two something of a
+look at if you find yourself creating
+
+438
+00:22:48,789 --> 00:22:51,950
+lots and lots of big common data you
+want to look into a thing called
+
+439
+00:22:51,950 --> 00:22:52,779
+fixtures
+
+440
+00:22:52,779 --> 00:22:57,779
+which is a term art in testing but it's
+also the name up a Python library
+
+441
+00:22:57,779 --> 00:23:02,970
+p again tests are real code you're gonna
+have helper functions and classes they
+
+442
+00:23:02,970 --> 00:23:04,580
+can become significant and by the way
+
+443
+00:23:04,580 --> 00:23:07,639
+you're going to write tests for your
+test helpers
+
+444
+00:23:07,639 --> 00:23:10,399
+because you want to know if your test
+toppers are working so that you can
+
+445
+00:23:10,399 --> 00:23:11,980
+trust that your tests are working
+
+446
+00:23:11,980 --> 00:23:15,450
+and you should not be sent to that that
+is a good sign your project is going to
+
+447
+00:23:15,450 --> 00:23:16,610
+level of maturity
+
+448
+00:23:16,610 --> 00:23:19,850
+and a level of testing that you're
+really good software engineer so pat
+
+449
+00:23:19,850 --> 00:23:22,129
+yourself on the back
+
+450
+00:23:22,129 --> 00:23:26,519
+all right let's talk for a bit about
+Mark's
+
+451
+00:23:26,519 --> 00:23:30,029
+as I mentioned before it's really
+important for your tests the test small
+
+452
+00:23:30,029 --> 00:23:33,190
+amounts of code the less code each test
+tests
+
+453
+00:23:33,190 --> 00:23:36,259
+the more narrowly focused you're
+debugging task will be when that test
+
+454
+00:23:36,259 --> 00:23:39,480
+fails
+
+455
+00:23:39,480 --> 00:23:42,649
+but we always build system so the
+components depend on each other right
+
+456
+00:23:42,649 --> 00:23:45,210
+we're all used to building these towers
+obstruction
+
+457
+00:23:45,210 --> 00:23:48,370
+so that the top level you've got all
+these things are depending on right
+
+458
+00:23:48,370 --> 00:23:52,120
+how can you test just one component in
+your code dependencies
+
+459
+00:23:52,120 --> 00:23:54,590
+in your code are good because you're a
+little building on the work of others
+
+460
+00:23:54,590 --> 00:23:58,649
+but dependencies in tests are bad
+because it puts more suspect code in
+
+461
+00:23:58,649 --> 00:23:59,860
+each test
+
+462
+00:23:59,860 --> 00:24:02,929
+in addition some %uh those components
+might be slow and remember we want our
+
+463
+00:24:02,929 --> 00:24:04,590
+test to be fast
+
+464
+00:24:04,590 --> 00:24:07,619
+right the problem with me testing
+missile launching sites is that if you
+
+465
+00:24:07,619 --> 00:24:10,440
+test really launches a missile that
+takes a long time
+
+466
+00:24:10,440 --> 00:24:14,820
+you want your tests to go fast not only
+that but your tests might be
+
+467
+00:24:14,820 --> 00:24:16,139
+unpredictable
+
+468
+00:24:16,139 --> 00:24:20,100
+right if you were flaky component that
+isn't really the focus on your test
+
+469
+00:24:20,100 --> 00:24:23,450
+you want to get it out of the way search
+contest the code that you do wanna test
+
+470
+00:24:23,450 --> 00:24:26,570
+this is the wake systems are often built
+with the code under test is depending on
+
+471
+00:24:26,570 --> 00:24:27,539
+all these modules
+
+472
+00:24:27,539 --> 00:24:31,100
+which wanna do is one replace those
+little combat those big component with
+
+473
+00:24:31,100 --> 00:24:32,249
+little pieces
+
+474
+00:24:32,249 --> 00:24:36,320
+that you can reduce the amount of code
+in each test
+
+475
+00:24:36,320 --> 00:24:38,879
+lets out a little bit more to our
+portfolio stock portfolios are all
+
+476
+00:24:38,879 --> 00:24:42,440
+interesting because stock prices go up
+and down so let's add some code
+
+477
+00:24:42,440 --> 00:24:45,590
+into our portfolio that's gonna actually
+go out and talk to finance the young
+
+478
+00:24:45,590 --> 00:24:46,340
+adult com
+
+479
+00:24:46,340 --> 00:24:49,509
+to get the actual price right now %uh
+are stocks
+
+480
+00:24:49,509 --> 00:24:52,619
+but we can find out what the current
+value of our stocks is
+
+481
+00:24:52,619 --> 00:24:56,559
+so this value method is very cool we can
+actually buy some stock and can actually
+
+482
+00:24:56,559 --> 00:25:00,879
+get the current prices for IBM HP stock
+and by our current value is
+
+483
+00:25:00,879 --> 00:25:04,129
+nothing from in about how we're gonna
+test this code we cannot write an
+
+484
+00:25:04,129 --> 00:25:05,100
+assertion that says
+
+485
+00:25:05,100 --> 00:25:08,179
+I assert that IBM is trading at one
+hundred dollars right now because we
+
+486
+00:25:08,179 --> 00:25:11,210
+don't know what I demonstrating at
+that's the whole point to this code
+
+487
+00:25:11,210 --> 00:25:14,240
+is to get information that we don't have
+how do we write a test
+
+488
+00:25:14,240 --> 00:25:17,559
+the test that this is working properly
+right its live data
+
+489
+00:25:17,559 --> 00:25:21,249
+it's unpredictable that its entire point
+it's slow
+
+490
+00:25:21,249 --> 00:25:24,179
+right it's actually pretty fast to go to
+finance that you have a common get a
+
+491
+00:25:24,179 --> 00:25:24,909
+quote but
+
+492
+00:25:24,909 --> 00:25:28,240
+it's probably slower than you wanted to
+be maybe it's an available maybe ya who
+
+493
+00:25:28,240 --> 00:25:31,059
+goes down right to try to fix the
+Hartley bug you can when you test that
+
+494
+00:25:31,059 --> 00:25:31,539
+day
+
+495
+00:25:31,539 --> 00:25:35,269
+that's no good so the question should be
+for your code
+
+496
+00:25:35,269 --> 00:25:38,749
+assuming ya who is working does my code
+work
+
+497
+00:25:38,749 --> 00:25:42,570
+and the challenge now is how do we get
+ya who had a picture
+
+498
+00:25:42,570 --> 00:25:45,769
+right how do we remove that dependency
+on that server so that we can just be
+
+499
+00:25:45,769 --> 00:25:47,950
+talking about the peace accord we
+actually care about
+
+500
+00:25:47,950 --> 00:25:52,860
+we don't wanna test all up yahoo dot com
+we want to test our code
+
+501
+00:25:52,860 --> 00:25:56,480
+one way to do is have a fake
+implementation of current price
+
+502
+00:25:56,480 --> 00:26:00,340
+so here's a test that we derive from
+test cases always and have a method in
+
+503
+00:26:00,340 --> 00:26:01,139
+here called fake
+
+504
+00:26:01,139 --> 00:26:04,529
+current prices not remember from our
+product code: current prices simply
+
+505
+00:26:04,529 --> 00:26:05,769
+returns a dictionary
+
+506
+00:26:05,769 --> 00:26:09,029
+with the keys are the names of stocks in
+the values are the prices
+
+507
+00:26:09,029 --> 00:26:11,379
+and this is going to be a fake
+implementation about the just returned
+
+508
+00:26:11,379 --> 00:26:12,960
+some canned data
+
+509
+00:26:12,960 --> 00:26:16,129
+and my setup I'm gonna make a portfolio
+I'm gonna buy some stocks
+
+510
+00:26:16,129 --> 00:26:19,860
+and gonna actually monkey patch the
+portfolio to change its current prices
+
+511
+00:26:19,860 --> 00:26:22,429
+method into my function
+
+512
+00:26:22,429 --> 00:26:25,649
+and this works this is a little odd and
+if you haven't dug really deep into
+
+513
+00:26:25,649 --> 00:26:28,590
+Python internals you may be surprised to
+see that you can just replace methods
+
+514
+00:26:28,590 --> 00:26:29,710
+like this on objects
+
+515
+00:26:29,710 --> 00:26:33,559
+but it works and now when we run our
+test and we look at self that Peter
+
+516
+00:26:33,559 --> 00:26:34,289
+value
+
+517
+00:26:34,289 --> 00:26:37,619
+they will actually call self that Peter
+current prices which is our method Vic
+
+518
+00:26:37,619 --> 00:26:39,909
+current prices which will return that
+fixed dictionary
+
+519
+00:26:39,909 --> 00:26:44,090
+and we haven't made any network calls
+and we can assert that with the values
+
+520
+00:26:44,090 --> 00:26:46,159
+we know it's going to be because we know
+what we
+
+521
+00:26:46,159 --> 00:26:51,210
+what lies we told about the program
+price if IBM and HP stock
+
+522
+00:26:51,210 --> 00:26:54,580
+so good the test results were
+predictable
+
+523
+00:26:54,580 --> 00:26:57,879
+the bad thing is that there's some code
+is untested so he refused the coverage
+
+524
+00:26:57,879 --> 00:26:58,470
+to all
+
+525
+00:26:58,470 --> 00:27:02,279
+I'm which is a way of measuring what
+lines of code get executed when you run
+
+526
+00:27:02,279 --> 00:27:04,529
+your tests we have testing your tests
+
+527
+00:27:04,529 --> 00:27:07,259
+the theory of your testers at their
+testing all the code you have how do you
+
+528
+00:27:07,259 --> 00:27:07,799
+know
+
+529
+00:27:07,799 --> 00:27:10,450
+you run coverage it tells you which
+lines are could you haven't actually run
+
+530
+00:27:10,450 --> 00:27:11,499
+on your test
+
+531
+00:27:11,499 --> 00:27:15,899
+and here we can see the lines 53 53 356
+have not been executed
+
+532
+00:27:15,899 --> 00:27:20,509
+and 53 356 are exactly the lines of code
+we tried to snap out of the system which
+
+533
+00:27:20,509 --> 00:27:22,909
+were the lines of code the talk to yahoo
+dot com
+
+534
+00:27:22,909 --> 00:27:26,059
+but this is code we wrote we need to
+test this code somehow
+
+535
+00:27:26,059 --> 00:27:30,619
+right so we've got a good system here
+but it doesn't estar code
+
+536
+00:27:30,619 --> 00:27:34,379
+so we can try speaking your lip that you
+are eloping instead so here we do is
+
+537
+00:27:34,379 --> 00:27:38,529
+make a new object that's going to be a
+stand in for your lip for us
+
+538
+00:27:38,529 --> 00:27:42,100
+and it's got a method on a cultural open
+
+539
+00:27:42,100 --> 00:27:45,539
+and in our set up we're going to save a
+way we're gonna we're gonna jump right
+
+540
+00:27:45,539 --> 00:27:47,210
+into the portfolio 3
+
+541
+00:27:47,210 --> 00:27:51,330
+are module which is our product code:
+and it has a reference to your lib
+
+542
+00:27:51,330 --> 00:27:54,889
+were gonna say blown away in our setup
+we're gonna make instanceof are fake
+
+543
+00:27:54,889 --> 00:27:58,289
+your lip and monkey patch into our
+product module
+
+544
+00:27:58,289 --> 00:28:02,720
+and now in our product module your liver
+first or class in there for your liberal
+
+545
+00:28:02,720 --> 00:28:04,210
+open refers to a method
+
+546
+00:28:04,210 --> 00:28:07,629
+and when it gets called its gonna return
+the data that we want
+
+547
+00:28:07,629 --> 00:28:12,009
+appear this your lives returning a file
+like object which returns exactly the
+
+548
+00:28:12,009 --> 00:28:14,070
+CSV data that ya who would return
+
+549
+00:28:14,070 --> 00:28:17,499
+I know the details here don't worry
+about the details about the CSB and all
+
+550
+00:28:17,499 --> 00:28:19,720
+that stuff is no we keep up with me
+right now
+
+551
+00:28:19,720 --> 00:28:24,159
+just keep in mind the idea here is to
+make an object that works exactly like
+
+552
+00:28:24,159 --> 00:28:26,720
+the component you don't want in your
+system anymore
+
+553
+00:28:26,720 --> 00:28:30,129
+and put it in place so that the product
+code will actually call your code infer
+
+554
+00:28:30,129 --> 00:28:30,830
+that code
+
+555
+00:28:30,830 --> 00:28:34,989
+and by the time we get down here and we
+call self that Peter value
+
+556
+00:28:34,989 --> 00:28:38,929
+value calls our current prices module
+but function our current prices function
+
+557
+00:28:38,929 --> 00:28:41,149
+calls you are Linda you are all open
+
+558
+00:28:41,149 --> 00:28:44,320
+which it thinks is a standard library
+much let's talk so the network but in
+
+559
+00:28:44,320 --> 00:28:44,629
+fact
+
+560
+00:28:44,629 --> 00:28:48,519
+our fake object we put in place it gets
+back that file object that parses the
+
+561
+00:28:48,519 --> 00:28:49,179
+CSB
+
+562
+00:28:49,179 --> 00:28:52,549
+makes the dictionary computes the value
+and then we get what we want
+
+563
+00:28:52,549 --> 00:28:55,799
+and by the way at the end the tear-down
+method is going to restore the real you
+
+564
+00:28:55,799 --> 00:29:01,159
+are limits going on monkey patch things
+
+565
+00:29:01,159 --> 00:29:04,779
+now over code is executed but we've got
+a 100 percent test coverage oliver code
+
+566
+00:29:04,779 --> 00:29:07,730
+is executed the standard Libya sup
+stubbed out
+
+567
+00:29:07,730 --> 00:29:11,749
+and we made no web access during our
+test so this is really good
+
+568
+00:29:11,749 --> 00:29:15,009
+I'm the thing is not so great is we had
+to do a lot of syrup handcrafting
+
+569
+00:29:15,009 --> 00:29:17,850
+engineering there there's an even better
+way to do this which is a thing called
+
+570
+00:29:17,850 --> 00:29:19,090
+mock objects
+
+571
+00:29:19,090 --> 00:29:22,529
+mock objects are these amazing things
+that are I call them automatic
+
+572
+00:29:22,529 --> 00:29:25,929
+chameleons they will act like anything
+you want them to act like yours an
+
+573
+00:29:25,929 --> 00:29:26,759
+example where r
+
+574
+00:29:26,759 --> 00:29:30,279
+from Makhaya import the mock class and
+make a thing called funk
+
+575
+00:29:30,279 --> 00:29:34,169
+which is a mock and I do all I say about
+it is the return value should be the
+
+576
+00:29:34,169 --> 00:29:36,369
+string hello
+
+577
+00:29:36,369 --> 00:29:41,110
+and then I call it as if it were a
+function and it returns hello
+
+578
+00:29:41,110 --> 00:29:45,139
+raided it just said overturn that sure
+you time your tonight that's fine
+
+579
+00:29:45,139 --> 00:29:48,679
+and by the way the 17 the something it's
+a stored them away and later I can look
+
+580
+00:29:48,679 --> 00:29:50,559
+at that and say funk what you called
+with
+
+581
+00:29:50,559 --> 00:29:54,159
+that says oh I got called with 17 and
+something so this is great this is
+
+582
+00:29:54,159 --> 00:29:58,419
+perfect for putting in place as a mock
+as a fake object
+
+583
+00:29:58,419 --> 00:30:01,419
+and it's really easy to do because the
+mock library also has a patch
+
+584
+00:30:01,419 --> 00:30:05,739
+decorate our patch context manager so
+here we can do is we can say
+
+585
+00:30:05,739 --> 00:30:09,690
+to the mock library I want you to Ma
+Chau your lip that you're all open
+
+586
+00:30:09,690 --> 00:30:13,739
+and give me the mock object that you
+made and then down here what we say is
+
+587
+00:30:13,739 --> 00:30:16,509
+I'm gonna make you are eloping have a
+return value up this
+
+588
+00:30:16,509 --> 00:30:20,940
+fake Yahoo data and now when I costs of
+that pitot value
+
+589
+00:30:20,940 --> 00:30:24,110
+it goes through all over cody gets the
+year old open which hits the mark which
+
+590
+00:30:24,110 --> 00:30:26,100
+gets the return value that we gave it
+
+591
+00:30:26,100 --> 00:30:29,129
+and it gets the fact that data and comes
+back up and kiss me that all you want it
+
+592
+00:30:29,129 --> 00:30:30,639
+now by the way down here
+
+593
+00:30:30,639 --> 00:30:34,899
+I consider you are all open I a search
+that you were called with these values
+
+594
+00:30:34,899 --> 00:30:38,509
+because by the way in our previous
+example we didn't actually look at what
+
+595
+00:30:38,509 --> 00:30:41,840
+our pick up to got called with maybe
+your old got broken in some retract a
+
+596
+00:30:41,840 --> 00:30:43,159
+ring and the actual code and
+
+597
+00:30:43,159 --> 00:30:46,330
+would have failed were a mock would have
+succeeded here we can actually assert
+
+598
+00:30:46,330 --> 00:30:49,649
+that we're getting called with the world
+we thought we were being called with
+
+599
+00:30:49,649 --> 00:30:54,039
+so now we've got mocking with no
+explicit set up with enough to write
+
+600
+00:30:54,039 --> 00:30:57,239
+and implementation is something we
+simply had to make one I did this magic
+
+601
+00:30:57,239 --> 00:30:58,230
+mock module
+
+602
+00:30:58,230 --> 00:31:02,340
+and tell it what we wanted to do
+
+603
+00:31:02,340 --> 00:31:05,899
+the word the more comp the the
+overarching term for all these things as
+
+604
+00:31:05,899 --> 00:31:06,389
+test
+
+605
+00:31:06,389 --> 00:31:09,889
+doubles which college stunt doubles and
+a movie if you take that star out and
+
+606
+00:31:09,889 --> 00:31:10,519
+you put in
+
+607
+00:31:10,519 --> 00:31:14,230
+some guy the young care about as much
+and let him do that hard work
+
+608
+00:31:14,230 --> 00:31:17,820
+so this is very powerful and isolates
+our code right we've we've
+
+609
+00:31:17,820 --> 00:31:21,340
+removed dependencies and focus the
+morning on on smaller code it focuses
+
+610
+00:31:21,340 --> 00:31:22,539
+our tests
+
+611
+00:31:22,539 --> 00:31:25,879
+and our most speed bumps and randomness
+lotta times will take this do this
+
+612
+00:31:25,879 --> 00:31:28,549
+approach not because it's not your
+coding you want to get it out but just
+
+613
+00:31:28,549 --> 00:31:31,230
+cuz that code is slow
+
+614
+00:31:31,230 --> 00:31:34,980
+the problem is it makes your tests
+fragile if you think about what we did
+
+615
+00:31:34,980 --> 00:31:38,399
+the only reason are mocking worked is
+because we knew that the product code
+
+616
+00:31:38,399 --> 00:31:41,139
+was calling you or a loved that you're
+all open
+
+617
+00:31:41,139 --> 00:31:44,710
+if someone reef actors that product code
+to use the requests library instead
+
+618
+00:31:44,710 --> 00:31:47,820
+these tests will of L and
+
+619
+00:31:47,820 --> 00:31:50,879
+by the way the product code will now be
+running out to yahoo dot com to take a
+
+620
+00:31:50,879 --> 00:31:52,470
+long time before it fills
+
+621
+00:31:52,470 --> 00:31:56,259
+so we'll have lost all the benefits so
+the only reason we could mark the stuff
+
+622
+00:31:56,259 --> 00:31:58,480
+is because we knew enough about the
+implementation
+
+623
+00:31:58,480 --> 00:32:02,109
+that we know exactly how it worked
+inside and that's a dangerous situation
+
+624
+00:32:02,109 --> 00:32:04,600
+to be in
+
+625
+00:32:04,600 --> 00:32:07,450
+also by the way there's another way to
+do this call dependency injection which
+
+626
+00:32:07,450 --> 00:32:09,070
+you should look into
+
+627
+00:32:09,070 --> 00:32:13,090
+so there too many things we can talk
+about them all testing is a big topic
+
+628
+00:32:13,090 --> 00:32:14,799
+but I want to give you pointers
+
+629
+00:32:14,799 --> 00:32:18,190
+and plant some words in your head about
+some other things add cleanup is a
+
+630
+00:32:18,190 --> 00:32:21,600
+method on unit test a test case subjects
+which is a nicer way to do things then
+
+631
+00:32:21,600 --> 00:32:22,619
+tear down
+
+632
+00:32:22,619 --> 00:32:26,139
+doc test is another thing you hear about
+the standard library only use it for
+
+633
+00:32:26,139 --> 00:32:28,489
+testing code that's already in your docs
+
+634
+00:32:28,489 --> 00:32:31,859
+if I hear about anyone have you using
+doctors for anything else I'm going to
+
+635
+00:32:31,859 --> 00:32:34,470
+be mad because we spent a lot of time
+here together
+
+636
+00:32:34,470 --> 00:32:38,039
+and I expect you to listen to me
+
+637
+00:32:38,039 --> 00:32:41,379
+nose and product tester better test
+runners the unit test they have a lot of
+
+638
+00:32:41,379 --> 00:32:43,179
+cool features like plugins
+
+639
+00:32:43,179 --> 00:32:47,149
+DDT is a largely let you do data-driven
+test so if you have one test method but
+
+640
+00:32:47,149 --> 00:32:50,359
+you wanna have 10 test cases I do it
+because of these different data
+
+641
+00:32:50,359 --> 00:32:53,899
+it will do that for you coverage is a
+really awesome
+
+642
+00:32:53,899 --> 00:32:58,259
+thing and you should use it selenium is
+the tool you use for in browser testing
+
+643
+00:32:58,259 --> 00:33:00,999
+Jenkins and Travis are continuous
+integration servers which a way of
+
+644
+00:33:00,999 --> 00:33:01,619
+having
+
+645
+00:33:01,619 --> 00:33:04,759
+a place that you can put your code in
+ages runs your test every time you make
+
+646
+00:33:04,759 --> 00:33:06,809
+a change
+
+647
+00:33:06,809 --> 00:33:11,109
+other topics TD is running tests before
+code which is very interesting
+
+648
+00:33:11,109 --> 00:33:14,659
+BD is aware reading tests in a way that
+to do business people can perhaps writer
+
+649
+00:33:14,659 --> 00:33:16,879
+test to focus on external behavior
+
+650
+00:33:16,879 --> 00:33:20,109
+integration tests get at larger chunks
+of code which is home
+
+651
+00:33:20,109 --> 00:33:23,759
+way of testing more realistic scenarios
+in your product low testing positive
+
+652
+00:33:23,759 --> 00:33:24,809
+about their so much
+
+653
+00:33:24,809 --> 00:33:27,980
+whether you have enough our capacity
+pure traffic and lots of other topics
+
+654
+00:33:27,980 --> 00:33:30,090
+I'm sure
+
+655
+00:33:30,090 --> 00:33:34,710
+so summing up how do we do we learn the
+testing is complicated
+
+656
+00:33:34,710 --> 00:33:37,879
+it's important but it's worthy and it's
+rewarding
+
+657
+00:33:37,879 --> 00:33:40,419
+remember the two developers we had at
+the beginning the talks we want to be
+
+658
+00:33:40,419 --> 00:33:41,710
+happy and confident
+
+659
+00:33:41,710 --> 00:33:46,429
+here they are if you think testing is
+hard
+
+660
+00:33:46,429 --> 00:33:49,929
+these drawings the two original drawings
+were drawn by my 16-year-old son
+
+661
+00:33:49,929 --> 00:33:56,789
+if using testing is hard try getting a
+16-year-old to draw you a third picture
+
+662
+00:33:56,789 --> 00:34:03,789
+any questions
+
+663
+00:34:08,240 --> 00:34:13,680
+how much time do you have questions but
+five min thank you for it out
+
+664
+00:34:13,680 --> 00:34:18,240
+I'm what happens if financier you I
+return strategies and instead have
+
+665
+00:34:18,240 --> 00:34:21,470
+see is be a
+
+666
+00:34:21,470 --> 00:34:24,750
+if ya returns a the G's up Days Inn is
+to see a 30
+
+667
+00:34:24,750 --> 00:34:27,870
+will then that APIs change your code is
+going to have to change
+
+668
+00:34:27,870 --> 00:34:31,230
+okay so Road SR gonna pass but the
+application to fill
+
+669
+00:34:31,230 --> 00:34:34,430
+right exactly so that's when the
+failures are the mock rate is that we're
+
+670
+00:34:34,430 --> 00:34:36,020
+assuming that we understand big
+
+671
+00:34:36,020 --> 00:34:39,220
+the interface to that mocked component
+well enough that we can replace that
+
+672
+00:34:39,220 --> 00:34:43,370
+at that mocked component changes in this
+case our product would also change
+
+673
+00:34:43,370 --> 00:34:46,970
+so we're gonna have to fix it either way
+but yeah there could be scenarios where
+
+674
+00:34:46,970 --> 00:34:50,010
+it changes in a way that your product
+could would've been okay with but your
+
+675
+00:34:50,010 --> 00:34:50,790
+testers now
+
+676
+00:34:50,790 --> 00:34:53,810
+mimicking the old behavior and you've
+lost track that that's when the ways
+
+677
+00:34:53,810 --> 00:34:55,220
+that marks a really dangerous
+
+678
+00:34:55,220 --> 00:34:59,030
+yeah thanks for the talk
+
+679
+00:34:59,030 --> 00:35:03,440
+I one of the things that I've run into
+is a barrier to getting is just
+
+680
+00:35:03,440 --> 00:35:08,940
+are into testing years getting all the
+pieces together and are
+
+681
+00:35:08,940 --> 00:35:13,520
+in the right place so hold a blatant
+self-promotion at me to get a hub repo
+
+682
+00:35:13,520 --> 00:35:14,800
+that house are
+
+683
+00:35:14,800 --> 00:35:19,250
+Python Unitel skeleton with dashes
+between them you can search for the
+
+684
+00:35:19,250 --> 00:35:22,200
+house a bunch of camp will take code you
+can take to
+
+685
+00:35:22,200 --> 00:35:25,360
+to get up to speed much more quickly
+great so %ah
+
+686
+00:35:25,360 --> 00:35:28,660
+I find out super helpful to make the
+
+687
+00:35:28,660 --> 00:35:32,710
+burden getting into testing as small as
+possible fabulous
+
+688
+00:35:32,710 --> 00:35:37,540
+thanks Python unit test skeleton great
+II
+
+689
+00:35:37,540 --> 00:35:41,280
+arm so when I'm aiming for 100 percent
+coverage I often have trouble with the
+
+690
+00:35:41,280 --> 00:35:42,180
+main method
+
+691
+00:35:42,180 --> 00:35:45,460
+give any advice on testing on make your
+main world
+
+692
+00:35:45,460 --> 00:35:48,860
+first ball in in the if Mitt Dundurn Amy
+caused under main
+
+693
+00:35:48,860 --> 00:35:51,890
+yeah you should have one line of code in
+there which should be sister exit of
+
+694
+00:35:51,890 --> 00:35:52,400
+Maine
+
+695
+00:35:52,400 --> 00:35:56,150
+obsessed RB and then your main function
+
+696
+00:35:56,150 --> 00:35:59,230
+is now a pure function that takes a list
+of arguments
+
+697
+00:35:59,230 --> 00:36:02,370
+and returns a status code and you can
+test that right now just
+
+698
+00:36:02,370 --> 00:36:06,190
+attics arguments and fixer I'm return
+value and in all your connection to the
+
+699
+00:36:06,190 --> 00:36:08,240
+external world happens net one-line
+
+700
+00:36:08,240 --> 00:36:12,950
+inured under named under main and it's
+hard to mess up that line so you can
+
+701
+00:36:12,950 --> 00:36:14,050
+just leave that alone
+
+702
+00:36:14,050 --> 00:36:17,150
+arm that's my advice hope
+
+703
+00:36:17,150 --> 00:36:22,440
+thanks to questions on my part said the
+dry doesn't apply to testing but
+
+704
+00:36:22,440 --> 00:36:25,920
+when I see my coworker just cut and
+paste
+
+705
+00:36:25,920 --> 00:36:30,100
+when tested the next arm to go back and
+something changes the test
+
+706
+00:36:30,100 --> 00:36:33,770
+it feels like it should be dry that's
+silly yup
+
+707
+00:36:33,770 --> 00:36:37,380
+what I have no idea what people would
+say that russian applied testing
+
+708
+00:36:37,380 --> 00:36:42,520
+um I testing is one of those mysterious
+worlds where you will find experts and
+
+709
+00:36:42,520 --> 00:36:42,930
+they will
+
+710
+00:36:42,930 --> 00:36:46,970
+they will say things to you I'm not me I
+can be trusted but they'll be other ones
+
+711
+00:36:46,970 --> 00:36:51,170
+who will say these mysterious things and
+you will believe them because testing is
+
+712
+00:36:51,170 --> 00:36:52,610
+mysterious but maybe the wrong
+
+713
+00:36:52,610 --> 00:36:55,940
+well I mean in one case we make sense to
+me is that
+
+714
+00:36:55,940 --> 00:36:59,800
+once you start making your test drive
+your test become more complex than that
+
+715
+00:36:59,800 --> 00:37:01,080
+you have to test a test
+
+716
+00:37:01,080 --> 00:37:04,310
+yeah you do rest but testing all the way
+down
+
+717
+00:37:04,310 --> 00:37:07,930
+yeah so I know why some time but why
+they say they should be dry because some
+
+718
+00:37:07,930 --> 00:37:09,330
+people like tests as
+
+719
+00:37:09,330 --> 00:37:13,190
+serb almost documentation on how things
+should work and the like a test case to
+
+720
+00:37:13,190 --> 00:37:14,550
+be completely self-contained
+
+721
+00:37:14,550 --> 00:37:17,930
+but if that means that you have the same
+10 lines setting up the same
+
+722
+00:37:17,930 --> 00:37:21,830
+fixture that you can use in sixty tests
+that just seems silly to me
+
+723
+00:37:21,830 --> 00:37:27,210
+okay and in the second part um a sewer
+problems with my reusable test data so I
+
+724
+00:37:27,210 --> 00:37:30,760
+put some ovett in the setup they put
+some other individual tests in a little
+
+725
+00:37:30,760 --> 00:37:32,020
+bit and fixtures which
+
+726
+00:37:32,020 --> 00:37:35,890
+I see a lot about talk about pictures an
+experience that sometime so any advice
+
+727
+00:37:35,890 --> 00:37:39,900
+on way to be reasonable tested it's
+really gonna depend on me like I said
+
+728
+00:37:39,900 --> 00:37:43,540
+testing Israel engineering right if it
+if I were talking
+
+729
+00:37:43,540 --> 00:37:46,640
+you're talking about web performance
+people wouldn't say to me
+
+730
+00:37:46,640 --> 00:37:49,460
+so what should I do to make my website
+fast rate ever knows that making web
+
+731
+00:37:49,460 --> 00:37:50,370
+sites fast is
+
+732
+00:37:50,370 --> 00:37:53,610
+like serious work for you have to really
+consider all these complicated factors
+
+733
+00:37:53,610 --> 00:37:57,770
+testings exactly the same I don't know
+what your test it is are or where
+
+734
+00:37:57,770 --> 00:38:01,000
+up you know I can answer the question we
+got to sit down and really think about
+
+735
+00:38:01,000 --> 00:38:03,350
+what problems are facing what the best
+solutions are
+
+736
+00:38:03,350 --> 00:38:06,890
+in a well-tested system it's not unusual
+to have more lines have tests
+
+737
+00:38:06,890 --> 00:38:11,580
+then you have a product and why wouldn't
+that could be rich and complex in have
+
+738
+00:38:11,580 --> 00:38:14,440
+thorny problems that you're not sure use
+of the right way you're going to go back
+
+739
+00:38:14,440 --> 00:38:15,970
+every factor at cetera et cetera
+
+740
+00:38:15,970 --> 00:38:19,210
+its engineering okay so Jason fixtures
+
+741
+00:38:19,210 --> 00:38:25,680
+thats I was gonna be there yeah it
+sounds great hi I ever
+
+742
+00:38:25,680 --> 00:38:30,260
+pretty essential question and you said
+that it's a a good idea to reduce some
+
+743
+00:38:30,260 --> 00:38:32,030
+other models that you're testing
+
+744
+00:38:32,030 --> 00:38:35,890
+like if you got a pair of eating into
+one test do you just mean to
+
+745
+00:38:35,890 --> 00:38:40,390
+and just still the code somewhere else
+briefly and throw a pass in there so
+
+746
+00:38:40,390 --> 00:38:41,070
+it'll just
+
+747
+00:38:41,070 --> 00:38:45,040
+know through return okays and the reason
+why is because that makes your test hard
+
+748
+00:38:45,040 --> 00:38:45,880
+to run
+
+749
+00:38:45,880 --> 00:38:48,670
+right you don't have to edit your
+product code before you can run your
+
+750
+00:38:48,670 --> 00:38:51,420
+tests you need to have an automated test
+that you can
+
+751
+00:38:51,420 --> 00:38:54,640
+run with the push of a button some
+people have it happen automatically when
+
+752
+00:38:54,640 --> 00:38:56,080
+they save a file in there editor
+
+753
+00:38:56,080 --> 00:39:00,320
+every time they their control est which
+comes n like that ethanol run
+
+754
+00:39:00,320 --> 00:39:03,830
+like one like Jenkins are traversed your
+even know even more than that
+
+755
+00:39:03,830 --> 00:39:07,210
+every time literally the file hits the
+desk their tests run
+
+756
+00:39:07,210 --> 00:39:11,190
+so you want your tests ago as quickly as
+possible and it automatically as
+
+757
+00:39:11,190 --> 00:39:13,010
+possible so when I say removing code
+
+758
+00:39:13,010 --> 00:39:16,310
+I mean engineer the tests so that it
+reconfigures
+
+759
+00:39:16,310 --> 00:39:19,730
+the system and fines just the code that
+it wants to test
+
+760
+00:39:19,730 --> 00:39:22,980
+thank you but the test the the
+
+761
+00:39:22,980 --> 00:39:26,320
+session runner went away so we're going
+to be here all afternoon
+
+762
+00:39:26,320 --> 00:39:30,280
+this was a very good talk thanks very
+much on I saw a recording of a talkie
+
+763
+00:39:30,280 --> 00:39:30,710
+gave
+
+764
+00:39:30,710 --> 00:39:34,690
+a few years ago also intestine yes but
+in the the issue of testing
+
+765
+00:39:34,690 --> 00:39:38,130
+the missile silo yeah I'm what have you
+learned in the last few years about
+
+766
+00:39:38,130 --> 00:39:39,750
+testing
+
+767
+00:39:39,750 --> 00:39:42,400
+what if I learned I've learned if
+anything I've learned that it is even
+
+768
+00:39:42,400 --> 00:39:44,780
+more complicated than I thought it was
+before
+
+769
+00:39:44,780 --> 00:39:49,180
+that as your system gets complex your
+tests the test seem to get complex
+
+770
+00:39:49,180 --> 00:39:51,350
+faster than the system gets complex
+
+771
+00:39:51,350 --> 00:39:55,760
+and that the more work you can put into
+attacking that problem early the better
+
+772
+00:39:55,760 --> 00:39:57,310
+off you're going to be
+
+773
+00:39:57,310 --> 00:40:00,500
+and I've learned about the downsides
+love
+
+774
+00:40:00,500 --> 00:40:04,200
+marking thank you sure
+
+775
+00:40:04,200 --> 00:40:09,650
+okay I meant a great talk and thank you
+for the permission to refactor test
+
+776
+00:40:09,650 --> 00:40:13,640
+I can't you test tests yeah try that as
+soon as possible
+
+777
+00:40:13,640 --> 00:40:16,650
+yes I'm soul I my question
+
+778
+00:40:16,650 --> 00:40:20,010
+is I've been starting to unit testing
+and stuff and I've been and suddenly
+
+779
+00:40:20,010 --> 00:40:22,330
+have been forced into dependency
+injection land
+
+780
+00:40:22,330 --> 00:40:26,260
+hmm and so I wonder if you had any
+thoughts on
+
+781
+00:40:26,260 --> 00:40:30,180
+make sense since when by Tom and here we
+can have multiple inheritance
+
+782
+00:40:30,180 --> 00:40:33,260
+verses dependency injection and what the
+
+783
+00:40:33,260 --> 00:40:37,270
+if you have any the you know global
+thoughts on that me a concept well so
+
+784
+00:40:37,270 --> 00:40:38,610
+dependency injection
+
+785
+00:40:38,610 --> 00:40:42,480
+for for people living in Canada term
+means that the things you depend on like
+
+786
+00:40:42,480 --> 00:40:45,280
+your liberal open that we used in the
+product code
+
+787
+00:40:45,280 --> 00:40:48,040
+instead of it being an explicit
+reference to a module that we would
+
+788
+00:40:48,040 --> 00:40:49,420
+monkey patch by name
+
+789
+00:40:49,420 --> 00:40:52,950
+it would be a good thing passed in
+explicitly into the portfolio class on
+
+790
+00:40:52,950 --> 00:40:54,030
+construction
+
+791
+00:40:54,030 --> 00:40:57,750
+so the portfolio class when when it was
+constructed would know it when I need to
+
+792
+00:40:57,750 --> 00:41:00,510
+talk to the network I have been given
+this thing and it will it's the thing I
+
+793
+00:41:00,510 --> 00:41:01,700
+used to talk the network
+
+794
+00:41:01,700 --> 00:41:04,290
+and that means when you do your test
+since they're doing red monkey patching
+
+795
+00:41:04,290 --> 00:41:06,000
+you can just pass in a different thing
+
+796
+00:41:06,000 --> 00:41:09,120
+and you defaulted to the world on your
+love and so that your real callers don't
+
+797
+00:41:09,120 --> 00:41:10,530
+have to think about it
+
+798
+00:41:10,530 --> 00:41:14,520
+um the downside it depends injection is
+that your cluttering up the signatures a
+
+799
+00:41:14,520 --> 00:41:17,390
+few methods with all sorts of weird
+stuff that starts with an underscore in
+
+800
+00:41:17,390 --> 00:41:21,150
+the doc says don't ever use this and
+weird stuff like that that's unfortunate
+
+801
+00:41:21,150 --> 00:41:26,070
+and by the way it's hard to even get all
+of them in a big system to 100
+
+802
+00:41:26,070 --> 00:41:30,070
+dependent injections that mixins I'm not
+sure how you do is make sense for that
+
+803
+00:41:30,070 --> 00:41:32,420
+because mixins are things that give you
+
+804
+00:41:32,420 --> 00:41:36,040
+give you flexibility at the time you
+define a class
+
+805
+00:41:36,040 --> 00:41:39,420
+but that means you have to define a
+different product class to get
+
+806
+00:41:39,420 --> 00:41:42,580
+a mix in that has different dependencies
+
+807
+00:41:42,580 --> 00:41:45,640
+so I I guess we have to talk about how a
+mixing console that maybe you can teach
+
+808
+00:41:45,640 --> 00:41:48,900
+me something about it because I haven't
+encountered that as a way to solve the
+
+809
+00:41:48,900 --> 00:41:52,620
+the dependency problem for during task
+love for instance you you know you have
+
+810
+00:41:52,620 --> 00:41:52,910
+your
+
+811
+00:41:52,910 --> 00:41:57,230
+your hierarchy of the thing you're doing
+and then you just mix and URL live with
+
+812
+00:41:57,230 --> 00:41:58,070
+it
+
+813
+00:41:58,070 --> 00:42:01,410
+I C but its health but how do you get it
+out a bit that's the thing that thing
+
+814
+00:42:01,410 --> 00:42:02,530
+that you've derived
+
+815
+00:42:02,530 --> 00:42:05,850
+from both your product code on your old
+open your lip
+
+816
+00:42:05,850 --> 00:42:09,620
+now is the thing that you need to test
+or are you driving a different thing
+
+817
+00:42:09,620 --> 00:42:11,590
+that mixes in something else
+
+818
+00:42:11,590 --> 00:42:15,140
+in which case you're creating new your
+grading another right ready let another
+
+819
+00:42:15,140 --> 00:42:17,340
+way to do it right you could define a
+new class
+
+820
+00:42:17,340 --> 00:42:21,190
+in your test which is your product code:
+mixed in with the
+
+821
+00:42:21,190 --> 00:42:24,280
+our defenses yes a chance call
+
+822
+00:42:24,280 --> 00:42:28,420
+I'm the learned something he did I can
+talk
+
+823
+00:42:28,420 --> 00:42:31,740
+was known over there go alright it mean
+it ojai to the runner
+
+824
+00:42:31,740 --> 00:42:35,110
+night ASO we're at a time but I'd like
+to thank you
+
+825
+00:42:35,110 --> 00:42:37,720
+thank you for great talk and they get
+all our questions
+

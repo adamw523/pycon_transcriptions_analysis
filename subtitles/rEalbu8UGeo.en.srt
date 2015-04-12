@@ -1,0 +1,2514 @@
+1
+00:00:05,250 --> 00:00:09,080
+K thank you everyone for coming along to
+this first after lunch session at Pike
+
+2
+00:00:09,080 --> 00:00:10,950
+on 2014 here in Montreal
+
+3
+00:00:10,950 --> 00:00:14,910
+I'll got three really excellent speeches
+all lined up for you
+
+4
+00:00:14,910 --> 00:00:19,760
+our first presenter is a program and
+data scientist based here in Montreal
+
+5
+00:00:19,760 --> 00:00:23,880
+she works on strike started team and is
+a Colgan is all
+
+6
+00:00:23,880 --> 00:00:27,390
+hi ladies Montreal and the Montreal
+all-girl back nights
+
+7
+00:00:27,390 --> 00:00:32,099
+to speak to us today about diving into
+dot with iPod and MacBook
+
+8
+00:00:32,099 --> 00:00:39,099
+and handers please welcome Julia Evans
+
+9
+00:00:41,880 --> 00:00:44,560
+I A on sup
+
+10
+00:00:44,560 --> 00:00:47,690
+today when I won't talk to you about I'm
+I worked on
+
+11
+00:00:47,690 --> 00:00:50,850
+added him I'm which means they're good
+data on n/a
+
+12
+00:00:50,850 --> 00:00:55,110
+heavier but have different tools that I
+use right up sometimes eight to dupe
+
+13
+00:00:55,110 --> 00:00:58,210
+I'm sometimes is paid on sometimes like
+a czar once
+
+14
+00:00:58,210 --> 00:01:02,300
+I'm and my favorite old two years
+
+15
+00:01:02,300 --> 00:01:05,770
+like the things that I enjoy using the
+most are paid on Tools
+
+16
+00:01:05,770 --> 00:01:08,790
+I enjoy using I find another camp and
+this together
+
+17
+00:01:08,790 --> 00:01:12,510
+to answer questions up idea and what I
+want to explain this talk
+
+18
+00:01:12,510 --> 00:01:16,830
+is why they're my favorite on and why
+they could maybe be your favorite
+
+19
+00:01:16,830 --> 00:01:19,930
+if you don't use them already sup
+
+20
+00:01:19,930 --> 00:01:24,229
+on the way to start a structured
+
+21
+00:01:24,229 --> 00:01:27,850
+on against small not gonna get better
+apparently
+
+22
+00:01:27,850 --> 00:01:31,780
+on is step 1: what are another camp and
+as
+
+23
+00:01:31,780 --> 00:01:35,030
+Michael what do those words man you may
+know a little bit already if you watch
+
+24
+00:01:35,030 --> 00:01:36,020
+ran oppresses
+
+25
+00:01:36,020 --> 00:01:40,000
+act looking at this morning on most
+about time is going to spend
+
+26
+00:01:40,000 --> 00:01:44,240
+on practical examples on how to use the
+is to answer questions about your data
+
+27
+00:01:44,240 --> 00:01:47,750
+and then I'll and would like a little
+bit but it's not like where to go next
+
+28
+00:01:47,750 --> 00:01:52,540
+if you wanted learn more so first
+question is like
+
+29
+00:01:52,540 --> 00:01:56,520
+what are I dunno but and pandas and like
+numb pie
+
+30
+00:01:56,520 --> 00:01:59,580
+on and like how to this business like
+Scientific Inc
+
+31
+00:01:59,580 --> 00:02:03,460
+computing tools work together on so the
+first thing I want to talk about his
+
+32
+00:02:03,460 --> 00:02:04,500
+iPod lineup
+
+33
+00:02:04,500 --> 00:02:09,580
+on so I've read a book is like a
+web-based user interface for Python
+
+34
+00:02:09,580 --> 00:02:13,360
+and everything like why would I want
+that right like you can already right
+
+35
+00:02:13,360 --> 00:02:14,380
+papon maybe
+
+36
+00:02:14,380 --> 00:02:17,959
+on I had a why would you want to be on
+the internet
+
+37
+00:02:17,959 --> 00:02:21,430
+right leg why would you want to be in a
+web page so
+
+38
+00:02:21,430 --> 00:02:26,320
+on the way forever the book works I'm is
+around the server on your chin
+
+39
+00:02:26,320 --> 00:02:29,840
+on and then you will open in your you
+notebook
+
+40
+00:02:29,840 --> 00:02:33,190
+right I'm gonna be really short Emma
+instead of listing I to Peters
+
+41
+00:02:33,190 --> 00:02:36,660
+step I'm the most important thing that
+
+42
+00:02:36,660 --> 00:02:39,900
+isn't always obvious is when used I've
+ever notebook
+
+43
+00:02:39,900 --> 00:02:43,580
+you can Ryan like right any paid by code
+that you would normally right
+
+44
+00:02:43,580 --> 00:02:46,110
+like it's not like a limited by mid
+where there are only certain things you
+
+45
+00:02:46,110 --> 00:02:46,630
+can do
+
+46
+00:02:46,630 --> 00:02:50,220
+I'm it just paid on like you can do any
+pipe on being in the US otherwise do
+
+47
+00:02:50,220 --> 00:02:52,260
+that you get up connect to databases in
+
+48
+00:02:52,260 --> 00:02:55,340
+you can like you do everything right
+
+49
+00:02:55,340 --> 00:02:59,169
+on so one thing that I really like about
+it
+
+50
+00:02:59,169 --> 00:03:03,400
+is like but the important thing and I do
+like string dot split
+
+51
+00:03:03,400 --> 00:03:07,190
+and I wanna know how it works right
+normally you'd look at the documentation
+
+52
+00:03:07,190 --> 00:03:11,220
+here sees that I've hesitated at like
+would you like some documentation
+
+53
+00:03:11,220 --> 00:03:14,989
+and they pressed have again and the ok
+would you like even more
+
+54
+00:03:14,989 --> 00:03:18,269
+and the press have again exam had a
+frustrated and a popular
+
+55
+00:03:18,269 --> 00:03:21,510
+all the documentation at the bottom
+explaining a split works for me
+
+56
+00:03:21,510 --> 00:03:24,700
+I can like resize it and I didn't have
+to leave great
+
+57
+00:03:24,700 --> 00:03:28,329
+and I didn't have to even know it just
+like came up for me
+
+58
+00:03:28,329 --> 00:03:32,120
+on so funny really useful interactive
+tool for doing
+
+59
+00:03:32,120 --> 00:03:35,130
+export a work but I do like string not
+split
+
+60
+00:03:35,130 --> 00:03:39,329
+right like this on
+
+61
+00:03:39,329 --> 00:03:45,040
+23 and angular no that wasn't what I
+wanted maybe eight celebs put on a comma
+
+62
+00:03:45,040 --> 00:03:48,639
+OST right so my workload around this is
+often I do something
+
+63
+00:03:48,639 --> 00:03:52,859
+do it wrong as we do I'm and then change
+it and I can in to rate really quickly
+
+64
+00:03:52,859 --> 00:03:56,810
+so that led by the notebook on
+
+65
+00:03:56,810 --> 00:04:00,340
+the next day on talk about it pandas on
+sup
+
+66
+00:04:00,340 --> 00:04:04,530
+often I will do so kinda did an out this
+little have a date is that
+
+67
+00:04:04,530 --> 00:04:08,480
+with every complaint call ever made in
+New York right i'm for fun
+
+68
+00:04:08,480 --> 00:04:12,260
+and then I want to know that let's say I
+wanna know like
+
+69
+00:04:12,260 --> 00:04:15,620
+every hour how many noise complaints
+were made
+
+70
+00:04:15,620 --> 00:04:19,060
+arm except like I would like to sweat it
+out Beiber
+
+71
+00:04:19,060 --> 00:04:23,370
+on and also maybe a lake I only care
+about the period connect
+
+72
+00:04:23,370 --> 00:04:26,919
+temper in December I'm so I do it a lot
+of filtering aggregating
+
+73
+00:04:26,919 --> 00:04:31,980
+I'd you might think about you might have
+trailed like if you're reading a program
+
+74
+00:04:31,980 --> 00:04:35,510
+that would be like something that could
+happen I'm with pandas you don't have to
+
+75
+00:04:35,510 --> 00:04:36,370
+write loops
+
+76
+00:04:36,370 --> 00:04:40,110
+on and also at like doing something like
+
+77
+00:04:40,110 --> 00:04:43,979
+IRI on the north by the filtrate things
+you don't want and then grab it except
+
+78
+00:04:43,979 --> 00:04:44,350
+like
+
+79
+00:04:44,350 --> 00:04:47,690
+arm and then grab the number each hour
+is like 512 Cup
+
+80
+00:04:47,690 --> 00:04:51,130
+like that's really come back it's really
+easy on
+
+81
+00:04:51,130 --> 00:04:54,940
+and but it's not like I was there are
+obvious how to get started
+
+82
+00:04:54,940 --> 00:04:58,440
+sudden unexplained about pat is kinda
+the tool that lets you do all this
+
+83
+00:04:58,440 --> 00:04:59,020
+filtering
+
+84
+00:04:59,020 --> 00:05:04,060
+on and parsing the pandas bill I have
+not pie
+
+85
+00:05:04,060 --> 00:05:07,880
+what is numb by if you want to brendor
+the stock yesterday that paper
+
+86
+00:05:07,880 --> 00:05:11,660
+data structures you will know but if you
+ever a pipe bomb blast had like five
+
+87
+00:05:11,660 --> 00:05:12,570
+million things
+
+88
+00:05:12,570 --> 00:05:15,720
+if you iterate through that list you
+have to make five million object
+
+89
+00:05:15,720 --> 00:05:19,110
+which takes time even though computers
+are fast so
+
+90
+00:05:19,110 --> 00:05:23,300
+I A but like thing like number its
+pastors kind ever
+
+91
+00:05:23,300 --> 00:05:26,820
+like it's it's not as I A said again
+
+92
+00:05:26,820 --> 00:05:31,090
+right so i thought id example an example
+as the topic a whole buncha numbers
+
+93
+00:05:31,090 --> 00:05:31,630
+right
+
+94
+00:05:31,630 --> 00:05:35,900
+and then find the sum of the squares so
+did about Connor ever do like pretty
+
+95
+00:05:35,900 --> 00:05:36,850
+simple
+
+96
+00:05:36,850 --> 00:05:39,910
+recently doubled up 1.2 seconds I'm to
+add up all the
+
+97
+00:05:39,910 --> 00:05:43,400
+those numbers squid which is pretty good
+right like computers are about that was
+
+98
+00:05:43,400 --> 00:05:44,190
+a big number
+
+99
+00:05:44,190 --> 00:05:48,400
+on but if I do to number it takes like
+83 mil seconds which is like
+
+100
+00:05:48,400 --> 00:05:52,980
+like 15 times faster on so when I say
+nope I sponsor I mean umpires like 15
+
+101
+00:05:52,980 --> 00:05:53,310
+times
+
+102
+00:05:53,310 --> 00:05:57,200
+after another Asian taking about or more
+right
+
+103
+00:05:57,200 --> 00:06:02,490
+um so and the reason it faster is
+because it implements all the operations
+
+104
+00:06:02,490 --> 00:06:03,630
+like it stores your
+
+105
+00:06:03,630 --> 00:06:07,220
+on deserters alexi areas arms and
+
+106
+00:06:07,220 --> 00:06:11,860
+bend like when you operate on umpire is
+you do it all at once so instead of
+
+107
+00:06:11,860 --> 00:06:12,990
+being like
+
+108
+00:06:12,990 --> 00:06:16,390
+reading a for loop you'll be like just
+some all these things right
+
+109
+00:06:16,390 --> 00:06:19,550
+and you just like all number functions a
+number i text having
+
+110
+00:06:19,550 --> 00:06:23,120
+Korea and them as a panda's bill another
+number I
+
+111
+00:06:23,120 --> 00:06:27,220
+and you'll have panned assumptions which
+are built up by functions
+
+112
+00:06:27,220 --> 00:06:30,310
+so on eyes pandas
+
+113
+00:06:30,310 --> 00:06:34,950
+inside I'd rather know book and no play
+makes and as fast
+
+114
+00:06:34,950 --> 00:06:38,600
+okay um quick note how to install these
+tools
+
+115
+00:06:38,600 --> 00:06:42,150
+don't use the like nobody packages in
+stopping his in pip
+
+116
+00:06:42,150 --> 00:06:45,430
+or a little girl there's a
+distributional anaconda
+
+117
+00:06:45,430 --> 00:06:49,420
+which I've been super easy to use and I
+is a lot on
+
+118
+00:06:49,420 --> 00:06:52,750
+there yet never use packages like this
+these things are evolving supervise the
+
+119
+00:06:52,750 --> 00:06:55,800
+by the community is doing amazing work
+on
+
+120
+00:06:55,800 --> 00:06:59,690
+and use the latest versions on because
+they're amazing
+
+121
+00:06:59,690 --> 00:07:02,730
+so I'm and you can run a weapon a book
+by typing
+
+122
+00:07:02,730 --> 00:07:06,660
+I played on notebook
+
+123
+00:07:06,660 --> 00:07:10,120
+it's good and not to hide
+
+124
+00:07:10,120 --> 00:07:13,290
+on and then when you wanna grab another
+you get this little pop-up turning in
+
+125
+00:07:13,290 --> 00:07:15,390
+your browser
+
+126
+00:07:15,390 --> 00:07:19,350
+and an evening at started so now I want
+to talk about the practical examples
+
+127
+00:07:19,350 --> 00:07:24,030
+as I promised on so the first thing
+
+128
+00:07:24,030 --> 00:07:27,670
+I want to but as the date is that we're
+going to be using were in Montreal
+
+129
+00:07:27,670 --> 00:07:31,470
+people it it's a bit cold right now is
+much colder a few weeks ago
+
+130
+00:07:31,470 --> 00:07:34,720
+even when it's very cold people go
+biking right um
+
+131
+00:07:34,720 --> 00:07:38,680
+so we have bike path here I'm their
+centers on his bike that that's meant
+
+132
+00:07:38,680 --> 00:07:42,010
+meant measure the number of cyclists who
+are going pass at center
+
+133
+00:07:42,010 --> 00:07:45,240
+every day on and that did as published
+online:
+
+134
+00:07:45,240 --> 00:07:49,040
+so we can play with it and find out
+things about when people go biking
+
+135
+00:07:49,040 --> 00:07:52,860
+for example do people go biking well as
+-20 No
+
+136
+00:07:52,860 --> 00:07:56,060
+%uh except people do actually
+
+137
+00:07:56,060 --> 00:07:59,490
+which is what will you know we're going
+to get there observers the data that
+
+138
+00:07:59,490 --> 00:08:01,570
+we're going to be talking about so I
+downloaded it
+
+139
+00:08:01,570 --> 00:08:04,700
+I'm this is not big data rate this is
+like
+
+140
+00:08:04,700 --> 00:08:08,260
+one data point for each day of the year
+on
+
+141
+00:08:08,260 --> 00:08:13,389
+so I don't love the CSB and this is what
+it looks like when I started right
+
+142
+00:08:13,389 --> 00:08:17,310
+hun if you've par CES is before you may
+be familiar
+
+143
+00:08:17,310 --> 00:08:22,230
+with things that you're on um so what
+what this is is it one bro for each day
+
+144
+00:08:22,230 --> 00:08:23,000
+of the year
+
+145
+00:08:23,000 --> 00:08:26,090
+I'm has the dates and the number of
+cyclists on each
+
+146
+00:08:26,090 --> 00:08:29,430
+on on its back for and that there's a
+man's ear and back that's
+
+147
+00:08:29,430 --> 00:08:33,310
+so you know is there could be problems
+the separator above the common wasn't
+
+148
+00:08:33,310 --> 00:08:34,039
+home a
+
+149
+00:08:34,039 --> 00:08:37,409
+right and you may not be impressed with
+pandas right now on
+
+150
+00:08:37,409 --> 00:08:40,510
+so the reason you should be impressed is
+you can
+
+151
+00:08:40,510 --> 00:08:44,820
+also there's a lot of text year but I'm
+I get home in two options as agreed the
+
+152
+00:08:44,820 --> 00:08:45,480
+CSP
+
+153
+00:08:45,480 --> 00:08:49,160
+the body including his loved one
+separators xenical nation expertise to
+
+154
+00:08:49,160 --> 00:08:50,209
+parse the dates
+
+155
+00:08:50,209 --> 00:08:53,579
+and her purse today first because we're
+not american I'm
+
+156
+00:08:53,579 --> 00:08:57,389
+and he a great day for Canadians I'm it
+has all these are
+
+157
+00:08:57,389 --> 00:09:01,220
+these options and there are more options
+if you haven't even weirder CST
+
+158
+00:09:01,220 --> 00:09:05,589
+and like that like the people over a pan
+is have bought about this right
+
+159
+00:09:05,589 --> 00:09:09,490
+and they know that may be there like 12
+lines at the top UCSD which are relevant
+
+160
+00:09:09,490 --> 00:09:10,579
+years the SD
+
+161
+00:09:10,579 --> 00:09:13,999
+so there's a skiff option where you can
+skip the first time rose
+
+162
+00:09:13,999 --> 00:09:16,699
+because that happened when I was
+downloading weather data from whether
+
+163
+00:09:16,699 --> 00:09:17,920
+died easy .ca
+
+164
+00:09:17,920 --> 00:09:21,329
+and then it was there on a need to write
+code because it was just
+
+165
+00:09:21,329 --> 00:09:25,069
+like an often has recvd is the United on
+and is also like
+
+166
+00:09:25,069 --> 00:09:30,059
+read Excel I'm I had a client at at some
+point will be like sent as a home in
+
+167
+00:09:30,059 --> 00:09:34,279
+Excel files and it was fine cuz pandas
+can read Excel
+
+168
+00:09:34,279 --> 00:09:37,670
+I'll it's great
+
+169
+00:09:37,670 --> 00:09:41,639
+on sup so the first thing I do
+
+170
+00:09:41,639 --> 00:09:44,809
+on so now you know that this is
+beautiful right on
+
+171
+00:09:44,809 --> 00:09:48,209
+I would like that supper minute and talk
+about what we're looking at right
+
+172
+00:09:48,209 --> 00:09:51,990
+like I said bike data is variable white
+is it
+
+173
+00:09:51,990 --> 00:09:55,499
+on so but data is a data frame whose is
+are
+
+174
+00:09:55,499 --> 00:09:59,790
+before a few if you a day to ramp and is
+based on a data plan
+
+175
+00:09:59,790 --> 00:10:04,839
+are your intuitions are correct on who
+hears you single
+
+176
+00:10:04,839 --> 00:10:08,170
+more view on a day dreams a little bit
+like a database table
+
+177
+00:10:08,170 --> 00:10:11,180
+right there rose their columns on
+there's a
+
+178
+00:10:11,180 --> 00:10:16,970
+and exits little bit like your primary
+key I'm Zahir the date is the index
+
+179
+00:10:16,970 --> 00:10:20,779
+and on the way this is stored like the
+way it kinda
+
+180
+00:10:20,779 --> 00:10:24,129
+like kinda things about this is it a
+bunch of number I raise
+
+181
+00:10:24,129 --> 00:10:28,379
+which are either a which are the columns
+I'm to starve them into columns
+
+182
+00:10:28,379 --> 00:10:32,149
+but its display to you is like a table
+altogether like an Excel spreadsheet
+
+183
+00:10:32,149 --> 00:10:35,620
+I did except awesome on
+
+184
+00:10:35,620 --> 00:10:38,809
+because it's not an Excel spreadsheet
+and much easier two years
+
+185
+00:10:38,809 --> 00:10:41,889
+as a programmer so
+
+186
+00:10:41,889 --> 00:10:45,309
+on to have a datagram om the first
+
+187
+00:10:45,309 --> 00:10:50,110
+operation I wanna show you is even take
+the first three rows in a glamorous life
+
+188
+00:10:50,110 --> 00:10:53,910
+on I'm so that's great
+
+189
+00:10:53,910 --> 00:10:58,180
+on and let's say 12 plotted you might
+think that you have no learn how to use
+
+190
+00:10:58,180 --> 00:11:00,290
+net problem in learn how to use the
+plotting library
+
+191
+00:11:00,290 --> 00:11:04,110
+that's not true you just had %uh plot
+and
+
+192
+00:11:04,110 --> 00:11:07,579
+on and NBC like we look at this on
+
+193
+00:11:07,579 --> 00:11:11,869
+I would like okay on in the winter in
+till March
+
+194
+00:11:11,869 --> 00:11:15,519
+it's really cold outside and no one
+really goes by King
+
+195
+00:11:15,519 --> 00:11:19,369
+and then in the summer people like it
+summer this is the best
+
+196
+00:11:19,369 --> 00:11:23,999
+everything is the meaning everyone is
+happy as it is not a huge surprise right
+
+197
+00:11:23,999 --> 00:11:27,970
+I'm so don't look if Isaac Plains crap
+for a minute I'm
+
+198
+00:11:27,970 --> 00:11:32,629
+the x-axis is time and the y-axis is
+like the number of people biking
+
+199
+00:11:32,629 --> 00:11:36,189
+on each day and then the different lines
+are different bike paths
+
+200
+00:11:36,189 --> 00:11:40,410
+I'm select bury the blue one is bringing
+my house century popular iPad even go
+
+201
+00:11:40,410 --> 00:11:41,129
+very fast
+
+202
+00:11:41,129 --> 00:11:44,399
+the super steep hill on and it's really
+fine
+
+203
+00:11:44,399 --> 00:11:50,689
+and like a little bit dangerous on very
+popular
+
+204
+00:11:50,689 --> 00:11:53,889
+on so let's say a I said that day was
+the most popular
+
+205
+00:11:53,889 --> 00:11:56,939
+right I'm but I want like quantify that
+
+206
+00:11:56,939 --> 00:12:00,740
+and I was at airports like my boss in
+charge a bike paths right
+
+207
+00:12:00,740 --> 00:12:04,410
+I would elected and a letter but given
+the median right
+
+208
+00:12:04,410 --> 00:12:08,589
+on the way to do that is you like a dot
+median
+
+209
+00:12:08,589 --> 00:12:12,050
+on and their love is like super help 'em
+thanked like matt is upended get the
+
+210
+00:12:12,050 --> 00:12:13,040
+idea to braums
+
+211
+00:12:13,040 --> 00:12:16,480
+I'm per like finding out that is excited
+
+212
+00:12:16,480 --> 00:12:20,800
+on so am not there then one at the plot
+comedians and gobbling up
+
+213
+00:12:20,800 --> 00:12:24,689
+bar chart does everyone loves bar chart
+then I could be like bike data
+
+214
+00:12:24,689 --> 00:12:28,540
+dot median dot plot I'm
+
+215
+00:12:28,540 --> 00:12:31,920
+on and then to give me some weird air
+pretend that errors in their
+
+216
+00:12:31,920 --> 00:12:35,179
+I'm that was then had a fun thing on
+
+217
+00:12:35,179 --> 00:12:38,569
+and the dignity that that like very is
+the biggest right and then act like this
+
+218
+00:12:38,569 --> 00:12:40,459
+is the best bike rack wish to kill the
+other
+
+219
+00:12:40,459 --> 00:12:43,550
+I don't know like whatever it right now
+conclusion you're trying to convince the
+
+220
+00:12:43,550 --> 00:12:47,170
+people you're bored you board meeting
+John this crap
+
+221
+00:12:47,170 --> 00:12:50,819
+K on a few other things i wanna talk
+about
+
+222
+00:12:50,819 --> 00:12:54,379
+on even take a column place so like
+let's say sometimes I have
+
+223
+00:12:54,379 --> 00:12:57,399
+like CST is it had like two billion rows
+are like
+
+224
+00:12:57,399 --> 00:13:01,220
+50 I'm and I only really care about 3 on
+you can give
+
+225
+00:13:01,220 --> 00:13:05,649
+a it a allister broza as an index and is
+restricted and to do that
+
+226
+00:13:05,649 --> 00:13:08,699
+I'm and then you can also Lake say eats
+it
+
+227
+00:13:08,699 --> 00:13:12,670
+take diversity rose innings with the
+surrounding the gimme overseers and then
+
+228
+00:13:12,670 --> 00:13:17,850
+only his columns doesn't care what order
+you do it in pen is nice to you
+
+229
+00:13:17,850 --> 00:13:21,059
+okay on the last kinda like basic pan
+
+230
+00:13:21,059 --> 00:13:24,559
+like numb hype and this feature want you
+to talk about on
+
+231
+00:13:24,559 --> 00:13:28,119
+is my favorite wanna my favorite I have
+many favorites sorry
+
+232
+00:13:28,119 --> 00:13:33,189
+home so on I talked about doing
+operations all at once right
+
+233
+00:13:33,189 --> 00:13:36,459
+so let's say I wanted to find all other
+days where they're less than
+
+234
+00:13:36,459 --> 00:13:37,769
+seventy-five people biking
+
+235
+00:13:37,769 --> 00:13:41,740
+on the very back flat near my house
+right collect $75 is in a lot
+
+236
+00:13:41,740 --> 00:13:45,829
+on it's a pretty popular bike path I'm
+so what I can do
+
+237
+00:13:45,829 --> 00:13:49,999
+is I can say when is less than
+seventy-five and it gives it has long
+
+238
+00:13:49,999 --> 00:13:51,259
+black churches involved
+
+239
+00:13:51,259 --> 00:13:54,410
+strain and then what I can do with that
+
+240
+00:13:54,410 --> 00:13:58,369
+is akin put that into like I can index
+with it
+
+241
+00:13:58,369 --> 00:14:02,119
+and it will give me all at the Rose that
+satisfy that condition and I can combine
+
+242
+00:14:02,119 --> 00:14:03,119
+conditions
+
+243
+00:14:03,119 --> 00:14:06,809
+and they can use arbitrarily complicated
+conditions so it's like a single query
+
+244
+00:14:06,809 --> 00:14:08,019
+if you've used that
+
+245
+00:14:08,019 --> 00:14:12,220
+except you can write Python code right
+on and you can just like do whatever
+
+246
+00:14:12,220 --> 00:14:13,509
+sickle might allow you to do
+
+247
+00:14:13,509 --> 00:14:17,179
+you can do anything you want and to
+Canada arbitrary queries
+
+248
+00:14:17,179 --> 00:14:21,089
+on and you can see it here that like the
+days was unable or all days in
+
+249
+00:14:21,089 --> 00:14:25,110
+in January and February January and
+February so-called
+
+250
+00:14:25,110 --> 00:14:28,910
+rights but not a huge surprise
+
+251
+00:14:28,910 --> 00:14:32,800
+so I'm but super powerful amazed at all
+the time
+
+252
+00:14:32,800 --> 00:14:36,399
+okay so the next question I had on
+
+253
+00:14:36,399 --> 00:14:41,550
+is I want snow like what all of this
+variation was about right like there's
+
+254
+00:14:41,550 --> 00:14:43,610
+this crap in it like
+
+255
+00:14:43,610 --> 00:14:47,499
+number of cyclists and I what silly is
+this because the weekends like
+
+256
+00:14:47,499 --> 00:14:50,899
+is the variation because more people
+back on weekdays on weekends
+
+257
+00:14:50,899 --> 00:14:54,420
+so here's here's a question like who
+thinks that in Montreal where city of
+
+258
+00:14:54,420 --> 00:14:58,379
+commuters a good to me mostly bike
+because we're going to work
+
+259
+00:14:58,379 --> 00:15:02,629
+some people who picked fifth group we'll
+be back for fun
+
+260
+00:15:02,629 --> 00:15:05,730
+these disagreements we can solve with
+data
+
+261
+00:15:05,730 --> 00:15:09,300
+this is the best again overnight his
+right
+
+262
+00:15:09,300 --> 00:15:13,439
+so the first thing I'm gonna do I'm as I
+have a datagram
+
+263
+00:15:13,439 --> 00:15:16,869
+I'm gonna add a new column the way add a
+new column is like adding a new key to a
+
+264
+00:15:16,869 --> 00:15:17,649
+dictionary
+
+265
+00:15:17,649 --> 00:15:20,829
+because everything is nice I'm and like
+
+266
+00:15:20,829 --> 00:15:23,929
+his interests were kinda you might
+expect on
+
+267
+00:15:23,929 --> 00:15:27,949
+so om tennis is really good a time
+series
+
+268
+00:15:27,949 --> 00:15:31,730
+a time series is a fancy word for a
+bunch of numbers
+
+269
+00:15:31,730 --> 00:15:35,290
+which are in next by like a date select
+stocks right
+
+270
+00:15:35,290 --> 00:15:39,050
+I'm it was originally built by by people
+who are doing like banja they denounce
+
+271
+00:15:39,050 --> 00:15:39,869
+this
+
+272
+00:15:39,869 --> 00:15:43,369
+I'm like was beginning on so
+
+273
+00:15:43,369 --> 00:15:47,839
+I had a weekday column and index of
+weekday
+
+274
+00:15:47,839 --> 00:15:51,649
+and that gives me a number rate for HID
+the air
+
+275
+00:15:51,649 --> 00:15:55,110
+I meant what I want to do with this is I
+want to
+
+276
+00:15:55,110 --> 00:15:58,920
+on collect all the all other entries
+would like the same weekdays like Taylor
+
+277
+00:15:58,920 --> 00:16:00,249
+everything with with the six
+
+278
+00:16:00,249 --> 00:16:04,239
+I liked at all those up and everything
+2008 at all those up
+
+279
+00:16:04,239 --> 00:16:07,499
+and every day at the gay one allied all
+those up and then we'll figure out what
+
+280
+00:16:07,499 --> 00:16:09,600
+the A six and they're actually means
+
+281
+00:16:09,600 --> 00:16:16,069
+on and then world are pretty graph into
+it to our board meeting grady
+
+282
+00:16:16,069 --> 00:16:19,449
+so on
+
+283
+00:16:19,449 --> 00:16:25,040
+want to do that I'm if you'd done whose
+use like a single group by
+
+284
+00:16:25,040 --> 00:16:28,660
+this is like that I'm if you have a
+musical group by its what I said
+
+285
+00:16:28,660 --> 00:16:32,220
+right on you have like all the easier
+than you had them up
+
+286
+00:16:32,220 --> 00:16:37,850
+had on abut like you should think up and
+his group I like a single goodbye that's
+
+287
+00:16:37,850 --> 00:16:38,449
+why it's called
+
+288
+00:16:38,449 --> 00:16:42,119
+at on so we say good bye week day
+
+289
+00:16:42,119 --> 00:16:45,249
+and aggregate although those groups by
+taking the Sun
+
+290
+00:16:45,249 --> 00:16:48,749
+you can use any function you want here
+Yuki don't just have to use built-in
+
+291
+00:16:48,749 --> 00:16:49,480
+functions
+
+292
+00:16:49,480 --> 00:16:53,019
+you can write your own functions he's
+any function that you find in the wild
+
+293
+00:16:53,019 --> 00:16:53,929
+you can use the miles
+
+294
+00:16:53,929 --> 00:16:57,129
+you know you can uses any function on
+
+295
+00:16:57,129 --> 00:17:01,329
+so I do this I meant I get a new data
+frame which has all of the weekdays
+
+296
+00:17:01,329 --> 00:17:04,730
+as the index and then for each column
+add them all up
+
+297
+00:17:04,730 --> 00:17:08,049
+and it'll work for me and I didn't have
+to write a loop
+
+298
+00:17:08,049 --> 00:17:12,160
+because loops our work and we don't like
+doing work we like other people to Dr
+
+299
+00:17:12,160 --> 00:17:13,089
+Acworth
+
+300
+00:17:13,089 --> 00:17:16,240
+are at least idea on right
+
+301
+00:17:16,240 --> 00:17:21,709
+I'm but like numbers like who likes
+reading tables have a lot of numbers
+
+302
+00:17:21,709 --> 00:17:28,020
+some %uh view I'm I I feel you I like
+members however I prefer grab
+
+303
+00:17:28,020 --> 00:17:32,220
+right on so what I did was that his
+right index by hand I just looked up
+
+304
+00:17:32,220 --> 00:17:32,760
+like
+
+305
+00:17:32,760 --> 00:17:36,920
+iPad a date that was the 0 and they look
+to be my calendar
+
+306
+00:17:36,920 --> 00:17:40,330
+to find out what day of the week it was
+and I found out that it was Monday on
+
+307
+00:17:40,330 --> 00:17:44,100
+because I I want to do it fast
+
+308
+00:17:44,100 --> 00:17:47,130
+if you were like doing it the right way
+you would probably find out some way to
+
+309
+00:17:47,130 --> 00:17:48,200
+programmatically
+
+310
+00:17:48,200 --> 00:17:52,200
+and do that I'm tho
+
+311
+00:17:52,200 --> 00:17:56,370
+attention XD right and it turns out at
+Thursday's most popular day
+
+312
+00:17:56,370 --> 00:17:59,480
+the days of the week Mr popular in the
+weekends and it looks like we're
+
+313
+00:17:59,480 --> 00:18:02,980
+commuters it looks like you back to work
+
+314
+00:18:02,980 --> 00:18:06,500
+yeah hacer
+
+315
+00:18:06,500 --> 00:18:10,640
+I'm so that's cool arm and then i buy I
+J bar graph
+
+316
+00:18:10,640 --> 00:18:14,320
+no not that like if you want to plot a
+biografia like pot
+
+317
+00:18:14,320 --> 00:18:17,870
+kind it was bar on that like one in the
+main
+
+318
+00:18:17,870 --> 00:18:21,740
+kinda graphs a draw a lot arm
+
+319
+00:18:21,740 --> 00:18:26,700
+so that that's good right ion kno to 700
+lips to do that right
+
+320
+00:18:26,700 --> 00:18:30,520
+like that which is like a few lines of
+code alright
+
+321
+00:18:30,520 --> 00:18:33,590
+so but if you look at that this artist
+chart again
+
+322
+00:18:33,590 --> 00:18:36,870
+like there is a little bit a variation
+by Dave the week but that's definitely
+
+323
+00:18:36,870 --> 00:18:39,350
+not like all that's causing the huge
+spike
+
+324
+00:18:39,350 --> 00:18:43,420
+throughout the year right on so
+
+325
+00:18:43,420 --> 00:18:47,260
+I like to do like a better investigation
+into this on
+
+326
+00:18:47,260 --> 00:18:51,200
+cuz we're like data scientists or
+whatever and Anna I'm
+
+327
+00:18:51,200 --> 00:18:54,550
+so but next thing I want to do is look
+at the temperature
+
+328
+00:18:54,550 --> 00:18:57,900
+right like it's called didn't don't need
+to be like
+
+329
+00:18:57,900 --> 00:19:02,400
+amazing a data statistics magic people
+
+330
+00:19:02,400 --> 00:19:06,170
+to the hague know that people don't like
+going biking when it's called
+
+331
+00:19:06,170 --> 00:19:10,360
+on so I'm but this function don't look
+at this function at kinda big
+
+332
+00:19:10,360 --> 00:19:14,290
+on but basically what I was doing was
+like I went to climb a doubt whether
+
+333
+00:19:14,290 --> 00:19:17,490
+Dodd d-ct and Mike I found some
+
+334
+00:19:17,490 --> 00:19:21,430
+Lake place where I could put in things
+into the your Alan
+
+335
+00:19:21,430 --> 00:19:24,750
+ever give me a CSP kinda have and I
+could put it together
+
+336
+00:19:24,750 --> 00:19:27,960
+anyway it was a lot of work is kinda
+what I'm trying to say here you can
+
+337
+00:19:27,960 --> 00:19:30,540
+imagine you could have written us
+
+338
+00:19:30,540 --> 00:19:34,350
+on I'm an I don't know whether data I
+looked at it
+
+339
+00:19:34,350 --> 00:19:38,580
+and it gave me the temperature every
+hour as a good that's good
+
+340
+00:19:38,580 --> 00:19:42,360
+I'm the main problem with this is that
+if you want the temperature every hour
+
+341
+00:19:42,360 --> 00:19:46,370
+and one of the temperature everyday
+right because we only have the bike did
+
+342
+00:19:46,370 --> 00:19:47,660
+every day
+
+343
+00:19:47,660 --> 00:19:51,520
+I'm so I decided to take the average
+temperature
+
+344
+00:19:51,520 --> 00:19:55,420
+on and the way you take the average
+temperature
+
+345
+00:19:55,420 --> 00:20:00,390
+is you re sample which apparently some
+people do when analyzing like financial
+
+346
+00:20:00,390 --> 00:20:01,190
+stock data
+
+347
+00:20:01,190 --> 00:20:05,210
+because they're like I have my stock
+prices every like two milliseconds and I
+
+348
+00:20:05,210 --> 00:20:07,100
+only need them every like 10
+milliseconds
+
+349
+00:20:07,100 --> 00:20:10,650
+I don't know a about hybrid with these
+i've been out estimates
+
+350
+00:20:10,650 --> 00:20:15,540
+on but when I did everything I double so
+
+351
+00:20:15,540 --> 00:20:19,080
+on but there is ample on resembling is
+great you do
+
+352
+00:20:19,080 --> 00:20:23,140
+daughtry sample and then you get the
+time period you want you can read it in
+
+353
+00:20:23,140 --> 00:20:23,540
+like
+
+354
+00:20:23,540 --> 00:20:28,530
+you 8d if you want two days you're it 2d
+if you want three hours you at 3h
+
+355
+00:20:28,530 --> 00:20:32,620
+pretty simple on and then use say how
+
+356
+00:20:32,620 --> 00:20:36,230
+and you can see these days and that mean
+when you get a function I'm cuz you can
+
+357
+00:20:36,230 --> 00:20:40,080
+all miss nicole is dependent think
+functions
+
+358
+00:20:40,080 --> 00:20:43,700
+on so once I'm done that I get them the
+average temperature everyday
+
+359
+00:20:43,700 --> 00:20:46,770
+right and you could argue for like hours
+about whether or not this is a useful
+
+360
+00:20:46,770 --> 00:20:47,450
+thing
+
+361
+00:20:47,450 --> 00:20:52,380
+like this like the best way to resample
+on but we want
+
+362
+00:20:52,380 --> 00:20:55,550
+you can down the days afterwards and do
+a better job than me
+
+363
+00:20:55,550 --> 00:20:59,770
+that is what I would like sup I'm began
+to lick
+
+364
+00:20:59,770 --> 00:21:02,800
+on January 3rd it was like -14 Southee
+
+365
+00:21:02,800 --> 00:21:06,440
+celsius which is pretty cold i think is
+a good zero Fahrenheit
+
+366
+00:21:06,440 --> 00:21:09,860
+on if you're American on
+
+367
+00:21:09,860 --> 00:21:13,520
+so a judge a llegar
+
+368
+00:21:13,520 --> 00:21:16,910
+of a big bucks for 10 temperature and
+you'll see like this
+
+369
+00:21:16,910 --> 00:21:20,030
+I'm gonna go over there really quickly
+on because this is really exciting
+
+370
+00:21:20,030 --> 00:21:23,520
+to me on up in Rotana okay this bike
+here
+
+371
+00:21:23,520 --> 00:21:26,640
+this within my reach and it went up to
+18 degrees
+
+372
+00:21:26,640 --> 00:21:31,120
+and it was beautiful and I missed it and
+all of my friends were like
+
+373
+00:21:31,120 --> 00:21:34,590
+all in a son Nathan I was up 5 nose ring
+a tank top and a mini mart
+
+374
+00:21:34,590 --> 00:21:37,970
+Jan I was like why do I miss it
+
+375
+00:21:37,970 --> 00:21:41,620
+I'm anyway it was like kind in her death
+but I get the temperature went up super
+
+376
+00:21:41,620 --> 00:21:44,270
+high and everyone went up by King evelyn
+was so excited
+
+377
+00:21:44,270 --> 00:21:47,770
+and then went down again unlike
+nevermind whenever their bike away get
+
+378
+00:21:47,770 --> 00:21:48,930
+right leg
+
+379
+00:21:48,930 --> 00:21:52,230
+I'm as he can feel like there there's
+like a real correlation here
+
+380
+00:21:52,230 --> 00:21:56,660
+right but the rest a bit I don't know
+Lake I'm I'm not like as stalled on like
+
+381
+00:21:56,660 --> 00:21:57,940
+the other specs Nisga'a
+
+382
+00:21:57,940 --> 00:22:01,040
+just kinda that one in March are there
+
+383
+00:22:01,040 --> 00:22:05,160
+I'm but that's cool we've done finance
+him
+
+384
+00:22:05,160 --> 00:22:08,220
+by which I mean looking at Grafton point
+and
+
+385
+00:22:08,220 --> 00:22:11,250
+not a real scientist so on
+
+386
+00:22:11,250 --> 00:22:14,420
+right so now the next question was like
+
+387
+00:22:14,420 --> 00:22:19,210
+there's more variation here right Lake
+similar to go but it's raining
+
+388
+00:22:19,210 --> 00:22:22,340
+let's look at some precipitation
+
+389
+00:22:22,340 --> 00:22:26,330
+so I want snow like what percentage of
+each day was it raining
+
+390
+00:22:26,330 --> 00:22:30,190
+right and here you might again bank and
+we if we look at our original
+
+391
+00:22:30,190 --> 00:22:33,610
+on data weather data frame year
+
+392
+00:22:33,610 --> 00:22:36,790
+it doesn't give us like Arrhenius
+quotient it says like
+
+393
+00:22:36,790 --> 00:22:40,560
+a string which is the weather right I'm
+so you might think you have to do work
+
+394
+00:22:40,560 --> 00:22:41,110
+here
+
+395
+00:22:41,110 --> 00:22:46,870
+and you'd be wrong because pandas knows
+everything
+
+396
+00:22:46,870 --> 00:22:51,030
+so palaces all is magical string
+functions so what you say is like
+
+397
+00:22:51,030 --> 00:22:54,860
+look at the weather and then go to like
+the bunch of singing bhajans
+
+398
+00:22:54,860 --> 00:22:58,310
+and Philip does contain rain and then it
+gives you one yr 0
+
+399
+00:22:58,310 --> 00:23:01,620
+depending on whether or not it contains
+a string rain and it does everything for
+
+400
+00:23:01,620 --> 00:23:02,280
+you
+
+401
+00:23:02,280 --> 00:23:07,490
+arm so a menu sample that again every
+day
+
+402
+00:23:07,490 --> 00:23:11,230
+I'm so we get like the percentage hours
+a day when it was raining right
+
+403
+00:23:11,230 --> 00:23:14,230
+like whether or not that's right thing I
+don't now right maybe
+
+404
+00:23:14,230 --> 00:23:19,330
+arm and then we get this other guy a I'm
+like this happens a lot less clear to me
+
+405
+00:23:19,330 --> 00:23:22,660
+on there's some spikes over here
+
+406
+00:23:22,660 --> 00:23:25,810
+where like like this one
+
+407
+00:23:25,810 --> 00:23:30,910
+and over here Lake maybe that correlates
+like a spike down where they can kind of
+
+408
+00:23:30,910 --> 00:23:32,280
+see it like
+
+409
+00:23:32,280 --> 00:23:36,460
+like it like like this her and bit but
+like also like pointing at
+
+410
+00:23:36,460 --> 00:23:41,770
+a spikes in grasses like a really
+dangerous things to do in analyzing data
+
+411
+00:23:41,770 --> 00:23:45,070
+is not a good practice and because you
+like you can just like over Pitt
+
+412
+00:23:45,070 --> 00:23:49,130
+with your brain a lot cuz we're really
+good technique patterns that are there
+
+413
+00:23:49,130 --> 00:23:52,650
+on so it is better to look at a
+correlation I'm with you could also do
+
+414
+00:23:52,650 --> 00:23:54,200
+but we're not going to do
+
+415
+00:23:54,200 --> 00:23:57,530
+on because this is all I have to say
+
+416
+00:23:57,530 --> 00:24:01,190
+madame applied yet I'm worth it the
+glove save our practical example
+
+417
+00:24:01,190 --> 00:24:04,310
+right on this wasn't a lot of code
+
+418
+00:24:04,310 --> 00:24:08,650
+is the main when I wanna make rain on
+except for the weather thing which is
+
+419
+00:24:08,650 --> 00:24:09,680
+like a disaster
+
+420
+00:24:09,680 --> 00:24:13,870
+but pretend that didn't happen home and
+there were no group right
+
+421
+00:24:13,870 --> 00:24:17,750
+like we made these graphs to make we
+found out if it be hindering me
+
+422
+00:24:17,750 --> 00:24:21,050
+like resample than we did others can't
+kinda cool stuff
+
+423
+00:24:21,050 --> 00:24:24,920
+I mean after it leaves we had really up
+to like six lines of code right
+
+424
+00:24:24,920 --> 00:24:29,070
+including reading in the data I was
+super easy
+
+425
+00:24:29,070 --> 00:24:32,260
+on and raised experiment SEM
+
+426
+00:24:32,260 --> 00:24:36,470
+a beloved Xperia on if you want to be
+using these tools
+
+427
+00:24:36,470 --> 00:24:39,720
+on I find it super useful 3some the
+documentation
+
+428
+00:24:39,720 --> 00:24:43,040
+a minute on a documentation on and
+
+429
+00:24:43,040 --> 00:24:46,230
+what I often find is already considering
+I learn a little bit
+
+430
+00:24:46,230 --> 00:24:50,130
+and the model look at the darkness Albin
+things like totally helps Bionic I wish
+
+431
+00:24:50,130 --> 00:24:52,060
+I knew about that like six months ago
+
+432
+00:24:52,060 --> 00:24:55,610
+answers good girl looking a little bit
+from time to time and brush up
+
+433
+00:24:55,610 --> 00:24:59,430
+a month you learned from the basics and
+is a good issues PDF and really good API
+
+434
+00:24:59,430 --> 00:25:00,420
+documentation
+
+435
+00:25:00,420 --> 00:25:03,420
+I really enjoy it I'm was begin even at
+a company
+
+436
+00:25:03,420 --> 00:25:07,360
+108 houses which I enjoyed has led a
+really great examples
+
+437
+00:25:07,360 --> 00:25:10,700
+on one of the main most important things
+is like
+
+438
+00:25:10,700 --> 00:25:14,350
+always ready use like these built-in
+operations really dari sample
+
+439
+00:25:14,350 --> 00:25:17,520
+or like I'm things that have been built
+
+440
+00:25:17,520 --> 00:25:20,900
+these are built in on because Rainier on
+dips is
+
+441
+00:25:20,900 --> 00:25:24,230
+a lot of %uh get merv your work I mean
+BB
+
+442
+00:25:24,230 --> 00:25:27,900
+really slow it'll be like 20 times lower
+I'm as we saw before
+
+443
+00:25:27,900 --> 00:25:31,640
+right and it's a bit like it doesn't
+matter everything a second but if you
+
+444
+00:25:31,640 --> 00:25:33,290
+doing a real big competitions
+
+445
+00:25:33,290 --> 00:25:37,010
+that a problem on and
+
+446
+00:25:37,010 --> 00:25:40,330
+though you can if you really need to do
+some custom competition you can use
+
+447
+00:25:40,330 --> 00:25:41,400
+tools like site on
+
+448
+00:25:41,400 --> 00:25:45,650
+on tutor to like right things that are
+compiled see an actual on quickly
+
+449
+00:25:45,650 --> 00:25:49,330
+and that's pretty approachable and I've
+done it before I kinda like Google two
+
+450
+00:25:49,330 --> 00:25:52,100
+examples and dived into the pen is risk
+getting pulled from the ad and copy
+
+451
+00:25:52,100 --> 00:25:52,550
+didn't
+
+452
+00:25:52,550 --> 00:25:55,910
+messed with it and worked I'm its that
+pretty virtual to do that
+
+453
+00:25:55,910 --> 00:25:59,080
+on but it's easier to avoid doing that
+and he's gotten back to me whenever
+
+454
+00:25:59,080 --> 00:26:00,050
+possible
+
+455
+00:26:00,050 --> 00:26:03,050
+on and often where things are happening
+
+456
+00:26:03,050 --> 00:26:08,050
+on one thing that I did is I may depend
+as cookbook if you wanna get started
+
+457
+00:26:08,050 --> 00:26:11,810
+I mister evans get have repository and
+there's like 10 chapters which are like
+
+458
+00:26:11,810 --> 00:26:14,910
+differently like small example the
+things that you can
+
+459
+00:26:14,910 --> 00:26:18,660
+do it panders together with like
+practical examples to this this is data
+
+460
+00:26:18,660 --> 00:26:20,520
+said there's some other data says the
+years
+
+461
+00:26:20,520 --> 00:26:24,060
+to kind of show off some has kept its
+capabilities on
+
+462
+00:26:24,060 --> 00:26:28,090
+and is a few and take a look at that it
+could contribute to it also
+
+463
+00:26:28,090 --> 00:26:31,090
+and examples like how to use it with
+lexical databases
+
+464
+00:26:31,090 --> 00:26:36,100
+on and that might be a place get started
+
+465
+00:26:36,100 --> 00:26:43,100
+and method
+
+466
+00:26:43,400 --> 00:26:46,409
+and it's fantastic
+
+467
+00:26:46,409 --> 00:26:49,549
+on sorry if there are any questions for
+Julia
+
+468
+00:26:49,549 --> 00:26:53,200
+upcoming lineup at this microphone that
+with cleverly placed here
+
+469
+00:26:53,200 --> 00:26:57,850
+front of the room I will just give few
+moments for like you to form
+
+470
+00:26:57,850 --> 00:27:01,769
+right this question thank you
+
+471
+00:27:01,769 --> 00:27:06,380
+going and mint
+
+472
+00:27:06,380 --> 00:27:13,380
+effectiveness prior different
+
+473
+00:27:13,779 --> 00:27:16,830
+actors said
+
+474
+00:27:16,830 --> 00:27:20,830
+that's really the question I guess I
+think them as a look at the database
+
+475
+00:27:20,830 --> 00:27:21,389
+queries
+
+476
+00:27:21,389 --> 00:27:24,710
+I'm Xavier if you think that it be
+through that little affiliate group
+
+477
+00:27:24,710 --> 00:27:25,990
+based way picking up thanks
+
+478
+00:27:25,990 --> 00:27:31,490
+on and if you're not I wanna lick the
+more you practice it
+
+479
+00:27:31,490 --> 00:27:34,529
+the better get that like a not a very
+good answer her
+
+480
+00:27:34,529 --> 00:27:38,450
+I
+
+481
+00:27:38,450 --> 00:27:42,250
+where's likes like it learn into this
+the slides
+
+482
+00:27:42,250 --> 00:27:46,350
+to nigga psyche learn
+
+483
+00:27:46,350 --> 00:27:51,000
+another up oh yeah I talked with a
+cabana abstract I'm
+
+484
+00:27:51,000 --> 00:27:54,870
+so like not by individual a second I'm
+
+485
+00:27:54,870 --> 00:27:59,260
+so anytime you want to use if you wanna
+division in on your plan is it depends
+
+486
+00:27:59,260 --> 00:28:00,130
+I'll just work
+
+487
+00:28:00,130 --> 00:28:03,130
+on soap and if you feel like getting our
+asses
+
+488
+00:28:03,130 --> 00:28:06,510
+secular modeling yes a gallon for
+modeling
+
+489
+00:28:06,510 --> 00:28:09,760
+yet if you wanna make a matte model you
+can bikes and like a pat is a demanding
+
+490
+00:28:09,760 --> 00:28:10,120
+but
+
+491
+00:28:10,120 --> 00:28:13,230
+and that'll that'll work seamlessly I'm
+a time that I do
+
+492
+00:28:13,230 --> 00:28:16,649
+yeah I'm
+
+493
+00:28:16,649 --> 00:28:19,860
+so first of this looks like a lot of fun
+cuz I said he's been releasing a lot of
+
+494
+00:28:19,860 --> 00:28:20,870
+open data lately
+
+495
+00:28:20,870 --> 00:28:26,039
+on but candid can this do geographical
+stuff graphical stuff
+
+496
+00:28:26,039 --> 00:28:30,570
+or geographic to grab gotta that's a
+good question I don't think that panders
+
+497
+00:28:30,570 --> 00:28:34,789
+does do graphical stuff by itself I
+
+498
+00:28:34,789 --> 00:28:37,799
+don't know that's chip not that I know
+of on
+
+499
+00:28:37,799 --> 00:28:41,179
+but there are really good tools that
+have seen
+
+500
+00:28:41,179 --> 00:28:44,309
+I'll get yep I couldn't I can tell you
+something later
+
+501
+00:28:44,309 --> 00:28:49,529
+okay appreciate the talk
+
+502
+00:28:49,529 --> 00:28:54,429
+up quick question on customizing hype
+
+503
+00:28:54,429 --> 00:28:59,070
+different custom ship
+
+504
+00:28:59,070 --> 00:29:02,370
+was wondering if you had if you
+customize
+
+505
+00:29:02,370 --> 00:29:05,830
+I'd recommend
+
+506
+00:29:05,830 --> 00:29:09,299
+surgeon mean that customers in people's
+pockets
+
+507
+00:29:09,299 --> 00:29:15,370
+no customizing the actual con as
+understood
+
+508
+00:29:15,370 --> 00:29:19,700
+customized tooth
+
+509
+00:29:19,700 --> 00:29:22,940
+different hype okay
+
+510
+00:29:22,940 --> 00:29:26,110
+even exam you would like interactive
+JavaScript things and I found the
+
+511
+00:29:26,110 --> 00:29:26,690
+notebook
+
+512
+00:29:26,690 --> 00:29:29,750
+arnelle a different option %uh
+
+513
+00:29:29,750 --> 00:29:34,049
+so the edges I don't know I think the
+answer there now but I would love to see
+
+514
+00:29:34,049 --> 00:29:41,049
+yeah I don't do that how do you make
+sure the conclusions make
+
+515
+00:29:41,909 --> 00:29:45,169
+become
+
+516
+00:29:45,169 --> 00:29:48,559
+the attic the answer to that is like
+learnt this is text
+
+517
+00:29:48,559 --> 00:29:52,600
+and acquire friend to know statistics
+
+518
+00:29:52,600 --> 00:29:56,460
+on yeah on
+
+519
+00:29:56,460 --> 00:30:01,309
+I don't want to say too much about the
+curricula go embarrass myself
+
+520
+00:30:01,309 --> 00:30:04,750
+but on one thing you can do is be
+
+521
+00:30:04,750 --> 00:30:08,470
+really careful about what did he look at
+
+522
+00:30:08,470 --> 00:30:12,340
+Cilic so for example you don't wanna
+lick look at data and the like
+
+523
+00:30:12,340 --> 00:30:15,970
+take up points a finger in dressing like
+I was doing great what I was doing was a
+
+524
+00:30:15,970 --> 00:30:16,700
+terrible thing to do
+
+525
+00:30:16,700 --> 00:30:19,720
+right you can do that on my Hindu
+
+526
+00:30:19,720 --> 00:30:22,600
+is like think about the question they
+are asking carefully before you look at
+
+527
+00:30:22,600 --> 00:30:23,169
+the data
+
+528
+00:30:23,169 --> 00:30:26,190
+on and I think that's a good way yeah
+like
+
+529
+00:30:26,190 --> 00:30:29,270
+ok asking the question after you look at
+the data is about choice
+
+530
+00:30:29,270 --> 00:30:32,639
+because then like you'd like me to
+question right and the DS question for
+
+531
+00:30:32,639 --> 00:30:33,389
+you look at the deer
+
+532
+00:30:33,389 --> 00:30:39,480
+benefit a better chance like doing the
+job Boyd
+
+533
+00:30:39,480 --> 00:30:42,679
+hearing your experience these years into
+this this topic
+
+534
+00:30:42,679 --> 00:30:49,679
+everyplace like Julie Evans for talks
+
+535
+00:30:54,130 --> 00:30:54,610
+so much
+

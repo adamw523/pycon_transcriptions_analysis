@@ -1,0 +1,2366 @@
+1
+00:00:00,030 --> 00:00:04,360
+pleasure to introduce Kate Hudson and
+nichols a comment
+
+2
+00:00:04,360 --> 00:00:07,779
+who are going to talk to you about
+technical on morning
+
+3
+00:00:07,779 --> 00:00:10,960
+training and mentoring please a big big
+round of applause
+
+4
+00:00:10,960 --> 00:00:17,960
+hey everybody
+
+5
+00:00:20,500 --> 00:00:24,300
+welcome to our talk sa house icon then
+for everyone
+
+6
+00:00:24,300 --> 00:00:28,779
+Kenya play roller coaster
+
+7
+00:00:28,779 --> 00:00:33,200
+um so wanna talk to you today about
+technical ongoing training and mentoring
+
+8
+00:00:33,200 --> 00:00:36,430
+and my name's Kate Middleton I'm a
+software engineer I
+
+9
+00:00:36,430 --> 00:00:40,460
+and live in San Francisco California I'm
+because Akerman
+
+10
+00:00:40,460 --> 00:00:43,680
+I'm that picture that's not her I'm
+sufferance their
+
+11
+00:00:43,680 --> 00:00:47,660
+at membrane I'm also a graduate from
+high grade academy
+
+12
+00:00:47,660 --> 00:00:50,660
+and I was there first senior engineer
+love that ok
+
+13
+00:00:50,660 --> 00:00:54,989
+to join in and bright and I've been
+helping on helping increasingly with I'm
+
+14
+00:00:54,989 --> 00:00:55,370
+already
+
+15
+00:00:55,370 --> 00:00:59,820
+each successive new junior engineer Jain
+yes so the reason that a call and I
+
+16
+00:00:59,820 --> 00:01:01,449
+submitted the stock in the first place
+
+17
+00:01:01,449 --> 00:01:04,979
+is on we both had very separate
+experience as a different companies
+
+18
+00:01:04,979 --> 00:01:08,270
+where we join the company we worked
+there for a while
+
+19
+00:01:08,270 --> 00:01:11,729
+we reached a certain proficiency at
+programming and we look back
+
+20
+00:01:11,729 --> 00:01:15,049
+on our time unlike we could have gotten
+here much faster if there had been
+
+21
+00:01:15,049 --> 00:01:18,650
+any sort of onboarding at all and so we
+turned around and create a program to
+
+22
+00:01:18,650 --> 00:01:20,509
+respective companies to help new
+
+23
+00:01:20,509 --> 00:01:24,729
+engineers get up to speed I'm in so we
+came together and submit the stock
+
+24
+00:01:24,729 --> 00:01:28,729
+so what is
+
+25
+00:01:28,729 --> 00:01:32,360
+onboarding for the purposes of this talk
+onboarding is
+
+26
+00:01:32,360 --> 00:01:36,240
+the process up taking someone from
+outside a team and bringing them in
+
+27
+00:01:36,240 --> 00:01:40,350
+making them a happy productive an
+independent member of the team
+
+28
+00:01:40,350 --> 00:01:43,490
+so today we're specifically going to be
+talking about onboarding junior
+
+29
+00:01:43,490 --> 00:01:44,170
+engineers
+
+30
+00:01:44,170 --> 00:01:47,890
+am but a lot of the things that we do
+mention today
+
+31
+00:01:47,890 --> 00:01:52,840
+are useful for people of all different
+skill levels alright
+
+32
+00:01:52,840 --> 00:01:55,979
+why do you care I'm gonna give you four
+major reasons why you should care about
+
+33
+00:01:55,979 --> 00:01:56,710
+on morning
+
+34
+00:01:56,710 --> 00:02:00,020
+I assume that everyone here probably
+does already care since you came to the
+
+35
+00:02:00,020 --> 00:02:00,640
+stock
+
+36
+00:02:00,640 --> 00:02:03,460
+but I want to convince you that all
+morning is important not just in general
+
+37
+00:02:03,460 --> 00:02:04,439
+but important
+
+38
+00:02:04,439 --> 00:02:08,090
+now so the four things I'm gonna talk
+about %uh the productivity of the
+
+39
+00:02:08,090 --> 00:02:09,050
+individual
+
+40
+00:02:09,050 --> 00:02:12,390
+the park tivity of the company the
+productivity of the team
+
+41
+00:02:12,390 --> 00:02:15,819
+and bonus diversity in at
+
+42
+00:02:15,819 --> 00:02:19,800
+the productivity of the individual so
+this is a category that most people
+
+43
+00:02:19,800 --> 00:02:23,120
+think about building the skills at the
+new engineer getting up to speed on your
+
+44
+00:02:23,120 --> 00:02:23,790
+tools
+
+45
+00:02:23,790 --> 00:02:27,239
+there's another category in this which
+is their confidence and happiness
+
+46
+00:02:27,239 --> 00:02:31,019
+a lot of people think that confidence
+follow skills when in fact
+
+47
+00:02:31,019 --> 00:02:34,580
+skills often follow confidence competent
+people are outgoing
+
+48
+00:02:34,580 --> 00:02:38,250
+excited to learn new things they reach
+outside the bounds so
+
+49
+00:02:38,250 --> 00:02:42,590
+ongoing is really great for increasing
+both the confidence and skill set
+
+50
+00:02:42,590 --> 00:02:46,760
+have new engineers the productivity of
+the company
+
+51
+00:02:46,760 --> 00:02:50,319
+companies care about money as they
+should and so on morning is great for
+
+52
+00:02:50,319 --> 00:02:50,640
+her
+
+53
+00:02:50,640 --> 00:02:53,769
+for the bottom line more productive
+engineers make you more money
+
+54
+00:02:53,769 --> 00:02:57,400
+and that's great and everyone's happy
+because the company is making more money
+
+55
+00:02:57,400 --> 00:03:01,170
+the party of the team
+
+56
+00:03:01,170 --> 00:03:04,860
+this is really important because as you
+add new engineers to a team
+
+57
+00:03:04,860 --> 00:03:09,090
+the team fundamentally changes with each
+new person there's
+
+58
+00:03:09,090 --> 00:03:12,090
+a lot of things about how you don't
+really know something unless you teach
+
+59
+00:03:12,090 --> 00:03:12,379
+it
+
+60
+00:03:12,379 --> 00:03:15,700
+and this is absolutely true for company
+culture in process
+
+61
+00:03:15,700 --> 00:03:18,989
+if you can't explain your company
+culture to a new engineer
+
+62
+00:03:18,989 --> 00:03:22,090
+and you can't explain your process for
+shipping code
+
+63
+00:03:22,090 --> 00:03:26,019
+then you don't know it yourself and so
+every time you add a new engineer
+
+64
+00:03:26,019 --> 00:03:30,019
+you should reiterate this post the new
+person and also to the existing team
+
+65
+00:03:30,019 --> 00:03:33,930
+so you have something a little bit more
+like this and as a team grows
+
+66
+00:03:33,930 --> 00:03:37,220
+this becomes increasingly important for
+example at LinkedIn
+
+67
+00:03:37,220 --> 00:03:40,650
+at a certain point every new engineer
+they added was decreasing
+
+68
+00:03:40,650 --> 00:03:44,569
+their productivity so the new ISP p.m.
+engineering had to come in and revamped
+
+69
+00:03:44,569 --> 00:03:45,239
+everything
+
+70
+00:03:45,239 --> 00:03:48,530
+so that adding new engineers didn't
+decrease the over overall productivity
+
+71
+00:03:48,530 --> 00:03:49,700
+other team
+
+72
+00:03:49,700 --> 00:03:54,989
+so this is one of my favorite questions
+that I have ever made up
+
+73
+00:03:54,989 --> 00:04:00,040
+am I use to coach high school JV water
+polo when I was in college
+
+74
+00:04:00,040 --> 00:04:04,450
+and at like 14 and 15-year-old girls are
+beginners at water polo
+
+75
+00:04:04,450 --> 00:04:08,980
+and have these really philosophical team
+meetings no I come in like posters and
+
+76
+00:04:08,980 --> 00:04:12,150
+so I come in with this one day just
+trying to explain to them the importance
+
+77
+00:04:12,150 --> 00:04:13,689
+of teamwork
+
+78
+00:04:13,689 --> 00:04:17,220
+and I told them your guys ability to win
+as a team
+
+79
+00:04:17,220 --> 00:04:20,290
+is the sum up your skills and talents
+multiplied
+
+80
+00:04:20,290 --> 00:04:24,180
+by your ability to work together as a
+team and this means that you all can be
+
+81
+00:04:24,180 --> 00:04:25,169
+less skilled
+
+82
+00:04:25,169 --> 00:04:28,780
+or more mediocre water player water polo
+players who work together incredibly
+
+83
+00:04:28,780 --> 00:04:29,530
+well
+
+84
+00:04:29,530 --> 00:04:32,889
+and you can be teams are people who are
+theoretically more skilled
+
+85
+00:04:32,889 --> 00:04:36,500
+or more talented but don't work together
+as well and you can see this
+
+86
+00:04:36,500 --> 00:04:40,250
+in engineering teams this is absolutely
+true no matter what the type of team is
+
+87
+00:04:40,250 --> 00:04:43,460
+am there's a lotta really big products
+out there like
+
+88
+00:04:43,460 --> 00:04:47,550
+gmail was is one of them that were built
+by teams have less than 10 people
+
+89
+00:04:47,550 --> 00:04:50,660
+some even bought by teams at less than
+five people so a small team can be
+
+90
+00:04:50,660 --> 00:04:51,850
+highly productive
+
+91
+00:04:51,850 --> 00:04:55,940
+especially if they work together really
+well
+
+92
+00:04:55,940 --> 00:05:01,009
+are a bonus category diversity how many
+have you have read the doctor Seuss book
+
+93
+00:05:01,009 --> 00:05:04,020
+at see about the speeches anyone
+
+94
+00:05:04,020 --> 00:05:07,650
+okay spin again so it some to children's
+
+95
+00:05:07,650 --> 00:05:11,699
+poem about kind of this society where
+some
+
+96
+00:05:11,699 --> 00:05:15,120
+some speeches have stars on their
+bellies and others teachers don't
+
+97
+00:05:15,120 --> 00:05:18,470
+it's about the division that happens
+within the speeches because I'll
+
+98
+00:05:18,470 --> 00:05:21,630
+the stars on some belizean and the nonce
+as another cell
+
+99
+00:05:21,630 --> 00:05:26,240
+I use nature's to represent diverse city
+diversity can mean many different things
+
+100
+00:05:26,240 --> 00:05:30,960
+so this happens a lot in tech what you
+have is a homogeneous group
+
+101
+00:05:30,960 --> 00:05:34,110
+and they bring into the fold other
+people who are like themselves and they
+
+102
+00:05:34,110 --> 00:05:35,669
+have no onboarding
+
+103
+00:05:35,669 --> 00:05:39,789
+and this works because the new person as
+a lot like the people who
+
+104
+00:05:39,789 --> 00:05:43,060
+are already on the team they probably
+communicate in similar ways
+
+105
+00:05:43,060 --> 00:05:47,130
+and they probably have similar hobbies
+and interests so getting up to speed on
+
+106
+00:05:47,130 --> 00:05:49,449
+all the social practices within the
+company
+
+107
+00:05:49,449 --> 00:05:53,000
+is easier for this person they need us
+onboarding and it gives them an
+
+108
+00:05:53,000 --> 00:05:55,650
+advantage that they're like the existing
+group
+
+109
+00:05:55,650 --> 00:05:59,240
+however if you would like to hire people
+who are different
+
+110
+00:05:59,240 --> 00:06:02,259
+than the the team you already have you
+don't want something like this to happen
+
+111
+00:06:02,259 --> 00:06:04,020
+you don't want people to feel
+
+112
+00:06:04,020 --> 00:06:07,539
+like they are outside the group and so
+having explicit onboarding can help with
+
+113
+00:06:07,539 --> 00:06:07,789
+this
+
+114
+00:06:07,780 --> 00:06:12,060
+enormously a having a way to bring
+people up to speed both on social
+
+115
+00:06:12,060 --> 00:06:14,050
+practices and team culture
+
+116
+00:06:14,050 --> 00:06:17,720
+in a way that doesn't rely on the
+existing social structure is good for
+
+117
+00:06:17,720 --> 00:06:18,520
+diversity
+
+118
+00:06:18,520 --> 00:06:22,440
+and if you are not sold on hiring people
+who are different from the team you
+
+119
+00:06:22,440 --> 00:06:23,410
+already have
+
+120
+00:06:23,410 --> 00:06:29,220
+feel free to come talk to me afterwards
+him
+
+121
+00:06:29,220 --> 00:06:33,600
+alright cool shit on board at this is
+either a picture up a bunch of and
+
+122
+00:06:33,600 --> 00:06:34,840
+scaring some food
+
+123
+00:06:34,840 --> 00:06:38,680
+or buncha people carrying a boat to open
+to interpretation but
+
+124
+00:06:38,680 --> 00:06:41,410
+the idea is you should spread out the
+load you don't wanna burn out on
+
+125
+00:06:41,410 --> 00:06:42,740
+boarding mentors
+
+126
+00:06:42,740 --> 00:06:45,930
+am actually a lot of people on the team
+can mentor
+
+127
+00:06:45,930 --> 00:06:49,039
+and on poor people in different areas it
+doesn't always have to be someone who is
+
+128
+00:06:49,039 --> 00:06:50,620
+incredibly senior
+
+129
+00:06:50,620 --> 00:06:53,720
+yeah at event bright I was paired up
+with someone who was
+
+130
+00:06:53,720 --> 00:06:56,990
+really skilled and talented when I was
+trying to set up my dev environment
+
+131
+00:06:56,990 --> 00:06:58,030
+initially
+
+132
+00:06:58,030 --> 00:07:02,500
+and for all his skills and talents he
+hadn't recently set his environment up
+
+133
+00:07:02,500 --> 00:07:06,430
+so he didn't know you know the recent
+wearables are not a bug that were in the
+
+134
+00:07:06,430 --> 00:07:07,280
+system
+
+135
+00:07:07,280 --> 00:07:11,069
+that say the most recent person to set
+up their system did
+
+136
+00:07:11,069 --> 00:07:15,240
+so in the end I found someone who had
+done it more recently
+
+137
+00:07:15,240 --> 00:07:18,880
+and he was a great help to me in setting
+up my environment
+
+138
+00:07:18,880 --> 00:07:22,430
+so this is another great way to get more
+people involved
+
+139
+00:07:22,430 --> 00:07:27,639
+just right away in someone's integration
+into a team
+
+140
+00:07:27,639 --> 00:07:30,470
+alright how should we think about
+onboarding at a conceptual level you
+
+141
+00:07:30,470 --> 00:07:32,389
+want to maximize the return on
+investment
+
+142
+00:07:32,389 --> 00:07:35,449
+I think this makes sense to everyone no
+one wants to put in more than they get
+
+143
+00:07:35,449 --> 00:07:36,610
+out of something
+
+144
+00:07:36,610 --> 00:07:40,430
+this is a really common inefficient wait
+on board but I see a lot where
+
+145
+00:07:40,430 --> 00:07:44,069
+new ongoing mentors are like I'm going
+to be the best
+
+146
+00:07:44,069 --> 00:07:46,860
+onboarding mentor ever and we're gonna
+do everything together and we're gonna
+
+147
+00:07:46,860 --> 00:07:50,099
+take all these coding classes and by the
+end of three months this person is going
+
+148
+00:07:50,099 --> 00:07:50,590
+snow
+
+149
+00:07:50,590 --> 00:07:54,860
+everything that I now and that's wildly
+unrealistic and also leads to a lot of
+
+150
+00:07:54,860 --> 00:07:55,590
+burnout
+
+151
+00:07:55,590 --> 00:07:59,160
+and then companies are like we can
+support emerging engineers it's just too
+
+152
+00:07:59,160 --> 00:08:01,069
+much work for everyone
+
+153
+00:08:01,069 --> 00:08:04,789
+so instead of doing something like this
+I think bumper bowling is a better
+
+154
+00:08:04,789 --> 00:08:05,590
+analogy
+
+155
+00:08:05,590 --> 00:08:09,419
+which is it's also the only way that I
+should ever Bowl set up a world
+
+156
+00:08:09,419 --> 00:08:14,120
+where the junior engineer can play
+freely and make mistakes and you don't
+
+157
+00:08:14,120 --> 00:08:17,530
+have to hand hold them to the process of
+getting up to speed on things are
+
+158
+00:08:17,530 --> 00:08:18,979
+learning new technologies
+
+159
+00:08:18,979 --> 00:08:22,050
+you can really kinda believe them check
+in periodically and make sure that
+
+160
+00:08:22,050 --> 00:08:23,470
+they're roughly on the right track
+
+161
+00:08:23,470 --> 00:08:29,090
+track I am but they have the freedom to
+explore and grow without burning out
+
+162
+00:08:29,090 --> 00:08:32,240
+ongoing mentors event bread I feel much
+more
+
+163
+00:08:32,240 --> 00:08:36,360
+comfortable writing code and breaking
+things with impunity when I know it's a
+
+164
+00:08:36,360 --> 00:08:37,570
+well-tested area
+
+165
+00:08:37,570 --> 00:08:40,430
+the code base so that I know that I'm
+not gonna push anything that's gonna
+
+166
+00:08:40,430 --> 00:08:41,140
+break anything
+
+167
+00:08:41,140 --> 00:08:44,169
+production and give me a panic attack
+yeah
+
+168
+00:08:44,169 --> 00:08:47,660
+so from a technical perspective having a
+lot of automation are under development
+
+169
+00:08:47,660 --> 00:08:49,140
+environments and deploy
+
+170
+00:08:49,140 --> 00:08:53,140
+is really useful for hiring junior
+engineers you can create
+
+171
+00:08:53,140 --> 00:08:56,589
+places where they can go and play and
+not have to worry about it
+
+172
+00:08:56,589 --> 00:08:59,690
+it's also important to note that one of
+the tenants have expertise
+
+173
+00:08:59,690 --> 00:09:03,680
+is the ability to set boundaries in
+scope in order to scope you have to
+
+174
+00:09:03,680 --> 00:09:06,100
+understand the domain space incredibly
+well
+
+175
+00:09:06,100 --> 00:09:09,830
+and so junior engineers by definition
+are not good at scoping
+
+176
+00:09:09,830 --> 00:09:13,170
+and are not good at setting boundaries
+because how could they be and so one
+
+177
+00:09:13,170 --> 00:09:16,510
+other things to think about is setting
+these boundaries for junior engineers
+
+178
+00:09:16,510 --> 00:09:19,550
+making sure that they have this world
+are they understand where they are and
+
+179
+00:09:19,550 --> 00:09:22,630
+what they're doing
+
+180
+00:09:22,630 --> 00:09:25,670
+so there are three major categories to
+think about anything about how on board
+
+181
+00:09:25,670 --> 00:09:26,839
+a junior engineer
+
+182
+00:09:26,839 --> 00:09:30,779
+the first as technical knowledge
+normally people focus most of their
+
+183
+00:09:30,779 --> 00:09:31,380
+attention
+
+184
+00:09:31,380 --> 00:09:35,070
+on technical knowledge like ninety
+percent of it I think it's only roughly
+
+185
+00:09:35,070 --> 00:09:37,560
+a third of what you need to get someone
+up to speed on
+
+186
+00:09:37,560 --> 00:09:41,089
+another third as the company knowledge
+in process how do you ship code how do
+
+187
+00:09:41,089 --> 00:09:42,899
+you decide which features get built
+
+188
+00:09:42,899 --> 00:09:46,680
+I'm who is in charge of things and the
+third the third category as personal
+
+189
+00:09:46,680 --> 00:09:47,529
+development
+
+190
+00:09:47,529 --> 00:09:51,930
+so like I said that confidence and that
+a project we were someone feels like
+
+191
+00:09:51,930 --> 00:09:52,990
+they are independent
+
+192
+00:09:52,990 --> 00:09:57,080
+progressing is hugely important not to
+mention the fact that if someone feels
+
+193
+00:09:57,080 --> 00:09:59,890
+like they're going somewhere in a
+company they're more likely to stick
+
+194
+00:09:59,890 --> 00:10:02,420
+around
+
+195
+00:10:02,420 --> 00:10:06,089
+cell now you've hired a new junior
+engineer
+
+196
+00:10:06,089 --> 00:10:09,050
+how you get this started really I'm
+boarding should probably start from the
+
+197
+00:10:09,050 --> 00:10:10,880
+moment they accept your offer
+
+198
+00:10:10,880 --> 00:10:14,690
+but for our purposes were gonna define a
+on morning
+
+199
+00:10:14,690 --> 00:10:18,100
+as the process of getting someone up to
+speed until they can be
+
+200
+00:10:18,100 --> 00:10:21,870
+reliably independent you can they can
+ask questions but you can set them up
+
+201
+00:10:21,870 --> 00:10:25,300
+for the project and know that they'll be
+able to get it done without just
+
+202
+00:10:25,300 --> 00:10:27,459
+floundering around
+
+203
+00:10:27,459 --> 00:10:31,060
+so it there's really a critical first
+week and probably the take at least
+
+204
+00:10:31,060 --> 00:10:34,640
+three months for any engineer to get up
+to speed we're positing that probably
+
+205
+00:10:34,640 --> 00:10:39,320
+six months or years a better estimate
+for junior people
+
+206
+00:10:39,320 --> 00:10:44,399
+so we call this week one it's really
+arbitrary chunk of time number one
+
+207
+00:10:44,399 --> 00:10:48,380
+this is the things he should get started
+as soon as possible
+
+208
+00:10:48,380 --> 00:10:51,990
+like a Devin by admin as I mentioned
+buddy them up with
+
+209
+00:10:51,990 --> 00:10:55,120
+the most recent person who set up their
+system
+
+210
+00:10:55,120 --> 00:11:00,320
+this is an opportunity to get multiple
+people invested in their trajectory
+
+211
+00:11:00,320 --> 00:11:04,620
+introduce mentors and make those mentors
+people who can be non-judgmental
+
+212
+00:11:04,620 --> 00:11:07,800
+as well as a technical resource
+
+213
+00:11:07,800 --> 00:11:11,290
+you also want to show them where you
+keep technical resources
+
+214
+00:11:11,290 --> 00:11:15,070
+let's say a book that you consider at
+your company to be the definitive way
+
+215
+00:11:15,070 --> 00:11:17,250
+that you do Django your company
+
+216
+00:11:17,250 --> 00:11:20,480
+point them to where they can find that
+resource and they don't have ted flatter
+
+217
+00:11:20,480 --> 00:11:22,120
+and invited themselves
+
+218
+00:11:22,120 --> 00:11:25,540
+or not one thing that's really handy
+
+219
+00:11:25,540 --> 00:11:30,540
+is if they Journal our blog in keep
+three things per day or per week
+
+220
+00:11:30,540 --> 00:11:33,920
+that they've learned or three things
+that they didn't understand
+
+221
+00:11:33,920 --> 00:11:37,339
+they can do this for themselves but it's
+also useful for them to be able to touch
+
+222
+00:11:37,339 --> 00:11:38,140
+base
+
+223
+00:11:38,140 --> 00:11:43,140
+with their manager a mentor regularly
+and discuss these things
+
+224
+00:11:43,140 --> 00:11:46,339
+one thing that I do at a membrane and I
+still have it right now
+
+225
+00:11:46,339 --> 00:11:50,079
+is document called things I've learned
+and this is literally a Google Doc
+
+226
+00:11:50,079 --> 00:11:52,060
+that's fifty pages long at this point
+
+227
+00:11:52,060 --> 00:11:55,790
+and contain things like commands I
+seldom need to run
+
+228
+00:11:55,790 --> 00:12:00,100
+but don't want to have to look up every
+time in our documentation
+
+229
+00:12:00,100 --> 00:12:04,570
+like for example how do I update our
+
+230
+00:12:04,570 --> 00:12:08,130
+we run sconce we make sure that our RCS
+
+231
+00:12:08,130 --> 00:12:12,029
+everything is up to date and 22b inside
+my room
+
+232
+00:12:12,029 --> 00:12:16,850
+outside so this is a place for me to
+keep information like that
+
+233
+00:12:16,850 --> 00:12:20,420
+and also just things that I've learned
+that I want to make sure I return
+
+234
+00:12:20,420 --> 00:12:26,089
+retain but I know I won't remember all
+the information the first time I hear it
+
+235
+00:12:26,089 --> 00:12:29,240
+it be great if you can get on the ship
+code in their first week but make sure
+
+236
+00:12:29,240 --> 00:12:30,370
+this is a
+
+237
+00:12:30,370 --> 00:12:33,860
+very small piece that's not very
+technically complex
+
+238
+00:12:33,860 --> 00:12:37,110
+this is really just an opportunity for
+them to learn your process around
+
+239
+00:12:37,110 --> 00:12:37,980
+shipping code
+
+240
+00:12:37,980 --> 00:12:44,170
+and not so much about the technical
+challenges are being an engineer
+
+241
+00:12:44,170 --> 00:12:48,000
+I think this is Kate favorite slide have
+a social event if you can so that they
+
+242
+00:12:48,000 --> 00:12:50,180
+feel like they're part of the team
+
+243
+00:12:50,180 --> 00:12:53,450
+the more likely the more they feel like
+they're
+
+244
+00:12:53,450 --> 00:12:57,579
+and socially integrated with them the
+more likely they are to ask questions
+
+245
+00:12:57,579 --> 00:13:02,339
+and you definitely want your junior
+engineer to be able to ask questions
+
+246
+00:13:02,339 --> 00:13:07,010
+so this brings us to arbitrator time
+number two
+
+247
+00:13:07,010 --> 00:13:10,510
+we suggest that you introduce them to
+the
+
+248
+00:13:10,510 --> 00:13:14,889
+history of the company and any coding
+philosophies at this point rather than
+
+249
+00:13:14,889 --> 00:13:18,139
+let's say day one when their brains are
+already overloaded and they
+
+250
+00:13:18,139 --> 00:13:21,639
+can't possibly remember it this is still
+useful information for them to have
+
+251
+00:13:21,639 --> 00:13:22,360
+their
+
+252
+00:13:22,360 --> 00:13:26,930
+so give it to them in are to return to
+have time period to
+
+253
+00:13:26,930 --> 00:13:30,230
+one thing that I really wish I had when
+I started at a van Praet was
+
+254
+00:13:30,230 --> 00:13:33,660
+a team at someone either hold a piece a
+paper
+
+255
+00:13:33,660 --> 00:13:37,230
+or a document available online to say
+this is
+
+256
+00:13:37,230 --> 00:13:41,010
+Alice she's great with automation this
+is Bob
+
+257
+00:13:41,010 --> 00:13:44,570
+he's great at things that begin with be
+so you should ask him questions about
+
+258
+00:13:44,570 --> 00:13:46,010
+that
+
+259
+00:13:46,010 --> 00:13:49,070
+and make sure this is a permanent
+resource that they can find I know that
+
+260
+00:13:49,070 --> 00:13:51,560
+people move around asks and everything
+but
+
+261
+00:13:51,560 --> 00:13:55,350
+even if they just have Alice automation
+Bob
+
+262
+00:13:55,350 --> 00:13:59,320
+be related things let's really handy
+especially when it comes time to ask
+
+263
+00:13:59,320 --> 00:14:02,060
+questions
+
+264
+00:14:02,060 --> 00:14:05,800
+probably my favorite part my own body
+experience and a membrane was the
+
+265
+00:14:05,800 --> 00:14:07,750
+introduction of coat lads
+
+266
+00:14:07,750 --> 00:14:11,790
+this is an opportunity maybe two or
+three times a week for an hour
+
+267
+00:14:11,790 --> 00:14:15,720
+for junior engineer or however many
+junior engineers you have
+
+268
+00:14:15,720 --> 00:14:18,959
+to sit in a room with a senior person
+and
+
+269
+00:14:18,959 --> 00:14:22,790
+ask in a totally safe space whatever
+questions they can think I have no
+
+270
+00:14:22,790 --> 00:14:24,050
+matter how stupid
+
+271
+00:14:24,050 --> 00:14:27,079
+and it really does need to be a safe
+place to ask those questions
+
+272
+00:14:27,079 --> 00:14:30,310
+otherwise they're likely to just button
+up and not bother
+
+273
+00:14:30,310 --> 00:14:34,630
+when you do this though make sure that
+the senior engineer is the kind who can
+
+274
+00:14:34,630 --> 00:14:38,399
+do so without judgment and is good at
+explaining things
+
+275
+00:14:38,399 --> 00:14:42,649
+that's are really important facet up
+this
+
+276
+00:14:42,649 --> 00:14:47,600
+questions that your engineers likely to
+ask in this can be things like
+
+277
+00:14:47,600 --> 00:14:51,130
+what is rabbit how it is the Django or
+am work
+
+278
+00:14:51,130 --> 00:14:55,260
+what is salary or even something like I
+have this bug in my code and i cant
+
+279
+00:14:55,260 --> 00:14:59,000
+figure out what's going on key walked
+through it with me
+
+280
+00:14:59,000 --> 00:15:03,089
+it's important to ascertain where their
+knowledge begins and ends
+
+281
+00:15:03,089 --> 00:15:06,290
+so in this feel free to ask them
+followup questions
+
+282
+00:15:06,290 --> 00:15:09,750
+to make sure that you're starting at a
+place that's useful for them
+
+283
+00:15:09,750 --> 00:15:13,300
+and this is another opportunity to get
+more people invested
+
+284
+00:15:13,300 --> 00:15:16,550
+engineer engineers development because
+it doesn't have to be the same
+
+285
+00:15:16,550 --> 00:15:20,560
+engineer who's in the room with them
+every time you can have someone friends
+
+286
+00:15:20,560 --> 00:15:21,820
+on Mondays for
+
+287
+00:15:21,820 --> 00:15:26,320
+questions about JavaScript you can have
+someone on Wednesdays whose full stack
+
+288
+00:15:26,320 --> 00:15:29,100
+you can follow the Jenga request cycle
+
+289
+00:15:29,100 --> 00:15:33,320
+throughout and maybe Friday is a guest
+star
+
+290
+00:15:33,320 --> 00:15:37,269
+every week or something like that so
+this is an opportunity to spread the
+
+291
+00:15:37,269 --> 00:15:37,720
+love
+
+292
+00:15:37,720 --> 00:15:42,070
+and get your team invested another thing
+that's a great tool
+
+293
+00:15:42,070 --> 00:15:46,329
+is shadowing either an hour a day or
+maybe a couple hours a week
+
+294
+00:15:46,329 --> 00:15:50,130
+for a junior engineer to sit with the
+senior engineer and listen to their
+
+295
+00:15:50,130 --> 00:15:51,430
+thought process
+
+296
+00:15:51,430 --> 00:15:55,389
+so the senior engineer will say okay so
+now I'm importing this thing cuz we're
+
+297
+00:15:55,389 --> 00:15:56,550
+gonna need here
+
+298
+00:15:56,550 --> 00:15:59,790
+and then I was thinking about
+structuring it this way and this is an
+
+299
+00:15:59,790 --> 00:16:03,320
+opportunity for the junior engineer to
+sort of get a sense for
+
+300
+00:16:03,320 --> 00:16:07,350
+thought processes and the way that you
+develop code and your code style
+
+301
+00:16:07,350 --> 00:16:10,360
+rather than getting serve bogged down in
+the details about where that semicolon
+
+302
+00:16:10,360 --> 00:16:13,940
+goes
+
+303
+00:16:13,940 --> 00:16:17,970
+this brings us to arbitrator time number
+three
+
+304
+00:16:17,970 --> 00:16:20,970
+we suggest that you introduce one on
+ones at least by now
+
+305
+00:16:20,970 --> 00:16:25,829
+if you haven't already and this is a
+once a week probably 30 minutes at a
+
+306
+00:16:25,829 --> 00:16:26,560
+time
+
+307
+00:16:26,560 --> 00:16:30,720
+where you can set aside to talk an
+manager to engineer about
+
+308
+00:16:30,720 --> 00:16:34,300
+roadblocks or check in about anything
+that
+
+309
+00:16:34,300 --> 00:16:37,860
+the engineer has on their minds and
+
+310
+00:16:37,860 --> 00:16:41,810
+one thing that we've introduced for
+later engineers have started after me
+
+311
+00:16:41,810 --> 00:16:45,600
+is the idea love I'm five-minute
+presentations so
+
+312
+00:16:45,600 --> 00:16:49,660
+a senior person or a manager approaches
+the junior engineer
+
+313
+00:16:49,660 --> 00:16:53,920
+and says here you should check out Bloom
+filters
+
+314
+00:16:53,920 --> 00:16:56,920
+let you go research that and come back
+to me
+
+315
+00:16:56,920 --> 00:17:00,279
+in a week and tell me what you learned
+as you guys
+
+316
+00:17:00,279 --> 00:17:03,829
+have probably figured out by now it
+probably it doesn't really hurt to have
+
+317
+00:17:03,829 --> 00:17:05,939
+experience in doing presenting
+
+318
+00:17:05,939 --> 00:17:09,500
+early and often it's a really good skill
+to develop
+
+319
+00:17:09,500 --> 00:17:12,650
+and probably one we should all start
+sooner and
+
+320
+00:17:12,650 --> 00:17:16,429
+and if their manager supplies that topic
+of conversation like
+
+321
+00:17:16,429 --> 00:17:20,650
+decorators our generators that they know
+that is gonna be really useful for the
+
+322
+00:17:20,650 --> 00:17:21,510
+junior engineer
+
+323
+00:17:21,510 --> 00:17:25,360
+this helps them also home their research
+skills which as we all know
+
+324
+00:17:25,360 --> 00:17:29,640
+is also really important and
+
+325
+00:17:29,640 --> 00:17:33,730
+murderer as Kate mentioned we learn
+through
+
+326
+00:17:33,730 --> 00:17:38,539
+teaching so this will help them keep
+things in their brains
+
+327
+00:17:38,539 --> 00:17:42,590
+so goal-setting is also a really
+important
+
+328
+00:17:42,590 --> 00:17:46,690
+this is energy engineer and their
+manager probably
+
+329
+00:17:46,690 --> 00:17:50,910
+sitting down and talking about where
+each of them expect the junior engineer
+
+330
+00:17:50,910 --> 00:17:51,460
+to be an
+
+331
+00:17:51,460 --> 00:17:55,910
+a month or three months or six months so
+if I say that I'm really interested
+
+332
+00:17:55,910 --> 00:17:59,110
+and pursuing data and my
+
+333
+00:17:59,110 --> 00:18:02,130
+manager was expecting that I would turn
+into
+
+334
+00:18:02,130 --> 00:18:05,410
+a friend and engineer there's probably a
+mismatch there
+
+335
+00:18:05,410 --> 00:18:08,700
+we need to figure out how to make both
+of us happy and
+
+336
+00:18:08,700 --> 00:18:12,640
+this is a great opportunity for someone
+is more senior tech help set up some
+
+337
+00:18:12,640 --> 00:18:13,960
+intermediate steps
+
+338
+00:18:13,960 --> 00:18:17,110
+to get them there
+
+339
+00:18:17,110 --> 00:18:21,450
+for example short term goal can be you
+should be able to find and fix a bug
+
+340
+00:18:21,450 --> 00:18:22,750
+based on a century ever
+
+341
+00:18:22,750 --> 00:18:25,760
+or comment meaningfully on someone
+else's code
+
+342
+00:18:25,760 --> 00:18:29,230
+and then once the junior engineers
+achieve this to have a sense of
+
+343
+00:18:29,230 --> 00:18:30,370
+accomplishment
+
+344
+00:18:30,370 --> 00:18:34,140
+they'll feel like they're really getting
+someplace lb confident when they
+
+345
+00:18:34,140 --> 00:18:37,280
+do for their endeavors
+
+346
+00:18:37,280 --> 00:18:42,630
+so it's also really important to give
+engineers feedback on those goals and on
+
+347
+00:18:42,630 --> 00:18:43,850
+projects that they receive
+
+348
+00:18:43,850 --> 00:18:47,720
+I think a pitfall engineering is that
+often we say well you could have done
+
+349
+00:18:47,720 --> 00:18:48,520
+this better
+
+350
+00:18:48,520 --> 00:18:52,000
+or here's a way that you can improve
+which is really useful information
+
+351
+00:18:52,000 --> 00:18:55,780
+but equal useful is you did this really
+well keep that up
+
+352
+00:18:55,780 --> 00:18:59,929
+that's equally good guide post for
+learning and will help them
+
+353
+00:18:59,929 --> 00:19:03,000
+continue to feel like they're not a
+total failure and engineering
+
+354
+00:19:03,000 --> 00:19:10,000
+and reinforce their imposter syndrome
+which probably a lot of them have
+
+355
+00:19:10,830 --> 00:19:14,530
+so arbitrary time to time period for
+
+356
+00:19:14,530 --> 00:19:17,880
+one thing that I do periodically is
+
+357
+00:19:17,880 --> 00:19:21,100
+review concepts that I learned
+previously
+
+358
+00:19:21,100 --> 00:19:24,970
+in coal ever examine ball I'll say okay
+so
+
+359
+00:19:24,970 --> 00:19:29,090
+here's what I remember about response
+
+360
+00:19:29,090 --> 00:19:32,440
+and I'll go after a couple of minutes
+and saying everything that I
+
+361
+00:19:32,440 --> 00:19:35,900
+remember from the last time we talked
+about it and then my
+
+362
+00:19:35,900 --> 00:19:40,340
+buddy my mentor my senior engineer can
+say yeah that's really good
+
+363
+00:19:40,340 --> 00:19:43,510
+this chunk that you missed is also a
+really important so make sure that you
+
+364
+00:19:43,510 --> 00:19:44,679
+keep track of that
+
+365
+00:19:44,679 --> 00:19:49,179
+so this it is not only for junior per
+engineers personal development
+
+366
+00:19:49,179 --> 00:19:52,289
+it also gives them the input about that
+
+367
+00:19:52,289 --> 00:19:55,500
+chunks that didn't exactly sink in the
+first time and if you're anything like
+
+368
+00:19:55,500 --> 00:19:57,740
+me there are many of these pieces real
+get
+
+369
+00:19:57,740 --> 00:20:01,000
+a large chunk of the information the
+first time and then some in the details
+
+370
+00:20:01,000 --> 00:20:03,400
+will dribble out the side
+
+371
+00:20:03,400 --> 00:20:06,980
+make sure you check in regularly with
+your engineer it's really important to
+
+372
+00:20:06,980 --> 00:20:10,210
+you just give them an opportunity to
+talk to you openly
+
+373
+00:20:10,210 --> 00:20:13,610
+and it probably seems pretty obvious
+that they can do that but you'd be
+
+374
+00:20:13,610 --> 00:20:16,580
+surprised how much of a difference it
+makes if you say
+
+375
+00:20:16,580 --> 00:20:19,490
+are you having trouble with anything is
+there anything I can help you with it
+
+376
+00:20:19,490 --> 00:20:22,789
+kind of opens up the floodgates in just
+give them a really good opportunity
+
+377
+00:20:22,789 --> 00:20:27,580
+give to give engineer offer and maybe
+this is an opportunity now to
+
+378
+00:20:27,580 --> 00:20:31,190
+spend less time shadowing and have them
+start co piloting
+
+379
+00:20:31,190 --> 00:20:34,580
+on a larger project with the more senior
+person
+
+380
+00:20:34,580 --> 00:20:37,940
+so this is where they can take turns
+driving
+
+381
+00:20:37,940 --> 00:20:41,250
+and if you went to drivers ed like ideal
+then the person
+
+382
+00:20:41,250 --> 00:20:45,130
+who's more experienced in the passenger
+seat has a secret emergency brake that
+
+383
+00:20:45,130 --> 00:20:45,890
+they can use
+
+384
+00:20:45,890 --> 00:20:50,880
+if anything goes seriously awry so they
+get to you take a bigger
+
+385
+00:20:50,880 --> 00:20:54,409
+role in a project but also have the
+safety of knowing that there's
+
+386
+00:20:54,409 --> 00:20:58,070
+someone who can help them when they get
+stuck
+
+387
+00:20:58,070 --> 00:21:02,039
+so once you've gone through this
+continue to check on
+
+388
+00:21:02,039 --> 00:21:05,970
+check in on goals and Taylor projects
+and collapsed you
+
+389
+00:21:05,970 --> 00:21:09,169
+how they're doing it's a really
+individual on organic process
+
+390
+00:21:09,169 --> 00:21:12,600
+so one-size-fits-all isn't gonna work
+here
+
+391
+00:21:12,600 --> 00:21:16,690
+stick with the things that work and
+remove the things that don't
+
+392
+00:21:16,690 --> 00:21:20,549
+so one thing this really is what this
+point though is assertive in formal
+
+393
+00:21:20,549 --> 00:21:21,360
+apprenticeship
+
+394
+00:21:21,360 --> 00:21:25,159
+where a senior engineer take more
+responsibility for junior engineer
+
+395
+00:21:25,159 --> 00:21:29,150
+and passes on the domain knowledge the
+junior engineer gets bigger chunks of
+
+396
+00:21:29,150 --> 00:21:31,159
+code that they are responsible for
+
+397
+00:21:31,159 --> 00:21:34,600
+and they're really serve under someone's
+wing
+
+398
+00:21:34,600 --> 00:21:38,659
+and this has the added bonus have
+training the senior percent if they're
+
+399
+00:21:38,659 --> 00:21:39,700
+interested in it
+
+400
+00:21:39,700 --> 00:21:44,590
+to play a bigger role maybe in running a
+team are heading towards management
+
+401
+00:21:44,590 --> 00:21:47,419
+one thing that we haven't really
+discussed though is how you really
+
+402
+00:21:47,419 --> 00:21:48,140
+assess
+
+403
+00:21:48,140 --> 00:21:52,340
+how someone's doing or how you fix it if
+they're not doing as well as you like
+
+404
+00:21:52,340 --> 00:21:55,250
+if they're on this middle trajectory
+anything they have the potential to do
+
+405
+00:21:55,250 --> 00:21:57,179
+much better
+
+406
+00:21:57,179 --> 00:22:01,010
+how do you do that and really the answer
+is communication
+
+407
+00:22:01,010 --> 00:22:05,530
+and let's say you talk to any find that
+they're not really is confident
+
+408
+00:22:05,530 --> 00:22:09,440
+in their coding as you want them to be
+often suggests an
+
+409
+00:22:09,440 --> 00:22:13,610
+an answer will lend itself to question
+at hand
+
+410
+00:22:13,610 --> 00:22:17,549
+so if its confidence for example then
+maybe you set them some
+
+411
+00:22:17,549 --> 00:22:21,390
+small quick wins that they can do to
+make them feel like
+
+412
+00:22:21,390 --> 00:22:25,409
+they're really getting it or if they're
+picking up some bad code habits
+
+413
+00:22:25,409 --> 00:22:28,539
+take a look at who their mentors are
+they may be picking up some things that
+
+414
+00:22:28,539 --> 00:22:28,789
+are
+
+415
+00:22:28,770 --> 00:22:32,049
+okay for senior engineer who really
+knows what they're doing but
+
+416
+00:22:32,049 --> 00:22:34,830
+habits you don't really want to instill
+in your junior engineer when they're
+
+417
+00:22:34,830 --> 00:22:36,230
+straight out the gate
+
+418
+00:22:36,230 --> 00:22:39,450
+but do remember that not everyone comes
+out the same this is an
+
+419
+00:22:39,450 --> 00:22:43,850
+eighty a finish line that everyone hits
+but you have the power to set them up
+
+420
+00:22:43,850 --> 00:22:47,780
+on a better trajectory and I'm sure
+you'll take that seriously since you're
+
+421
+00:22:47,780 --> 00:22:48,480
+here
+
+422
+00:22:48,480 --> 00:22:51,710
+but it's a good thing to remember I
+would like to mention that the
+
+423
+00:22:51,710 --> 00:22:55,169
+last slide was technically incorrect I
+for some reason
+
+424
+00:22:55,169 --> 00:22:58,260
+drew asymptotic lines as though that
+people can
+
+425
+00:22:58,260 --> 00:23:01,510
+like never achieve anything above or
+below where they're at and that's not
+
+426
+00:23:01,510 --> 00:23:02,270
+true
+
+427
+00:23:02,270 --> 00:23:06,360
+on cell you should just know that that's
+lighters and cracked but
+
+428
+00:23:06,360 --> 00:23:09,360
+when you're thinking about the
+assessment categories for people if
+
+429
+00:23:09,360 --> 00:23:10,450
+someone isn't performing
+
+430
+00:23:10,450 --> 00:23:14,470
+up to the standards that you think they
+should be performing too
+
+431
+00:23:14,470 --> 00:23:18,210
+these are the five categories we came up
+with to take a look at so confidence
+
+432
+00:23:18,210 --> 00:23:21,970
+code quality communication judgment and
+technical knowledge
+
+433
+00:23:21,970 --> 00:23:25,679
+we've all worked with people who are
+insufficient in one of these categories
+
+434
+00:23:25,679 --> 00:23:29,419
+and so it's important to realize that
+it's not just technical knowledge that
+
+435
+00:23:29,419 --> 00:23:30,260
+people
+
+436
+00:23:30,260 --> 00:23:33,510
+need help on so a lot of times judgment
+is super important
+
+437
+00:23:33,510 --> 00:23:36,480
+are they building the right things
+because if someone is building the right
+
+438
+00:23:36,480 --> 00:23:39,230
+thing it doesn't matter if they take
+more or less time to do it
+
+439
+00:23:39,230 --> 00:23:43,909
+they're going out to the right place at
+the end of the day
+
+440
+00:23:43,909 --> 00:23:47,059
+so this is our coda this is my
+contribution to the slides in case
+
+441
+00:23:47,059 --> 00:23:48,200
+you're curious the rest
+
+442
+00:23:48,200 --> 00:23:52,059
+markets responsibility an I'm burning is
+
+443
+00:23:52,059 --> 00:23:56,110
+problem like any other that we face in
+engineering and it's really best solved
+
+444
+00:23:56,110 --> 00:23:56,490
+through
+
+445
+00:23:56,490 --> 00:24:00,600
+iteration and feedback and revision in
+if you take
+
+446
+00:24:00,600 --> 00:24:03,970
+one thing away from this presentation
+let it be keep the communication
+
+447
+00:24:03,970 --> 00:24:05,150
+channels open
+
+448
+00:24:05,150 --> 00:24:08,510
+this is the best way to ensure that
+you're both on the same page and your
+
+449
+00:24:08,510 --> 00:24:13,820
+really getting somewhere but if you have
+space in your brain for three things
+
+450
+00:24:13,820 --> 00:24:17,230
+lead PB is 6s is not just
+
+451
+00:24:17,230 --> 00:24:20,600
+being the most technically skilled
+there's a lot of areas where it's really
+
+452
+00:24:20,600 --> 00:24:22,679
+important for people to develop
+
+453
+00:24:22,679 --> 00:24:27,090
+it really benefits everyone in the long
+run
+
+454
+00:24:27,090 --> 00:24:30,919
+and everyone can be involved it takes a
+village to raise a child
+
+455
+00:24:30,919 --> 00:24:34,049
+I'd like to think that it takes an
+engineering team to you bring
+
+456
+00:24:34,049 --> 00:24:39,490
+a junior developer on board successfully
+
+457
+00:24:39,490 --> 00:24:43,960
+okay so hopefully you guys are convinced
+to start improving your process now
+
+458
+00:24:43,960 --> 00:24:47,029
+one other things we talk about a lot as
+engineers is code at we all know what
+
+459
+00:24:47,029 --> 00:24:47,740
+this is
+
+460
+00:24:47,740 --> 00:24:51,169
+and were terrified of it and I'm sure
+all your companies have lots of it that
+
+461
+00:24:51,169 --> 00:24:52,039
+you are sad about
+
+462
+00:24:52,039 --> 00:24:55,679
+but people don't talk a lot about team
+that or
+
+463
+00:24:55,679 --> 00:24:58,840
+management at which is essentially you
+accrued at
+
+464
+00:24:58,840 --> 00:25:01,919
+with the employees that you have on your
+team if you don't take care of them and
+
+465
+00:25:01,919 --> 00:25:03,340
+you don't pay attention to them
+
+466
+00:25:03,340 --> 00:25:06,690
+and so on morning is the first step and
+making sure that you minimize the
+
+467
+00:25:06,690 --> 00:25:07,539
+steamed at
+
+468
+00:25:07,539 --> 00:25:10,610
+so that a year from now you don't have
+people leaving because they got off on
+
+469
+00:25:10,610 --> 00:25:11,409
+the wrong foot
+
+470
+00:25:11,409 --> 00:25:14,789
+wouldn't have any help at the beginning
+so we have a repo
+
+471
+00:25:14,789 --> 00:25:18,860
+I at this link where we have some
+resources to get like give new people on
+
+472
+00:25:18,860 --> 00:25:20,270
+Python and Django
+
+473
+00:25:20,270 --> 00:25:23,279
+we have some other rubrics for assessing
+others
+
+474
+00:25:23,279 --> 00:25:27,529
+am so if you all want any resources you
+can go there and if you have questions
+
+475
+00:25:27,529 --> 00:25:34,529
+please ask them now thank you
+
+476
+00:25:36,740 --> 00:25:40,520
+thank you very much we have about time
+for one question
+
+477
+00:25:40,520 --> 00:25:46,230
+I and I'm gonna have to walk over to his
+Mike stand where people will see you who
+
+478
+00:25:46,230 --> 00:25:53,230
+so one question please hi
+
+479
+00:25:54,500 --> 00:25:58,140
+thank you at great presentation I was
+wondering if you could talk a little bit
+
+480
+00:25:58,140 --> 00:26:01,610
+about adapting these techniques and
+ideas towards disturbed him
+
+481
+00:26:01,610 --> 00:26:04,850
+that is a fantastic question
+
+482
+00:26:04,850 --> 00:26:08,050
+um one other things I say about scaling
+a team is that
+
+483
+00:26:08,050 --> 00:26:11,150
+the thing you're scaling is actually
+communication communication is its
+
+484
+00:26:11,150 --> 00:26:14,490
+the bottleneck great you have a small
+team and everyone can talk to everyone
+
+485
+00:26:14,490 --> 00:26:17,710
+and as you grow that's not possible in
+the distributed team I think
+
+486
+00:26:17,710 --> 00:26:19,370
+communication is really like the cock
+
+487
+00:26:19,370 --> 00:26:23,430
+that's the crux of what's going on i
+meani people to be looking in Kate about
+
+488
+00:26:23,430 --> 00:26:27,040
+the process ease about what's going on
+and all the different stuff
+
+489
+00:26:27,040 --> 00:26:31,140
+so am other things we talk about will
+still work
+
+490
+00:26:31,140 --> 00:26:35,470
+mean you could have a virtual social
+event I'm you can still have people help
+
+491
+00:26:35,470 --> 00:26:38,710
+set up Devin fireman's but I think I
+think the biggest thing is really
+
+492
+00:26:38,710 --> 00:26:40,880
+focusing on the communication channels
+
+493
+00:26:40,880 --> 00:26:44,080
+because you're not going to be able to
+get information to
+
+494
+00:26:44,080 --> 00:26:47,510
+to a more developers without that with
+you
+
+495
+00:26:47,510 --> 00:26:53,020
+resource on our Repo Men helps code from
+
+496
+00:26:53,020 --> 00:26:56,630
+afar when your parent helps pair from
+afar
+
+497
+00:26:56,630 --> 00:26:59,940
+when your coding there we go and see if
+you check that out
+
+498
+00:26:59,940 --> 00:27:03,430
+I might help right
+
+499
+00:27:03,430 --> 00:27:04,160
+thank you
+

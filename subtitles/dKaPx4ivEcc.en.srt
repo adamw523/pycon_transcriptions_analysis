@@ -1,0 +1,2175 @@
+1
+00:00:10,559 --> 00:00:11,190
+hello everyone
+
+2
+00:00:11,190 --> 00:00:14,639
+up before we begin I'd like to make two
+announcements
+
+3
+00:00:14,639 --> 00:00:18,609
+um if you want anything API yesterday's
+auction
+
+4
+00:00:18,609 --> 00:00:21,830
+you go dancers research and ice to pick
+them up
+
+5
+00:00:21,830 --> 00:00:25,590
+about the reception desk will be closing
+soon so I would
+
+6
+00:00:25,590 --> 00:00:28,769
+highly suggest after the talk to you
+gonna meet olympic it up
+
+7
+00:00:28,769 --> 00:00:32,520
+the next announcement is about I
+
+8
+00:00:32,520 --> 00:00:35,540
+tomorrow will begin the developments
+Prince
+
+9
+00:00:35,540 --> 00:00:39,719
+arm the developments prince will be held
+here at the
+
+10
+00:00:39,719 --> 00:00:45,539
+a palette conga 'em so
+
+11
+00:00:45,539 --> 00:00:49,520
+if you would like to the be part of it
+it's open to everyone
+
+12
+00:00:49,520 --> 00:00:52,750
+I am and if you have any ideas ice
+
+13
+00:00:52,750 --> 00:00:56,289
+a high I would suggest you announce them
+at the reception desk
+
+14
+00:00:56,289 --> 00:01:03,289
+arts so that could be could be announced
+for tomorrow's development sprint so
+
+15
+00:01:10,270 --> 00:01:14,219
+so our final speaker love the day I like
+to introduce arm
+
+16
+00:01:14,219 --> 00:01:17,829
+brought angel I am Bright Angel
+
+17
+00:01:17,829 --> 00:01:22,579
+you talking to us about employing pipe
+on to report real time
+
+18
+00:01:22,579 --> 00:01:29,579
+resource bills in the to operation
+managers picket topics are one now
+
+19
+00:01:32,329 --> 00:01:35,640
+tired enough closing would be good or
+bad but a
+
+20
+00:01:35,640 --> 00:01:38,780
+think it's great telescope II wanna
+
+21
+00:01:38,780 --> 00:01:42,549
+have a word of caution is that I'm not a
+programmer I'm actually
+
+22
+00:01:42,549 --> 00:01:47,729
+trained up and on architecture but I got
+kinda into
+
+23
+00:01:47,729 --> 00:01:51,599
+a position where we really had to employ
+pie part to do a project we're doing is
+
+24
+00:01:51,599 --> 00:01:52,420
+he said occurs
+
+25
+00:01:52,420 --> 00:01:57,429
+sour surfed for those that don't know
+you see said occurs as the University
+
+26
+00:01:57,429 --> 00:02:01,640
+California attackers are about an hour
+away from sepsis go south for
+
+27
+00:02:01,640 --> 00:02:05,020
+on the Central Coast is a picture
+whatever dumpsters are
+
+28
+00:02:05,020 --> 00:02:08,099
+that gets a Monterey Bay View love the
+ocean
+
+29
+00:02:08,099 --> 00:02:11,250
+which is really nice there on the bottom
+left corner as our
+
+30
+00:02:11,250 --> 00:02:15,090
+happy have but at a slug which is the
+mascot ever see
+
+31
+00:02:15,090 --> 00:02:18,959
+and and the rest the campuses has a lot
+to read words
+
+32
+00:02:18,959 --> 00:02:22,100
+and as a you know quite beautiful our
+doctors
+
+33
+00:02:22,100 --> 00:02:25,299
+of course material evidence showed up
+this magnificent trees
+
+34
+00:02:25,299 --> 00:02:30,859
+here the casey et that there's this is
+kinda typography graphic power
+
+35
+00:02:30,859 --> 00:02:34,590
+topography map apps are at the actual
+campus in augusta two-parter felines
+
+36
+00:02:34,590 --> 00:02:35,049
+other
+
+37
+00:02:35,049 --> 00:02:38,739
+white-out but you could see they were
+very hilly and over
+
+38
+00:02:38,739 --> 00:02:43,650
+it's a constant hell site for the entire
+campus we running a fleet of about 10
+
+39
+00:02:43,650 --> 00:02:44,389
+trucks
+
+40
+00:02:44,389 --> 00:02:48,739
+I am we have that's on the left is what
+you call a front loader in the middle is
+
+41
+00:02:48,739 --> 00:02:52,190
+what you call a role of box and then on
+the right is a box truck we have
+
+42
+00:02:52,190 --> 00:02:56,630
+10 trucks all we have a roughly 300
+dumpsters every run on campus
+
+43
+00:02:56,630 --> 00:03:00,079
+overall in house have a very robust
+takeover
+
+44
+00:03:00,079 --> 00:03:03,599
+we saw paul Fisher at the bottom is our
+own sort line
+
+45
+00:03:03,599 --> 00:03:08,319
+over 18 only you see schools to have one
+and then on the writer some the bins we
+
+46
+00:03:08,319 --> 00:03:09,239
+have to hear a
+
+47
+00:03:09,239 --> 00:03:13,060
+to maintain and terror work on and
+there's over
+
+48
+00:03:13,060 --> 00:03:17,480
+is roughly 300 pence are been set for
+speaker that we have to run run which
+
+49
+00:03:17,480 --> 00:03:18,430
+takes a little labor
+
+50
+00:03:18,430 --> 00:03:23,519
+so for those that you know that don't
+know and the state of california all the
+
+51
+00:03:23,519 --> 00:03:26,159
+municipalities and counties have to get
+to hear what they call
+
+52
+00:03:26,159 --> 00:03:29,530
+75 percent landfill diversion by 2020
+that means that
+
+53
+00:03:29,530 --> 00:03:34,220
+only 25 percent all the waste is
+produced waste is produced in the state
+
+54
+00:03:34,220 --> 00:03:37,670
+can go into landfills a for the UC
+schools
+
+55
+00:03:37,670 --> 00:03:41,969
+the the terrorists we have to hit to
+over we have a goal to hit
+
+56
+00:03:41,969 --> 00:03:46,010
+zero waste which means less than five
+percent waste by the year 2020
+
+57
+00:03:46,010 --> 00:03:49,879
+the same time frame so Dustin schools
+are we're really working hard
+
+58
+00:03:49,879 --> 00:03:55,159
+this is a a graphic of how our way
+stream has worked in the past
+
+59
+00:03:55,159 --> 00:03:59,849
+a well since 2000 almost ten years and
+you could see it the very right hand
+
+60
+00:03:59,849 --> 00:04:00,530
+corner
+
+61
+00:04:00,530 --> 00:04:05,459
+the red line is refuse and then the dark
+yellow line is our diverse right now 62
+
+62
+00:04:05,459 --> 00:04:06,090
+percent
+
+63
+00:04:06,090 --> 00:04:10,310
+so even though you're supposed to hit 75
+percent last year I'll we r
+
+64
+00:04:10,310 --> 00:04:13,390
+far from that in our operations and we
+also
+
+65
+00:04:13,390 --> 00:04:17,099
+very far from my 2020 a six-year golf
+outings are West
+
+66
+00:04:17,099 --> 00:04:21,419
+so have to think bigger well we did when
+I started two years ago
+
+67
+00:04:21,419 --> 00:04:25,840
+like a few weeks before I started I they
+installed what we call the load been
+
+68
+00:04:25,840 --> 00:04:26,560
+system which
+
+69
+00:04:26,560 --> 00:04:31,280
+actually ways are refuse cardboard other
+materials as being picked up
+
+70
+00:04:31,280 --> 00:04:34,700
+this allows us to actually I no
+
+71
+00:04:34,700 --> 00:04:37,979
+which customers have deposited what
+materials where
+
+72
+00:04:37,979 --> 00:04:42,849
+and we can start doing data analysis on
+our so we have been doing that else's
+
+73
+00:04:42,849 --> 00:04:43,550
+last year
+
+74
+00:04:43,550 --> 00:04:47,599
+fiscal year 2012 4:13 and we can find
+our for worst
+
+75
+00:04:47,599 --> 00:04:51,700
+I refuse users with a pinpoint them and
+say okay
+
+76
+00:04:51,700 --> 00:04:54,750
+that the big tall one else family said
+housing
+
+77
+00:04:54,750 --> 00:04:58,909
+and we say to them pay you know we
+haven't really talked to them yet but we
+
+78
+00:04:58,909 --> 00:05:01,900
+know that that's where waste problems
+are and we're gonna have to really it
+
+79
+00:05:01,900 --> 00:05:02,280
+doesn't
+
+80
+00:05:02,280 --> 00:05:05,930
+the pic the big fish speak her
+
+81
+00:05:05,930 --> 00:05:10,880
+so we have a lot of pressure to increase
+our process capacity
+
+82
+00:05:10,880 --> 00:05:16,039
+even though we're at about 70 percent
+I'm we really have a difficulty
+
+83
+00:05:16,039 --> 00:05:20,000
+and achieving a high in a 95 percent
+because most that stream has to come
+
+84
+00:05:20,000 --> 00:05:20,849
+from architects
+
+85
+00:05:20,849 --> 00:05:25,070
+so right now we write we have about 30
+per citizen refuse about 15 percent
+
+86
+00:05:25,070 --> 00:05:28,099
+is cardboard another 15 assorted
+recycled
+
+87
+00:05:28,099 --> 00:05:31,620
+but this other 30 percent that it's
+gonna come to refuse
+
+88
+00:05:31,620 --> 00:05:34,719
+is your soil paper your food waste
+mostly the stuff
+
+89
+00:05:34,719 --> 00:05:38,039
+if you look around at this conference
+center you know this is not an organic
+
+90
+00:05:38,039 --> 00:05:38,479
+then
+
+91
+00:05:38,479 --> 00:05:41,640
+but if you go to Step Cisco a lot I'm
+sure they click their soul paper and
+
+92
+00:05:41,640 --> 00:05:43,419
+they said click their food waste
+
+93
+00:05:43,419 --> 00:05:46,800
+sepsis go Vancouver are some the only
+cities are actually have
+
+94
+00:05:46,800 --> 00:05:51,399
+taking this animal on and all the season
+after all try to figure it out
+
+95
+00:05:51,399 --> 00:05:55,260
+and it's difficult nothing I wanted to
+make sure to mention here is that since
+
+96
+00:05:55,260 --> 00:05:57,580
+2008 since we had a great recession
+
+97
+00:05:57,580 --> 00:06:00,919
+i'd of its all the ISI's but definitely
+are you see
+
+98
+00:06:00,919 --> 00:06:05,099
+they want to hire anyone they want to
+keep labor at the minimum a two-step
+
+99
+00:06:05,099 --> 00:06:07,120
+2008-2009 level
+
+100
+00:06:07,120 --> 00:06:10,399
+where there's I mean we barely have
+enough people to drive the trucks much
+
+101
+00:06:10,399 --> 00:06:10,750
+less
+
+102
+00:06:10,750 --> 00:06:14,219
+at capacity what we're doing and even
+like my position which was
+
+103
+00:06:14,219 --> 00:06:17,529
+for time with overtime sometimes I'm a
+part-time
+
+104
+00:06:17,529 --> 00:06:20,890
+at best so well apartheid
+
+105
+00:06:20,890 --> 00:06:23,680
+so that's a big issue we get we have to
+figure out how to do this whole the
+
+106
+00:06:23,680 --> 00:06:24,250
+stream
+
+107
+00:06:24,250 --> 00:06:27,430
+with less with basically the same labor
+
+108
+00:06:27,430 --> 00:06:31,330
+so I the a had no idea is gonna be
+getting into this when I got this job
+
+109
+00:06:31,330 --> 00:06:32,419
+but now my cup
+
+110
+00:06:32,419 --> 00:06:36,459
+this whole system has to change in order
+to to achieve what we're looking for
+
+111
+00:06:36,459 --> 00:06:39,130
+if you look at what they do attempt to
+scare what they're doing it back over
+
+112
+00:06:39,130 --> 00:06:40,760
+what they do probably here
+
+113
+00:06:40,760 --> 00:06:44,060
+and everything is built and money is
+made based on
+
+114
+00:06:44,060 --> 00:06:48,589
+largely emptying empty servicing empty
+dumpsters
+
+115
+00:06:48,589 --> 00:06:52,959
+their load man has a that the other
+program talk about has an entire
+
+116
+00:06:52,959 --> 00:06:57,270
+I a graphics metrics analysis tool that
+tells you
+
+117
+00:06:57,270 --> 00:07:00,610
+if you have too much density in your
+dumpsters and
+
+118
+00:07:00,610 --> 00:07:03,760
+if you have too much density than you
+have a problem client that means it
+
+119
+00:07:03,760 --> 00:07:07,430
+they're putting too much wasted well
+that means that they're covering their
+
+120
+00:07:07,430 --> 00:07:08,360
+labor by
+
+121
+00:07:08,360 --> 00:07:11,500
+dumps use it you know emptying servicing
+into dumpsters
+
+122
+00:07:11,500 --> 00:07:15,279
+but for us but we have a shortage of
+labour we would like to flip that
+
+123
+00:07:15,279 --> 00:07:19,219
+and have every dumpster as far as
+possible when we pick it up
+
+124
+00:07:19,219 --> 00:07:22,599
+which is different than almost anyone
+else out there
+
+125
+00:07:22,599 --> 00:07:25,560
+and so that's when that we started
+thinking about well how do we do this
+
+126
+00:07:25,560 --> 00:07:26,630
+had a way if
+
+127
+00:07:26,630 --> 00:07:30,459
+wicked do just the traditional route
+what we do and we were inspired
+
+128
+00:07:30,459 --> 00:07:34,839
+her I was inspired by a of course the
+Internet of Things
+
+129
+00:07:34,839 --> 00:07:39,269
+type movement I guess you could call it
+and we also had a demonstration by
+
+130
+00:07:39,269 --> 00:07:42,950
+big belly which is the top struggle
+after the a side the canister
+
+131
+00:07:42,950 --> 00:07:47,279
+on the left so the big belly they will
+come to your community
+
+132
+00:07:47,279 --> 00:07:51,330
+they've done Boston Boston University I
+think enough to have any overseas
+
+133
+00:07:51,330 --> 00:07:55,360
+on the west coast certain Canada but
+they'll come to you and I'll say okay we
+
+134
+00:07:55,360 --> 00:07:58,339
+can basically cut out ninety percent
+appear
+
+135
+00:07:58,339 --> 00:08:02,440
+waste pickup from this from these bids
+using this on-demand
+
+136
+00:08:02,440 --> 00:08:06,110
+their own autumn and technology and when
+we talk to write but he had this for
+
+137
+00:08:06,110 --> 00:08:07,849
+dumpsters cuz we don't really have a
+
+138
+00:08:07,849 --> 00:08:11,839
+an issue with that we have a issue with
+dumpsters and the right now the site
+
+139
+00:08:11,839 --> 00:08:15,810
+we don't have that for copiers so we
+decided to do it ourselves
+
+140
+00:08:15,810 --> 00:08:19,510
+and what we did is we we stock to
+different
+
+141
+00:08:19,510 --> 00:08:23,130
+a companies into things kinda companies
+
+142
+00:08:23,130 --> 00:08:26,500
+and we came to digi was the one that was
+very
+
+143
+00:08:26,500 --> 00:08:30,419
+cooperative with us and they had
+somebody that they put their
+
+144
+00:08:30,419 --> 00:08:33,930
+but there are actual communication
+devices and and
+
+145
+00:08:33,930 --> 00:08:37,860
+this is that Massa a sonar in three
+Sardar and they said this would be great
+
+146
+00:08:37,860 --> 00:08:38,860
+for your test
+
+147
+00:08:38,860 --> 00:08:42,250
+pilot and it runs on ARM
+
+148
+00:08:42,250 --> 00:08:46,100
+you know the communicator died devices
+and you can get one tomorrow
+
+149
+00:08:46,100 --> 00:08:49,640
+mean expensive but where like okay let's
+try it out
+
+150
+00:08:49,640 --> 00:08:54,829
+and this one the so what we did is we
+actually installed
+
+151
+00:08:54,829 --> 00:08:58,060
+a well first I had installed on my home
+my my my office
+
+152
+00:08:58,060 --> 00:09:02,040
+trash can see if it worked headed for
+the record on a dumpster that about 15
+
+153
+00:09:02,040 --> 00:09:03,649
+feet from my office
+
+154
+00:09:03,649 --> 00:09:08,170
+and that's what looks like but when I
+installed it all we really had as the
+
+155
+00:09:08,170 --> 00:09:09,110
+data was being
+
+156
+00:09:09,110 --> 00:09:12,529
+deliver to DiGi's proprietary
+
+157
+00:09:12,529 --> 00:09:15,579
+in a cloud location and they could do
+some
+
+158
+00:09:15,579 --> 00:09:19,300
+graphics for something like that but it
+was pretty intense for an operator are
+
+159
+00:09:19,300 --> 00:09:20,970
+sorry that's managing our crew
+
+160
+00:09:20,970 --> 00:09:24,660
+20 I have to go to this and try to
+figure out how to decipher
+
+161
+00:09:24,660 --> 00:09:28,620
+it wasn't gonna work we needed something
+much more pedestrian to speaker
+
+162
+00:09:28,620 --> 00:09:29,990
+user-level
+
+163
+00:09:29,990 --> 00:09:33,430
+so a as talking about this so here was
+the concept that
+
+164
+00:09:33,430 --> 00:09:36,720
+I had originally thought I haven't
+thought I could handle on my own
+
+165
+00:09:36,720 --> 00:09:40,459
+to actually deliver this in I had no
+idea what I thought was a time so we
+
+166
+00:09:40,459 --> 00:09:41,480
+would have the dumpster
+
+167
+00:09:41,480 --> 00:09:45,300
+that sexual dumpster with the the thing
+at the Surana
+
+168
+00:09:45,300 --> 00:09:48,790
+anywhere talk to you pass some sort
+interface I thought the cloud could do
+
+169
+00:09:48,790 --> 00:09:49,550
+it but it didn't
+
+170
+00:09:49,550 --> 00:09:53,410
+and then it would put it on that website
+so I'm Meyer heavy equipment manager can
+
+171
+00:09:53,410 --> 00:09:54,530
+look at it
+
+172
+00:09:54,530 --> 00:09:57,780
+well they didn't work out what we ended
+up doing is that we had a
+
+173
+00:09:57,780 --> 00:10:02,820
+intern come in I'll not intersted worker
+and you taken a single class and by fun
+
+174
+00:10:02,820 --> 00:10:04,430
+that a semester before
+
+175
+00:10:04,430 --> 00:10:08,750
+in our stock game he was our data entry
+for a while for us because our
+
+176
+00:10:08,750 --> 00:10:12,670
+is gonna have a hard time with the
+recycle Kors so they can after I'm on me
+
+177
+00:10:12,670 --> 00:10:16,270
+and active call kinda like developer
+tight kid and so
+
+178
+00:10:16,270 --> 00:10:20,440
+he came in NE Ohio I love to help you up
+so this is the kinda systematic we came
+
+179
+00:10:20,440 --> 00:10:21,430
+up with
+
+180
+00:10:21,430 --> 00:10:26,870
+and a we have the met the sonar talks to
+a gateway and everybody's is this a
+
+181
+00:10:26,870 --> 00:10:30,310
+wireless router shit this wireless
+systems but
+
+182
+00:10:30,310 --> 00:10:33,760
+them the sonar talk sergei where the
+Gateway put a cloud and then from the
+
+183
+00:10:33,760 --> 00:10:34,730
+cloud way
+
+184
+00:10:34,730 --> 00:10:39,240
+I'm I co-worker don't actually wrote a
+Python script that word
+
+185
+00:10:39,240 --> 00:10:42,900
+retrieve the information from the cloud
+and then it would deposit into spots
+
+186
+00:10:42,900 --> 00:10:44,310
+around prefer a text file
+
+187
+00:10:44,310 --> 00:10:49,250
+for me and then an Excel spreadsheet so
+we would have a record of every
+
+188
+00:10:49,250 --> 00:10:52,610
+every soldier reading and what I did a
+
+189
+00:10:52,610 --> 00:10:56,880
+you know I am a group I went to college
+in the 90s so I knew nothing HTML to get
+
+190
+00:10:56,880 --> 00:11:00,620
+us by on creating a website I would
+actually show whatever's on this text
+
+191
+00:11:00,620 --> 00:11:03,320
+file that's being updated with each star
+rating
+
+192
+00:11:03,320 --> 00:11:06,930
+so it's kinda the way it worked out so
+that we end up with we have a website
+
+193
+00:11:06,930 --> 00:11:10,080
+that I run to left and we ended up with
+two files
+
+194
+00:11:10,080 --> 00:11:13,150
+in we're able to use the website to
+check it every hour whatever it was
+
+195
+00:11:13,150 --> 00:11:14,070
+updated
+
+196
+00:11:14,070 --> 00:11:17,490
+in the naked run out to the dumpster see
+if it actually working or not
+
+197
+00:11:17,490 --> 00:11:22,020
+network for the most part and we're
+getting great data from it
+
+198
+00:11:22,020 --> 00:11:26,230
+so this is how the data kinda looks at
+after using this for
+
+199
+00:11:26,230 --> 00:11:29,700
+what is that two months ago if yep so
+
+200
+00:11:29,700 --> 00:11:33,020
+we already had our load man data which
+is the gray line and it's telling us how
+
+201
+00:11:33,020 --> 00:11:34,450
+much weight is being polled
+
+202
+00:11:34,450 --> 00:11:38,620
+are picked up every pick up from the
+dumpster so we have the virus is 66 in
+
+203
+00:11:38,620 --> 00:11:39,960
+218
+
+204
+00:11:39,960 --> 00:11:43,400
+and then the Green Line is the actual a
+volume how much
+
+205
+00:11:43,400 --> 00:11:46,529
+the sonar was actually reading how much
+of it was for also
+
+206
+00:11:46,529 --> 00:11:50,020
+went from you know 5 percent to your
+
+207
+00:11:50,020 --> 00:11:53,510
+seventy-four percent 34 percent is the
+highest number what I thought was
+
+208
+00:11:53,510 --> 00:11:56,620
+interesting there was great about this
+is that we actually start picking up
+
+209
+00:11:56,620 --> 00:12:00,080
+a mistakes so the red dots across the
+square
+
+210
+00:12:00,080 --> 00:12:03,200
+dots across the middle those are driver
+locks
+
+211
+00:12:03,200 --> 00:12:07,660
+so the driver will actually go and in an
+Excel spreadsheet will mark which
+
+212
+00:12:07,660 --> 00:12:08,800
+dancers they feared
+
+213
+00:12:08,800 --> 00:12:12,070
+and then I know from this top sir which
+is labeled
+
+214
+00:12:12,070 --> 00:12:16,180
+by specifically that that's when they
+pick them up those are the days
+
+215
+00:12:16,180 --> 00:12:19,180
+succ could see on a number day are
+
+216
+00:12:19,180 --> 00:12:22,440
+I'm sorry incident a have marked that
+the
+
+217
+00:12:22,440 --> 00:12:26,370
+a driver noted that they actually picked
+up the dumpster
+
+218
+00:12:26,370 --> 00:12:29,420
+which means that we actually would bill
+that dumpster you know cuz we have a
+
+219
+00:12:29,420 --> 00:12:30,910
+recharge system for
+
+220
+00:12:30,910 --> 00:12:33,940
+for clients but if you look at the sonar
+
+221
+00:12:33,940 --> 00:12:37,220
+and if you look at load man nothing was
+picked up
+
+222
+00:12:37,220 --> 00:12:41,080
+so that obviously mistakenly picked up
+with a digital with the two systems
+
+223
+00:12:41,080 --> 00:12:44,090
+but if you look at the a you'll notice
+that
+
+224
+00:12:44,090 --> 00:12:48,090
+the sonar dots out see how in the lines
+go away the bar let me set the
+
+225
+00:12:48,090 --> 00:12:51,570
+volume is empty a.m. the sonar don't
+doubt
+
+226
+00:12:51,570 --> 00:12:55,040
+and then the driver noted that they
+actually picked up but load man didn't
+
+227
+00:12:55,040 --> 00:12:55,690
+pick it up
+
+228
+00:12:55,690 --> 00:13:00,450
+so you can tell us are double-checking
+who what's working what's not working
+
+229
+00:13:00,450 --> 00:13:03,570
+on the far right it also gave a secret
+service
+
+230
+00:13:03,570 --> 00:13:06,610
+a straight line which was never good
+
+231
+00:13:06,610 --> 00:13:09,750
+and that was only had a battery battery
+failure for 6
+
+232
+00:13:09,750 --> 00:13:13,020
+almost a week I'm and we didn't realize
+until
+
+233
+00:13:13,020 --> 00:13:15,960
+we can I like when he was working with
+adequate looking at it when I just come
+
+234
+00:13:15,960 --> 00:13:17,620
+back and see if it s still working
+
+235
+00:13:17,620 --> 00:13:20,830
+and I was wife and I we had a better her
+
+236
+00:13:20,830 --> 00:13:25,040
+so this kinda has huge implications on
+an entire
+
+237
+00:13:25,040 --> 00:13:29,450
+the whole system love waste hauling her
+resource recovery
+
+238
+00:13:29,450 --> 00:13:32,589
+so we can I can probably go through the
+deferred if
+
+239
+00:13:32,589 --> 00:13:36,490
+for people are from so there's the the
+traditional system is what you call a
+
+240
+00:13:36,490 --> 00:13:38,080
+biometric service-oriented work %uh
+
+241
+00:13:38,080 --> 00:13:41,330
+research recovery that's when I your
+
+242
+00:13:41,330 --> 00:13:45,060
+like pro everybody's you steer you have
+a bit and it's a particular size that's
+
+243
+00:13:45,060 --> 00:13:45,470
+one
+
+244
+00:13:45,470 --> 00:13:49,080
+1-yard are it's a if your household you
+know the size
+
+245
+00:13:49,080 --> 00:13:53,520
+they charge you so many dollars per
+month butter a picture just 55 bucks
+
+246
+00:13:53,520 --> 00:13:57,180
+to serve in a row service it on a weekly
+basis so that a biometric system
+
+247
+00:13:57,180 --> 00:14:01,440
+that's the dominant system throughout
+the at least North America
+
+248
+00:14:01,440 --> 00:14:05,779
+and is to go to zero waste with that
+system can be very troublesome
+
+249
+00:14:05,779 --> 00:14:09,550
+I'm except Cisco any space are working
+on it was recalling G
+
+250
+00:14:09,550 --> 00:14:13,760
+but and what they've done is by they'll
+pick up the charger for the refugees
+
+251
+00:14:13,760 --> 00:14:14,830
+picked up
+
+252
+00:14:14,830 --> 00:14:18,430
+and then they'll of couple Metairie
+kinda like
+
+253
+00:14:18,430 --> 00:14:21,830
+at and a researcher at the recycling any
+other streams
+
+254
+00:14:21,830 --> 00:14:25,270
+in addition but they base all their
+money on the refuse
+
+255
+00:14:25,270 --> 00:14:29,000
+but what happens is you keep having to
+increase you refuse charge
+
+256
+00:14:29,000 --> 00:14:33,050
+and you have to make the the buying
+smaller as you get closer to zero waste
+
+257
+00:14:33,050 --> 00:14:34,600
+so it's like a self
+
+258
+00:14:34,600 --> 00:14:38,640
+I it's it doesn't its economy a logical
+system to continue to follow
+
+259
+00:14:38,640 --> 00:14:41,980
+what other cities like Vancouver have
+done is a at least the city of
+
+260
+00:14:41,980 --> 00:14:44,950
+Vancouver's on buildings they have set
+up a contract with
+
+261
+00:14:44,950 --> 00:14:48,760
+there holler waste management based on
+performance
+
+262
+00:14:48,760 --> 00:14:52,330
+they say okay for the last ten years we
+had this much volume
+
+263
+00:14:52,330 --> 00:14:56,570
+and you charge just as much money and
+we're going to pay you for the next 10
+
+264
+00:14:56,570 --> 00:15:00,490
+years based on that allocation of cash
+how much cost us
+
+265
+00:15:00,490 --> 00:15:04,760
+and you will serve assessed 20 way said
+they will come to the table getting
+
+266
+00:15:04,760 --> 00:15:08,279
+what's the contractor that still
+difficult because
+
+267
+00:15:08,279 --> 00:15:11,370
+I has it that a very difficult to
+
+268
+00:15:11,370 --> 00:15:15,200
+thing to go by is to say well
+historically we had this much by am
+
+269
+00:15:15,200 --> 00:15:19,260
+and we want to keep making money based
+on that I am but does that really
+
+270
+00:15:19,260 --> 00:15:24,040
+in directly induce you to go to zero
+waste how does that work in a scepter
+
+271
+00:15:24,040 --> 00:15:27,270
+be with a community that really wants to
+do it they're not gonna do it because I
+
+272
+00:15:27,270 --> 00:15:28,140
+financial
+
+273
+00:15:28,140 --> 00:15:32,230
+reasons so we're proposing that we don't
+know if anybody else is doing this but
+
+274
+00:15:32,230 --> 00:15:35,440
+for proposing a weight-based resource
+recovery system where
+
+275
+00:15:35,440 --> 00:15:39,410
+if you we're gonna charge by the pound
+right now we think it's really about 22
+
+276
+00:15:39,410 --> 00:15:40,690
+cents a pound
+
+277
+00:15:40,690 --> 00:15:44,420
+for refuse pick up it will charge less
+for our recycling pickup
+
+278
+00:15:44,420 --> 00:15:47,839
+and we'll be able to monitor that with
+our login system
+
+279
+00:15:47,839 --> 00:15:51,960
+will say okay you know you paint we
+picked up 700 pounds yesterday from your
+
+280
+00:15:51,960 --> 00:15:55,670
+so the seven hundred times twenty cents
+US for the next bill
+
+281
+00:15:55,670 --> 00:15:58,870
+and then but the only way that really
+works
+
+282
+00:15:58,870 --> 00:16:02,100
+for us operationally because you know
+
+283
+00:16:02,100 --> 00:16:05,870
+a ideally everyone will discontinue
+using refuse the hill
+
+284
+00:16:05,870 --> 00:16:10,000
+go down to five percent no need us less
+I don't need is in a different way
+
+285
+00:16:10,000 --> 00:16:13,330
+intro what that works for us as we have
+to find a
+
+286
+00:16:13,330 --> 00:16:16,570
+efficiencies our operations to make it
+so that we still can
+
+287
+00:16:16,570 --> 00:16:19,740
+keeper budget that is cash positive
+suspect
+
+288
+00:16:19,740 --> 00:16:23,290
+so in order to do that that's what a
+smart dumpster comes in we were only
+
+289
+00:16:23,290 --> 00:16:24,680
+pick it up it's for
+
+290
+00:16:24,680 --> 00:16:28,000
+or after a two-week time period and then
+we can
+
+291
+00:16:28,000 --> 00:16:32,899
+use our guys for other media day
+organics line that we need ur
+
+292
+00:16:32,899 --> 00:16:37,430
+introduce our cardboard all the other I
+diversion activities that are necessary
+
+293
+00:16:37,430 --> 00:16:39,730
+that we don't really have time to do
+right now because we're spending so much
+
+294
+00:16:39,730 --> 00:16:40,459
+time picking up
+
+295
+00:16:40,459 --> 00:16:43,959
+empty dumpsters so
+
+296
+00:16:43,959 --> 00:16:47,540
+some are smart dumpster was successful
+we loved it
+
+297
+00:16:47,540 --> 00:16:51,230
+it would work we were able to say okay
+the
+
+298
+00:16:51,230 --> 00:16:55,140
+the the script worked we had a record a
+powerful it got
+
+299
+00:16:55,140 --> 00:16:59,300
+how often we could how much we could
+reduce our pick ups based on the actual
+
+300
+00:16:59,300 --> 00:17:00,320
+weight there was an
+
+301
+00:17:00,320 --> 00:17:05,199
+or the actual volume when it was for and
+as so we found a company to sepsis
+
+302
+00:17:05,199 --> 00:17:05,959
+counter
+
+303
+00:17:05,959 --> 00:17:09,350
+capacitor Cisco found us and asked us if
+we would like to be one of the first
+
+304
+00:17:09,350 --> 00:17:10,299
+clients
+
+305
+00:17:10,299 --> 00:17:14,699
+and their Harbor company at an incubator
+answer Cisco that are actually building
+
+306
+00:17:14,699 --> 00:17:17,939
+were kinda like building is proposing
+building one
+
+307
+00:17:17,939 --> 00:17:21,760
+on their own and they're called Cup
+ology and their system isn't
+
+308
+00:17:21,760 --> 00:17:24,880
+you know it's there prior system so I am
+
+309
+00:17:24,880 --> 00:17:27,949
+care I talk about it much more other
+than they've kinda realized the
+
+310
+00:17:27,949 --> 00:17:31,529
+dashboard that we had been talking about
+for almost a year and a half
+
+311
+00:17:31,529 --> 00:17:35,110
+and this is what it looks like in our
+actual guys we have a third over
+
+312
+00:17:35,110 --> 00:17:38,460
+refuse a dumpsters are rigged for
+fiercer
+
+313
+00:17:38,460 --> 00:17:42,049
+with these with their sensors and we use
+them now
+
+314
+00:17:42,049 --> 00:17:46,409
+every day to see which ones to pick up
+up the forty-three when therefore
+
+315
+00:17:46,409 --> 00:17:49,919
+before we thought 75 percent would be
+good and now realizing that if it's
+
+316
+00:17:49,919 --> 00:17:52,460
+about 60-65 percent by Terry pick it up
+
+317
+00:17:52,460 --> 00:17:56,130
+it's falling ready to be a ready be held
+but what's
+
+318
+00:17:56,130 --> 00:17:59,330
+this our relationship with Compal a GR
+comfort quest
+
+319
+00:17:59,330 --> 00:18:04,320
+doing a with going on with such a huge
+contract with these guys that were
+
+320
+00:18:04,320 --> 00:18:08,809
+very new to the business some anime no
+fair I understand a hauling works
+
+321
+00:18:08,809 --> 00:18:12,669
+I mean I don't understand three years
+ago but we were on board with all this
+
+322
+00:18:12,669 --> 00:18:15,279
+because that little python script that
+was written
+
+323
+00:18:15,279 --> 00:18:19,179
+that gave us the daily reading up what's
+going on and
+
+324
+00:18:19,179 --> 00:18:22,389
+to be able to bring the real world a
+
+325
+00:18:22,389 --> 00:18:25,580
+values to your desk you know and to you
+our
+
+326
+00:18:25,580 --> 00:18:30,429
+our own not system so their summer
+different concerns and drawbacks with
+
+327
+00:18:30,429 --> 00:18:33,179
+the implementation first I had wrought
+we
+
+328
+00:18:33,179 --> 00:18:37,340
+had RT RT sure the battery life and now
+is we're going to release after the
+
+329
+00:18:37,340 --> 00:18:39,850
+campus maybe next year have all of
+campus
+
+330
+00:18:39,850 --> 00:18:43,549
+up so worried about peer errors because
+the battery life
+
+331
+00:18:43,549 --> 00:18:46,619
+I know that's not a big deal with Python
+but that's the these are like the
+
+332
+00:18:46,619 --> 00:18:47,440
+reality
+
+333
+00:18:47,440 --> 00:18:52,330
+for bridging the suffer side with the
+actual harbor in the field
+
+334
+00:18:52,330 --> 00:18:55,669
+second is that I am we've always been
+worried about communications out of
+
+335
+00:18:55,669 --> 00:18:56,399
+anybody
+
+336
+00:18:56,399 --> 00:18:59,559
+has heard about the controversy with the
+smart meters RP jimmy's
+
+337
+00:18:59,559 --> 00:19:04,409
+I'm energy year me here electricity
+boxer
+
+338
+00:19:04,409 --> 00:19:08,590
+electricity meter what occurs everyone
+is extremely worried that they're
+
+339
+00:19:08,590 --> 00:19:09,789
+causing cancer
+
+340
+00:19:09,789 --> 00:19:13,779
+so a lotta times a whenever you're
+proposing
+
+341
+00:19:13,779 --> 00:19:17,389
+these new technologies especially with
+communications
+
+342
+00:19:17,389 --> 00:19:21,200
+if it uses a cell service IRS cellular
+
+343
+00:19:21,200 --> 00:19:25,340
+service then we start getting people
+that are upset and
+
+344
+00:19:25,340 --> 00:19:28,909
+well show up and do things that are you
+know
+
+345
+00:19:28,909 --> 00:19:33,799
+difficult operator on so I the thing
+that we loved about the Digi is a radio
+
+346
+00:19:33,799 --> 00:19:36,239
+frequency which is not on the radar as
+being
+
+347
+00:19:36,239 --> 00:19:40,149
+a bad thing and the resync apology
+
+348
+00:19:40,149 --> 00:19:43,269
+a meter sensors right now RSL system
+
+349
+00:19:43,269 --> 00:19:47,340
+and we're hoping that other WiFi dosing
+that wish I was a big deal so that's
+
+350
+00:19:47,340 --> 00:19:48,700
+something to think about it
+
+351
+00:19:48,700 --> 00:19:52,659
+you actually try to poser look work on
+mister Probert project
+
+352
+00:19:52,659 --> 00:19:55,889
+the third thing is that as we start
+doing more zero waste
+
+353
+00:19:55,889 --> 00:20:00,570
+I'm a actions like these are new
+canisters that were gonna prod deploy
+
+354
+00:20:00,570 --> 00:20:01,860
+next year
+
+355
+00:20:01,860 --> 00:20:05,389
+throughout the next four years is that
+the when you start bring the technology
+
+356
+00:20:05,389 --> 00:20:07,820
+and we had the same even the one sensor
+
+357
+00:20:07,820 --> 00:20:11,139
+I'll when I had it on the dumpster
+caused by office
+
+358
+00:20:11,139 --> 00:20:14,100
+everyone sir talk about all operators
+the building up for it at the building
+
+359
+00:20:14,100 --> 00:20:14,980
+managers
+
+360
+00:20:14,980 --> 00:20:18,850
+now that we have 143 people are actually
+afraid
+
+361
+00:20:18,850 --> 00:20:22,190
+the sensors which is I mean cuz the
+technology is just like this
+
+362
+00:20:22,190 --> 00:20:25,480
+weird thing they they were it's like a
+big brother type thing
+
+363
+00:20:25,480 --> 00:20:29,259
+and so one thing is that they we were
+worried about vandalism
+
+364
+00:20:29,259 --> 00:20:32,570
+because the sensors are out there I mean
+we know there
+
+365
+00:20:32,570 --> 00:20:36,070
+not destructible by the way story to
+people with just actually having bats
+
+366
+00:20:36,070 --> 00:20:37,440
+and doing things like that
+
+367
+00:20:37,440 --> 00:20:40,879
+but the second thing that was actually a
+positive about it was that people felt
+
+368
+00:20:40,879 --> 00:20:42,529
+like they were being watched
+
+369
+00:20:42,529 --> 00:20:45,570
+so they actually diverted a lot better
+it's almost like a camera that doesn't
+
+370
+00:20:45,570 --> 00:20:46,029
+work
+
+371
+00:20:46,029 --> 00:20:49,649
+on the wall well there this whole thing
+was like you're being watched
+
+372
+00:20:49,649 --> 00:20:53,659
+people were actually pulling diverse
+materials out the dumpster after they
+
+373
+00:20:53,659 --> 00:20:54,559
+solve a camera
+
+374
+00:20:54,559 --> 00:20:58,429
+they were thrown in there to the care in
+a report out so it's been a really wild
+
+375
+00:20:58,429 --> 00:21:01,720
+on a how much difference this is making
+
+376
+00:21:01,720 --> 00:21:05,710
+but on a slight I wanted to make sure
+and make a note that I am
+
+377
+00:21:05,710 --> 00:21:10,779
+the benefit a actually using from moving
+forward with this type of
+
+378
+00:21:10,779 --> 00:21:15,070
+activity could have extremely positive
+economic outcomes so
+
+379
+00:21:15,070 --> 00:21:20,289
+wanna see what exact number was sided
+the numbers and if we actually
+
+380
+00:21:20,289 --> 00:21:25,950
+actually apply at this a smart dumpster
+to the entire campus all
+
+381
+00:21:25,950 --> 00:21:29,769
+turned 50 dumpsters we have on campus
+there is
+
+382
+00:21:29,769 --> 00:21:33,970
+and then we actually do the savings I
+expect based on the low demand data and
+
+383
+00:21:33,970 --> 00:21:35,619
+based on our single smart
+
+384
+00:21:35,619 --> 00:21:38,619
+smart up sir we expected like reduce
+
+385
+00:21:38,619 --> 00:21:41,799
+a at least two possibly what we're gonna
+
+386
+00:21:41,799 --> 00:21:45,019
+produce growing up to do one out of
+every three
+
+387
+00:21:45,019 --> 00:21:48,840
+pickups or services we've had to do in
+the past and that equates to you
+
+388
+00:21:48,840 --> 00:21:51,929
+253 thousand dollars worth of labor that
+way
+
+389
+00:21:51,929 --> 00:21:55,809
+death labor alone aside gas satires the
+star stuff
+
+390
+00:21:55,809 --> 00:21:59,749
+so doing this type from this type of
+activity
+
+391
+00:21:59,749 --> 00:22:03,299
+actually could have extremely positive
+
+392
+00:22:03,299 --> 00:22:07,059
+economic benefits to people like me
+operators and for us
+
+393
+00:22:07,059 --> 00:22:10,149
+it's not that we want to get a fish into
+lay people off which
+
+394
+00:22:10,149 --> 00:22:13,429
+I heard happens at other places for us
+we just the more
+
+395
+00:22:13,429 --> 00:22:16,999
+labor capacity to do the other streams
+you know so
+
+396
+00:22:16,999 --> 00:22:21,489
+that's why I think everybody's on board
+so far and then XO we've been successful
+
+397
+00:22:21,489 --> 00:22:22,649
+with the smart up sir
+
+398
+00:22:22,649 --> 00:22:26,710
+and and with this whole idea but at the
+all the UC's we all have our
+
+399
+00:22:26,710 --> 00:22:27,999
+sustainability plans
+
+400
+00:22:27,999 --> 00:22:31,519
+and everyone on my side is like
+
+401
+00:22:31,519 --> 00:22:34,730
+how the heck here do we start really
+changing behavior
+
+402
+00:22:34,730 --> 00:22:37,489
+and that's what the great thing about
+the sport after was is it had immediate
+
+403
+00:22:37,489 --> 00:22:38,590
+changes to pave your
+
+404
+00:22:38,590 --> 00:22:42,659
+with the drivers for one and also people
+knew that they were doing
+
+405
+00:22:42,659 --> 00:22:45,850
+something they were being watched to
+make sure that they do the right thing
+
+406
+00:22:45,850 --> 00:22:49,320
+well we have these are all the different
+topics every have to cover and
+
+407
+00:22:49,320 --> 00:22:51,619
+sustainability plan by 2020 we have
+
+408
+00:22:51,619 --> 00:22:55,769
+RF anybody is from a with california's a
+drought when we were turning spigots of
+
+409
+00:22:55,769 --> 00:22:56,239
+right now
+
+410
+00:22:56,239 --> 00:23:01,119
+on campus I'm and they don't they have
+to make estimates they don't have exact
+
+411
+00:23:01,119 --> 00:23:05,080
+meter numbers custer it takes time to
+gather all the numbers and I'm
+
+412
+00:23:05,080 --> 00:23:08,649
+so if we were able waters the 1i think
+would be the next
+
+413
+00:23:08,649 --> 00:23:12,200
+loafer to actually put the sensors on
+and energy
+
+414
+00:23:12,200 --> 00:23:15,639
+should be something we should be able to
+quickly because you already have kinda
+
+415
+00:23:15,639 --> 00:23:17,259
+smart meter devices almost
+
+416
+00:23:17,259 --> 00:23:20,749
+sup there's this the meters are out
+there and then there's
+
+417
+00:23:20,749 --> 00:23:24,480
+a sitting operators at the desk but it's
+very difficult that bridge
+
+418
+00:23:24,480 --> 00:23:28,389
+that it's critical that Piper
+programmers could provide
+
+419
+00:23:28,389 --> 00:23:31,549
+is as a def away something that I'm
+trying to your
+
+420
+00:23:31,549 --> 00:23:35,679
+that's why i wanna talk today say hey in
+are we really need help from an operator
+
+421
+00:23:35,679 --> 00:23:38,549
+side to make this happen so that we can
+actually give
+
+422
+00:23:38,549 --> 00:23:41,619
+dashboard readings on all the different
+
+423
+00:23:41,619 --> 00:23:44,659
+categories that we have to me and then
+even
+
+424
+00:23:44,659 --> 00:23:47,960
+in a in a past life actually did
+California recall the Act
+
+425
+00:23:47,960 --> 00:23:51,249
+activities and you had your medication
+issues you have to constantly monitor
+
+426
+00:23:51,249 --> 00:23:52,359
+things
+
+427
+00:23:52,359 --> 00:23:57,019
+if you're you're disturbing them so to
+speak and this is a total no other area
+
+428
+00:23:57,019 --> 00:23:58,369
+that I V
+
+429
+00:23:58,369 --> 00:24:03,700
+the pie phone type of bring the hardware
+to this offer and bringing it together
+
+430
+00:24:03,700 --> 00:24:07,269
+cocktail you know in in good competition
+could really be helpful
+
+431
+00:24:07,269 --> 00:24:11,049
+and I feel like anyone is really
+addressing it I felt like when we did
+
+432
+00:24:11,049 --> 00:24:13,210
+the smart up sir we had a hard time
+
+433
+00:24:13,210 --> 00:24:17,720
+and getting really any help I expected I
+guess maybe I didn't breach as well but
+
+434
+00:24:17,720 --> 00:24:20,950
+I'm working on it so I think that was
+
+435
+00:24:20,950 --> 00:24:26,149
+the main thing I just want to say is
+that a I feel like it's really important
+
+436
+00:24:26,149 --> 00:24:27,489
+that professionals like me
+
+437
+00:24:27,489 --> 00:24:30,690
+we need your partnership and moving
+forward and and this is the whole growth
+
+438
+00:24:30,690 --> 00:24:33,249
+area that's beyond just the strike
+software
+
+439
+00:24:33,249 --> 00:24:36,509
+type data and management we actually
+
+440
+00:24:36,509 --> 00:24:40,239
+and here we have things that we could
+work on time i'm looking for to your
+
+441
+00:24:40,239 --> 00:24:43,379
+professional career with you okay
+
+442
+00:24:43,379 --> 00:24:46,600
+I want to make sure think my pass rusher
+and burqas he was one there
+
+443
+00:24:46,600 --> 00:24:49,820
+story pro all the stuff and I must say a
+worker
+
+444
+00:24:49,820 --> 00:24:53,419
+don't and I'm ready for questions are
+answers
+
+445
+00:24:53,419 --> 00:25:00,419
+comments thank you
+
+446
+00:25:02,460 --> 00:25:09,460
+you have any questions jiska approach to
+make
+
+447
+00:25:18,100 --> 00:25:18,860
+and area
+
+448
+00:25:18,860 --> 00:25:22,040
+I have more cell there
+
+449
+00:25:22,040 --> 00:25:25,590
+and coming up on me and temp
+
+450
+00:25:25,590 --> 00:25:30,910
+yard am I'll hockey and it specifically
+for projects just like that
+
+451
+00:25:30,910 --> 00:25:34,400
+bring it there and here at Cody's
+
+452
+00:25:34,400 --> 00:25:38,840
+like Google a cap Yahoo are coming back
+to work
+
+453
+00:25:38,840 --> 00:25:42,130
+the core down anyone else like any you
+
+454
+00:25:42,130 --> 00:25:45,960
+highly your project I'm I'm working on
+that
+
+455
+00:25:45,960 --> 00:25:49,100
+I can pick okay
+
+456
+00:25:49,100 --> 00:25:52,690
+cool yeah as next week I me but make it
+
+457
+00:25:52,690 --> 00:25:55,700
+occurs get the cracker okay yeah
+
+458
+00:25:55,700 --> 00:26:02,700
+differing pet
+
+459
+00:26:05,129 --> 00:26:06,340
+you
+
+460
+00:26:06,340 --> 00:26:07,220
+but thank you
+

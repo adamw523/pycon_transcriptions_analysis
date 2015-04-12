@@ -1,0 +1,2528 @@
+1
+00:00:11,010 --> 00:00:13,350
+sorry I welcome this afternoon session
+
+2
+00:00:13,350 --> 00:00:16,360
+I now we're gonna hear from their jack's
+not be but helicopters
+
+3
+00:00:16,360 --> 00:00:23,360
+so so the total my talk is cheap
+helicopters
+
+4
+00:00:25,140 --> 00:00:29,800
+in my living room I am my name's know
+Jackson lovely on their jail on the
+
+5
+00:00:29,800 --> 00:00:30,490
+twitters
+
+6
+00:00:30,490 --> 00:00:34,320
+I the slides are up on my website NJL
+.us
+
+7
+00:00:34,320 --> 00:00:39,809
+on so the whole point my talk the
+purpose yes I I hope to know the
+
+8
+00:00:39,809 --> 00:00:40,540
+helicopters
+
+9
+00:00:40,540 --> 00:00:43,680
+I'm but I'm can talk about using up
+papon
+
+10
+00:00:43,680 --> 00:00:47,570
+an Arduino together I'm I talk to people
+about this a lot
+
+11
+00:00:47,570 --> 00:00:51,420
+and they say oh you're right pat you run
+python on your tween oh and I don't know
+
+12
+00:00:51,420 --> 00:00:54,870
+that doesn't really work that way I just
+try to
+
+13
+00:00:54,870 --> 00:00:58,070
+right as little on the road we know as
+possible now my pocket offer
+
+14
+00:00:58,070 --> 00:01:01,890
+certainly take Python write a card we
+knows where to put them together
+
+15
+00:01:01,890 --> 00:01:05,550
+with helicopters and do awesome things
+I'm
+
+16
+00:01:05,550 --> 00:01:08,810
+this is all transparent attempt to get
+%um doing awesome things
+
+17
+00:01:08,810 --> 00:01:12,660
+right I'm so are tweeners are the
+gateway drug so
+
+18
+00:01:12,660 --> 00:01:16,110
+helicopters I'll talk about helicopters
+our first
+
+19
+00:01:16,110 --> 00:01:19,900
+cuz they blow my mind that they work at
+all and the fact they've been around
+
+20
+00:01:19,900 --> 00:01:22,690
+before like computer-controlled these
+things
+
+21
+00:01:22,690 --> 00:01:28,409
+is insanity so I'm this is the Simon s
+wanna 7g it's less than twenty dollars
+
+22
+00:01:28,409 --> 00:01:29,390
+on Amazon
+
+23
+00:01:29,390 --> 00:01:32,990
+you can click Buy It Now on Amazon
+
+24
+00:01:32,990 --> 00:01:36,930
+and I'll be waiting for you when you get
+home this is where Pete this is a
+
+25
+00:01:36,930 --> 00:01:38,070
+helicopter
+
+26
+00:01:38,070 --> 00:01:42,409
+for less than twenty dollars that could
+be waiting for you at home
+
+27
+00:01:42,409 --> 00:01:49,090
+okay so all talk about the details it
+has lotsa features and I get a list of
+
+28
+00:01:49,090 --> 00:01:51,869
+all the features and some things don't
+seem like features
+
+29
+00:01:51,869 --> 00:01:55,689
+but trust me when you're buying
+helicopters for less than twenty dollars
+
+30
+00:01:55,689 --> 00:01:59,090
+some things are very definitely extra
+features
+
+31
+00:01:59,090 --> 00:02:02,360
+okay so it goes up and down most of them
+do that
+
+32
+00:02:02,360 --> 00:02:05,840
+it rotates left and right sick and
+twisted left and right
+
+33
+00:02:05,840 --> 00:02:09,380
+it goes for him backwards that's
+actually an awesome feature I have one
+
+34
+00:02:09,380 --> 00:02:10,519
+that only goes for words
+
+35
+00:02:10,519 --> 00:02:13,940
+um it has a blinking light I which
+
+36
+00:02:13,940 --> 00:02:18,639
+which sounds useless but trust me that's
+pretty heady to I'm it has a USB charger
+
+37
+00:02:18,639 --> 00:02:22,030
+I am so you don't have to go dig around
+for dozens of like these
+
+38
+00:02:22,030 --> 00:02:25,590
+you know AAA batteries also other stuff
+I'm but the coolest feature
+
+39
+00:02:25,590 --> 00:02:28,609
+kahane the course features that is less
+than twenty dollars in Amazon
+
+40
+00:02:28,609 --> 00:02:33,079
+on the second course feature is not in
+for a protocol that controls it has been
+
+41
+00:02:33,079 --> 00:02:34,410
+reversed engineered
+
+42
+00:02:34,410 --> 00:02:39,019
+to somebody else has figured out what
+this delightful little piece of hardware
+
+43
+00:02:39,019 --> 00:02:39,639
+does
+
+44
+00:02:39,639 --> 00:02:44,510
+and I'm has given you code that you can
+use to control your helicopter
+
+45
+00:02:44,510 --> 00:02:48,519
+I have another version of this with
+holes drilled in the back
+
+46
+00:02:48,519 --> 00:02:51,820
+with little wires running and so I could
+try to figure out what was going on in
+
+47
+00:02:51,820 --> 00:02:52,070
+it
+
+48
+00:02:52,070 --> 00:02:55,620
+I'm now you don't need any that
+somebody's reverse-engineered offer its
+
+49
+00:02:55,620 --> 00:02:56,160
+amazing
+
+50
+00:02:56,160 --> 00:03:00,910
+so helicopters helicopter is a fan
+
+51
+00:03:00,910 --> 00:03:04,419
+that is powerful enough to blow itself
+into the air
+
+52
+00:03:04,419 --> 00:03:07,709
+right like like literally it is a fan
+
+53
+00:03:07,709 --> 00:03:11,750
+it blow straight down and it pushes
+itself and potentially other things
+
+54
+00:03:11,750 --> 00:03:16,400
+up into the air um this 1i believe this
+is a skyhook
+
+55
+00:03:16,400 --> 00:03:21,000
+I look up the specs it can pull up
+twenty thousand pounds have stuff
+
+56
+00:03:21,000 --> 00:03:26,359
+not just itself 20,000 additional pounds
+this is a fan that they can blow itself
+
+57
+00:03:26,359 --> 00:03:29,940
+and five or six SUV's into the air right
+
+58
+00:03:29,940 --> 00:03:33,570
+this is this is hysterical like the fact
+these exist is just like
+
+59
+00:03:33,570 --> 00:03:36,790
+amazing so are nice little
+
+60
+00:03:36,790 --> 00:03:39,919
+Simon as 47 G twenty dollars buy it now
+at Amazon
+
+61
+00:03:39,919 --> 00:03:43,510
+or you know from where you are but was
+in 20 bucks earthly so this thing
+
+62
+00:03:43,510 --> 00:03:46,930
+has this concept up throttle so
+
+63
+00:03:46,930 --> 00:03:51,859
+you know how hard are you gonna push
+down is a number from 0 to 127
+
+64
+00:03:51,859 --> 00:03:55,260
+I give you feeling here forty will spin
+enough that
+
+65
+00:03:55,260 --> 00:03:58,479
+you might like go little out and bruise
+your fingers sticking in there
+
+66
+00:03:58,479 --> 00:04:04,440
+I most have mine will hover in the upper
+sixties lower 70's I think it depends on
+
+67
+00:04:04,440 --> 00:04:08,590
+just you know I mean it's less than 20
+bucks so you know the build quality
+
+68
+00:04:08,590 --> 00:04:09,850
+varies a little bit
+
+69
+00:04:09,850 --> 00:04:13,650
+a battery lives very little bit there
+lots going on there but so like
+
+70
+00:04:13,650 --> 00:04:16,750
+you know you're gonna hover in like
+upper 60's or 70's generally
+
+71
+00:04:16,750 --> 00:04:19,859
+arm 127 is gonna augured into your
+ceiling
+
+72
+00:04:19,859 --> 00:04:23,660
+I am so you know you kinda got the
+throttle the play with once you get it
+
+73
+00:04:23,660 --> 00:04:27,490
+that downdraft I think I got a downdraft
+here anyway so you get the throttle
+
+74
+00:04:27,490 --> 00:04:30,900
+0 to 127 makes a helicopter go up
+
+75
+00:04:30,900 --> 00:04:33,960
+if you turn it high enough Heights OH
+
+76
+00:04:33,960 --> 00:04:39,139
+I'm anybody remember conservation of
+angular momentum
+
+77
+00:04:39,139 --> 00:04:42,740
+%ah haha okay I taught high school
+physics and makes me really sad
+
+78
+00:04:42,740 --> 00:04:46,090
+on so I I guess I'll give you the
+totally intuitive way to think about
+
+79
+00:04:46,090 --> 00:04:46,840
+this
+
+80
+00:04:46,840 --> 00:04:50,830
+so you're in mid-air and a helicopter
+and you have a giant engine
+
+81
+00:04:50,830 --> 00:04:54,099
+and he starts spinning this rotor around
+above your head
+
+82
+00:04:54,099 --> 00:05:00,870
+really fast what keeps you from spinning
+in the opposite direction
+
+83
+00:05:00,870 --> 00:05:04,240
+Haxey I this is the second time in a
+stock and I've given as
+
+84
+00:05:04,240 --> 00:05:07,409
+that's like a you know it's like to run
+out there knows but say the tail rotor
+
+85
+00:05:07,409 --> 00:05:09,509
+and then some egos tell rotor yes
+
+86
+00:05:09,509 --> 00:05:13,180
+that thing on the back who I can do it
+my point ever got that thing on the back
+
+87
+00:05:13,180 --> 00:05:13,669
+there
+
+88
+00:05:13,669 --> 00:05:18,539
+that actually blows sideways and keeps
+the bottom the helicopter from spinning
+
+89
+00:05:18,539 --> 00:05:21,870
+right just like I considered hysterical
+that these things work at all
+
+90
+00:05:21,870 --> 00:05:25,729
+I'm so this is the sign-in and
+
+91
+00:05:25,729 --> 00:05:29,819
+this is the first pictures in its kinda
+cozy artist too big rotors on a top
+
+92
+00:05:29,819 --> 00:05:33,469
+actually spin in opposite directions
+look at the shape the blades I think a
+
+93
+00:05:33,469 --> 00:05:36,860
+the top ones clockwise in the bar bottom
+one is counterclockwise
+
+94
+00:05:36,860 --> 00:05:40,460
+and so they spin in opposite directions
+and make cut they counteract each
+
+95
+00:05:40,460 --> 00:05:41,909
+other's angular momentum
+
+96
+00:05:41,909 --> 00:05:45,349
+and keep your helicopter kind of
+pointing forwards right
+
+97
+00:05:45,349 --> 00:05:49,509
+so there's 8 little dial on the bottom
+assists it's the trim
+
+98
+00:05:49,509 --> 00:05:52,969
+and it's basically trying to adjust if
+there's little speed differences between
+
+99
+00:05:52,969 --> 00:05:54,479
+the top and the bottom
+
+100
+00:05:54,479 --> 00:05:58,340
+so you can adjust the trim manually to
+find the exact center
+
+101
+00:05:58,340 --> 00:06:02,409
+or arm what I like to do because I have
+complete control over this is i
+
+102
+00:06:02,409 --> 00:06:03,530
+effectively
+
+103
+00:06:03,530 --> 00:06:07,979
+jam one stick on Wearside an attribute
+turn the trim on whether one side
+
+104
+00:06:07,979 --> 00:06:11,009
+and I can do turns sharper than I can
+
+105
+00:06:11,009 --> 00:06:14,129
+from actually using the control directly
+which is pretty nifty
+
+106
+00:06:14,129 --> 00:06:17,389
+so I'm that idea this this like back and
+forth
+
+107
+00:06:17,389 --> 00:06:20,699
+that ID attorneys called ewe if you
+shake your head no
+
+108
+00:06:20,699 --> 00:06:25,960
+your yawning your head alright so ya is
+this turn back and forth so did you keep
+
+109
+00:06:25,960 --> 00:06:28,659
+yourself flat picture rotating like a
+lazy susan
+
+110
+00:06:28,659 --> 00:06:34,189
+that is yaw so ya goes from 0 to 127
+trim goes from 0 to 127 and sixty-three
+
+111
+00:06:34,189 --> 00:06:34,979
+the middle
+
+112
+00:06:34,979 --> 00:06:38,419
+263 means pretty much go forward I guess
+said
+
+113
+00:06:38,419 --> 00:06:41,479
+wasn't my box 63 means pretty much go
+forward
+
+114
+00:06:41,479 --> 00:06:45,610
+arm 0 I think means right one price
+Hermes left I remember their
+
+115
+00:06:45,610 --> 00:06:49,139
+their conscience I get 'em summer I'm
+
+116
+00:06:49,139 --> 00:06:53,249
+next up tool tailored missile thing it
+does happen tailback there
+
+117
+00:06:53,249 --> 00:06:57,889
+it is AL is yet another fan but it is
+pointed the wrong way
+
+118
+00:06:57,889 --> 00:07:02,120
+right like snot points I was like on a
+real helicopter it's pointed up
+
+119
+00:07:02,120 --> 00:07:06,050
+this is for the with called pitch
+pitches another kinda rotation 6 shake
+
+120
+00:07:06,050 --> 00:07:06,590
+your head
+
+121
+00:07:06,590 --> 00:07:11,419
+yes let's pitch but with the the
+rotation at left his role which is this
+
+122
+00:07:11,419 --> 00:07:12,069
+way
+
+123
+00:07:12,069 --> 00:07:15,919
+and our helicopter does not to roll it's
+been a 10 bucks for that
+
+124
+00:07:15,919 --> 00:07:19,949
+so pitch pitch is this nodding her head
+yes
+
+125
+00:07:19,949 --> 00:07:23,639
+this is pitch and so if we if you think
+about it if we're
+
+126
+00:07:23,639 --> 00:07:26,879
+if a blow to little fan way out and I'll
+ever like that we're gonna took the
+
+127
+00:07:26,879 --> 00:07:28,560
+helicopter forwards
+
+128
+00:07:28,560 --> 00:07:32,050
+right and what happens when we took a
+helicopter ford's the giant blade from
+
+129
+00:07:32,050 --> 00:07:35,969
+atop are now pointing forward to drag
+the entire thing for words
+
+130
+00:07:35,969 --> 00:07:39,180
+right if we want to go backwards what we
+do we blow the air
+
+131
+00:07:39,180 --> 00:07:42,319
+up we tilted back in the entire thing
+was backwards
+
+132
+00:07:42,319 --> 00:07:45,360
+so this gives us enough control to be
+able to move this thing in three
+
+133
+00:07:45,360 --> 00:07:46,080
+dimensions
+
+134
+00:07:46,080 --> 00:07:49,460
+right me go up and down we can turn it
+we can go forward and backwards
+
+135
+00:07:49,460 --> 00:07:52,639
+right there's some other motions we
+can't do but we get pretty close
+
+136
+00:07:52,639 --> 00:07:55,680
+so pitch also runs 0 to 127
+
+137
+00:07:55,680 --> 00:07:58,900
+pitch is it important to note that 63 is
+of
+
+138
+00:07:58,900 --> 00:08:02,249
+because if your pitch is not set to of
+
+139
+00:08:02,249 --> 00:08:06,219
+you say all this at the pitch 20 that
+means turn a little fan on in the back
+
+140
+00:08:06,219 --> 00:08:07,789
+as fast as you can go
+
+141
+00:08:07,789 --> 00:08:10,900
+in one direction or the other right so
+it's important in general
+
+142
+00:08:10,900 --> 00:08:14,680
+I'm I have stuck my fingers into the
+plate service
+
+143
+00:08:14,680 --> 00:08:18,029
+book at first on purpose to make sure
+didn't hurt that much and then by
+
+144
+00:08:18,029 --> 00:08:20,669
+accident many many other times enough
+
+145
+00:08:20,669 --> 00:08:24,439
+you might get some bruises you might be
+really mad
+
+146
+00:08:24,439 --> 00:08:29,749
+but so I so I'm the little preparing the
+back there was fragile
+
+147
+00:08:29,749 --> 00:08:33,659
+and I'm I don't wanna like totally freak
+out my dog
+
+148
+00:08:33,659 --> 00:08:37,710
+so I'm make sure when you re setting
+stuff you wanna set the pitch back to 63
+
+149
+00:08:37,710 --> 00:08:39,409
+you want that the fail-safe
+
+150
+00:08:39,409 --> 00:08:42,589
+10 not have thing spinning on your toy
+
+151
+00:08:42,589 --> 00:08:45,589
+when you think it stopped thats had
+important
+
+152
+00:08:45,589 --> 00:08:49,260
+on the infrared protocols really easy
+there's four bytes one for each setting
+
+153
+00:08:49,260 --> 00:08:52,399
+I basically just flashes an infrared LED
+
+154
+00:08:52,399 --> 00:08:57,380
+on little 10 no second 10 microseconds
+yet here we go ten microsecond pulses
+
+155
+00:08:57,380 --> 00:09:00,560
+and then there's positive to in the
+polls as the sender is a once and stuff
+
+156
+00:09:00,560 --> 00:09:03,300
+arm it's actually very very
+straightforward and like I said
+
+157
+00:09:03,300 --> 00:09:04,490
+something else wrote the code for us
+
+158
+00:09:04,490 --> 00:09:08,339
+so its cool actor helicopters are
+awesome money set them aside I want to
+
+159
+00:09:08,339 --> 00:09:10,310
+talk about are tweeners
+
+160
+00:09:10,310 --> 00:09:13,329
+this is the eighty mega 320 a chip I'm
+
+161
+00:09:13,329 --> 00:09:17,690
+it hasn't a bit processor I it has I
+think 15
+
+162
+00:09:17,690 --> 00:09:21,230
+digital input/output pins get some like
+six arm
+
+163
+00:09:21,230 --> 00:09:25,279
+analog input/output pins you can use to
+sing to turn like you can turn off the
+
+164
+00:09:25,279 --> 00:09:26,329
+electricity
+
+165
+00:09:26,329 --> 00:09:30,290
+and turn on the electricity or read in a
+readout electricity on a bunch these
+
+166
+00:09:30,290 --> 00:09:31,089
+pins
+
+167
+00:09:31,089 --> 00:09:35,480
+from software it allows you to interact
+with the real world very simply
+
+168
+00:09:35,480 --> 00:09:38,970
+I'm it has 32 kilobytes a flash
+
+169
+00:09:38,970 --> 00:09:42,170
+it has an awesome easy prompt some RAM
+
+170
+00:09:42,170 --> 00:09:45,250
+this is an entire computer I'm
+
+171
+00:09:45,250 --> 00:09:50,820
+not that much less powerful then the
+Commodore 64 I started out on
+
+172
+00:09:50,820 --> 00:09:55,230
+I'm in a chip that you can buy for like
+three bucks
+
+173
+00:09:55,230 --> 00:09:58,459
+I don't like my dad by 10 at them to get
+them at three bucks a piece
+
+174
+00:09:58,459 --> 00:10:03,199
+but this is like this tiny cheap little
+embedded controller that you can stick
+
+175
+00:10:03,199 --> 00:10:07,089
+anything and they are awesome and
+amazing they're they're very very very
+
+176
+00:10:07,089 --> 00:10:07,779
+low
+
+177
+00:10:07,779 --> 00:10:12,160
+capability but they're so much better
+than trying to figure out
+
+178
+00:10:12,160 --> 00:10:15,910
+electronics I like all that other stuff
+to do it all by hand
+
+179
+00:10:15,910 --> 00:10:19,350
+they're amazing but the problem with
+embedded development
+
+180
+00:10:19,350 --> 00:10:23,070
+is usually get to write the code in C
+and the need to cross compile it and
+
+181
+00:10:23,070 --> 00:10:25,670
+then you this whole thing to upload it
+and send it over
+
+182
+00:10:25,670 --> 00:10:29,259
+and is this enormous pain and he spent
+like 700 dollars on the stupid
+
+183
+00:10:29,259 --> 00:10:30,209
+development kit
+
+184
+00:10:30,209 --> 00:10:34,930
+and it's just this frustrating messy
+thing a group of people
+
+185
+00:10:34,930 --> 00:10:38,630
+Italy I have this open source hardware
+
+186
+00:10:38,630 --> 00:10:43,199
+the Arduino and the art we know to know
+which is kinda like the main art we know
+
+187
+00:10:43,199 --> 00:10:45,199
+we're talking about that uses 80 mega
+
+188
+00:10:45,199 --> 00:10:49,490
+320 a chip that one is less than 30
+bucks on Amazon I'm sorry is an Amazon
+
+189
+00:10:49,490 --> 00:10:50,620
+for everything but
+
+190
+00:10:50,620 --> 00:10:53,769
+I hit the button and it shows up on
+
+191
+00:10:53,769 --> 00:10:56,940
+so the its 30 bucks on Amazon and they
+give you
+
+192
+00:10:56,940 --> 00:11:00,050
+this entire development environment that
+you can use it to you
+
+193
+00:11:00,050 --> 00:11:04,089
+embedded development on so if you look
+at it you can see this this blog right
+
+194
+00:11:04,089 --> 00:11:04,769
+here
+
+195
+00:11:04,769 --> 00:11:08,199
+that's the eighty mega chip that's it
+right there that's most up what an
+
+196
+00:11:08,199 --> 00:11:10,170
+Arduino is an art we know is just
+
+197
+00:11:10,170 --> 00:11:13,339
+some support stuff for that chip a
+
+198
+00:11:13,339 --> 00:11:17,279
+top left corner there's a little red
+reset button I have it set up so i hit
+
+199
+00:11:17,279 --> 00:11:18,300
+the reset button
+
+200
+00:11:18,300 --> 00:11:22,329
+the helicopter stops are right below it
+that's a USB plug
+
+201
+00:11:22,329 --> 00:11:25,910
+and then down the bottom is a power plug
+a river plug in the power kazakh a
+
+202
+00:11:25,910 --> 00:11:28,310
+runoff USB that's what it's doing right
+now it's
+
+203
+00:11:28,310 --> 00:11:31,699
+lights are flashing its running of the
+USB power I'm good
+
+204
+00:11:31,699 --> 00:11:35,410
+I'm super simple straightforward you
+talked it over the USB
+
+205
+00:11:35,410 --> 00:11:39,399
+they have solved all the problems for
+you except are matching up like cross
+
+206
+00:11:39,399 --> 00:11:40,329
+compile C
+
+207
+00:11:40,329 --> 00:11:43,420
+and then you have to do of the senate
+cross they've written a
+
+208
+00:11:43,420 --> 00:11:46,649
+I T and I D E for you it's not
+
+209
+00:11:46,649 --> 00:11:51,360
+the most impressive feature rich ID it's
+aimed at beginners
+
+210
+00:11:51,360 --> 00:11:55,410
+and you're writing in this weird kind of
+see you can see little hints have some
+
+211
+00:11:55,410 --> 00:11:57,889
+ways written some javascript before this
+as well
+
+212
+00:11:57,889 --> 00:12:03,569
+arm but it feels very see like and the
+best feature is right up here we see
+
+213
+00:12:03,569 --> 00:12:04,009
+that little
+
+214
+00:12:04,009 --> 00:12:08,480
+a row you hit the arrow it compiles the
+code it sends it over to the Arduino for
+
+215
+00:12:08,480 --> 00:12:09,220
+you
+
+216
+00:12:09,220 --> 00:12:12,819
+resets it and your coaches starts
+running that's it
+
+217
+00:12:12,819 --> 00:12:16,269
+I'm so it's taken just massive amounts
+of pain
+
+218
+00:12:16,269 --> 00:12:21,800
+and effort and unhappiness and it's made
+into something that I can
+
+219
+00:12:21,800 --> 00:12:25,050
+hand to my 12 year old cousin and kind
+of poke and prod him a little bit and
+
+220
+00:12:25,050 --> 00:12:27,089
+have been doing real stuff
+
+221
+00:12:27,089 --> 00:12:30,259
+so when people talk about embedded
+development there's a hello world for
+
+222
+00:12:30,259 --> 00:12:31,569
+the embedded
+
+223
+00:12:31,569 --> 00:12:36,339
+world a deer well you can't see it cuz I
+made it really dark
+
+224
+00:12:36,339 --> 00:12:40,509
+but yeah there's a type they're seeking
+to declare types it feels like see
+
+225
+00:12:40,509 --> 00:12:45,029
+so we're gonna make i leda were gonna
+say thirty most Arduino boards have
+
+226
+00:12:45,029 --> 00:12:50,420
+an LED on pay him $13 for you are ready
+to as a buncha pins you can turn on/off
+
+227
+00:12:50,420 --> 00:12:55,240
+pin 13 already has an LED on the board
+like I said mines working away furiously
+
+228
+00:12:55,240 --> 00:12:58,399
+and others couple magic function names
+such as it's called
+
+229
+00:12:58,399 --> 00:13:01,970
+so when they are tweeners reset the
+setup function gets called
+
+230
+00:13:01,970 --> 00:13:05,410
+just automatically and work on the spin
+mode function
+
+231
+00:13:05,410 --> 00:13:09,730
+they were basically saying I want pin 13
+to be output
+
+232
+00:13:09,730 --> 00:13:13,089
+this means I'm gonna take him 13 I'm
+gonna turn it on and I'm gonna turn it
+
+233
+00:13:13,089 --> 00:13:14,290
+off
+
+234
+00:13:14,290 --> 00:13:17,350
+you can all sit input I'm gonna see if
+there's electricity they're not but
+
+235
+00:13:17,350 --> 00:13:20,060
+we're gonna set pin 13 output
+
+236
+00:13:20,060 --> 00:13:23,449
+we don't have this loop Guadalupe is
+gonna do
+
+237
+00:13:23,449 --> 00:13:27,810
+his is gonna write out to pin 13 says
+pin 13
+
+238
+00:13:27,810 --> 00:13:31,940
+hi that means may collect electricity
+come out of it that's what that means
+
+239
+00:13:31,940 --> 00:13:36,319
+soap in thirteen have electricity come
+out a bit way to 1000 milliseconds
+
+240
+00:13:36,319 --> 00:13:40,019
+so wait a second 1013 go low
+
+241
+00:13:40,019 --> 00:13:43,579
+shut it off way two thousand of seconds
+
+242
+00:13:43,579 --> 00:13:46,630
+and that's it so this loop function will
+be called
+
+243
+00:13:46,630 --> 00:13:49,350
+and then once it exits it'll be called
+again so you just read a simple little
+
+244
+00:13:49,350 --> 00:13:52,339
+loop function you don't need to do an
+infinite loop yourself
+
+245
+00:13:52,339 --> 00:13:55,879
+and so this will function is called over
+and over again in this is the hello
+
+246
+00:13:55,879 --> 00:13:57,480
+world it blinks a light on
+
+247
+00:13:57,480 --> 00:14:00,600
+it turns off points light on it turns it
+off
+
+248
+00:14:00,600 --> 00:14:03,690
+I'm and it's kind of awesome cuz you're
+making stuff
+
+249
+00:14:03,690 --> 00:14:07,699
+in the real world blink I'll be honest
+right so
+
+250
+00:14:07,699 --> 00:14:11,079
+there's a problem though I wanna write
+Python I am
+
+251
+00:14:11,079 --> 00:14:15,800
+I don't like thinking and see I wanna
+think in Python I want the real cost of
+
+252
+00:14:15,800 --> 00:14:19,279
+on real processors arm and so
+
+253
+00:14:19,279 --> 00:14:22,709
+this is the solution I am I heard a
+laugh
+
+254
+00:14:22,709 --> 00:14:26,009
+so yes though those of us who've been
+doing this for a while recognize a db9
+
+255
+00:14:26,009 --> 00:14:26,970
+port
+
+256
+00:14:26,970 --> 00:14:30,540
+I am which is how we always the plugin r
+1200 baud modems
+
+257
+00:14:30,540 --> 00:14:34,050
+I am and sometimes three her by Monday
+guess but so this is ace
+
+258
+00:14:34,050 --> 00:14:37,750
+this is what serial ports used to look
+like this is a very very basic
+
+259
+00:14:37,750 --> 00:14:39,779
+extraction of talking to something
+
+260
+00:14:39,779 --> 00:14:42,860
+you basically have two wires I push
+bites that you might push bits
+
+261
+00:14:42,860 --> 00:14:46,970
+you actually so but I can't read data
+stream bites I send bites the you you
+
+262
+00:14:46,970 --> 00:14:48,610
+can send bites back to me
+
+263
+00:14:48,610 --> 00:14:52,579
+were the wonderful things about the
+eighty mega chip it had is it has a
+
+264
+00:14:52,579 --> 00:14:54,000
+built-in serial port
+
+265
+00:14:54,000 --> 00:14:57,170
+and one other wonderful things about the
+Arduino Uno
+
+266
+00:14:57,170 --> 00:15:00,829
+is id will turn that serial port into a
+serial port that shows up
+
+267
+00:15:00,829 --> 00:15:05,209
+on your laptop so you can just talk over
+the serial port yard we now
+
+268
+00:15:05,209 --> 00:15:08,680
+and have your art we no talk back to
+your papon program
+
+269
+00:15:08,680 --> 00:15:11,730
+and all the sudden you're you're
+communicating we started shipping
+
+270
+00:15:11,730 --> 00:15:14,980
+like on my god we've architecture anyway
+
+271
+00:15:14,980 --> 00:15:18,329
+I'm this is a little bit of a rewrite
+
+272
+00:15:18,329 --> 00:15:22,230
+above that a that hello world example
+what's can we get the
+
+273
+00:15:22,230 --> 00:15:25,560
+LED 13 we're gonna goes blank line 13
+I'm
+
+274
+00:15:25,560 --> 00:15:29,440
+with senator output but this time we're
+adding a serial begin 9600 so we're
+
+275
+00:15:29,440 --> 00:15:31,360
+gonna listen at 9600 baud
+
+276
+00:15:31,360 --> 00:15:34,639
+arm don't worry about that means a in
+the down here
+
+277
+00:15:34,639 --> 00:15:38,110
+we've got this serial event this gets
+called every time things come in
+
+278
+00:15:38,110 --> 00:15:42,899
+over the cereal I'm in a serial liar
+that we're just gonna read in a bite
+
+279
+00:15:42,899 --> 00:15:45,990
+if that bite 0
+
+280
+00:15:45,990 --> 00:15:51,310
+we turn it off if that bite is one
+
+281
+00:15:51,310 --> 00:15:55,720
+we turn it on right to these are the
+exact same things you're doing before to
+
+282
+00:15:55,720 --> 00:15:58,240
+before we had to sleep in return is
+infinite loop
+
+283
+00:15:58,240 --> 00:16:01,170
+now we're doing it but we're doing it
+based on things that are coming in over
+
+284
+00:16:01,170 --> 00:16:01,980
+the serial I'd
+
+285
+00:16:01,980 --> 00:16:05,480
+reading in bytes we're turning the light
+on and off
+
+286
+00:16:05,480 --> 00:16:09,050
+and then down here the loop just delays
+it just leads for a second so it's not
+
+287
+00:16:09,050 --> 00:16:09,680
+in a
+
+288
+00:16:09,680 --> 00:16:13,680
+too fast spin simple enough right this
+is very sorry for code
+
+289
+00:16:13,680 --> 00:16:17,399
+I'm so then what's the pipe on half look
+like
+
+290
+00:16:17,399 --> 00:16:20,610
+pip install pie serial
+
+291
+00:16:20,610 --> 00:16:23,740
+and then you can import cereal and
+create a serial object
+
+292
+00:16:23,740 --> 00:16:27,980
+I'm that's what a serial ports path
+looks like in Linux or Mac
+
+293
+00:16:27,980 --> 00:16:31,319
+in Windows its you up to like com nine
+or something
+
+294
+00:16:31,319 --> 00:16:35,569
+I'm sayin 9600 baud and then I have an
+infinite loop
+
+295
+00:16:35,569 --> 00:16:39,230
+I write a bite which is one I sleep for
+a second
+
+296
+00:16:39,230 --> 00:16:44,029
+I read by which is zero asleep for a
+second so I have to Sri implemented that
+
+297
+00:16:44,029 --> 00:16:45,769
+hello world flashing
+
+298
+00:16:45,769 --> 00:16:49,160
+light paying except I've put half the
+code
+
+299
+00:16:49,160 --> 00:16:53,079
+on the Arduino and I have moved when I'm
+starting to think about the business
+
+300
+00:16:53,079 --> 00:16:53,939
+logic
+
+301
+00:16:53,939 --> 00:16:57,019
+I've slip that over into the pipeline
+right
+
+302
+00:16:57,019 --> 00:17:00,230
+so now comes the fun part hardware
+
+303
+00:17:00,230 --> 00:17:03,810
+so I this is my attempt at doing a
+schematic the
+
+304
+00:17:03,810 --> 00:17:07,459
+there are a million tutorials out there
+about how to blink lights from yard we
+
+305
+00:17:07,459 --> 00:17:08,010
+now
+
+306
+00:17:08,010 --> 00:17:11,410
+I'm look at them occurs their stuff you
+gonna do about making sure you're using
+
+307
+00:17:11,410 --> 00:17:13,160
+the right resistor and
+
+308
+00:17:13,160 --> 00:17:17,340
+you get a good online calculators and
+put in details about your LED and stuff
+
+309
+00:17:17,340 --> 00:17:18,710
+but it's also report
+
+310
+00:17:18,710 --> 00:17:22,360
+arm for singing to you by Wendys you
+feel like a real electronics hobbyist
+
+311
+00:17:22,360 --> 00:17:26,630
+this is called a breadboard and you can
+plug wires into it
+
+312
+00:17:26,630 --> 00:17:30,600
+and I am like I said feel like a real
+Electronix hobbyist I have like three
+
+313
+00:17:30,600 --> 00:17:31,730
+things plug into mine
+
+314
+00:17:31,730 --> 00:17:35,110
+but it feels so much more real um
+
+315
+00:17:35,110 --> 00:17:39,510
+you need wire this is this is this is
+not as obvious as you think
+
+316
+00:17:39,510 --> 00:17:43,320
+you don't want to stop a lot a little
+little wires inside you want the solid
+
+317
+00:17:43,320 --> 00:17:44,240
+core stuff
+
+318
+00:17:44,240 --> 00:17:47,240
+because then it easier to plug into the
+art we know and the
+
+319
+00:17:47,240 --> 00:17:50,250
+as well as the breadboard I'm
+
+320
+00:17:50,250 --> 00:17:55,990
+you can buy resistors for like the one
+you need in like a five pack for like
+
+321
+00:17:55,990 --> 00:17:59,300
+four dollars or something or you can
+spend twelve dollars and they will
+
+322
+00:17:59,300 --> 00:18:03,000
+ship you a couple hundred resistors you
+get all the fun of sorting through a try
+
+323
+00:18:03,000 --> 00:18:04,670
+to figure out what all those little
+stripes mean
+
+324
+00:18:04,670 --> 00:18:08,220
+on which once again I'm just into this
+to feel like an electronics hobbyist
+
+325
+00:18:08,220 --> 00:18:11,590
+a so I was all too that I'm gonna find
+anyone the suckers
+
+326
+00:18:11,590 --> 00:18:15,350
+this is an infrared LED you can actually
+see it blinking
+
+327
+00:18:15,350 --> 00:18:20,080
+which is pretty awkward arm but if you
+look at your cell phone your cell phone
+
+328
+00:18:20,080 --> 00:18:23,060
+will pick it up and you can see it
+blinking faintly in your cell phone
+
+329
+00:18:23,060 --> 00:18:24,130
+which is really nifty
+
+330
+00:18:24,130 --> 00:18:27,460
+um I bought this my local radio shack
+I'm
+
+331
+00:18:27,460 --> 00:18:30,670
+if you still have a local radio shack
+you can try that I am
+
+332
+00:18:30,670 --> 00:18:34,110
+otherwise I found a bunch on Amazon look
+like they were good enough I've also
+
+333
+00:18:34,110 --> 00:18:35,540
+been thinking about cutting out
+
+334
+00:18:35,540 --> 00:18:38,130
+the ones that are in this cuz I have
+enough for these controllers at this
+
+335
+00:18:38,130 --> 00:18:38,990
+point
+
+336
+00:18:38,990 --> 00:18:43,570
+I'm so this is the start of our code to
+
+337
+00:18:43,570 --> 00:18:46,970
+controlled helicopter I we're gonna set
+up an array with
+
+338
+00:18:46,970 --> 00:18:50,400
+ya pitch throttle trim I'm a few in
+paying attention you'll notice those are
+
+339
+00:18:50,400 --> 00:18:50,920
+the safe
+
+340
+00:18:50,920 --> 00:18:55,290
+values those are the stop moving values
+which I want to release stress is a good
+
+341
+00:18:55,290 --> 00:18:56,140
+idea
+
+342
+00:18:56,140 --> 00:18:59,860
+arm when things initializing you're
+dealing with things in the real world
+
+343
+00:18:59,860 --> 00:19:03,320
+in general you want things to be turned
+off I'm just sayin
+
+344
+00:19:03,320 --> 00:19:07,220
+arm I actually did some work for friend
+then he you
+
+345
+00:19:07,220 --> 00:19:10,030
+accidentally would flash everything on
+and then turn it off as part of his
+
+346
+00:19:10,030 --> 00:19:10,920
+initialization
+
+347
+00:19:10,920 --> 00:19:14,130
+which was not really no support we
+hooked up to like
+
+348
+00:19:14,130 --> 00:19:19,660
+relays and stuff that moved in then it
+became a real big issue
+
+349
+00:19:19,660 --> 00:19:23,240
+so you wanna with stuff initializes
+everything should be turned
+
+350
+00:19:23,240 --> 00:19:26,890
+of art so then in the set up we're gonna
+say
+
+351
+00:19:26,890 --> 00:19:30,520
+the pin mode we're gonna say up we're
+gonna be doing output the way I hope my
+
+352
+00:19:30,520 --> 00:19:31,730
+LED up bike
+
+353
+00:19:31,730 --> 00:19:34,800
+make it go high in order to turn off
+whatever
+
+354
+00:19:34,800 --> 00:19:38,330
+on like that reason tutorials about
+flashing LED's I'm
+
+355
+00:19:38,330 --> 00:19:41,440
+and then we do a serial begin 9600 by
+once again we're gonna be
+
+356
+00:19:41,440 --> 00:19:45,610
+we're gonna be listening on serial port
+I'm this is not exactly the most robust
+
+357
+00:19:45,610 --> 00:19:46,770
+coat but it
+
+358
+00:19:46,770 --> 00:19:50,070
+works arm I have a up slightly
+
+359
+00:19:50,070 --> 00:19:53,040
+longer production version is that
+actually does like some check some stuff
+
+360
+00:19:53,040 --> 00:19:53,520
+but
+
+361
+00:19:53,520 --> 00:19:56,680
+whatever so if his there's four things
+available
+
+362
+00:19:56,680 --> 00:19:59,840
+if we can grab for things out a serial
+officer line
+
+363
+00:19:59,840 --> 00:20:03,080
+was just copy them into the commands
+
+364
+00:20:03,080 --> 00:20:06,420
+so that a rate that we just initialize
+will copy those values in just
+
+365
+00:20:06,420 --> 00:20:10,000
+verbatim I'm and that's it
+
+366
+00:20:10,000 --> 00:20:13,530
+so that over here there's the send
+packet thing which brings the LED's
+
+367
+00:20:13,530 --> 00:20:18,660
+I'm its like you blink 74 times to get
+the helicopters attention and then you
+
+368
+00:20:18,660 --> 00:20:19,310
+wait
+
+369
+00:20:19,310 --> 00:20:24,290
+688 no seconds for one at like 415 all
+second 30 or something
+
+370
+00:20:24,290 --> 00:20:27,760
+whatever it it flashes away this is good
+stuff to write
+
+371
+00:20:27,760 --> 00:20:31,800
+in the Arduino code because it depends
+on microsecond precision to do all that
+
+372
+00:20:31,800 --> 00:20:35,020
+and you bring the LED's in your turn a
+time to sleep at the end of this
+
+373
+00:20:35,020 --> 00:20:38,880
+so you're you're breaking away and then
+it says are you know i i wanna sleep for
+
+374
+00:20:38,880 --> 00:20:39,900
+you know
+
+375
+00:20:39,900 --> 00:20:43,060
+three hundred milliseconds or whatever
+it does and so that in a loop
+
+376
+00:20:43,060 --> 00:20:47,170
+we send the command and we sleep until
+the next time is set to commence again
+
+377
+00:20:47,170 --> 00:20:50,910
+and that's it that's that's I mean
+there's you know there's like 2013 lines
+
+378
+00:20:50,910 --> 00:20:52,000
+in here but this is it
+
+379
+00:20:52,000 --> 00:20:55,160
+this is sufficient control helicopter
+from their tween aside
+
+380
+00:20:55,160 --> 00:20:59,450
+was a python side look like well I we
+have a helicopter object
+
+381
+00:20:59,450 --> 00:21:04,080
+I have a path I am this is me being lazy
+and not wanting to hard code
+
+382
+00:21:04,080 --> 00:21:07,190
+I guess it's not lazy one heart Cody in
+the TTY
+
+383
+00:21:07,190 --> 00:21:11,410
+USB 14.11 ever so I search for it I set
+up a serial port
+
+384
+00:21:11,410 --> 00:21:15,130
+I V of pitch throttle and trim
+attributes
+
+385
+00:21:15,130 --> 00:21:18,930
+and then I have a send function which
+builds up a little message
+
+386
+00:21:18,930 --> 00:21:22,530
+writes the message out washes it and
+then print it out to the strains I can
+
+387
+00:21:22,530 --> 00:21:23,510
+see it
+
+388
+00:21:23,510 --> 00:21:28,430
+that's it that is sufficient code to
+control the helicopter from Python
+
+389
+00:21:28,430 --> 00:21:31,480
+cell I do at some belts and suspenders
+
+390
+00:21:31,480 --> 00:21:35,990
+I am because I you know I where both
+belt and suspenders to keep my pants up
+
+391
+00:21:35,990 --> 00:21:36,520
+right
+
+392
+00:21:36,520 --> 00:21:40,060
+so I'm when I'm done with stuff that
+moves I like to have as many things I
+
+393
+00:21:40,060 --> 00:21:40,760
+can hit
+
+394
+00:21:40,760 --> 00:21:45,940
+or press or freak out about to stop
+stuff moving as I possibly can
+
+395
+00:21:45,940 --> 00:21:51,750
+I'm so in this case I just three times I
+write out stop inflation sleep and 96
+
+396
+00:21:51,750 --> 00:21:52,210
+exit
+
+397
+00:21:52,210 --> 00:21:56,030
+and is hoping bomb out and stop sending
+commands that so
+
+398
+00:21:56,030 --> 00:22:00,570
+wanna my thanks to mr. im in practice I
+tend to hit the big red but more often
+
+399
+00:22:00,570 --> 00:22:04,320
+right so level 1 I think this is level 1
+what is level 1 level one is
+
+400
+00:22:04,320 --> 00:22:08,090
+this is a 3d turtle that can take your
+eye out
+
+401
+00:22:08,090 --> 00:22:12,370
+so this is a takeoff function we're
+gonna set the ya pitch in
+
+402
+00:22:12,370 --> 00:22:16,430
+and tram of sixty three separate things
+in the center we set the problem of
+
+403
+00:22:16,430 --> 00:22:20,300
+240 we send that and we sleep for five
+seconds so we just said
+
+404
+00:22:20,300 --> 00:22:23,400
+put everything in neutral cracked the
+throttle up a little bit sit there for
+
+405
+00:22:23,400 --> 00:22:24,440
+five seconds
+
+406
+00:22:24,440 --> 00:22:28,180
+the point in this is the helicopter
+knees to sink up with the commands from
+
+407
+00:22:28,180 --> 00:22:29,890
+the infrared for a little bit
+
+408
+00:22:29,890 --> 00:22:34,600
+so your it'll be you'll be like that's
+not working at all
+
+409
+00:22:34,600 --> 00:22:38,990
+Daniel for your finger will be there I
+am so so this is thought this is time to
+
+410
+00:22:38,990 --> 00:22:43,900
+to whack your finger take your finger
+out and then after supper 5 seconds
+
+411
+00:22:43,900 --> 00:22:47,090
+he said the problem ninety which is arm
+climb
+
+412
+00:22:47,090 --> 00:22:51,580
+but don't hit the ceiling for me at
+least I and he said that in any sleep
+
+413
+00:22:51,580 --> 00:22:53,000
+for 2nd circuit a little bit about
+
+414
+00:22:53,000 --> 00:22:57,080
+up and then you set the trial 68 this is
+magic
+
+415
+00:22:57,080 --> 00:23:00,730
+I'm this was one of my helicopters I
+don't think I actually another outlet
+
+416
+00:23:00,730 --> 00:23:03,570
+like two identical ones that look like
+this are not but this one or the other
+
+417
+00:23:03,570 --> 00:23:04,020
+one
+
+418
+00:23:04,020 --> 00:23:07,360
+but for one of them 68 is the in still
+air
+
+419
+00:23:07,360 --> 00:23:10,710
+kinda popper iraq so
+
+420
+00:23:10,710 --> 00:23:14,160
+he said that and I we now have a
+function we can call
+
+421
+00:23:14,160 --> 00:23:18,450
+that basically causes a helicopter
+takeoff so here's a final program
+
+422
+00:23:18,450 --> 00:23:22,800
+we create the helicopter object we talk
+to take off we set the yada 0
+
+423
+00:23:22,800 --> 00:23:26,510
+so yeah I is this way so this means
+basically take a hard
+
+424
+00:23:26,510 --> 00:23:31,030
+right I believe we set the pitch to 50
+which is titled back slightly
+
+425
+00:23:31,030 --> 00:23:35,540
+we send thats are basically saying spin
+backwards
+
+426
+00:23:35,540 --> 00:23:39,410
+for just the for a lil you know and for
+a 10 seconds
+
+427
+00:23:39,410 --> 00:23:42,840
+and then we sail and which if you're a
+member resets everything in crashes on
+
+428
+00:23:42,840 --> 00:23:43,630
+the program
+
+429
+00:23:43,630 --> 00:23:47,320
+okay so as can level one very basic
+
+430
+00:23:47,320 --> 00:23:52,280
+superfine your typing things that I
+papon prompt and stuff is moving
+
+431
+00:23:52,280 --> 00:23:56,130
+arm and it's great so level two
+
+432
+00:23:56,130 --> 00:24:00,060
+this is what I do with everything are we
+make web API so
+
+433
+00:24:00,060 --> 00:24:03,340
+from this is a complete flask ap I
+believe
+
+434
+00:24:03,340 --> 00:24:06,430
+that provides a Web API and you can post
+
+435
+00:24:06,430 --> 00:24:11,530
+ya pitch throttling trim values to it I
+am it reads them and from you know the
+
+436
+00:24:11,530 --> 00:24:15,970
+request and then it goes in set/sets
+ESPN on helicopter in that sense it a
+
+437
+00:24:15,970 --> 00:24:16,660
+helicopter
+
+438
+00:24:16,660 --> 00:24:20,420
+and returns the helicopter what the
+helicopters guys have been sector
+
+439
+00:24:20,420 --> 00:24:24,660
+I am so yeah that works
+
+440
+00:24:24,660 --> 00:24:29,190
+you now taken this toy helicopter and
+you've made it available over the
+
+441
+00:24:29,190 --> 00:24:30,680
+Internet
+
+442
+00:24:30,680 --> 00:24:34,000
+I did this for the drumset want
+something magical I am
+
+443
+00:24:34,000 --> 00:24:39,510
+alright so then level 3 this is my most
+my Saturday mornings for the past
+
+444
+00:24:39,510 --> 00:24:43,670
+couple months I'm if you see the little
+dot at actually me
+
+445
+00:24:43,670 --> 00:24:47,220
+finding LED I told to the blinking LED
+was useful
+
+446
+00:24:47,220 --> 00:24:52,470
+finding the blinking LED with open CV
+are some trying to track the helicopter
+
+447
+00:24:52,470 --> 00:24:57,150
+so I use open CV to fire a guy get the
+video capture object at the tracker
+
+448
+00:24:57,150 --> 00:25:01,220
+is by the way the only need part my code
+the code inside I'm
+
+449
+00:25:01,220 --> 00:25:04,380
+the code inside the trackers is pretty
+disgusting
+
+450
+00:25:04,380 --> 00:25:08,920
+arm but so I try to handle its frame I
+grab a sequence is a images of have
+
+451
+00:25:08,920 --> 00:25:09,930
+webcam
+
+452
+00:25:09,930 --> 00:25:13,900
+I tracked LED on the front and a
+helicopter and then I'm trying to crack
+
+453
+00:25:13,900 --> 00:25:15,170
+for drift and hold it still
+
+454
+00:25:15,170 --> 00:25:19,630
+on there are much easier where his to
+control helicopter make it hold still
+
+455
+00:25:19,630 --> 00:25:24,640
+by I wanted to play with open CV and P
+ID loops and industrial control
+
+456
+00:25:24,640 --> 00:25:25,990
+technologies and stuff
+
+457
+00:25:25,990 --> 00:25:29,080
+I'm I've seen people do things like this
+with a.m.
+
+458
+00:25:29,080 --> 00:25:32,470
+x-box connect and get much better result
+much less effort
+
+459
+00:25:32,470 --> 00:25:37,410
+I'm but I but I'm having more fun I am
+so
+
+460
+00:25:37,410 --> 00:25:40,220
+this calls of course for a live demo I
+was actually told if I don't have a
+
+461
+00:25:40,220 --> 00:25:42,150
+helicopter flying over the audience
+
+462
+00:25:42,150 --> 00:25:45,490
+I failed so um will see what I can do
+for you
+
+463
+00:25:45,490 --> 00:25:50,090
+I'm I also asked my like like I know a
+couple people front row and Mike
+
+464
+00:25:50,090 --> 00:25:54,250
+get ready to catch this I so
+
+465
+00:25:54,250 --> 00:25:58,950
+of course I wrote a little Ajax thing
+
+466
+00:25:58,950 --> 00:26:02,300
+I am and i'ma see here
+
+467
+00:26:02,300 --> 00:26:07,790
+yeah come on ok great see I was up here
+before and I was working fine
+
+468
+00:26:07,790 --> 00:26:11,380
+turn off again yes that that does make a
+difference sometimes
+
+469
+00:26:11,380 --> 00:26:14,520
+sure
+
+470
+00:26:14,520 --> 00:26:18,510
+German however you
+
+471
+00:26:18,510 --> 00:26:23,340
+sana crank the crack at most the way
+well II
+
+472
+00:26:23,340 --> 00:26:27,830
+and year
+
+473
+00:26:27,830 --> 00:26:32,860
+I so I
+
+474
+00:26:32,860 --> 00:26:37,210
+via the LED I got has a waco
+
+475
+00:26:37,210 --> 00:26:41,650
+30-degree angle so I have this car loan
+I can fly an
+
+476
+00:26:41,650 --> 00:26:45,700
+and you all sorts of the edges account
+that 1i safety features the aircraft is
+
+477
+00:26:45,700 --> 00:26:47,150
+it drops out the sky
+
+478
+00:26:47,150 --> 00:26:50,930
+when you're not saying it commands
+anymore I'm so
+
+479
+00:26:50,930 --> 00:26:54,130
+world think so I really want to stress
+about all this
+
+480
+00:26:54,130 --> 00:26:57,570
+is that its almost all just software I'm
+
+481
+00:26:57,570 --> 00:27:00,680
+you're making things move in the real
+world but you're controlling of from
+
+482
+00:27:00,680 --> 00:27:01,530
+software
+
+483
+00:27:01,530 --> 00:27:06,370
+and the feeling you get the first time
+you typed commands
+
+484
+00:27:06,370 --> 00:27:10,010
+at a command prompt and physical stuff
+actually moves
+
+485
+00:27:10,010 --> 00:27:15,750
+is amazing I'm if you have kids you're
+trying to get interested in programming
+
+486
+00:27:15,750 --> 00:27:20,070
+get them playing with an Arduino and
+moving things as just it's just magical
+
+487
+00:27:20,070 --> 00:27:23,160
+like to giggle fits that happen
+
+488
+00:27:23,160 --> 00:27:26,990
+I'm you know one wonders if this
+helicopter is like i said i bruised my
+
+489
+00:27:26,990 --> 00:27:27,590
+fingers
+
+490
+00:27:27,590 --> 00:27:31,050
+I'm but it's it's not that dangerous I'm
+
+491
+00:27:31,050 --> 00:27:34,960
+it now just noise my dog on but
+
+492
+00:27:34,960 --> 00:27:37,960
+point I'm trying to make is this is
+software you can mess around with this
+
+493
+00:27:37,960 --> 00:27:40,520
+you can play with us you can do all
+sorts of wonderful things
+
+494
+00:27:40,520 --> 00:27:44,100
+and you should do so are many should
+help those around you do so
+
+495
+00:27:44,100 --> 00:27:49,200
+I and I've got wings on my blog in jail
+but US we can buy all the stuff
+
+496
+00:27:49,200 --> 00:27:54,020
+and do it iraq thank you very much money
+was a Jackson lovely
+
+497
+00:27:54,020 --> 00:27:57,930
+mejía on Twitter's what's up on in jail
+.us
+
+498
+00:27:57,930 --> 00:28:01,100
+and time for questions one question
+
+499
+00:28:01,100 --> 00:28:04,600
+one question no questions
+
+500
+00:28:04,600 --> 00:28:11,600
+alright how ok a question question
+
+501
+00:28:12,370 --> 00:28:17,220
+II do II UN UN
+
+502
+00:28:17,220 --> 00:28:22,290
+on so salata magic values but then you
+also showed that
+
+503
+00:28:22,290 --> 00:28:26,590
+you know you're using in computer vision
+to controlled reference up
+
+504
+00:28:26,590 --> 00:28:30,960
+so whenever you build a new helicopter I
+mean each jessica's cuts made it was
+
+505
+00:28:30,960 --> 00:28:31,920
+gonna have it so much
+
+506
+00:28:31,920 --> 00:28:35,230
+values yep have you tried to use
+
+507
+00:28:35,230 --> 00:28:39,180
+generation to basically set those values
+they just left fly and then set the
+
+508
+00:28:39,180 --> 00:28:40,420
+values for that particular
+
+509
+00:28:40,420 --> 00:28:43,910
+that's what I've that's what I've been
+trying to do but they are so I'm
+
+510
+00:28:43,910 --> 00:28:47,710
+like a little breeze will cause them to
+to start going wild
+
+511
+00:28:47,710 --> 00:28:51,410
+so it's pretty hard I've been trying to
+do a Pido perdon I mean you can like
+
+512
+00:28:51,410 --> 00:28:52,940
+machine learned about his for PI
+
+513
+00:28:52,940 --> 00:28:56,030
+the loop and I've been failing miserably
+at that but having a wonderful time
+
+514
+00:28:56,030 --> 00:28:59,730
+I have Ubuntu scratches my computer
+screen actually arm from
+
+515
+00:28:59,730 --> 00:29:03,320
+from trying to fly it between me and my
+laptop and then things going horribly
+
+516
+00:29:03,320 --> 00:29:03,790
+awry
+
+517
+00:29:03,790 --> 00:29:07,420
+which has been fun and dude okay one
+more
+
+518
+00:29:07,420 --> 00:29:10,610
+okay arm so we have way too many these
+helicopters
+
+519
+00:29:10,610 --> 00:29:13,870
+my office and we also no such thing ap
+
+520
+00:29:13,870 --> 00:29:16,900
+and we also starting something like
+thirty dollar quadcopter
+
+521
+00:29:16,900 --> 00:29:19,930
+YES on juneau protocol
+
+522
+00:29:19,930 --> 00:29:23,770
+weird I have I spent so much time
+googling
+
+523
+00:29:23,770 --> 00:29:27,300
+and the river set so the question is
+have other protocols in reverse
+
+524
+00:29:27,300 --> 00:29:27,880
+engineered
+
+525
+00:29:27,880 --> 00:29:32,550
+I'm Simon makes this whole like giant
+Ranger these things
+
+526
+00:29:32,550 --> 00:29:35,560
+there's a bunch of other are
+manufactured in China gorgeous churning
+
+527
+00:29:35,560 --> 00:29:37,260
+out clones and variations and
+
+528
+00:29:37,260 --> 00:29:42,410
+copies I'm I found at the reverse
+engineering at this I found it on like
+
+529
+00:29:42,410 --> 00:29:43,710
+some message board
+
+530
+00:29:43,710 --> 00:29:47,640
+like two years ago from some guy who
+lectured appointed hey look what I did
+
+531
+00:29:47,640 --> 00:29:48,960
+in like 10 way
+
+532
+00:29:48,960 --> 00:29:52,990
+so I V its what are these have been done
+there's lotsa stuff out there
+
+533
+00:29:52,990 --> 00:29:57,510
+arm and I just not a comparable in size
+or scope
+
+534
+00:29:57,510 --> 00:30:01,340
+so I just 11 diagnosed in reverse
+engineered but if you go around as a
+
+535
+00:30:01,340 --> 00:30:02,760
+bunch other ones out there
+
+536
+00:30:02,760 --> 00:30:05,790
+i kno cuz I tried several them wondering
+if they were the right ones for this
+
+537
+00:30:05,790 --> 00:30:06,630
+helicopter actually
+
+538
+00:30:06,630 --> 00:30:09,260
+some thank you you're welcome thank you
+very much everybody
+

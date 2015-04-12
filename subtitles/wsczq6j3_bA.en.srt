@@ -1,0 +1,2051 @@
+1
+00:00:03,120 --> 00:00:05,339
+will welcome to the beginning of the end
+
+2
+00:00:05,339 --> 00:00:09,710
+who yeah I see that that that
+
+3
+00:00:09,710 --> 00:00:13,620
+they River our booth by we're all tired
+
+4
+00:00:13,620 --> 00:00:17,250
+I'm not saying you look tired I'm just
+saying that I can tell because I know
+
+5
+00:00:17,250 --> 00:00:17,670
+you
+
+6
+00:00:17,670 --> 00:00:22,430
+so well and were almost near the end and
+you hung in there
+
+7
+00:00:22,430 --> 00:00:26,130
+the stalk some lightning talks and we
+will all
+
+8
+00:00:26,130 --> 00:00:30,189
+be done and Brandon Rhodes and I'm here
+to announce that the day
+
+9
+00:00:30,189 --> 00:00:35,829
+at the EXT is upon us ald Monae mint
+
+10
+00:00:35,829 --> 00:00:40,600
+doctor vaughn I'm he threw us a real
+
+11
+00:00:40,600 --> 00:00:44,040
+curveball it used to be you knew your
+computer we do you when you switched it
+
+12
+00:00:44,040 --> 00:00:44,570
+on
+
+13
+00:00:44,570 --> 00:00:49,399
+because before powering it up you %uh
+disconnected and reconnected a bunch of
+
+14
+00:00:49,399 --> 00:00:50,309
+wires
+
+15
+00:00:50,309 --> 00:00:54,120
+not to set up what computation the
+computer would do when you
+
+16
+00:00:54,120 --> 00:00:57,190
+turned on and it was on women that
+
+17
+00:00:57,190 --> 00:01:02,670
+catapulted us into the computing age by
+suggesting that instead of having to
+
+18
+00:01:02,670 --> 00:01:06,080
+set the computer a perspex a specific
+calculation
+
+19
+00:01:06,080 --> 00:01:09,990
+you could chanced I have a
+general-purpose
+
+20
+00:01:09,990 --> 00:01:13,500
+machine he called it that read
+instructions
+
+21
+00:01:13,500 --> 00:01:17,509
+rate out and memory just like computers
+had already been reading
+
+22
+00:01:17,509 --> 00:01:21,729
+data this swept the world so that by the
+time I grew up
+
+23
+00:01:21,729 --> 00:01:25,369
+and learned machine language on the
+little arm
+
+24
+00:01:25,369 --> 00:01:28,770
+up color computers to that my dad behind
+
+25
+00:01:28,770 --> 00:01:32,340
+a hex 86 sitting in memory what is it
+
+26
+00:01:32,340 --> 00:01:36,030
+what does it mean what is that by going
+to do
+
+27
+00:01:36,030 --> 00:01:41,880
+it depended it depended on whether you
+told The
+
+28
+00:01:41,880 --> 00:01:45,990
+processor that it should run that as an
+instruction that it is a command it
+
+29
+00:01:45,990 --> 00:01:46,790
+should obey
+
+30
+00:01:46,790 --> 00:01:50,460
+or whether you simply treated treated it
+as
+
+31
+00:01:50,460 --> 00:01:54,390
+data but it looked exactly the same
+either way
+
+32
+00:01:54,390 --> 00:01:58,060
+cell if I saw 8686 sitting in memory
+
+33
+00:01:58,060 --> 00:02:02,399
+it could mean the instruction low
+devalue in to register a
+
+34
+00:02:02,399 --> 00:02:07,320
+and here's the number 134 x86 that you
+were to load instruction
+
+35
+00:02:07,320 --> 00:02:11,270
+and data scattered together in memory
+and you can't
+
+36
+00:02:11,270 --> 00:02:14,900
+tell difference I you can't
+
+37
+00:02:14,900 --> 00:02:19,180
+tell just by looking at it you can guess
+but you don't know what's supposed to be
+
+38
+00:02:19,180 --> 00:02:20,890
+code not supposed to be data
+
+39
+00:02:20,890 --> 00:02:25,830
+someone called doctor by nine Men's idea
+ambiguous
+
+40
+00:02:25,830 --> 00:02:30,209
+some people said that his ideas were
+dangerous but
+
+41
+00:02:30,209 --> 00:02:33,629
+I prefer to look at it a bit differently
+when I walk into the coffee shop in
+
+42
+00:02:33,629 --> 00:02:37,300
+amassed what programming language I'm
+using and I'm like oh it's
+
+43
+00:02:37,300 --> 00:02:40,750
+it's really cool it's really really
+harmful iconic
+
+44
+00:02:40,750 --> 00:02:45,300
+even I can't tell my dad after my code
+sometimes
+
+45
+00:02:45,300 --> 00:02:49,510
+it's really bare metal
+
+46
+00:02:49,510 --> 00:02:52,650
+it's out really really low level
+
+47
+00:02:52,650 --> 00:02:56,150
+which is course is a complete lie did
+you know that Intel
+
+48
+00:02:56,150 --> 00:02:59,269
+like a decade ago Intel got six
+
+49
+00:02:59,269 --> 00:03:03,080
+is sick x86 I machine language
+
+50
+00:03:03,080 --> 00:03:06,700
+and then refused to implement it anymore
+they have engineers that right a
+
+51
+00:03:06,700 --> 00:03:08,349
+translator to translate it
+
+52
+00:03:08,349 --> 00:03:12,280
+into what they call micro ops which is a
+cleaner machine language that they're
+
+53
+00:03:12,280 --> 00:03:14,980
+actually willing to implement on their
+own processors
+
+54
+00:03:14,980 --> 00:03:18,860
+I tell them that if machine language is
+just going to be a jetty interpreted
+
+55
+00:03:18,860 --> 00:03:19,430
+layer
+
+56
+00:03:19,430 --> 00:03:26,430
+they need to do better marketing and
+just call it x86 dot che ask and I think
+
+57
+00:03:30,060 --> 00:03:31,230
+that it would sell
+
+58
+00:03:31,230 --> 00:03:35,750
+better some more chips and that everyone
+would end leave it was really bare metal
+
+59
+00:03:35,750 --> 00:03:39,310
+given von no women's idea
+
+60
+00:03:39,310 --> 00:03:44,220
+that code and data would all be numbers
+the idea
+
+61
+00:03:44,220 --> 00:03:48,709
+this interesting for cursive idea I was
+invented a compiler
+
+62
+00:03:48,709 --> 00:03:53,269
+a piece of code that works hopefully and
+that rapes
+
+63
+00:03:53,269 --> 00:03:56,459
+new pieces of code for you that
+
+64
+00:03:56,459 --> 00:03:59,530
+parole is it information over the fence
+
+65
+00:03:59,530 --> 00:04:03,400
+from being data to be in code now this
+
+66
+00:04:03,400 --> 00:04:06,409
+architecture poses a problem for a
+language like
+
+67
+00:04:06,409 --> 00:04:10,930
+pipeline that initially one person was
+writing by themselves
+
+68
+00:04:10,930 --> 00:04:16,660
+targeting processors with machine code
+is a complex undertaking it's slow it's
+
+69
+00:04:16,660 --> 00:04:19,600
+difficult you need a lot of specialized
+knowledge
+
+70
+00:04:19,600 --> 00:04:23,780
+papon just wants to run on every single
+processor
+
+71
+00:04:23,780 --> 00:04:27,550
+without having added needing an intimate
+knowledge in each of them
+
+72
+00:04:27,550 --> 00:04:34,030
+and sell without having to know
+everything about every single processor
+
+73
+00:04:34,030 --> 00:04:38,210
+how can we solve this problem how did
+kedo solve this problem
+
+74
+00:04:38,210 --> 00:04:42,479
+what turns out there's this guy named
+David wheeler
+
+75
+00:04:42,479 --> 00:04:46,310
+he once said that all problems in
+computer science
+
+76
+00:04:46,310 --> 00:04:50,410
+can be solved by another level of
+indirection
+
+77
+00:04:50,410 --> 00:04:54,810
+and so like many languages before
+incense the Sea pipeline an interpreter
+
+78
+00:04:54,810 --> 00:04:56,240
+the download from the website
+
+79
+00:04:56,240 --> 00:04:59,550
+uses bytecode Python compiles in by
+
+80
+00:04:59,550 --> 00:05:03,240
+to a pretend machine language its
+bytecode
+
+81
+00:05:03,240 --> 00:05:06,660
+that runs inside a little pretend
+processor that
+
+82
+00:05:06,660 --> 00:05:10,699
+implements so see people and does not
+
+83
+00:05:10,699 --> 00:05:14,590
+by my earlier definition do actual
+compiling in
+
+84
+00:05:14,590 --> 00:05:18,669
+turns some data into some other data but
+it never actually
+
+85
+00:05:18,669 --> 00:05:22,100
+throws it over the fence to being
+something that the processor can be
+
+86
+00:05:22,100 --> 00:05:23,370
+exposed to
+
+87
+00:05:23,370 --> 00:05:28,440
+brawl and know what to do with it your P
+wifi on is readiness text
+
+88
+00:05:28,440 --> 00:05:31,850
+see pipeline I purses compiles it
+
+89
+00:05:31,850 --> 00:05:35,389
+into bytecode which is another
+
+90
+00:05:35,389 --> 00:05:39,669
+data structure another piece of
+information over there on the data side
+
+91
+00:05:39,669 --> 00:05:40,789
+of the house
+
+92
+00:05:40,789 --> 00:05:45,330
+it also saves it out in a dot people I
+see file
+
+93
+00:05:45,330 --> 00:05:50,240
+if found in your dot profile you set
+pipeline don't right bytecode
+
+94
+00:05:50,240 --> 00:05:54,440
+equals 1 it bought right to PIC file
+
+95
+00:05:54,440 --> 00:05:57,880
+I share that with you just in case
+you've never had a problem
+
+96
+00:05:57,880 --> 00:06:01,270
+because PIC file was sitting around
+
+97
+00:06:01,270 --> 00:06:06,220
+cell the it that compiles the text if
+your program to a code object which it
+
+98
+00:06:06,220 --> 00:06:09,240
+optionally squirrels away an appeal I
+see file
+
+99
+00:06:09,240 --> 00:06:13,919
+when it's time for your code to run when
+you call your function
+
+100
+00:06:13,919 --> 00:06:16,970
+see pipeline reads that data structure
+
+101
+00:06:16,970 --> 00:06:21,430
+to understand what your function is
+suppose to accomplish but no point
+
+102
+00:06:21,430 --> 00:06:25,669
+does your Python script ever leave the
+data structure side of the house
+
+103
+00:06:25,669 --> 00:06:30,630
+to actually become machine code here's a
+simple little sum of squares
+
+104
+00:06:30,630 --> 00:06:36,100
+routine %uh byte code is very much like
+an old RPN HP calculator
+
+105
+00:06:36,100 --> 00:06:39,270
+also like be on-board computer language
+fourth
+
+106
+00:06:39,270 --> 00:06:42,310
+both use which is
+
+107
+00:06:42,310 --> 00:06:45,990
+the basis for both up a script in PDF
+and
+
+108
+00:06:45,990 --> 00:06:50,660
+that little sum of squares comes out
+like this if you import the disassembly
+
+109
+00:06:50,660 --> 00:06:51,440
+module
+
+110
+00:06:51,440 --> 00:06:55,970
+and asked by don t disassemble its byte
+code for you
+
+111
+00:06:55,970 --> 00:06:59,870
+see their Hastings talk last year if you
+want all of the details about the whole
+
+112
+00:06:59,870 --> 00:07:01,310
+stack based language in
+
+113
+00:07:01,310 --> 00:07:06,509
+see what's possible what Python does
+this is it's the C code
+
+114
+00:07:06,509 --> 00:07:10,650
+is it has what it would do it we would
+call a while true loop in pipeline you
+
+115
+00:07:10,650 --> 00:07:13,020
+say forcing me compensate me Colin
+
+116
+00:07:13,020 --> 00:07:17,880
+see I itself infinite loop that just
+reads new opcodes
+
+117
+00:07:17,880 --> 00:07:21,050
+and then as a switch statement a big
+else that
+
+118
+00:07:21,050 --> 00:07:24,830
+when it figures out which opcode the new
+one matches
+
+119
+00:07:24,830 --> 00:07:28,930
+up runs in in the case have a multiply
+that we just saw
+
+120
+00:07:28,930 --> 00:07:32,090
+it run something called plate number
+multiply
+
+121
+00:07:32,090 --> 00:07:35,490
+remember multiply does not actually know
+how to multiply anything
+
+122
+00:07:35,490 --> 00:07:39,380
+it goes asks the typeof initially the
+left argument
+
+123
+00:07:39,380 --> 00:07:43,330
+do you know how it do you understand
+this staying
+
+124
+00:07:43,330 --> 00:07:47,550
+multiply and if it's afloat as it was in
+my example
+
+125
+00:07:47,550 --> 00:07:52,930
+dandy flow type says Yesi do have an
+implementation and undermine all sitting
+
+126
+00:07:52,930 --> 00:07:53,460
+in my
+
+127
+00:07:53,460 --> 00:07:57,970
+at type structure it looks like this and
+I'll bet you for gotten by this point
+
+128
+00:07:57,970 --> 00:08:02,539
+what we're trying to actually accomplish
+
+129
+00:08:02,539 --> 00:08:05,840
+but look week actually Malta plight
+
+130
+00:08:05,840 --> 00:08:11,720
+who numbers together at thanks to all a
+back in direction
+
+131
+00:08:11,720 --> 00:08:16,000
+so let's go back through that again you
+know just cuz it was so much fun
+
+132
+00:08:16,000 --> 00:08:20,830
+this time thinking of coding data and I
+fitted into a single slide
+
+133
+00:08:20,830 --> 00:08:26,060
+that the infinite loop has two look at
+the data stored in memory
+
+134
+00:08:26,060 --> 00:08:29,539
+in order to Paul the next byte code out
+
+135
+00:08:29,539 --> 00:08:34,050
+that helps it make a decision about what
+operation needs to be done next
+
+136
+00:08:34,050 --> 00:08:37,550
+but it actually doesn't know what
+something like multiply means integers
+
+137
+00:08:37,550 --> 00:08:39,440
+and floats and complex numbers
+
+138
+00:08:39,440 --> 00:08:43,349
+each implement that themselves so it has
+to do a second
+
+139
+00:08:43,349 --> 00:08:46,370
+lookup in memory to ask the type
+
+140
+00:08:46,370 --> 00:08:52,580
+do you have a multiply and an ad a
+divide operation
+
+141
+00:08:52,580 --> 00:08:57,250
+all of which brings up the question
+python is slower than see
+
+142
+00:08:57,250 --> 00:09:02,740
+see by tonic the stairs is Python slow
+because it's interpreted
+
+143
+00:09:02,740 --> 00:09:05,990
+or is pipe Onslow because it is
+
+144
+00:09:05,990 --> 00:09:10,370
+dynamic in terms of our diagram is it
+the fact that Pike /url
+
+145
+00:09:10,370 --> 00:09:15,000
+papon is a loop running over by TKO that
+slows us down the most
+
+146
+00:09:15,000 --> 00:09:18,410
+or is it the fact that papon doesn't
+know how to multiply that's really
+
+147
+00:09:18,410 --> 00:09:19,519
+standing in the way of
+
+148
+00:09:19,519 --> 00:09:22,680
+ultimate efficiency well
+
+149
+00:09:22,680 --> 00:09:26,339
+what if we skip the interpretation step
+produced no bytecode
+
+150
+00:09:26,339 --> 00:09:30,490
+and simply called multiply multiply and
+add on our own
+
+151
+00:09:30,490 --> 00:09:35,089
+I tried that it turns out get a bag at
+best about a 40 percent speed-up
+
+152
+00:09:35,089 --> 00:09:39,510
+which might sound impressive it means
+that site to see pipeline incurs at
+
+153
+00:09:39,510 --> 00:09:40,580
+worst about
+
+154
+00:09:40,580 --> 00:09:44,070
+maybe thirty percent overhead from our
+for your
+
+155
+00:09:44,070 --> 00:09:47,230
+the fact that it's %ah deferring to this
+list
+
+156
+00:09:47,230 --> 00:09:51,080
+%uh byte codes to know what your
+function does
+
+157
+00:09:51,080 --> 00:09:54,320
+but if we then take it all the way to
+the
+
+158
+00:09:54,320 --> 00:09:57,740
+bare metal and skip allocating integer
+
+159
+00:09:57,740 --> 00:10:02,279
+ISO floating point objects that have
+leaders to their type so that we know
+
+160
+00:10:02,279 --> 00:10:05,010
+what multiply means if we just %ah
+
+161
+00:10:05,010 --> 00:10:09,440
+do the multipliers and adds if in other
+words we take
+
+162
+00:10:09,440 --> 00:10:13,700
+the second dereference there at the
+bottom away
+
+163
+00:10:13,700 --> 00:10:17,709
+574 percent speed-up on my laptop
+
+164
+00:10:17,709 --> 00:10:22,730
+I earlier this week or last week that
+means the pipeline can spend
+
+165
+00:10:22,730 --> 00:10:26,440
+after the reference effective in
+treating the bytecode is done
+
+166
+00:10:26,440 --> 00:10:30,690
+and additionally 5 percent if it's time
+simply dispatching
+
+167
+00:10:30,690 --> 00:10:36,350
+simply figuring out for the tight it's
+looking at what multiplication means
+
+168
+00:10:36,350 --> 00:10:39,769
+the moral is that if you really want
+Python to be fast
+
+169
+00:10:39,769 --> 00:10:44,329
+you've got to fix dynamic fixing
+interpreted is just not bad
+
+170
+00:10:44,329 --> 00:10:47,360
+big away and are
+
+171
+00:10:47,360 --> 00:10:51,310
+how can you fix dynamic there are ways
+that you can do it directly in C++
+
+172
+00:10:51,310 --> 00:10:52,570
+Python
+
+173
+00:10:52,570 --> 00:10:55,959
+X some of these approaches are explicit
+
+174
+00:10:55,959 --> 00:10:59,320
+when you you can ask for something to be
+faster
+
+175
+00:10:59,320 --> 00:11:03,680
+and some of them are magic eyesight pipe
+I as the
+
+176
+00:11:03,680 --> 00:11:09,310
+a great example were you don't get to
+like a tell it which parts to accelerate
+
+177
+00:11:09,310 --> 00:11:13,100
+it just does it when it wants to and so
+your code is often
+
+178
+00:11:13,100 --> 00:11:17,160
+much faster I number looks like this
+
+179
+00:11:17,160 --> 00:11:21,450
+you basket to just in time compile a
+function that you've defined in you
+
+180
+00:11:21,450 --> 00:11:22,089
+Kelly
+
+181
+00:11:22,089 --> 00:11:25,329
+what you expect the types of the
+arguments can be because only by
+
+182
+00:11:25,329 --> 00:11:27,910
+promising it floats in this case
+
+183
+00:11:27,910 --> 00:11:33,060
+do I exempted from having to go look up
+information about the type of checks
+
+184
+00:11:33,060 --> 00:11:36,160
+see also if you're playing with little
+microcontrollers and
+
+185
+00:11:36,160 --> 00:11:39,920
+playing with the microplate on project
+it's not a full implementation a python
+
+186
+00:11:39,920 --> 00:11:40,829
+semantics
+
+187
+00:11:40,829 --> 00:11:44,820
+but it has the same idea encased in a
+pair decorators
+
+188
+00:11:44,820 --> 00:11:49,040
+I he if you don't want to have to
+decorate the functions that you want
+
+189
+00:11:49,040 --> 00:11:50,750
+fast and instead you want
+
+190
+00:11:50,750 --> 00:11:55,190
+magic to happen there were several all
+projects have varying degrees of success
+
+191
+00:11:55,190 --> 00:11:57,550
+the current raining solution
+
+192
+00:11:57,550 --> 00:12:01,700
+very very powerful in this area is pipe
+I and just last week
+
+193
+00:12:01,700 --> 00:12:05,350
+Dropbox announced that they want their
+own pie pie
+
+194
+00:12:05,350 --> 00:12:10,360
+and so piston is now a going concern you
+can find on the internet
+
+195
+00:12:10,360 --> 00:12:13,889
+so given the wonders at this ecosystem
+
+196
+00:12:13,889 --> 00:12:18,839
+we can compile things we need to in run
+fast otherwise we run interpreted
+
+197
+00:12:18,839 --> 00:12:22,709
+why would you need an EXE file
+
+198
+00:12:22,709 --> 00:12:26,730
+a big reason this distribution I
+especially if you're distributing to
+
+199
+00:12:26,730 --> 00:12:28,200
+customer computers
+
+200
+00:12:28,200 --> 00:12:31,250
+this is what it looks like native Lee if
+you just want
+
+201
+00:12:31,250 --> 00:12:34,279
+a I Python application you have to have
+
+202
+00:12:34,279 --> 00:12:37,690
+the ER interpreter the Python files the
+
+203
+00:12:37,690 --> 00:12:42,100
+dll's or shared objects and then some
+start
+
+204
+00:12:42,100 --> 00:12:46,050
+script to run when I double click the
+icon that will start pipeline
+
+205
+00:12:46,050 --> 00:12:49,630
+pointed correctly at the application
+pipeline
+
+206
+00:12:49,630 --> 00:12:54,050
+though the can also import pie and pea y
+si files
+
+207
+00:12:54,050 --> 00:12:58,540
+automatically from a zip archive if one
+happens to be on the Python path
+
+208
+00:12:58,540 --> 00:13:02,850
+and will execute named up high if it's
+given a zip file to run on the command
+
+209
+00:13:02,850 --> 00:13:03,620
+line
+
+210
+00:13:03,620 --> 00:13:07,480
+so we can eliminate all of the key why
+files from that example
+
+211
+00:13:07,480 --> 00:13:11,240
+on by setting them up into source top
+zip
+
+212
+00:13:11,240 --> 00:13:14,839
+I meaning your little startup routine
+arm
+
+213
+00:13:14,839 --> 00:13:18,760
+Dunder main top high and then your start
+got back just
+
+214
+00:13:18,760 --> 00:13:23,529
+points Python at bat now there are other
+tracks I have seen
+
+215
+00:13:23,529 --> 00:13:27,649
+I don't recommend them but on UNIX you
+can roll the source Sep
+
+216
+00:13:27,649 --> 00:13:31,130
+together with a startup script by
+
+217
+00:13:31,130 --> 00:13:34,130
+ship banging does that file
+
+218
+00:13:34,130 --> 00:13:38,690
+can you do that can you combine text in
+binary and the same fire
+
+219
+00:13:38,690 --> 00:13:41,980
+file thanks to people like finally many
+
+220
+00:13:41,980 --> 00:13:45,839
+you can you can because it's just biked
+
+221
+00:13:45,839 --> 00:13:48,870
+and so here it you get to skip I
+
+222
+00:13:48,870 --> 00:13:52,320
+having your startup file separate from
+your source and
+
+223
+00:13:52,320 --> 00:13:55,870
+everywhere even on Windows you can
+instead
+
+224
+00:13:55,870 --> 00:13:59,550
+puts or stop Sep credit hide it away by
+appending
+
+225
+00:13:59,550 --> 00:14:03,480
+a pending yet to I the Python dot EXE
+file
+
+226
+00:14:03,480 --> 00:14:06,949
+because by dad design zip files
+
+227
+00:14:06,949 --> 00:14:10,000
+have their signature in info it be into
+the file
+
+228
+00:14:10,000 --> 00:14:13,230
+thus making them are parking all to
+basically all other file formats the
+
+229
+00:14:13,230 --> 00:14:14,540
+count from the front
+
+230
+00:14:14,540 --> 00:14:19,850
+the I Windows or Unix want even notice
+that their zip file hanging off the end
+
+231
+00:14:19,850 --> 00:14:23,010
+because it determines its a binary
+execute a ble by looking at the first
+
+232
+00:14:23,010 --> 00:14:24,420
+few bites
+
+233
+00:14:24,420 --> 00:14:27,730
+and so that eliminates another few files
+another trick
+
+234
+00:14:27,730 --> 00:14:32,980
+is that you can %uh throw into the mix a
+module that pipe on auto imports during
+
+235
+00:14:32,980 --> 00:14:33,949
+startup
+
+236
+00:14:33,949 --> 00:14:38,019
+why have a startup script just start the
+Python interpreter
+
+237
+00:14:38,019 --> 00:14:41,810
+next to a site customized up high that
+subverts
+
+238
+00:14:41,810 --> 00:14:45,079
+papon's desire to start up a look at its
+command line
+
+239
+00:14:45,079 --> 00:14:50,810
+by having it just load and start your
+application instead I've seen this done
+
+240
+00:14:50,810 --> 00:14:55,130
+I might even have done it before I
+what's a
+
+241
+00:14:55,130 --> 00:15:00,949
+but having looked at several tricks for
+combining coding execute a ball
+
+242
+00:15:00,949 --> 00:15:04,350
+if your gonna go to all this trouble why
+not just compile
+
+243
+00:15:04,350 --> 00:15:07,500
+a new copy of the Python interpreter
+that
+
+244
+00:15:07,500 --> 00:15:11,920
+will Autostar your app is a built-in
+feature and there's a whole stack up
+
+245
+00:15:11,920 --> 00:15:13,519
+projects over the years
+
+246
+00:15:13,519 --> 00:15:16,560
+the give you this tied up in a box I
+
+247
+00:15:16,560 --> 00:15:20,519
+most recently pie installer but I
+recently saw updates to see experience
+
+248
+00:15:20,519 --> 00:15:22,839
+it still looks to be under development
+
+249
+00:15:22,839 --> 00:15:27,670
+these rig a special Python interpreter
+that just wants to auto execute a nap
+
+250
+00:15:27,670 --> 00:15:30,320
+without being given any command-line
+arguments
+
+251
+00:15:30,320 --> 00:15:34,199
+day worker sadly with varying degrees of
+success
+
+252
+00:15:34,199 --> 00:15:38,339
+try to find all of your dependencies and
+get them loaded up as well
+
+253
+00:15:38,339 --> 00:15:42,440
+and can even do a build step to put as
+much as can be fit together into a
+
+254
+00:15:42,440 --> 00:15:42,970
+single
+
+255
+00:15:42,970 --> 00:15:47,820
+EXE file slash months one of those tools
+is gone to work
+
+256
+00:15:47,820 --> 00:15:51,100
+typically a stand-alone binary
+
+257
+00:15:51,100 --> 00:15:54,540
+it really has your appeal I see files
+set up inside
+
+258
+00:15:54,540 --> 00:15:59,449
+and then your binary dependencies your
+shared objects in the dll's
+
+259
+00:15:59,449 --> 00:16:03,209
+at some people are annoyed these have to
+be hanging out on the file system in
+
+260
+00:16:03,209 --> 00:16:04,870
+your install directory
+
+261
+00:16:04,870 --> 00:16:08,589
+some people just leave them there next
+to your pipe and I
+
+262
+00:16:08,589 --> 00:16:11,699
+EXE some people bundle them
+
+263
+00:16:11,699 --> 00:16:15,740
+in and have the execute a ball when it
+runs secretly unpack them to a temp
+
+264
+00:16:15,740 --> 00:16:16,589
+directory
+
+265
+00:16:16,589 --> 00:16:20,850
+load them from there and then moved in
+before the user notices
+
+266
+00:16:20,850 --> 00:16:25,470
+or if you are plight techniques you can
+use this wine
+
+267
+00:16:25,470 --> 00:16:29,430
+we read track
+
+268
+00:16:29,430 --> 00:16:32,870
+the pie techniques person author went
+
+269
+00:16:32,870 --> 00:16:37,070
+and learned how pipeline loads dll's
+from files
+
+270
+00:16:37,070 --> 00:16:40,250
+and emulated windows standard portable
+
+271
+00:16:40,250 --> 00:16:43,889
+execute a ball loader against the dll's
+the
+
+272
+00:16:43,889 --> 00:16:46,959
+the runs loads into RAM so it doesn't
+
+273
+00:16:46,959 --> 00:16:50,500
+even touch the filesystem no one's ever
+done this for Unix
+
+274
+00:16:50,500 --> 00:16:54,709
+I be because meeting everything in a
+single files kind against the culture
+
+275
+00:16:54,709 --> 00:16:55,370
+there
+
+276
+00:16:55,370 --> 00:16:59,779
+by it it's been done before and when it
+works
+
+277
+00:16:59,779 --> 00:17:05,730
+it doesn't always but when it works only
+pie techniques provides a truly general
+
+278
+00:17:05,730 --> 00:17:09,789
+single-file bundle on the Windows
+platform thanks
+
+279
+00:17:09,789 --> 00:17:13,069
+spun here track on
+
+280
+00:17:13,069 --> 00:17:16,910
+the one or two road bumps you will run
+across with these products are
+
+281
+00:17:16,910 --> 00:17:20,520
+in line files when text templates are
+images
+
+282
+00:17:20,520 --> 00:17:23,559
+are sitting inside the directory tree at
+the package
+
+283
+00:17:23,559 --> 00:17:27,730
+if a package uses a plain old opened to
+try to get the file sitting with its
+
+284
+00:17:27,730 --> 00:17:28,650
+source code
+
+285
+00:17:28,650 --> 00:17:32,130
+you're either going to have to monkey
+patch open so that it knows to look in
+
+286
+00:17:32,130 --> 00:17:33,169
+your zip file
+
+287
+00:17:33,169 --> 00:17:37,100
+or just keep the plane file sitting
+outside at the EXE
+
+288
+00:17:37,100 --> 00:17:40,809
+which might expose a little about your
+apt you're uncomfortable with but you
+
+289
+00:17:40,809 --> 00:17:41,990
+can do it
+
+290
+00:17:41,990 --> 00:17:46,549
+on well-behaved marshals when you run
+across on this doesn't seem to be
+
+291
+00:17:46,549 --> 00:17:47,419
+well-known
+
+292
+00:17:47,419 --> 00:17:52,130
+will always instead of opening a file
+sitting next to the doc he wife I'll
+
+293
+00:17:52,130 --> 00:17:56,360
+will use get data and let pipeline which
+he knows whether you're running from
+
+294
+00:17:56,360 --> 00:17:58,360
+inside the zip file or not
+
+295
+00:17:58,360 --> 00:18:01,510
+make the decision you make the call
+about where that date where that data
+
+296
+00:18:01,510 --> 00:18:03,750
+comes from
+
+297
+00:18:03,750 --> 00:18:07,730
+so that's the ecosystem as it existed a
+year or two ago
+
+298
+00:18:07,730 --> 00:18:11,590
+have great interpreters we have just in
+time compilation
+
+299
+00:18:11,590 --> 00:18:15,400
+and weak even have dislike one we're
+track for bundling
+
+300
+00:18:15,400 --> 00:18:18,820
+everything up as a single piece of code
+who would need
+
+301
+00:18:18,820 --> 00:18:22,059
+anything more
+
+302
+00:18:22,059 --> 00:18:25,429
+you might have heard at this guy before
+name
+
+303
+00:18:25,429 --> 00:18:29,179
+Gandalf in about the year
+
+304
+00:18:29,179 --> 00:18:32,809
+30 18 in the Third Age
+
+305
+00:18:32,809 --> 00:18:37,230
+he visited our Frodo Baggins and then
+telling him a story about a ring that
+
+306
+00:18:37,230 --> 00:18:40,600
+Friday would come into possession have
+he said
+
+307
+00:18:40,600 --> 00:18:43,770
+I am myself dared
+
+308
+00:18:43,770 --> 00:18:47,250
+to pass the doors up the Necromancer
+
+309
+00:18:47,250 --> 00:18:51,860
+in dole cool door and secretly explored
+his way
+
+310
+00:18:51,860 --> 00:18:56,100
+us well you might not know what about me
+
+311
+00:18:56,100 --> 00:19:03,100
+but I once worked in the enterprise
+
+312
+00:19:07,100 --> 00:19:10,980
+the enterprise sometimes demands
+
+313
+00:19:10,980 --> 00:19:14,980
+he axes specifically and is very
+offended
+
+314
+00:19:14,980 --> 00:19:18,390
+any of your code persists as data
+
+315
+00:19:18,390 --> 00:19:21,460
+rather than becoming real machine code
+
+316
+00:19:21,460 --> 00:19:25,570
+core language developers on the other
+hand because Python
+
+317
+00:19:25,570 --> 00:19:29,980
+it doesn't come out of that world Python
+comes out I love the UNIX
+
+318
+00:19:29,980 --> 00:19:33,640
+Academy text by all on
+
+319
+00:19:33,640 --> 00:19:37,659
+environment Corel English developer: see
+no point
+
+320
+00:19:37,659 --> 00:19:42,200
+in nearly eliminating interpretation
+they're targeting dispatch
+
+321
+00:19:42,200 --> 00:19:46,130
+what's the point of eliminating if you
+buy code lookup secure still
+
+322
+00:19:46,130 --> 00:19:49,429
+asking floats how to multiply in fact
+
+323
+00:19:49,429 --> 00:19:54,580
+core language developers might publicly
+expressed dismay
+
+324
+00:19:54,580 --> 00:19:57,929
+that your even trying to nearly
+eliminate that
+
+325
+00:19:57,929 --> 00:20:02,280
+first step have interpretation that in
+other words
+
+326
+00:20:02,280 --> 00:20:05,760
+getting rid of a bytecode and simply
+having pre
+
+327
+00:20:05,760 --> 00:20:11,590
+written out the sea calls that need to
+be made but in the enterprise
+
+328
+00:20:11,590 --> 00:20:17,210
+that does not necessarily have 0 value
+because %uh very conservative culture
+
+329
+00:20:17,210 --> 00:20:20,350
+a look-alike phenomena warning a your
+
+330
+00:20:20,350 --> 00:20:25,120
+about not wanting to admit Python to the
+club unless it can produce the same kind
+
+331
+00:20:25,120 --> 00:20:26,710
+of artifacts as other tools
+
+332
+00:20:26,710 --> 00:20:31,159
+and sometimes a bit of a culture up
+secrecy around
+
+333
+00:20:31,159 --> 00:20:35,169
+their source code any fear that P Y C
+finals
+
+334
+00:20:35,169 --> 00:20:40,510
+dangling in a zip archive of the end of
+an execute a ball might be the targeted
+
+335
+00:20:40,510 --> 00:20:41,679
+d compilation
+
+336
+00:20:41,679 --> 00:20:45,770
+which is its own little shadow world the
+Python community
+
+337
+00:20:45,770 --> 00:20:48,799
+a series of projects that startup
+
+338
+00:20:48,799 --> 00:20:53,150
+that work with one version of python
+ever and then disappear off into
+
+339
+00:20:53,150 --> 00:20:54,549
+commercial projects
+
+340
+00:20:54,549 --> 00:20:58,780
+the very first one that was open source
+then disappeared behind
+
+341
+00:20:58,780 --> 00:21:01,870
+a close source web site where you had to
+pay around it
+
+342
+00:21:01,870 --> 00:21:07,460
+is anyone here ever paid to decompile
+
+343
+00:21:07,460 --> 00:21:11,190
+appear I see file I got bit curious
+
+344
+00:21:11,190 --> 00:21:15,000
+who per state
+
+345
+00:21:15,000 --> 00:21:18,309
+so and I was curious I want to ask you
+specifically
+
+346
+00:21:18,309 --> 00:21:21,919
+but I went online and looked at the
+reviews at this product
+
+347
+00:21:21,919 --> 00:21:25,929
+thinking it because I if okay I was
+doing espionage
+
+348
+00:21:25,929 --> 00:21:30,470
+if I want to know how Dropbox works deep
+inside and I think that
+
+349
+00:21:30,470 --> 00:21:33,470
+reading their source code is a good way
+to learn their secrets for my own
+
+350
+00:21:33,470 --> 00:21:34,159
+project
+
+351
+00:21:34,159 --> 00:21:38,520
+I wouldn't go pee sitting there P Y C
+files up on someone else's commercial
+
+352
+00:21:38,520 --> 00:21:39,250
+website
+
+353
+00:21:39,250 --> 00:21:42,600
+who uses this so I went in ninety you
+
+354
+00:21:42,600 --> 00:21:49,600
+the speaking to some reviews
+
+355
+00:22:16,180 --> 00:22:20,480
+do I have to take back what I said about
+P Y C files a few minutes ago
+
+356
+00:22:20,480 --> 00:22:25,790
+maybe all those P Y C files are useful
+after all
+
+357
+00:22:25,790 --> 00:22:31,910
+okay public service announcement is now
+necessary
+
+358
+00:22:31,910 --> 00:22:36,000
+do not set papon don't right bytecode
+
+359
+00:22:36,000 --> 00:22:40,850
+equal whiny if they are the only backup
+you have
+
+360
+00:22:40,850 --> 00:22:47,850
+I love your car
+
+361
+00:22:49,640 --> 00:22:52,910
+and and I'm just kidding I'm not gonna
+let you I see files off the hook because
+
+362
+00:22:52,910 --> 00:22:54,410
+they cause the problem
+
+363
+00:22:54,410 --> 00:22:58,630
+and our why the people running remove
+all the time in their pipeline project
+
+364
+00:22:58,630 --> 00:23:02,780
+I the real PSA here is you some kinda
+version control
+
+365
+00:23:02,780 --> 00:23:06,630
+even if it's a throwaway Weibo that
+you'll delete at the end of the day
+
+366
+00:23:06,630 --> 00:23:10,610
+have something sitting there or your
+editor open that you can go hit Save
+
+367
+00:23:10,610 --> 00:23:11,330
+then again
+
+368
+00:23:11,330 --> 00:23:15,340
+never have just one copy of your source
+code use Dropbox
+
+369
+00:23:15,340 --> 00:23:19,650
+it's written in Python self
+
+370
+00:23:19,650 --> 00:23:24,930
+what if because if your environment are
+your situation you just a really really
+
+371
+00:23:24,930 --> 00:23:26,100
+need an EXE
+
+372
+00:23:26,100 --> 00:23:29,930
+not because you're shy about dispatched
+to the
+
+373
+00:23:29,930 --> 00:23:33,770
+multiply operation not because you need
+incredible speed
+
+374
+00:23:33,770 --> 00:23:36,940
+but because your environmental demands
+the delivery
+
+375
+00:23:36,940 --> 00:23:40,170
+I've compiled code where on
+
+376
+00:23:40,170 --> 00:23:43,520
+where the artifact is not bytecode over
+on the heap
+
+377
+00:23:43,520 --> 00:23:48,130
+but real execute a ball machine covered
+I'm here to announce
+
+378
+00:23:48,130 --> 00:23:52,680
+it is now possible you can now
+accomplishment accomplish it
+
+379
+00:23:52,680 --> 00:23:55,980
+the day up EXE is upon us
+
+380
+00:23:55,980 --> 00:23:59,330
+and their are to competing
+
+381
+00:23:59,330 --> 00:24:03,120
+solutions let me outline them quickly
+Nootka
+
+382
+00:24:03,120 --> 00:24:08,510
+by high heightened I he's given a series
+I believe to talks at subsequent Europe
+
+383
+00:24:08,510 --> 00:24:09,720
+I pans about it
+
+384
+00:24:09,720 --> 00:24:13,850
+I tried a number of different programs
+about it and for the most part
+
+385
+00:24:13,850 --> 00:24:18,910
+it was compiling 2.6 2.7 3.2 and 3.3
+
+386
+00:24:18,910 --> 00:24:22,120
+and like pie to eat it comes with a
+built
+
+387
+00:24:22,120 --> 00:24:26,380
+in bundler that after its done compiling
+your Python code
+
+388
+00:24:26,380 --> 00:24:31,110
+to real C code will bundle it all
+together into as much of a single
+
+389
+00:24:31,110 --> 00:24:35,620
+EXE files that can manage without using
+the shady one weird trick
+
+390
+00:24:35,620 --> 00:24:39,790
+I tried print hello world
+
+391
+00:24:39,790 --> 00:24:42,920
+and it worked I got an execute a ball
+with out any
+
+392
+00:24:42,920 --> 00:24:46,980
+evident by TKO that I could find inside
+it cell
+
+393
+00:24:46,980 --> 00:24:51,020
+identified alright that one time that I
+had to make that
+
+394
+00:24:51,020 --> 00:24:55,720
+at EXE per client and it didn't work
+that was because %uh the script ha
+
+395
+00:24:55,720 --> 00:24:57,000
+Griffey libraries
+
+396
+00:24:57,000 --> 00:25:00,930
+so I first tried the one we did
+eventually get working with IDEX E
+
+397
+00:25:00,930 --> 00:25:04,000
+Pike crypto handed
+
+398
+00:25:04,000 --> 00:25:09,500
+worked alright I then went to the one
+that we had had to throw away and only
+
+399
+00:25:09,500 --> 00:25:10,380
+right
+
+400
+00:25:10,380 --> 00:25:14,470
+because it didn't I could never get it
+to bundle
+
+401
+00:25:14,470 --> 00:25:18,470
+into crypto compiled
+
+402
+00:25:18,470 --> 00:25:21,970
+and worked this is amazing
+
+403
+00:25:21,970 --> 00:25:25,490
+this means that in a wide variety of
+situations
+
+404
+00:25:25,490 --> 00:25:29,960
+you can now with a little bit of work
+get your project to producing
+
+405
+00:25:29,960 --> 00:25:33,880
+EXE where no compilation are bytecode
+interpretation
+
+406
+00:25:33,880 --> 00:25:37,830
+happens runtime: you can bundle
+dependency
+
+407
+00:25:37,830 --> 00:25:42,020
+work just put it elsewhere on the pipe
+on path it's your call you're trying to
+
+408
+00:25:42,020 --> 00:25:42,620
+protect
+
+409
+00:25:42,620 --> 00:25:46,360
+you're not too shy about the customer
+seeing that into crypto
+
+410
+00:25:46,360 --> 00:25:50,230
+is sitting next to you on the desk you
+have either option I
+
+411
+00:25:50,230 --> 00:25:54,660
+but you can also has a competitor saipan
+
+412
+00:25:54,660 --> 00:26:00,020
+which I had been led to believe was a
+domain-specific language to make it easy
+
+413
+00:26:00,020 --> 00:26:05,450
+to let Python talk to you see I assumed
+it was some little sub set up the Python
+
+414
+00:26:05,450 --> 00:26:07,550
+language that barely got you up and
+running
+
+415
+00:26:07,550 --> 00:26:10,990
+so that you could then make calls in to
+see without having to use
+
+416
+00:26:10,990 --> 00:26:14,720
+are at this so that the translation
+between the two
+
+417
+00:26:14,720 --> 00:26:20,060
+environment happened transparently and
+it was last year talking to one of those
+
+418
+00:26:20,060 --> 00:26:24,600
+arm Python science people that there
+that that that that they're like yeah
+
+419
+00:26:24,600 --> 00:26:26,200
+it's like Python
+
+420
+00:26:26,200 --> 00:26:29,900
+plus you can make Skype calls and Isaac
+
+421
+00:26:29,900 --> 00:26:33,020
+but you mean it's
+
+422
+00:26:33,020 --> 00:26:36,760
+it's Paul Python and they're like ap
+
+423
+00:26:36,760 --> 00:26:42,220
+you can make see call us and as likely
+many
+
+424
+00:26:42,220 --> 00:26:45,310
+you guys have secretly come up with a
+way to compile
+
+425
+00:26:45,310 --> 00:26:48,570
+pie time generators actions classes
+
+426
+00:26:48,570 --> 00:26:52,050
+to see code yet to see code
+
+427
+00:26:52,050 --> 00:26:57,750
+and you haven't told anyone like
+
+428
+00:26:57,750 --> 00:27:01,560
+like people asked this on Stack Overflow
+every day in you've been keeping it a
+
+429
+00:27:01,560 --> 00:27:03,040
+secret
+
+430
+00:27:03,040 --> 00:27:06,060
+and they're like out but with with
+Saipan
+
+431
+00:27:06,060 --> 00:27:13,060
+you can't make calls to see
+
+432
+00:27:13,850 --> 00:27:17,420
+max because then we'll have two previous
+space
+
+433
+00:27:17,420 --> 00:27:20,590
+and so need ca insight on and I
+
+434
+00:27:20,590 --> 00:27:23,800
+Nootka and seitan are the two solutions
+and
+
+435
+00:27:23,800 --> 00:27:26,990
+with them you can bundle your project
+together
+
+436
+00:27:26,990 --> 00:27:33,990
+as a single EXE thank you very much
+
+437
+00:27:40,679 --> 00:27:42,590
+I don't see anyone by the Mikes
+
+438
+00:27:42,590 --> 00:27:47,269
+for one question in which case oh well I
+invite you to talk to the speaker in the
+
+439
+00:27:47,269 --> 00:27:48,889
+open spaces or anywhere
+
+440
+00:27:48,889 --> 00:27:52,989
+thank you again see me at the sprints if
+you wanna play with some examples I've
+
+441
+00:27:52,989 --> 00:27:53,970
+been experimenting with
+

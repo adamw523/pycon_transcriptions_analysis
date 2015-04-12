@@ -1,0 +1,2252 @@
+1
+00:00:09,270 --> 00:00:15,150
+week
+
+2
+00:00:15,150 --> 00:00:22,150
+ok
+
+3
+00:01:42,430 --> 00:01:45,420
+up
+
+4
+00:01:45,420 --> 00:01:51,680
+hard
+
+5
+00:01:51,680 --> 00:01:58,680
+want
+
+6
+00:02:08,810 --> 00:02:15,810
+up
+
+7
+00:02:20,130 --> 00:02:27,130
+now
+
+8
+00:02:28,770 --> 00:02:29,200
+alright
+
+9
+00:02:29,200 --> 00:02:33,900
+it's about time to get started and the
+first talk in this session is by
+
+10
+00:02:33,900 --> 00:02:36,980
+down minor is going to give is a scenic
+drive through the Django
+
+11
+00:02:36,980 --> 00:02:43,980
+request cycle demand
+
+12
+00:02:44,870 --> 00:02:48,790
+thank you now see partial as I me my
+name is Dan miner
+
+13
+00:02:48,790 --> 00:02:52,900
+me developer manager waving trial or
+small or start-up
+
+14
+00:02:52,900 --> 00:02:56,020
+help small businesses be successful but
+they're all my tools
+
+15
+00:02:56,020 --> 00:02:59,980
+and I'm gonna talk with generous request
+spots like
+
+16
+00:02:59,980 --> 00:03:03,840
+that's why spend the majority my time
+majengo now
+
+17
+00:03:03,840 --> 00:03:06,880
+opinion Django for a bow clover two
+years
+
+18
+00:03:06,880 --> 00:03:10,810
+injector does have a lot of part thought
+might come to except
+
+19
+00:03:10,810 --> 00:03:14,360
+enjoy deal with out but when you're
+starting out
+
+20
+00:03:14,360 --> 00:03:19,120
+it's not all obvious how the oft usually
+go on working with some guys on my team
+
+21
+00:03:19,120 --> 00:03:22,400
+were experienced as health dept just
+coming to Django
+
+22
+00:03:22,400 --> 00:03:26,730
+they went was struggling with notions
+like I have this very behind we get into
+
+23
+00:03:26,730 --> 00:03:27,380
+a template
+
+24
+00:03:27,380 --> 00:03:31,560
+which pair talked to me but apparently
+if you're coming from
+
+25
+00:03:31,560 --> 00:03:35,610
+back doesn't have so many different
+layers part something to talk about in a
+
+26
+00:03:35,610 --> 00:03:36,230
+particular
+
+27
+00:03:36,230 --> 00:03:39,950
+her request turned into response which i
+think is why the most fundamental
+
+28
+00:03:39,950 --> 00:03:43,770
+not the most fundamental operations
+check now
+
+29
+00:03:43,770 --> 00:03:47,610
+speaking abolished parts might have
+given way the ending this is
+
+30
+00:03:47,610 --> 00:03:51,610
+somewhat how it all works that's great
+offers awkward
+
+31
+00:03:51,610 --> 00:03:55,080
+but you can see there's a lot going on
+here's a number of words repeated
+
+32
+00:03:55,080 --> 00:03:55,650
+there's
+
+33
+00:03:55,650 --> 00:03:59,200
+you shaking going on middleware in a
+bunch places
+
+34
+00:03:59,200 --> 00:04:03,130
+soft talk about what this actually
+indifferent to do that
+
+35
+00:04:03,130 --> 00:04:07,000
+which door with her quest it all begins
+so in a long
+
+36
+00:04:07,000 --> 00:04:10,410
+a long long time ago a consul far-right
+out
+
+37
+00:04:10,410 --> 00:04:13,600
+ultra someone type this shoes
+
+38
+00:04:13,600 --> 00:04:18,640
+said I wanna curl -o to Daniel Agger dot
+com slash hello slashing to:
+
+39
+00:04:18,640 --> 00:04:21,850
+and the press Enter and then the cops
+back
+
+40
+00:04:21,850 --> 00:04:25,220
+and this is crossing what actually and
+that's what it's doing
+
+41
+00:04:25,220 --> 00:04:28,620
+sending her a HD 1.1 GetRequest
+
+42
+00:04:28,620 --> 00:04:33,340
+to slash hello slash Intel saying I want
+a response from the host
+
+43
+00:04:33,340 --> 00:04:36,950
+Dec home and I mean except just anything
+comes back
+
+44
+00:04:36,950 --> 00:04:42,020
+and from there one across the and I'm
+not gonna talk but have how it works
+
+45
+00:04:42,020 --> 00:04:45,660
+that talking up itself but trust me when
+that person
+
+46
+00:04:45,660 --> 00:04:49,770
+me in this case pressed enter they
+requested or across the internet and
+
+47
+00:04:49,770 --> 00:04:50,430
+ended up
+
+48
+00:04:50,430 --> 00:04:53,880
+Tampa looks like this it more gonna call
+webster
+
+49
+00:04:53,880 --> 00:04:57,820
+now in practice this web servers
+probably engine actor
+
+50
+00:04:57,820 --> 00:05:01,870
+actually by that shit is popular
+nowadays bottom line is it's a web
+
+51
+00:05:01,870 --> 00:05:02,340
+server
+
+52
+00:05:02,340 --> 00:05:05,729
+and the web server fundamentally takes
+her quest
+
+53
+00:05:05,729 --> 00:05:09,180
+and gives back response and how it does
+that
+
+54
+00:05:09,180 --> 00:05:12,330
+changes on what color us for talk static
+
+55
+00:05:12,330 --> 00:05:16,919
+quest something simple file it's just on
+a machine the web server probably just
+
+56
+00:05:16,919 --> 00:05:17,750
+handle itself
+
+57
+00:05:17,750 --> 00:05:21,710
+through a response back itself but if
+it's more complex
+
+58
+00:05:21,710 --> 00:05:24,750
+setting something that's powered by web
+application like
+
+59
+00:05:24,750 --> 00:05:30,110
+check let's say get for more cock as it
+we have to ask the question well
+
+60
+00:05:30,110 --> 00:05:33,450
+how does the web server itself which may
+be written in C
+
+61
+00:05:33,450 --> 00:05:36,600
+or something how does I communicate with
+
+62
+00:05:36,600 --> 00:05:40,300
+I thought process the track and thus a
+change in the past
+
+63
+00:05:40,300 --> 00:05:43,650
+so back in the day the early 2000's
+
+64
+00:05:43,650 --> 00:05:46,820
+there wasn't simple way to do it
+different web servers did
+
+65
+00:05:46,820 --> 00:05:50,620
+ways different from work today different
+ways some web server support my python
+
+66
+00:05:50,620 --> 00:05:51,200
+sometime
+
+67
+00:05:51,200 --> 00:05:54,340
+expert passage I and it meant that your
+search your choice
+
+68
+00:05:54,340 --> 00:05:57,610
+web server and web framework was happy
+couple together which
+
+69
+00:05:57,610 --> 00:06:01,830
+motivation has top web surfer people to
+steal from our people
+
+70
+00:06:01,830 --> 00:06:06,050
+stuff from our people said care for web
+surfers and nobody like
+
+71
+00:06:06,050 --> 00:06:10,560
+so what we ended up with was kept 333
+called whiskey
+
+72
+00:06:10,560 --> 00:06:15,010
+web server key face its answer the
+question how to Python frameworks and
+
+73
+00:06:15,010 --> 00:06:15,690
+web services
+
+74
+00:06:15,690 --> 00:06:19,320
+tracked common and simple way by web
+
+75
+00:06:19,320 --> 00:06:22,789
+applications on top check the Big Valley
+
+76
+00:06:22,789 --> 00:06:26,320
+whiskey in petrie came out was
+
+77
+00:06:26,320 --> 00:06:29,380
+simplicity in these damn as the guys
+wrote it knew
+
+78
+00:06:29,380 --> 00:06:33,200
+if it was in Tampa life it wasn't easy
+to switch no actually do anything
+
+79
+00:06:33,200 --> 00:06:37,390
+left so they want and they made it
+simple and they made
+
+80
+00:06:37,390 --> 00:06:41,620
+one reelection point between whiskey
+wearing a web server
+
+81
+00:06:41,620 --> 00:06:46,130
+want to rest are any web application in
+this is about
+
+82
+00:06:46,130 --> 00:06:51,210
+your mental possible kitchen you can see
+the whiskey protocol
+
+83
+00:06:51,210 --> 00:06:54,680
+which is call something called function
+
+84
+00:06:54,680 --> 00:06:58,880
+call it takes two arguments I'm which
+have particular format
+
+85
+00:06:58,880 --> 00:07:02,330
+the standard talks about does some stuff
+to it and then
+
+86
+00:07:02,330 --> 00:07:05,780
+returns and terrible strings I wish
+
+87
+00:07:05,780 --> 00:07:10,800
+is careful not to talk how'd to ration
+just s5 given this
+
+88
+00:07:10,800 --> 00:07:13,990
+he can run in a particular way will get
+back some handles
+
+89
+00:07:13,990 --> 00:07:18,400
+spot the other thing to highlight their
+is that there's nothing stable and
+
+90
+00:07:18,400 --> 00:07:22,220
+every request has its own amber on
+Sunstar response
+
+91
+00:07:22,220 --> 00:07:25,580
+there's nothing in their last by
+definition whiskey
+
+92
+00:07:25,580 --> 00:07:28,690
+track response to another so any type
+assistant
+
+93
+00:07:28,690 --> 00:07:33,870
+session management has happened web
+application now
+
+94
+00:07:33,870 --> 00:07:37,310
+probably thinking if I said the whiskey
+is the way that web service QQ
+
+95
+00:07:37,310 --> 00:07:41,030
+applications and Django is web
+application runs
+
+96
+00:07:41,030 --> 00:07:45,000
+doesn't speak with you the answer yes so
+in general and
+
+97
+00:07:45,000 --> 00:07:48,370
+your whiskey up whiskey where is in
+Django decor
+
+98
+00:07:48,370 --> 00:07:52,040
+hammers scammers and with a couple
+things
+
+99
+00:07:52,040 --> 00:07:55,260
+hold off for simplicity look something
+like this:
+
+100
+00:07:55,260 --> 00:07:58,430
+if you look at the shape compared to
+last light
+
+101
+00:07:58,430 --> 00:08:02,340
+very similar and that they're both calls
+
+102
+00:08:02,340 --> 00:08:05,500
+they both take two arguments and Bronze
+Star sponse
+
+103
+00:08:05,500 --> 00:08:09,100
+which are customarily called up not find
+sir
+
+104
+00:08:09,100 --> 00:08:12,570
+and they both returned something in this
+case something
+
+105
+00:08:12,570 --> 00:08:17,919
+itself kept you can see what's up doc a
+response is really the biggest thing
+
+106
+00:08:17,919 --> 00:08:21,150
+of doctors months after two interesting
+things about it
+
+107
+00:08:21,150 --> 00:08:26,449
+gonna spend a lot of time going have
+function works first interesting thing
+
+108
+00:08:26,449 --> 00:08:29,639
+is that's not to find on whiskey soft
+
+109
+00:08:29,639 --> 00:08:33,500
+based on which I thought was weird my
+first looking into this
+
+110
+00:08:33,500 --> 00:08:36,829
+but it turns out there's one other class
+Jack
+
+111
+00:08:36,829 --> 00:08:40,370
+hospital December only one what that is
+
+112
+00:08:40,370 --> 00:08:43,500
+is that thing around the jacket has so
+that when you're ready
+
+113
+00:08:43,500 --> 00:08:46,630
+generation when you're fired task hi
+
+114
+00:08:46,630 --> 00:08:49,650
+as much as possible the exact same
+copout
+
+115
+00:08:49,650 --> 00:08:52,740
+as you get your whiskey you go into your
+normal I
+
+116
+00:08:52,740 --> 00:08:56,709
+you to skip the other interesting thing
+
+117
+00:08:56,709 --> 00:09:01,040
+about how this structured is itself
+doctor response tix request
+
+118
+00:09:01,040 --> 00:09:05,060
+which you'll see is not part West 9
+bronner start
+
+119
+00:09:05,060 --> 00:09:08,370
+request object to something that's great
+and that first ellipses
+
+120
+00:09:08,370 --> 00:09:11,720
+here it's a Jager structure that
+encompasses their question everything
+
+121
+00:09:11,720 --> 00:09:12,220
+that
+
+122
+00:09:12,220 --> 00:09:15,290
+understand quest this where check your
+
+123
+00:09:15,290 --> 00:09:19,270
+Stockport whiskey hammers it's the last
+place in check we actually see deal with
+
+124
+00:09:19,270 --> 00:09:20,120
+whiskey
+
+125
+00:09:20,120 --> 00:09:23,699
+arrest check below it doesn't care what
+have we got there just cares but what it
+
+126
+00:09:23,699 --> 00:09:26,380
+needs in order to run
+
+127
+00:09:26,380 --> 00:09:29,800
+so jump into court base hammers
+
+128
+00:09:29,800 --> 00:09:33,949
+this is really what happens in tears of
+base hammer itself is how to rock a
+
+129
+00:09:33,949 --> 00:09:35,650
+response is that mean
+
+130
+00:09:35,650 --> 00:09:39,449
+about lipitor roster spot cycle to
+understand how our questions into
+
+131
+00:09:39,449 --> 00:09:40,290
+response
+
+132
+00:09:40,290 --> 00:09:43,650
+through understanding how this works
+these are the sort
+
+133
+00:09:43,650 --> 00:09:47,699
+basic steps but before we get into that
+for the catalyst we see the wooden mill
+
+134
+00:09:47,699 --> 00:09:48,930
+workers there
+
+135
+00:09:48,930 --> 00:09:52,300
+fact on the six lines that are in there
+
+136
+00:09:52,300 --> 00:09:55,440
+for middleware is involved for them so
+let's take
+
+137
+00:09:55,440 --> 00:09:59,470
+a progression to what I mean when I say
+middleware before we see things
+
+138
+00:09:59,470 --> 00:10:03,420
+if you're coming from a more enterprise
+background when her middleware
+
+139
+00:10:03,420 --> 00:10:06,949
+you likely think something big something
+heavy something like or future J
+
+140
+00:10:06,949 --> 00:10:08,370
+daughter in common
+
+141
+00:10:08,370 --> 00:10:11,660
+something the bosses bosses boss of
+seven million dollars
+
+142
+00:10:11,660 --> 00:10:14,890
+his department to run its rally paint
+
+143
+00:10:14,890 --> 00:10:18,610
+which article for the exact opposite
+jacko
+
+144
+00:10:18,610 --> 00:10:23,030
+with talks to Skype Django middleware is
+too late low-level plugin system for
+
+145
+00:10:23,030 --> 00:10:24,070
+globally altering
+
+146
+00:10:24,070 --> 00:10:27,329
+changed the two interesting points there
+
+147
+00:10:27,329 --> 00:10:30,850
+a globally all-time liked late
+
+148
+00:10:30,850 --> 00:10:33,780
+you'll see as we get into looking at the
+structure have expected side have
+
+149
+00:10:33,780 --> 00:10:34,900
+installed
+
+150
+00:10:34,900 --> 00:10:38,050
+and globally is a really unique thing
+but jail a middleware
+
+151
+00:10:38,050 --> 00:10:41,870
+a place the jack week a system is that
+they're on every request that comes in
+
+152
+00:10:41,870 --> 00:10:45,310
+ever goto whereas everything else
+
+153
+00:10:45,310 --> 00:10:48,449
+gets far behind a viewer tasks
+
+154
+00:10:48,449 --> 00:10:52,820
+has an example what late means is
+installing a middleware is really just
+
+155
+00:10:52,820 --> 00:10:56,750
+adding a line to accept file you'll find
+when you
+
+156
+00:10:56,750 --> 00:11:00,070
+or proper settings file it comes in the
+project template you've got a middleware
+
+157
+00:11:00,070 --> 00:11:01,520
+classes dictionary
+
+158
+00:11:01,520 --> 00:11:05,089
+add something to it it'll get picked up
+when you look at first time you'll see
+
+159
+00:11:05,089 --> 00:11:06,270
+some things there
+
+160
+00:11:06,270 --> 00:11:10,020
+should probably been they're pretty
+useful by should also add
+
+161
+00:11:10,020 --> 00:11:13,530
+grocer so with that in mind with
+
+162
+00:11:13,530 --> 00:11:16,850
+I thought on when middleware means
+Django context
+
+163
+00:11:16,850 --> 00:11:20,089
+let's look at the first step which is
+your quest or
+
+164
+00:11:20,089 --> 00:11:23,679
+across middleware what it's for is it
+handles
+
+165
+00:11:23,679 --> 00:11:27,980
+things that happened on all in power I
+say requests and not few calls
+
+166
+00:11:27,980 --> 00:11:31,270
+at the time with your her quest power we
+don't know how
+
+167
+00:11:31,270 --> 00:11:35,290
+handle all we know is this: requests
+come in to the whiskey where
+
+168
+00:11:35,290 --> 00:11:38,809
+down here have a look at the structure
+
+169
+00:11:38,809 --> 00:11:42,819
+will see some therapy a few times in the
+other opinion what I said one little
+
+170
+00:11:42,819 --> 00:11:44,800
+Millers are simple system
+
+171
+00:11:44,800 --> 00:11:48,809
+of middleware is I know jack project as
+a method
+
+172
+00:11:48,809 --> 00:11:53,410
+processors quest which takes her quest
+the pact
+
+173
+00:11:53,410 --> 00:11:56,860
+an account early return only one of two
+things
+
+174
+00:11:56,860 --> 00:12:00,420
+he can return you there HTTP response
+which is a full-on
+
+175
+00:12:00,420 --> 00:12:04,640
+check response object and if it does
+that the rest the pipeline stops
+
+176
+00:12:04,640 --> 00:12:07,760
+goes there missus this usually happens
+if you've done your
+
+177
+00:12:07,760 --> 00:12:11,850
+medication in a general question aware
+which is a good place to do it
+
+178
+00:12:11,850 --> 00:12:14,949
+if you use account is not authenticated
+mill where would you shut down the
+
+179
+00:12:14,949 --> 00:12:15,800
+process
+
+180
+00:12:15,800 --> 00:12:19,050
+retract that you to a login page without
+having to go through any thereafter
+
+181
+00:12:19,050 --> 00:12:22,829
+where's system or her turn
+
+182
+00:12:22,829 --> 00:12:26,550
+not as Miller's waves I have no to
+
+183
+00:12:26,550 --> 00:12:29,579
+I've done my business what happened this
+keep on going to
+
+184
+00:12:29,579 --> 00:12:33,100
+stack so this middleware
+
+185
+00:12:33,100 --> 00:12:36,520
+tickle you can see just takes a request
+which means it doesn't know the few
+
+186
+00:12:36,520 --> 00:12:37,230
+that's good
+
+187
+00:12:37,230 --> 00:12:40,520
+this missus to look stage if
+
+188
+00:12:40,520 --> 00:12:44,569
+what you are doing this request does
+require knowing what you will handle it
+
+189
+00:12:44,569 --> 00:12:48,160
+configured 0 really just check as a
+later step in the process
+
+190
+00:12:48,160 --> 00:12:51,510
+captured so
+
+191
+00:12:51,510 --> 00:12:57,290
+before he gonna take small break catch
+up on where we are
+
+192
+00:12:57,290 --> 00:13:00,780
+we've gone and we start with her quest
+came from
+
+193
+00:13:00,780 --> 00:13:05,540
+hi did something press curl already when
+used with breast click
+
+194
+00:13:05,540 --> 00:13:09,520
+that request when I across the internet
+guide land on a web server
+
+195
+00:13:09,520 --> 00:13:12,780
+the web server took her quest our state
+using
+
+196
+00:13:12,780 --> 00:13:16,459
+gone through whiskey where went out I
+times Django
+
+197
+00:13:16,459 --> 00:13:19,679
+in Django for stepdaughter cost or
+
+198
+00:13:19,679 --> 00:13:23,390
+so at this point we have request object
+have some stuff done to it
+
+199
+00:13:23,390 --> 00:13:27,300
+have really done anything else which is
+what's coming next
+
+200
+00:13:27,300 --> 00:13:30,990
+in the next thing up analyst is
+resolving that URL
+
+201
+00:13:30,990 --> 00:13:35,089
+interview Oct is often URL
+
+202
+00:13:35,089 --> 00:13:38,270
+is the process by definition taking URL
+
+203
+00:13:38,270 --> 00:13:41,720
+like day like dot com slash hella
+slashing TL
+
+204
+00:13:41,720 --> 00:13:45,270
+and mapping that to a few function it's
+gonna
+
+205
+00:13:45,270 --> 00:13:48,900
+if you're new web framework sir come
+from back static site
+
+206
+00:13:48,900 --> 00:13:53,260
+you look at your like I Daniel Agger
+accomplish slashing to:
+
+207
+00:13:53,260 --> 00:13:56,579
+and you would think that somewhere in
+the end below the Weber was director
+
+208
+00:13:56,579 --> 00:13:57,490
+called a low
+
+209
+00:13:57,490 --> 00:14:00,579
+below that to director called MTL book
+that
+
+210
+00:14:00,579 --> 00:14:04,589
+when the next which would show whatever
+you get a response to this
+
+211
+00:14:04,589 --> 00:14:08,059
+and that is how work but that's not
+necessarily back officer
+
+212
+00:14:08,059 --> 00:14:12,339
+how doesn't work and Jack at this point
+using
+
+213
+00:14:12,339 --> 00:14:15,709
+your %ah resolution all we really do
+
+214
+00:14:15,709 --> 00:14:18,790
+help slash hello slash MTL is just a map
+
+215
+00:14:18,790 --> 00:14:22,959
+shows we can specify using a former look
+something like this:
+
+216
+00:14:22,959 --> 00:14:28,780
+what flash hellaflush until does way
+relates to interview hartley gets used
+
+217
+00:14:28,780 --> 00:14:32,380
+we can in this case I've got a small how
+to block bomb
+
+218
+00:14:32,380 --> 00:14:36,780
+what's called a URL of and shows two
+different ways you can make them
+
+219
+00:14:36,780 --> 00:14:41,230
+the first one is supports just saying
+but map slash hella slashing to:
+
+220
+00:14:41,230 --> 00:14:44,339
+hi Intel just a director mapping
+
+221
+00:14:44,339 --> 00:14:48,299
+in a sec 10 is a little more complex
+issues a regular expression
+
+222
+00:14:48,299 --> 00:14:51,610
+and it saying I wanna map slash hello
+flash
+
+223
+00:14:51,610 --> 00:14:55,290
+anything else in America High City so a
+commuter
+
+224
+00:14:55,290 --> 00:15:00,230
+past like slash hello slash Toronto you
+would end up there
+
+225
+00:15:00,230 --> 00:15:03,939
+now the important thing is that these go
+in order
+
+226
+00:15:03,939 --> 00:15:07,750
+and we resolved URL matches first wins
+
+227
+00:15:07,750 --> 00:15:11,689
+so if we switch to europe think look
+like this this is what used to be
+
+228
+00:15:11,689 --> 00:15:15,040
+now just switch the order in this case
+
+229
+00:15:15,040 --> 00:15:19,309
+slash hellaflush Intel would go to high
+City comes in it as well
+
+230
+00:15:19,309 --> 00:15:23,390
+what is hello slash anything after
+shallow slash India match is this a lot
+
+231
+00:15:23,390 --> 00:15:25,030
+still go deal with high City
+
+232
+00:15:25,030 --> 00:15:29,309
+enough to actually get hyped
+
+233
+00:15:29,309 --> 00:15:34,220
+now when we look at those patterns I
+mention the first section which is
+
+234
+00:15:34,220 --> 00:15:37,809
+for the Mac damage in the second section
+which is the view to get
+
+235
+00:15:37,809 --> 00:15:40,910
+by but the third section the name High
+City
+
+236
+00:15:40,910 --> 00:15:45,040
+some or and it's a way that we can refer
+programmatically what
+
+237
+00:15:45,040 --> 00:15:48,040
+this URL looks like what it does
+
+238
+00:15:48,040 --> 00:15:51,500
+front URL anywhere but using using
+
+239
+00:15:51,500 --> 00:15:54,890
+those two functions bottom of the screen
+the world template tag
+
+240
+00:15:54,890 --> 00:15:58,610
+first function just for firms them that
+way means that we decouple the
+
+241
+00:15:58,610 --> 00:16:00,510
+relationships between pages
+
+242
+00:16:00,510 --> 00:16:03,620
+the world selves which is an interesting
+idea something you can't
+
+243
+00:16:03,620 --> 00:16:08,360
+status of we decouple the relationship
+between two pages
+
+244
+00:16:08,360 --> 00:16:11,410
+and the way to generate a link between
+actual content
+
+245
+00:16:11,410 --> 00:16:14,970
+self so all we do is we call reverse
+High City
+
+246
+00:16:14,970 --> 00:16:19,530
+injectable give me what right now based
+on how my world except right now
+
+247
+00:16:19,530 --> 00:16:22,650
+you rush doing that
+
+248
+00:16:22,650 --> 00:16:25,439
+means we can do something like this we
+can go and change the URL structure
+
+249
+00:16:25,439 --> 00:16:26,520
+totally
+
+250
+00:16:26,520 --> 00:16:30,150
+we've gone change hello hi said
+
+251
+00:16:30,150 --> 00:16:34,730
+K hi surge I'll and now everything just
+works
+
+252
+00:16:34,730 --> 00:16:38,270
+hasn't gone everywhere way you to
+dynamic lookup
+
+253
+00:16:38,270 --> 00:16:42,000
+is at high tech to figure X URL
+
+254
+00:16:42,000 --> 00:16:45,199
+thinkstock this is an art thing but
+
+255
+00:16:45,199 --> 00:16:51,170
+trust or fine diversions on a couple
+times thank you soft
+
+256
+00:16:51,170 --> 00:16:54,640
+so without a away and seeing how those
+
+257
+00:16:54,640 --> 00:16:59,510
+can have a backup OK Corral Africa and
+see that slash Alice lashing tail
+
+258
+00:16:59,510 --> 00:17:03,290
+well goes and matches too high till we
+figure that out
+
+259
+00:17:03,290 --> 00:17:06,490
+we're done with mister
+
+260
+00:17:06,490 --> 00:17:10,350
+now next long list we've got a few
+Miller's
+
+261
+00:17:10,350 --> 00:17:13,579
+human workers almost exactly the same
+thing quest
+
+262
+00:17:13,579 --> 00:17:17,230
+where agreed on our going to a except
+
+263
+00:17:17,230 --> 00:17:20,439
+at this point we now know the view
+object
+
+264
+00:17:20,439 --> 00:17:24,699
+so where's your question aware just took
+a request object humidor text her quest
+
+265
+00:17:24,699 --> 00:17:27,880
+and if you object in all honesty
+
+266
+00:17:27,880 --> 00:17:32,190
+I don't I never actually build one
+myself
+
+267
+00:17:32,190 --> 00:17:35,590
+in searching through the Jager docs
+examples I found one get one good case
+
+268
+00:17:35,590 --> 00:17:36,240
+for them
+
+269
+00:17:36,240 --> 00:17:40,510
+which is the way the jackal Django
+handle CSR but it's there
+
+270
+00:17:40,510 --> 00:17:44,190
+if you find yourself in that situation
+one your middle word to know something
+
+271
+00:17:44,190 --> 00:17:45,520
+about the view itself
+
+272
+00:17:45,520 --> 00:17:48,540
+you middleware is the place you do it
+
+273
+00:17:48,540 --> 00:17:52,280
+but the real point and the real meet
+their quest response like
+
+274
+00:17:52,280 --> 00:17:56,250
+and we'll do all your work is the view
+
+275
+00:17:56,250 --> 00:17:59,640
+views are where botch work your side
+
+276
+00:17:59,640 --> 00:18:03,230
+rendering system where you going to cost
+databases
+
+277
+00:18:03,230 --> 00:18:07,330
+but says when we talk with your
+resolution
+
+278
+00:18:07,330 --> 00:18:11,140
+we said that's harsh hella class
+champion mapped it high till you
+
+279
+00:18:11,140 --> 00:18:15,120
+and this is about the simplest possible
+view that we could dude
+
+280
+00:18:15,120 --> 00:18:18,780
+no magic on here just function takes
+request object
+
+281
+00:18:18,780 --> 00:18:23,110
+and returns top in this case the
+something she took your spot
+
+282
+00:18:23,110 --> 00:18:26,190
+which you just give it a string and will
+send back
+
+283
+00:18:26,190 --> 00:18:29,630
+heading love you back Stasko that's hot
+the only thing
+
+284
+00:18:29,630 --> 00:18:34,110
+jagger could respond with some other
+ones which you may find useful and
+
+285
+00:18:34,110 --> 00:18:38,910
+my you got your shit response.redirect
+which is afoot Rasen back its
+
+286
+00:18:38,910 --> 00:18:43,490
+reject somewhere else there's a
+difference apostle you wanna 301 or 302
+
+287
+00:18:43,490 --> 00:18:46,720
+as Jason response which is just coming
+up 1.7
+
+288
+00:18:46,720 --> 00:18:51,130
+which is designed for if you're dealing
+with Chase on it just takes a dictionary
+
+289
+00:18:51,130 --> 00:18:54,900
+will serialize things are properly
+summary hatter's its
+
+290
+00:18:54,900 --> 00:19:01,900
+is nothing you can do now but we'll see
+a couple lines process
+
+291
+00:19:02,160 --> 00:19:05,520
+and there's a skirmish response which is
+are much different
+
+292
+00:19:05,520 --> 00:19:09,280
+marked whereas all our other response
+types
+
+293
+00:19:09,280 --> 00:19:12,690
+couldn't ones I have mention take a full
+
+294
+00:19:12,690 --> 00:19:17,260
+string body thanks deal with streaming
+it should check your response text later
+
+295
+00:19:17,260 --> 00:19:20,299
+instance on for sponsoring haven't yet
+figured out what your
+
+296
+00:19:20,299 --> 00:19:24,260
+send you can enter also that want to get
+back up to the top
+
+297
+00:19:24,260 --> 00:19:28,260
+whiskey where that's way to keep calm
+here monitor
+
+298
+00:19:28,260 --> 00:19:31,650
+now on one hand this is cool because it
+means you can have a very large
+
+299
+00:19:31,650 --> 00:19:35,110
+longer response an hour memory
+
+300
+00:19:35,110 --> 00:19:40,270
+had also as you have a long and response
+an hour
+
+301
+00:19:40,270 --> 00:19:44,390
+so with cherished response it's there
+it's an uphill battle for you
+
+302
+00:19:44,390 --> 00:19:47,720
+it will break a few other middleware as
+per most those handle it well
+
+303
+00:19:47,720 --> 00:19:50,870
+but think about what you doing when you
+choose to use it is
+
+304
+00:19:50,870 --> 00:19:55,130
+future cases for but a lot of criticism
+when you think you want to use this
+
+305
+00:19:55,130 --> 00:19:57,880
+where you should really be doing is
+looking what're actually try deliverance
+
+306
+00:19:57,880 --> 00:19:58,780
+well
+
+307
+00:19:58,780 --> 00:20:02,180
+is this better suited to put the
+long-running task tears
+
+308
+00:20:02,180 --> 00:20:07,040
+this better suited to run of lining up
+push notification
+
+309
+00:20:07,040 --> 00:20:10,590
+but if it's not you've got the auction
+but for now
+
+310
+00:20:10,590 --> 00:20:15,120
+mystic aged spot because at some point
+gets the point
+
+311
+00:20:15,120 --> 00:20:18,590
+now have called this a function a few
+times cuz it is just function
+
+312
+00:20:18,590 --> 00:20:22,230
+but that's not the only way right your
+other option
+
+313
+00:20:22,230 --> 00:20:25,340
+something that looks like this and it's
+called a class-based few
+
+314
+00:20:25,340 --> 00:20:29,460
+because it's a few based cost like
+
+315
+00:20:29,460 --> 00:20:33,800
+the defining features that a subclass
+checkered accused of genera
+
+316
+00:20:33,800 --> 00:20:36,810
+dot view and as a function they're
+called get
+
+317
+00:20:36,810 --> 00:20:40,390
+as one compost times the per child work
+
+318
+00:20:40,390 --> 00:20:43,810
+to use function base used to use hospice
+used
+
+319
+00:20:43,810 --> 00:20:46,840
+if there's 10 people under got fifteen
+different answers
+
+320
+00:20:46,840 --> 00:20:50,440
+there is no one right one depends where
+you're at track you
+
+321
+00:20:50,440 --> 00:20:53,520
+I like hospice use but I'm gonna stick
+with transfer s this
+
+322
+00:20:53,520 --> 00:20:57,550
+there some particular so
+
+323
+00:20:57,550 --> 00:21:00,820
+at the I mentioned in those last use
+
+324
+00:21:00,820 --> 00:21:04,030
+that how with the views there are
+actually
+
+325
+00:21:04,030 --> 00:21:08,280
+their simplest form but they're not
+funny as they were going mixing
+
+326
+00:21:08,280 --> 00:21:11,560
+HTML i thought id share same function
+blocks which
+
+327
+00:21:11,560 --> 00:21:15,360
+by your lodge do that you're gonna have
+a bad time Chester scale up to start
+
+328
+00:21:15,360 --> 00:21:16,580
+work designers
+
+329
+00:21:16,580 --> 00:21:21,210
+what you try to do anything shall be on
+basic stricter pollution
+
+330
+00:21:21,210 --> 00:21:25,210
+so what we've done here is set up using
+a template
+
+331
+00:21:25,210 --> 00:21:28,520
+and so on dollar does you can't see
+what's on high until
+
+332
+00:21:28,520 --> 00:21:32,650
+now it just sets a picture contact in
+this case
+
+333
+00:21:32,650 --> 00:21:35,960
+addiction with key city in the answer
+Montreal
+
+334
+00:21:35,960 --> 00:21:39,310
+and then passes that context down into a
+function called render
+
+335
+00:21:39,310 --> 00:21:43,020
+which would give in template as well
+using check templating language
+
+336
+00:21:43,020 --> 00:21:47,270
+and echoes the render function will take
+that template function substitute city
+
+337
+00:21:47,270 --> 00:21:49,100
+in Montreal in to replace
+
+338
+00:21:49,100 --> 00:21:53,340
+action up in Tunisia response object
+term
+
+339
+00:21:53,340 --> 00:21:56,890
+so did this works and this is a nice
+simple way to do it
+
+340
+00:21:56,890 --> 00:22:01,320
+I am a lot so I wanna get a faster and
+now I i the second thing to my check
+
+341
+00:22:01,320 --> 00:22:04,650
+template I've said I also want to say
+hello to city from
+
+342
+00:22:04,650 --> 00:22:09,630
+your request I wanna do that on every
+page on my site
+
+343
+00:22:09,630 --> 00:22:13,800
+so i cud both reach my views ID in that
+second minor
+
+344
+00:22:13,800 --> 00:22:17,190
+by city people's goip dot something or
+some other vendor
+
+345
+00:22:17,190 --> 00:22:20,660
+or after what's your quest back at night
+
+346
+00:22:20,660 --> 00:22:24,400
+about that Cinco de ver my side and I
+have to worry about it
+
+347
+00:22:24,400 --> 00:22:27,870
+means that I've got also its repetition
+or don't need it
+
+348
+00:22:27,870 --> 00:22:31,960
+but I really like something in the same
+with a middleware works on all requests
+
+349
+00:22:31,960 --> 00:22:35,600
+I'd like something that works I'll
+render of which does best
+
+350
+00:22:35,600 --> 00:22:39,810
+that's called come pick up it a contacts
+processor
+
+351
+00:22:39,810 --> 00:22:43,810
+so temper Costco complex processes very
+simple
+
+352
+00:22:43,810 --> 00:22:48,580
+they really just look like function the
+tix request object returned Dec
+
+353
+00:22:48,580 --> 00:22:52,090
+but the interesting thing why they're
+useful is that they're on
+
+354
+00:22:52,090 --> 00:22:55,230
+all across are on all grander of
+
+355
+00:22:55,230 --> 00:22:59,280
+once about it topic co-processor sorry
+public context processor
+
+356
+00:22:59,280 --> 00:23:03,720
+list except so if we've gone mad
+
+357
+00:23:03,720 --> 00:23:07,560
+that we can go back are a few and
+template will just look like this
+
+358
+00:23:07,560 --> 00:23:13,230
+in the view itself all we have to worry
+about setting the city
+
+359
+00:23:13,230 --> 00:23:16,490
+because we know that in the context
+processor
+
+360
+00:23:16,490 --> 00:23:20,980
+later in the pipeline it will handle for
+know what your question
+
+361
+00:23:20,980 --> 00:23:24,750
+question now at this point
+
+362
+00:23:24,750 --> 00:23:28,190
+wanted one last pass before keep going
+go back up
+
+363
+00:23:28,190 --> 00:23:31,220
+talk with howard got afford that please
+look at
+
+364
+00:23:31,220 --> 00:23:34,700
+that picture this place is called short
+is it
+
+365
+00:23:34,700 --> 00:23:38,610
+20 minutes away to first time to
+Montreal in been here before
+
+366
+00:23:38,610 --> 00:23:41,920
+please go here I will be a cultural
+experience for you offered
+
+367
+00:23:41,920 --> 00:23:45,120
+sandwich order a large plate medium shot
+
+368
+00:23:45,120 --> 00:23:52,120
+pic of life fries black cherry gonna be
+tired afterwards but you'll appreciate
+
+369
+00:23:54,590 --> 00:23:58,120
+so with with that where I hope you all
+will go for lunch
+
+370
+00:23:58,120 --> 00:24:01,270
+I'll let's step back and look at how we
+got where we are
+
+371
+00:24:01,270 --> 00:24:04,550
+and we started with the choir we went
+across the higher again to
+
+372
+00:24:04,550 --> 00:24:08,330
+the Internet to the web server which
+communicate with genuine Python
+
+373
+00:24:08,330 --> 00:24:12,110
+3 whiskey where with an quest where
+
+374
+00:24:12,110 --> 00:24:15,220
+way URL resolution
+
+375
+00:24:15,220 --> 00:24:19,120
+dealt with the view middleware and then
+dealt with the view itself view itself
+
+376
+00:24:19,120 --> 00:24:22,510
+django template template in and then
+Welsh
+
+377
+00:24:22,510 --> 00:24:26,380
+the contact process a complete couple
+and at this point
+
+378
+00:24:26,380 --> 00:24:31,690
+when our last ep and bass family which
+is there a spot
+
+379
+00:24:31,690 --> 00:24:35,880
+on the way in at the beginning a
+middleware a similar was interesting
+
+380
+00:24:35,880 --> 00:24:39,200
+and just filler in particular
+interesting because it had
+
+381
+00:24:39,200 --> 00:24:42,980
+takes action both on the way in and on
+the way
+
+382
+00:24:42,980 --> 00:24:48,080
+by in an hour how some insert down now
+state picture
+
+383
+00:24:48,080 --> 00:24:52,270
+on the way an use your question or
+middleware reason I would have no way
+
+384
+00:24:52,270 --> 00:24:52,690
+writing
+
+385
+00:24:52,690 --> 00:24:57,420
+mention never used before but on the way
+back spot
+
+386
+00:24:57,420 --> 00:25:01,180
+and if you look at the structure it
+looks suspicious and later quest where
+
+387
+00:25:01,180 --> 00:25:04,680
+which is again hope middleware follow
+pattern
+
+388
+00:25:04,680 --> 00:25:07,830
+they're lightweight exxon some first
+
+389
+00:25:07,830 --> 00:25:12,390
+response man hours called with a fully
+formed response object so at this point
+
+390
+00:25:12,390 --> 00:25:16,680
+no return which missing Aug 21 harkin
+
+391
+00:25:16,680 --> 00:25:20,030
+but it's really useful for performance
+really stock so
+
+392
+00:25:20,030 --> 00:25:24,060
+one other quality me response but always
+comes built in majengo
+
+393
+00:25:24,060 --> 00:25:27,090
+it's called national capital where what
+that does is
+
+394
+00:25:27,090 --> 00:25:30,470
+goes textures of the comes back out at
+the content like
+
+395
+00:25:30,470 --> 00:25:33,690
+onto it and looks hot texarkana their
+past
+
+396
+00:25:33,690 --> 00:25:37,670
+if your browser has cash populous ill
+just go Irish the whole cock
+
+397
+00:25:37,670 --> 00:25:42,920
+the whole body her response replace it
+with an oil change response
+
+398
+00:25:42,920 --> 00:25:46,830
+so it it's useful for things like that
+it's also useful for cock in session
+
+399
+00:25:46,830 --> 00:25:47,300
+management
+
+400
+00:25:47,300 --> 00:25:51,770
+if you wanna tak after field said your
+cock in her pressure token each time
+
+401
+00:25:51,770 --> 00:25:54,930
+can do it there too now
+
+402
+00:25:54,930 --> 00:25:58,940
+the only thing actually defines this as
+middleware is it being object with
+
+403
+00:25:58,940 --> 00:26:00,170
+process response
+
+404
+00:26:00,170 --> 00:26:03,350
+method so its original question it could
+be combined
+
+405
+00:26:03,350 --> 00:26:07,200
+with the other the answer is yes you can
+go on package up
+
+406
+00:26:07,200 --> 00:26:11,170
+are you different middleware hoax into
+one object in this case were in a cock
+
+407
+00:26:11,170 --> 00:26:14,220
+or so it works both as a request our
+
+408
+00:26:14,220 --> 00:26:18,090
+because it's got that process request it
+also works as a responsible
+
+409
+00:26:18,090 --> 00:26:21,770
+works got that process response or and
+this is really handy
+
+410
+00:26:21,770 --> 00:26:25,820
+except you gotta remember one thing
+which is
+
+411
+00:26:25,820 --> 00:26:30,090
+middleware lashed at the beginning I i
+said its order but this is really where
+
+412
+00:26:30,090 --> 00:26:31,510
+that quite kits how
+
+413
+00:26:31,510 --> 00:26:34,780
+on the way so when we're dealing with
+her quest
+
+414
+00:26:34,780 --> 00:26:38,280
+where's humidors process to this list
+talk
+
+415
+00:26:38,280 --> 00:26:43,460
+so first we com where and see a ser our
+hike
+
+416
+00:26:43,460 --> 00:26:46,780
+on the way back swear to God if you got
+from bottom
+
+417
+00:26:46,780 --> 00:26:50,080
+talk so first a Commodore and sister
+
+418
+00:26:50,080 --> 00:26:53,740
+few cock generally this will do the
+right thing
+
+419
+00:26:53,740 --> 00:26:57,200
+but not all it's important when you're
+on middleware isn't
+
+420
+00:26:57,200 --> 00:27:00,620
+have to work together now if you packed
+
+421
+00:27:00,620 --> 00:27:04,830
+one object limit 1 spot order whereas
+action separately
+
+422
+00:27:04,830 --> 00:27:07,830
+you can exactly
+
+423
+00:27:07,830 --> 00:27:11,710
+so the last ep on our five-and-a-half
+
+424
+00:27:11,710 --> 00:27:15,890
+step process is our friend except
+
+425
+00:27:15,890 --> 00:27:20,850
+and it at the bottom its happen because
+it's a little different
+
+426
+00:27:20,850 --> 00:27:24,190
+it is whereas all our other middleware
+fire
+
+427
+00:27:24,190 --> 00:27:27,710
+section middleware is designed on the
+fire
+
+428
+00:27:27,710 --> 00:27:30,990
+really if you've done some yourself
+
+429
+00:27:30,990 --> 00:27:34,450
+so you only get exceptional work if you
+you function itself
+
+430
+00:27:34,450 --> 00:27:39,430
+calls exception generally what you can
+use except software for
+
+431
+00:27:39,430 --> 00:27:44,030
+distracting is going and 600 bucks
+system
+
+432
+00:27:44,030 --> 00:27:47,360
+if you use century which has downstairs
+
+433
+00:27:47,360 --> 00:27:51,310
+they how can there to go Cafferty
+exceptions the concert last summer
+
+434
+00:27:51,310 --> 00:27:54,460
+to their service hi it only right
+
+435
+00:27:54,460 --> 00:27:57,880
+fires on tacos and hit like the others
+returns
+
+436
+00:27:57,880 --> 00:28:02,030
+non-urgent scoff but in this case you
+almost always water
+
+437
+00:28:02,030 --> 00:28:06,310
+spot that's when go into some handles it
+redirect user back
+
+438
+00:28:06,310 --> 00:28:09,930
+sorry page if you don't if you get to
+the middleware check
+
+439
+00:28:09,930 --> 00:28:13,110
+just return on for everyone just kinda
+check myspace
+
+440
+00:28:13,110 --> 00:28:16,740
+higher much mayor or may not
+
+441
+00:28:16,740 --> 00:28:20,020
+which one ok so
+
+442
+00:28:20,020 --> 00:28:23,680
+at this point were three we've gone
+
+443
+00:28:23,680 --> 00:28:27,660
+come through whiskey we've gone down
+we've gone back up
+
+444
+00:28:27,660 --> 00:28:32,020
+we've called the response function the
+response function has returned effect
+
+445
+00:28:32,020 --> 00:28:36,090
+nothing terrible text
+
+446
+00:28:36,090 --> 00:28:39,490
+with costar response which whiskey
+standard returning
+
+447
+00:28:39,490 --> 00:28:43,140
+and the stakes a boxer sir
+
+448
+00:28:43,140 --> 00:28:47,050
+at the beginning we started with this
+first and I was a crow quest
+
+449
+00:28:47,050 --> 00:28:50,230
+to the host Daniel Agger dot com saying
+I want
+
+450
+00:28:50,230 --> 00:28:55,200
+get on slash hella tale and I can accept
+
+451
+00:28:55,200 --> 00:28:58,320
+and then what we've given act is a two
+hundred okay
+
+452
+00:28:58,320 --> 00:29:02,540
+which came from jericho said being
+served by Amtrak's webster
+
+453
+00:29:02,540 --> 00:29:05,710
+said Scott content-type: Texas now
+
+454
+00:29:05,710 --> 00:29:09,590
+which is great because we accept he said
+except I
+
+455
+00:29:09,590 --> 00:29:12,970
+it's got a content-length 33 which was
+provided by check
+
+456
+00:29:12,970 --> 00:29:18,090
+response or act Qatar's on and it's got
+to first-line
+
+457
+00:29:18,090 --> 00:29:21,930
+exposure host template in buyer
+
+458
+00:29:21,930 --> 00:29:25,310
+function a sack lunch says hunter
+because that's where
+
+459
+00:29:25,310 --> 00:29:28,840
+West and mouse to click
+
+460
+00:29:28,840 --> 00:29:32,260
+now this view itself is not there's not
+a lot to it
+
+461
+00:29:32,260 --> 00:29:35,940
+says too much text but that itself is
+where you do interest
+
+462
+00:29:35,940 --> 00:29:39,710
+that's where you go you call it web
+services collar logic
+
+463
+00:29:39,710 --> 00:29:43,260
+use the stuff underdog engines back
+house you for this week
+
+464
+00:29:43,260 --> 00:29:47,690
+talk but now no matter how hard tic tac
+toe
+
+465
+00:29:47,690 --> 00:29:50,880
+this is the basic structure your quest
+the star
+
+466
+00:29:50,880 --> 00:29:53,980
+higher to go to the web server hey
+webster
+
+467
+00:29:53,980 --> 00:29:57,860
+up your choice which'll committees
+whiskey to get tax check 0
+
+468
+00:29:57,860 --> 00:30:01,170
+once earned Django you got your question
+aware
+
+469
+00:30:01,170 --> 00:30:04,990
+to your earlier solution for he was
+gonna handle it not your view middleware
+
+470
+00:30:04,990 --> 00:30:06,010
+which probably won't use
+
+471
+00:30:06,010 --> 00:30:09,980
+I'd with your view function actually
+does stuff
+
+472
+00:30:09,980 --> 00:30:13,309
+on the way back at this time done
+nothing wrong back to respond
+
+473
+00:30:13,309 --> 00:30:16,980
+were also contact headers gone through
+risky gamble
+
+474
+00:30:16,980 --> 00:30:23,980
+act web server will send a fax to climb
+tutorials
+
+475
+00:30:32,490 --> 00:30:39,490
+are any questions there's Mike from
+there
+
+476
+00:30:41,690 --> 00:30:48,690
+thank you
+
+477
+00:31:05,480 --> 00:31:05,730
+here
+

@@ -1,0 +1,2385 @@
+1
+00:00:00,799 --> 00:00:04,420
+well over the line thank you for
+attending
+
+2
+00:00:04,420 --> 00:00:07,620
+I am I would like to present our next
+speaker
+
+3
+00:00:07,620 --> 00:00:10,650
+who is Jeff skank who is going to be
+talking about
+
+4
+00:00:10,650 --> 00:00:14,580
+straightening out angler JS with Python
+be round of applause place
+
+5
+00:00:14,580 --> 00:00:21,270
+hello
+
+6
+00:00:21,270 --> 00:00:24,650
+thanks all for being here on I'm
+
+7
+00:00:24,650 --> 00:00:28,740
+really excited to be appearing from you
+all on I'm going to be walking you
+
+8
+00:00:28,740 --> 00:00:29,519
+through
+
+9
+00:00:29,519 --> 00:00:32,829
+I really basic and
+
+10
+00:00:32,829 --> 00:00:37,290
+kind of starter implementation of what
+you would do to take angular JS
+
+11
+00:00:37,290 --> 00:00:40,840
+and integrate it with a python back and
+on
+
+12
+00:00:40,840 --> 00:00:44,090
+is going to be like I said fairly
+simplistic
+
+13
+00:00:44,090 --> 00:00:47,090
+so if you've already done and your JS
+
+14
+00:00:47,090 --> 00:00:50,120
+on Python I could probably not learn
+anything
+
+15
+00:00:50,120 --> 00:00:53,539
+and if you look at a person who never
+wants to write a line of
+
+16
+00:00:53,539 --> 00:00:57,070
+a javascript and your life your also
+probably in the wrong place
+
+17
+00:00:57,070 --> 00:01:00,489
+I'm cell I
+
+18
+00:01:00,489 --> 00:01:03,789
+aisles or warn you
+
+19
+00:01:03,789 --> 00:01:08,049
+just briefly I'm not a pro at this my
+only experience is
+
+20
+00:01:08,049 --> 00:01:12,500
+having done in production for about a
+year so we learn things the hard way and
+
+21
+00:01:12,500 --> 00:01:14,500
+this is kinda what I want to share with
+you today
+
+22
+00:01:14,500 --> 00:01:19,560
+so at thirty seconds on angular and
+
+23
+00:01:19,560 --> 00:01:23,140
+what is this thing in case you don't
+know I much about it yet
+
+24
+00:01:23,140 --> 00:01:26,159
+so it's a javascript Mb
+
+25
+00:01:26,159 --> 00:01:33,030
+star framework om it's a little bit like
+any old MVC framework you now except
+
+26
+00:01:33,030 --> 00:01:36,409
+and a little different also I'm
+
+27
+00:01:36,409 --> 00:01:39,610
+it's it's basically for
+
+28
+00:01:39,610 --> 00:01:44,570
+you know if you got a lotta stuff going
+on in the front end of your application
+
+29
+00:01:44,570 --> 00:01:49,420
+I you don't wanna hook it all up with J
+cleary and
+
+30
+00:01:49,420 --> 00:01:53,579
+spaghetti code dealing with on that on
+angular or
+
+31
+00:01:53,579 --> 00:01:57,899
+really any of the other front and
+frameworks I amber and backbone
+
+32
+00:01:57,899 --> 00:02:01,810
+are gonna be your best friend there om I
+like angular
+
+33
+00:02:01,810 --> 00:02:06,630
+I it's interesting I am it actually
+
+34
+00:02:06,630 --> 00:02:10,789
+as fired according to Google Trends
+which as we all know is a very
+
+35
+00:02:10,789 --> 00:02:13,980
+reliable source India overtook backbone
+
+36
+00:02:13,980 --> 00:02:17,580
+are quite some time ago higher a year
+and a half ago I believe
+
+37
+00:02:17,580 --> 00:02:21,370
+I'm which was surprising to me cuz I
+always heard a backbone as Canada
+
+38
+00:02:21,370 --> 00:02:22,459
+granddaddy of them all
+
+39
+00:02:22,459 --> 00:02:25,760
+on so anyway what is angular
+
+40
+00:02:25,760 --> 00:02:29,780
+I its claim to fame what makes a really
+special I think
+
+41
+00:02:29,780 --> 00:02:34,390
+is it extends the H&R Block have you
+learnt us what that means is
+
+42
+00:02:34,390 --> 00:02:37,510
+you know you're writing HTML by
+
+43
+00:02:37,510 --> 00:02:41,280
+you get all these extra things the you
+can play with and declared early write a
+
+44
+00:02:41,280 --> 00:02:43,050
+bunch of HTML stuff
+
+45
+00:02:43,050 --> 00:02:47,930
+that angular then I turns into this
+beautiful functioning
+
+46
+00:02:47,930 --> 00:02:51,660
+ap om through the magic up to a data
+binding
+
+47
+00:02:51,660 --> 00:02:56,010
+are so you know you change in value over
+here and I automatically update original
+
+48
+00:02:56,010 --> 00:02:56,599
+the match
+
+49
+00:02:56,599 --> 00:03:00,000
+on this is all really cool I really fun
+to see you
+
+50
+00:03:00,000 --> 00:03:03,819
+really good too play with I but we're
+not gonna do that here because
+
+51
+00:03:03,819 --> 00:03:08,310
+is a spike on and if you wanna go to
+JavaScript kono whatever they call their
+
+52
+00:03:08,310 --> 00:03:08,709
+thing
+
+53
+00:03:08,709 --> 00:03:12,019
+on you can do that on your own time
+
+54
+00:03:12,019 --> 00:03:15,769
+I'm like I said it's getting kinda
+popular
+
+55
+00:03:15,769 --> 00:03:19,780
+I'm and I do highly recommended there
+still some rough edges it's still a
+
+56
+00:03:19,780 --> 00:03:20,879
+fairly young
+
+57
+00:03:20,879 --> 00:03:24,209
+I have framework but its
+
+58
+00:03:24,209 --> 00:03:28,900
+it's really good at what it does on an
+NBL fair's fair
+
+59
+00:03:28,900 --> 00:03:32,560
+so if you've never heard a python before
+I am
+
+60
+00:03:32,560 --> 00:03:36,970
+it's pretty great um it also has a
+number I love
+
+61
+00:03:36,970 --> 00:03:40,799
+MVC ish or MB star frameworks I am
+
+62
+00:03:40,799 --> 00:03:44,209
+and at least one of them is actually
+pretty good
+
+63
+00:03:44,209 --> 00:03:48,950
+I am not here's tony fights but at work
+we use Django
+
+64
+00:03:48,950 --> 00:03:52,450
+and so I love the examples I menus are
+all from
+
+65
+00:03:52,450 --> 00:03:57,269
+Django I but the concept should be
+fairly easily translated
+
+66
+00:03:57,269 --> 00:04:00,950
+comment if you want to yell at me about
+came in flask at the end you're welcome
+
+67
+00:04:00,950 --> 00:04:01,450
+to do that
+
+68
+00:04:01,450 --> 00:04:08,330
+I'm yeah so the point is all these
+things are kinda MB star frameworks
+
+69
+00:04:08,330 --> 00:04:11,670
+on angular Jaz on the front and and then
+
+70
+00:04:11,670 --> 00:04:15,489
+Django or pyramid of Lascaux whatever
+you're doing on the back and
+
+71
+00:04:15,489 --> 00:04:20,030
+cell step by step what are we gonna do
+
+72
+00:04:20,030 --> 00:04:24,060
+first off we need to I have our Python
+back and
+
+73
+00:04:24,060 --> 00:04:27,979
+serve up angular now for starters
+
+74
+00:04:27,979 --> 00:04:32,370
+and that's just a base HTML page no big
+deal
+
+75
+00:04:32,370 --> 00:04:35,820
+its normal HTML like before
+
+76
+00:04:35,820 --> 00:04:39,100
+JavaScript even existed on
+
+77
+00:04:39,100 --> 00:04:42,370
+and usually all service on on the
+
+78
+00:04:42,370 --> 00:04:46,370
+the root URL depending on how you wanna
+set it up but if painkillers going to be
+
+79
+00:04:46,370 --> 00:04:50,449
+you're kinda end all be all application
+I'm you're actually gonna wanna set it
+
+80
+00:04:50,449 --> 00:04:51,370
+up so they're
+
+81
+00:04:51,370 --> 00:04:57,639
+all the URL's om all serve angular an
+annular handles all of your routing
+
+82
+00:04:57,639 --> 00:05:00,850
+I'm so what does that look like on
+
+83
+00:05:00,850 --> 00:05:06,400
+this is a very basic angular ap about as
+basic as you could possibly make one
+
+84
+00:05:06,400 --> 00:05:10,310
+and I made a little bit a hand waving
+around angular again this is I con-
+
+85
+00:05:10,310 --> 00:05:15,330
+not not JS whatever on so there is some
+cool stuff to be done
+
+86
+00:05:15,330 --> 00:05:18,560
+had to be talked about in angular world
+and we're not gonna touch on
+
+87
+00:05:18,560 --> 00:05:22,139
+om but happy talk about after World Cup
+on the inside
+
+88
+00:05:22,139 --> 00:05:25,720
+I'm so what are we doing here first of
+
+89
+00:05:25,720 --> 00:05:29,169
+I'm we're loading up angular right so
+
+90
+00:05:29,169 --> 00:05:33,669
+we've got that angular I library there
+and then your application code which
+
+91
+00:05:33,669 --> 00:05:35,789
+again we're not really gonna go into
+
+92
+00:05:35,789 --> 00:05:39,610
+I'm you've got to tell angular way here
+
+93
+00:05:39,610 --> 00:05:43,479
+happy is with this Angie ap command
+
+94
+00:05:43,479 --> 00:05:47,139
+I instantiate a controller and then
+here's the magic that we talked about
+
+95
+00:05:47,139 --> 00:05:49,030
+with the two-way data binding
+
+96
+00:05:49,030 --> 00:05:52,669
+arms you can see this looks more or less
+just like a regular HTML
+
+97
+00:05:52,669 --> 00:05:56,690
+on but it's got some special attributes
+and somewhere curly races and stuff
+
+98
+00:05:56,690 --> 00:06:02,120
+on so the energy model attributes is
+what sets up that two-way data binding
+
+99
+00:06:02,120 --> 00:06:05,380
+on the double curly braces are
+
+100
+00:06:05,380 --> 00:06:08,819
+where you're putting that into your
+template and so you know
+
+101
+00:06:08,819 --> 00:06:12,940
+the the really called mr. that you can
+go see on a dealer's home pages
+
+102
+00:06:12,940 --> 00:06:16,990
+you type into the implant ants
+automatically updates in
+
+103
+00:06:16,990 --> 00:06:20,169
+in that that paragraph to there and
+
+104
+00:06:20,169 --> 00:06:24,259
+it's magic and it's wonderful I'm
+
+105
+00:06:24,259 --> 00:06:28,490
+so then all that's left is nothing
+really special or unique your you wired
+
+106
+00:06:28,490 --> 00:06:29,530
+up in your
+
+107
+00:06:29,530 --> 00:06:32,660
+URL patterns again as a jailer
+
+108
+00:06:32,660 --> 00:06:35,660
+Django bed you know you don't want to
+
+109
+00:06:35,660 --> 00:06:38,819
+have it serve essentially all URL's
+
+110
+00:06:38,819 --> 00:06:42,430
+and then allow that angular ap
+
+111
+00:06:42,430 --> 00:06:45,509
+to manage all the URL routing which it
+does
+
+112
+00:06:45,509 --> 00:06:49,139
+kind of on its own
+
+113
+00:06:49,139 --> 00:06:52,669
+so what else do we need to serve up what
+else do we need to lap
+
+114
+00:06:52,669 --> 00:06:57,430
+at template partials and this is what
+angular does so that you don't have to
+
+115
+00:06:57,430 --> 00:06:58,300
+send
+
+116
+00:06:58,300 --> 00:07:02,220
+your entire monolithic crazy ap all down
+
+117
+00:07:02,220 --> 00:07:05,380
+to abhor browser all in one go
+
+118
+00:07:05,380 --> 00:07:08,590
+on it has what are called template
+partials missus
+
+119
+00:07:08,590 --> 00:07:12,389
+and what it sounds like it's little
+pieces a template the you can load into
+
+120
+00:07:12,389 --> 00:07:16,210
+and the angular ap as you're going from
+page to page and it needs that but have
+
+121
+00:07:16,210 --> 00:07:17,270
+tempered
+
+122
+00:07:17,270 --> 00:07:22,210
+on but you need to serve these up now if
+you can get away with it it's perfectly
+
+123
+00:07:22,210 --> 00:07:25,199
+fine to just serve those up as static
+files
+
+124
+00:07:25,199 --> 00:07:29,720
+on that works well it's super easy and
+there are going to be cases are least I
+
+125
+00:07:29,720 --> 00:07:30,949
+found cases
+
+126
+00:07:30,949 --> 00:07:34,030
+where you need sort of a two-phase and
+
+127
+00:07:34,030 --> 00:07:39,690
+rendering where you need Django or your
+back-end server to render some things in
+
+128
+00:07:39,690 --> 00:07:41,099
+the template
+
+129
+00:07:41,099 --> 00:07:45,090
+om you know maybe a special I D you're a
+token or
+
+130
+00:07:45,090 --> 00:07:49,349
+or something and then yuan angular to
+get that damn plan
+
+131
+00:07:49,349 --> 00:07:53,289
+after its been rendered on the server
+side are meant to do that is a little
+
+132
+00:07:53,289 --> 00:07:55,690
+bit more work
+
+133
+00:07:55,690 --> 00:07:59,550
+am so here's what we've got you need at
+another URL
+
+134
+00:07:59,550 --> 00:08:03,430
+just byron up to serve more static I had
+to render out some templates nothing
+
+135
+00:08:03,430 --> 00:08:04,599
+special
+
+136
+00:08:04,599 --> 00:08:09,280
+I'm and then the machinery to actually
+render the template
+
+137
+00:08:09,280 --> 00:08:12,970
+I'm see you can construct a template
+name for example
+
+138
+00:08:12,970 --> 00:08:17,560
+on do your special specialness make
+whatever craziness you need to make in
+
+139
+00:08:17,560 --> 00:08:18,509
+your app
+
+140
+00:08:18,509 --> 00:08:22,840
+om and then render the output arm and
+then you've got these template partial
+
+141
+00:08:22,840 --> 00:08:23,699
+that you can load up
+
+142
+00:08:23,699 --> 00:08:26,940
+everywhere in your anger lap
+
+143
+00:08:26,940 --> 00:08:30,949
+what else do we need to do I'm so we
+need to
+
+144
+00:08:30,949 --> 00:08:34,060
+communicate with our server and this is
+really the meet up what we're doing
+
+145
+00:08:34,060 --> 00:08:34,719
+right
+
+146
+00:08:34,719 --> 00:08:39,950
+on all the data changes all the data
+that we're pulling into the app
+
+147
+00:08:39,950 --> 00:08:43,130
+on we need to communicate with the
+back-end server om
+
+148
+00:08:43,130 --> 00:08:46,709
+and the best way to do this is a RESTful
+API
+
+149
+00:08:46,709 --> 00:08:51,570
+on and it's a big enough deal that it
+gets its own section
+
+150
+00:08:51,570 --> 00:08:55,940
+so step 2 I'm you're gonna build an
+application API
+
+151
+00:08:55,940 --> 00:09:01,760
+on and i actually on like to think that
+this as opposed to a developer API
+
+152
+00:09:01,760 --> 00:09:05,990
+I made these Terms up but they're useful
+to me I'm an application API
+
+153
+00:09:05,990 --> 00:09:11,570
+is one where your application is the
+primary user and developer API is one
+
+154
+00:09:11,570 --> 00:09:12,170
+where
+
+155
+00:09:12,170 --> 00:09:16,040
+you one other developers to build things
+that Internet interact with your
+
+156
+00:09:16,040 --> 00:09:19,399
+code in with your data om obviously
+
+157
+00:09:19,399 --> 00:09:22,620
+you could have one API list serves both
+of those functions that's totally
+
+158
+00:09:22,620 --> 00:09:25,450
+possible totally doable in some cases
+
+159
+00:09:25,450 --> 00:09:30,080
+probably a good idea I'm but there are
+enough separate concerns that I like to
+
+160
+00:09:30,080 --> 00:09:31,740
+think about them separately
+
+161
+00:09:31,740 --> 00:09:34,860
+on and what we're talking about for our
+purposes today is definitely the
+
+162
+00:09:34,860 --> 00:09:36,339
+application API
+
+163
+00:09:36,339 --> 00:09:41,180
+almonds will talk about some the special
+considerations there
+
+164
+00:09:41,180 --> 00:09:44,990
+com the first of so we need to build a
+clean
+
+165
+00:09:44,990 --> 00:09:48,330
+restful chase on API I'm
+
+166
+00:09:48,330 --> 00:09:52,959
+depending on your free market choice and
+their loss a tool to help you do this
+
+167
+00:09:52,959 --> 00:09:56,360
+I in Django the jingle dress Primark is
+pretty solid
+
+168
+00:09:56,360 --> 00:10:01,700
+om cornice and flask a restful there's
+there's tools for whatever
+
+169
+00:10:01,700 --> 00:10:05,750
+and whatever your building om and mostly
+they're pretty good
+
+170
+00:10:05,750 --> 00:10:08,880
+although and I think honestly
+
+171
+00:10:08,880 --> 00:10:13,899
+for and for application API's they could
+use a little bit more
+
+172
+00:10:13,899 --> 00:10:16,940
+functionality there a little bit weak in
+certain areas in
+
+173
+00:10:16,940 --> 00:10:20,560
+and I can talk about that and I
+hopefully
+
+174
+00:10:20,560 --> 00:10:24,440
+we can contributes to new features back
+to them at some point
+
+175
+00:10:24,440 --> 00:10:27,480
+arm and then on the JavaScript side II
+
+176
+00:10:27,480 --> 00:10:31,490
+you've got at all call rest angular
+which also I feel I could use a little
+
+177
+00:10:31,490 --> 00:10:32,550
+work but
+
+178
+00:10:32,550 --> 00:10:35,700
+is still helpful and that helps you
+integrate
+
+179
+00:10:35,700 --> 00:10:40,149
+with om a REST API on your back and
+
+180
+00:10:40,149 --> 00:10:44,360
+om and so let's take a look at this
+
+181
+00:10:44,360 --> 00:10:47,630
+if all you want is a simple clean API
+
+182
+00:10:47,630 --> 00:10:50,959
+this is all you have to do
+
+183
+00:10:50,959 --> 00:10:55,630
+I'm sea star by subclassing model you
+set which is this thing in NJ no arrests
+
+184
+00:10:55,630 --> 00:10:56,980
+framework
+
+185
+00:10:56,980 --> 00:11:01,570
+and tell which model do and its
+
+186
+00:11:01,570 --> 00:11:06,959
+that's it on then you have to hook it up
+into your URL routing
+
+187
+00:11:06,959 --> 00:11:10,110
+which is also fairly straightforward you
+
+188
+00:11:10,110 --> 00:11:13,980
+generate the routes for free with the
+pew said
+
+189
+00:11:13,980 --> 00:11:17,140
+tell them which matter to get into and
+
+190
+00:11:17,140 --> 00:11:20,350
+looking up into your URL's om
+
+191
+00:11:20,350 --> 00:11:23,940
+and this works great in cases where all
+you want to do
+
+192
+00:11:23,940 --> 00:11:26,980
+is the bare minimum simplest simplest
+thing
+
+193
+00:11:26,980 --> 00:11:33,260
+I am and the world will be a beautiful
+place if that was all you ever had to do
+
+194
+00:11:33,260 --> 00:11:37,589
+but unfortunately am there's other stuff
+
+195
+00:11:37,589 --> 00:11:41,430
+I'm so inevitably their issues were gone
+and we're gonna head
+
+196
+00:11:41,430 --> 00:11:45,120
+where I kinda the standard clean RESTful
+API
+
+197
+00:11:45,120 --> 00:11:49,519
+doesn't really cut it for our purposes
+on
+
+198
+00:11:49,519 --> 00:11:54,370
+so let's talk about those what is it
+sort of clean API
+
+199
+00:11:54,370 --> 00:11:58,329
+look like I'm
+
+200
+00:11:58,329 --> 00:12:02,829
+cell and first of we need to do some
+authentication
+
+201
+00:12:02,829 --> 00:12:07,480
+I'm and it's not the easiest thing to do
+right off the bat
+
+202
+00:12:07,480 --> 00:12:10,670
+I am mostly these
+
+203
+00:12:10,670 --> 00:12:14,339
+paid on back ends are very well
+accustomed to doing cookie based
+
+204
+00:12:14,339 --> 00:12:15,800
+authentication
+
+205
+00:12:15,800 --> 00:12:19,240
+om you know it's what you would get on
+the login page
+
+206
+00:12:19,240 --> 00:12:23,019
+I without a neurologist standard login
+it's the server
+
+207
+00:12:23,019 --> 00:12:26,139
+gives you a cookie makes you logged in
+
+208
+00:12:26,139 --> 00:12:29,880
+you're good to go I'm and that's what I
+ended up using
+
+209
+00:12:29,880 --> 00:12:33,760
+with angular I'm but they're also
+benefits to
+
+210
+00:12:33,760 --> 00:12:37,260
+I switching up and going to a token
+based authentication approach
+
+211
+00:12:37,260 --> 00:12:40,490
+numbers work on Jason Webb tokens om
+
+212
+00:12:40,490 --> 00:12:43,990
+which have some benefits over
+
+213
+00:12:43,990 --> 00:12:49,100
+I over the cookie based approach and
+across domains if you want an AP I dot
+
+214
+00:12:49,100 --> 00:12:52,420
+your side dot com om and their
+
+215
+00:12:52,420 --> 00:12:56,300
+day and every better with mobile devices
+there are some reasons why am I want to
+
+216
+00:12:56,300 --> 00:12:57,529
+do that
+
+217
+00:12:57,529 --> 00:13:00,790
+on 1 I'm gonna show you here is how to
+integrate with
+
+218
+00:13:00,790 --> 00:13:05,570
+that the cookie based authentication
+perch
+
+219
+00:13:05,570 --> 00:13:10,329
+so om please don't look at this
+
+220
+00:13:10,329 --> 00:13:14,459
+um its gross its terrible and it makes
+me pretty sad
+
+221
+00:13:14,459 --> 00:13:18,060
+I'm and this is just one small
+acceptable we did
+
+222
+00:13:18,060 --> 00:13:22,630
+I'm to get authentication working I'm so
+lucky through its
+
+223
+00:13:22,630 --> 00:13:25,839
+I'm the first thing you do is AJG arrest
+by mark
+
+224
+00:13:25,839 --> 00:13:30,079
+allows you to create these kinda custom
+post and points
+
+225
+00:13:30,079 --> 00:13:33,570
+arms you're posting to this login thing
+which is
+
+226
+00:13:33,570 --> 00:13:36,670
+I hung of the tale love your
+
+227
+00:13:36,670 --> 00:13:42,079
+real RESTful API comments already we've
+broken the restful thing going on here
+
+228
+00:13:42,079 --> 00:13:45,820
+I'm and then what we do is we actually
+authenticate
+
+229
+00:13:45,820 --> 00:13:49,310
+I by and by hand ourselves the user
+
+230
+00:13:49,310 --> 00:13:54,079
+log the man I'm and they were handling
+all the responses are self
+
+231
+00:13:54,079 --> 00:13:57,720
+on definitely in urging arrest by Mark
+provides some other machinery here
+
+232
+00:13:57,720 --> 00:13:59,199
+that's really nice
+
+233
+00:13:59,199 --> 00:14:02,959
+om you now serializing and that kinda
+stuff
+
+234
+00:14:02,959 --> 00:14:07,320
+I but it's still kinda gross to have to
+do this every time
+
+235
+00:14:07,320 --> 00:14:11,149
+I'm and again you know this is just for
+login
+
+236
+00:14:11,149 --> 00:14:16,430
+cuz you also wants presumably a way for
+users to sign up in the first place
+
+237
+00:14:16,430 --> 00:14:19,800
+and you also presumably want them to be
+a lockout
+
+238
+00:14:19,800 --> 00:14:24,529
+am and don't even get me started about
+the whole password reset flow its
+
+239
+00:14:24,529 --> 00:14:27,680
+messy and gross I'm
+
+240
+00:14:27,680 --> 00:14:31,750
+by if you want users you can I have to
+go through this tough
+
+241
+00:14:31,750 --> 00:14:34,779
+I'm so NeXT's and
+
+242
+00:14:34,779 --> 00:14:38,070
+so you are permissions now to I
+
+243
+00:14:38,070 --> 00:14:41,250
+you know if you're going to have users
+you're probably going to want them to
+
+244
+00:14:41,250 --> 00:14:42,620
+only see their stuff
+
+245
+00:14:42,620 --> 00:14:46,310
+as opposed to everyone's stuff on
+
+246
+00:14:46,310 --> 00:14:49,639
+and you know if with the traditional
+methods
+
+247
+00:14:49,639 --> 00:14:53,139
+and just processing everything on the
+back end this is fairly well understood
+
+248
+00:14:53,139 --> 00:14:54,060
+stuff
+
+249
+00:14:54,060 --> 00:14:58,519
+on you're probably used to doing it I'm
+when you're accessing everything through
+
+250
+00:14:58,519 --> 00:14:59,410
+the API
+
+251
+00:14:59,410 --> 00:15:02,870
+I am it's not a totally open API there a
+lot you
+
+252
+00:15:02,870 --> 00:15:06,490
+a lot of things you have to do is here
+on
+
+253
+00:15:06,490 --> 00:15:09,699
+you now it's not just is not just
+
+254
+00:15:09,699 --> 00:15:13,589
+you know 1 person being able to see only
+their things
+
+255
+00:15:13,589 --> 00:15:18,000
+it's a much more nuanced kinda ecosystem
+up stuff than that right because
+
+256
+00:15:18,000 --> 00:15:22,269
+you guy some things that you want
+everyone to just be able to see
+
+257
+00:15:22,269 --> 00:15:26,510
+ride like you know the tags that are
+available on your website or
+
+258
+00:15:26,510 --> 00:15:30,100
+the stuff that shows up on your About Us
+page you know whatever else you loading
+
+259
+00:15:30,100 --> 00:15:33,459
+in that everyone should have read access
+to you but not write access
+
+260
+00:15:33,459 --> 00:15:36,870
+then there's row level permissions
+there's the stuff that the user should
+
+261
+00:15:36,870 --> 00:15:39,290
+be able to see only if it's theirs
+
+262
+00:15:39,290 --> 00:15:42,410
+and then even beyond that the probably
+supposed to be able to read their own
+
+263
+00:15:42,410 --> 00:15:43,079
+data
+
+264
+00:15:43,079 --> 00:15:46,880
+but you probably only I want them to be
+able to write certain things
+
+265
+00:15:46,880 --> 00:15:51,019
+in that data and so this ecosystem so I
+scare really really
+
+266
+00:15:51,019 --> 00:15:55,279
+complicated really fast i'm new show you
+a little bit what we did
+
+267
+00:15:55,279 --> 00:15:59,440
+by honestly I think we need better
+tooling around this
+
+268
+00:15:59,440 --> 00:16:02,810
+I like I said I think this is tied to
+
+269
+00:16:02,810 --> 00:16:06,139
+these and rest frame marks
+
+270
+00:16:06,139 --> 00:16:09,160
+being mostly built for the developer
+version
+
+271
+00:16:09,160 --> 00:16:13,339
+on the API rather than application
+version of the PI
+
+272
+00:16:13,339 --> 00:16:17,600
+I'm so I'd love to see a little bit
+better tooling around these and if I
+
+273
+00:16:17,600 --> 00:16:18,810
+ever get to it
+
+274
+00:16:18,810 --> 00:16:23,430
+are happily work on that I'm so let's
+take a look at what's
+
+275
+00:16:23,430 --> 00:16:26,579
+permissions looks like to see wireless
+into
+
+276
+00:16:26,579 --> 00:16:31,600
+to the Django arrest by mark on a kinda
+handles it this is what we did
+
+277
+00:16:31,600 --> 00:16:35,630
+you start off by subclassing their base
+permissions
+
+278
+00:16:35,630 --> 00:16:39,100
+om and then we have this thing did
+allows
+
+279
+00:16:39,100 --> 00:16:42,899
+you the keys to the kingdom if you are
+an admin
+
+280
+00:16:42,899 --> 00:16:47,490
+I we've got this thing they if if he
+said it up even a global
+
+281
+00:16:47,490 --> 00:16:51,449
+read and write permission and then if
+you do this thing
+
+282
+00:16:51,449 --> 00:16:54,600
+you can have global repercussions only
+
+283
+00:16:54,600 --> 00:16:58,190
+om by again like I said this is only
+half the story
+
+284
+00:16:58,190 --> 00:17:02,019
+because you also have to do
+
+285
+00:17:02,019 --> 00:17:05,079
+you know read verses write permission
+you want them to bond to rate certain
+
+286
+00:17:05,079 --> 00:17:05,780
+things
+
+287
+00:17:05,780 --> 00:17:10,370
+arm and it turns out you you pretty much
+have to do all of that by hand on p
+
+288
+00:17:10,370 --> 00:17:13,600
+you set definitions I'm so as a writing
+
+289
+00:17:13,600 --> 00:17:18,860
+a particular API endpoint om you need to
+handle specifically
+
+290
+00:17:18,860 --> 00:17:22,260
+which people can access which things in
+what ways
+
+291
+00:17:22,260 --> 00:17:28,490
+I'm sorts it ends up being quite that'll
+work in that way and hard to keep clean
+
+292
+00:17:28,490 --> 00:17:32,440
+I'm yeah and then you want children to
+which makes perfect sense of course you
+
+293
+00:17:32,440 --> 00:17:33,110
+do
+
+294
+00:17:33,110 --> 00:17:36,350
+I am so you want to be able to say
+
+295
+00:17:36,350 --> 00:17:39,870
+you know I want to see the users who
+signed up in the last day
+
+296
+00:17:39,870 --> 00:17:43,230
+or I wanna see all these widgets that
+were approved
+
+297
+00:17:43,230 --> 00:17:47,340
+on all these kind of filtering
+mechanisms on those also don't come for
+
+298
+00:17:47,340 --> 00:17:47,830
+free
+
+299
+00:17:47,830 --> 00:17:51,220
+so you have to kind right those are self
+I'm
+
+300
+00:17:51,220 --> 00:17:54,400
+how do we do that well so
+
+301
+00:17:54,400 --> 00:17:57,610
+you start by writing a filter set but
+this other library called
+
+302
+00:17:57,610 --> 00:18:01,730
+chingo filters on the subclass the
+filter said
+
+303
+00:18:01,730 --> 00:18:05,100
+I you creates the filter that you want
+
+304
+00:18:05,100 --> 00:18:09,789
+and this case we're doing less than or
+equal to the created date:
+
+305
+00:18:09,789 --> 00:18:14,370
+I the name it was created relates the
+underlying model which field on that
+
+306
+00:18:14,370 --> 00:18:15,840
+model do you want to filter by
+
+307
+00:18:15,840 --> 00:18:20,740
+and look up tape less than or equal to
+and the input formats you specify
+
+308
+00:18:20,740 --> 00:18:24,530
+and then you tell it which model you're
+talking about
+
+309
+00:18:24,530 --> 00:18:27,660
+I am and which fields you're allowed to
+filter by
+
+310
+00:18:27,660 --> 00:18:30,799
+at this point you hook it up into your
+view said
+
+311
+00:18:30,799 --> 00:18:34,570
+and it works but of course then you have
+to do this again
+
+312
+00:18:34,570 --> 00:18:37,630
+if you want greater than or equal to
+
+313
+00:18:37,630 --> 00:18:42,039
+you have to do it again for every field
+you wanna filter on
+
+314
+00:18:42,039 --> 00:18:46,360
+and the ISO virginity time filter
+doesn't come for free either you have to
+
+315
+00:18:46,360 --> 00:18:47,850
+write that yourself
+
+316
+00:18:47,850 --> 00:18:51,590
+I'm so again I think there's a real
+opportunity for better tooling around
+
+317
+00:18:51,590 --> 00:18:53,030
+this kinda stuff
+
+318
+00:18:53,030 --> 00:18:56,450
+om but at the moment it's it a little
+bit amassed
+
+319
+00:18:56,450 --> 00:19:00,870
+you on sellers talk about a few
+
+320
+00:19:00,870 --> 00:19:03,929
+a outta left field kinda things that hit
+me
+
+321
+00:19:03,929 --> 00:19:09,080
+is urs Sourav as signposts for you as
+you go about implementing
+
+322
+00:19:09,080 --> 00:19:12,740
+I your angular JS I am back and on
+
+323
+00:19:12,740 --> 00:19:16,140
+firsts and it was this
+
+324
+00:19:16,140 --> 00:19:20,169
+when I'm calling mm TV star star which
+is not a swear word
+
+325
+00:19:20,169 --> 00:19:24,390
+on this is I you know what happens when
+
+326
+00:19:24,390 --> 00:19:29,370
+your friend is in MB star saying and
+your back and as an MP starting in you
+
+327
+00:19:29,370 --> 00:19:31,669
+want them to cooperate
+
+328
+00:19:31,669 --> 00:19:36,610
+show you know where do you actually put
+your code how do you organize things
+
+329
+00:19:36,610 --> 00:19:38,549
+what's the right way to do this
+
+330
+00:19:38,549 --> 00:19:42,570
+I'm so there's some %uh the kinda rules
+of thumb that I found to be useful
+
+331
+00:19:42,570 --> 00:19:47,340
+um first off you know irregular your
+models on the back end
+
+332
+00:19:47,340 --> 00:19:51,070
+he set those up the nice and clean and
+then you mirror them
+
+333
+00:19:51,070 --> 00:19:55,080
+in your front on and so the front and
+knows what's going on the back and
+
+334
+00:19:55,080 --> 00:19:58,470
+accesses it is a PI and ideally
+
+335
+00:19:58,470 --> 00:20:02,510
+I you got some magic glue between them
+that syncs everything up
+
+336
+00:20:02,510 --> 00:20:06,559
+and depending on your use case
+
+337
+00:20:06,559 --> 00:20:10,650
+I the controller this this is kind of
+standard NBC
+
+338
+00:20:10,650 --> 00:20:14,559
+at labeling so controller and view code
+
+339
+00:20:14,559 --> 00:20:19,130
+I in my experience tennis just kind of
+be all in the front
+
+340
+00:20:19,130 --> 00:20:22,510
+I'm so I love the in an angular
+
+341
+00:20:22,510 --> 00:20:26,380
+in all the controllers all the templates
+they handle most of the work
+
+342
+00:20:26,380 --> 00:20:29,480
+I'm very little other stuff actually
+ends up I
+
+343
+00:20:29,480 --> 00:20:32,640
+in the back end now
+
+344
+00:20:32,640 --> 00:20:36,120
+the last thing the kind of stays in the
+back end or at least in our experience
+
+345
+00:20:36,120 --> 00:20:36,880
+did
+
+346
+00:20:36,880 --> 00:20:41,590
+was a lot to this background processing
+stuff so sending emails
+
+347
+00:20:41,590 --> 00:20:45,799
+and you now doing a lot of background
+processing
+
+348
+00:20:45,799 --> 00:20:49,799
+I'm doing can assume some big
+computational stuff so there's data that
+
+349
+00:20:49,799 --> 00:20:51,830
+she's ready to ask for for the front and
+
+350
+00:20:51,830 --> 00:20:55,789
+on these are things that you know we
+still do on the back end and there's
+
+351
+00:20:55,789 --> 00:20:57,890
+quite a bit of work going on there
+
+352
+00:20:57,890 --> 00:21:01,520
+you know I was I i get a lot of people
+who say you know I know you got you got
+
+353
+00:21:01,520 --> 00:21:02,610
+angular so
+
+354
+00:21:02,610 --> 00:21:06,280
+he basically just have an API now right
+om and sis
+
+355
+00:21:06,280 --> 00:21:10,080
+in some ways that's true and in some
+ways there's still a whole lot going on
+
+356
+00:21:10,080 --> 00:21:10,960
+in the back and
+
+357
+00:21:10,960 --> 00:21:14,880
+I'm I wouldn't want it any other way cuz
+I love writing Python
+
+358
+00:21:14,880 --> 00:21:21,350
+I'm see other still plenty of work being
+done in Python it's just different work
+
+359
+00:21:21,350 --> 00:21:25,650
+I other fun stuff and interpolation this
+was this was good
+
+360
+00:21:25,650 --> 00:21:31,020
+I'm so and the template interpolation
+symbols those double curly raisers
+
+361
+00:21:31,020 --> 00:21:34,350
+I'm it seems everyone kinda wants to use
+those
+
+362
+00:21:34,350 --> 00:21:38,620
+angular Django & gingerale by default
+
+363
+00:21:38,620 --> 00:21:43,640
+use these double curly braces I'm and so
+if you want to do this double rendering
+
+364
+00:21:43,640 --> 00:21:44,429
+where
+
+365
+00:21:44,429 --> 00:21:48,059
+you know Django for example as rendering
+the template sending it down angular
+
+366
+00:21:48,059 --> 00:21:51,820
+and an angular runs the template you can
+see the problem
+
+367
+00:21:51,820 --> 00:21:54,890
+I'm but the good news is there's a
+simple fix
+
+368
+00:21:54,890 --> 00:21:58,250
+I'm in angular you a dick and Fig
+
+369
+00:21:58,250 --> 00:22:03,600
+and this interpolates provider you can
+choose our own start and symbols
+
+370
+00:22:03,600 --> 00:22:07,669
+I think the double square races on ice
+ombres also came with their own problems
+
+371
+00:22:07,669 --> 00:22:10,070
+but that's another story
+
+372
+00:22:10,070 --> 00:22:13,990
+on and a couple other
+
+373
+00:22:13,990 --> 00:22:17,570
+and little things CSRF wiring
+
+374
+00:22:17,570 --> 00:22:22,600
+I can often get broken if you don't make
+sure to kind of set it up correctly
+
+375
+00:22:22,600 --> 00:22:26,669
+om so you wanna make sure that that CSRF
+token
+
+376
+00:22:26,669 --> 00:22:31,789
+I get sad on the on the client side if
+you're only ever loading one full web
+
+377
+00:22:31,789 --> 00:22:33,650
+page on that first page load
+
+378
+00:22:33,650 --> 00:22:36,929
+if there are no forms their I often that
+that
+
+379
+00:22:36,929 --> 00:22:40,110
+that token won't get set and then you
+have access to it
+
+380
+00:22:40,110 --> 00:22:43,340
+I'm seem to make sure they get sent down
+with that first page load
+
+381
+00:22:43,340 --> 00:22:48,770
+and then as you are i doing posts
+through the API you need to iron
+
+382
+00:22:48,770 --> 00:22:50,210
+absolutes in the headers
+
+383
+00:22:50,210 --> 00:22:53,530
+I'm that was a there was a lot of fun
+
+384
+00:22:53,530 --> 00:22:56,870
+and then the last 11 then I ran into was
+ac
+
+385
+00:22:56,870 --> 00:23:00,980
+API pagination I'm so
+
+386
+00:23:00,980 --> 00:23:05,260
+and when you're working on the back and
+and you've got a bunch of data that
+
+387
+00:23:05,260 --> 00:23:06,730
+you're you're going through
+
+388
+00:23:06,730 --> 00:23:09,980
+and that's tends to just work fine I
+
+389
+00:23:09,980 --> 00:23:14,200
+but when you have an API yuan pagination
+cuz you don't want to return all
+
+390
+00:23:14,200 --> 00:23:18,049
+three million records I but the flip
+side a pagination is
+
+391
+00:23:18,049 --> 00:23:21,740
+its paginated and you need to deal with
+that
+
+392
+00:23:21,740 --> 00:23:26,429
+I'm so if you have a page is expecting
+more than 10 or more than a hundred on
+
+393
+00:23:26,429 --> 00:23:27,909
+this thing to come in
+
+394
+00:23:27,909 --> 00:23:32,090
+suddenly have to write all this coat
+around pagination on
+
+395
+00:23:32,090 --> 00:23:35,940
+and it's not at least for me when it
+first cropped up it was a non-obvious
+
+396
+00:23:35,940 --> 00:23:36,940
+sort of bug
+
+397
+00:23:36,940 --> 00:23:41,159
+om which was which was funded dealer who
+gave you have no idea why those things
+
+398
+00:23:41,159 --> 00:23:42,860
+just work showing up any
+
+399
+00:23:42,860 --> 00:23:45,870
+on the page on
+
+400
+00:23:45,870 --> 00:23:49,770
+so step for enjoy angular project
+
+401
+00:23:49,770 --> 00:23:53,010
+on this you not like I said I think
+there's
+
+402
+00:23:53,010 --> 00:23:56,140
+a lot of room for improvement on the
+tooling
+
+403
+00:23:56,140 --> 00:24:02,210
+on it's still kinda the Wild West out
+there alone on nearly as much as I was a
+
+404
+00:24:02,210 --> 00:24:03,659
+couple years ago
+
+405
+00:24:03,659 --> 00:24:07,070
+I'm and so angered you all the to try
+this out
+
+406
+00:24:07,070 --> 00:24:10,919
+angered you all to contribute back your
+good tooling improvements
+
+407
+00:24:10,919 --> 00:24:14,059
+om yeah that's about it
+
+408
+00:24:14,059 --> 00:24:17,740
+I'm I would i'm jeff has as I said I
+should give a quick
+
+409
+00:24:17,740 --> 00:24:21,610
+and and shout out to choose as a paid
+for me to be here
+
+410
+00:24:21,610 --> 00:24:24,640
+and if you get free lunches at work I'm
+makin
+
+411
+00:24:24,640 --> 00:24:28,179
+we can do them better cell talk to us
+
+412
+00:24:28,179 --> 00:24:31,529
+I'm but thanks so much for letting me
+talk at you and
+
+413
+00:24:31,529 --> 00:24:35,340
+now you can yell at me
+
+414
+00:24:35,340 --> 00:24:41,210
+thanks
+
+415
+00:24:41,210 --> 00:24:43,430
+yeah so is there any questions there
+makes
+
+416
+00:24:43,430 --> 00:24:48,490
+there and their height
+
+417
+00:24:48,490 --> 00:24:53,160
+up devoted to point out that up here may
+not have the permission stuff built in
+
+418
+00:24:53,160 --> 00:24:55,220
+for anyone else looking at this tho
+
+419
+00:24:55,220 --> 00:24:59,040
+if you want to I don't have a pair made
+dad they have their problem solved at
+
+420
+00:24:59,040 --> 00:24:59,420
+least
+
+421
+00:24:59,420 --> 00:25:02,750
+onto the other when they don't bite that
+wannabes awesome
+
+422
+00:25:02,750 --> 00:25:06,870
+thank you very much yes on yeah we we
+actually
+
+423
+00:25:06,870 --> 00:25:10,070
+we'd kinda made this transition we were
+
+424
+00:25:10,070 --> 00:25:14,620
+we started with the Django app that had
+nothing to do with I with angular
+
+425
+00:25:14,620 --> 00:25:17,890
+and it was sort of a slow transition
+over to angular which is an interesting
+
+426
+00:25:17,890 --> 00:25:19,670
+story on itself but
+
+427
+00:25:19,670 --> 00:25:24,510
+I we did not have the at the luxury of
+kinda examining all the options that are
+
+428
+00:25:24,510 --> 00:25:25,100
+out there
+
+429
+00:25:25,100 --> 00:25:28,460
+but that's good to know a
+
+430
+00:25:28,460 --> 00:25:31,470
+at so I recently developed a personal
+
+431
+00:25:31,470 --> 00:25:35,530
+Python where that and I didn't using
+killer but I use knock out which is
+
+432
+00:25:35,530 --> 00:25:36,400
+kinda similar
+
+433
+00:25:36,400 --> 00:25:39,440
+on and so some other gotchas that you
+described they
+
+434
+00:25:39,440 --> 00:25:43,690
+really rang true my experience um one of
+the things you mentioned
+
+435
+00:25:43,690 --> 00:25:47,460
+the concept of having back and models
+that are mirrored
+
+436
+00:25:47,460 --> 00:25:51,640
+with a friend JavaScript implementation
+that was prolly when the biggest
+
+437
+00:25:51,640 --> 00:25:52,700
+struggles for me and I
+
+438
+00:25:52,700 --> 00:25:56,490
+I sorta Senate meeting at for
+performance reasons did you find any
+
+439
+00:25:56,490 --> 00:26:00,390
+given your experience with that or any
+tipster best practices for
+
+440
+00:26:00,390 --> 00:26:04,230
+skating as and synchronization how I'm
+
+441
+00:26:04,230 --> 00:26:08,600
+yeah God I not a lot
+
+442
+00:26:08,600 --> 00:26:11,920
+now it's a little bit painful it a
+little bit case by case from what i've
+
+443
+00:26:11,920 --> 00:26:12,540
+seen
+
+444
+00:26:12,540 --> 00:26:16,380
+I'm so you know some other the models
+that I'm dealing with
+
+445
+00:26:16,380 --> 00:26:19,450
+on it's fairly straightforward I
+
+446
+00:26:19,450 --> 00:26:22,730
+when you would need to sync that that
+data backup to the server
+
+447
+00:26:22,730 --> 00:26:26,120
+om what I've wanted to do II
+
+448
+00:26:26,120 --> 00:26:29,540
+believe backbone actually has some
+mechanisms for this
+
+449
+00:26:29,540 --> 00:26:33,990
+or so I've heard on by kinda doing dirty
+tracking
+
+450
+00:26:33,990 --> 00:26:38,190
+on the fields in your angular side
+representation on the model
+
+451
+00:26:38,190 --> 00:26:44,940
+on so that you then no what to send back
+into Patrick West arm and ideally when
+
+452
+00:26:44,940 --> 00:26:48,700
+on by honestly now I have done a lot of
+good solutions flat
+
+453
+00:26:48,700 --> 00:26:55,280
+if you come up with any should let me
+know thanks sold my experience was a
+
+454
+00:26:55,280 --> 00:26:55,990
+little different
+
+455
+00:26:55,990 --> 00:26:59,400
+I was ready with flask instead of Django
+and I wound up where was pretty much
+
+456
+00:26:59,400 --> 00:26:59,780
+just
+
+457
+00:26:59,780 --> 00:27:04,410
+an API from a nap by was their reason
+you chose to
+
+458
+00:27:04,410 --> 00:27:09,360
+redefine the interpolation I characters
+and said abusing gingers
+
+459
+00:27:09,360 --> 00:27:12,470
+raw tag %uh
+
+460
+00:27:12,470 --> 00:27:16,240
+be let me think so
+
+461
+00:27:16,240 --> 00:27:19,530
+gingers raw tag would allow you to just
+kind of
+
+462
+00:27:19,530 --> 00:27:23,950
+not have ginger not process this portion
+of the temple is that right
+
+463
+00:27:23,950 --> 00:27:28,230
+right on not particularly I didn't want
+to have to
+
+464
+00:27:28,230 --> 00:27:31,580
+think or worry about it the riot act was
+just a little bit more
+
+465
+00:27:31,580 --> 00:27:34,960
+effort every time you wanted to write it
+there's no I think both are part
+
+466
+00:27:34,960 --> 00:27:36,500
+perfectly good solutions
+
+467
+00:27:36,500 --> 00:27:43,500
+is the reason why he chose his jiang
+arrest three Maya content like tasty pie
+
+468
+00:27:46,810 --> 00:27:51,200
+did you evaluate several different API
+packages in like itself could you expand
+
+469
+00:27:51,200 --> 00:27:52,070
+on that
+
+470
+00:27:52,070 --> 00:27:57,180
+yeah I'm I did do some research
+
+471
+00:27:57,180 --> 00:28:01,820
+up front I'm I don't have a whole lot of
+experience directly using the others
+
+472
+00:28:01,820 --> 00:28:05,580
+on I'm sure other people here have
+better answers than me on this
+
+473
+00:28:05,580 --> 00:28:10,700
+I waz I was jingle dress Primark was a
+pretty robust set
+
+474
+00:28:10,700 --> 00:28:14,570
+a functionality I and I think that
+proved out it really is
+
+475
+00:28:14,570 --> 00:28:20,340
+on the other ones some American have no
+longer very well maintained and some
+
+476
+00:28:20,340 --> 00:28:21,350
+other time seemed
+
+477
+00:28:21,350 --> 00:28:25,190
+I top for a little bit less
+functionality arms this one just seemed
+
+478
+00:28:25,190 --> 00:28:26,170
+the most robust
+
+479
+00:28:26,170 --> 00:28:30,050
+at the time we were making that choice
+om I think the
+
+480
+00:28:30,050 --> 00:28:34,330
+the design patterns in generous for my
+karma honestly a little bit strange to
+
+481
+00:28:34,330 --> 00:28:34,810
+me
+
+482
+00:28:34,810 --> 00:28:38,730
+on given kinda the way I know and love
+
+483
+00:28:38,730 --> 00:28:42,030
+Python arm it's very much have the mic
+since
+
+484
+00:28:42,030 --> 00:28:45,580
+idea which I and others
+
+485
+00:28:45,580 --> 00:28:50,030
+a lot of and opinions there my name is
+
+486
+00:28:50,030 --> 00:28:53,190
+bed 810 see it really confusing really
+quickly and
+
+487
+00:28:53,190 --> 00:28:56,980
+and at not being all that helpful so I
+don't love the design patterns but
+
+488
+00:28:56,980 --> 00:28:59,050
+overall to pay robust re helpful
+
+489
+00:28:59,050 --> 00:29:02,510
+at all use it again CDs it again
+
+490
+00:29:02,510 --> 00:29:09,510
+hi yes I am back
+
+491
+00:29:09,840 --> 00:29:14,200
+question a so do you have any insights
+into
+
+492
+00:29:14,200 --> 00:29:18,060
+I am in effective ways to test the
+state's integrations when you're working
+
+493
+00:29:18,060 --> 00:29:18,550
+with
+
+494
+00:29:18,550 --> 00:29:21,900
+eitan Abson these JavaScript frameworks
+on the front and
+
+495
+00:29:21,900 --> 00:29:25,880
+and canoe elaborate a little mark is
+definitely you know
+
+496
+00:29:25,880 --> 00:29:29,540
+testing on the Python side which is you
+know more or less what you
+
+497
+00:29:29,540 --> 00:29:34,960
+always done and then anglers fairly
+robust its testing architecture so
+
+498
+00:29:34,960 --> 00:29:37,920
+eyes and integration point you're
+talking about testing or or what's the
+
+499
+00:29:37,920 --> 00:29:38,670
+question exactly
+
+500
+00:29:38,670 --> 00:29:42,240
+I guess maybe in terms of functional
+testing I mean read
+
+501
+00:29:42,240 --> 00:29:45,340
+have you guys done in at like anything
+all the way through like so many amor
+
+502
+00:29:45,340 --> 00:29:47,300
+like any other approaches that you
+recommend
+
+503
+00:29:47,300 --> 00:29:50,800
+here we have got to that stage yet but I
+you know I think slams
+
+504
+00:29:50,800 --> 00:29:55,670
+a decent way to go there on you know you
+can automate all in that kinda stuff
+
+505
+00:29:55,670 --> 00:29:58,850
+on and 8 you know
+
+506
+00:29:58,850 --> 00:30:02,040
+I think as long as you can unit test all
+the things you doing
+
+507
+00:30:02,040 --> 00:30:06,570
+on the angular side a unit test all the
+things you doing on the Python side
+
+508
+00:30:06,570 --> 00:30:10,990
+actually give you mostly a good idea
+that everything's working and then
+
+509
+00:30:10,990 --> 00:30:14,120
+you know I'll always a few kind of light
+
+510
+00:30:14,120 --> 00:30:18,370
+integration testers is a good idea on
+
+511
+00:30:18,370 --> 00:30:21,400
+to what one more question
+
+512
+00:30:21,400 --> 00:30:25,280
+I think you and do you have any tips for
+Buckeyes station
+
+513
+00:30:25,280 --> 00:30:28,560
+I'm sorry for what phone lookup
+physician french-english
+
+514
+00:30:28,560 --> 00:30:32,250
+whatever language I E apologize I don't
+
+515
+00:30:32,250 --> 00:30:38,500
+I'm American
+
+516
+00:30:38,500 --> 00:30:38,890
+thank you
+

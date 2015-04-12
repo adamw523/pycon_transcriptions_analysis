@@ -6,3 +6,5 @@ COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 RUN pip2.7 install -r /tmp/requirements.txt
 
+RUN pip install git+https://code.google.com/p/feedparser/ --upgrade
+

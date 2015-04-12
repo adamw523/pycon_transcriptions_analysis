@@ -1,0 +1,1437 @@
+1
+00:00:13,320 --> 00:00:13,910
+I really want
+
+2
+00:00:13,910 --> 00:00:17,720
+sore neck stock will be so you want to
+build an API
+
+3
+00:00:17,720 --> 00:00:21,810
+by megan's fear if you have any
+questions after the talk please use a
+
+4
+00:00:21,810 --> 00:00:23,630
+microphone up front other
+
+5
+00:00:23,630 --> 00:00:27,050
+I have Gabriel Pratt lunch tickets so if
+you're gay
+
+6
+00:00:27,050 --> 00:00:31,449
+releasing after the talk thanks please
+give making a warm welcome
+
+7
+00:00:31,449 --> 00:00:38,449
+hi everybody
+
+8
+00:00:39,149 --> 00:00:42,370
+let's get started I magnin fear
+
+9
+00:00:42,370 --> 00:00:46,020
+and I'm currently living in San
+Francisco California am a software
+
+10
+00:00:46,020 --> 00:00:49,789
+engineer and most recently I've been
+building a company with my husband
+
+11
+00:00:49,789 --> 00:00:53,649
+where and I became obsessed with API
+design and implementation
+
+12
+00:00:53,649 --> 00:01:00,219
+this is technically my first icon and
+I'm really excited to share with you all
+
+13
+00:01:00,219 --> 00:01:03,359
+hopefully everyone in this room has seen
+the movie good burger
+
+14
+00:01:03,359 --> 00:01:07,490
+or the sock is gonna be a bunch of
+nonsense with some API information
+
+15
+00:01:07,490 --> 00:01:12,310
+on the side so you want to build an API
+
+16
+00:01:12,310 --> 00:01:16,700
+huh well this sounds like a good idea
+
+17
+00:01:16,700 --> 00:01:21,570
+an army moniker the creator a flask says
+if you're not building an API
+
+18
+00:01:21,570 --> 00:01:27,110
+you're doing it wrong so let's get
+started what we're really going to talk
+
+19
+00:01:27,110 --> 00:01:29,810
+about today is a Web API using the rest
+
+20
+00:01:29,810 --> 00:01:35,450
+protocol we're going to look at the best
+practices in designing a web
+
+21
+00:01:35,450 --> 00:01:39,020
+API and the patterns and flask we may
+use to get there
+
+22
+00:01:39,020 --> 00:01:42,710
+and will actually be creating
+
+23
+00:01:42,710 --> 00:01:47,750
+to API's as you're likely building a
+RESTful API for your JavaScript client
+
+24
+00:01:47,750 --> 00:01:51,680
+you're also building your own pipe on
+API for how you want to code it
+
+25
+00:01:51,680 --> 00:01:55,740
+we are doing that by leveraging patterns
+because no one framework
+
+26
+00:01:55,740 --> 00:01:58,960
+has everything you need see at that
+
+27
+00:01:58,960 --> 00:02:05,740
+to API's leave from but first
+
+28
+00:02:05,740 --> 00:02:10,670
+where to best practices come from
+
+29
+00:02:10,670 --> 00:02:14,260
+they come from the same good artists
+copy
+
+30
+00:02:14,260 --> 00:02:19,599
+and great artists steal and this quote
+from Steve Jobs
+
+31
+00:02:19,599 --> 00:02:24,230
+actually explains that popular picasso
+CWA ultimately
+
+32
+00:02:24,230 --> 00:02:28,629
+it comes down to taste it comes down to
+trying to expose yourself
+
+33
+00:02:28,629 --> 00:02:33,519
+to the best things that humans have done
+and then try to bring those things
+
+34
+00:02:33,519 --> 00:02:39,510
+into what you are doing and where do
+patterns come from
+
+35
+00:02:39,510 --> 00:02:43,220
+research for me this was a favor
+
+36
+00:02:43,220 --> 00:02:46,700
+trying to find out how things are
+currently done if you don't know what
+
+37
+00:02:46,700 --> 00:02:48,120
+current solutions are
+
+38
+00:02:48,120 --> 00:02:52,530
+how do you even know that you need to
+build a new one as developers we value
+
+39
+00:02:52,530 --> 00:02:53,599
+laziness first
+
+40
+00:02:53,599 --> 00:02:58,269
+why do something that has already been
+done so you should know what other API's
+
+41
+00:02:58,269 --> 00:02:59,080
+are out there
+
+42
+00:02:59,080 --> 00:03:02,239
+and how to use them learn how other
+people do rest
+
+43
+00:03:02,239 --> 00:03:06,819
+and flask and stretch the imagination to
+guess at what people would try to build
+
+44
+00:03:06,819 --> 00:03:07,849
+using API
+
+45
+00:03:07,849 --> 00:03:11,010
+this is kinda like the old adage have
+
+46
+00:03:11,010 --> 00:03:16,060
+am knowing the rules before you can
+break them
+
+47
+00:03:16,060 --> 00:03:19,760
+but patterns also come from
+
+48
+00:03:19,760 --> 00:03:23,000
+way the developers who are smarter than
+you and me
+
+49
+00:03:23,000 --> 00:03:27,250
+basically learned a lot from everyone
+else learn from these people
+
+50
+00:03:27,250 --> 00:03:30,319
+and you too overcome leave the in smart
+one day
+
+51
+00:03:30,319 --> 00:03:33,650
+this is why there are so many frameworks
+and forks
+
+52
+00:03:33,650 --> 00:03:37,900
+everyone wants to be lazy but everyone
+is lazy and their own way
+
+53
+00:03:37,900 --> 00:03:42,080
+so in the end
+
+54
+00:03:42,080 --> 00:03:46,989
+choose your own flavor and your own set
+of tools may be really want your API to
+
+55
+00:03:46,989 --> 00:03:48,560
+be written and go or something
+
+56
+00:03:48,560 --> 00:03:52,129
+but you're all here so I assume you love
+Python as much as idea
+
+57
+00:03:52,129 --> 00:03:56,739
+developers in patterns are subjective
+decide what is important to you
+
+58
+00:03:56,739 --> 00:04:00,599
+decide how you want to be lazy
+
+59
+00:04:00,599 --> 00:04:03,659
+try all the tools sample all the things
+
+60
+00:04:03,659 --> 00:04:07,269
+it is only through this process the
+you'll find what tastes right
+
+61
+00:04:07,269 --> 00:04:12,590
+but you must design DUI 1st
+
+62
+00:04:12,590 --> 00:04:16,570
+I think it was Kenneth rates he said
+right the read me first
+
+63
+00:04:16,570 --> 00:04:19,820
+this talk isn't going to make all the
+problems in a current implementation
+
+64
+00:04:19,820 --> 00:04:21,870
+i've a web API disappear
+
+65
+00:04:21,870 --> 00:04:25,419
+but it will help you build better ones
+going forward and create documentation
+
+66
+00:04:25,419 --> 00:04:28,150
+that is intuitive and easy to understand
+
+67
+00:04:28,150 --> 00:04:31,370
+right off the bat and this is certainly
+that
+
+68
+00:04:31,370 --> 00:04:37,470
+best practice and helps to not make
+mistakes to be in a
+
+69
+00:04:37,470 --> 00:04:41,030
+otherwise your documentation and code
+might look like this:
+
+70
+00:04:41,030 --> 00:04:47,850
+bad burgers spaghetti code it's
+important to stay organized
+
+71
+00:04:47,850 --> 00:04:51,530
+but wait what is a Web API I haven't
+really said that
+
+72
+00:04:51,530 --> 00:04:54,860
+yet its rest
+
+73
+00:04:54,860 --> 00:04:58,680
+rest a representational state transfer
+as described by Ray feelings
+
+74
+00:04:58,680 --> 00:04:59,790
+dissertation
+
+75
+00:04:59,790 --> 00:05:03,000
+which is still kinda the definitive
+resource on the topic
+
+76
+00:05:03,000 --> 00:05:06,949
+is the architectural style an API
+consisting of a handful of key elements
+
+77
+00:05:06,949 --> 00:05:13,030
+including data and then our actions we
+can make with that data
+
+78
+00:05:13,030 --> 00:05:16,060
+the first important part everest I'll
+webservice
+
+79
+00:05:16,060 --> 00:05:19,960
+is a buncha resources exposes you can't
+see the resource
+
+80
+00:05:19,960 --> 00:05:23,880
+it doesn't actually exist you just have
+to trust that it does
+
+81
+00:05:23,880 --> 00:05:27,889
+it is the intended conceptual target a
+hypertext reference
+
+82
+00:05:27,889 --> 00:05:32,320
+your API does not near your database so
+far good burger API we might have
+
+83
+00:05:32,320 --> 00:05:33,190
+customers
+
+84
+00:05:33,190 --> 00:05:36,630
+menu items and burgers but our party
+menu items
+
+85
+00:05:36,630 --> 00:05:40,229
+resources represent the idea of things
+that will generally be a part of your
+
+86
+00:05:40,229 --> 00:05:42,750
+API which we can reasonably assume
+
+87
+00:05:42,750 --> 00:05:47,030
+will be everything that I just mention
+
+88
+00:05:47,030 --> 00:05:51,259
+next will be the binding and identify
+rare the other resources
+
+89
+00:05:51,259 --> 00:05:54,539
+those resources are exposed a resource
+identifiers
+
+90
+00:05:54,539 --> 00:05:57,710
+this is the first thing to design take
+for example
+
+91
+00:05:57,710 --> 00:06:01,139
+the good burger dot com address which
+represents our base URL
+
+92
+00:06:01,139 --> 00:06:06,020
+that we can now build out using resource
+identifiers
+
+93
+00:06:06,020 --> 00:06:09,470
+this comes down to naming use your words
+I manson
+
+94
+00:06:09,470 --> 00:06:13,490
+mentioned that we probably have a
+burgers resource which you want to be
+
+95
+00:06:13,490 --> 00:06:17,780
+consistent clear throughout your API
+another example would be how
+
+96
+00:06:17,780 --> 00:06:21,400
+people popularly have Flash users
+resource identifiers
+
+97
+00:06:21,400 --> 00:06:25,800
+where we have burgers currently but I
+think person in that case not users much
+
+98
+00:06:25,800 --> 00:06:26,770
+more clear
+
+99
+00:06:26,770 --> 00:06:29,860
+they are users to everyone else a.m.
+
+100
+00:06:29,860 --> 00:06:33,110
+or their users to you but everyone out
+there percent
+
+101
+00:06:33,110 --> 00:06:36,930
+be human and respect the people that use
+your service this is an example of
+
+102
+00:06:36,930 --> 00:06:40,630
+something that's just my opinion my
+personal flavor but once I've chosen in
+
+103
+00:06:40,630 --> 00:06:45,100
+I have to stick with it so use your
+words to describe things but I
+
+104
+00:06:45,100 --> 00:06:47,819
+understand that you yourself may not
+know what they are
+
+105
+00:06:47,819 --> 00:06:52,440
+at first something card and be concrete
+
+106
+00:06:52,440 --> 00:06:55,289
+now we will look at some other patterns
+in which we apply these best practices
+
+107
+00:06:55,289 --> 00:06:56,550
+in code
+
+108
+00:06:56,550 --> 00:07:01,330
+one of the first things you need to make
+a decision on is what kinda routes years
+
+109
+00:07:01,330 --> 00:07:05,300
+the regular old definition based fears
+fairly simple
+
+110
+00:07:05,300 --> 00:07:09,620
+and the apt out route here you would
+clearly define HTTP it
+
+111
+00:07:09,620 --> 00:07:14,169
+HTTP method you wish to perform an
+action on our burgers restores
+
+112
+00:07:14,169 --> 00:07:18,740
+and what resource identifiers are your
+I'll we can access the data
+
+113
+00:07:18,740 --> 00:07:22,680
+but this can get a little unwieldy when
+you're defining multiple methods
+
+114
+00:07:22,680 --> 00:07:26,139
+and resources along the way
+
+115
+00:07:26,139 --> 00:07:31,840
+another pattern if class-based years are
+pluggable beers as class refers to them
+
+116
+00:07:31,840 --> 00:07:35,449
+which have the built-in method you
+allowing you to create a single class a
+
+117
+00:07:35,449 --> 00:07:36,599
+very sorry
+
+118
+00:07:36,599 --> 00:07:41,880
+menu API in this case which would be a
+classic definitions for each of the HTT
+
+119
+00:07:41,880 --> 00:07:45,190
+P methods to be used on the resource
+finally
+
+120
+00:07:45,190 --> 00:07:48,919
+kill you add URL role to create the
+resource identifiers
+
+121
+00:07:48,919 --> 00:07:52,849
+you still have to register each one but
+this is a little better because it's
+
+122
+00:07:52,849 --> 00:07:56,160
+more expensive one allows you to use
+some the core functions and fast
+
+123
+00:07:56,160 --> 00:07:57,860
+including decorators
+
+124
+00:07:57,860 --> 00:08:00,990
+and things like that
+
+125
+00:08:00,990 --> 00:08:04,150
+but neither these options was exactly
+what we were looking for
+
+126
+00:08:04,150 --> 00:08:09,099
+so we created restyle by restyling these
+patterns in code
+
+127
+00:08:09,099 --> 00:08:12,560
+to consolidate them cleverly named
+
+128
+00:08:12,560 --> 00:08:16,039
+resource top identifiers because this is
+literally what it is
+
+129
+00:08:16,039 --> 00:08:19,099
+they identify rare representing
+specifically
+
+130
+00:08:19,099 --> 00:08:22,310
+resource
+
+131
+00:08:22,310 --> 00:08:25,860
+another thing you're going to run into
+is consolidation and separation and
+
+132
+00:08:25,860 --> 00:08:27,259
+services
+
+133
+00:08:27,259 --> 00:08:31,330
+don't create latency and packet
+behavioral that with httpd
+
+134
+00:08:31,330 --> 00:08:36,060
+redirect make smart decisions decisions
+up front so you don't mess with your
+
+135
+00:08:36,060 --> 00:08:36,789
+developers
+
+136
+00:08:36,789 --> 00:08:39,990
+avoid collisions between your variety of
+services
+
+137
+00:08:39,990 --> 00:08:43,760
+prefixing is best practice so here are
+prefixed with
+
+138
+00:08:43,760 --> 00:08:47,209
+API that good burger dot com slash
+beggars
+
+139
+00:08:47,209 --> 00:08:52,860
+it can help you test different versions
+of your API among other things
+
+140
+00:08:52,860 --> 00:08:56,160
+so mention versioning best practices for
+versioning
+
+141
+00:08:56,160 --> 00:09:00,850
+means no dots use v1 not be dot line
+
+142
+00:09:00,850 --> 00:09:05,730
+is major versions only view 19 V 1.1
+
+143
+00:09:05,730 --> 00:09:09,800
+don't get overly creative in naming
+versions it's basically a more granular
+
+144
+00:09:09,800 --> 00:09:13,779
+version of what you're doing with
+prefect thing or creating a sub-domain
+
+145
+00:09:13,779 --> 00:09:17,640
+you can move on to a new API and still
+provide support for an old one
+
+146
+00:09:17,640 --> 00:09:21,480
+but these 57 clear when it comes to
+deprecation policies
+
+147
+00:09:21,480 --> 00:09:25,620
+after releasing a new API
+
+148
+00:09:25,620 --> 00:09:30,320
+so this pattern shows hard coating the
+version directly into the URL
+
+149
+00:09:30,320 --> 00:09:34,070
+but this makes it too hard had to change
+
+150
+00:09:34,070 --> 00:09:37,230
+cheap versions more like a variable and
+keep the route short
+
+151
+00:09:37,230 --> 00:09:40,800
+encode
+
+152
+00:09:40,800 --> 00:09:44,589
+you can do incurred with flask
+blueprints which make it easy to say
+
+153
+00:09:44,589 --> 00:09:45,149
+about
+
+154
+00:09:45,149 --> 00:09:48,769
+different versions for different
+resources doing it in a blueprint will
+
+155
+00:09:48,769 --> 00:09:49,959
+allow you to change it
+
+156
+00:09:49,959 --> 00:09:53,540
+in one place with friends can be a
+little confusing
+
+157
+00:09:53,540 --> 00:09:57,260
+am but I have a pretty simple blog
+percent on my blog
+
+158
+00:09:57,260 --> 00:10:02,970
+input button here but and against iraq
+on
+
+159
+00:10:02,970 --> 00:10:06,920
+if ed here can save the day it good
+burger you can't you
+
+160
+00:10:06,920 --> 00:10:10,300
+you'll eventually have a complete
+resource identifiers
+
+161
+00:10:10,300 --> 00:10:14,230
+head with his mountain burgers is a
+metaphor for all the exploration you
+
+162
+00:10:14,230 --> 00:10:15,190
+should do
+
+163
+00:10:15,190 --> 00:10:19,510
+to find your way in building thing
+sometimes experimenting with surprise
+
+164
+00:10:19,510 --> 00:10:22,170
+you
+
+165
+00:10:22,170 --> 00:10:26,200
+next you'll be concerned with how you're
+going to deliver all this information
+
+166
+00:10:26,200 --> 00:10:30,490
+all the burgers tear and user ill be
+through what is referred to
+
+167
+00:10:30,490 --> 00:10:34,180
+as a representation feeling says
+
+168
+00:10:34,180 --> 00:10:39,180
+other commonly a bit less precise names
+for representation include
+
+169
+00:10:39,180 --> 00:10:42,620
+document file and HTTP message id
+
+170
+00:10:42,620 --> 00:10:46,790
+entity instance or variant which
+basically means it's what you use is
+
+171
+00:10:46,790 --> 00:10:50,450
+going to see
+
+172
+00:10:50,450 --> 00:10:55,100
+again use your words naming and
+representations relates to a schema
+
+173
+00:10:55,100 --> 00:10:58,649
+which allows you to make decisions about
+renaming elements of your database
+
+174
+00:10:58,649 --> 00:11:00,079
+models
+
+175
+00:11:00,079 --> 00:11:03,990
+grouping data and a logical manner for
+the elements in the burger make
+
+176
+00:11:03,990 --> 00:11:04,570
+consistent
+
+177
+00:11:04,570 --> 00:11:08,459
+the name have the burger and its
+ingredients which you could extend or
+
+178
+00:11:08,459 --> 00:11:09,410
+remove
+
+179
+00:11:09,410 --> 00:11:13,310
+based upon an the table burger that
+someone so here we have a bye in
+
+180
+00:11:13,310 --> 00:11:18,790
+to patti is and sauce for a
+double-double
+
+181
+00:11:18,790 --> 00:11:23,839
+let's see how the folks in code this is
+a template for the representation from
+
+182
+00:11:23,839 --> 00:11:24,760
+code
+
+183
+00:11:24,760 --> 00:11:28,480
+you can create public and private
+schemas which allow the data a PI to
+
+184
+00:11:28,480 --> 00:11:30,690
+scale beyond that if your data if
+
+185
+00:11:30,690 --> 00:11:35,510
+this involves creating logical chunks of
+data to talk about data Alamance
+
+186
+00:11:35,510 --> 00:11:39,380
+a little tip don't force your users to
+live with the mistakes
+
+187
+00:11:39,380 --> 00:11:42,890
+you made before you knew how to name
+things properly in your data if
+
+188
+00:11:42,890 --> 00:11:45,940
+for the show that says code name in the
+database
+
+189
+00:11:45,940 --> 00:11:49,430
+which isn't as clear as burger name
+which is an
+
+190
+00:11:49,430 --> 00:11:54,760
+the public scheme
+
+191
+00:11:54,760 --> 00:12:00,660
+next show airs for humans if something
+goes wrong when your API makes a request
+
+192
+00:12:00,660 --> 00:12:05,040
+status codes and messages will be your
+friend some going to Heather
+
+193
+00:12:05,040 --> 00:12:08,990
+which we will talk about a moment and
+showing airs for code
+
+194
+00:12:08,990 --> 00:12:12,720
+and some going the response body showing
+areas for humans
+
+195
+00:12:12,720 --> 00:12:16,920
+I'll show you what to do and what not to
+do
+
+196
+00:12:16,920 --> 00:12:20,310
+first the is a real error messages
+
+197
+00:12:20,310 --> 00:12:23,709
+they're useless give the developer no
+information
+
+198
+00:12:23,709 --> 00:12:28,950
+bailing out sorry did wTF just happened
+
+199
+00:12:28,950 --> 00:12:33,450
+that something you might expect to hear
+when you see this
+
+200
+00:12:33,450 --> 00:12:37,149
+but you want their messages thats patch
+here can understand
+
+201
+00:12:37,149 --> 00:12:41,700
+don't confuse him he might just be the
+bug
+
+202
+00:12:41,700 --> 00:12:46,839
+first batch be you want error messages
+whatever both
+
+203
+00:12:46,839 --> 00:12:50,389
+and provide much more information better
+airs
+
+204
+00:12:50,389 --> 00:12:55,920
+explain the problem that is actually
+happening
+
+205
+00:12:55,920 --> 00:12:59,290
+metadata is another important aspect of
+our API
+
+206
+00:12:59,290 --> 00:13:03,110
+metadata is what allows rest to be self
+descriptive
+
+207
+00:13:03,110 --> 00:13:06,310
+returning raw data to the recipient
+along with metadata
+
+208
+00:13:06,310 --> 00:13:11,649
+allows the recipient to work with the
+dead as they see fit
+
+209
+00:13:11,649 --> 00:13:15,950
+so use format feeling recommend for
+conversion a resource into a
+
+210
+00:13:15,950 --> 00:13:18,839
+standardized format based upon the
+capabilities
+
+211
+00:13:18,839 --> 00:13:23,290
+the recipient well not necessarily
+supplying multiple formats
+
+212
+00:13:23,290 --> 00:13:28,639
+and some believe ambles bus far I V is
+Jay fun but there are others like XML
+
+213
+00:13:28,639 --> 00:13:32,380
+an and use relationships
+
+214
+00:13:32,380 --> 00:13:36,639
+relationships our source links that may
+point to the rock format the data
+
+215
+00:13:36,639 --> 00:13:39,639
+in cases where it may have been
+converted
+
+216
+00:13:39,639 --> 00:13:43,899
+alternates may indicate other forms and
+rich data may be transformed
+
+217
+00:13:43,899 --> 00:13:50,899
+for example intact from our txt files
+otherwise
+
+218
+00:13:51,620 --> 00:13:55,750
+control that a control data is data
+relevant to the transaction
+
+219
+00:13:55,750 --> 00:13:59,870
+have as you're making it describing your
+ability to use the data at a certain
+
+220
+00:13:59,870 --> 00:14:01,519
+point in time
+
+221
+00:14:01,519 --> 00:14:05,920
+it can be used for parameter as request
+and override default behavior
+
+222
+00:14:05,920 --> 00:14:09,930
+but it is not the resource
+representation are metadata
+
+223
+00:14:09,930 --> 00:14:13,130
+basically you're just telling your user
+yes you can use this now
+
+224
+00:14:13,130 --> 00:14:18,480
+no this isn't available to you right now
+
+225
+00:14:18,480 --> 00:14:22,610
+headers evolve things you need to
+familiarize yourself with for an API
+
+226
+00:14:22,610 --> 00:14:26,760
+headers are extremely important HTTP
+headers
+
+227
+00:14:26,760 --> 00:14:30,430
+me hold the bulk of the meta-data and
+control that an act as a chance for a
+
+228
+00:14:30,430 --> 00:14:31,220
+layer
+
+229
+00:14:31,220 --> 00:14:35,639
+relaying information either partially in
+the case of status codes
+
+230
+00:14:35,639 --> 00:14:39,310
+for computers an error messages for
+humans
+
+231
+00:14:39,310 --> 00:14:45,779
+are completely in the case of
+authentication cache-control:
+
+232
+00:14:45,779 --> 00:14:50,170
+what you may wanna but what you might
+not need their Punia patterns to deal
+
+233
+00:14:50,170 --> 00:14:52,209
+with these headers are containers
+
+234
+00:14:52,209 --> 00:14:55,630
+one of the most popular being the
+decorator however
+
+235
+00:14:55,630 --> 00:14:58,860
+the deeper you get into the
+specifications have headers the quicker
+
+236
+00:14:58,860 --> 00:15:02,320
+you realize you're modifying the header
+in so many places it's hard to keep
+
+237
+00:15:02,320 --> 00:15:03,300
+track
+
+238
+00:15:03,300 --> 00:15:07,310
+it's also almost impossible to control
+order they are appended in
+
+239
+00:15:07,310 --> 00:15:11,649
+and difficult to very responses based
+upon HTTP method
+
+240
+00:15:11,649 --> 00:15:16,779
+is further requests which is correct
+
+241
+00:15:16,779 --> 00:15:20,880
+so if you decide to go out in earlier on
+solution for better decorating
+
+242
+00:15:20,880 --> 00:15:25,329
+consider this pattern it is useful if
+you want a nicer way to handle hatter's
+
+243
+00:15:25,329 --> 00:15:30,019
+it allows for the Hatters to be ordered
+and can star the same key multiple times
+
+244
+00:15:30,019 --> 00:15:33,300
+and you can attach her at all the haters
+just before you dispatch
+
+245
+00:15:33,300 --> 00:15:38,779
+a response so this is kinda using a
+dictionary
+
+246
+00:15:38,779 --> 00:15:43,899
+lists less structure to at
+
+247
+00:15:43,899 --> 00:15:48,470
+cache-control: you might also consider
+cashing API requests
+
+248
+00:15:48,470 --> 00:15:53,380
+which would also go into the header to
+help load balancer API
+
+249
+00:15:53,380 --> 00:16:00,380
+so refrigerate after opening cuz you
+wanna save it for later
+
+250
+00:16:00,899 --> 00:16:04,839
+okay wrong after here but there are a
+few things I'd like to mention before
+
+251
+00:16:04,839 --> 00:16:09,310
+you walk out and go build your own API
+
+252
+00:16:09,310 --> 00:16:13,420
+rate-limiting goes into the header let
+your customers know where they stand by
+
+253
+00:16:13,420 --> 00:16:17,459
+telling them how many API calls they can
+reasonably make within a set of
+
+254
+00:16:17,459 --> 00:16:18,480
+constraints
+
+255
+00:16:18,480 --> 00:16:23,170
+paid or otherwise this will help you
+detect problems with your API
+
+256
+00:16:23,170 --> 00:16:26,639
+quickly if someone is trying to abuse it
+which can happen
+
+257
+00:16:26,639 --> 00:16:32,149
+even if you're not a public-facing API
+so beware
+
+258
+00:16:32,149 --> 00:16:35,579
+and please please put a heavy emphasis
+on security fate
+
+259
+00:16:35,579 --> 00:16:39,630
+for your API if you're really so lazy
+you don't wanna bother at this
+
+260
+00:16:39,630 --> 00:16:43,199
+please don't make my heart Leander
+anyone else live because they're
+
+261
+00:16:43,199 --> 00:16:47,579
+API services out there that will handle
+authentication for you
+
+262
+00:16:47,579 --> 00:16:50,630
+but really just put some code in the
+header to get authentication up and
+
+263
+00:16:50,630 --> 00:16:51,079
+running
+
+264
+00:16:51,079 --> 00:16:54,740
+quickly
+
+265
+00:16:54,740 --> 00:16:58,970
+something made I'm not really going to
+expand upon here regarding our own
+
+266
+00:16:58,970 --> 00:16:59,920
+implementation
+
+267
+00:16:59,920 --> 00:17:03,639
+have restyle is that we've considered
+open source in the API
+
+268
+00:17:03,639 --> 00:17:07,140
+am that's a lot of work so if there's
+demand
+
+269
+00:17:07,140 --> 00:17:13,039
+will do it because we bout to share
+secret sauce with you
+
+270
+00:17:13,039 --> 00:17:16,199
+the pretty much I have I hope you've
+enjoyed the talk
+
+271
+00:17:16,199 --> 00:17:20,309
+whether or not you felt an API before
+I'm currently exploring new career
+
+272
+00:17:20,309 --> 00:17:22,169
+opportunities so if any if
+
+273
+00:17:22,169 --> 00:17:29,169
+this was interesting to you please come
+talk to me
+
+274
+00:17:53,100 --> 00:17:54,480
+thanks for the tech happen
+
+275
+00:17:54,480 --> 00:17:59,440
+this is a little bit and I DEF I'm
+curious whether I've heard a little bit
+
+276
+00:17:59,440 --> 00:18:01,120
+about self documenting
+
+277
+00:18:01,120 --> 00:18:05,850
+stds was wondering whether they're in
+last extensions or
+
+278
+00:18:05,850 --> 00:18:09,300
+recommendations you have that helpings
+yet
+
+279
+00:18:09,300 --> 00:18:15,050
+yeah totally and thinks every two years
+that for one that I've heard have been
+
+280
+00:18:15,050 --> 00:18:15,980
+used before
+
+281
+00:18:15,980 --> 00:18:22,980
+yeah X
+
+282
+00:18:24,040 --> 00:18:24,970
+I thank you for that
+
+283
+00:18:24,970 --> 00:18:28,230
+expect is really cool I was wondering
+you want
+
+284
+00:18:28,230 --> 00:18:33,280
+more about the authentication options
+that are out there I'm
+
+285
+00:18:33,280 --> 00:18:38,900
+yeah I don't have any specific examples
+with me but
+
+286
+00:18:38,900 --> 00:18:44,510
+I I recommend using a service I think
+like storm path or something like that
+
+287
+00:18:44,510 --> 00:18:46,040
+might do that for you
+
+288
+00:18:46,040 --> 00:18:50,710
+and so I would do that that's because
+I'm a little sleepy
+
+289
+00:18:50,710 --> 00:18:57,710
+right
+
+290
+00:19:01,210 --> 00:19:05,260
+I thanks I was wanting any comments
+about may be scaling in EP on
+
+291
+00:19:05,260 --> 00:19:08,750
+have any requests you can scale
+
+292
+00:19:08,750 --> 00:19:13,490
+problems yeah I it personally didn't
+have problems with that because we
+
+293
+00:19:13,490 --> 00:19:13,940
+didn't
+
+294
+00:19:13,940 --> 00:19:18,620
+and up releasing this are using an and a
+full production form so I actually don't
+
+295
+00:19:18,620 --> 00:19:19,000
+know
+
+296
+00:19:19,000 --> 00:19:22,460
+time about that but yeah
+
+297
+00:19:22,460 --> 00:19:25,540
+I'm WD My more research before I
+
+298
+00:19:25,540 --> 00:19:32,540
+let it go
+
+299
+00:19:37,030 --> 00:19:41,610
+a good talk thank you and you have any
+tips for doing the
+
+300
+00:19:41,610 --> 00:19:45,280
+client libraries client iris like
+
+301
+00:19:45,280 --> 00:19:48,290
+yes I like if you have any one
+
+302
+00:19:48,290 --> 00:19:52,970
+people to consume with I libraries
+suggests jean-pierre Esther
+
+303
+00:19:52,970 --> 00:19:58,110
+tips suggestions for our retirement like
+
+304
+00:19:58,110 --> 00:20:01,280
+using requests or something like that
+yes okay yeah
+
+305
+00:20:01,280 --> 00:20:08,280
+that would be my number one okay okay
+yeah
+
+306
+00:20:15,590 --> 00:20:17,140
+you very much thank you
+

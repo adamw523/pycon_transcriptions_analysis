@@ -1,0 +1,3216 @@
+1
+00:00:00,229 --> 00:00:04,060
+right hi everybody I I'd like to
+introduce Nathan your color who's going
+
+2
+00:00:04,060 --> 00:00:04,680
+to talk about
+
+3
+00:00:04,680 --> 00:00:11,680
+in death valley Debbe thank you
+
+4
+00:00:14,219 --> 00:00:17,830
+um my name is Nathan I'm a principal
+engineer Adam m bright
+
+5
+00:00:17,830 --> 00:00:21,270
+and Dom today I'd like to talk to you
+about PBM
+
+6
+00:00:21,270 --> 00:00:26,250
+this talk is all about how to find and
+remove bugs from your software
+
+7
+00:00:26,250 --> 00:00:29,840
+if you're interested in adding bugs
+there are other talks available
+
+8
+00:00:29,840 --> 00:00:33,390
+so now is the time to arm
+
+9
+00:00:33,390 --> 00:00:36,410
+perhaps check those out arm
+
+10
+00:00:36,410 --> 00:00:39,450
+not the NMR fella blunders
+
+11
+00:00:39,450 --> 00:00:42,899
+are they were arm so
+
+12
+00:00:42,899 --> 00:00:46,020
+attributable euros up first
+
+13
+00:00:46,020 --> 00:00:49,829
+arm just to hope once again
+
+14
+00:00:49,829 --> 00:00:53,770
+there okay um summary showing a bunch of
+
+15
+00:00:53,770 --> 00:00:58,300
+examples above using PDB a couple
+different contexts and I a dozen be back
+
+16
+00:00:58,300 --> 00:00:59,930
+during run through the might be hard
+
+17
+00:00:59,930 --> 00:01:02,969
+I hope that a hundred I think I tried to
+adjust the font appropriately
+
+18
+00:01:02,969 --> 00:01:06,939
+but you can follow along on present to
+Tron if you arm if you so desire
+
+19
+00:01:06,939 --> 00:01:11,189
+so we're here to talk about PB the
+Python debugger
+
+20
+00:01:11,189 --> 00:01:15,380
+and I hope that by the end of this talk
+I will convince you that
+
+21
+00:01:15,380 --> 00:01:19,009
+PDB is better than using prints for
+debugging that PT
+
+22
+00:01:19,009 --> 00:01:23,140
+well on you know there are the
+tried-and-true stables
+
+23
+00:01:23,140 --> 00:01:26,140
+and a there's a reason you know take
+some
+
+24
+00:01:26,140 --> 00:01:31,200
+energy to break out those that you'll
+know how to use PDB to explore a running
+
+25
+00:01:31,200 --> 00:01:31,840
+program
+
+26
+00:01:31,840 --> 00:01:37,520
+and that you love be convinced that PDB
+is a useful tool to understand
+
+27
+00:01:37,520 --> 00:01:41,310
+so that you can extend it to behave in a
+way that's most useful for you
+
+28
+00:01:41,310 --> 00:01:44,460
+so what's rethinks can you actually do
+with PDB
+
+29
+00:01:44,460 --> 00:01:47,810
+a you can look around running code this
+is an example
+
+30
+00:01:47,810 --> 00:01:50,930
+a program that will talk about later to
+be a little calculator
+
+31
+00:01:50,930 --> 00:01:54,960
+the course and in this case have been
+prime just looking at what a valuable
+
+32
+00:01:54,960 --> 00:01:55,850
+variable is
+
+33
+00:01:55,850 --> 00:02:00,130
+but more interestingly than this you can
+also look around pythons code
+
+34
+00:02:00,130 --> 00:02:04,500
+so if I wanted to know what OS top path
+not join does when I actually call it
+
+35
+00:02:04,500 --> 00:02:08,420
+I can stop pop I found execution inside
+this function
+
+36
+00:02:08,420 --> 00:02:12,230
+and I can do this without editing files
+inside of my
+
+37
+00:02:12,230 --> 00:02:17,340
+I system Python and I can in this case
+discover that it's actually kinda module
+
+38
+00:02:17,340 --> 00:02:18,430
+called POSIX path
+
+39
+00:02:18,430 --> 00:02:23,080
+which who knew I got a return to the
+scene of a crime
+
+40
+00:02:23,080 --> 00:02:26,870
+if I have a piece of code like this that
+create a server
+
+41
+00:02:26,870 --> 00:02:31,269
+and when I actually a call to it raises
+exception because the address already in
+
+42
+00:02:31,269 --> 00:02:31,860
+use
+
+43
+00:02:31,860 --> 00:02:34,870
+I can actually use PDB to jump back
+
+44
+00:02:34,870 --> 00:02:39,379
+into the program ac for the exceptions
+re: occurred and inspect the stay as it
+
+45
+00:02:39,379 --> 00:02:39,970
+was
+
+46
+00:02:39,970 --> 00:02:43,180
+when the program died so is all things
+real talk about
+
+47
+00:02:43,180 --> 00:02:48,099
+everybody Prince everybody uses print as
+a tried-and-true
+
+48
+00:02:48,099 --> 00:02:52,160
+debugging mechanism but PBS better PB
+
+49
+00:02:52,160 --> 00:02:55,230
+let you explore CNN program or a dead
+one
+
+50
+00:02:55,230 --> 00:02:58,920
+it was repeatedly run your program so
+you can debug it actually
+
+51
+00:02:58,920 --> 00:03:02,300
+get into a flow debugging as you work
+with the PC software
+
+52
+00:03:02,300 --> 00:03:05,860
+and it lets you build the tools you need
+to extend it so that is appropriate for
+
+53
+00:03:05,860 --> 00:03:07,370
+your particular use cases
+
+54
+00:03:07,370 --> 00:03:11,920
+let's start with some a little bit I've
+PDB 101
+
+55
+00:03:11,920 --> 00:03:16,470
+and twirl a little bit a groundwork so
+we're all on the same page around
+
+56
+00:03:16,470 --> 00:03:20,750
+how to use PDB the most common way to be
+in the PDB
+
+57
+00:03:20,750 --> 00:03:24,640
+is with such grace so set race is a
+function the tells Python
+
+58
+00:03:24,640 --> 00:03:29,879
+stop immediately when you get here you
+can see with the green arrow on the arm
+
+59
+00:03:29,879 --> 00:03:33,099
+left him partially coated my little for
+the Nazi program the green arrow
+
+60
+00:03:33,099 --> 00:03:33,709
+pointing to my
+
+61
+00:03:33,709 --> 00:03:38,900
+my set raceline and when I actually run
+they're on the right hand side
+
+62
+00:03:38,900 --> 00:03:42,709
+you'll see that Python stops before use
+the print statement and that
+
+63
+00:03:42,709 --> 00:03:45,720
+agree the PDB prompt and let me know
+it's about
+
+64
+00:03:45,720 --> 00:03:50,930
+to do this next line so from here
+
+65
+00:03:50,930 --> 00:03:54,870
+there's a few really basic commands
+those 10 cover briefly so that we
+
+66
+00:03:54,870 --> 00:03:59,489
+so we all know about them and can
+understand the difference I can say next
+
+67
+00:03:59,489 --> 00:04:03,230
+if I wanna text you the entire neck
+statement so in this case you'll see
+
+68
+00:04:03,230 --> 00:04:04,390
+that
+
+69
+00:04:04,390 --> 00:04:08,250
+um oh yeah people tweet at me
+
+70
+00:04:08,250 --> 00:04:11,930
+to a buzz on my watch so that'll be fun
+arm
+
+71
+00:04:11,930 --> 00:04:15,480
+a you can see if I did next here
+
+72
+00:04:15,480 --> 00:04:21,410
+um it's going to XQ that entire print
+statement for me so
+
+73
+00:04:21,410 --> 00:04:25,440
+it's going to call filled with Sis RB
+it's going to put it out to see the 8
+
+74
+00:04:25,440 --> 00:04:29,580
+their below next 20 print the dash dash
+return which means I reached the end of
+
+75
+00:04:29,580 --> 00:04:30,290
+a block
+
+76
+00:04:30,290 --> 00:04:34,320
+and there's gonna wait for the next
+command so next excuse the current line
+
+77
+00:04:34,320 --> 00:04:37,790
+and any calls my have to make this isn't
+a
+
+78
+00:04:37,790 --> 00:04:42,360
+contrast to stop if I do this again and
+just one step
+
+79
+00:04:42,360 --> 00:04:46,990
+step also excuse the cut line but stops
+as soon as it possibly can
+
+80
+00:04:46,990 --> 00:04:50,240
+so this kid inside adaptive function
+
+81
+00:04:50,240 --> 00:04:53,370
+and at this point now I can actually
+continue to stop
+
+82
+00:04:53,370 --> 00:04:56,830
+or next and walk to that when I've
+figured out
+
+83
+00:04:56,830 --> 00:05:02,110
+wanting to know one Roddick derail the
+program there's the continuum and COMT
+
+84
+00:05:02,110 --> 00:05:05,860
+very commonly named but this leaves the
+debugger and let you can too and it is
+
+85
+00:05:05,860 --> 00:05:06,650
+actually the back
+
+86
+00:05:06,650 --> 00:05:09,880
+execute a program so the those are for
+love
+
+87
+00:05:09,880 --> 00:05:13,289
+when I'm working with more junior
+engineers those are the three commands
+
+88
+00:05:13,289 --> 00:05:13,669
+that
+
+89
+00:05:13,669 --> 00:05:17,650
+we do first and we like give a master
+because they're gonna for the base is
+
+90
+00:05:17,650 --> 00:05:19,840
+almost everything else we look up
+
+91
+00:05:19,840 --> 00:05:23,070
+so there's next step continue and
+
+92
+00:05:23,070 --> 00:05:26,949
+issue present a real repeat the previous
+command except if its list in which case
+
+93
+00:05:26,949 --> 00:05:28,020
+we'll talk about that
+
+94
+00:05:28,020 --> 00:05:32,090
+so the PTB prompt can look a little
+foreign
+
+95
+00:05:32,090 --> 00:05:37,500
+I what point out its its books forum
+because it's meant for Speed
+
+96
+00:05:37,500 --> 00:05:41,270
+once you understand how to use it and
+you understand what the commands are
+
+97
+00:05:41,270 --> 00:05:45,039
+you can operate very very quickly and
+you can vary easily understand what's
+
+98
+00:05:45,039 --> 00:05:46,639
+going on your program
+
+99
+00:05:46,639 --> 00:05:49,639
+so you can always ask for help arm but
+he's commands
+
+100
+00:05:49,639 --> 00:05:52,660
+a except the undocumented ones of course
+
+101
+00:05:52,660 --> 00:05:58,729
+and arm and get into some context
+
+102
+00:05:58,729 --> 00:06:01,810
+so with look at how to enter PDB
+
+103
+00:06:01,810 --> 00:06:06,610
+directly at a particular point
+
+104
+00:06:06,610 --> 00:06:10,350
+but more useful in my experience is
+actually executing code under PCB's
+
+105
+00:06:10,350 --> 00:06:12,009
+control
+
+106
+00:06:12,009 --> 00:06:15,430
+and soldiers were gonna do for the rest
+to the presentation is look at how this
+
+107
+00:06:15,430 --> 00:06:17,360
+works and then dive into some more
+
+108
+00:06:17,360 --> 00:06:22,289
+um ways you can extend PDB for your
+particular users
+
+109
+00:06:22,289 --> 00:06:25,880
+PDB like a lot a Python modules can be
+excused as a script
+
+110
+00:06:25,880 --> 00:06:30,169
+so the Python basham PTB and then what
+you're actually going to run
+
+111
+00:06:30,169 --> 00:06:33,880
+this is gonna stop your program before
+it does anything so in this case you can
+
+112
+00:06:33,880 --> 00:06:35,699
+see a sub that should not shut up I
+
+113
+00:06:35,699 --> 00:06:40,410
+mine one it at the module level and it's
+getting ready to import sys
+
+114
+00:06:40,410 --> 00:06:45,069
+so it's done nothing at this point you
+can use this even for running Django
+
+115
+00:06:45,069 --> 00:06:46,120
+under PDB
+
+116
+00:06:46,120 --> 00:06:50,130
+so that you can do your gender run
+server and set a breakpoint which will
+
+117
+00:06:50,130 --> 00:06:50,819
+talk about
+
+118
+00:06:50,819 --> 00:06:54,020
+or do some other sort of introspection
+love love lower levels
+
+119
+00:06:54,020 --> 00:06:58,740
+other web app arm before the program
+starts
+
+120
+00:06:58,740 --> 00:07:02,180
+you can also do this there's all these
+run and run call functions
+
+121
+00:07:02,180 --> 00:07:05,199
+um I don't use a whole lot less I may be
+working in interactive
+
+122
+00:07:05,199 --> 00:07:08,569
+prompt your trying to understand a piece
+of code little better
+
+123
+00:07:08,569 --> 00:07:12,160
+but this was you i think is pretty clear
+the run with quotes
+
+124
+00:07:12,160 --> 00:07:16,900
+basically execs a little bit of code and
+run call takes a callable into arguments
+
+125
+00:07:16,900 --> 00:07:20,690
+excuse under PDB and again it stops
+immediately
+
+126
+00:07:20,690 --> 00:07:24,509
+it sort of interesting that you do arm
+run with the
+
+127
+00:07:24,509 --> 00:07:27,539
+quoted a code that
+
+128
+00:07:27,539 --> 00:07:30,979
+it stops inside of string1 module
+
+129
+00:07:30,979 --> 00:07:36,220
+as opposed to the actual thing because
+it hasn't actually him exact yet
+
+130
+00:07:36,220 --> 00:07:41,180
+so if we in one or two hundred and PB
+control and a PB immediately
+
+131
+00:07:41,180 --> 00:07:44,660
+we now have the necessary understanding
+
+132
+00:07:44,660 --> 00:07:48,720
+to back to debug under PB and help us
+our fix
+
+133
+00:07:48,720 --> 00:07:52,560
+somebody software I should point out
+that the software's
+
+134
+00:07:52,560 --> 00:07:56,460
+this little program is in the hub repo
+with the slides so
+
+135
+00:07:56,460 --> 00:07:59,800
+so I wrote a program small program but
+of course does a postfix notation
+
+136
+00:07:59,800 --> 00:08:00,860
+calculator
+
+137
+00:08:00,860 --> 00:08:04,569
+over HTTP as one is want to do arm
+
+138
+00:08:04,569 --> 00:08:07,830
+I think we're gonna roll it out as part
+of our payment system event bright
+
+139
+00:08:07,830 --> 00:08:12,009
+by Tom it's very important to the
+support post expectation
+
+140
+00:08:12,009 --> 00:08:15,750
+it so you can do things like 21 plus and
+get back three
+
+141
+00:08:15,750 --> 00:08:19,250
+you can do 210 starring at twenty up
+
+142
+00:08:19,250 --> 00:08:22,870
+to ten plus two star is naturally 24
+
+143
+00:08:22,870 --> 00:08:26,039
+um unfortunately up up
+
+144
+00:08:26,039 --> 00:08:29,180
+I'm not that good at writing calculators
+so
+
+145
+00:08:29,180 --> 00:08:32,469
+it's not a great with unexpected input
+so if I have something is not an integer
+
+146
+00:08:32,469 --> 00:08:33,500
+for example
+
+147
+00:08:33,500 --> 00:08:37,080
+it blows up with a valuer so if I wanna
+
+148
+00:08:37,080 --> 00:08:41,209
+X if I wanted to bug this program is in
+PB the first up is simply to run it
+
+149
+00:08:41,209 --> 00:08:42,510
+under PDB
+
+150
+00:08:42,510 --> 00:08:46,310
+you'll notice that it again it stops
+before does anything
+
+151
+00:08:46,310 --> 00:08:51,399
+its key rate import the whiskey server
+and I say continue COMT
+
+152
+00:08:51,399 --> 00:08:55,000
+it all tell me that it's ready to serve
+on poor 8,000
+
+153
+00:08:55,000 --> 00:08:58,240
+and now I can actually use curl to make
+my requests and started for you I was
+
+154
+00:08:58,240 --> 00:08:59,620
+going on
+
+155
+00:08:59,620 --> 00:09:03,100
+keep in mind we haven't put in a set
+race in here we're just running
+
+156
+00:09:03,100 --> 00:09:08,519
+under PB so we run under PB and UX you
+curled
+
+157
+00:09:08,519 --> 00:09:13,680
+it's going to again give you trace back
+because bug still exists
+
+158
+00:09:13,680 --> 00:09:16,279
+but then it's going to tell you that
+there's uncaught exception and into
+
+159
+00:09:16,279 --> 00:09:18,370
+what's called the postmortem debugger
+
+160
+00:09:18,370 --> 00:09:22,480
+and this is one of my favorite PDB
+features it's one of the most useful in
+
+161
+00:09:22,480 --> 00:09:23,740
+my opinion because
+
+162
+00:09:23,740 --> 00:09:26,850
+this is what led to jump back in time
+
+163
+00:09:26,850 --> 00:09:30,130
+to arm 22 where your program died
+
+164
+00:09:30,130 --> 00:09:34,130
+I believe this is the core argue does
+Time Machine
+
+165
+00:09:34,130 --> 00:09:38,019
+so you see here with the exception
+occurred
+
+166
+00:09:38,019 --> 00:09:42,630
+is now telling us that is in the push
+method in PF calcd up I'll Mon 28
+
+167
+00:09:42,630 --> 00:09:45,680
+and it's getting ready to from call
+
+168
+00:09:45,680 --> 00:09:49,779
+int value or operator I say getting
+ready to call but its it meets already
+
+169
+00:09:49,779 --> 00:09:51,700
+been called write the program is already
+died
+
+170
+00:09:51,700 --> 00:09:55,200
+but this is where happened so this is
+the state I want actually inspect
+
+171
+00:09:55,200 --> 00:09:58,320
+to figure out um what went wrong my
+program
+
+172
+00:09:58,320 --> 00:10:01,930
+and i cant theres as much mental used to
+serve start inspecting stay looking
+
+173
+00:10:01,930 --> 00:10:02,709
+around
+
+174
+00:10:02,709 --> 00:10:06,870
+I can print the value or something I can
+look at arms with the arms to man
+
+175
+00:10:06,870 --> 00:10:10,769
+which tells me a exactly what the
+arguments were too
+
+176
+00:10:10,769 --> 00:10:14,610
+to the current function or method these
+are um
+
+177
+00:10:14,610 --> 00:10:18,800
+blue really useful dispersed but can
+understand in the lay of the land
+
+178
+00:10:18,800 --> 00:10:22,260
+also important because right now all I
+really know is a line 28 has this
+
+179
+00:10:22,260 --> 00:10:26,100
+int a value operator and this could
+potentially be code that
+
+180
+00:10:26,100 --> 00:10:30,040
+somebody else's or a third-party module
+so I can do list
+
+181
+00:10:30,040 --> 00:10:34,550
+and list by default Prince five lines
+above and below the current line so you
+
+182
+00:10:34,550 --> 00:10:35,450
+get a little bit
+
+183
+00:10:35,450 --> 00:10:38,620
+context really use PDB and
+
+184
+00:10:38,620 --> 00:10:43,000
+I think you should are it behooves you
+to read the list documentation because
+
+185
+00:10:43,000 --> 00:10:47,390
+its has some subtle behavior about what
+happens when you run list repeatedly
+
+186
+00:10:47,390 --> 00:10:50,540
+it incentive repeating the exact command
+and show you those lines
+
+187
+00:10:50,540 --> 00:10:54,040
+it starts to show you more more code
+which can if not
+
+188
+00:10:54,040 --> 00:10:58,070
+aware of it it can be a little
+disorienting um
+
+189
+00:10:58,070 --> 00:11:01,260
+and always want to %uh show for Python 3
+
+190
+00:11:01,260 --> 00:11:05,490
+Python 3.2 a added the long list command
+lol
+
+191
+00:11:05,490 --> 00:11:08,610
+this is pretty great on a look inside
+you got the normal list
+
+192
+00:11:08,610 --> 00:11:11,779
+which shows the five lines above and
+below
+
+193
+00:11:11,779 --> 00:11:15,610
+on the right hand side have long list
+long list is delightful it only shows
+
+194
+00:11:15,610 --> 00:11:18,560
+you the current method or function
+that's being executed
+
+195
+00:11:18,560 --> 00:11:21,760
+so you can see it actually gives me this
+information that but about the
+
+196
+00:11:21,760 --> 00:11:22,890
+conditional on about love
+
+197
+00:11:22,890 --> 00:11:27,149
+the declaration I'm have missing in the
+in the Python to version
+
+198
+00:11:27,149 --> 00:11:30,720
+and also omits the def result from the
+and
+
+199
+00:11:30,720 --> 00:11:34,500
+was just kinda close up a display makes
+so one more thing to ignore
+
+200
+00:11:34,500 --> 00:11:39,310
+as I'm looking at arm trying to feel its
+programs during
+
+201
+00:11:39,310 --> 00:11:42,529
+in the sake fringe in the interest of
+completion leaders there is a pretty
+
+202
+00:11:42,529 --> 00:11:43,920
+print as well
+
+203
+00:11:43,920 --> 00:11:46,940
+great um
+
+204
+00:11:46,940 --> 00:11:50,130
+this does raise the issue in question I
+look at this pretty print slide how
+
+205
+00:11:50,130 --> 00:11:52,860
+would I do division with my a shitty be
+calculator
+
+206
+00:11:52,860 --> 00:11:57,649
+I don't know um so
+
+207
+00:11:57,649 --> 00:12:00,810
+that's great you can see what the that
+these values are
+
+208
+00:12:00,810 --> 00:12:04,579
+but a lot of times you'll have a
+hypothesis about what's going on you
+
+209
+00:12:04,579 --> 00:12:08,050
+me think oh yeah I think that I think
+this values actually
+
+210
+00:12:08,050 --> 00:12:11,329
+should be you know there should be
+
+211
+00:12:11,329 --> 00:12:15,820
+some other expression used or you know
+you want to something out in the context
+
+212
+00:12:15,820 --> 00:12:16,779
+to be running code
+
+213
+00:12:16,779 --> 00:12:20,240
+so PB provides the bangor exclamation
+point command
+
+214
+00:12:20,240 --> 00:12:24,800
+and them is it was an aside to explain
+why this is important because I this is
+
+215
+00:12:24,800 --> 00:12:26,630
+a miscarriage love people
+
+216
+00:12:26,630 --> 00:12:30,920
+if I have a function called added the
+stakes three numbers and adds them
+
+217
+00:12:30,920 --> 00:12:34,800
+and i wanna stop inside here because
+addition is hard
+
+218
+00:12:34,800 --> 00:12:38,690
+and i wanna inspect what's going on
+
+219
+00:12:38,690 --> 00:12:42,930
+so I saw Penelope B and now I wanna see
+what B-plus see on its own is
+
+220
+00:12:42,930 --> 00:12:47,130
+if I put that into PB it's going to give
+me this rather confusing message that
+
+221
+00:12:47,130 --> 00:12:50,700
+plus C is not a function or is not on
+the system path
+
+222
+00:12:50,700 --> 00:12:55,220
+arm let's sort of weird I was expecting
+that
+
+223
+00:12:55,220 --> 00:12:58,970
+what's going on here is that the PDB
+prompt
+
+224
+00:12:58,970 --> 00:13:02,850
+is a lot like pythons rubble prompt just
+not a smart
+
+225
+00:13:02,850 --> 00:13:06,360
+so when you have something that starts
+with Stef with the same letters
+
+226
+00:13:06,360 --> 00:13:10,730
+as a PB command getting to the commands
+in this case the things we're trying to
+
+227
+00:13:10,730 --> 00:13:11,940
+set a breakpoint
+
+228
+00:13:11,940 --> 00:13:15,820
+at the function name plus see which or
+not
+
+229
+00:13:15,820 --> 00:13:20,550
+if you do bang people's see you get the
+actual results you expect
+
+230
+00:13:20,550 --> 00:13:24,029
+highly encourage everyone to get in the
+habit of using the bank operator when
+
+231
+00:13:24,029 --> 00:13:24,329
+you're
+
+232
+00:13:24,329 --> 00:13:27,579
+workers had a PB if nothing else
+
+233
+00:13:27,579 --> 00:13:31,410
+because if you're a very bold name
+something like context
+
+234
+00:13:31,410 --> 00:13:34,769
+with the first four letters match be
+continue command
+
+235
+00:13:34,769 --> 00:13:38,389
+you won't accidentally blow away your
+entire debugging session and continuing
+
+236
+00:13:38,389 --> 00:13:39,130
+the program
+
+237
+00:13:39,130 --> 00:13:43,720
+when really all you wanted to see was
+that context
+
+238
+00:13:43,720 --> 00:13:47,750
+and again Python 3.2 is better are three
+is better there's interact command which
+
+239
+00:13:47,750 --> 00:13:54,750
+drops you right into an interactive
+shell so you don't have to remember that
+
+240
+00:13:58,100 --> 00:14:02,300
+so how do we action navigate the program
+though how so we've come alt we've been
+
+241
+00:14:02,300 --> 00:14:05,600
+looking at the state where an error
+occurred or so a break point
+
+242
+00:14:05,600 --> 00:14:09,170
+um the there's almost certainly going to
+be a desire
+
+243
+00:14:09,170 --> 00:14:12,480
+tis to see how we got into this mess and
+how we
+
+244
+00:14:12,480 --> 00:14:15,959
+how we got to the to the state that
+we're in an hour what the calls were up
+
+245
+00:14:15,959 --> 00:14:20,329
+to you here so if we have it will
+consider another are
+
+246
+00:14:20,329 --> 00:14:24,149
+bug in my calculator which I
+
+247
+00:14:24,149 --> 00:14:28,540
+I you the VP of Engineering is here and
+i'm talking about these bugs my software
+
+248
+00:14:28,540 --> 00:14:29,089
+so
+
+249
+00:14:29,089 --> 00:14:32,899
+I hope that um hopis he's forgetful
+around
+
+250
+00:14:32,899 --> 00:14:36,120
+performers resign but um
+
+251
+00:14:36,120 --> 00:14:39,870
+easier 523 plus five I've got this extra
+
+252
+00:14:39,870 --> 00:14:43,320
+operandi my into my postfix notation
+
+253
+00:14:43,320 --> 00:14:46,880
+and its gonna raise a syntax error
+turnabout expression for much for my
+
+254
+00:14:46,880 --> 00:14:49,070
+particular calculator
+
+255
+00:14:49,070 --> 00:14:52,959
+among into PB so again I'm gonna drop
+into the prompt right away
+
+256
+00:14:52,959 --> 00:14:56,610
+um and I can use the where command to
+figure out
+
+257
+00:14:56,610 --> 00:15:00,760
+just what the Cossack yes and I wasn't
+like actually a middle much allies
+
+258
+00:15:00,760 --> 00:15:03,820
+in the hopes for making this like summer
+readable um
+
+259
+00:15:03,820 --> 00:15:07,730
+but the important thing to note here is
+that the free first line is the first
+
+260
+00:15:07,730 --> 00:15:09,240
+call your program made
+
+261
+00:15:09,240 --> 00:15:12,360
+to get here and the last one on the
+bottom of the slide here
+
+262
+00:15:12,360 --> 00:15:15,060
+is the actual point where the error
+occurred so this is just like a
+
+263
+00:15:15,060 --> 00:15:16,740
+traceback stack trace
+
+264
+00:15:16,740 --> 00:15:20,250
+a that shows you how you got to this
+particular point
+
+265
+00:15:20,250 --> 00:15:23,620
+and you can go up and down the stock so
+if you
+
+266
+00:15:23,620 --> 00:15:26,800
+use the up the company name up command
+yellow
+
+267
+00:15:26,800 --> 00:15:30,860
+wind up at the previous call and you can
+action spectra look at the frame their
+
+268
+00:15:30,860 --> 00:15:34,389
+and you go down and any other commands
+my issue
+
+269
+00:15:34,389 --> 00:15:39,279
+are gonna be actually actually um
+execute in that context so
+
+270
+00:15:39,279 --> 00:15:42,750
+this movie so you can see how this let
+you start to build up
+
+271
+00:15:42,750 --> 00:15:46,490
+they are suite of tools for use in and
+then apply them a different point in
+
+272
+00:15:46,490 --> 00:15:47,130
+your program
+
+273
+00:15:47,130 --> 00:15:50,630
+to really understand what's going on how
+are you out maybe your code interface
+
+274
+00:15:50,630 --> 00:15:52,820
+with other party coder with a framework
+
+275
+00:15:52,820 --> 00:15:56,720
+some like that
+
+276
+00:15:56,720 --> 00:15:59,860
+so I want one quick note about
+post-mortem to bug in which is what
+
+277
+00:15:59,860 --> 00:16:01,170
+we've been using a lot of here
+
+278
+00:16:01,170 --> 00:16:05,970
+where we jump back in time to this
+exceptional were occurred
+
+279
+00:16:05,970 --> 00:16:09,430
+when we run lemme um under the PDP
+module
+
+280
+00:16:09,430 --> 00:16:13,279
+were running with postmortem debugger
+and our server starts with these
+
+281
+00:16:13,279 --> 00:16:16,769
+I love you know threes three statements
+we make the server
+
+282
+00:16:16,769 --> 00:16:20,360
+we present status message and we surfer
+ever
+
+283
+00:16:20,360 --> 00:16:24,899
+the postmortem debugger effectively does
+this it effectively wraps that code in a
+
+284
+00:16:24,899 --> 00:16:26,019
+try except
+
+285
+00:16:26,019 --> 00:16:29,990
+a barracks up so catches everything
+imports PDB
+
+286
+00:16:29,990 --> 00:16:33,709
+and then calls P beat-up post-mortem so
+
+287
+00:16:33,709 --> 00:16:37,149
+this looks an awful lot like AR
+
+288
+00:16:37,149 --> 00:16:40,199
+uS actress call read import PTV copy to
+be set race
+
+289
+00:16:40,199 --> 00:16:43,730
+but its it significantly different I
+wanna show you what show you how
+
+290
+00:16:43,730 --> 00:16:47,759
+arm and I also want to note water here
+the you can use this in your own
+
+291
+00:16:47,759 --> 00:16:50,290
+software if you have some sort of
+exception handler
+
+292
+00:16:50,290 --> 00:16:54,610
+and you actually have the exception to
+pull from likes this target last acts
+
+293
+00:16:54,610 --> 00:16:58,630
+AXA extn is um
+
+294
+00:16:58,630 --> 00:17:01,899
+you catch a pass that in the PDB and
+have a jump to a particular point as
+
+295
+00:17:01,899 --> 00:17:03,250
+opposed to just
+
+296
+00:17:03,250 --> 00:17:08,709
+a bear exception so if we view such
+racist that a post-mortem
+
+297
+00:17:08,709 --> 00:17:11,839
+we're not gonna get all we want some
+
+298
+00:17:11,839 --> 00:17:15,260
+will hit wall curl to get into the
+debugger
+
+299
+00:17:15,260 --> 00:17:18,650
+and if you'll notice the point we stop
+
+300
+00:17:18,650 --> 00:17:22,339
+inside a PB is actually the set trace
+
+301
+00:17:22,339 --> 00:17:25,860
+call not were the exception occurred so
+this point
+
+302
+00:17:25,860 --> 00:17:30,080
+that call to out how to the calculator
+has already been made
+
+303
+00:17:30,080 --> 00:17:34,980
+has failed it has raise an exception and
+all the context is gone
+
+304
+00:17:34,980 --> 00:17:38,370
+so the post-war letters is Islam
+
+305
+00:17:38,370 --> 00:17:41,799
+is pretty honking great
+
+306
+00:17:41,799 --> 00:17:46,000
+so moving on to break points this is a
+more started i've a little bit deeper
+
+307
+00:17:46,000 --> 00:17:48,169
+into PB
+
+308
+00:17:48,169 --> 00:17:51,299
+on break points
+
+309
+00:17:51,299 --> 00:17:55,740
+are a way to set stop point in your code
+without actually edited it
+
+310
+00:17:55,740 --> 00:17:58,950
+which i think is pretty great especially
+are doing with system library or a
+
+311
+00:17:58,950 --> 00:17:59,960
+framework
+
+312
+00:17:59,960 --> 00:18:03,679
+so here's an example where on the left
+hand side in a slider seen
+
+313
+00:18:03,679 --> 00:18:07,789
+the some code from our our posts are
+cock their application
+
+314
+00:18:07,789 --> 00:18:11,210
+this is the actual risk yet whiskey up
+portion of it on the right hand side
+
+315
+00:18:11,210 --> 00:18:12,830
+you're seen the shell
+
+316
+00:18:12,830 --> 00:18:15,900
+interaction I love running under PTB
+
+317
+00:18:15,900 --> 00:18:20,490
+and now incentives type in COMT to
+continuous news entropy be
+
+318
+00:18:20,490 --> 00:18:24,270
+I'm gonna tell I wanna break at PF calcd
+RRP an app
+
+319
+00:18:24,270 --> 00:18:28,309
+so review set a breakpoint you can be
+either a callable
+
+320
+00:18:28,309 --> 00:18:32,140
+or it can be at a particular line
+number: arm
+
+321
+00:18:32,140 --> 00:18:36,440
+in in a in a file and this file can be
+located
+
+322
+00:18:36,440 --> 00:18:40,539
+any in any directory that on the Python
+path
+
+323
+00:18:40,539 --> 00:18:44,270
+you'll see that told that Pb tells you
+the break point number one was Sat
+
+324
+00:18:44,270 --> 00:18:47,429
+tell you what line was set at and now we
+go ahead and continue
+
+325
+00:18:47,429 --> 00:18:51,549
+so seven break-point is really simple um
+it's a file online
+
+326
+00:18:51,549 --> 00:18:55,179
+or some function more product return to
+that last parameter the condition in a
+
+327
+00:18:55,179 --> 00:18:57,539
+little while
+
+328
+00:18:57,539 --> 00:19:00,650
+so what is it a break point if we
+
+329
+00:19:00,650 --> 00:19:04,419
+use curl to make a another request
+
+330
+00:19:04,419 --> 00:19:09,299
+you can see that is gonna stop right
+inside I love that RPN out function that
+
+331
+00:19:09,299 --> 00:19:10,539
+we've talked about before
+
+332
+00:19:10,539 --> 00:19:14,120
+even Chris the hike after class before
+tries to process the
+
+333
+00:19:14,120 --> 00:19:19,730
+the arm input with him you inspect the
+state of things like in Marin path info
+
+334
+00:19:19,730 --> 00:19:23,850
+I and then we can go ahead and continue
+in let Iran or you may we actually want
+
+335
+00:19:23,850 --> 00:19:24,390
+to
+
+336
+00:19:24,390 --> 00:19:27,480
+look up in on the stock for some reason
+
+337
+00:19:27,480 --> 00:19:30,830
+just a little bit I've additional
+commission a break points I'm when you
+
+338
+00:19:30,830 --> 00:19:33,549
+issue the Britpop brakeman by itself
+without any promoters
+
+339
+00:19:33,549 --> 00:19:36,520
+I'll tell you what list all the break
+points for you and tell you have been
+
+340
+00:19:36,520 --> 00:19:37,270
+triggered
+
+341
+00:19:37,270 --> 00:19:40,309
+arm the number of times triggered
+
+342
+00:19:40,309 --> 00:19:44,289
+is usually not all that interesting to
+me he had there have been times I've
+
+343
+00:19:44,289 --> 00:19:45,559
+used briefly commands
+
+344
+00:19:45,559 --> 00:19:49,400
+incorrectly and I realize I only realize
+it because
+
+345
+00:19:49,400 --> 00:19:52,929
+the the count getting commended but um I
+think I'll
+
+346
+00:19:52,929 --> 00:19:57,419
+washable and AnnaLynne a little bit
+
+347
+00:19:57,419 --> 00:20:01,220
+%uh when you're running under PDB in the
+post-war debugger the other thing that's
+
+348
+00:20:01,220 --> 00:20:02,220
+interesting is
+
+349
+00:20:02,220 --> 00:20:05,380
+if you press Control see or is a program
+stops
+
+350
+00:20:05,380 --> 00:20:09,720
+is gonna automatically restart it for
+you and all these break points remain
+
+351
+00:20:09,720 --> 00:20:10,480
+intact
+
+352
+00:20:10,480 --> 00:20:14,020
+so this is pretty handy at if you're
+working on a program
+
+353
+00:20:14,020 --> 00:20:17,190
+and %ah you're making a few changes
+
+354
+00:20:17,190 --> 00:20:21,809
+in the Coen in your your code based on a
+break inside the frame or the calls it
+
+355
+00:20:21,809 --> 00:20:25,740
+to actually step into an aspect was
+going on you can make your edits
+
+356
+00:20:25,740 --> 00:20:29,500
+control see restart the program you
+break points are intact and you're ready
+
+357
+00:20:29,500 --> 00:20:30,549
+to go again
+
+358
+00:20:30,549 --> 00:20:34,030
+um so P be a pretty good job love
+managing
+
+359
+00:20:34,030 --> 00:20:37,070
+of managing this information for you so
+you can
+
+360
+00:20:37,070 --> 00:20:44,070
+really focus on debugging your program
+
+361
+00:20:44,409 --> 00:20:48,120
+there are few arm additional commands
+around breakpoints to enable them to
+
+362
+00:20:48,120 --> 00:20:49,730
+disable them
+
+363
+00:20:49,730 --> 00:20:53,070
+not a particular interest in
+
+364
+00:20:53,070 --> 00:20:56,080
+so what about that condition clause some
+
+365
+00:20:56,080 --> 00:21:00,000
+in the break in when he comes same break
+points this assortment wrist in um
+
+366
+00:21:00,000 --> 00:21:03,789
+there are times when you a if you're
+buying a web application for example
+
+367
+00:21:03,789 --> 00:21:07,090
+arm you might wanna only you know what
+your problem
+
+368
+00:21:07,090 --> 00:21:10,679
+you no problem occurs on posts but you
+don't wanna break
+
+369
+00:21:10,679 --> 00:21:14,200
+at every request because there's a whole
+lotta gets before you
+
+370
+00:21:14,200 --> 00:21:17,230
+actually are able to push the button and
+up
+
+371
+00:21:17,230 --> 00:21:21,470
+and get the post so YouTube reply
+conditioned to do that sort of give us
+
+372
+00:21:21,470 --> 00:21:23,039
+our behavior
+
+373
+00:21:23,039 --> 00:21:26,929
+the replay condition is a python
+expression that's going to be evaluated
+
+374
+00:21:26,929 --> 00:21:31,190
+in the context to the breakpoint and the
+breakpoint only going to fire
+
+375
+00:21:31,190 --> 00:21:34,789
+if it evaluates to something true team
+so in this case
+
+376
+00:21:34,789 --> 00:21:37,950
+I I'm gonna check if environment quest
+method
+
+377
+00:21:37,950 --> 00:21:41,950
+is not equal to get as Gus tell me that
+a break point
+
+378
+00:21:41,950 --> 00:21:46,350
+and I tiebreak it all let me know yep
+I've set a breakpoint for you and I'm
+
+379
+00:21:46,350 --> 00:21:47,230
+only gonna stop
+
+380
+00:21:47,230 --> 00:21:50,880
+if this condition is true so
+
+381
+00:21:50,880 --> 00:21:53,640
+be when you actually go to run your
+program you want to do something like
+
+382
+00:21:53,640 --> 00:21:54,559
+this
+
+383
+00:21:54,559 --> 00:21:57,720
+a lot entitlement program running on the
+right hand side I'm gonna show
+
+384
+00:21:57,720 --> 00:22:02,080
+some girl calls if I did million or
+request
+
+385
+00:22:02,080 --> 00:22:05,880
+two times three I'll simply see that
+outputs
+
+386
+00:22:05,880 --> 00:22:10,539
+the it returns the interest 6 and
+outputs the long line
+
+387
+00:22:10,539 --> 00:22:14,760
+I do to post reporters same thing but I
+do a post with coral
+
+388
+00:22:14,760 --> 00:22:19,039
+is a sheer drop me into PT be right
+there and now I can see the the request
+
+389
+00:22:19,039 --> 00:22:21,110
+method is post at this point
+
+390
+00:22:21,110 --> 00:22:25,120
+so report additions are really um
+
+391
+00:22:25,120 --> 00:22:28,809
+they make putting breakpoint very low
+levels
+
+392
+00:22:28,809 --> 00:22:33,000
+are palatable mitnick a possible if your
+own user django application to put
+
+393
+00:22:33,000 --> 00:22:34,539
+inside of the lowest level
+
+394
+00:22:34,539 --> 00:22:38,990
+our request handling arm it because if
+you know if you have an idea what you're
+
+395
+00:22:38,990 --> 00:22:39,770
+looking for
+
+396
+00:22:39,770 --> 00:22:45,530
+you can bring you still very narrowly
+target those breaks
+
+397
+00:22:45,530 --> 00:22:48,900
+to talk to her and her PDB how to look
+around a program
+
+398
+00:22:48,900 --> 00:22:52,700
+how to go up and down the stock how to
+set breakpoints
+
+399
+00:22:52,700 --> 00:22:56,190
+the final thing I wanna talk about arms
+afternoon
+
+400
+00:22:56,190 --> 00:23:00,350
+is how you extend PDB and some
+
+401
+00:23:00,350 --> 00:23:03,480
+so the and there's a couple different
+ways a
+
+402
+00:23:03,480 --> 00:23:07,159
+you go about this on
+
+403
+00:23:07,159 --> 00:23:10,860
+the and the first to these is aliases
+
+404
+00:23:10,860 --> 00:23:14,990
+wyman debugging a program I used or a
+lot
+
+405
+00:23:14,990 --> 00:23:18,409
+I'll if an object but i wanna look at
+
+406
+00:23:18,409 --> 00:23:21,720
+I'll ill with Django for example using a
+member right
+
+407
+00:23:21,720 --> 00:23:25,070
+i'm looking a model I know that there's
+a way legalistic
+
+408
+00:23:25,070 --> 00:23:28,750
+all the local fields not model but I can
+never for life me actually remember what
+
+409
+00:23:28,750 --> 00:23:29,440
+I method is
+
+410
+00:23:29,440 --> 00:23:32,570
+could ever call it my day-to-day work I
+only seem to call it when I'm
+
+411
+00:23:32,570 --> 00:23:35,950
+is the writing some more primer coat or
+when debugging something
+
+412
+00:23:35,950 --> 00:23:38,950
+so I use this Dr alias to from
+
+413
+00:23:38,950 --> 00:23:42,049
+shorthand pretty print door some
+
+414
+00:23:42,049 --> 00:23:45,539
+something and the shows he is the
+someone's going to get
+
+415
+00:23:45,539 --> 00:23:49,590
+Rep replaced any up with the first are
+you at the passengers alias
+
+416
+00:23:49,590 --> 00:23:53,690
+sold where does not look as if I just do
+a print on self I'm gonna get a rep
+
+417
+00:23:53,690 --> 00:23:55,340
+wrote this class right
+
+418
+00:23:55,340 --> 00:23:59,480
+but I use dr. self it's actually going
+to pretty print out
+
+419
+00:23:59,480 --> 00:24:02,870
+all the members of this class for me so
+
+420
+00:24:02,870 --> 00:24:07,450
+so this is sorrel showing a few couple
+things re house on a list that you can
+
+421
+00:24:07,450 --> 00:24:09,120
+pass parameters to them
+
+422
+00:24:09,120 --> 00:24:12,409
+and arm that this is an example to me
+that I use a lot
+
+423
+00:24:12,409 --> 00:24:16,980
+that probably doesn't belong inside of a
+the stock behavior
+
+424
+00:24:16,980 --> 00:24:21,539
+but I can put into interim my bag of
+tricks
+
+425
+00:24:21,539 --> 00:24:25,840
+um I didn't know why uses are will LOC
+for locals
+
+426
+00:24:25,840 --> 00:24:29,679
+arm I've got the love are absurdres
+whatever in PB bust
+
+427
+00:24:29,679 --> 00:24:33,710
+by default but know what would knowing
+what the state is a special on going up
+
+428
+00:24:33,710 --> 00:24:34,820
+in on the stock
+
+429
+00:24:34,820 --> 00:24:38,010
+is is particularly useful Elise
+
+430
+00:24:38,010 --> 00:24:41,159
+oh and this is what middle doll does
+show a local cues
+
+431
+00:24:41,159 --> 00:24:44,279
+is this can also refer other a-listers
+
+432
+00:24:44,279 --> 00:24:49,789
+arm so how predict alias I had a list
+that two pt
+
+433
+00:24:49,789 --> 00:24:54,190
+was imminent know here is that my PD
+alias doesn't specify percent one
+
+434
+00:24:54,190 --> 00:24:57,730
+all those arguments get passed on
+automatically for me so
+
+435
+00:24:57,730 --> 00:25:02,570
+I'll you I mention that the the PDB
+interpreter is old
+
+436
+00:25:02,570 --> 00:25:06,150
+it's simplistic in hand how approaches
+parson and
+
+437
+00:25:06,150 --> 00:25:10,309
+sousa find a match it's going to go
+ahead and pass on the remainder anything
+
+438
+00:25:10,309 --> 00:25:14,289
+22 that echoed in and of course
+
+439
+00:25:14,289 --> 00:25:18,080
+your aliases can also call aliases
+YouTube you can do you start composing
+
+440
+00:25:18,080 --> 00:25:18,929
+things
+
+441
+00:25:18,929 --> 00:25:23,029
+so missus this was a cookies are a
+little use for a while when I was
+
+442
+00:25:23,029 --> 00:25:26,200
+are more lot of sir classic Django views
+
+443
+00:25:26,200 --> 00:25:30,710
+that arm I wanted to look at what you
+know if I request in context what are
+
+444
+00:25:30,710 --> 00:25:34,400
+the cookies on that request
+
+445
+00:25:34,400 --> 00:25:39,309
+did the way that you can um extended PDB
+without actually headed in the sources
+
+446
+00:25:39,309 --> 00:25:41,110
+breakpoint commands
+
+447
+00:25:41,110 --> 00:25:44,580
+so these are commands that can be
+executed
+
+448
+00:25:44,580 --> 00:25:47,890
+when a break point is hit and they're
+actually hear it
+
+449
+00:25:47,890 --> 00:25:51,870
+just as if you were typed them at the PB
+prompt um
+
+450
+00:25:51,870 --> 00:25:55,659
+those you give us some of the commands
+that can be the water twenty or
+
+451
+00:25:55,659 --> 00:25:59,120
+I'll recommend you want basically
+anything except I
+
+452
+00:25:59,120 --> 00:26:02,919
+next door step or continue and and as
+the other one
+
+453
+00:26:02,919 --> 00:26:06,650
+and the reason you can use next step
+continue it could be modify
+
+454
+00:26:06,650 --> 00:26:10,760
+where the car frame is it would be
+ambiguous if you are you know what where
+
+455
+00:26:10,760 --> 00:26:11,789
+the next commander decks
+
+456
+00:26:11,789 --> 00:26:15,000
+what it would mean at that point so
+
+457
+00:26:15,000 --> 00:26:19,860
+example how this works is arm if I'm
+with you my calculator program again
+
+458
+00:26:19,860 --> 00:26:23,260
+I just wanna see some
+
+459
+00:26:23,260 --> 00:26:27,970
+what the stock looks like a as as a
+process as the input
+
+460
+00:26:27,970 --> 00:26:30,929
+I can do this for the breakpoint
+commands so the first thing I do is
+
+461
+00:26:30,929 --> 00:26:32,740
+actually set my break point
+
+462
+00:26:32,740 --> 00:26:37,320
+and I know that line 21 is where its I
+would have a pimple to the source
+
+463
+00:26:37,320 --> 00:26:40,940
+and I know it's where I wanna start
+looking at things
+
+464
+00:26:40,940 --> 00:26:44,580
+and then I tell it commands one so that
+one
+
+465
+00:26:44,580 --> 00:26:47,760
+is the breakpoint number that we got
+back from break
+
+466
+00:26:47,760 --> 00:26:52,320
+you can see the prompt changes from PDB
+to calm at this point now I'm entering
+
+467
+00:26:52,320 --> 00:26:54,100
+commands are gonna be executed
+
+468
+00:26:54,100 --> 00:26:57,720
+when this breakpoint shirts so in this
+case I want to do
+
+469
+00:26:57,720 --> 00:27:01,770
+a couple things I wanna pretty print the
+state which is the stock
+
+470
+00:27:01,770 --> 00:27:07,350
+and i wanna preprint what then what the
+next value or operator coming in is
+
+471
+00:27:07,350 --> 00:27:11,159
+and then I'm gonna continue as I
+continue
+
+472
+00:27:11,159 --> 00:27:15,350
+drop you back to the PB prompt I can
+continue again to action star serving my
+
+473
+00:27:15,350 --> 00:27:17,299
+program
+
+474
+00:27:17,299 --> 00:27:20,350
+so when I run this what happens is I
+
+475
+00:27:20,350 --> 00:27:25,380
+make a call request and it goes to a
+bunch of steps for me
+
+476
+00:27:25,380 --> 00:27:29,320
+basically is gonna continues to hit his
+break point three times
+
+477
+00:27:29,320 --> 00:27:33,299
+in the process of process the one
+request but is never actually gonna stop
+
+478
+00:27:33,299 --> 00:27:34,110
+executing
+
+479
+00:27:34,110 --> 00:27:37,870
+because the last commander told it was
+continue so this is an example where
+
+480
+00:27:37,870 --> 00:27:41,559
+I've now effectively used a break point
+which normally stops execution
+
+481
+00:27:41,559 --> 00:27:44,799
+to simply give me a little bit of
+context about what's going on
+
+482
+00:27:44,799 --> 00:27:48,620
+so that I can play with my program a
+little bit and understand it better
+
+483
+00:27:48,620 --> 00:27:51,700
+um and and go back and look at it
+
+484
+00:27:51,700 --> 00:27:56,039
+is also a you know it you knows does
+still say it does still
+
+485
+00:27:56,039 --> 00:28:00,390
+point out PF calcd up I 21 to tell me
+where it's breakin
+
+486
+00:28:00,390 --> 00:28:03,610
+there's also a silent command you can
+give it to completely suppress that so
+
+487
+00:28:03,610 --> 00:28:06,720
+that all you see is this log information
+
+488
+00:28:06,720 --> 00:28:10,230
+are my views this bomb a few times
+
+489
+00:28:10,230 --> 00:28:14,880
+when been debating something in is again
+inside a framework inside a python
+
+490
+00:28:14,880 --> 00:28:19,909
+um where I wanted to know what was going
+on when I seen some code
+
+491
+00:28:19,909 --> 00:28:24,000
+but I did actually wanna stop because I
+it was hit a whole lot
+
+492
+00:28:24,000 --> 00:28:27,960
+and I just wanted to grab a bunch of
+State or on
+
+493
+00:28:27,960 --> 00:28:33,610
+because I was doing a much more
+operations on on a program
+
+494
+00:28:33,610 --> 00:28:37,330
+the some customization we talked about
+are interesting
+
+495
+00:28:37,330 --> 00:28:42,730
+but vay require that you actually type
+in these commands rightly you type in an
+
+496
+00:28:42,730 --> 00:28:45,039
+alias antibodies breakpoint commands
+
+497
+00:28:45,039 --> 00:28:49,980
+and PTV actually provides a speedy BRC
+file
+
+498
+00:28:49,980 --> 00:28:55,529
+and this is actually one what you want
+to create for yourself or for your team
+
+499
+00:28:55,529 --> 00:29:00,950
+if you're gonna have his commands that
+you share took sort of tool PDB for your
+
+500
+00:29:00,950 --> 00:29:02,390
+particular project or
+
+501
+00:29:02,390 --> 00:29:06,059
+organization this can be look at your
+home directory or
+
+502
+00:29:06,059 --> 00:29:09,840
+or the current directory and if they
+both exist is gonna actually the home
+
+503
+00:29:09,840 --> 00:29:12,970
+version first and then the current
+directory and these commiserate are
+
+504
+00:29:12,970 --> 00:29:13,770
+basically entered
+
+505
+00:29:13,770 --> 00:29:17,350
+exactly as if they were entered entered
+at PB's prompt
+
+506
+00:29:17,350 --> 00:29:21,340
+so you could imagine um using this
+
+507
+00:29:21,340 --> 00:29:26,049
+225 much a-listers defined break points
+you commonly use and then
+
+508
+00:29:26,049 --> 00:29:29,779
+disable them so they're they're waiting
+waiting for you when you drop in the PDB
+
+509
+00:29:29,779 --> 00:29:30,789
+in need them
+
+510
+00:29:30,789 --> 00:29:34,070
+um and and at all that sort of thing
+
+511
+00:29:34,070 --> 00:29:41,070
+and you gotta be that put comment on it
+so that its are clear
+
+512
+00:29:41,399 --> 00:29:45,480
+its pretty powerful actually this is an
+example I found
+
+513
+00:29:45,480 --> 00:29:48,940
+some the somebody smarter than me
+figured out which is how to implement
+
+514
+00:29:48,940 --> 00:29:50,039
+stopwatch
+
+515
+00:29:50,039 --> 00:29:53,880
+and next watch and what this does is it
+adds to commence to PB
+
+516
+00:29:53,880 --> 00:29:57,649
+the basically say continue execution
+until this very bored I'm watching
+
+517
+00:29:57,649 --> 00:29:59,610
+changes
+
+518
+00:29:59,610 --> 00:30:03,480
+arm there's some really interesting
+stuff going on here
+
+519
+00:30:03,480 --> 00:30:07,520
+and for people who one actually doctors
+were diving the PB's
+
+520
+00:30:07,520 --> 00:30:11,240
+you know the actual controls a bit the
+the religion thing to me here's the
+
+521
+00:30:11,240 --> 00:30:12,370
+command Q
+
+522
+00:30:12,370 --> 00:30:16,169
+cm dq kisses mission is pushing more
+command into the queue
+
+523
+00:30:16,169 --> 00:30:19,850
+I as part of as part of execution alias
+
+524
+00:30:19,850 --> 00:30:23,270
+from so there's
+
+525
+00:30:23,270 --> 00:30:26,899
+lessened the sack overflowing in the AM
+slides that
+
+526
+00:30:26,899 --> 00:30:29,779
+you can go on with the entire discussion
+about it but those pretty interesting
+
+527
+00:30:29,779 --> 00:30:30,429
+that this is
+
+528
+00:30:30,429 --> 00:30:34,529
+some behavior that's pretty nice to have
+inside your debugger
+
+529
+00:30:34,529 --> 00:30:38,679
+that you can very easily add to with the
+PBR see
+
+530
+00:30:38,679 --> 00:30:42,200
+BB also arm to me um
+
+531
+00:30:42,200 --> 00:30:47,130
+is acceptable by other tools um but not
+to talk about it in depth but as well
+
+532
+00:30:47,130 --> 00:30:47,970
+mention that there's
+
+533
+00:30:47,970 --> 00:30:51,140
+budget wasn't on public PB over
+WebSockets
+
+534
+00:30:51,140 --> 00:30:55,340
+PB on in a sure curses interface
+
+535
+00:30:55,340 --> 00:30:59,980
+there's a I P be the dads tab completion
+all these are built on the same core and
+
+536
+00:30:59,980 --> 00:31:03,880
+if your gonna start museum every we
+talked about works
+
+537
+00:31:03,880 --> 00:31:07,899
+in these tools as well arm so these my
+really want check out
+
+538
+00:31:07,899 --> 00:31:11,250
+if your knee max user and I hope you are
+um
+
+539
+00:31:11,250 --> 00:31:14,919
+there's Python mode includes a nickel
+PDB track
+
+540
+00:31:14,919 --> 00:31:18,659
+which his arms are the most amazing
+thing ever wear it will actually
+
+541
+00:31:18,659 --> 00:31:22,169
+I'll follow you as usual if you want to
+be inside the max
+
+542
+00:31:22,169 --> 00:31:25,240
+and why would he of course um
+
+543
+00:31:25,240 --> 00:31:28,529
+it will open files as you hit them so
+that a
+
+544
+00:31:28,529 --> 00:31:32,330
+you always have the floor buffer right
+next to you
+
+545
+00:31:32,330 --> 00:31:36,799
+Sappi be let you explore your program
+however Christie about that
+
+546
+00:31:36,799 --> 00:31:40,279
+you can stop inside of code you can only
+edit and
+
+547
+00:31:40,279 --> 00:31:44,309
+BB is extensible you can actually make
+it fit your particular needs
+
+548
+00:31:44,309 --> 00:31:47,750
+um and your particular project with some
+very simple commands
+
+549
+00:31:47,750 --> 00:31:51,289
+arm and I hope the y'all
+
+550
+00:31:51,289 --> 00:31:54,620
+walkway I'm here understanding that PDB
+is a
+
+551
+00:31:54,620 --> 00:32:01,620
+is a great we'll have a little bag thank
+you
+
+552
+00:32:04,890 --> 00:32:07,890
+I think we have a few minutes for
+questions the farm maybe has them
+
+553
+00:32:07,890 --> 00:32:08,960
+there's a mic on
+
+554
+00:32:08,960 --> 00:32:15,960
+other side
+
+555
+00:32:19,520 --> 00:32:22,660
+thank you for the dark and your home at
+my question is
+
+556
+00:32:22,660 --> 00:32:27,010
+related to when you have a break point
+into his
+
+557
+00:32:27,010 --> 00:32:30,240
+loop a hand is this group is
+
+558
+00:32:30,240 --> 00:32:33,500
+really fast and every time you
+
+559
+00:32:33,500 --> 00:32:37,059
+it continue you good you go back at some
+point like
+
+560
+00:32:37,059 --> 00:32:40,800
+you know that you have a million
+iteration all big member
+
+561
+00:32:40,800 --> 00:32:45,520
+right and you want to quit and you
+create and then you get back to the same
+
+562
+00:32:45,520 --> 00:32:46,890
+point in you breathe again and
+
+563
+00:32:46,890 --> 00:32:49,890
+good book and then you look for the
+
+564
+00:32:49,890 --> 00:32:54,179
+the ID to kill it in right for the
+there's a couple different
+
+565
+00:32:54,179 --> 00:32:58,820
+commands we'll talk about end up the
+that would be useful a bigger kit
+
+566
+00:32:58,820 --> 00:32:59,980
+particulars case
+
+567
+00:32:59,980 --> 00:33:04,040
+there's a week if you are done looking
+at a particular function you just want
+
+568
+00:33:04,040 --> 00:33:04,760
+to get out of it
+
+569
+00:33:04,760 --> 00:33:07,920
+there's a return command there will be
+one until the current
+
+570
+00:33:07,920 --> 00:33:11,640
+context um returns um
+
+571
+00:33:11,640 --> 00:33:15,470
+and so that with that would know if you
+if you a break points at
+
+572
+00:33:15,470 --> 00:33:18,490
+though you have to some you could either
+
+573
+00:33:18,490 --> 00:33:21,559
+chart the return
+
+574
+00:33:21,559 --> 00:33:24,330
+which will return for the current
+context and there's until we fall run
+
+575
+00:33:24,330 --> 00:33:25,870
+until a particular line is hit
+
+576
+00:33:25,870 --> 00:33:29,420
+but if you have a break points at than
+what you really need to do is
+
+577
+00:33:29,420 --> 00:33:33,730
+arm disable it or tell it to ignore so
+there was a slight like
+
+578
+00:33:33,730 --> 00:33:38,800
+452 replica mens if you know that is
+going to have another 10,000 iterations
+
+579
+00:33:38,800 --> 00:33:41,910
+but you might say ignore to
+
+580
+00:33:41,910 --> 00:33:47,140
+forces by .2 5,000 as girl in 15
+thousand times in a little break for you
+
+581
+00:33:47,140 --> 00:33:50,390
+so there's a couple drops you can depend
+on how to set it up
+
+582
+00:33:50,390 --> 00:33:54,809
+but return until and then ignore disable
+are probably give us a look at
+
+583
+00:33:54,809 --> 00:33:58,950
+thanks us who
+
+584
+00:33:58,950 --> 00:34:02,970
+when you're with when you're working on
+a project I
+
+585
+00:34:02,970 --> 00:34:06,540
+you did mention the the BRC right and
+said the
+
+586
+00:34:06,540 --> 00:34:10,399
+the breakpoints command their arm that
+is
+
+587
+00:34:10,399 --> 00:34:14,490
+AC its desirable to said the the break
+points there
+
+588
+00:34:14,490 --> 00:34:17,500
+arm but is there a way to said
+
+589
+00:34:17,500 --> 00:34:20,929
+the breakpoints in the source itself
+maybe
+
+590
+00:34:20,929 --> 00:34:24,760
+and only trigger them if a certain flag
+is called
+
+591
+00:34:24,760 --> 00:34:29,020
+I I saw that you can import PDB so I'm
+guessing that year I do that
+
+592
+00:34:29,020 --> 00:34:32,409
+arm and my second question follow-up to
+that
+
+593
+00:34:32,409 --> 00:34:36,409
+is arm would you use PTV to
+
+594
+00:34:36,409 --> 00:34:40,429
+test and and an instance on a staging
+server and maybe
+
+595
+00:34:40,429 --> 00:34:43,899
+pipe though results at the calls to I
+don't know
+
+596
+00:34:43,899 --> 00:34:48,740
+syslog or whatever so with respect your
+first question about
+
+597
+00:34:48,740 --> 00:34:52,139
+um I magnin as you clarify commercial
+segment so maybe stay there
+
+598
+00:34:52,139 --> 00:34:55,139
+are with respect to the first question
+about
+
+599
+00:34:55,139 --> 00:35:00,320
+arm about condition about dismissed by
+the break point inside at the source
+
+600
+00:35:00,320 --> 00:35:03,560
+and only triggering a in certain
+conditions
+
+601
+00:35:03,560 --> 00:35:07,369
+at that point is really no different
+than using such a race
+
+602
+00:35:07,369 --> 00:35:10,869
+so something the you might do is you
+know if
+
+603
+00:35:10,869 --> 00:35:15,450
+some fly is true then PDB does a trace
+and the centrists was gone actually drop
+
+604
+00:35:15,450 --> 00:35:15,780
+into
+
+605
+00:35:15,780 --> 00:35:18,859
+into PDB yeah I was mostly
+
+606
+00:35:18,859 --> 00:35:22,070
+interested in up for example I want to
+run
+
+607
+00:35:22,070 --> 00:35:25,359
+my program and I'm only interested in
+the post-mortem
+
+608
+00:35:25,359 --> 00:35:29,130
+so it's like okay run this do I have to
+go in and
+
+609
+00:35:29,130 --> 00:35:32,980
+type continue I C um
+
+610
+00:35:32,980 --> 00:35:38,190
+you don't have to so some you could
+
+611
+00:35:38,190 --> 00:35:41,670
+the so basically you just need a use the
+post-mortem call
+
+612
+00:35:41,670 --> 00:35:46,150
+at a top love and a top or bottom
+handler so
+
+613
+00:35:46,150 --> 00:35:49,490
+you can imagine writing Django
+middleware for example the prior has a
+
+614
+00:35:49,490 --> 00:35:53,190
+that has a Heather exception handler on
+it that
+
+615
+00:35:53,190 --> 00:35:56,230
+imports PDB incalls PDB DUP post-mortem
+
+616
+00:35:56,230 --> 00:36:00,340
+arm with the exception information from
+from sister I get lost
+
+617
+00:36:00,340 --> 00:36:03,710
+the xy um you
+
+618
+00:36:03,710 --> 00:36:07,900
+good imagine the island soap years ago
+had a post-mortem debugging mode as well
+
+619
+00:36:07,900 --> 00:36:09,520
+that basically the same thing so
+
+620
+00:36:09,520 --> 00:36:12,820
+all you really do without points have a
+top-level exception handler
+
+621
+00:36:12,820 --> 00:36:15,940
+and then you won't have to and calls PB
+a post-mortem
+
+622
+00:36:15,940 --> 00:36:19,960
+and then you will have to arm type
+continue in the program
+
+623
+00:36:19,960 --> 00:36:22,980
+was read your second question around um
+running this on
+
+624
+00:36:22,980 --> 00:36:26,740
+staging and piping it to syslog I'm not
+too sure
+
+625
+00:36:26,740 --> 00:36:30,570
+a creamy PB is really an interactive
+tool you could conceivably arm
+
+626
+00:36:30,570 --> 00:36:34,840
+you conceivably is how a break point has
+some commands that print is something
+
+627
+00:36:34,840 --> 00:36:35,230
+out
+
+628
+00:36:35,230 --> 00:36:39,310
+um I'm not sure how useful it actually
+is there are there goes standard air
+
+629
+00:36:39,310 --> 00:36:43,200
+so if you can read rushed into their
+that just sort of peoples gather
+
+630
+00:36:43,200 --> 00:36:46,740
+thats a great momentum thank you talk
+
+631
+00:36:46,740 --> 00:36:50,350
+and don't really have a question but on
+I D one point out that if the your nine
+
+632
+00:36:50,350 --> 00:36:52,890
+Python user you can use test PDB
+
+633
+00:36:52,890 --> 00:36:56,609
+in if you get an exception I'm hi sonya
+dropped right into it
+
+634
+00:36:56,609 --> 00:37:00,380
+a call so that if is out if using iPod
+on from
+
+635
+00:37:00,380 --> 00:37:03,730
+interpreter is just a dash PB it'll drop
+in the PDB
+
+636
+00:37:03,730 --> 00:37:07,320
+exactly in that applies to the notebook
+as well ok cool
+
+637
+00:37:07,320 --> 00:37:11,690
+return 0 thanks one of the really nice
+features a
+
+638
+00:37:11,690 --> 00:37:16,210
+DDB is being out to attach to a program
+and started packing yet when its only
+
+639
+00:37:16,210 --> 00:37:16,770
+run
+
+640
+00:37:16,770 --> 00:37:20,510
+was one of those remote ones can do
+something like that
+
+641
+00:37:20,510 --> 00:37:24,480
+so um RTB sort of does that
+
+642
+00:37:24,480 --> 00:37:29,340
+we desire to be before two arm basically
+listen ot have another process wasn't or
+
+643
+00:37:29,340 --> 00:37:30,140
+socket
+
+644
+00:37:30,140 --> 00:37:33,580
+and then let you attaches something are
+
+645
+00:37:33,580 --> 00:37:36,590
+have another thread that was not a
+socket let you attach
+
+646
+00:37:36,590 --> 00:37:40,260
+that way there's actually a project that
+was on I
+
+647
+00:37:40,260 --> 00:37:43,620
+came across a complete so-called higher
+inge
+
+648
+00:37:43,620 --> 00:37:48,260
+that does GB style attachment so is pyar
+ING
+
+649
+00:37:48,260 --> 00:37:51,950
+allied include here cuz doesn't actually
+use PDB it uses stone
+
+650
+00:37:51,950 --> 00:37:57,050
+sort of command syntax but that might be
+something that you will look at as well
+
+651
+00:37:57,050 --> 00:38:01,609
+I have an hour compared GB question
+their way to get like a display
+
+652
+00:38:01,609 --> 00:38:06,040
+like GB such a considers alt I'll
+expression or variables as I step
+
+653
+00:38:06,040 --> 00:38:06,960
+through code
+
+654
+00:38:06,960 --> 00:38:10,650
+um so the question is around whether you
+can see our display that shows the
+
+655
+00:38:10,650 --> 00:38:11,970
+resulting special as the comps
+
+656
+00:38:11,970 --> 00:38:15,650
+as its happening right select Display
+you right
+
+657
+00:38:15,650 --> 00:38:19,400
+um the closest I be able to get
+
+658
+00:38:19,400 --> 00:38:22,940
+is basically the breakpoint commands
+which continues so
+
+659
+00:38:22,940 --> 00:38:26,710
+is it they're dumb I think PUD be
+
+660
+00:38:26,710 --> 00:38:31,570
+is this curses version yet it's a and
+it's really great yeah and then that has
+
+661
+00:38:31,570 --> 00:38:33,630
+the sort of dumb display you're talking
+about
+
+662
+00:38:33,630 --> 00:38:36,640
+before your stock PDB um
+
+663
+00:38:36,640 --> 00:38:42,460
+the there's not really a place to show
+that very aware that might be outputted
+
+664
+00:38:42,460 --> 00:38:47,730
+on a soul one-timer debugger that
+unsupported an understatement
+
+665
+00:38:47,730 --> 00:38:51,790
+and no interest in phnom so he's 70 on
+Thames to tipper
+
+666
+00:38:51,790 --> 00:38:55,480
+I'm it in her post not post mortem which
+is why I think over
+
+667
+00:38:55,480 --> 00:38:59,550
+do but right and that works just by
+recording the entire session altman's
+
+668
+00:38:59,550 --> 00:39:00,130
+event is
+
+669
+00:39:00,130 --> 00:39:04,840
+behind then I'm when you done dude stop
+the programming in reply last month
+
+670
+00:39:04,840 --> 00:39:08,620
+which works like enough times to be
+useful the book
+
+671
+00:39:08,620 --> 00:39:12,339
+I'm it I i guess i havent talked through
+the help enough
+
+672
+00:39:12,339 --> 00:39:15,670
+like a zero is our way to the the thing
+as a quick way to take that into
+
+673
+00:39:15,670 --> 00:39:18,990
+it's been a big don't think there's a
+quick way to hack it in but it will be
+
+674
+00:39:18,990 --> 00:39:20,589
+pretty interesting to try
+
+675
+00:39:20,589 --> 00:39:24,750
+arm if you just wanted to record the
+commands
+
+676
+00:39:24,750 --> 00:39:27,870
+and then play them back your you
+probably
+
+677
+00:39:27,870 --> 00:39:33,109
+be able to justify some class in PB
+
+678
+00:39:33,109 --> 00:39:36,490
+but it's going to be pretty limited in
+terms of the
+
+679
+00:39:36,490 --> 00:39:39,470
+the two cases well as national work
+because if you had any other interaction
+
+680
+00:39:39,470 --> 00:39:40,410
+with the program
+
+681
+00:39:40,410 --> 00:39:44,710
+you're gonna have to re you're gonna
+have to manually do that retraction
+
+682
+00:39:44,710 --> 00:39:48,089
+as well so from
+
+683
+00:39:48,089 --> 00:39:54,150
+it's a that's a quality I musher are you
+how you about it most easily
+
+684
+00:39:54,150 --> 00:39:58,140
+right I'd like to thank Nathan for vet
+has to talk and later he knows a break
+
+685
+00:39:58,140 --> 00:39:59,440
+down stairs
+
+686
+00:39:59,440 --> 00:39:59,920
+thank you very much
+

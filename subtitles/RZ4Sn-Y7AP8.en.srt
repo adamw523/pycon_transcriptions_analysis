@@ -1,0 +1,4070 @@
+1
+00:00:06,680 --> 00:00:08,920
+it looks like it's still a few people
+coming in
+
+2
+00:00:08,920 --> 00:00:13,240
+on fact a steady stream of people coming
+in if there since placing your order if
+
+3
+00:00:13,240 --> 00:00:15,089
+you could please defragment would
+
+4
+00:00:15,089 --> 00:00:20,220
+make life a lot easier
+
+5
+00:00:20,220 --> 00:00:27,220
+squee up
+
+6
+00:00:50,750 --> 00:00:55,289
+well as German it's great to see a
+completely packed house here for our
+
+7
+00:00:55,289 --> 00:00:59,680
+our last session after lunch here at
+icon 2014 in Montreal
+
+8
+00:00:59,680 --> 00:01:03,390
+%uh it's quite clear that our next
+speaker needs no introduction
+
+9
+00:01:03,390 --> 00:01:09,159
+no I every please welcome pythons
+favorite mad scientist a paisley
+
+10
+00:01:09,159 --> 00:01:15,340
+I
+
+11
+00:01:15,340 --> 00:01:18,500
+all right there thank you very much that
+that this by 10 to come up the most
+
+12
+00:01:18,500 --> 00:01:22,900
+boring talk title in pie at the pike on
+defected 12 reviews in there
+
+13
+00:01:22,900 --> 00:01:25,940
+soonish Africa vet have terrible tile on
+
+14
+00:01:25,940 --> 00:01:30,390
+so what this with the stock is about
+kinda weird topic in 2005
+
+15
+00:01:30,390 --> 00:01:34,350
+as a higher take a look at one have
+terabytes of source code in a secret
+
+16
+00:01:34,350 --> 00:01:34,940
+vault
+
+17
+00:01:34,940 --> 00:01:38,310
+will talk about how you get that much
+source code in a second on
+
+18
+00:01:38,310 --> 00:01:42,310
+and then at six years later ended up
+testifying about concurrency an event
+
+19
+00:01:42,310 --> 00:01:44,300
+loops and US District Court
+
+20
+00:01:44,300 --> 00:01:47,350
+I'm you think oh good god what was that
+about
+
+21
+00:01:47,350 --> 00:01:50,520
+it was if not to judge Wapner by the way
+on
+
+22
+00:01:50,520 --> 00:01:55,170
+and so what this talk is about it
+actually discovery in with pie pan
+
+23
+00:01:55,170 --> 00:01:58,200
+are basically bringing pipeline into a
+legal battle
+
+24
+00:01:58,200 --> 00:02:01,400
+I think in this picture the chair is
+Python okay so like
+
+25
+00:02:01,400 --> 00:02:05,080
+with what this is about I'm and just
+kinda kinda Sep this out
+
+26
+00:02:05,080 --> 00:02:08,960
+on I don't disclaimer everything this
+talk is true
+
+27
+00:02:08,960 --> 00:02:12,850
+but all the names and details been
+changed I could've non-disclosure I'd
+
+28
+00:02:12,850 --> 00:02:16,160
+have to kill you ever take a long time
+in this room and
+
+29
+00:02:16,160 --> 00:02:20,580
+on so so basically just a bit as I know
+nothing in your gonna learn nothing so
+
+30
+00:02:20,580 --> 00:02:22,890
+just keep that inactivate much on
+
+31
+00:02:22,890 --> 00:02:26,980
+now ther to set this out on gonna meet
+Allah
+
+32
+00:02:26,980 --> 00:02:30,670
+donated Alice and Bob I meet Alice
+
+33
+00:02:30,670 --> 00:02:36,690
+meet Bob I every time a crypto graffiti
+on okay so
+
+34
+00:02:36,690 --> 00:02:41,080
+out about a bob for whatever reason
+wants to send Allison message
+
+35
+00:02:41,080 --> 00:02:44,459
+that that she will understand to do this
+
+36
+00:02:44,459 --> 00:02:48,150
+he's going to employ attorney bob's
+attorney
+
+37
+00:02:48,150 --> 00:02:52,070
+ban be in there and the attorney is
+going to
+
+38
+00:02:52,070 --> 00:02:56,450
+a in new calyx with a patent
+infringement lawsuit along with an evil
+
+39
+00:02:56,450 --> 00:02:57,060
+laugh
+
+40
+00:02:57,060 --> 00:03:01,340
+on I don't know what happened between
+the two of them because this but I a
+
+41
+00:03:01,340 --> 00:03:02,820
+patent infringement lawsuit
+
+42
+00:03:02,820 --> 00:03:06,250
+on Alice been fortune has somehow
+managed to find
+
+43
+00:03:06,250 --> 00:03:09,540
+Lawrence Lessig to Def and her I was
+going to crush
+
+44
+00:03:09,540 --> 00:03:13,840
+van in this in this battle here
+basically with this talk is about
+
+45
+00:03:13,840 --> 00:03:17,010
+is essentially patents in some sense I
+mean
+
+46
+00:03:17,010 --> 00:03:20,090
+you these are things that you hear about
+a lot the news a patent infringement
+
+47
+00:03:20,090 --> 00:03:23,170
+softer patents or other bullshit
+novelist up
+
+48
+00:03:23,170 --> 00:03:27,019
+on I'm not I'm not gonna we talk so much
+about that
+
+49
+00:03:27,019 --> 00:03:30,340
+except to say that if you ever get into
+a patent litigation
+
+50
+00:03:30,340 --> 00:03:34,660
+it will turn your world upside down the
+reason to get into in a sec add
+
+51
+00:03:34,660 --> 00:03:38,750
+on and it's also something that is kinda
+that the background at the talk
+
+52
+00:03:38,750 --> 00:03:42,560
+I meet a world okay why did why did Dave
+said in a fault with wanna have
+
+53
+00:03:42,560 --> 00:03:44,700
+terabytes source code on
+
+54
+00:03:44,700 --> 00:03:47,720
+he was basically in the context of a
+patent litigation
+
+55
+00:03:47,720 --> 00:03:51,209
+and and where it came up is sorted in
+this
+
+56
+00:03:51,209 --> 00:03:55,959
+this time-line what happens in a patent
+lawsuit what happens in these lawsuits
+
+57
+00:03:55,959 --> 00:03:59,200
+is that some you know the Super get
+filed
+
+58
+00:03:59,200 --> 00:04:02,880
+and then kinda goes quiet for a while
+
+59
+00:04:02,880 --> 00:04:05,910
+I mean like it kinda follow the news you
+know it's like us and company sues
+
+60
+00:04:05,910 --> 00:04:08,329
+there's only one answer goes quiet on
+
+61
+00:04:08,329 --> 00:04:12,000
+be the cases such a goes into a phasing
+out its packed
+
+62
+00:04:12,000 --> 00:04:16,920
+discovery which might last a year maybe
+even more because it goes on for a while
+
+63
+00:04:16,920 --> 00:04:21,510
+on and essentially what in what's going
+on in that fact discovery phase
+
+64
+00:04:21,510 --> 00:04:25,870
+is the lawyers and the teams are trying
+to figure out just what in the world is
+
+65
+00:04:25,870 --> 00:04:26,700
+going on
+
+66
+00:04:26,700 --> 00:04:30,260
+on essentially what you have if the
+plaintiff in a case
+
+67
+00:04:30,260 --> 00:04:33,280
+is saying while there's obvious patent
+infringement right
+
+68
+00:04:33,280 --> 00:04:36,830
+and earthworm persons a snake great know
+what that's about
+
+69
+00:04:36,830 --> 00:04:40,060
+I have the defendant essentially saying
+well know there'd but things are
+
+70
+00:04:40,060 --> 00:04:40,810
+obviously
+
+71
+00:04:40,810 --> 00:04:43,970
+different right there is no infringement
+on
+
+72
+00:04:43,970 --> 00:04:47,440
+yes they have it yet these two sides at
+what is happening
+
+73
+00:04:47,440 --> 00:04:51,520
+in in this artifact discovery is that
+that that that
+
+74
+00:04:51,520 --> 00:04:54,990
+the two sides essentially have to to
+take
+
+75
+00:04:54,990 --> 00:04:59,150
+data from the case which might be things
+like specifications and drawings and
+
+76
+00:04:59,150 --> 00:05:03,800
+documents and software and so forth and
+sort of figure out what the
+
+77
+00:05:03,800 --> 00:05:07,820
+a quote backs are in in this legal case
+and
+
+78
+00:05:07,820 --> 00:05:11,340
+you know it in it if not usually are
+really clear-cut thing
+
+79
+00:05:11,340 --> 00:05:14,710
+many times right i mean it's it's it's
+not an obvious thing or two about
+
+80
+00:05:14,710 --> 00:05:19,110
+obviously different or its obviously
+obvious obviously them
+
+81
+00:05:19,110 --> 00:05:24,150
+so to do this on usually what happens is
+a fact expert
+
+82
+00:05:24,150 --> 00:05:28,010
+were an expert witness or something like
+that is called in to look at the
+
+83
+00:05:28,010 --> 00:05:31,340
+look at the facts in the case of
+something involving software
+
+84
+00:05:31,340 --> 00:05:34,810
+it could be. something this room
+
+85
+00:05:34,810 --> 00:05:38,080
+myself in this case I mean to you
+typically
+
+86
+00:05:38,080 --> 00:05:41,520
+what that what lawyers are looking for
+some cut technical expert
+
+87
+00:05:41,520 --> 00:05:45,840
+I that is unbiased me not employed by
+either the parties or have a
+
+88
+00:05:45,840 --> 00:05:47,280
+relationship with them
+
+89
+00:05:47,280 --> 00:05:50,250
+I would be something that wouldn't
+hopefully know somebody so they they
+
+90
+00:05:50,250 --> 00:05:53,280
+typically tend to target what university
+professors
+
+91
+00:05:53,280 --> 00:05:56,840
+people like that you know that that know
+things in any sense they're gonna
+
+92
+00:05:56,840 --> 00:05:57,819
+they're gonna look
+
+93
+00:05:57,819 --> 00:06:01,560
+look at the facts in the case and what
+you have is kinda burn
+
+94
+00:06:01,560 --> 00:06:04,919
+you know a team to look something like
+this you know me bob attorney
+
+95
+00:06:04,919 --> 00:06:08,629
+you have a a bunch of coworkers you like
+we got these are the fees are usually
+
+96
+00:06:08,629 --> 00:06:09,259
+like the
+
+97
+00:06:09,259 --> 00:06:12,550
+people the law firm who haven't made
+partner yet they're like they're
+
+98
+00:06:12,550 --> 00:06:16,590
+jobs on the line fact expert I'm in
+reality
+
+99
+00:06:16,590 --> 00:06:20,509
+it's actually probably more like this
+arm Bob attorney
+
+100
+00:06:20,509 --> 00:06:24,500
+with with coworkers the fact expert I
+looks like that
+
+101
+00:06:24,500 --> 00:06:28,900
+in my case that that's me on that picky
+when it looks like to bike
+
+102
+00:06:28,900 --> 00:06:32,129
+in the Chicago winner by the way I'm I
+don't know whether people thought the
+
+103
+00:06:32,129 --> 00:06:34,740
+first talk in this session but they're
+talking about
+
+104
+00:06:34,740 --> 00:06:38,770
+biking in Montreal so I would assume
+it's kinda similar to
+
+105
+00:06:38,770 --> 00:06:42,970
+how so so that's that's kinda the team
+and if this happens to you it's actually
+
+106
+00:06:42,970 --> 00:06:45,430
+a really fascinating experience like if
+you get
+
+107
+00:06:45,430 --> 00:06:49,190
+get the call so to speak said a when he
+come in and look at some source code for
+
+108
+00:06:49,190 --> 00:06:50,889
+a patent infringement suit
+
+109
+00:06:50,889 --> 00:06:54,930
+are you're essentially gonna be trapped
+into just a huge firestorm
+
+110
+00:06:54,930 --> 00:06:58,099
+hell actually I because what what's
+going to happen is there gonna drop you
+
+111
+00:06:58,099 --> 00:06:59,300
+into this case
+
+112
+00:06:59,300 --> 00:07:02,729
+with no technical guidance really I'm
+and the reason
+
+113
+00:07:02,729 --> 00:07:05,810
+that they don't there is a kick in the
+guidance is that's because the
+
+114
+00:07:05,810 --> 00:07:09,150
+why they called you actually they don't
+know what's going on and so
+
+115
+00:07:09,150 --> 00:07:12,870
+I'm so some other things that they're
+gonna happen is you're gonna get end up
+
+116
+00:07:12,870 --> 00:07:13,639
+getting into the
+
+117
+00:07:13,639 --> 00:07:18,340
+really quick learning say phase would
+like we have to learn with the invention
+
+118
+00:07:18,340 --> 00:07:22,259
+accordance with Patton is a that BS like
+what is it about
+
+119
+00:07:22,259 --> 00:07:25,490
+I'm to do that you're gonna get all
+sorts of really fun
+
+120
+00:07:25,490 --> 00:07:29,039
+reading assignments like you have to
+read the patent itself which might look
+
+121
+00:07:29,039 --> 00:07:31,370
+something like this where it's like
+
+122
+00:07:31,370 --> 00:07:35,710
+you note the system of claim 5 or 6
+wherein the display and input means
+
+123
+00:07:35,710 --> 00:07:38,680
+comprises display means that maybe they
+can read that
+
+124
+00:07:38,680 --> 00:07:42,659
+and and like get out it's like your head
+just take a
+
+125
+00:07:42,659 --> 00:07:47,280
+head explodes I yes from the movie
+scanners which is
+
+126
+00:07:47,280 --> 00:07:51,289
+ago a great Canadian work apart actually
+
+127
+00:07:51,289 --> 00:07:55,220
+sup I so I so you have the you do you
+have that
+
+128
+00:07:55,220 --> 00:07:58,659
+I'm in in the case if in the case if
+this thing the Patton
+
+129
+00:07:58,659 --> 00:08:02,509
+actually had six hundred pages at C code
+
+130
+00:08:02,509 --> 00:08:07,500
+attached to it as a PDF printed in 1989
+unlike a dot matrix printer
+
+131
+00:08:07,500 --> 00:08:10,750
+on and you get these fine job so it's
+like
+
+132
+00:08:10,750 --> 00:08:14,659
+okay at this the we do with this convo
+on
+
+133
+00:08:14,659 --> 00:08:17,979
+I ended up having to basically compile
+the code from here
+
+134
+00:08:17,979 --> 00:08:20,750
+I mean that this is something like
+you're going in as an experts like is
+
+135
+00:08:20,750 --> 00:08:21,960
+this patent
+
+136
+00:08:21,960 --> 00:08:26,650
+exit BS like that even work I'm could
+you explain this code to
+
+137
+00:08:26,650 --> 00:08:30,830
+to other people so on the very first
+thing that happens is you have to
+
+138
+00:08:30,830 --> 00:08:35,060
+your you have to figure out this
+invention in the case if this thing
+
+139
+00:08:35,060 --> 00:08:39,280
+on actually printed out all the code
+inside owned a highlighter
+
+140
+00:08:39,280 --> 00:08:42,969
+over the weekend and highlighted of
+function definitions and of function
+
+141
+00:08:42,969 --> 00:08:44,890
+calls
+
+142
+00:08:44,890 --> 00:08:48,320
+it's only available in paper basically
+Isaac printed out you highlight all
+
+143
+00:08:48,320 --> 00:08:50,550
+function called how highlight all our
+
+144
+00:08:50,550 --> 00:08:53,790
+all function definitions and so forth on
+
+145
+00:08:53,790 --> 00:08:57,060
+in a diff using Python to manually
+linkage I
+
+146
+00:08:57,060 --> 00:09:00,850
+did to you censure you would you entered
+into despite my data structures
+
+147
+00:09:00,850 --> 00:09:04,620
+I from you know paper copy and then you
+just crank it
+
+148
+00:09:04,620 --> 00:09:08,170
+through Python to do with a manual
+Lincoln what's going on here
+
+149
+00:09:08,170 --> 00:09:11,740
+the measure trying to figure out whether
+that code is actually complete to the
+
+150
+00:09:11,740 --> 00:09:14,950
+nafta vote that have holes in it other
+like missing chunks on it
+
+151
+00:09:14,950 --> 00:09:18,280
+chunks in the code that kinda that kind
+of thing I'm
+
+152
+00:09:18,280 --> 00:09:22,170
+I'm not going to explain that Python
+code and in great detail
+
+153
+00:09:22,170 --> 00:09:27,550
+except to say that if you're not using
+this comprehension and set apprehensions
+
+154
+00:09:27,550 --> 00:09:29,380
+in the collections module
+
+155
+00:09:29,380 --> 00:09:33,610
+you're missing out on an awesome secret
+weapon for getting all sorts of problems
+
+156
+00:09:33,610 --> 00:09:35,100
+solved okay so
+
+157
+00:09:35,100 --> 00:09:38,160
+I'm so you you he said after weekend
+
+158
+00:09:38,160 --> 00:09:41,940
+you like this code argue would say why
+would you why would you do that
+
+159
+00:09:41,940 --> 00:09:45,340
+one of the things that that will happen
+in this legal case is it at some point
+
+160
+00:09:45,340 --> 00:09:47,769
+if it continues far enough
+
+161
+00:09:47,769 --> 00:09:51,000
+you're going to be asked about that
+cologne maybe
+
+162
+00:09:51,000 --> 00:09:54,899
+like under old or something like that
+and if you don't know how it works
+
+163
+00:09:54,899 --> 00:09:57,990
+you're gonna look leaf freakin bad right
+okay so
+
+164
+00:09:57,990 --> 00:10:01,040
+I'm it so you what you will die
+basically later if you don't understand
+
+165
+00:10:01,040 --> 00:10:01,980
+ago
+
+166
+00:10:01,980 --> 00:10:06,000
+so soap part of what happened is you
+have to understand your like
+
+167
+00:10:06,000 --> 00:10:09,950
+your own side go that's gonna be
+interesting
+
+168
+00:10:09,950 --> 00:10:13,190
+so horrible in a way I i might be the
+only person who had the link
+
+169
+00:10:13,190 --> 00:10:16,899
+a six hundred-page the program by hand
+on paper and
+
+170
+00:10:16,899 --> 00:10:20,899
+python script so as they do that but
+then it but then it actually gets
+
+171
+00:10:20,899 --> 00:10:24,399
+get even more interesting in these cases
+
+172
+00:10:24,399 --> 00:10:27,910
+on you actually have to deal with the
+other side
+
+173
+00:10:27,910 --> 00:10:32,649
+so so you have hours here I'm what's
+what's gonna happen
+
+174
+00:10:32,649 --> 00:10:35,740
+you know on that side is a you're
+essentially dealing with
+
+175
+00:10:35,740 --> 00:10:39,459
+like a whole different organization
+dealing with some some company
+
+176
+00:10:39,459 --> 00:10:43,269
+there very hostile to you so you have
+alice is group at ninja
+
+177
+00:10:43,269 --> 00:10:47,230
+Rockstar coaters you know they've been
+they've been doing things
+
+178
+00:10:47,230 --> 00:10:50,709
+up because you're filing probably a
+packed like a
+
+179
+00:10:50,709 --> 00:10:54,100
+like Center filing a lawsuit you would
+actually
+
+180
+00:10:54,100 --> 00:10:57,430
+probably not be suing somebody with no
+money
+
+181
+00:10:57,430 --> 00:11:02,230
+but probably actually not a bunch of
+ninja Rockstar coaters actually instead
+
+182
+00:11:02,230 --> 00:11:05,810
+probably what hours has is a bunch of
+Engineers
+
+183
+00:11:05,810 --> 00:11:10,430
+and they're probably SEIA CMMI Level
+four certified with like an ISO 9000
+
+184
+00:11:10,430 --> 00:11:11,310
+certification
+
+185
+00:11:11,310 --> 00:11:16,010
+okay so arm your it but this is you get
+the other side in something like this is
+
+186
+00:11:16,010 --> 00:11:16,889
+typically not
+
+187
+00:11:16,889 --> 00:11:20,139
+like a startup company okay it's some
+
+188
+00:11:20,139 --> 00:11:23,810
+something else and what they're going to
+do
+
+189
+00:11:23,810 --> 00:11:26,889
+is essentially kill you with
+
+190
+00:11:26,889 --> 00:11:30,670
+with with documents now this is it
+insane so it's like in in this case
+
+191
+00:11:30,670 --> 00:11:34,670
+show up the lawyers actually took me to
+a room in a sec a year we could get a
+
+192
+00:11:34,670 --> 00:11:36,959
+printout
+
+193
+00:11:36,959 --> 00:11:40,040
+you know and can you take a look at the
+print out some just to put it like a
+
+194
+00:11:40,040 --> 00:11:41,220
+number on it
+
+195
+00:11:41,220 --> 00:11:44,630
+on rema paper is 500 pages
+
+196
+00:11:44,630 --> 00:11:47,660
+a box of papers 5,000 pages
+
+197
+00:11:47,660 --> 00:11:50,730
+they had a up 100 boxes
+
+198
+00:11:50,730 --> 00:11:54,420
+have printed paper five hundred thousand
+pages printed actually literally printed
+
+199
+00:11:54,420 --> 00:11:54,810
+out
+
+200
+00:11:54,810 --> 00:11:58,170
+in a room stacked up they didn't know
+what it was
+
+201
+00:11:58,170 --> 00:12:03,529
+on 300,000 pages if it were TPS reports
+
+202
+00:12:03,529 --> 00:12:06,889
+softer change notices things like that
+on
+
+203
+00:12:06,889 --> 00:12:10,139
+the other they don't don't do it I'm
+summer the other stuff that you find in
+
+204
+00:12:10,139 --> 00:12:12,019
+there are on
+
+205
+00:12:12,019 --> 00:12:16,589
+quote source code
+
+206
+00:12:16,589 --> 00:12:19,649
+but you don't know anything really okays
+like all the other says print out the
+
+207
+00:12:19,649 --> 00:12:21,589
+object file to hourly math
+
+208
+00:12:21,589 --> 00:12:24,970
+right okay so you know turnout has been
+a source code on
+
+209
+00:12:24,970 --> 00:12:28,970
+you might get boxes emails you know
+here's a email from Guido
+
+210
+00:12:28,970 --> 00:12:32,199
+RE said hey fire design language FIU's
+braces
+
+211
+00:12:32,199 --> 00:12:35,639
+rightly you'd like you can take that to
+the lawyers and they all and I found the
+
+212
+00:12:35,639 --> 00:12:37,670
+smoking gun in the email about some
+
+213
+00:12:37,670 --> 00:12:42,209
+itself say fine at on you get things
+like alleged prior art
+
+214
+00:12:42,209 --> 00:12:46,470
+from all over the place like schematic C
+Mike its software were you don't even
+
+215
+00:12:46,470 --> 00:12:48,260
+know what in the world it is from
+
+216
+00:12:48,260 --> 00:12:52,940
+like 1983 year you know assembly code
+are you know it's like i don't know
+
+217
+00:12:52,940 --> 00:12:56,880
+the ECB anybody actually recognized that
+
+218
+00:12:56,880 --> 00:13:00,060
+and added that plat 6
+
+219
+00:13:00,060 --> 00:13:03,070
+now forget to get a whole bunch
+unrecognized stop
+
+220
+00:13:03,070 --> 00:13:06,920
+on but legal team might actually be
+deposing people at the time to make it
+
+221
+00:13:06,920 --> 00:13:07,350
+like a
+
+222
+00:13:07,350 --> 00:13:11,060
+deposition up some crazy gray bearded
+guy right now so
+
+223
+00:13:11,060 --> 00:13:14,980
+ob cell you know it it will help add you
+know bring out some stuff
+
+224
+00:13:14,980 --> 00:13:18,190
+saying well yeah I spotted this in my
+basement wellville
+
+225
+00:13:18,190 --> 00:13:21,350
+no further winter holiday or something
+like that so so
+
+226
+00:13:21,350 --> 00:13:25,339
+you get your gift that I'm and then in a
+really fun part is you're gonna get all
+
+227
+00:13:25,339 --> 00:13:26,480
+their software
+
+228
+00:13:26,480 --> 00:13:30,279
+to this is in some way kinda awesome
+because what when you get into a legal
+
+229
+00:13:30,279 --> 00:13:33,380
+case lingered on the other side they can
+ask for anything
+
+230
+00:13:33,380 --> 00:13:37,190
+and say hey when he just give us the
+whole code base handed over at all
+
+231
+00:13:37,190 --> 00:13:38,820
+proprietary
+
+232
+00:13:38,820 --> 00:13:42,279
+proprietary software in the case that
+this
+
+233
+00:13:42,279 --> 00:13:46,550
+David after the software it was actually
+sitting over in a fault
+
+234
+00:13:46,550 --> 00:13:49,630
+on the west side of chicago on and
+
+235
+00:13:49,630 --> 00:13:53,079
+just just add up with some perspective
+on this so it's a match in that this is
+
+236
+00:13:53,079 --> 00:13:54,269
+the ad what they've
+
+237
+00:13:54,269 --> 00:13:57,440
+Chicago here essentially be a
+
+238
+00:13:57,440 --> 00:14:00,750
+bio to my kids here you have for this
+fall
+
+239
+00:14:00,750 --> 00:14:04,509
+in kind of a secret location that is
+actually a picture the your fault by the
+
+240
+00:14:04,509 --> 00:14:05,420
+way
+
+241
+00:14:05,420 --> 00:14:10,570
+outside nondescript nondescript building
+acid in national by the train tracks
+
+242
+00:14:10,570 --> 00:14:14,740
+and coincidentally right next to the
+rock band rehearsal space
+
+243
+00:14:14,740 --> 00:14:18,029
+said I was there you can see it
+
+244
+00:14:18,029 --> 00:14:22,050
+I'm actually in that picture by the way
+there's a party rock band there so I
+
+245
+00:14:22,050 --> 00:14:22,690
+it's always gonna
+
+246
+00:14:22,690 --> 00:14:25,980
+it national in this very sketchy part of
+town I
+
+247
+00:14:25,980 --> 00:14:29,910
+the protocol for the ball is can't have
+any computers
+
+248
+00:14:29,910 --> 00:14:32,959
+no phone electronics no storage and that
+
+249
+00:14:32,959 --> 00:14:36,290
+you bring a pen and paper book that
+that's pretty much it
+
+250
+00:14:36,290 --> 00:14:39,850
+on they had a PC locked in a cage
+
+251
+00:14:39,850 --> 00:14:44,269
+along with the printer in a log book on
+so that so that that was what was in
+
+252
+00:14:44,269 --> 00:14:44,990
+there
+
+253
+00:14:44,990 --> 00:14:49,360
+on as far as what be found there was
+just at large collection up
+
+254
+00:14:49,360 --> 00:14:53,800
+hard drives basically immediate 1/2
+terabyte hard drive
+
+255
+00:14:53,800 --> 00:14:56,860
+and as far as it what it was there look
+like they took
+
+256
+00:14:56,860 --> 00:15:00,490
+maybe up a gigantic box of compact discs
+
+257
+00:15:00,490 --> 00:15:05,069
+and I just copied it on air in no order
+it whatsoever all say a little bit more
+
+258
+00:15:05,069 --> 00:15:05,980
+about
+
+259
+00:15:05,980 --> 00:15:09,190
+what it is in a second but just you know
+you just imagine tyke going through your
+
+260
+00:15:09,190 --> 00:15:12,750
+closet use them in a fight every compact
+discs but I see in the whole room and
+
+261
+00:15:12,750 --> 00:15:15,139
+I'm just gonna send it over to the other
+side
+
+262
+00:15:15,139 --> 00:15:18,880
+nigga put on this machine so no no
+organization at all
+
+263
+00:15:18,880 --> 00:15:22,720
+are and just a just put a little
+perspective on how horrible this is no
+
+264
+00:15:22,720 --> 00:15:23,500
+way I'm
+
+265
+00:15:23,500 --> 00:15:26,670
+database actually produced like the
+software archive for pretty much
+
+266
+00:15:26,670 --> 00:15:29,160
+everything related to this thing on
+
+267
+00:15:29,160 --> 00:15:33,000
+to you can have the invention and the
+things that they were producing with
+
+268
+00:15:33,000 --> 00:15:33,579
+things like
+
+269
+00:15:33,579 --> 00:15:38,940
+you'd like embedded microcontrollers you
+had keypads display module seven segment
+
+270
+00:15:38,940 --> 00:15:40,110
+displays
+
+271
+00:15:40,110 --> 00:15:43,910
+your PC they had made a custom PCI board
+
+272
+00:15:43,910 --> 00:15:47,660
+with its own custom operating system
+custom software for that
+
+273
+00:15:47,660 --> 00:15:50,670
+on system action: involved a second PC
+
+274
+00:15:50,670 --> 00:15:53,670
+so you have like all these different
+components she had all the software for
+
+275
+00:15:53,670 --> 00:15:55,009
+all of these things like
+
+276
+00:15:55,009 --> 00:15:58,399
+so if you wanted to know what the
+firmware was in the display like the LCD
+
+277
+00:15:58,399 --> 00:16:00,829
+display module you got that
+
+278
+00:16:00,829 --> 00:16:04,380
+yet so that they can I gave you the
+whole the whole works on
+
+279
+00:16:04,380 --> 00:16:08,449
+infection or a distributed system in
+fact there's like a custom router
+
+280
+00:16:08,449 --> 00:16:12,639
+multiple copies of devices up the
+software for this is out what I would
+
+281
+00:16:12,639 --> 00:16:13,130
+describe
+
+282
+00:16:13,130 --> 00:16:17,009
+all stack not to force back but like all
+stack so
+
+283
+00:16:17,009 --> 00:16:21,190
+I'm they have like effect about a
+million lines of code involving c plus
+
+284
+00:16:21,190 --> 00:16:21,870
+plus
+
+285
+00:16:21,870 --> 00:16:25,730
+see assembly Java Visual Basic
+
+286
+00:16:25,730 --> 00:16:28,250
+asap you know it it's sort of things
+like they had their own distributed
+
+287
+00:16:28,250 --> 00:16:30,600
+object systems decom korva
+
+288
+00:16:30,600 --> 00:16:34,360
+hope the whole the whole works there are
+and then on top of that the time frame
+
+289
+00:16:34,360 --> 00:16:35,220
+at this
+
+290
+00:16:35,220 --> 00:16:39,440
+that this thing was basically over 15
+years so that turns out how to get one
+
+291
+00:16:39,440 --> 00:16:40,860
+and a half terabytes
+
+292
+00:16:40,860 --> 00:16:44,449
+you basically hand of God 800 snapshot
+to that system
+
+293
+00:16:44,449 --> 00:16:48,610
+over like a 15-year period with also
+took multiple hardware revisions
+
+294
+00:16:48,610 --> 00:16:51,910
+on configurations different operating
+systems OS two
+
+295
+00:16:51,910 --> 00:16:55,149
+Windows NT and so forth and they don't
+happen at
+
+296
+00:16:55,149 --> 00:16:58,920
+they had like custom to the skins on
+this software customize for big
+
+297
+00:16:58,920 --> 00:17:02,290
+corporate clients so it's like there's
+like a big corpus system there but all
+
+298
+00:17:02,290 --> 00:17:04,579
+these custom skins on it
+
+299
+00:17:04,579 --> 00:17:08,280
+also 200 interlocking versions and so
+forth and so
+
+300
+00:17:08,280 --> 00:17:12,310
+on it's also what my job is it is it is
+basically did tell the lawyers like what
+
+301
+00:17:12,310 --> 00:17:13,360
+is this thing
+
+302
+00:17:13,360 --> 00:17:17,300
+and be provided tools or Windows XP
+
+303
+00:17:17,300 --> 00:17:21,430
+awesome on the Windows command prompt
+
+304
+00:17:21,430 --> 00:17:25,150
+possum at the search my I itself
+
+305
+00:17:25,150 --> 00:17:28,350
+yeah awesome I don't know whether I yeah
+people
+
+306
+00:17:28,350 --> 00:17:32,170
+trip remember the Windows XP search
+might but yeah pretty pretty awesome
+
+307
+00:17:32,170 --> 00:17:35,780
+I you could use notepad ball because
+that came with Windows and then
+
+308
+00:17:35,780 --> 00:17:39,550
+up because they're feeling generous
+they've had visual studio
+
+309
+00:17:39,550 --> 00:17:42,560
+okay so time you had all these a
+
+310
+00:17:42,560 --> 00:17:47,290
+all these tools on their I'm you could
+print anything that you want it turns
+
+311
+00:17:47,290 --> 00:17:48,190
+out no fault
+
+312
+00:17:48,190 --> 00:17:52,240
+out but had to be flogged and it was
+copied in given to the other side
+
+313
+00:17:52,240 --> 00:17:55,940
+nothing really happens and likes secret
+a lot of these lawsuits like if you're
+
+314
+00:17:55,940 --> 00:17:57,220
+gonna print something out
+
+315
+00:17:57,220 --> 00:18:00,570
+because you think it's interesting the
+other side is going to get it to
+
+316
+00:18:00,570 --> 00:18:03,740
+okay so you are you could you could you
+could you could do that but
+
+317
+00:18:03,740 --> 00:18:07,190
+be at the other side would know what you
+were doing and then there's some other
+
+318
+00:18:07,190 --> 00:18:08,370
+constraints as well
+
+319
+00:18:08,370 --> 00:18:12,200
+on there was actually no working
+hardware setup could run the code
+
+320
+00:18:12,200 --> 00:18:15,590
+on US you can build the code either
+because missing libraries I'm
+
+321
+00:18:15,590 --> 00:18:19,750
+no tech support you can't call up the
+other side saying hey we're a
+
+322
+00:18:19,750 --> 00:18:23,440
+market for the guys are suing you I'm
+kinda confused about this code in
+
+323
+00:18:23,440 --> 00:18:29,299
+you know tell me about it so those that
+in a very fragmentary a documentation so
+
+324
+00:18:29,299 --> 00:18:33,309
+so you look at this shelter hadith
+horrible tho
+
+325
+00:18:33,309 --> 00:18:37,010
+here's the here's the interesting thing
+on it turns out that
+
+326
+00:18:37,010 --> 00:18:40,500
+on in the fall want to go over there
+
+327
+00:18:40,500 --> 00:18:46,610
+I fired the command prompt I type a fire
+on it comes up
+
+328
+00:18:46,610 --> 00:18:49,710
+and what how did it come up like like
+now I know it's like
+
+329
+00:18:49,710 --> 00:18:53,190
+I mean this is this is I write this is
+odd I mean if you've ever use Python and
+
+330
+00:18:53,190 --> 00:18:54,250
+Windows
+
+331
+00:18:54,250 --> 00:18:57,559
+does it get installed in the path no
+
+332
+00:18:57,559 --> 00:19:01,400
+right it in the past like who put it
+there in the path I'm
+
+333
+00:19:01,400 --> 00:19:04,549
+the only the only gas on S
+
+334
+00:19:04,549 --> 00:19:07,559
+is that it was probably used by IBM is
+an
+
+335
+00:19:07,559 --> 00:19:11,280
+as part of an OEM tool I was actually
+talk to Brian curtain about this at one
+
+336
+00:19:11,280 --> 00:19:14,659
+point he could he doesn't up with the
+pipe on Windows is likely a we get
+
+337
+00:19:14,659 --> 00:19:19,169
+we got occasional like virus reports
+from users thing he wants is Python
+
+338
+00:19:19,169 --> 00:19:23,360
+thing on my machine I just bought it it
+was used by something by the vendors are
+
+339
+00:19:23,360 --> 00:19:25,049
+took turns out it was dare
+
+340
+00:19:25,049 --> 00:19:29,840
+for reasons unknown and of course that
+so to change the whole picture right I
+
+341
+00:19:29,840 --> 00:19:33,010
+mean if you've ever had this this this
+spot like are you up i dont be really
+
+342
+00:19:33,010 --> 00:19:33,470
+awesome
+
+343
+00:19:33,470 --> 00:19:38,419
+desert island language this this is like
+the perfect chance to like tried that
+
+344
+00:19:38,419 --> 00:19:40,620
+theory out right side
+
+345
+00:19:40,620 --> 00:19:43,679
+bad battery batteries included up by
+
+346
+00:19:43,679 --> 00:19:47,030
+a good fortune I actually wrote the
+Python book
+
+347
+00:19:47,030 --> 00:19:51,840
+right so on I thought I was allowed to
+bring books into the vault I'm like okay
+
+348
+00:19:51,840 --> 00:19:52,350
+I'm gonna
+
+349
+00:19:52,350 --> 00:19:55,380
+I'll be back and I'll be in my book on
+and
+
+350
+00:19:55,380 --> 00:19:58,860
+kinda the that the strategy on it is I'm
+gonna go in there and I'm to build
+
+351
+00:19:58,860 --> 00:19:59,830
+basically
+
+352
+00:19:59,830 --> 00:20:03,510
+software entirely from scratch in the
+ball to do this
+
+353
+00:20:03,510 --> 00:20:07,150
+i download a talk about that before it
+before getting to that
+
+354
+00:20:07,150 --> 00:20:11,500
+I do wanna just race one questions like
+What What Rd what are the objectives of
+
+355
+00:20:11,500 --> 00:20:11,780
+this
+
+356
+00:20:11,780 --> 00:20:15,820
+exercise exactly like me that this is a
+very unusual project with like the
+
+357
+00:20:15,820 --> 00:20:19,270
+lawyers are just saying hey cookbook at
+the code names like
+
+358
+00:20:19,270 --> 00:20:22,360
+book yet but what is that up so
+
+359
+00:20:22,360 --> 00:20:25,620
+if I ever had to describe it the
+objectives and they're kind of this
+
+360
+00:20:25,620 --> 00:20:30,110
+I'm one of them was just sort of this
+what question like what did they give us
+
+361
+00:20:30,110 --> 00:20:33,360
+because nobody actually knows they know
+that there's a bunch of hard drives in
+
+362
+00:20:33,360 --> 00:20:35,039
+there but like what is it
+
+363
+00:20:35,039 --> 00:20:38,299
+on that the other things just how does
+it actually work
+
+364
+00:20:38,299 --> 00:20:41,440
+we'll get to that in in the third one is
+the more weird one is like
+
+365
+00:20:41,440 --> 00:20:45,950
+because as the patent case ultimately
+you have to answer where in that code
+
+366
+00:20:45,950 --> 00:20:50,809
+does the patent exist that's the weird
+is that the weirder one so
+
+367
+00:20:50,809 --> 00:20:55,570
+I'm talk some other time the horror on S
+I'm essentially the first part a bit
+
+368
+00:20:55,570 --> 00:20:59,360
+is your gonna have to reverse engineer
+the whole building firemen of whatever
+
+369
+00:20:59,360 --> 00:21:02,150
+this is like finding like what are the
+components
+
+370
+00:21:02,150 --> 00:21:05,549
+how do they get built for the complete
+what are they are the BX these are the
+
+371
+00:21:05,549 --> 00:21:07,150
+deal elderly plugins
+
+372
+00:21:07,150 --> 00:21:10,289
+are you might have to do something like
+just pick
+
+373
+00:21:10,289 --> 00:21:14,429
+like some you just pick like a directory
+of code ECP could pull it apart
+
+374
+00:21:14,429 --> 00:21:17,600
+you might look at things like make files
+you know thing
+
+375
+00:21:17,600 --> 00:21:21,549
+okay what your sources years libraries
+this is a lot of like just pencil paper
+
+376
+00:21:21,549 --> 00:21:22,080
+like
+
+377
+00:21:22,080 --> 00:21:25,620
+right we're we're just like up gaddis
+horrible
+
+378
+00:21:25,620 --> 00:21:30,539
+on it's like the last iraq assembling a
+actually
+
+379
+00:21:30,539 --> 00:21:35,220
+don't ask how I store this picture from
+Titus brown's last talking last section
+
+380
+00:21:35,220 --> 00:21:35,590
+here
+
+381
+00:21:35,590 --> 00:21:38,970
+on its copyright infringement right side
+up
+
+382
+00:21:38,970 --> 00:21:42,559
+notice and I think it's at effect checks
+are puzzled words like you
+
+383
+00:21:42,559 --> 00:21:46,130
+units like okay here all the pieces go
+to put it together
+
+384
+00:21:46,130 --> 00:21:49,549
+so from for some other ways that you
+that you do this is
+
+385
+00:21:49,549 --> 00:21:54,020
+but the first thing it should be obvious
+if you have to re implement UNIX
+
+386
+00:21:54,020 --> 00:21:59,950
+okay so on so that's the that's the
+first the first step so a lot of it
+
+387
+00:21:59,950 --> 00:22:03,200
+I'm decade that the search might
+
+388
+00:22:03,200 --> 00:22:07,279
+it now I mean AKC have you have to do
+some basic tooling to
+
+389
+00:22:07,279 --> 00:22:10,860
+to do this turns out to be like pretty
+easy
+
+390
+00:22:10,860 --> 00:22:14,630
+to do a lot and want to think that you
+can do is use the like a pipe up nigga
+
+391
+00:22:14,630 --> 00:22:15,210
+like you just
+
+392
+00:22:15,210 --> 00:22:19,250
+implement like basic Unix commands using
+like simple python
+
+393
+00:22:19,250 --> 00:22:22,850
+statement you know what basic navigation
+stuff
+
+394
+00:22:22,850 --> 00:22:26,700
+job this is rare that 6 like the six
+line program that will do
+
+395
+00:22:26,700 --> 00:22:29,750
+DF between two files
+
+396
+00:22:29,750 --> 00:22:33,460
+michael has def live like you know you
+need a you can we can you can to defeat
+
+397
+00:22:33,460 --> 00:22:36,460
+you can build up with a little likable
+collection tools
+
+398
+00:22:36,460 --> 00:22:39,929
+and you might just use the Python
+interactive shell to just do your
+
+399
+00:22:39,929 --> 00:22:42,630
+navigation isn't the Windows command
+shell kinda
+
+400
+00:22:42,630 --> 00:22:45,799
+Sox out for you know what you that so
+I'm so
+
+401
+00:22:45,799 --> 00:22:48,809
+in actually in one sense what you're
+doing here
+
+402
+00:22:48,809 --> 00:22:51,809
+is if you're kind of building your own I
+Python
+
+403
+00:22:51,809 --> 00:22:55,740
+from scratch alienated the yard admit
+the tickets ticket to
+
+404
+00:22:55,740 --> 00:22:58,789
+very stripped down one but you're really
+just sitting over there with the book
+
+405
+00:22:58,789 --> 00:23:01,590
+saying on to reinvent everything I need
+
+406
+00:23:01,590 --> 00:23:06,549
+as a need in the in the ball on charge
+that is sorted sitting in their unique
+
+407
+00:23:06,549 --> 00:23:07,919
+gifts in fines and
+
+408
+00:23:07,919 --> 00:23:12,320
+and and and so forth on but then what
+you been we start do is you started
+
+409
+00:23:12,320 --> 00:23:15,990
+started way here on this thing he said
+okay like that UNIX but now I'm gonna
+
+410
+00:23:15,990 --> 00:23:16,850
+start doing some
+
+411
+00:23:16,850 --> 00:23:20,130
+some some workflow kinds of things where
+you might
+
+412
+00:23:20,130 --> 00:23:24,669
+you might do things like okay and I'm
+your FB like my to start with a python
+
+413
+00:23:24,669 --> 00:23:26,429
+pancho here's a function that will
+produce
+
+414
+00:23:26,429 --> 00:23:31,279
+every single directory name and file
+name on the whole machine
+
+415
+00:23:31,279 --> 00:23:34,309
+I I tested this out with like every
+pipeline version
+
+416
+00:23:34,309 --> 00:23:38,140
+that existed as a sample you might say
+okay well wake up I wanted to find all
+
+417
+00:23:38,140 --> 00:23:39,820
+files in all versions of Python
+
+418
+00:23:39,820 --> 00:23:43,190
+just fire this at it you just start
+spitting out file
+
+419
+00:23:43,190 --> 00:23:46,669
+and then that with that would become you
+know media component in your sister
+
+420
+00:23:46,669 --> 00:23:50,250
+need to start building things on top it
+were you'd say well you know what what
+
+421
+00:23:50,250 --> 00:23:54,350
+it would give us exactly like water all
+the file types up everything on all
+
+422
+00:23:54,350 --> 00:23:56,049
+those one-and-a-half terabytes have
+
+423
+00:23:56,049 --> 00:24:02,510
+a desk you'd say do something like this
+a harmonica histogram all file types
+
+424
+00:24:02,510 --> 00:24:05,630
+and just couldn't come to see you were
+to their Lee County Python files are
+
+425
+00:24:05,630 --> 00:24:07,409
+there how many see files are there
+
+426
+00:24:07,409 --> 00:24:10,549
+you might actually look for things that
+are really interesting like unusual file
+
+427
+00:24:10,549 --> 00:24:12,159
+format I actually
+
+428
+00:24:12,159 --> 00:24:16,230
+something more interesting things would
+be things like PDF files and Doc files
+
+429
+00:24:16,230 --> 00:24:17,020
+for
+
+430
+00:24:17,020 --> 00:24:20,580
+reasons that will get into later but
+because it can inspect what's there
+
+431
+00:24:20,580 --> 00:24:23,690
+maybe that would become a come and other
+component maybe you would write some
+
+432
+00:24:23,690 --> 00:24:24,809
+code to find
+
+433
+00:24:24,809 --> 00:24:28,900
+like find things you know your say now
+okay I wanna find all tight on files
+
+434
+00:24:28,900 --> 00:24:30,220
+onto a search
+
+435
+00:24:30,220 --> 00:24:34,039
+again you're trying to you try to
+uncover things on this huge collection
+
+436
+00:24:34,039 --> 00:24:35,400
+of hard drive images
+
+437
+00:24:35,400 --> 00:24:38,440
+CD images to do things do things like
+that
+
+438
+00:24:38,440 --> 00:24:42,740
+are you migrate little utility things
+where I want concrete a manifesto all
+
+439
+00:24:42,740 --> 00:24:44,510
+versions of cold crypt
+
+440
+00:24:44,510 --> 00:24:49,230
+we are provided to us just like you to
+put a regular expression
+
+441
+00:24:49,230 --> 00:24:52,260
+in and talk to your cell you we do
+things like this maybe
+
+442
+00:24:52,260 --> 00:24:55,520
+run it and identify like all versions of
+Python and
+
+443
+00:24:55,520 --> 00:24:59,490
+and and so forth so you can't build up
+bike tools for you would say things like
+
+444
+00:24:59,490 --> 00:25:00,549
+okay identify which
+
+445
+00:25:00,549 --> 00:25:03,580
+there and maybe start writing out
+manifests up
+
+446
+00:25:03,580 --> 00:25:06,909
+YouTube you century doing a big
+inventory job
+
+447
+00:25:06,909 --> 00:25:10,480
+searching through all this day to find
+all the versions of things trying to put
+
+448
+00:25:10,480 --> 00:25:11,580
+it together
+
+449
+00:25:11,580 --> 00:25:14,890
+on the whole time you're you're sorta
+you know consulting with lawyers in a
+
+450
+00:25:14,890 --> 00:25:19,830
+way saying I was over there and I found
+you know 700 versions of the software
+
+451
+00:25:19,830 --> 00:25:22,840
+noticed f.y.i you know there's you know
+
+452
+00:25:22,840 --> 00:25:26,419
+700 versions that a million mines at
+Seco Road I'm
+
+453
+00:25:26,419 --> 00:25:30,559
+that that kind of thing and so you do
+kinda you can't you can't build up the
+
+454
+00:25:30,559 --> 00:25:31,770
+fees were closed
+
+455
+00:25:31,770 --> 00:25:34,820
+I'm and then you can just start piling
+it up on
+
+456
+00:25:34,820 --> 00:25:38,820
+sorta sorry even higher one of the
+things that happen in this project
+
+457
+00:25:38,820 --> 00:25:43,340
+is that the beast snapshots were just
+sort of scattered randomly overall the
+
+458
+00:25:43,340 --> 00:25:45,899
+desks it was too hard to deal with
+
+459
+00:25:45,899 --> 00:25:49,070
+so sort implemented kind about on a
+
+460
+00:25:49,070 --> 00:25:53,380
+absorbed virtual file system if you well
+as credible layer
+
+461
+00:25:53,380 --> 00:25:56,890
+where you could just enter in like us
+like a software version and it would
+
+462
+00:25:56,890 --> 00:25:58,090
+just take you there
+
+463
+00:25:58,090 --> 00:26:01,100
+and you didn't have to worry about all
+that the way that was actually structure
+
+464
+00:26:01,100 --> 00:26:04,390
+kinda clear it up on and
+
+465
+00:26:04,390 --> 00:26:08,340
+some other stuff that you would do there
+are just take all the software versions
+
+466
+00:26:08,340 --> 00:26:10,830
+you would find out things like
+development timelines
+
+467
+00:26:10,830 --> 00:26:14,529
+all the versions like how Ranger dates
+did they go over today
+
+468
+00:26:14,529 --> 00:26:19,919
+debate overlap in some sense your most
+reconstructing things like i'd get high
+
+469
+00:26:19,919 --> 00:26:23,720
+you know like you know 14 you know like
+history or something like that you're
+
+470
+00:26:23,720 --> 00:26:25,669
+doing it almost in reverse actually
+
+471
+00:26:25,669 --> 00:26:29,200
+you're taking a much snapshots in trying
+to recreate history
+
+472
+00:26:29,200 --> 00:26:32,529
+prominent up some other things that you
+would do is is are right like right
+
+473
+00:26:32,529 --> 00:26:34,309
+coder you'd say things like ok give me
+
+474
+00:26:34,309 --> 00:26:38,149
+every version of this file that has ever
+existed like you could say
+
+475
+00:26:38,149 --> 00:26:41,240
+on you know quite yet but you could you
+pick
+
+476
+00:26:41,240 --> 00:26:44,649
+like a version: by I'm using Python is
+an example that you could say hey give
+
+477
+00:26:44,649 --> 00:26:45,190
+me every
+
+478
+00:26:45,190 --> 00:26:48,860
+version of thread that CD that has ever
+existed
+
+479
+00:26:48,860 --> 00:26:52,360
+and would it would go through these like
+800 snapshots and it would produce like
+
+480
+00:26:52,360 --> 00:26:54,130
+some history saying well you know in
+
+481
+00:26:54,130 --> 00:26:58,380
+inversion 12 and 13 was exactly the same
+and then like you know all
+
+482
+00:26:58,380 --> 00:27:01,820
+like version to all the way up to 2.1 .3
+there's like no
+
+483
+00:27:01,820 --> 00:27:05,730
+7 versions of code words exactly the
+same again we're trying to do is take
+
+484
+00:27:05,730 --> 00:27:08,340
+all the stuff and decompose it break it
+down and
+
+485
+00:27:08,340 --> 00:27:12,220
+into inventories on it popular also
+
+486
+00:27:12,220 --> 00:27:15,919
+a lot navigational tool in like if you
+needed go somewhere you can write little
+
+487
+00:27:15,919 --> 00:27:19,330
+few functions read say hey I want to
+look at see a bow
+
+488
+00:27:19,330 --> 00:27:22,510
+in this version of python and maybe
+would launch a visual studio or
+
+489
+00:27:22,510 --> 00:27:23,159
+something
+
+490
+00:27:23,159 --> 00:27:26,529
+because United have a whole lot a choice
+on editors write you can't you can't
+
+491
+00:27:26,529 --> 00:27:28,700
+install anything on this machine so
+
+492
+00:27:28,700 --> 00:27:32,970
+for work with work with what you got so
+you to build up
+
+493
+00:27:32,970 --> 00:27:37,520
+you build up all the stuff and you don't
+want one comment on this
+
+494
+00:27:37,520 --> 00:27:41,159
+I'm not actually I'm not sure that the
+other side in this case
+
+495
+00:27:41,159 --> 00:27:44,370
+ever anticipated that we would figure it
+out
+
+496
+00:27:44,370 --> 00:27:48,070
+like me I think that was kinda the
+expectations like we take every CD in
+
+497
+00:27:48,070 --> 00:27:49,270
+the closet
+
+498
+00:27:49,270 --> 00:27:52,990
+you know in archive we're gonna send it
+to him and let him figure it out
+
+499
+00:27:52,990 --> 00:27:57,840
+on ethnic in reality I which he almost
+knew everything about everything
+
+500
+00:27:57,840 --> 00:28:01,429
+like when you all versions of everything
+that they gave us in like timelines and
+
+501
+00:28:01,429 --> 00:28:02,730
+also to study was all
+
+502
+00:28:02,730 --> 00:28:06,669
+inventory I don't think it would have
+been possible all Alpine
+
+503
+00:28:06,669 --> 00:28:10,169
+like I can't even imagine doing that but
+no patter like
+
+504
+00:28:10,169 --> 00:28:13,740
+search like the searchlight and notepad
+by Howie Day
+
+505
+00:28:13,740 --> 00:28:17,080
+I I was actually I was actually thinking
+about it recently a pic
+
+506
+00:28:17,080 --> 00:28:20,850
+how would I have done that I I guess in
+the the only alternative would have been
+
+507
+00:28:20,850 --> 00:28:22,770
+to
+
+508
+00:28:22,770 --> 00:28:26,380
+you fire up Visual Studio and then to re
+implement pipe on I'm
+
+509
+00:28:26,380 --> 00:28:31,899
+as probably the only II just on how you
+with how you how to do that so
+
+510
+00:28:31,899 --> 00:28:35,890
+Sox other colors that out and then you
+get into these other
+
+511
+00:28:35,890 --> 00:28:40,240
+like horrible things with this column in
+one of the things that that okay
+
+512
+00:28:40,240 --> 00:28:43,840
+like to think we just described as
+programming what is there
+
+513
+00:28:43,840 --> 00:28:47,220
+we haven't even talked about how it
+works it's more like just what his I'm
+
+514
+00:28:47,220 --> 00:28:50,700
+so you have this other thing which is
+well how does this how does this code
+
+515
+00:28:50,700 --> 00:28:51,789
+work are
+
+516
+00:28:51,789 --> 00:28:54,240
+and this includes pretty much everything
+like the software architecture
+
+517
+00:28:54,240 --> 00:28:57,580
+interaction between components
+algorithms the
+
+518
+00:28:57,580 --> 00:29:00,870
+you know that the whole thing I mean
+expert
+
+519
+00:29:00,870 --> 00:29:04,539
+what you're gonna have to do is take
+that million line program
+
+520
+00:29:04,539 --> 00:29:08,080
+and you can have two first we'll explain
+it to the people that you're working for
+
+521
+00:29:08,080 --> 00:29:11,460
+and then maybe later on you might have
+to explain it to
+
+522
+00:29:11,460 --> 00:29:14,710
+potentially like a jury or something
+like that so you can't just go in there
+
+523
+00:29:14,710 --> 00:29:18,700
+for like 20 minutes into your kinda
+again
+
+524
+00:29:18,700 --> 00:29:22,649
+so you really have to pick your have to
+pull it apart I'm and in the thing is I
+
+525
+00:29:22,649 --> 00:29:23,760
+reading code
+
+526
+00:29:23,760 --> 00:29:27,720
+is terrible on your do really wanna read
+like a million line program that you
+
+527
+00:29:27,720 --> 00:29:28,100
+didn't
+
+528
+00:29:28,100 --> 00:29:32,000
+right I mean it's the top horrible I me
+what you want is you want design
+
+529
+00:29:32,000 --> 00:29:33,169
+dachshunds backs
+
+530
+00:29:33,169 --> 00:29:36,830
+and stuff like that but the best thing
+is the other side for a hostile
+
+531
+00:29:36,830 --> 00:29:40,390
+they don't wanna they want to help you
+they don't give you that kind of stuff
+
+532
+00:29:40,390 --> 00:29:41,000
+so
+
+533
+00:29:41,000 --> 00:29:44,029
+so what ends up happening next
+
+534
+00:29:44,029 --> 00:29:48,010
+is you go on it when I can best describe
+is a gigantic fishing
+
+535
+00:29:48,010 --> 00:29:53,409
+expedition opera things like interesting
+documents like pdf doc files RTF HTML
+
+536
+00:29:53,409 --> 00:29:54,929
+text files
+
+537
+00:29:54,929 --> 00:29:59,490
+you do mine enough code comments action
+one of the things we did a lot of talk
+
+538
+00:29:59,490 --> 00:30:03,450
+about his next fight you to search all
+source code for the word see
+
+539
+00:30:03,450 --> 00:30:06,760
+and you see what comes up because what
+you're hoping some developer has written
+
+540
+00:30:06,760 --> 00:30:07,809
+out like a comment like
+
+541
+00:30:07,809 --> 00:30:11,850
+this function really tricky you're more
+detail see this document
+
+542
+00:30:11,850 --> 00:30:16,049
+like you you what you're looking for is
+like a Michael Michael boost threat or
+
+543
+00:30:16,049 --> 00:30:16,919
+something you looking for
+
+544
+00:30:16,919 --> 00:30:21,149
+something to to make offer you my goth
+looking for all those TPS reports
+
+545
+00:30:21,149 --> 00:30:24,399
+hoping that somebody dropped a clue you
+look through everything I mean is
+
+546
+00:30:24,399 --> 00:30:25,019
+actually
+
+547
+00:30:25,019 --> 00:30:28,640
+your cat kinda thing that you would find
+you might find a comment that would say
+
+548
+00:30:28,640 --> 00:30:29,590
+something like this: no
+
+549
+00:30:29,590 --> 00:30:34,080
+CFS 6541 AP to oversee details
+
+550
+00:30:34,080 --> 00:30:38,140
+night %uh it interesting and this action
+when the cool thing about fact
+
+551
+00:30:38,140 --> 00:30:41,240
+like a been a fact expertise you can go
+to the attorneys
+
+552
+00:30:41,240 --> 00:30:44,980
+and you can pretty much get them to do
+to unleash any weapon you want on the
+
+553
+00:30:44,980 --> 00:30:45,720
+other side
+
+554
+00:30:45,720 --> 00:30:48,850
+right you can so so you can go to them
+and you say hey you know I think we
+
+555
+00:30:48,850 --> 00:30:51,950
+would really be really cool to have this
+document FS 6541
+
+556
+00:30:51,950 --> 00:30:56,070
+EP 20 on and so what happens you know
+the attorney will drop the letters and
+
+557
+00:30:56,070 --> 00:30:59,820
+it often is kinda silent for a few days
+you know it the other side is like how
+
+558
+00:30:59,820 --> 00:31:03,419
+crack like you already know about that
+on and then
+
+559
+00:31:03,419 --> 00:31:07,130
+you're magically out at the paper you
+get some document you now
+
+560
+00:31:07,130 --> 00:31:11,340
+Acme widgets functional specification
+version 2.0 and inside
+
+561
+00:31:11,340 --> 00:31:14,620
+you know tag proprietary and
+confidential and then
+
+562
+00:31:14,620 --> 00:31:18,309
+you know if he senses company has their
+act together the very first pages that
+
+563
+00:31:18,309 --> 00:31:21,649
+related documents content then what you
+do is you rip dad of
+
+564
+00:31:21,649 --> 00:31:25,679
+and give it to the attorneys in say no
+every week or get all that stuff too
+
+565
+00:31:25,679 --> 00:31:29,990
+odd and you out you but you basically
+what unwind the whole access to market
+
+566
+00:31:29,990 --> 00:31:31,409
+action all the pieces
+
+567
+00:31:31,409 --> 00:31:37,049
+I'm doing things like that any search
+everything and stop or change notices
+
+568
+00:31:37,049 --> 00:31:39,970
+unreal you might actually looks up for
+software on something like a display
+
+569
+00:31:39,970 --> 00:31:42,970
+module like firmware for the display
+module because I might make
+
+570
+00:31:42,970 --> 00:31:46,000
+reference to the main application in
+some way
+
+571
+00:31:46,000 --> 00:31:49,440
+and you're just you're just look at the
+base but what we're trying to use pipe
+
+572
+00:31:49,440 --> 00:31:50,710
+porn tube loose thread
+
+573
+00:31:50,710 --> 00:31:54,309
+you can pull on it as far as you can
+pull on it and sand to see you how much
+
+574
+00:31:54,309 --> 00:31:56,429
+what their pain point is you know before
+they
+
+575
+00:31:56,429 --> 00:31:59,570
+they do that so up so that that that's
+
+576
+00:31:59,570 --> 00:32:03,529
+another thing that happens on want one
+comment on this
+
+577
+00:32:03,529 --> 00:32:07,289
+I actually think that this is an awesome
+exercise if you ever get a chance to do
+
+578
+00:32:07,289 --> 00:32:10,630
+that regardless of what you think about
+patents because if you ever get thrown
+
+579
+00:32:10,630 --> 00:32:11,299
+into a cup
+
+580
+00:32:11,299 --> 00:32:14,779
+i'd like the fire thing that you need to
+understand this million my program he
+
+581
+00:32:14,779 --> 00:32:16,010
+did right
+
+582
+00:32:16,010 --> 00:32:19,360
+with no help at all like no
+documentation you gonna learn
+
+583
+00:32:19,360 --> 00:32:22,470
+tana stop reading that car actually
+about
+
+584
+00:32:22,470 --> 00:32:27,200
+everything even like like I'd never seen
+stuff with like CMMI Level four
+
+585
+00:32:27,200 --> 00:32:30,539
+like the software engineering gonna
+staff which this group was practicing
+
+586
+00:32:30,539 --> 00:32:34,450
+you get to see that stuff like all the
+procedures in their documents and
+
+587
+00:32:34,450 --> 00:32:37,799
+it's really fascinating to to see that
+aren't the only thing is you're gonna
+
+588
+00:32:37,799 --> 00:32:40,870
+have to teach attorneys about it
+
+589
+00:32:40,870 --> 00:32:44,019
+on attorneys are not done by the way pat
+attorneys
+
+590
+00:32:44,019 --> 00:32:47,470
+usually have science and engineering
+degrees they're not of a not a softer
+
+591
+00:32:47,470 --> 00:32:50,750
+engineers but they're there to pick
+their smart guys feel smart smart
+
+592
+00:32:50,750 --> 00:32:54,080
+men and women know they can understand
+it but they but but but you do you're
+
+593
+00:32:54,080 --> 00:32:55,490
+gonna have to explain it to them
+
+594
+00:32:55,490 --> 00:32:59,029
+are the other side doesn't want you to
+to succeed this so it's a little bit
+
+595
+00:32:59,029 --> 00:32:59,690
+hostile
+
+596
+00:32:59,690 --> 00:33:03,620
+arm so you will learn a lot some other
+things that that I learned of this is
+
+597
+00:33:03,620 --> 00:33:04,559
+going to get me into
+
+598
+00:33:04,559 --> 00:33:07,600
+serious trouble here but this is a these
+are the
+
+599
+00:33:07,600 --> 00:33:11,850
+the Sox rocks lessons up having to look
+at other people's code
+
+600
+00:33:11,850 --> 00:33:16,250
+I don't they were doing this project on
+c plus plus
+
+601
+00:33:16,250 --> 00:33:20,470
+an assembly code up turns out that in
+assembly code the code is so
+
+602
+00:33:20,470 --> 00:33:24,470
+minimal but it just does what it's
+supposed to do the C pas pas code need
+
+603
+00:33:24,470 --> 00:33:24,970
+at least
+
+604
+00:33:24,970 --> 00:33:28,299
+18 levels of indirection a design
+patterns terror
+
+605
+00:33:28,299 --> 00:33:31,350
+on a synchronous and threats now I'm
+really in trouble here
+
+606
+00:33:31,350 --> 00:33:35,720
+I'm you know that objects functions
+there
+
+607
+00:33:35,720 --> 00:33:38,860
+ID's make filed a pretty much anything
+on
+
+608
+00:33:38,860 --> 00:33:42,220
+actually developed since the nineteen
+seventies
+
+609
+00:33:42,220 --> 00:33:45,669
+I'm it out sorta
+
+610
+00:33:45,669 --> 00:33:49,730
+so distorted this sorted sorry for not
+getting notice it's kind of amazing
+
+611
+00:33:49,730 --> 00:33:52,620
+actually guineas in these cases that
+what they're gonna do is try it out
+
+612
+00:33:52,620 --> 00:33:57,649
+things like prior art enough they ever
+get this prior art from 1975 can you go
+
+613
+00:33:57,649 --> 00:33:58,809
+take a look at it
+
+614
+00:33:58,809 --> 00:34:02,080
+and you look at it like this week 3
+pages a code
+
+615
+00:34:02,080 --> 00:34:06,279
+it cool I could understand it right then
+you go to compare it to the million line
+
+616
+00:34:06,279 --> 00:34:08,350
+C plus plus programmers like
+
+617
+00:34:08,350 --> 00:34:11,740
+God like we've done everything wrong so
+
+618
+00:34:11,740 --> 00:34:15,540
+I had so you know a Chris Chris like
+could you could be wrong about that
+
+619
+00:34:15,540 --> 00:34:19,320
+are event and then the other sorta weird
+thing about this is getting into kinda
+
+620
+00:34:19,320 --> 00:34:21,070
+the weirdest part of this whole thing
+
+621
+00:34:21,070 --> 00:34:24,409
+on in this fact discovery
+
+622
+00:34:24,409 --> 00:34:28,280
+phase I'm the attorneys are actually
+plane
+
+623
+00:34:28,280 --> 00:34:31,760
+a very different kind of game with a
+patent infringement suit
+
+624
+00:34:31,760 --> 00:34:34,210
+mandate that you're over there looking
+at the software and there's these
+
+625
+00:34:34,210 --> 00:34:37,639
+questions like when I you know dissident
+free and you're not and so forth
+
+626
+00:34:37,639 --> 00:34:41,100
+the attorneys are actually playing in a
+kinda weird chess game
+
+627
+00:34:41,100 --> 00:34:44,990
+that you only understand if you
+understand bill clinton's com at
+
+628
+00:34:44,990 --> 00:34:50,100
+about I am you know these famous quote
+comes with a mean the word is
+
+629
+00:34:50,100 --> 00:34:53,520
+but what people like laughed at that my
+idiot you know it's like
+
+630
+00:34:53,520 --> 00:34:57,130
+at the obviously never been and I like a
+patent infringement suit on
+
+631
+00:34:57,130 --> 00:35:00,880
+what it what is going on is the the
+attorneys are basically dealing with
+
+632
+00:35:00,880 --> 00:35:02,690
+that language in the Patton
+
+633
+00:35:02,690 --> 00:35:06,930
+like you have this horrible claim that
+like major head explode earlier
+
+634
+00:35:06,930 --> 00:35:09,930
+they're actually going through that
+entire claim
+
+635
+00:35:09,930 --> 00:35:14,460
+and fighting about it what it means like
+what does this claim mean
+
+636
+00:35:14,460 --> 00:35:17,410
+and they're gonna fight and they're
+gonna fight in front of a judge over an
+
+637
+00:35:17,410 --> 00:35:20,680
+extended period of time about what this
+thing means
+
+638
+00:35:20,680 --> 00:35:25,430
+and I'm just just just did give you some
+background if you love arguments
+
+639
+00:35:25,430 --> 00:35:28,590
+about things like the Oxford comma this
+is
+
+640
+00:35:28,590 --> 00:35:32,270
+your battle right okay like like if you
+love grammar art
+
+641
+00:35:32,270 --> 00:35:36,030
+act like arguments and and things like
+that this is this is what they're kinda
+
+642
+00:35:36,030 --> 00:35:37,480
+fighting about these things like
+
+643
+00:35:37,480 --> 00:35:41,320
+on terms and languages like helped I'll
+take a claim in of a central processing
+
+644
+00:35:41,320 --> 00:35:43,780
+unit was at me
+
+645
+00:35:43,780 --> 00:35:48,330
+in the defendant will say what you have
+to be like a model 800 486 you know
+
+646
+00:35:48,330 --> 00:35:51,880
+version to exactly two hundred mayors
+the other side will say what could be
+
+647
+00:35:51,880 --> 00:35:53,370
+any computer at all
+
+648
+00:35:53,370 --> 00:35:56,470
+and then you know the plane air force a
+while display could be anything the
+
+649
+00:35:56,470 --> 00:35:58,670
+other side will have to be seven segment
+display
+
+650
+00:35:58,670 --> 00:36:02,650
+and they're gonna fight over this I'm
+extensively about what the definitions
+
+651
+00:36:02,650 --> 00:36:03,830
+that these terms are
+
+652
+00:36:03,830 --> 00:36:07,760
+and the thing is here's here's the
+catch: I'm whatever they decide the
+
+653
+00:36:07,760 --> 00:36:09,140
+terms are
+
+654
+00:36:09,140 --> 00:36:13,290
+it actually has to exist in reality like
+you can't have a definition
+
+655
+00:36:13,290 --> 00:36:16,970
+resale here the CPU is this and then
+
+656
+00:36:16,970 --> 00:36:19,870
+that doesn't exist anywhere like you
+actually have to be able to point at the
+
+657
+00:36:19,870 --> 00:36:20,510
+Patton
+
+658
+00:36:20,510 --> 00:36:23,850
+say will there it is in the pattern and
+then on top of that you have to point at
+
+659
+00:36:23,850 --> 00:36:26,310
+the other side you have to say whether
+it is or there
+
+660
+00:36:26,310 --> 00:36:30,660
+so they're fighting over these terms you
+know such a trying to find things
+
+661
+00:36:30,660 --> 00:36:34,430
+and I I was trying to ban about this
+what you're the other night to get this
+
+662
+00:36:34,430 --> 00:36:37,530
+is like a knob looking like they can
+return it upper gallery
+
+663
+00:36:37,530 --> 00:36:41,360
+I'm to any level what abstraction they
+want like down to the
+
+664
+00:36:41,360 --> 00:36:44,590
+Adams at the universe or all the way up
+to like
+
+665
+00:36:44,590 --> 00:36:48,520
+you know planet earth I hit its very
+sorry ive
+
+666
+00:36:48,520 --> 00:36:52,400
+you know Malo boy away so that that's
+the two sides are fighting about this
+
+667
+00:36:52,400 --> 00:36:54,550
+but ultimately what's gonna happen in
+this
+
+668
+00:36:54,550 --> 00:36:58,890
+on in the software fact stuff you're
+gonna have to build a point at something
+
+669
+00:36:58,890 --> 00:37:00,090
+specific like
+
+670
+00:37:00,090 --> 00:37:03,670
+if the attorneys say what is the
+definition they have to go to court the
+
+671
+00:37:03,670 --> 00:37:04,690
+code and say you know what
+
+672
+00:37:04,690 --> 00:37:10,630
+in this file food at sea line 230 255
+that's where it is
+
+673
+00:37:10,630 --> 00:37:15,790
+and so this is a this is a problem to
+which is well how are you gonna do that
+
+674
+00:37:15,790 --> 00:37:19,810
+on 800 version that this million mind
+program like me to just pick one at
+
+675
+00:37:19,810 --> 00:37:22,480
+random and say well we looked at that
+one
+
+676
+00:37:22,480 --> 00:37:25,450
+or are you know what would you do on it
+the the thing that we did in this
+
+677
+00:37:25,450 --> 00:37:26,930
+project is we've decided to do
+
+678
+00:37:26,930 --> 00:37:30,950
+all of them at once and the way that
+that was done was doing something to
+
+679
+00:37:30,950 --> 00:37:34,020
+America fragment version it's kind of
+like
+
+680
+00:37:34,020 --> 00:37:38,190
+I'm source code control but applied to
+individual code fragment the censure
+
+681
+00:37:38,190 --> 00:37:39,440
+what you would do
+
+682
+00:37:39,440 --> 00:37:44,050
+is maybe I'm identify like some piece of
+code that was pertinent to the patent
+
+683
+00:37:44,050 --> 00:37:47,680
+saying okay well here's this piece a
+coding question and you would market
+
+684
+00:37:47,680 --> 00:37:50,500
+office it may be like up code fragment
+think this is
+
+685
+00:37:50,500 --> 00:37:53,830
+you know this is the file that it and
+then it starts with this you know this
+
+686
+00:37:53,830 --> 00:37:57,390
+Boyd crockett ends with this boy blog or
+whatever
+
+687
+00:37:57,390 --> 00:38:00,790
+and then what you would do is write a
+script that we go through all 800
+
+688
+00:38:00,790 --> 00:38:03,450
+snapshots collecting that fragment
+
+689
+00:38:03,450 --> 00:38:06,870
+across all versions and then what it
+would would it would do is collect all
+
+690
+00:38:06,870 --> 00:38:09,380
+the unique ones that it found like all
+the band
+
+691
+00:38:09,380 --> 00:38:13,520
+three versions turn up at this was this
+was highly effective by the way like you
+
+692
+00:38:13,520 --> 00:38:15,220
+would find these versions that code in
+the
+
+693
+00:38:15,220 --> 00:38:19,260
+like you over the 800 snapshot you might
+only find liked 6 persians
+
+694
+00:38:19,260 --> 00:38:22,430
+some fragment and really kinda the the
+
+695
+00:38:22,430 --> 00:38:26,140
+thought here as you're trying to reduce
+this massive data set
+
+696
+00:38:26,140 --> 00:38:29,470
+to some kind of scene structure where
+you could say well you know this claim
+
+697
+00:38:29,470 --> 00:38:30,540
+that you have
+
+698
+00:38:30,540 --> 00:38:34,420
+matches this piece of code by waiters
+11:06 version
+
+699
+00:38:34,420 --> 00:38:37,680
+and here the six persian that's the kind
+of thing that you could present
+
+700
+00:38:37,680 --> 00:38:41,130
+to like a judge or something whoever
+same get this this is
+
+701
+00:38:41,130 --> 00:38:45,660
+this is what what's going on so so is
+some comments on S
+
+702
+00:38:45,660 --> 00:38:48,860
+you know that that have to pay a fine
+thing on my dick
+
+703
+00:38:48,860 --> 00:38:53,720
+take away on this whole thing is that
+papon in some sense makes Impossible
+
+704
+00:38:53,720 --> 00:38:56,370
+Project like that possible I mean it
+it's like
+
+705
+00:38:56,370 --> 00:39:00,620
+cadmium take horrible were any not even
+been able bring your headphones into the
+
+706
+00:39:00,620 --> 00:39:01,560
+vault
+
+707
+00:39:01,560 --> 00:39:05,160
+was just like torture I mean it's it's
+like you're in this fault code in its
+
+708
+00:39:05,160 --> 00:39:06,070
+like
+
+709
+00:39:06,070 --> 00:39:10,300
+using pipe you take this Impossible
+Project you gonna break it down into
+
+710
+00:39:10,300 --> 00:39:11,750
+something that's sane
+
+711
+00:39:11,750 --> 00:39:15,040
+that you can actually do in my computer
+reasonable amount of time
+
+712
+00:39:15,040 --> 00:39:17,950
+it I mean actually occurs to me that
+isn't expert this is prolly the wrong
+
+713
+00:39:17,950 --> 00:39:20,100
+approach I probably should have used
+notepad
+
+714
+00:39:20,100 --> 00:39:23,510
+so I could charge like 4,000 hours a
+
+715
+00:39:23,510 --> 00:39:27,290
+a work but no reply fun really am really
+broke it down
+
+716
+00:39:27,290 --> 00:39:30,650
+I was just at the parenthetical comment
+that even pipeline
+
+717
+00:39:30,650 --> 00:39:35,460
+3d makes a makes makes and the
+impossible possible
+
+718
+00:39:35,460 --> 00:39:39,180
+on and so and for some final some final
+thoughts on this thing
+
+719
+00:39:39,180 --> 00:39:43,050
+if you ever get a chance to do something
+like this you know worldwide
+
+720
+00:39:43,050 --> 00:39:46,840
+I'm not sure we want to do it again you
+know there's a lot of things like that
+
+721
+00:39:46,840 --> 00:39:49,190
+weird thing at character building but
+you don't wanna
+
+722
+00:39:49,190 --> 00:39:53,650
+don't wanna go there again ob but videos
+it so interesting
+
+723
+00:39:53,650 --> 00:39:58,220
+but here it but you you might say happy
+senior the and this is
+
+724
+00:39:58,220 --> 00:40:02,430
+how how this thing end you know I'd like
+I i just bike talk but his legal battle
+
+725
+00:40:02,430 --> 00:40:05,520
+on I don't know
+
+726
+00:40:05,520 --> 00:40:09,430
+this is the weird thing about our tony's
+legal cases are
+
+727
+00:40:09,430 --> 00:40:12,620
+you might be called into it as an expert
+might work on it for months
+
+728
+00:40:12,620 --> 00:40:16,760
+and in all this and think disappears and
+the just pack everything up goes away
+
+729
+00:40:16,760 --> 00:40:20,070
+it might've been saddled might have been
+thrown out of court I'm
+
+730
+00:40:20,070 --> 00:40:24,730
+up to this case I do know some details I
+know that they lost the case initially
+
+731
+00:40:24,730 --> 00:40:28,200
+I don't know the the exact details of
+the judgment on that but
+
+732
+00:40:28,200 --> 00:40:32,050
+on but it is it's actually mysterious
+like your you're basically only privy to
+
+733
+00:40:32,050 --> 00:40:32,910
+the
+
+734
+00:40:32,910 --> 00:40:36,270
+but the technical part in the case
+you're not privy to things like
+
+735
+00:40:36,270 --> 00:40:39,000
+like they have a settlement or something
+you're not you don't know you don't know
+
+736
+00:40:39,000 --> 00:40:39,720
+how it went
+
+737
+00:40:39,720 --> 00:40:44,250
+usually so so and even if I did know I
+couldn't tell you anyway so I'm
+
+738
+00:40:44,250 --> 00:40:48,650
+but the effort for ends abruptly as a is
+kind of a footnote on their
+
+739
+00:40:48,650 --> 00:40:53,160
+getting duty and here on my and game on
+this is sort of
+
+740
+00:40:53,160 --> 00:40:56,270
+curious but arm I learned a ton a stuff
+like
+
+741
+00:40:56,270 --> 00:41:00,000
+generator functions using this doing
+this exercise
+
+742
+00:41:00,000 --> 00:41:04,750
+because it was so much data and I
+couldn't read into RAM it's like
+
+743
+00:41:04,750 --> 00:41:08,900
+when we gonna me to do this it I think
+it ultimately was the background for
+
+744
+00:41:08,900 --> 00:41:09,760
+this really well known
+
+745
+00:41:09,760 --> 00:41:14,400
+generator tutorial if you can carry this
+online you wonder why did Dave do that
+
+746
+00:41:14,400 --> 00:41:18,220
+op it it basically came out the ball
+
+747
+00:41:18,220 --> 00:41:21,440
+figure of bigger TV actually enough to
+actually one cool thing about working in
+
+748
+00:41:21,440 --> 00:41:22,520
+the fall
+
+749
+00:41:22,520 --> 00:41:26,290
+is it all code that was written in the
+ball stay in the fall
+
+750
+00:41:26,290 --> 00:41:29,730
+I don't have to maintain I have to do
+bug reports it's like
+
+751
+00:41:29,730 --> 00:41:34,040
+its its god-like not my problem you know
+at this point so it's a
+
+752
+00:41:34,040 --> 00:41:39,390
+yup state say they're are 10 10
+postscript on this too
+
+753
+00:41:39,390 --> 00:41:42,910
+if you get involved with wanna do you
+think you might actually go all the way
+
+754
+00:41:42,910 --> 00:41:44,860
+to writing and expert report
+
+755
+00:41:44,860 --> 00:41:48,010
+the gets used in like actual you know
+the court proceeding
+
+756
+00:41:48,010 --> 00:41:51,110
+on this is something that is actually
+really interesting
+
+757
+00:41:51,110 --> 00:41:55,200
+I'm that all men should just speaking as
+an academic sake I used to be at the
+
+758
+00:41:55,200 --> 00:41:56,270
+University
+
+759
+00:41:56,270 --> 00:42:01,680
+I we've had this this fear or thought
+that nobody ever read anything I wrote
+
+760
+00:42:01,680 --> 00:42:04,640
+you know this number academics do that
+with anybody read what you write
+
+761
+00:42:04,640 --> 00:42:07,870
+tightest you thinking
+
+762
+00:42:07,870 --> 00:42:11,100
+you take the fifth day I'm is always the
+Spirit God even for like my dissertation
+
+763
+00:42:11,100 --> 00:42:13,630
+and grad schools like and I don't know
+if I'd
+
+764
+00:42:13,630 --> 00:42:16,840
+visor you can read my dissertation so on
+
+765
+00:42:16,840 --> 00:42:19,910
+so here here's the thing if you write an
+expert report
+
+766
+00:42:19,910 --> 00:42:23,860
+but if you do effort with it should have
+to write a report I can absolutely 100
+
+767
+00:42:23,860 --> 00:42:26,720
+percent guarantee that it will be read
+
+768
+00:42:26,720 --> 00:42:31,390
+and read at the level up up each satins
+down to like things like commas
+
+769
+00:42:31,390 --> 00:42:34,010
+and stop their gonna they're gonna take
+your cycle take it they're gonna one
+
+770
+00:42:34,010 --> 00:42:36,890
+beach like 10 para we'd like legal
+assistant fire
+
+771
+00:42:36,890 --> 00:42:40,860
+like attorneys I'd they're gonna read
+and then they're gonna Hall you into a
+
+772
+00:42:40,860 --> 00:42:42,180
+deposition
+
+773
+00:42:42,180 --> 00:42:45,420
+which is usually you a bunch of
+attorneys
+
+774
+00:42:45,420 --> 00:42:49,490
+on a videographer about what I put like
+a huge kick it is really cool I get like
+
+775
+00:42:49,490 --> 00:42:49,750
+that
+
+776
+00:42:49,750 --> 00:42:53,740
+biggest video camera that they can find
+right in this little tiny room and shut
+
+777
+00:42:53,740 --> 00:42:54,670
+your face
+
+778
+00:42:54,670 --> 00:42:58,550
+you know like timid AU on and you're
+sitting there for eight hours and I get
+
+779
+00:42:58,550 --> 00:43:00,070
+asked about the report
+
+780
+00:43:00,070 --> 00:43:04,580
+are it isn't awesome experience because
+you're here's the thing is awesome
+
+781
+00:43:04,580 --> 00:43:08,530
+if they have read the report and they're
+gonna discuss it indep
+
+782
+00:43:08,530 --> 00:43:13,010
+every detail with you and it's going to
+be a big conversation about your report
+
+783
+00:43:13,010 --> 00:43:16,840
+and they're gonna they're going to try
+to basically destroyed and so it is
+
+784
+00:43:16,840 --> 00:43:21,840
+it is really awesome or horribly bad
+experience
+
+785
+00:43:21,840 --> 00:43:25,670
+on be it where you could be horribly bad
+as a few went in there too I kinda
+
+786
+00:43:25,670 --> 00:43:28,700
+looked at the patent for like half an
+hour in
+
+787
+00:43:28,700 --> 00:43:31,790
+he kinda looks similar you know that
+that's how you would die basically
+
+788
+00:43:31,790 --> 00:43:34,910
+from there I thought so there's that up
+
+789
+00:43:34,910 --> 00:43:38,560
+court court testimony i I mention that
+actually ended up going to court up
+
+790
+00:43:38,560 --> 00:43:39,970
+talking about concurrency
+
+791
+00:43:39,970 --> 00:43:44,390
+like what was that about are it turns
+out it was related to this
+
+792
+00:43:44,390 --> 00:43:49,040
+claim term definition stop there is a
+huge battle involving like concurrency
+
+793
+00:43:49,040 --> 00:43:52,480
+and the judge was so sick of people
+battling about he's like okay
+
+794
+00:43:52,480 --> 00:43:56,130
+everybody come in you gonna teach me
+about it are in a love you and i got
+
+795
+00:43:56,130 --> 00:43:59,860
+three hour power point presentation on
+concurrent programming
+
+796
+00:43:59,860 --> 00:44:04,230
+in like I courtroom that the only thing
+that was different for like this in a
+
+797
+00:44:04,230 --> 00:44:04,620
+way
+
+798
+00:44:04,620 --> 00:44:07,990
+except the whole audience with attorneys
+and then are
+
+799
+00:44:07,990 --> 00:44:11,410
+and NP afterwards they had their own
+expert come up
+
+800
+00:44:11,410 --> 00:44:15,450
+and then brief you everything that I
+just said to the previous three hours
+
+801
+00:44:15,450 --> 00:44:19,300
+and then I'm and ending haddock this
+huge battle was kinda
+
+802
+00:44:19,300 --> 00:44:22,410
+cut kinda kinda entertaining there so us
+let's that's
+
+803
+00:44:22,410 --> 00:44:25,800
+that into the into the TOC we might have
+a time for an hour
+
+804
+00:44:25,800 --> 00:44:32,800
+quest a cluster
+
+805
+00:44:40,520 --> 00:44:42,680
+how long did you spend in the fall
+
+806
+00:44:42,680 --> 00:44:46,320
+and how long did you spend specifically
+with your pipe on automation
+
+807
+00:44:46,320 --> 00:44:50,180
+develop so most that this took place
+
+808
+00:44:50,180 --> 00:44:54,580
+I meant the pride of five months in the
+law it started over the summer and it
+
+809
+00:44:54,580 --> 00:44:59,220
+went for like five to six months what
+was the second for the question
+
+810
+00:44:59,220 --> 00:45:03,210
+on the automation arm
+
+811
+00:45:03,210 --> 00:45:06,930
+I think that that the automation part
+was probably stuck outside
+
+812
+00:45:06,930 --> 00:45:09,990
+under a hundred hours on it the biggest
+the the biggest
+
+813
+00:45:09,990 --> 00:45:13,400
+time sync above all was actually
+figuring out how the code worked
+
+814
+00:45:13,400 --> 00:45:16,960
+i mean because it was like you have this
+massive like how do you figure out how a
+
+815
+00:45:16,960 --> 00:45:20,490
+million mine seaports Plus program works
+I mean it's a lot of that was like
+
+816
+00:45:20,490 --> 00:45:23,670
+pulling code fragments and building like
+three-ring notebooks
+
+817
+00:45:23,670 --> 00:45:27,180
+like things really like what this
+Talkster that in this talk to dad and
+
+818
+00:45:27,180 --> 00:45:27,580
+water
+
+819
+00:45:27,580 --> 00:45:30,920
+a lot of discussion with attorneys
+involving claims like
+
+820
+00:45:30,920 --> 00:45:34,040
+if you define this like this you're
+gonna die
+
+821
+00:45:34,040 --> 00:45:36,950
+this is the reason why you're gonna die
+because like this coat over here doesn't
+
+822
+00:45:36,950 --> 00:45:39,540
+do that that like with that way so to
+what I've like
+
+823
+00:45:39,540 --> 00:45:44,120
+behind the scenes like like consultation
+about how things work
+
+824
+00:45:44,120 --> 00:45:48,380
+how the case has been framed and so
+forth yeah
+
+825
+00:45:48,380 --> 00:45:51,450
+last question so
+
+826
+00:45:51,450 --> 00:45:55,620
+good heavy lifting just the searchlight
+you might have been dead in the water
+
+827
+00:45:55,620 --> 00:45:58,780
+how they feel about using Python I don't
+think they knew
+
+828
+00:45:58,780 --> 00:46:02,940
+I don't think they know I'm wealth its
+ok to call this
+
+829
+00:46:02,940 --> 00:46:05,980
+their question how did they did they
+know that we are using Python
+
+830
+00:46:05,980 --> 00:46:09,400
+on the up so all that Python code with
+
+831
+00:46:09,400 --> 00:46:13,010
+living on the fault and wasn't personal
+never printed
+
+832
+00:46:13,010 --> 00:46:16,720
+so there's no printed record have
+anything
+
+833
+00:46:16,720 --> 00:46:20,890
+coming up the case you know if if it had
+actually gone to trial
+
+834
+00:46:20,890 --> 00:46:23,770
+was fully expected that the code would
+have been produced probably would have
+
+835
+00:46:23,770 --> 00:46:24,520
+been part of the
+
+836
+00:46:24,520 --> 00:46:28,960
+production but I but in this girly stage
+a fact discovery I don't think they knew
+
+837
+00:46:28,960 --> 00:46:32,220
+I don't even think are like the side
+that I was working on knew what was
+
+838
+00:46:32,220 --> 00:46:34,950
+going on they just knew that what day
+would go over to the ball
+
+839
+00:46:34,950 --> 00:46:38,630
+but you'd really like David go to the
+vault for like a day and he would sort
+
+840
+00:46:38,630 --> 00:46:39,420
+merge
+
+841
+00:46:39,420 --> 00:46:43,270
+other at all the other kinda weird thing
+about this by the way that the attorneys
+
+842
+00:46:43,270 --> 00:46:45,670
+asked that I never communicate via email
+
+843
+00:46:45,670 --> 00:46:49,220
+this is like the art this is like the
+the ultimate think I'd like don't talk
+
+844
+00:46:49,220 --> 00:46:50,120
+to us at all
+
+845
+00:46:50,120 --> 00:46:53,530
+because I like if you'd working as an
+expert that can't be produced
+
+846
+00:46:53,530 --> 00:46:56,300
+later as evidence in there just like
+where we don't really know what we want
+
+847
+00:46:56,300 --> 00:46:58,160
+to do with you just don't talk to us so
+
+848
+00:46:58,160 --> 00:47:01,380
+attend like the alternate work
+environment like you have the client the
+
+849
+00:47:01,380 --> 00:47:03,940
+client doesn't even want you to talk to
+them right so
+
+850
+00:47:03,940 --> 00:47:08,170
+so what you do is you go over to the on
+take over the you go to the vault
+
+851
+00:47:08,170 --> 00:47:11,240
+you can't work away and then you get mad
+from their point of view day would
+
+852
+00:47:11,240 --> 00:47:13,020
+magically appear from the ball
+
+853
+00:47:13,020 --> 00:47:16,070
+with this thing like a one you asked for
+documents FS
+
+854
+00:47:16,070 --> 00:47:20,070
+861 dash be two or something like that
+they're like much interest in and then
+
+855
+00:47:20,070 --> 00:47:23,570
+yes there's a lot of thing a lot of
+things like that
+
+856
+00:47:23,570 --> 00:47:30,570
+thank you became this gentleman place
+like david beasley
+
+857
+00:47:36,260 --> 00:47:39,580
+there's of like downstairs things get
+started getting
+
+858
+00:47:39,580 --> 00:47:43,320
+of an hour or so bookie programs are
+thank you very much thanks
+

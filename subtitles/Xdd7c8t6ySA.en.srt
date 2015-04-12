@@ -1,0 +1,2150 @@
+1
+00:00:01,069 --> 00:00:03,659
+are for lack of a better name DNS
+explained
+
+2
+00:00:03,659 --> 00:00:10,659
+please welcome lynn
+
+3
+00:00:13,719 --> 00:00:15,320
+kenya oo hey you can hear me
+
+4
+00:00:15,320 --> 00:00:19,869
+I just have to like take a picture /a
+br/ and tweet about it because
+
+5
+00:00:19,869 --> 00:00:24,250
+it's amazing to see this many people
+just as confused about DNS as I am
+
+6
+00:00:24,250 --> 00:00:28,009
+and am
+
+7
+00:00:28,009 --> 00:00:31,339
+so yeah I am when great and
+
+8
+00:00:31,339 --> 00:00:35,500
+see myself organized here an
+
+9
+00:00:35,500 --> 00:00:38,930
+so yeah I am lender oh there's no slides
+a.m.
+
+10
+00:00:38,930 --> 00:00:44,720
+just just kidding I'm I work for us
+Spotify has a a partner
+
+11
+00:00:44,720 --> 00:00:48,710
+engineer with Mom to leap right good
+morning
+
+12
+00:00:48,710 --> 00:00:51,869
+I and I'm also an
+
+13
+00:00:51,869 --> 00:00:54,920
+and founder pilot is in San Francisco
+
+14
+00:00:54,920 --> 00:00:58,500
+and I I do love organization for an
+
+15
+00:00:58,500 --> 00:01:01,790
+make workshops and speaker series and
+stuff like that
+
+16
+00:01:01,790 --> 00:01:05,659
+am and if you want to start your own
+local pile ET's
+
+17
+00:01:05,659 --> 00:01:10,210
+and it should be an you should be able
+just pip install pie ladies and get your
+
+18
+00:01:10,210 --> 00:01:10,619
+own
+
+19
+00:01:10,619 --> 00:01:15,860
+I'm handbook am yeah and I am also on
+board member
+
+20
+00:01:15,860 --> 00:01:19,010
+the papon suffer foundation am awesome
+
+21
+00:01:19,010 --> 00:01:22,790
+a.m. so yeah cool let's get this started
+
+22
+00:01:22,790 --> 00:01:25,910
+I'm so as it nerdy
+
+23
+00:01:25,910 --> 00:01:29,510
+person who likes to jet away to Lake
+
+24
+00:01:29,510 --> 00:01:33,450
+I don't know a hotel like an hour away
+do you still like hacking over a long
+
+25
+00:01:33,450 --> 00:01:34,980
+weekend trying to like
+
+26
+00:01:34,980 --> 00:01:39,120
+deploy a sun-like cool app a always seem
+to like
+
+27
+00:01:39,120 --> 00:01:43,409
+messed it up great like a simple like
+get pushed to her okay like
+
+28
+00:01:43,409 --> 00:01:46,740
+doesn't work on who's ever had that
+issue
+
+29
+00:01:46,740 --> 00:01:50,110
+China like to play something simple get
+pushed
+
+30
+00:01:50,110 --> 00:01:54,670
+yeah from can see it yeah okay I see a
+lot of hands um
+
+31
+00:01:54,670 --> 00:01:59,320
+and I'm sure you recognize this on it's
+always like a DNS issue when you're
+
+32
+00:01:59,320 --> 00:02:00,180
+trying to
+
+33
+00:02:00,180 --> 00:02:03,450
+on China deploy your app on and I'm sure
+
+34
+00:02:03,450 --> 00:02:07,530
+not a few here have had like clean at
+DNS setup the first time around
+
+35
+00:02:07,530 --> 00:02:08,399
+otherwise
+
+36
+00:02:08,399 --> 00:02:13,170
+you would not be here who has had a very
+clean set up a DSLR like first time
+
+37
+00:02:13,170 --> 00:02:13,560
+around
+
+38
+00:02:13,560 --> 00:02:17,650
+now okay up one person
+
+39
+00:02:17,650 --> 00:02:21,469
+I don't know why you hear the music at
+the time I'm
+
+40
+00:02:21,469 --> 00:02:24,920
+so I'm yes they follow the instructions
+and
+
+41
+00:02:24,920 --> 00:02:27,969
+probably set the DNS records in the %uh
+something doesn't work
+
+42
+00:02:27,969 --> 00:02:32,889
+and we've all been there and so without
+a solid understanding at DNS
+
+43
+00:02:32,889 --> 00:02:37,870
+in sometimes a folks just like I'll just
+try this now disliked week this record
+
+44
+00:02:37,870 --> 00:02:38,680
+or some like that
+
+45
+00:02:38,680 --> 00:02:42,799
+waiting for DNS to propagate to see an
+if your guess was correct
+
+46
+00:02:42,799 --> 00:02:47,650
+so hopefully this presentation will give
+you a better understanding
+
+47
+00:02:47,650 --> 00:02:50,719
+am curiosity got the best in me when I
+was
+
+48
+00:02:50,719 --> 00:02:54,730
+get pushed China Plain and it didn't
+work i want to sale
+
+49
+00:02:54,730 --> 00:02:58,870
+dive deeper into a DNS is I'm not so I'm
+
+50
+00:02:58,870 --> 00:03:02,269
+a new their DNS was like answer the
+phone book
+
+51
+00:03:02,269 --> 00:03:06,169
+and the back onto the internet but on I
+also knew that the cloud
+
+52
+00:03:06,169 --> 00:03:09,659
+spilled on DNS and duct tape and DNS
+itself is
+
+53
+00:03:09,659 --> 00:03:13,819
+pretty much duct tape together so well
+it is confusing and
+
+54
+00:03:13,819 --> 00:03:17,480
+has Lake and a text books or definition
+but
+
+55
+00:03:17,480 --> 00:03:22,909
+it doesn't always work the way we think
+it does I'm so what exactly be going
+
+56
+00:03:22,909 --> 00:03:23,769
+over is
+
+57
+00:03:23,769 --> 00:03:27,430
+am what DNS is and why you should care
+
+58
+00:03:27,430 --> 00:03:30,989
+about DNS and what's to do with it what
+to do
+
+59
+00:03:30,989 --> 00:03:35,209
+with the NS as well as like are some
+things I learned along the way
+
+60
+00:03:35,209 --> 00:03:40,590
+so first I wanna explain like why DNS is
+put it important
+
+61
+00:03:40,590 --> 00:03:44,809
+and it allows you to visit very
+productive web sites like Reddit
+
+62
+00:03:44,809 --> 00:03:49,519
+it allows you to like to see very time
+critical emails like Groupon
+
+63
+00:03:49,519 --> 00:03:54,279
+her guilt and deploy or whatever kind to
+do up on her okay room
+
+64
+00:03:54,279 --> 00:03:57,459
+and I'm that allows you to them
+
+65
+00:03:57,459 --> 00:04:01,319
+for your corporate mean generator to not
+be accessible by non-employees
+
+66
+00:04:01,319 --> 00:04:04,339
+I'm still we know that
+
+67
+00:04:04,339 --> 00:04:08,790
+the DNS is essentially the phone but it
+stands for a domain name system
+
+68
+00:04:08,790 --> 00:04:12,879
+and translates from human readable names
+to computer family
+
+69
+00:04:12,879 --> 00:04:17,500
+addresses but the actual like textbook
+definition
+
+70
+00:04:17,500 --> 00:04:21,430
+set DNS is it distributed storage system
+for resource records
+
+71
+00:04:21,430 --> 00:04:24,540
+on each your DNS resolver or
+
+72
+00:04:24,540 --> 00:04:27,930
+authoritative server: stores these
+records and its cash or
+
+73
+00:04:27,930 --> 00:04:32,759
+opal's owned by on the record music
+contains a label a class type in some
+
+74
+00:04:32,759 --> 00:04:33,270
+data
+
+75
+00:04:33,270 --> 00:04:37,270
+so that might be a text but but
+
+76
+00:04:37,270 --> 00:04:40,580
+that still like you're a parade I kind
+of like
+
+77
+00:04:40,580 --> 00:04:44,889
+sorry kinda behind i cud still doesn't
+make sense on
+
+78
+00:04:44,889 --> 00:04:48,639
+you get up but you don't actually get so
+let's actually see it CDNs
+
+79
+00:04:48,639 --> 00:04:52,259
+in action so commoner to understand the
+NS
+
+80
+00:04:52,259 --> 00:04:55,599
+I was playing with and Python for sale
+used
+
+81
+00:04:55,599 --> 00:05:00,020
+landscape be to sniff some DNS traffic
+and to browse like
+
+82
+00:05:00,020 --> 00:05:04,569
+the interwebz so I'm using ski be
+dismissed like scabies the function
+
+83
+00:05:04,569 --> 00:05:08,069
+and to pick up my local traffic as you
+can see I've
+
+84
+00:05:08,069 --> 00:05:11,110
+filtered my traffic via UTPA and
+
+85
+00:05:11,110 --> 00:05:14,689
+import 53 just to hone in on DNS traffic
+
+86
+00:05:14,689 --> 00:05:18,729
+on and i've only limited to like 10
+packets
+
+87
+00:05:18,729 --> 00:05:21,849
+cell as I let this sniff function run
+
+88
+00:05:21,849 --> 00:05:26,590
+and I want to type in my browser
+Rogaland outcome which is my website
+
+89
+00:05:26,590 --> 00:05:30,349
+locally see it I'm so was pretty cool
+
+90
+00:05:30,349 --> 00:05:34,259
+is an as an at that I found they can
+kinda see here is
+
+91
+00:05:34,259 --> 00:05:37,460
+I was typing robe lynda.com into the
+CMake chrome
+
+92
+00:05:37,460 --> 00:05:41,879
+address bar and a DNS query would take
+place for every
+
+93
+00:05:41,879 --> 00:05:45,139
+autocomplete guess that chrome to so
+first
+
+94
+00:05:45,139 --> 00:05:48,680
+it pings a they will not calm because
+the address
+
+95
+00:05:48,680 --> 00:05:51,860
+is also search function right
+
+96
+00:05:51,860 --> 00:05:55,009
+and then as a tape are a complete to
+read it
+
+97
+00:05:55,009 --> 00:05:59,729
+because I can't go there very often and
+nominee can actually see the DNS query
+
+98
+00:05:59,729 --> 00:06:00,349
+on
+
+99
+00:06:00,349 --> 00:06:04,379
+on the second line for for bed and then
+as I type are
+
+100
+00:06:04,379 --> 00:06:08,030
+0 and prom dresses are broken dust by
+
+101
+00:06:08,030 --> 00:06:12,770
+I'm which is and my super awesome how to
+style a python presentation that you
+
+102
+00:06:12,770 --> 00:06:14,280
+should check out
+
+103
+00:06:14,280 --> 00:06:18,500
+on and then and we can see and it's its
+related query that it
+
+104
+00:06:18,500 --> 00:06:22,560
+points Tim on the election define
+
+105
+00:06:22,560 --> 00:06:26,180
+and then on it finds Aeroplan dot com
+want I type
+
+106
+00:06:26,180 --> 00:06:30,770
+Roog and press Enter with the crumbs and
+our position
+
+107
+00:06:30,770 --> 00:06:33,889
+like I guess it's more purple thing
+about from the Nespresso things pretty
+
+108
+00:06:33,889 --> 00:06:34,830
+calm
+
+109
+00:06:34,830 --> 00:06:39,050
+on but one thing that you might notice
+here and in
+
+110
+00:06:39,050 --> 00:06:43,069
+not sure if you can really see it an but
+all these DS prairies have
+
+111
+00:06:43,069 --> 00:06:47,250
+a dot at the end and I'm sure but many
+have you
+
+112
+00:06:47,250 --> 00:06:50,659
+know it's like just how DNS does things
+
+113
+00:06:50,659 --> 00:06:54,919
+but and is anyone know like why it's
+there raisins
+
+114
+00:06:54,919 --> 00:06:59,889
+get like 3 okay get your own right place
+
+115
+00:06:59,889 --> 00:07:03,219
+am so the difference between a dot in a
+no dot
+
+116
+00:07:03,219 --> 00:07:07,800
+an is this is same difference between
+absolute file path and relative file
+
+117
+00:07:07,800 --> 00:07:09,240
+path
+
+118
+00:07:09,240 --> 00:07:12,530
+so on like bill to file cuz it can be an
+
+119
+00:07:12,530 --> 00:07:18,349
+them like this dot dot such data can be
+mangled are mapped incorrectly
+
+120
+00:07:18,349 --> 00:07:21,590
+cell and depending upon how your local
+DNS
+
+121
+00:07:21,590 --> 00:07:24,770
+is set up if you have search and
+
+122
+00:07:24,770 --> 00:07:28,830
+example dotnet in years all dot com and
+you navigate to
+
+123
+00:07:28,830 --> 00:07:34,400
+example dot com a DNS surgery will take
+the year old not to be fully qualified
+
+124
+00:07:34,400 --> 00:07:34,810
+I'm
+
+125
+00:07:34,810 --> 00:07:38,499
+and therefor will look up example dot
+com dot example dotnet
+
+126
+00:07:38,499 --> 00:07:41,680
+dot or whatever on and
+
+127
+00:07:41,680 --> 00:07:45,330
+so and you can see that I am if I
+actually
+
+128
+00:07:45,330 --> 00:07:49,509
+search for example dot com dot Hill go
+to double dot com not that
+
+129
+00:07:49,509 --> 00:07:53,979
+example that con got example dotnet I'm
+so if there's a dot at the
+
+130
+00:07:53,979 --> 00:07:58,590
+and minutes and unambiguous fully
+qualified domain name
+
+131
+00:07:58,590 --> 00:08:02,060
+and it's not prone to the search path
+spoofing
+
+132
+00:08:02,060 --> 00:08:05,279
+um no I didn't put a dot well navigating
+to
+
+133
+00:08:05,279 --> 00:08:08,349
+pro-clinton am but putting a dot is not
+exactly
+
+134
+00:08:08,349 --> 00:08:11,930
+user friendly when you're trying to like
+type in something so chrome kinda have
+
+135
+00:08:11,930 --> 00:08:12,840
+inherently
+
+136
+00:08:12,840 --> 00:08:16,219
+am assumes a dot
+
+137
+00:08:16,219 --> 00:08:20,650
+so I'm handling all this DNS stuff
+father's death carrying stuff kinda got
+
+138
+00:08:20,650 --> 00:08:22,180
+me curious
+
+139
+00:08:22,180 --> 00:08:26,580
+you know as one is IOM and I want to
+figure out what route leading as curry
+
+140
+00:08:26,580 --> 00:08:28,909
+takes to file I get an answer
+
+141
+00:08:28,909 --> 00:08:32,090
+for where Roque lyn is hosted in as not
+actually that
+
+142
+00:08:32,090 --> 00:08:35,740
+easy to figure out once again as pre
+hits the router
+
+143
+00:08:35,740 --> 00:08:40,430
+to better the black box an and that the
+query is forwarded to you
+
+144
+00:08:40,430 --> 00:08:44,650
+if it's not locally cached I know that
+my computers DNS
+
+145
+00:08:44,650 --> 00:08:49,520
+is set up to one are 192 die 168 at 11
+
+146
+00:08:49,520 --> 00:08:53,660
+in which is my router and my router's
+DNS is set up to study but that's only
+
+147
+00:08:53,660 --> 00:08:55,850
+5.7 5.7 5
+
+148
+00:08:55,850 --> 00:09:00,690
+um in I found this out by actually doing
+a logging into the admin page at my
+
+149
+00:09:00,690 --> 00:09:02,060
+router
+
+150
+00:09:02,060 --> 00:09:05,430
+so I do a host query for my for the
+
+151
+00:09:05,430 --> 00:09:08,990
+routers DNS I can see that there is a
+pointer to
+
+152
+00:09:08,990 --> 00:09:12,190
+Comcast dotnet subdomain
+
+153
+00:09:12,190 --> 00:09:18,010
+now if I do and who is clearly on that
+ipsa a Comcast my ISP and provider
+
+154
+00:09:18,010 --> 00:09:19,180
+actually owns
+
+155
+00:09:19,180 --> 00:09:24,610
+and the IP address but beyond that I do
+not know if Comcast DNS Hasbro glenda
+
+156
+00:09:24,610 --> 00:09:25,800
+Comcast
+
+157
+00:09:25,800 --> 00:09:29,010
+and if not I don't know where it goes to
+an
+
+158
+00:09:29,010 --> 00:09:33,710
+to get that information but DNS as some
+you might know is
+
+159
+00:09:33,710 --> 00:09:38,860
+I'm hierarchical on an and getting
+familiar with a dick man can let us
+
+160
+00:09:38,860 --> 00:09:44,560
+that can help us understand that serve
+hierarchy in how queries are resolved
+
+161
+00:09:44,560 --> 00:09:48,110
+on dig it man actually has this nice
+trace
+
+162
+00:09:48,110 --> 00:09:52,570
+flag that makes enters queries to
+resolve the name being looked up
+
+163
+00:09:52,570 --> 00:09:55,780
+am it follows referrals from the root
+servers
+
+164
+00:09:55,780 --> 00:10:00,360
+I'm showing the answer from each server
+that is used that was used to look at
+
+165
+00:10:00,360 --> 00:10:03,660
+to do a reverse lookup Sophie try that
+out with them
+
+166
+00:10:03,660 --> 00:10:08,260
+Python .org and you can see I use the
+day communal apologize if it's
+
+167
+00:10:08,260 --> 00:10:13,740
+too small and aid to the day command
+against Python .org with the
+
+168
+00:10:13,740 --> 00:10:17,010
+trace flag and I'm the kinda see it like
+
+169
+00:10:17,010 --> 00:10:20,570
+a buyer for the information but let's
+let's look at it
+
+170
+00:10:20,570 --> 00:10:24,250
+them in a very prettier representation
+
+171
+00:10:24,250 --> 00:10:27,520
+so the query actually starts from
+
+172
+00:10:27,520 --> 00:10:32,490
+Maya local DNS 192 dot 168 that 1.1
+
+173
+00:10:32,490 --> 00:10:35,770
+where if not cached is passed onto
+
+174
+00:10:35,770 --> 00:10:38,980
+the fruit server which is just dot
+
+175
+00:10:38,980 --> 00:10:42,700
+and the curry from my local DNS for
+Python org
+
+176
+00:10:42,700 --> 00:10:45,800
+first ass for the root server on the dot
+
+177
+00:10:45,800 --> 00:10:50,410
+who knows and that one of these hosts
+should have that on the information
+
+178
+00:10:50,410 --> 00:10:51,850
+below those host there
+
+179
+00:10:51,850 --> 00:10:56,020
+and so the name server responds with Mia
+go ahead try one is
+
+180
+00:10:56,020 --> 00:11:00,450
+which corresponds to a dot word name
+server:
+
+181
+00:11:00,450 --> 00:11:03,930
+the dot org name server: receive the
+query and then
+
+182
+00:11:03,930 --> 00:11:08,630
+says something like try one of these
+hosts which corresponds to the Python
+
+183
+00:11:08,630 --> 00:11:13,370
+decor name server: and a paper and out
+or get them
+
+184
+00:11:13,370 --> 00:11:17,220
+name services yep I haven't a record for
+Python org which is one
+
+185
+00:11:17,220 --> 00:11:20,400
+42 11 1069
+
+186
+00:11:20,400 --> 00:11:23,540
+I'm sowwy sorry successively resolved
+
+187
+00:11:23,540 --> 00:11:26,670
+Python .org but you can see we have like
+
+188
+00:11:26,670 --> 00:11:30,710
+other like subdomains am if you want to
+know more about say like
+
+189
+00:11:30,710 --> 00:11:33,760
+HG to Python .org am
+
+190
+00:11:33,760 --> 00:11:37,850
+began to take a man and we actually see
+that it's a CNAME record
+
+191
+00:11:37,850 --> 00:11:41,960
+map to an an app to record that sound by
+am
+
+192
+00:11:41,960 --> 00:11:45,100
+organ State University's open source lab
+am which
+
+193
+00:11:45,100 --> 00:11:51,150
+is a different am which is a different
+record also I'm
+
+194
+00:11:51,150 --> 00:11:54,370
+so now I'm sure that Python door cuz
+
+195
+00:11:54,370 --> 00:11:57,990
+on more records than just an ass and a
+records
+
+196
+00:11:57,990 --> 00:12:02,540
+so if you're curious we can run the day
+command with them the Dashti
+
+197
+00:12:02,540 --> 00:12:08,210
+any and many am unfortunately only see
+it a records in NS records
+
+198
+00:12:08,210 --> 00:12:13,100
+but if we look at on pilot is dot com as
+all the more interesting you can see
+
+199
+00:12:13,100 --> 00:12:16,630
+am SOA records pointing to name dot com
+you can see
+
+200
+00:12:16,630 --> 00:12:20,540
+our mail records RMX records plane to
+Google
+
+201
+00:12:20,540 --> 00:12:24,930
+an arm a records pointing to you our web
+host
+
+202
+00:12:24,930 --> 00:12:28,000
+hmmm what you don't get is with any is
+the full
+
+203
+00:12:28,000 --> 00:12:31,360
+on zone feiler the DNS setup like all
+
+204
+00:12:31,360 --> 00:12:34,930
+the sea names that are possible on an
+obscenely
+
+205
+00:12:34,930 --> 00:12:39,270
+go into that all been few minutes
+
+206
+00:12:39,270 --> 00:12:42,620
+moving on am so we were easily to
+
+207
+00:12:42,620 --> 00:12:47,830
+we can easily see how a DNS like that
+path takes for resolving
+
+208
+00:12:47,830 --> 00:12:52,460
+and by Thunderbird however it's not the
+most efficient way and for DNS to
+
+209
+00:12:52,460 --> 00:12:54,460
+respond to queries
+
+210
+00:12:54,460 --> 00:12:58,120
+and the route and the top will name
+servers like dot and I ordered
+
+211
+00:12:58,120 --> 00:13:03,040
+would be inundated with requests a free
+for DNS resolvers always go to that
+
+212
+00:13:03,040 --> 00:13:08,940
+the start and so that's where I'm DNS
+caching comes into play
+
+213
+00:13:08,940 --> 00:13:12,220
+so when a DNS resolver 30 did name
+server receives
+
+214
+00:13:12,220 --> 00:13:15,830
+aquarium it searches its cash for an
+achingly will
+
+215
+00:13:15,830 --> 00:13:19,860
+if there's no matching label in the cash
+to serve remains said retrieved from its
+
+216
+00:13:19,860 --> 00:13:20,610
+cash
+
+217
+00:13:20,610 --> 00:13:24,560
+and a referral response containing
+resource record set have
+
+218
+00:13:24,560 --> 00:13:29,150
+annus records for a label that might be
+closer to the domain
+
+219
+00:13:29,150 --> 00:13:32,470
+which is the subject at the cream sunset
+did
+
+220
+00:13:32,470 --> 00:13:36,700
+um to receiving her for a response a DNS
+resolver can also be configured
+
+221
+00:13:36,700 --> 00:13:40,180
+to you and initiate an to initiate
+
+222
+00:13:40,180 --> 00:13:43,340
+them on
+
+223
+00:13:43,340 --> 00:13:46,430
+nursing curry for an authoritative a DNS
+server room
+
+224
+00:13:46,430 --> 00:13:49,920
+responsible for the domain name an which
+is
+
+225
+00:13:49,920 --> 00:13:55,050
+the sobriquet aquarium and the thirtieth
+name so we can respond with an answer if
+
+226
+00:13:55,050 --> 00:13:58,140
+roller field response
+
+227
+00:13:58,140 --> 00:14:01,650
+and the thirtieth a.m. names a response
+is accepted by
+
+228
+00:14:01,650 --> 00:14:05,680
+DNS resolver and then is subsequently
+stored into
+
+229
+00:14:05,680 --> 00:14:08,920
+cash if it only needs a certain
+
+230
+00:14:08,920 --> 00:14:13,270
+conditions which is specific to the
+resolvers implementation
+
+231
+00:14:13,270 --> 00:14:17,540
+so if my local DNS servers cash was
+completely empty
+
+232
+00:14:17,540 --> 00:14:21,860
+am I could send it as carrie Ann for
+Python that order to root server room
+
+233
+00:14:21,860 --> 00:14:25,690
+and then get pointed to go to the name
+Syria handled or domain
+
+234
+00:14:25,690 --> 00:14:28,840
+but it's more likely that I have
+something like dot already am sites
+
+235
+00:14:28,840 --> 00:14:32,390
+already cash so I can go straight to the
+like the dot work sites
+
+236
+00:14:32,390 --> 00:14:36,290
+um and then it just kinda trickles down
+from there
+
+237
+00:14:36,290 --> 00:14:39,630
+am SCO and DNS caching is all
+
+238
+00:14:39,630 --> 00:14:44,190
+you know great hunky-dory Intel you get
+to propagation
+
+239
+00:14:44,190 --> 00:14:49,960
+her occasion is how long someone has to
+wait for DNS changes to show a fact
+
+240
+00:14:49,960 --> 00:14:53,670
+am adidas record will hold an item
+called TTL
+
+241
+00:14:53,670 --> 00:14:56,830
+on time to live number am which and
+
+242
+00:14:56,830 --> 00:14:59,910
+at which point it deleted if that time
+the light is
+
+243
+00:14:59,910 --> 00:15:04,930
+up and so after its deleted I have
+someone makes a new request that furs
+
+244
+00:15:04,930 --> 00:15:08,730
+refers to that record in on the DNS
+server will go through that process
+
+245
+00:15:08,730 --> 00:15:09,600
+again a
+
+246
+00:15:09,600 --> 00:15:12,710
+trying to find that information
+
+247
+00:15:12,710 --> 00:15:15,720
+having and a tu hi time to live
+
+248
+00:15:15,720 --> 00:15:19,990
+that number an will it take longer for
+
+249
+00:15:19,990 --> 00:15:24,130
+for cash into flushing for your friend
+said be able to go to your glory a
+
+250
+00:15:24,130 --> 00:15:27,060
+studio apt that's on her a VM
+
+251
+00:15:27,060 --> 00:15:31,550
+am having a tool 0 TTL am the set then a
+server will be it
+
+252
+00:15:31,550 --> 00:15:34,610
+inundated with them a high-low damn
+
+253
+00:15:34,610 --> 00:15:37,830
+might not have the ability to deal with
+her curry lamb
+
+254
+00:15:37,830 --> 00:15:41,050
+another pain have propagation
+
+255
+00:15:41,050 --> 00:15:45,790
+in NT TL is that some and Internet
+service providers completely ignore
+
+256
+00:15:45,790 --> 00:15:51,700
+details and have their own comics expect
+like expiry for records
+
+257
+00:15:51,700 --> 00:15:55,250
+I'm cashing actually opens up the
+ability to
+
+258
+00:15:55,250 --> 00:15:58,430
+to poison a DNS cache is cash am
+
+259
+00:15:58,430 --> 00:16:02,270
+by for this is not my area of expertise
+but as I understand it
+
+260
+00:16:02,270 --> 00:16:05,800
+DNS cache poisoning works like Sam am
+
+261
+00:16:05,800 --> 00:16:08,890
+if the server doesn't validate a DNS
+response
+
+262
+00:16:08,890 --> 00:16:14,130
+like for instance via and in a sec am
+someone could exploit that but I am
+
+263
+00:16:14,130 --> 00:16:17,730
+essentially spoofing and IP address that
+he or she
+
+264
+00:16:17,730 --> 00:16:21,060
+owns forgiven hostname forcing users
+
+265
+00:16:21,060 --> 00:16:24,280
+that certain hostname to be directed
+elsewhere
+
+266
+00:16:24,280 --> 00:16:28,000
+to be able to spook a DNS entry am an
+attacker
+
+267
+00:16:28,000 --> 00:16:34,780
+would have to create a faster response
+and then that a legitimate a 38-7
+
+268
+00:16:34,780 --> 00:16:38,470
+now you can and effectively and de dos
+
+269
+00:16:38,470 --> 00:16:41,980
+a DNS server are cashing survey with
+probable
+
+270
+00:16:41,980 --> 00:16:47,650
+non-cash entries providing many attempts
+to send fake responses
+
+271
+00:16:47,650 --> 00:16:51,910
+and those random demands that are now
+cast aren't to use phone
+
+272
+00:16:51,910 --> 00:16:57,130
+but what an attacker can do is include a
+name server in his or her response
+
+273
+00:16:57,130 --> 00:17:00,720
+for the desired remained to compromise
+
+274
+00:17:00,720 --> 00:17:04,909
+so on those are the band potential
+issues with cashing in a lot of people
+
+275
+00:17:04,909 --> 00:17:07,309
+actually do face issues with publication
+
+276
+00:17:07,309 --> 00:17:10,819
+am when trying to like deploy on her ok
+im
+
+277
+00:17:10,819 --> 00:17:13,839
+I'm bird on my kinda want to go into
+like
+
+278
+00:17:13,839 --> 00:17:17,860
+that kinda cool dirty things they did
+learn while exploring DNS
+
+279
+00:17:17,860 --> 00:17:22,500
+and maybe you will enjoy them as much as
+I'd in
+
+280
+00:17:22,500 --> 00:17:27,480
+I'm so first up I'll start off with them
+interesting ways to interact with TNS
+
+281
+00:17:27,480 --> 00:17:31,190
+am so previously and when doing a dig
+
+282
+00:17:31,190 --> 00:17:34,910
+any queries like an dick pie ladies
+Dashti any
+
+283
+00:17:34,910 --> 00:17:38,440
+and the we know so we can I get any
+CNAME records
+
+284
+00:17:38,440 --> 00:17:42,430
+and back like Debbie to be carried out
+public is to come
+
+285
+00:17:42,430 --> 00:17:47,470
+and you can certainly run big angry
+against Derby Derby Derby oppose dot com
+
+286
+00:17:47,470 --> 00:17:51,920
+but how many subdomains are there you
+don't really down
+
+287
+00:17:51,920 --> 00:17:55,310
+and being able to look up a full DNS
+zone file
+
+288
+00:17:55,310 --> 00:17:58,540
+I'm is barely allowed on but there's
+this
+
+289
+00:17:58,540 --> 00:18:03,980
+am loses to all called DNS map that
+literally brute force is
+
+290
+00:18:03,980 --> 00:18:07,570
+a sub domain lookup so I'm
+
+291
+00:18:07,570 --> 00:18:10,850
+China Deanna I'm trying to do in a snap
+up I ladies
+
+292
+00:18:10,850 --> 00:18:16,100
+unfortunately I returns for results even
+though I know that there's over 20 min
+
+293
+00:18:16,100 --> 00:18:20,460
+and so donuts like if your users don't
+expect them
+
+294
+00:18:20,460 --> 00:18:24,030
+the results to be comprehensive or fast
+since is clearly
+
+295
+00:18:24,030 --> 00:18:27,660
+searching base on adults and are
+provided wordless
+
+296
+00:18:27,660 --> 00:18:30,850
+I'm so yeah this tool is limited by
+
+297
+00:18:30,850 --> 00:18:34,200
+worthless but you can supply on your own
+like it much longer wordless
+
+298
+00:18:34,200 --> 00:18:39,120
+b1 am
+
+299
+00:18:39,120 --> 00:18:43,060
+am so when another thing they learned
+dominos play around by Dennis
+
+300
+00:18:43,060 --> 00:18:46,240
+I want to figure out what was cashed
+locally my own
+
+301
+00:18:46,240 --> 00:18:49,820
+and local DNS so am for
+
+302
+00:18:49,820 --> 00:18:55,200
+maximally say I'm not share for an when
+its systems or a window systems
+
+303
+00:18:55,200 --> 00:18:59,020
+you in order to find out what is cached
+locally
+
+304
+00:18:59,020 --> 00:19:03,250
+and you either have to kill the DNS
+process and Senate to syslog
+
+305
+00:19:03,250 --> 00:19:07,360
+so after you run on this command of you
+flush the cache
+
+306
+00:19:07,360 --> 00:19:11,470
+and you go into your spam system but log
+on
+
+307
+00:19:11,470 --> 00:19:15,050
+am under system you can see some
+
+308
+00:19:15,050 --> 00:19:18,400
+familiar looking results I have a leech
+and the cert actually looks kinda
+
+309
+00:19:18,400 --> 00:19:21,470
+descend on the slides but there's a lot
+more information
+
+310
+00:19:21,470 --> 00:19:24,730
+am and interesting enough on all these
+
+311
+00:19:24,730 --> 00:19:29,630
+entries are were made from when I was
+DNS mapping Spotify
+
+312
+00:19:29,630 --> 00:19:33,780
+so so it's pretty fun and if we and
+actually look at
+
+313
+00:19:33,780 --> 00:19:38,790
+captured packet minnows I'm using scibi
+to sniff traffic generated by Dennis
+
+314
+00:19:38,790 --> 00:19:40,500
+napping Spotify am
+
+315
+00:19:40,500 --> 00:19:43,710
+done dotnet and you can see an actually
+
+316
+00:19:43,710 --> 00:19:48,530
+a very top the internet lehrman the act
+and then the IP layer in
+
+317
+00:19:48,530 --> 00:19:52,690
+which you can see it went from my
+computer IP address to you my DNS route
+
+318
+00:19:52,690 --> 00:19:53,200
+I'm
+
+319
+00:19:53,200 --> 00:19:57,140
+and then it D and the DNS map was trying
+to
+
+320
+00:19:57,140 --> 00:20:01,140
+trying out the Zr doubts but if I dot
+net at the bottom
+
+321
+00:20:01,140 --> 00:20:06,490
+and so you can see that question record
+that DNS will send
+
+322
+00:20:06,490 --> 00:20:11,120
+am so I think I am I think looking for
+and through
+
+323
+00:20:11,120 --> 00:20:14,970
+escapee in sniffing and yes chapters is
+pretty interesting
+
+324
+00:20:14,970 --> 00:20:19,480
+but I'm I'm hearing telepathically from
+you guys a an
+
+325
+00:20:19,480 --> 00:20:22,940
+not enough Python so am
+
+326
+00:20:22,940 --> 00:20:27,300
+so here comes twisted I'm so you can
+actually ran a
+
+327
+00:20:27,300 --> 00:20:30,840
+very simple a DNS server with Preston am
+
+328
+00:20:30,840 --> 00:20:34,120
+Paul does again if you if it's not that
+read a bomb so this is a very
+
+329
+00:20:34,120 --> 00:20:38,080
+get very simple DNS server am is based
+off for
+
+330
+00:20:38,080 --> 00:20:43,710
+ECT resolve dot com of but you can
+supply on and DNS servers to take him
+
+331
+00:20:43,710 --> 00:20:47,559
+and so we can run this season as well as
+fire apps KPN run
+
+332
+00:20:47,559 --> 00:20:51,680
+the day command against the server room
+and many consider question
+
+333
+00:20:51,680 --> 00:20:55,720
+and down their nose digging for Python
+.org on
+
+334
+00:20:55,720 --> 00:21:00,120
+has the crew name type in class and
+again it goes from my eye
+
+335
+00:21:00,120 --> 00:21:05,530
+from my IP address my computer to my
+router
+
+336
+00:21:05,530 --> 00:21:09,160
+and so here it is a response am with the
+DNS
+
+337
+00:21:09,160 --> 00:21:12,230
+resource record in the data associated
+with it
+
+338
+00:21:12,230 --> 00:21:15,490
+so if ur said that question and now this
+is the actual response
+
+339
+00:21:15,490 --> 00:21:19,850
+it am went from my router to my computer
+am
+
+340
+00:21:19,850 --> 00:21:24,050
+and you can see the resource record name
+in the bottom with Python or the type
+
+341
+00:21:24,050 --> 00:21:29,840
+class TTL them and did assist you with
+that
+
+342
+00:21:29,840 --> 00:21:33,860
+am alright so we'd Owen over interesting
+ways to interact with the an ass now
+
+343
+00:21:33,860 --> 00:21:37,610
+some interesting ways to actually use
+DNS
+
+344
+00:21:37,610 --> 00:21:40,690
+and some the am its me folks may know
+
+345
+00:21:40,690 --> 00:21:43,770
+the types of IP network addressing
+methodology including
+
+346
+00:21:43,770 --> 00:21:47,280
+unique ass small dick ass broadcasts
+anycast
+
+347
+00:21:47,280 --> 00:21:50,910
+is a fourth one where datagrams are sent
+from
+
+348
+00:21:50,910 --> 00:21:54,970
+a single-center to a group have
+potential return receivers
+
+349
+00:21:54,970 --> 00:21:59,210
+all identified by the same address
+referred to as 12
+
+350
+00:21:59,210 --> 00:22:03,990
+nearest Association and so Google
+actually uses any cast for its public
+
+351
+00:22:03,990 --> 00:22:05,210
+DNS servers the
+
+352
+00:22:05,210 --> 00:22:08,700
+8.8 8.8 and 8.8 up 4.4
+
+353
+00:22:08,700 --> 00:22:12,280
+where someone looking up an 8888
+
+354
+00:22:12,280 --> 00:22:17,080
+in Australia Australia may am go
+somewhere different then if someone
+
+355
+00:22:17,080 --> 00:22:20,970
+on in the US where to go to and to look
+up
+
+356
+00:22:20,970 --> 00:22:25,200
+8888 but they both received the same
+information
+
+357
+00:22:25,200 --> 00:22:29,190
+to look Google configures alt
+applications for anycast
+
+358
+00:22:29,190 --> 00:22:33,530
+now allows folks in like operations to
+be able to take down like one cluster
+
+359
+00:22:33,530 --> 00:22:36,590
+a time in like reroute traffic to
+another
+
+360
+00:22:36,590 --> 00:22:39,680
+there's no worry and that about folks
+not getting
+
+361
+00:22:39,680 --> 00:22:44,110
+this the same data when looking at 8
+a.m. insert it's quite nice for
+
+362
+00:22:44,110 --> 00:22:47,309
+for general accounting
+
+363
+00:22:47,309 --> 00:22:53,290
+and Dane am stands for DNS based
+authentication have named entries
+
+364
+00:22:53,290 --> 00:22:57,680
+basically a protocol um for to the gets
+to be bound to
+
+365
+00:22:57,680 --> 00:23:02,570
+DS names using and DNS security
+extensions or heard in a sec
+
+366
+00:23:02,570 --> 00:23:05,660
+it's a basically a proposed way to
+remove
+
+367
+00:23:05,660 --> 00:23:09,059
+and certificate authority for when at:
+less client and server
+
+368
+00:23:09,059 --> 00:23:14,620
+authenticating so on and German many if
+you're familiar with that lock icon on
+
+369
+00:23:14,620 --> 00:23:15,770
+your web browser im
+
+370
+00:23:15,770 --> 00:23:18,800
+but am are you sure
+
+371
+00:23:18,800 --> 00:23:22,260
+and that you're connecting all the way
+to the website using correct
+
+372
+00:23:22,260 --> 00:23:25,500
+kill us certificate am it is
+
+373
+00:23:25,500 --> 00:23:30,150
+am quite possible and quite common for
+like a firewall to get in between
+
+374
+00:23:30,150 --> 00:23:34,300
+and terminate your tillis in connection
+with their website and then recreate the
+
+375
+00:23:34,300 --> 00:23:34,940
+kill us
+
+376
+00:23:34,940 --> 00:23:39,290
+connection from your device to your
+browser am so you think that your secure
+
+377
+00:23:39,290 --> 00:23:40,070
+and
+
+378
+00:23:40,070 --> 00:23:43,990
+any havoc Inc a good connection to your
+bank but in fact the connection to be
+
+379
+00:23:43,990 --> 00:23:46,360
+intercepted in the firewall or another
+device
+
+380
+00:23:46,360 --> 00:23:51,500
+is able to see a potentially awkward all
+interactions at the website
+
+381
+00:23:51,500 --> 00:23:54,660
+so if the browser supporting Dane on
+
+382
+00:23:54,660 --> 00:23:58,050
+the tax that it is not using a specific
+
+383
+00:23:58,050 --> 00:24:02,580
+are specified certificate Anakin warn
+you that I am near
+
+384
+00:24:02,580 --> 00:24:07,270
+connection is and secure even though you
+see that locked icon
+
+385
+00:24:07,270 --> 00:24:11,460
+and supposedly and the DNS Python
+library has support for this already and
+
+386
+00:24:11,460 --> 00:24:15,270
+it's a development branch
+
+387
+00:24:15,270 --> 00:24:18,309
+another dinner Dino ghetto awesomeness
+that I
+
+388
+00:24:18,309 --> 00:24:21,660
+and pepper but my deep dive into Python
+herbs Pittman
+
+389
+00:24:21,660 --> 00:24:25,760
+DNS is and as they can be use for
+service every
+
+390
+00:24:25,760 --> 00:24:29,620
+and there are few ways and tools to
+implement service discovery but
+
+391
+00:24:29,620 --> 00:24:31,520
+ultimately boils down to
+
+392
+00:24:31,520 --> 00:24:34,580
+what servers run this service
+
+393
+00:24:34,580 --> 00:24:38,590
+as mention one can leverage DNS to help
+answer this question
+
+394
+00:24:38,590 --> 00:24:42,150
+with the use the a ser B records
+
+395
+00:24:42,150 --> 00:24:45,620
+cell MSRB records are then DNS zones
+
+396
+00:24:45,620 --> 00:24:48,990
+map cannot claim step will be in the
+format underscore
+
+397
+00:24:48,990 --> 00:24:52,220
+name underscore protocol as you see here
+
+398
+00:24:52,220 --> 00:24:55,260
+dot sight come to host names so for
+instance
+
+399
+00:24:55,260 --> 00:24:58,980
+at Spotify is service has its own as RB
+record in
+
+400
+00:24:58,980 --> 00:25:03,200
+with one record cannot be named after
+the service itself
+
+401
+00:25:03,200 --> 00:25:07,620
+so and you spin up a Spotify client it
+doesn't as Herbie lookup
+
+402
+00:25:07,620 --> 00:25:10,620
+similar to am that they commanded
+
+403
+00:25:10,620 --> 00:25:14,200
+and then the service look at continues
+on
+
+404
+00:25:14,200 --> 00:25:19,940
+so Clank it connects to are a dozen SRB
+look at it connects to an access point
+
+405
+00:25:19,940 --> 00:25:24,190
+and then continues resolving to the data
+that's needed either to play this is
+
+406
+00:25:24,190 --> 00:25:24,790
+torture
+
+407
+00:25:24,790 --> 00:25:28,130
+or whatever
+
+408
+00:25:28,130 --> 00:25:32,250
+and lustful nugget much I think it might
+be the coolest little nugget
+
+409
+00:25:32,250 --> 00:25:36,140
+on is the ability to store a DHT ring in
+
+410
+00:25:36,140 --> 00:25:41,059
+a DNS on DHT stands for distributed hash
+table 9
+
+411
+00:25:41,059 --> 00:25:44,100
+adage T gives you a dictionary like
+interface
+
+412
+00:25:44,100 --> 00:25:48,500
+are key value store I'm but the data or
+the nodes are distributed
+
+413
+00:25:48,500 --> 00:25:52,730
+among the network Spotify I'm store some
+updates
+
+414
+00:25:52,730 --> 00:25:56,520
+service configuration data with in
+indiana spared %eh tearing
+
+415
+00:25:56,520 --> 00:26:01,100
+within a DNS TXT records I'm you may
+have seen out here
+
+416
+00:26:01,100 --> 00:26:05,120
+and TXT records elsewhere I know that
+Google App Engine
+
+417
+00:26:05,120 --> 00:26:08,559
+discern and Guinness mapping with TXT
+records
+
+418
+00:26:08,559 --> 00:26:12,200
+so data from attic a particular Spotify
+service
+
+419
+00:26:12,200 --> 00:26:16,010
+is hashed and is locked at some point am
+on
+
+420
+00:26:16,010 --> 00:26:21,360
+ADHD rating and the servers in the ring
+are responsible for certain segment
+
+421
+00:26:21,360 --> 00:26:24,400
+appearing in this case and since be
+
+422
+00:26:24,400 --> 00:26:28,190
+owns and keys and from a.m.
+
+423
+00:26:28,190 --> 00:26:31,850
+3 ass up into 14
+
+424
+00:26:31,850 --> 00:26:35,730
+and then and since eons from C you 12
+
+425
+00:26:35,730 --> 00:26:40,790
+and ninety its kinda counterclockwise
+little bit confusing
+
+426
+00:26:40,790 --> 00:26:43,940
+but it's actually it's actually quite
+cool to am
+
+427
+00:26:43,940 --> 00:26:49,059
+use DNS home in this list distributed
+fashion
+
+428
+00:26:49,059 --> 00:26:52,330
+so am I A through um a lot love
+
+429
+00:26:52,330 --> 00:26:55,470
+DNS at you and dennis is by no means
+
+430
+00:26:55,470 --> 00:26:59,250
+easy to get into understand within like
+a thirty minute talk
+
+431
+00:26:59,250 --> 00:27:03,490
+so I guarantee you you will and appear
+
+432
+00:27:03,490 --> 00:27:08,440
+do deployment configuration again
+because and DNS is hard
+
+433
+00:27:08,440 --> 00:27:12,710
+but it's not the only way an but it's
+not only hard to learn bit of hard to
+
+434
+00:27:12,710 --> 00:27:13,250
+make
+
+435
+00:27:13,250 --> 00:27:17,800
+could talk I was thinking like this talk
+is gonna be crap it's actually DNS is
+
+436
+00:27:17,800 --> 00:27:19,530
+crappy
+
+437
+00:27:19,530 --> 00:27:23,120
+so some hopefully he'll take some
+
+438
+00:27:23,120 --> 00:27:26,820
+nearly awesomeness away from those
+buying technology and I'm
+
+439
+00:27:26,820 --> 00:27:30,370
+yeah I hope you enjoyed the talk the
+sides will be up soon and I'm
+
+440
+00:27:30,370 --> 00:27:37,370
+thank you
+
+441
+00:27:40,030 --> 00:27:43,900
+and now how much time we have through
+bit
+
+442
+00:27:43,900 --> 00:27:47,370
+we have like a minute or two minutes if
+them someone
+
+443
+00:27:47,370 --> 00:27:50,520
+well maybe I'll take one question or
+maybe if you want a discussion we could
+
+444
+00:27:50,520 --> 00:27:50,870
+just
+
+445
+00:27:50,870 --> 00:27:53,910
+go outside the home does anyone have a
+quick question maybe
+
+446
+00:27:53,910 --> 00:28:00,910
+yeah you
+
+447
+00:28:13,330 --> 00:28:16,370
+I'm I think pretty hard but
+
+448
+00:28:16,370 --> 00:28:20,150
+I think it but I think I'll be fine I'm
+it probably have to investigate both
+
+449
+00:28:20,150 --> 00:28:22,150
+like how twisted implemented and
+
+450
+00:28:22,150 --> 00:28:26,760
+DNS Python implemented on I know that
+and
+
+451
+00:28:26,760 --> 00:28:30,860
+that Spotify has a Duncan Allegri's all
+over for a lake at the service
+
+452
+00:28:30,860 --> 00:28:35,789
+to look up so on I mean so long as you
+can to thoroughly understand
+
+453
+00:28:35,789 --> 00:28:39,929
+the the protocol I guess then I'm can't
+be too hard but
+
+454
+00:28:39,929 --> 00:28:43,210
+it should be a fun exercise actually hmm
+yeah
+
+455
+00:28:43,210 --> 00:28:47,960
+and I i think im at a time but if anyone
+wants to catch me outside I'm
+
+456
+00:28:47,960 --> 00:28:54,960
+then I'm the let's do that thank you
+again
+
+457
+00:29:03,750 --> 00:29:08,610
+one place
+
+458
+00:29:08,610 --> 00:29:15,610
+thank you he's helping stage yes
+
+459
+00:29:21,120 --> 00:29:21,370
+months
+

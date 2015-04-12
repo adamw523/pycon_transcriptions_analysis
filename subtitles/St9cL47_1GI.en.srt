@@ -1,0 +1,2263 @@
+1
+00:00:01,709 --> 00:00:03,030
+good afternoon everyone
+
+2
+00:00:03,030 --> 00:00:06,990
+now we have my friend Julian palette
+with from San Francisco
+
+3
+00:00:06,990 --> 00:00:10,730
+and he'll be talking about and Mon
+techniques for babbitt function testing
+
+4
+00:00:10,730 --> 00:00:16,690
+Union thank you
+
+5
+00:00:16,690 --> 00:00:20,320
+thanks everyone for coming today
+
+6
+00:00:20,320 --> 00:00:24,140
+I'm gonna start just very briefly don't
+want to bore you with that
+
+7
+00:00:24,140 --> 00:00:28,260
+just couple facts about me so you know
+why I'm here today I've been happily
+
+8
+00:00:28,260 --> 00:00:30,769
+programming with by phone as my main
+language
+
+9
+00:00:30,769 --> 00:00:34,840
+for a number of years I am also a joke
+or commuter
+
+10
+00:00:34,840 --> 00:00:38,329
+and I occasionally tweet from this
+handle sure
+
+11
+00:00:38,329 --> 00:00:41,790
+ever interest in what I have to say I
+
+12
+00:00:41,790 --> 00:00:45,030
+work at near on we are aware the agency
+
+13
+00:00:45,030 --> 00:00:48,180
+with a few offices ass gathered
+
+14
+00:00:48,180 --> 00:00:51,699
+scattered around the world I'm
+personally based in San Francisco but we
+
+15
+00:00:51,699 --> 00:00:52,399
+also have
+
+16
+00:00:52,399 --> 00:00:56,629
+and his here in Montreal and we do
+
+17
+00:00:56,629 --> 00:01:00,719
+require carry encourage you to check out
+our web site or commencing after talking
+
+18
+00:01:00,719 --> 00:01:01,510
+to a lecture on
+
+19
+00:01:01,510 --> 00:01:04,640
+more about us okay so
+
+20
+00:01:04,640 --> 00:01:08,710
+starting with a few definitions just so
+we're clear on why
+
+21
+00:01:08,710 --> 00:01:13,250
+I'm gonna be talking about why we talk
+about
+
+22
+00:01:13,250 --> 00:01:17,070
+many testing it is to ensure that small
+part of our code
+
+23
+00:01:17,070 --> 00:01:23,170
+each work in isolation integration
+testing is about ensuring that
+
+24
+00:01:23,170 --> 00:01:26,650
+some other spots when combined together
+keep working well
+
+25
+00:01:26,650 --> 00:01:31,650
+and then functional testing is wants to
+be on his 21 make sure they are you
+
+26
+00:01:31,650 --> 00:01:33,049
+happy occasion as a whole
+
+27
+00:01:33,049 --> 00:01:37,020
+functions well a in particular from the
+user's perspective
+
+28
+00:01:37,020 --> 00:01:40,320
+and one we do believe
+
+29
+00:01:40,320 --> 00:01:43,640
+functional testing for the web typically
+it comes
+
+30
+00:01:43,640 --> 00:01:48,409
+down to using Brotherhood two meters now
+why would be using
+
+31
+00:01:48,409 --> 00:01:53,229
+Abruzzo tomatoes first because heat
+brings us closer to real when his
+
+32
+00:01:53,229 --> 00:01:54,040
+environment
+
+33
+00:01:54,040 --> 00:02:00,689
+all the media on study files such as CSS
+images et cetera the old automatically
+
+34
+00:02:00,689 --> 00:02:04,090
+get looted by the bra so you don't have
+to worry about any of that and semi
+
+35
+00:02:04,090 --> 00:02:04,530
+naughty
+
+36
+00:02:04,530 --> 00:02:09,140
+any JavaScript code any a just calls
+implicitly get
+
+37
+00:02:09,140 --> 00:02:14,319
+executed by the brosser and then when
+all that is put together than
+
+38
+00:02:14,319 --> 00:02:18,750
+allows you to test use interactions
+browser compatibility
+
+39
+00:02:18,750 --> 00:02:24,890
+and very importantly it's a lot of fun
+now
+
+40
+00:02:24,890 --> 00:02:28,690
+the the most put my second most popular
+
+41
+00:02:28,690 --> 00:02:32,769
+have web a brother to me they're out
+there these days is silly name
+
+42
+00:02:32,769 --> 00:02:36,110
+I was actually curious today a who
+
+43
+00:02:36,110 --> 00:02:39,700
+a ok you have ever you silly names to
+could raise your hand
+
+44
+00:02:39,700 --> 00:02:43,050
+well thats clearly the majority that's
+
+45
+00:02:43,050 --> 00:02:46,440
+exciting I really hope that as you look
+at the stock actually
+
+46
+00:02:46,440 --> 00:02:50,800
+learned a lot of new tricks so silly
+name
+
+47
+00:02:50,800 --> 00:02:54,660
+very briefly in pain as they were driver
+API which is about to become the
+
+48
+00:02:54,660 --> 00:02:58,260
+WC w3c standoff and is currently in
+draft
+
+49
+00:02:58,260 --> 00:03:02,659
+he works across multiple browsers for
+example Firefox Chrome IE
+
+50
+00:03:02,659 --> 00:03:05,930
+Safari an Oprah he has
+
+51
+00:03:05,930 --> 00:03:09,190
+trying to have a reason for sanguinis in
+particular by phone that's what we're
+
+52
+00:03:09,190 --> 00:03:09,940
+interested in
+
+53
+00:03:09,940 --> 00:03:14,489
+on it's very easy to install you just
+round peep in store sitting in a few go
+
+54
+00:03:14,489 --> 00:03:17,690
+so for those of you who
+
+55
+00:03:17,690 --> 00:03:20,989
+do not know that Selena for just give a
+very quick the known
+
+56
+00:03:20,989 --> 00:03:24,120
+just to get an idea of the kinds of
+things that he can do with it
+
+57
+00:03:24,120 --> 00:03:27,370
+and so here it is going to run
+
+58
+00:03:27,370 --> 00:03:31,110
+I a subset of the Django admin
+
+59
+00:03:31,110 --> 00:03:35,569
+te Street which is for a return with
+synonym I'm gonna be holding my hand
+
+60
+00:03:35,569 --> 00:03:35,950
+serbs
+
+61
+00:03:35,950 --> 00:03:39,560
+so you know 90s a automated I'm not
+going to do anything and everything is
+
+62
+00:03:39,560 --> 00:03:40,709
+gonna be running by itself
+
+63
+00:03:40,709 --> 00:03:44,590
+what's going to happen is that you will
+see honest answer Firefox that we open
+
+64
+00:03:44,590 --> 00:03:47,099
+and then a bunch of views are action
+being executed
+
+65
+00:03:47,099 --> 00:03:53,569
+in an automated way so he received
+Firefox is running
+
+66
+00:03:53,569 --> 00:03:56,930
+running a bunch of user action is so
+going very fast
+
+67
+00:03:56,930 --> 00:04:00,269
+and hear Tpke we using
+
+68
+00:04:00,269 --> 00:04:04,069
+selenium in Django mostly to test the
+fracture eighty
+
+69
+00:04:04,069 --> 00:04:07,340
+so that means a form submissions
+
+70
+00:04:07,340 --> 00:04:10,340
+for submissions and JavaScript any a
+
+71
+00:04:10,340 --> 00:04:14,280
+little JavaScript admits that help
+improved experience
+
+72
+00:04:14,280 --> 00:04:19,049
+in the Django admin so we which one have
+some test to make sure that as we keep
+
+73
+00:04:19,049 --> 00:04:23,130
+adding more code power to Java scripps
+or even and
+
+74
+00:04:23,130 --> 00:04:26,430
+I think ok sometimes just make sure that
+a
+
+75
+00:04:26,430 --> 00:04:29,530
+everything keeps working that there are
+no regression overtime
+
+76
+00:04:29,530 --> 00:04:33,229
+so that's it's
+
+77
+00:04:33,229 --> 00:04:36,370
+just to give you an idea of the
+cannister you can do with synonym
+
+78
+00:04:36,370 --> 00:04:40,259
+now than I thought
+
+79
+00:04:40,259 --> 00:04:43,820
+I show she think that may not
+necessarily be ok just one start using
+
+80
+00:04:43,820 --> 00:04:45,160
+Selenium
+
+81
+00:04:45,160 --> 00:04:49,770
+are shoot for simple you you you've
+created responsive web sites
+
+82
+00:04:49,770 --> 00:04:53,000
+which responsiveness something that's
+become really popular in the last couple
+
+83
+00:04:53,000 --> 00:04:54,800
+years and for good reasons
+
+84
+00:04:54,800 --> 00:04:57,860
+because with a single code base you can
+do
+
+85
+00:04:57,860 --> 00:05:01,699
+display content optimally for various
+screen sizes for example for mobile or
+
+86
+00:05:01,699 --> 00:05:03,150
+desktop a tablet
+
+87
+00:05:03,150 --> 00:05:08,100
+now testing you what said was him
+sexually read really simple
+
+88
+00:05:08,100 --> 00:05:11,669
+you know comes down to using that one
+method which comes in that which are
+
+89
+00:05:11,669 --> 00:05:12,740
+very PI
+
+90
+00:05:12,740 --> 00:05:16,729
+said window size which allows you chew
+at any point in time during your test to
+
+91
+00:05:16,729 --> 00:05:18,509
+resize the browser window
+
+92
+00:05:18,509 --> 00:05:21,520
+and then for example you may stop a
+we've
+
+93
+00:05:21,520 --> 00:05:25,630
+a 6-under be so we'd run some tests make
+sure everything works for mobile
+
+94
+00:05:25,630 --> 00:05:29,080
+and then expand the window size to then
+ran some test
+
+95
+00:05:29,080 --> 00:05:33,789
+to ensure they are worse on desktop and
+I just had a very simple devotion here
+
+96
+00:05:33,789 --> 00:05:34,990
+again
+
+97
+00:05:34,990 --> 00:05:38,330
+I to do that actually used the by
+
+98
+00:05:38,330 --> 00:05:41,600
+Khan which site wish which I'm sure
+you've all used
+
+99
+00:05:41,600 --> 00:05:44,940
+and interacted with I'm just country
+running it
+
+100
+00:05:44,940 --> 00:05:48,570
+locally to its it actually happens to be
+a genocide to
+
+101
+00:05:48,570 --> 00:05:52,910
+and issued here at the top for example
+there's a menu which you can expand its
+
+102
+00:05:52,910 --> 00:05:53,310
+very
+
+103
+00:05:53,310 --> 00:05:57,650
+no traditional Canada interaction and
+she resize the browser
+
+104
+00:05:57,650 --> 00:06:02,330
+that mean you will hide behind that I
+can he run down can expand it
+
+105
+00:06:02,330 --> 00:06:05,569
+and then again interact with the same
+menu
+
+106
+00:06:05,569 --> 00:06:08,620
+SAR wrote a very simple test
+
+107
+00:06:08,620 --> 00:06:11,750
+to make sure that this works fine
+
+108
+00:06:11,750 --> 00:06:15,039
+and again opening automatically comes up
+
+109
+00:06:15,039 --> 00:06:18,710
+to were to magically openly a a
+
+110
+00:06:18,710 --> 00:06:21,930
+and two bras are a
+
+111
+00:06:21,930 --> 00:06:26,530
+opening each other's menus and then
+resizing the window using that method
+
+112
+00:06:26,530 --> 00:06:30,509
+aunt checking the that many works on
+mobile says very straightforward
+
+113
+00:06:30,509 --> 00:06:32,870
+something that just may not be totally
+obvious
+
+114
+00:06:32,870 --> 00:06:36,060
+once you start easing synonym
+
+115
+00:06:36,060 --> 00:06:39,229
+so that was very quick Dino now
+something that's
+
+116
+00:06:39,229 --> 00:06:42,699
+and i think is very very calm he is that
+you can also test
+
+117
+00:06:42,699 --> 00:06:47,180
+no need a fresh I ET so you're just
+repetition you can also tested visuals
+
+118
+00:06:47,180 --> 00:06:51,130
+so you CSS images et cetera anything
+that would be
+
+119
+00:06:51,130 --> 00:06:55,720
+visually rendered on your page and that
+can be done with a nifty little
+
+120
+00:06:55,720 --> 00:07:00,479
+perhaps that's corny don't I it's
+available to get her to study but men
+
+121
+00:07:00,479 --> 00:07:01,470
+freshman and I
+
+122
+00:07:01,470 --> 00:07:04,729
+it turned out that I call to help
+maintain
+
+123
+00:07:04,729 --> 00:07:08,830
+it's based on synonym and he we catch
+
+124
+00:07:08,830 --> 00:07:11,870
+any regressions Ian the displayed
+
+125
+00:07:11,870 --> 00:07:17,009
+of your site by for example there may be
+lost I saw your CSS typography is VG
+
+126
+00:07:17,009 --> 00:07:17,949
+images
+
+127
+00:07:17,949 --> 00:07:21,199
+basically anything that would be
+visually represented on a site
+
+128
+00:07:21,199 --> 00:07:24,520
+and he would do that by actually taking
+screenshots an
+
+129
+00:07:24,520 --> 00:07:27,620
+comparing x-men shot over time andy
+field sports
+
+130
+00:07:27,620 --> 00:07:31,910
+any any differences between dispensers
+ninety would sell
+
+131
+00:07:31,910 --> 00:07:36,229
+with her a standard test failure
+
+132
+00:07:36,229 --> 00:07:39,289
+so a just to give you a very quick
+example minutes
+
+133
+00:07:39,289 --> 00:07:43,280
+extremely simple to use I again I'm
+gonna use
+
+134
+00:07:43,280 --> 00:07:47,509
+I the bike on which side as a as a an
+example
+
+135
+00:07:47,509 --> 00:07:53,069
+here I'm interesting in that a nice lead
+a banner here he has some cool graphics
+
+136
+00:07:53,069 --> 00:07:56,289
+some nice colors on the also has some
+text in it
+
+137
+00:07:56,289 --> 00:08:00,569
+so how would we go about writing some
+test to make sure that Dez
+
+138
+00:08:00,569 --> 00:08:04,889
+visual keeps looking the same over time
+as we keep making changes
+
+139
+00:08:04,889 --> 00:08:09,910
+in a CSS just make sure we never
+introduce any regressions
+
+140
+00:08:09,910 --> 00:08:14,229
+and only takes is that really done one
+method a sub screenshots
+
+141
+00:08:14,229 --> 00:08:17,500
+which comes with which is provided by
+nato
+
+142
+00:08:17,500 --> 00:08:22,039
+so what he does that too thats cumshot a
+suspension method
+
+143
+00:08:22,039 --> 00:08:26,080
+accepts to parameters the first one is a
+CSS selector to
+
+144
+00:08:26,080 --> 00:08:29,860
+the element on your page if you wanna a
+target and take a screenshot
+
+145
+00:08:29,860 --> 00:08:32,899
+of the second parameter ease
+
+146
+00:08:32,899 --> 00:08:36,200
+charges that define name that's going to
+be stored buttock ng5
+
+147
+00:08:36,200 --> 00:08:39,620
+a screenshot is going east on your on
+your disk
+
+148
+00:08:39,620 --> 00:08:43,860
+and divers first time you gonna run this
+test is gonna pass in a flag
+
+149
+00:08:43,860 --> 00:08:47,660
+at which going to instruct needle check
+she say the baseline
+
+150
+00:08:47,660 --> 00:08:51,540
+kokia the screenshot and every
+subsequent times that you run a test for
+
+151
+00:08:51,540 --> 00:08:52,980
+example on CSR
+
+152
+00:08:52,980 --> 00:08:56,320
+you we're under stairs without that
+flight was going to do so is going to
+
+153
+00:08:56,320 --> 00:08:58,660
+take a new strain showed and compare it
+with
+
+154
+00:08:58,660 --> 00:09:01,959
+the Best Animated you've previously
+created
+
+155
+00:09:01,959 --> 00:09:08,959
+so I'm gonna do you agree to something
+can
+
+156
+00:09:16,529 --> 00:09:20,290
+so it's a it's a very first time going
+to church
+
+157
+00:09:20,290 --> 00:09:24,980
+for the clear K
+
+158
+00:09:24,980 --> 00:09:28,940
+so the very first anime running be so
+I'm gonna pass it
+
+159
+00:09:28,940 --> 00:09:32,930
+that flag save Beistline
+
+160
+00:09:32,930 --> 00:09:36,329
+so it's gonna run that that Co data to
+show you
+
+161
+00:09:36,329 --> 00:09:40,410
+tremendously bigger Mary she can see arm
+
+162
+00:09:40,410 --> 00:09:43,820
+okay
+
+163
+00:09:43,820 --> 00:09:48,730
+so running a test so now you see it
+opens Firefox
+
+164
+00:09:48,730 --> 00:09:51,950
+knows the leukocyte take a screenshot
+
+165
+00:09:51,950 --> 00:09:54,970
+all very fast knife we take a look here
+
+166
+00:09:54,970 --> 00:09:58,350
+it's created for their with that one
+
+167
+00:09:58,350 --> 00:10:02,670
+a screenshot so it's all well and good
+so far
+
+168
+00:10:02,670 --> 00:10:06,800
+a particularly useful I'm just gonna run
+the test again now without this flag
+
+169
+00:10:06,800 --> 00:10:11,040
+what's gonna happen now is out again is
+gonna do exactly the same thing
+
+170
+00:10:11,040 --> 00:10:14,980
+has gone open the page dated take a
+screenshot compared with the baseline
+
+171
+00:10:14,980 --> 00:10:19,329
+that previously created the end it
+detect any difference she so desperate
+
+172
+00:10:19,329 --> 00:10:24,060
+now let's go in into the code and insert
+a mistake
+
+173
+00:10:24,060 --> 00:10:28,209
+a I'm just gonna chance here
+
+174
+00:10:28,209 --> 00:10:31,610
+accidentally a the call of the blue sky
+
+175
+00:10:31,610 --> 00:10:36,350
+an inverse it away here instead of five
+I was going to put a zero
+
+176
+00:10:36,350 --> 00:10:39,649
+if
+
+177
+00:10:39,649 --> 00:10:43,300
+I reload the page here its
+
+178
+00:10:43,300 --> 00:10:46,430
+ok it's really hard to see that
+
+179
+00:10:46,430 --> 00:10:49,670
+anything challenge to just look at it
+you know it premature the same very easy
+
+180
+00:10:49,670 --> 00:10:50,370
+to miss that
+
+181
+00:10:50,370 --> 00:10:53,660
+within so did that the tape a window
+into CSS
+
+182
+00:10:53,660 --> 00:10:57,029
+but this is where need to consider risky
+so
+
+183
+00:10:57,029 --> 00:11:03,140
+here I'm going to rerun that same test
+setting up as a brother a Texas man shot
+
+184
+00:11:03,140 --> 00:11:08,199
+compares it with a baseline and it's
+time to test the test failed
+
+185
+00:11:08,199 --> 00:11:14,350
+for you go back up you see the research
+for the newsprint show about a bad in
+
+186
+00:11:14,350 --> 00:11:16,890
+much the best night but its
+
+187
+00:11:16,890 --> 00:11:21,260
+doesn't just stop there he would
+actually also create a defiant between
+
+188
+00:11:21,260 --> 00:11:24,380
+been used when showed on the best time
+check Chile highlight
+
+189
+00:11:24,380 --> 00:11:29,959
+what actually one wrong where did you
+the differences so he created and if I
+
+190
+00:11:29,959 --> 00:11:31,490
+had been ordered beefed-up Angie
+
+191
+00:11:31,490 --> 00:11:36,640
+and here actually highlights what's
+basically different agenda baseline in
+
+192
+00:11:36,640 --> 00:11:38,050
+the screenshot so here
+
+193
+00:11:38,050 --> 00:11:42,360
+it's obvious that there's something
+wrong with the the the Scottish and a
+
+194
+00:11:42,360 --> 00:11:42,839
+car
+
+195
+00:11:42,839 --> 00:11:49,050
+so damn gonna go back in here on and do
+my mistake
+
+196
+00:11:49,050 --> 00:11:52,910
+rear under test
+
+197
+00:11:52,910 --> 00:11:57,310
+another test passed
+
+198
+00:11:57,310 --> 00:12:00,940
+another another very common mistake
+
+199
+00:12:00,940 --> 00:12:04,600
+when dealing with CSS is one missing up
+fun sizes
+
+200
+00:12:04,600 --> 00:12:08,110
+so here again another example on going
+to change the font size
+
+201
+00:12:08,110 --> 00:12:15,110
+for some other text in a banner and then
+we run that test
+
+202
+00:12:15,310 --> 00:12:22,310
+my hair done test failed
+
+203
+00:12:23,250 --> 00:12:26,730
+for Luke again now that the file aids
+
+204
+00:12:26,730 --> 00:12:30,640
+the text actually changed within a
+banner fits
+
+205
+00:12:30,640 --> 00:12:34,050
+extremely simple to use and its read a
+really powerful
+
+206
+00:12:34,050 --> 00:12:41,050
+alrighty so now just to show your down
+
+207
+00:12:41,920 --> 00:12:45,800
+if I'm doing mistake here and I put it
+back to what it used to be
+
+208
+00:12:45,800 --> 00:12:51,319
+and run a test there now
+
+209
+00:12:51,319 --> 00:12:54,490
+we back on track okay so moving on
+
+210
+00:12:54,490 --> 00:12:58,290
+I am 22
+
+211
+00:12:58,290 --> 00:13:03,140
+few a few tips about you know the best
+lines control tacky actus fixtures
+
+212
+00:13:03,140 --> 00:13:06,940
+for you to street to typically want to
+store them in your repository so that
+
+213
+00:13:06,940 --> 00:13:09,390
+their ship with the rest on your team
+and the CA server
+
+214
+00:13:09,390 --> 00:13:12,420
+so that everybody can run a test against
+the as baseline
+
+215
+00:13:12,420 --> 00:13:16,529
+screenshots it's awesome extremely
+important to ensure the consistency
+
+216
+00:13:16,529 --> 00:13:17,449
+between
+
+217
+00:13:17,449 --> 00:13:20,740
+a different environments Heath a
+
+218
+00:13:20,740 --> 00:13:24,399
+the CA server uses a different browser
+version or has different system trance
+
+219
+00:13:24,399 --> 00:13:25,430
+in store for example
+
+220
+00:13:25,430 --> 00:13:29,589
+the page Minot render exactly the same
+so you wanna be very careful
+
+221
+00:13:29,589 --> 00:13:34,550
+I that or environment sector use the
+same and I can be done using
+
+222
+00:13:34,550 --> 00:13:39,380
+configuration management systems like a
+share fanciful puppet or salt
+
+223
+00:13:39,380 --> 00:13:43,520
+than I wanted to touch in topeka
+
+224
+00:13:43,520 --> 00:13:47,069
+continous integration how to you use all
+this stuff
+
+225
+00:13:47,069 --> 00:13:50,880
+in the real workroom so when you gonna
+be
+
+226
+00:13:50,880 --> 00:13:54,730
+a raining a sea ice are typically letter
+is not gonna be using
+
+227
+00:13:54,730 --> 00:13:58,160
+a a physical monitor so instead you want
+to
+
+228
+00:13:58,160 --> 00:14:02,970
+run your testing headless told which
+means basically using a virtual display
+
+229
+00:14:02,970 --> 00:14:06,559
+very simple to do on your says however
+you want install a
+
+230
+00:14:06,559 --> 00:14:10,230
+her brother is possible very specific
+version of the riser
+
+231
+00:14:10,230 --> 00:14:14,089
+you want to stall and all system fonts
+anything we need to make sure that
+
+232
+00:14:14,089 --> 00:14:17,740
+no consistency between your environment
+and then you won't install
+
+233
+00:14:17,740 --> 00:14:21,189
+Expedia which she's a program that we're
+on
+
+234
+00:14:21,189 --> 00:14:24,760
+a dual display memory:
+
+235
+00:14:24,760 --> 00:14:29,550
+that is very simple to use again randy
+is VBS command and then assign a number
+
+236
+00:14:29,550 --> 00:14:32,910
+for that displayed a stand gonna be used
+by your browser
+
+237
+00:14:32,910 --> 00:14:35,990
+if you use Jenkins you can also use a XP
+bf again
+
+238
+00:14:35,990 --> 00:14:39,930
+that's basically gone around us two
+things for you were too much cream
+
+239
+00:14:39,930 --> 00:14:43,250
+for you every time to test around she's
+Travis sitter
+
+240
+00:14:43,250 --> 00:14:48,660
+also very simple use does run this
+comments before your test actually start
+
+241
+00:14:48,660 --> 00:14:52,809
+you can also use by their choice pay
+which is nice little package
+
+242
+00:14:52,809 --> 00:14:55,890
+which will allow its military
+wrap-around text PDF any will allow you
+
+243
+00:14:55,890 --> 00:14:57,160
+to start and stop
+
+244
+00:14:57,160 --> 00:15:00,990
+that there to display using passion code
+
+245
+00:15:00,990 --> 00:15:04,069
+or you may also use ban on JS which is a
+
+246
+00:15:04,069 --> 00:15:08,260
+headless brosser as gonna deal with its
+own virtually spay
+
+247
+00:15:08,260 --> 00:15:11,439
+it's a super easy to use a silly me in
+sheep's
+
+248
+00:15:11,439 --> 00:15:14,470
+a an interface to dad browser
+
+249
+00:15:14,470 --> 00:15:18,220
+so it's it very easy just get started
+with
+
+250
+00:15:18,220 --> 00:15:23,189
+so wanting to show a very quick service
+that his cock also slabs
+
+251
+00:15:23,189 --> 00:15:26,260
+and what's a slut does it actually runs
+
+252
+00:15:26,260 --> 00:15:30,279
+I remote in the cloud has a whole bunch
+of different VMs
+
+253
+00:15:30,279 --> 00:15:33,510
+and what's really nice is that he
+actually gives access to multiple
+
+254
+00:15:33,510 --> 00:15:34,760
+different browsers
+
+255
+00:15:34,760 --> 00:15:38,829
+tonight I year 54 scrimmage any any
+brushes can think of
+
+256
+00:15:38,829 --> 00:15:42,760
+even including mobile processors and
+that saves you the trouble
+
+257
+00:15:42,760 --> 00:15:46,380
+of eat managing your own a set of
+
+258
+00:15:46,380 --> 00:15:50,279
+no different environment different
+browsers locally
+
+259
+00:15:50,279 --> 00:15:54,709
+also allow us to run tests in parallel
+and something's really useful we also
+
+260
+00:15:54,709 --> 00:15:57,819
+keeps video recordings of all the
+sessions that you run
+
+261
+00:15:57,819 --> 00:16:01,579
+it's six particularly useful one test
+actually fail to see can go back and it
+
+262
+00:16:01,579 --> 00:16:02,559
+a point in time
+
+263
+00:16:02,559 --> 00:16:06,079
+and look at the video to see where test
+actually failed
+
+264
+00:16:06,079 --> 00:16:11,050
+so hearing I'm gonna show a deal
+
+265
+00:16:11,050 --> 00:16:14,949
+I I'm gonna run I am
+
+266
+00:16:14,949 --> 00:16:18,209
+some other gender test to show their
+earlier this time
+
+267
+00:16:18,209 --> 00:16:22,100
+only this time a remotely on this to
+slap
+
+268
+00:16:22,100 --> 00:16:26,260
+platform
+
+269
+00:16:26,260 --> 00:16:33,260
+just realized I am actually have to
+restart a server cedar
+
+270
+00:16:34,760 --> 00:16:41,760
+to spare with me for a second
+
+271
+00:16:46,880 --> 00:16:50,000
+here what I'm doing physically stirred
+create the initial connection with the
+
+272
+00:16:50,000 --> 00:16:51,040
+source web server
+
+273
+00:16:51,040 --> 00:16:54,579
+just make sure everything is of
+
+274
+00:16:54,579 --> 00:17:01,579
+frantic aged
+
+275
+00:17:20,409 --> 00:17:23,230
+came
+
+276
+00:17:23,230 --> 00:17:26,560
+sahnoun going around does test
+
+277
+00:17:26,560 --> 00:17:33,100
+okay it's an on going to go to lead us a
+slam website
+
+278
+00:17:33,100 --> 00:17:40,100
+refresh
+
+279
+00:17:41,799 --> 00:17:45,840
+so now you see that some tests are
+currently being run can actually see
+
+280
+00:17:45,840 --> 00:17:46,390
+them
+
+281
+00:17:46,390 --> 00:17:53,390
+in real time so you can see the test
+around I speech
+
+282
+00:17:53,830 --> 00:17:58,580
+in a performance that I was very quick
+one and the cool thing is at it again
+
+283
+00:17:58,580 --> 00:18:02,690
+eater a video recording of that test or
+any point in time to go back
+
+284
+00:18:02,690 --> 00:18:08,570
+and then view the video in this
+particular instance I'm running does
+
+285
+00:18:08,570 --> 00:18:09,559
+gender tests
+
+286
+00:18:09,559 --> 00:18:14,390
+on I think Firefox on a Linux machine
+
+287
+00:18:14,390 --> 00:18:21,390
+yet
+
+288
+00:18:25,090 --> 00:18:27,570
+and that same test which I have been
+running
+
+289
+00:18:27,570 --> 00:18:34,570
+on I think I E eight yes
+
+290
+00:18:35,419 --> 00:18:40,320
+midst try yessir dads
+
+291
+00:18:40,320 --> 00:18:45,299
+I E eight on a on it Windows XP machine
+again it's just currently being run
+
+292
+00:18:45,299 --> 00:18:51,509
+so he can
+
+293
+00:18:51,509 --> 00:18:54,580
+just a YouTube video
+
+294
+00:18:54,580 --> 00:18:58,370
+so why I'm currently have been trying to
+integrate into Django te Street
+
+295
+00:18:58,370 --> 00:19:02,470
+we've passos Lasker there there can you
+know try to provide a sour
+
+296
+00:19:02,470 --> 00:19:06,350
+and a an account for us for open source
+projects and
+
+297
+00:19:06,350 --> 00:19:09,850
+ISO we're just now in the process of
+integrating the whole test route is
+
+298
+00:19:09,850 --> 00:19:12,220
+going to be very useful to ensure that
+the gentleman's
+
+299
+00:19:12,220 --> 00:19:16,220
+keeps working in all different kinds a
+process K
+
+300
+00:19:16,220 --> 00:19:19,820
+sorry I encourage you to check him out
+
+301
+00:19:19,820 --> 00:19:22,980
+it's it's a case it's very handy
+especially if you don't have to do with
+
+302
+00:19:22,980 --> 00:19:23,519
+the trouble
+
+303
+00:19:23,519 --> 00:19:27,490
+dealing with all those environments
+yourself a photo so touch
+
+304
+00:19:27,490 --> 00:19:32,279
+on a topic thats a beat controversial
+when selling your own car
+
+305
+00:19:32,279 --> 00:19:37,299
+sammy's often criticized for I it's
+known as in shaking ass
+
+306
+00:19:37,299 --> 00:19:40,909
+really there should be a target of
+dedicated to this
+
+307
+00:19:40,909 --> 00:19:44,490
+I their solutions for but just about
+everything but it does require
+
+308
+00:19:44,490 --> 00:19:48,080
+some effort I just thought I would to
+provide a few quick tips
+
+309
+00:19:48,080 --> 00:19:52,259
+for some moisture really concerned about
+ski to encourage you to use fat NGS cuz
+
+310
+00:19:52,259 --> 00:19:54,230
+it's much more lightweight and Firefox
+any
+
+311
+00:19:54,230 --> 00:19:58,639
+him we were in much faster ice encourage
+you to use paralyze a sham
+
+312
+00:19:58,639 --> 00:20:01,669
+action actually can show you an example
+here
+
+313
+00:20:01,669 --> 00:20:04,730
+I'm gonna run some tests I'm gonna
+
+314
+00:20:04,730 --> 00:20:09,649
+stud the social at taps test here camden
+around some other test data showed you
+
+315
+00:20:09,649 --> 00:20:10,440
+earlier
+
+316
+00:20:10,440 --> 00:20:13,929
+only jean-juste a multiple
+
+317
+00:20:13,929 --> 00:20:17,120
+processes at a time that's a future
+that's provided by nosed
+
+318
+00:20:17,120 --> 00:20:21,299
+a knows this run our school that s
+runners also have this kind of russian
+
+319
+00:20:21,299 --> 00:20:21,740
+teen
+
+320
+00:20:21,740 --> 00:20:24,799
+where you gonna see here is multiple
+versus
+
+321
+00:20:24,799 --> 00:20:28,350
+instances a Firefox running at the same
+time in each
+
+322
+00:20:28,350 --> 00:20:32,190
+each running a different test said
+that's going to you
+
+323
+00:20:32,190 --> 00:20:35,570
+a reedy speed up the
+
+324
+00:20:35,570 --> 00:20:40,970
+did the time education time with your
+test and so again very easy to use
+
+325
+00:20:40,970 --> 00:20:44,169
+now actually concerned about robustness
+
+326
+00:20:44,169 --> 00:20:49,139
+II can exercise this enough it's really
+really important to pin down versions of
+
+327
+00:20:49,139 --> 00:20:50,519
+the whole software stack
+
+328
+00:20:50,519 --> 00:20:54,690
+there is so much so much stuff happening
+when you run factional test because it
+
+329
+00:20:54,690 --> 00:20:56,200
+exercise its so many
+
+330
+00:20:56,200 --> 00:20:59,870
+laser of your software stack its report
+and that
+
+331
+00:20:59,870 --> 00:21:03,929
+I everybody on your team in NCAA servers
+using directly the same versions
+
+332
+00:21:03,929 --> 00:21:07,320
+all the ways any subtle differences
+between to her shower software
+
+333
+00:21:07,320 --> 00:21:11,059
+may caused a did bring a you would say
+to you
+
+334
+00:21:11,059 --> 00:21:14,490
+behave or look slightly differently and
+then cause I
+
+335
+00:21:14,490 --> 00:21:18,019
+a false positive in presences in your
+apt issued
+
+336
+00:21:18,019 --> 00:21:23,899
+extremely important also you want to
+master the use of explicit wait it's a
+
+337
+00:21:23,899 --> 00:21:24,710
+very common
+
+338
+00:21:24,710 --> 00:21:28,110
+salsa mistakes when writing singing test
+
+339
+00:21:28,110 --> 00:21:32,700
+a a very common mistakes actually to run
+your test too fast
+
+340
+00:21:32,700 --> 00:21:36,340
+be forwarded to state in the browser is
+reached for this test to be run
+
+341
+00:21:36,340 --> 00:21:40,299
+so you wanna make sure of i suppose you
+have a very long Ajax course being run
+
+342
+00:21:40,299 --> 00:21:41,039
+you wanna have
+
+343
+00:21:41,039 --> 00:21:44,110
+ways of tracking that a
+
+344
+00:21:44,110 --> 00:21:48,029
+the the web app he's at a stage where
+you can continuing your test
+
+345
+00:21:48,029 --> 00:21:51,110
+and the whips driver API I gives you
+
+346
+00:21:51,110 --> 00:21:54,299
+the kind of functionality to test for
+particular condition
+
+347
+00:21:54,299 --> 00:21:58,090
+on for you to wait on and then resume
+your test
+
+348
+00:21:58,090 --> 00:22:02,460
+that already goes a long way into
+increasing robustness on your test
+
+349
+00:22:02,460 --> 00:22:06,169
+but it does require to be me for the
+call and and meticulous
+
+350
+00:22:06,169 --> 00:22:09,450
+and there are a lot more cheats a
+
+351
+00:22:09,450 --> 00:22:12,350
+that I don't have time to call for today
+but I encourage you to check out those
+
+352
+00:22:12,350 --> 00:22:13,549
+two books which are
+
+353
+00:22:13,549 --> 00:22:17,820
+both really useful I'll I shared links
+in induced when a publisher site
+
+354
+00:22:17,820 --> 00:22:22,070
+the size area later on those are really
+should have
+
+355
+00:22:22,070 --> 00:22:25,960
+really good tips for increasing
+efficiency a test so
+
+356
+00:22:25,960 --> 00:22:29,639
+in conclusion I 20 a
+
+357
+00:22:29,639 --> 00:22:33,700
+what a question integration fashion test
+are slow that's an obvious fact
+
+358
+00:22:33,700 --> 00:22:38,159
+to use them with moderation you should
+also only you silly and for why did Demi
+
+359
+00:22:38,159 --> 00:22:39,480
+test time anal
+
+360
+00:22:39,480 --> 00:22:44,369
+already achieved so focus your singing
+test on complex use our workflows for
+
+361
+00:22:44,369 --> 00:22:45,570
+example or visuals
+
+362
+00:22:45,570 --> 00:22:48,720
+and let the dummy try and take care of
+everything else cuz it's gonna be much
+
+363
+00:22:48,720 --> 00:22:50,039
+faster much more reliable
+
+364
+00:22:50,039 --> 00:22:55,330
+and finally integration and fashion test
+are important I really encourage you to
+
+365
+00:22:55,330 --> 00:22:57,879
+include some in yo te street because
+stay we'll
+
+366
+00:22:57,879 --> 00:23:01,080
+increase you can finance in your code
+greatly
+
+367
+00:23:01,080 --> 00:23:04,960
+there when Craig increase your test
+coverage
+
+368
+00:23:04,960 --> 00:23:08,450
+that will increase iron added that will
+allow you to test
+
+369
+00:23:08,450 --> 00:23:12,149
+the interaction between a friend on your
+back and ensure that the user interface
+
+370
+00:23:12,149 --> 00:23:15,570
+works and looks as a spit expected
+
+371
+00:23:15,570 --> 00:23:18,929
+and its is again it's a lot of fun to
+use down through and
+
+372
+00:23:18,929 --> 00:23:22,129
+if you've never used it I really
+encourage you to use the stools
+
+373
+00:23:22,129 --> 00:23:26,570
+because at the very least you're just
+gonna have a lot of fun
+
+374
+00:23:26,570 --> 00:23:29,809
+thanks very much for listening and i'm
+happy to answer any question
+
+375
+00:23:29,809 --> 00:23:36,809
+you may have
+
+376
+00:23:37,570 --> 00:23:40,730
+we have time for a question and answers
+do you have any questions
+
+377
+00:23:40,730 --> 00:23:44,510
+on Union am so just one very quick
+question
+
+378
+00:23:44,510 --> 00:23:48,029
+and you mentioned and ask for had less
+
+379
+00:23:48,029 --> 00:23:52,450
+testing of course given that JavaScript
+tends to work very differently in
+
+380
+00:23:52,450 --> 00:23:53,400
+different browsers
+
+381
+00:23:53,400 --> 00:23:57,299
+am have you got any suggestions for
+
+382
+00:23:57,299 --> 00:24:00,620
+headless versions of other browsers like
+Firefox or I'm
+
+383
+00:24:00,620 --> 00:24:04,179
+well
+
+384
+00:24:04,179 --> 00:24:07,730
+Tpke when using and headless mode I
+would
+
+385
+00:24:07,730 --> 00:24:10,740
+use a virtual display so we could still
+use the same and
+
+386
+00:24:10,740 --> 00:24:16,029
+engine is possible I as far as find OJ's
+his concern actually really impressed by
+
+387
+00:24:16,029 --> 00:24:16,649
+how
+
+388
+00:24:16,649 --> 00:24:20,500
+robust an efficient and easy it's pretty
+much on par with
+
+389
+00:24:20,500 --> 00:24:24,690
+Firefox and Chrome in terms of
+Franchitti at least as far as as far as
+
+390
+00:24:24,690 --> 00:24:25,720
+I've been testing it
+
+391
+00:24:25,720 --> 00:24:28,980
+and it something actually use very
+
+392
+00:24:28,980 --> 00:24:33,870
+confidently with my test I really
+recommend you to check it out super easy
+
+393
+00:24:33,870 --> 00:24:35,500
+to install and spurs EU's
+
+394
+00:24:35,500 --> 00:24:40,500
+I thanks very much for talking
+
+395
+00:24:40,500 --> 00:24:44,669
+I learned a lot am a so just a tiny
+little thing really I'm case you didn't
+
+396
+00:24:44,669 --> 00:24:45,049
+know it
+
+397
+00:24:45,049 --> 00:24:48,220
+as they a command it comes to the latest
+versions of XP FB called
+
+398
+00:24:48,220 --> 00:24:52,470
+XP FB dash from which will just run the
+next money put in bash
+
+399
+00:24:52,470 --> 00:24:55,230
+in a virtual frame buffer is really
+useful even on your own machine if
+
+400
+00:24:55,230 --> 00:24:56,520
+you're running slinging tests
+
+401
+00:24:56,520 --> 00:24:59,440
+that they'll be in a federal crime
+office and are popping up an annoying
+
+402
+00:24:59,440 --> 00:25:00,520
+you literally something else
+
+403
+00:25:00,520 --> 00:25:06,890
+has a ex bf b-12 compaq's I'd
+
+404
+00:25:06,890 --> 00:25:09,940
+thanks for the talk but that is really
+interesting I just was wondering if you
+
+405
+00:25:09,940 --> 00:25:12,340
+could comment on how you decide what to
+test
+
+406
+00:25:12,340 --> 00:25:15,510
+like would you test the basic path
+through your app
+
+407
+00:25:15,510 --> 00:25:18,850
+or edge cases Mar so
+
+408
+00:25:18,850 --> 00:25:22,080
+I mean it's a common problem you have
+with test in general
+
+409
+00:25:22,080 --> 00:25:26,090
+you know you could spaniel days you know
+writing tests and that's that so good
+
+410
+00:25:26,090 --> 00:25:26,600
+but
+
+411
+00:25:26,600 --> 00:25:30,610
+you you really want think about what's
+really critical what's really important
+
+412
+00:25:30,610 --> 00:25:34,010
+but really make sense to Fannie really
+differs from a
+
+413
+00:25:34,010 --> 00:25:38,279
+website to website with that's where
+maps if you have to raise up on top that
+
+414
+00:25:38,279 --> 00:25:41,820
+it's extremely crucial that something
+looks pixel perfect
+
+415
+00:25:41,820 --> 00:25:45,549
+all the ways you up one may can stand
+stand is something that will
+
+416
+00:25:45,549 --> 00:25:48,780
+definitely makes ass too would you want
+put some effort
+
+417
+00:25:48,780 --> 00:25:52,409
+into I using you know sitting in for
+example
+
+418
+00:25:52,409 --> 00:25:56,230
+East it's not that important the way it
+looks if it breaks a little ways no big
+
+419
+00:25:56,230 --> 00:25:57,110
+deal done
+
+420
+00:25:57,110 --> 00:26:00,549
+don't worry about a senior and again you
+
+421
+00:26:00,549 --> 00:26:03,860
+saying you should be can have your last
+resort always think
+
+422
+00:26:03,860 --> 00:26:09,419
+how can I achieve a this test using
+something like a demitasse client
+
+423
+00:26:09,419 --> 00:26:14,380
+if I can then don't even look at synonym
+are you sitting in for what you contest
+
+424
+00:26:14,380 --> 00:26:18,080
+with anything else and for something
+that's really important for you and
+
+425
+00:26:18,080 --> 00:26:18,510
+Europe
+
+426
+00:26:18,510 --> 00:26:22,710
+yeah
+
+427
+00:26:22,710 --> 00:26:28,179
+thanks to talk is ur the way to evaluate
+what code has been
+
+428
+00:26:28,179 --> 00:26:32,299
+executed on your murmur yes
+
+429
+00:26:32,299 --> 00:26:36,960
+you can use the coverage package which
+we basically
+
+430
+00:26:36,960 --> 00:26:39,970
+least every line a code in your entire
+stack
+
+431
+00:26:39,970 --> 00:26:43,870
+that's been executed during the test and
+that that definitely works with sterling
+
+432
+00:26:43,870 --> 00:26:44,320
+%um
+
+433
+00:26:44,320 --> 00:26:51,260
+yet if it ends in the same process
+that's right
+
+434
+00:26:51,260 --> 00:26:55,450
+so if everything runs in multiple
+threads within the same process
+
+435
+00:26:55,450 --> 00:26:59,250
+you work note each it's raining magical
+process that's a good point
+
+436
+00:26:59,250 --> 00:27:02,490
+I thank you for the presentation
+
+437
+00:27:02,490 --> 00:27:06,059
+how does sauce labs are even to let him
+handle
+
+438
+00:27:06,059 --> 00:27:10,770
+data-driven web site so for example if
+you need us there's some sort of an Ajax
+
+439
+00:27:10,770 --> 00:27:12,429
+grady that gets the database
+
+440
+00:27:12,429 --> 00:27:15,760
+a value from here from the from the dow
+and
+
+441
+00:27:15,760 --> 00:27:20,169
+and then matches against it so how does
+it handle that as a general
+
+442
+00:27:20,169 --> 00:27:24,399
+the values by itself are d have to
+provide those values
+
+443
+00:27:24,399 --> 00:27:28,809
+are does there need to be a database
+connection for that so as far as I
+
+444
+00:27:28,809 --> 00:27:29,520
+understand
+
+445
+00:27:29,520 --> 00:27:33,120
+processing actually happens a
+
+446
+00:27:33,120 --> 00:27:36,909
+so every any custom code any database
+related code we're on
+
+447
+00:27:36,909 --> 00:27:40,649
+locally so it's a on your see a server
+or on your laptop
+
+448
+00:27:40,649 --> 00:27:43,929
+associated with just only take care of
+the rendering
+
+449
+00:27:43,929 --> 00:27:47,590
+and exiting of and whatever JavaScript
+inside
+
+450
+00:27:47,590 --> 00:27:51,840
+that VM but then you wish to communicate
+with your local app
+
+451
+00:27:51,840 --> 00:27:56,389
+as far as datas concern for example so
+that means deliveries needs to get
+
+452
+00:27:56,389 --> 00:27:59,580
+accessible for sauce labs no to you
+
+453
+00:27:59,580 --> 00:28:03,020
+to do that I know as far as they're
+concerned a that
+
+454
+00:28:03,020 --> 00:28:06,120
+only needs to be eat that we only be
+executed
+
+455
+00:28:06,120 --> 00:28:10,909
+on your machine and then he will just
+Soundarya basically DHTML in the
+
+456
+00:28:10,909 --> 00:28:11,700
+resulting
+
+457
+00:28:11,700 --> 00:28:15,620
+I did the resolve your up would be dance
+and over to social and that would be
+
+458
+00:28:15,620 --> 00:28:16,210
+rendered
+
+459
+00:28:16,210 --> 00:28:20,929
+so it heard so sad only takes care of
+the client side basically
+
+460
+00:28:20,929 --> 00:28:24,240
+I C thanks as a that they have like um
+
+461
+00:28:24,240 --> 00:28:27,720
+if you're running serves locally they
+have a lil encrypt a tunnel at No
+
+462
+00:28:27,720 --> 00:28:30,870
+but between your machine so you wanna
+proxy server on your machine yeah
+
+463
+00:28:30,870 --> 00:28:33,860
+and I'll tunnel over to the source a
+service they can look and if you go
+
+464
+00:28:33,860 --> 00:28:35,720
+running locally or on your network
+
+465
+00:28:35,720 --> 00:28:38,840
+that's right this is this is the thing
+that I was running that took a minute to
+
+466
+00:28:38,840 --> 00:28:42,030
+to get started earlier
+
+467
+00:28:42,030 --> 00:28:44,830
+how to use the Lord multiple different
+browsers if you're trying to do visual
+
+468
+00:28:44,830 --> 00:28:46,379
+testing in Internet Explorer
+
+469
+00:28:46,379 --> 00:28:49,530
+say 6 because one kill yourself
+
+470
+00:28:49,530 --> 00:28:55,169
+yeah hey a it's very easy actually you
+just need to use a different
+
+471
+00:28:55,169 --> 00:28:59,639
+you know it's up to you they're there to
+KC that's a he he really care
+
+472
+00:28:59,639 --> 00:29:04,429
+that both process a Firefox and IE six
+would render
+
+473
+00:29:04,429 --> 00:29:07,480
+a particular component on your page
+exactly the same
+
+474
+00:29:07,480 --> 00:29:10,659
+than you wanna test against the same
+baseline image
+
+475
+00:29:10,659 --> 00:29:14,399
+issue a acknowledge that there may be
+differences they're not
+
+476
+00:29:14,399 --> 00:29:17,990
+so important but you do want to make
+sure that a key sparking the same and I
+
+477
+00:29:17,990 --> 00:29:18,610
+E
+
+478
+00:29:18,610 --> 00:29:22,590
+keeps working the same Firefox than just
+create two different sets of baseline
+
+479
+00:29:22,590 --> 00:29:23,530
+images
+
+480
+00:29:23,530 --> 00:29:27,590
+to you can you know maybe have a class
+that we inherit from your
+
+481
+00:29:27,590 --> 00:29:30,809
+say and I eat s-class that we inherit
+from Thai folks
+
+482
+00:29:30,809 --> 00:29:34,049
+Iran exactly the same tessick said you
+switch
+
+483
+00:29:34,049 --> 00:29:37,830
+the the webdriver and you just give you
+know different fine Amos
+
+484
+00:29:37,830 --> 00:29:42,289
+so they don't conflict X
+
+485
+00:29:42,289 --> 00:29:45,470
+right demolition
+
+486
+00:29:45,470 --> 00:29:48,460
+both them for the Don Julian thank you
+you have a couple of time
+

@@ -1,0 +1,2406 @@
+1
+00:00:03,100 --> 00:00:05,100
+right well let's go ahead in
+
+2
+00:00:05,100 --> 00:00:08,490
+get started so I name is Cedric is
+
+3
+00:00:08,490 --> 00:00:12,009
+has been awhile bomb too too long time
+did you do the Python community
+
+4
+00:00:12,009 --> 00:00:15,420
+I she created the pike and poster
+session she created the
+
+5
+00:00:15,420 --> 00:00:18,949
+pie cut education summit and she is
+tired
+
+6
+00:00:18,949 --> 00:00:22,100
+people had a program in Python in and
+write your contacts
+
+7
+00:00:22,100 --> 00:00:25,920
+and she speaks in large both up icon and
+her experiences where gender transition
+
+8
+00:00:25,920 --> 00:00:27,230
+in the tech community
+
+9
+00:00:27,230 --> 00:00:31,179
+and she is going to be talking with us
+today about farewell and welcome home a
+
+10
+00:00:31,179 --> 00:00:32,739
+python in two genders
+
+11
+00:00:32,739 --> 00:00:39,739
+please welcome Mary cedar
+
+12
+00:00:51,200 --> 00:00:54,540
+so my card
+
+13
+00:00:54,540 --> 00:00:59,000
+okay I'll so I want to start with the
+disclaimer
+
+14
+00:00:59,000 --> 00:01:04,970
+I am basically what I'm going to be
+talking about is based on my experiences
+
+15
+00:01:04,970 --> 00:01:09,290
+in my observations there could be two
+reasons for this:
+
+16
+00:01:09,290 --> 00:01:12,500
+one of them is maybe a little bit of a
+weasel in that
+
+17
+00:01:12,500 --> 00:01:15,960
+you can't call BS on this this is my
+life the
+
+18
+00:01:15,960 --> 00:01:21,500
+other thing is that I want to make it
+clear that I cannot speak for
+
+19
+00:01:21,500 --> 00:01:25,690
+all all transgender people I cannot
+speak for all trans women
+
+20
+00:01:25,690 --> 00:01:30,470
+I cannot speak for all white late middle
+age trans women from the Chicago area
+
+21
+00:01:30,470 --> 00:01:34,619
+are I can really only speak for myself
+this is an important point because
+
+22
+00:01:34,619 --> 00:01:37,750
+up marginalized groups people tend to
+assume
+
+23
+00:01:37,750 --> 00:01:41,240
+that one of them represents all of them
+and that's just not true
+
+24
+00:01:41,240 --> 00:01:44,729
+are so this
+
+25
+00:01:44,729 --> 00:01:48,300
+is in fact a very difficult talk for me
+to give
+
+26
+00:01:48,300 --> 00:01:52,060
+in its very weird for me to be in this
+situation
+
+27
+00:01:52,060 --> 00:01:56,800
+I have been teaching in speaking for
+decades normally
+
+28
+00:01:56,800 --> 00:02:01,280
+I the back of an envelope in five
+minutes I'm good to talk for
+
+29
+00:02:01,280 --> 00:02:04,289
+hours ask my former students
+
+30
+00:02:04,289 --> 00:02:10,360
+arms so this in fact that I've told my
+story a few times now and it gets harder
+
+31
+00:02:10,360 --> 00:02:13,600
+I every time I think party that is that
+in spite
+
+32
+00:02:13,600 --> 00:02:17,510
+above the disclaimer I just gave you I'm
+afraid that people
+
+33
+00:02:17,510 --> 00:02:22,660
+think I am speaking for a lot of other
+people I'm really scared screwing it up
+
+34
+00:02:22,660 --> 00:02:27,000
+I the other thing though is this quote
+from Laverne Cox
+
+35
+00:02:27,000 --> 00:02:30,630
+lover in is a transgender actress who
+stars
+
+36
+00:02:30,630 --> 00:02:33,930
+on orange is the new black the Netflix
+series she's
+
+37
+00:02:33,930 --> 00:02:37,349
+also quickly becoming one of the leading
+
+38
+00:02:37,349 --> 00:02:41,920
+%uh spokespeople for the transgender
+community this is both the reason why
+
+39
+00:02:41,920 --> 00:02:45,160
+I'm scared and this is the mantra that
+I've been clinging to
+
+40
+00:02:45,160 --> 00:02:49,170
+in order to go through with this hit is
+revolutionary
+
+41
+00:02:49,170 --> 00:02:53,500
+for any trans person to choose to be
+seen
+
+42
+00:02:53,500 --> 00:02:56,990
+invisible in a world that tells us we
+should not exist
+
+43
+00:02:56,990 --> 00:03:00,209
+so this is in fact my revolutionary act
+
+44
+00:03:00,209 --> 00:03:03,640
+and parted my story is in fact the story
+of the world telling me
+
+45
+00:03:03,640 --> 00:03:06,760
+all of my life that I should not but I
+cannot exist
+
+46
+00:03:06,760 --> 00:03:12,849
+so to start a long time ago and some of
+my friends made fun of me starting back
+
+47
+00:03:12,849 --> 00:03:13,489
+this far
+
+48
+00:03:13,489 --> 00:03:18,959
+are I was born in a small town in
+nebraska in the country doctor declared
+
+49
+00:03:18,959 --> 00:03:20,189
+with great confidence
+
+50
+00:03:20,189 --> 00:03:23,549
+it's a boy unfortunately he was wrong
+
+51
+00:03:23,549 --> 00:03:28,890
+in fact I was transgender and what this
+means if you're not familiar with it
+
+52
+00:03:28,890 --> 00:03:34,280
+is that some time before I was born
+something very essential
+
+53
+00:03:34,280 --> 00:03:39,230
+in the the way that my brain works was
+set to female rather than being ill
+
+54
+00:03:39,230 --> 00:03:44,719
+I I try to stay up to date on the
+literature and things like that up but
+
+55
+00:03:44,719 --> 00:03:45,450
+in fact
+
+56
+00:03:45,450 --> 00:03:50,780
+their is no clear explanation love this
+at this point there are clearly genetic
+
+57
+00:03:50,780 --> 00:03:51,620
+factors
+
+58
+00:03:51,620 --> 00:03:55,590
+they're also clearly epigenetic factors
+timing's a poor man's
+
+59
+00:03:55,590 --> 00:03:59,430
+various things but we don't know what
+causes it there are probably more
+
+60
+00:03:59,430 --> 00:04:00,510
+trouble causes
+
+61
+00:04:00,510 --> 00:04:04,450
+and in a very important way it doesn't
+matter
+
+62
+00:04:04,450 --> 00:04:09,569
+what military's is that I never chose
+
+63
+00:04:09,569 --> 00:04:12,909
+to be transgender I never chose to be
+born
+
+64
+00:04:12,909 --> 00:04:17,799
+with email body and a female breen mind
+whatever it is
+
+65
+00:04:17,799 --> 00:04:20,820
+are I always just was
+
+66
+00:04:20,820 --> 00:04:24,870
+now as you might imagine
+
+67
+00:04:24,870 --> 00:04:29,440
+I even now with this is a hard thing I
+in those days in that time
+
+68
+00:04:29,440 --> 00:04:32,970
+this left me fairly confused I knew that
+things were
+
+69
+00:04:32,970 --> 00:04:36,310
+rate I also learned very quickly through
+
+70
+00:04:36,310 --> 00:04:39,380
+fairly pervasive gender policing that
+
+71
+00:04:39,380 --> 00:04:43,840
+I could never be a girl or with the
+girls are like the girls
+
+72
+00:04:43,840 --> 00:04:46,990
+not only that but I learned very very
+quickly and
+
+73
+00:04:46,990 --> 00:04:49,990
+and I'm talking about back 45
+
+74
+00:04:49,990 --> 00:04:53,389
+I could never even talk about it never
+
+75
+00:04:53,389 --> 00:04:57,240
+never no one can know that's so
+
+76
+00:04:57,240 --> 00:05:00,389
+you can imagine I was really confused I
+until
+
+77
+00:05:00,389 --> 00:05:04,700
+eventually I N O when puberty hit this
+became a very
+
+78
+00:05:04,700 --> 00:05:07,740
+urgent issue in at about that time our
+family got
+
+79
+00:05:07,740 --> 00:05:11,990
+I Look magazine this was in are january
+of nineteen seventy which shows you how
+
+80
+00:05:11,990 --> 00:05:12,570
+freaking
+
+81
+00:05:12,570 --> 00:05:18,890
+all I am and here with Steve McQueen's
+mucho face smeared across the cover
+
+82
+00:05:18,890 --> 00:05:23,690
+with an appeal to the president this
+would be richard milhouse nixon
+
+83
+00:05:23,690 --> 00:05:27,910
+I to unite the country there was also an
+article on this new
+
+84
+00:05:27,910 --> 00:05:33,490
+bizarre freaking weird phenomenon I
+transsexuals male or female
+
+85
+00:05:33,490 --> 00:05:38,330
+I read that article and I saw myself in
+its secured the hell hath me
+
+86
+00:05:38,330 --> 00:05:43,650
+I found that are all transsexuals were
+deeply troubled people
+
+87
+00:05:43,650 --> 00:05:47,320
+who have to leave extraordinarily
+complicated lives
+
+88
+00:05:47,320 --> 00:05:51,640
+if you read this article closely you
+will find that they are deeply troubled
+
+89
+00:05:51,640 --> 00:05:53,890
+people because they are almost always
+
+90
+00:05:53,890 --> 00:05:56,970
+on able to get treatment
+
+91
+00:05:56,970 --> 00:06:00,050
+and they live extraordinarily
+complicated lives
+
+92
+00:06:00,050 --> 00:06:03,550
+because if they do get treatment they
+pretty much in
+
+93
+00:06:03,550 --> 00:06:07,010
+as a price getting treatment they have
+to enter what I call the trans witness
+
+94
+00:06:07,010 --> 00:06:08,490
+protection program
+
+95
+00:06:08,490 --> 00:06:11,800
+that is in that day this was actually
+part of the medical protocol
+
+96
+00:06:11,800 --> 00:06:15,420
+if you wanted to undergo any sort of
+treatment for are being transgender
+
+97
+00:06:15,420 --> 00:06:18,570
+you needed to goes still as we say give
+up
+
+98
+00:06:18,570 --> 00:06:22,530
+all connections to your former life no
+one bust ever know
+
+99
+00:06:22,530 --> 00:06:26,720
+or something horrible will happen to you
+
+100
+00:06:26,720 --> 00:06:29,820
+this made quite an impression on me as a
+as it I
+
+101
+00:06:29,820 --> 00:06:33,640
+a very young teenager I in fact it's
+interesting when I ran across this
+
+102
+00:06:33,640 --> 00:06:36,470
+article online about nine months ago
+
+103
+00:06:36,470 --> 00:06:40,650
+after four decades I still had a whole
+paragraph served is committed to memory
+
+104
+00:06:40,650 --> 00:06:42,750
+for beat 'em
+
+105
+00:06:42,750 --> 00:06:47,490
+%uh so faced with this information I did
+
+106
+00:06:47,490 --> 00:06:51,530
+I made the sordid rational adult
+decision that any thirteen-year-old with
+
+107
+00:06:51,530 --> 00:06:54,310
+absolutely no one to talk to did
+
+108
+00:06:54,310 --> 00:06:57,890
+I decided is to just not me I would just
+not let it happen
+
+109
+00:06:57,890 --> 00:07:01,320
+I wasn't this buried that's it no
+problem
+
+110
+00:07:01,320 --> 00:07:04,780
+I am and so I'm
+
+111
+00:07:04,780 --> 00:07:08,400
+I went in now I eat struggle to fit in
+as a boy
+
+112
+00:07:08,400 --> 00:07:13,580
+and what I mean by this in retrospect I
+can see is that
+
+113
+00:07:13,580 --> 00:07:17,170
+I really wasn't comfortable trying to be
+
+114
+00:07:17,170 --> 00:07:20,450
+a member %uh a group of boys just was
+never meet
+
+115
+00:07:20,450 --> 00:07:23,320
+I as a very mention there was no chance
+that I was going to fit in with the
+
+116
+00:07:23,320 --> 00:07:23,960
+girls
+
+117
+00:07:23,960 --> 00:07:28,110
+that was right out so in fact the only
+third way open to me
+
+118
+00:07:28,110 --> 00:07:32,010
+was with the handful of people who are
+certain into science and doing things
+
+119
+00:07:32,010 --> 00:07:33,160
+like that
+
+120
+00:07:33,160 --> 00:07:36,810
+now that's not to say for geeky your
+transgender cuz that's clearly not true
+
+121
+00:07:36,810 --> 00:07:40,300
+but in fact we did have boys and girls
+there
+
+122
+00:07:40,300 --> 00:07:45,390
+there were a lot fewer even in that time
+a lot fewer above the sordid
+
+123
+00:07:45,390 --> 00:07:48,450
+gender policing and episodes I
+
+124
+00:07:48,450 --> 00:07:52,930
+the what you would get normally so this
+was a way to survive in a way
+
+125
+00:07:52,930 --> 00:07:56,140
+it was also very interesting I mean for
+us in those days
+
+126
+00:07:56,140 --> 00:07:59,260
+I'm the technology that was accessible
+to us was
+
+127
+00:07:59,260 --> 00:08:05,050
+astronomy and telescopes how we ordered
+lenses made telescopes I'm
+
+128
+00:08:05,050 --> 00:08:08,680
+ground a mir's for reflect urs we did
+all that stuff
+
+129
+00:08:08,680 --> 00:08:13,390
+it made us very very very strange kids
+
+130
+00:08:13,390 --> 00:08:18,390
+I in central Nebraska back in that day
+but at least they understood what we
+
+131
+00:08:18,390 --> 00:08:21,890
+were we were geeks and nerds and that
+was
+
+132
+00:08:21,890 --> 00:08:25,960
+well wasn't really great but OK I in
+fact we're is so weird that we would end
+
+133
+00:08:25,960 --> 00:08:28,000
+up in the newspaper from time to time
+
+134
+00:08:28,000 --> 00:08:31,430
+are wanna my friends joked that must've
+been a slow news day trust me
+
+135
+00:08:31,430 --> 00:08:35,300
+central Nebraska in those days pretty
+much every day was a slow news day
+
+136
+00:08:35,300 --> 00:08:39,140
+so their am on the right with my good
+friend Dave
+
+137
+00:08:39,140 --> 00:08:43,159
+we're still friends to this day %ah and
+
+138
+00:08:43,159 --> 00:08:46,950
+by the EC long noted the bottom sister
+people
+
+139
+00:08:46,950 --> 00:08:51,390
+are always very interested in before is
+an after his with transgender people
+
+140
+00:08:51,390 --> 00:08:55,680
+art what it used to look like what's
+your you'll be more that really gets
+
+141
+00:08:55,680 --> 00:08:56,209
+going
+
+142
+00:08:56,209 --> 00:09:01,660
+iight and for transgender people in
+general this is fairly uncomfortable
+
+143
+00:09:01,660 --> 00:09:05,360
+I just wanna admit I am no exception to
+that these are not comfortable things
+
+144
+00:09:05,360 --> 00:09:07,519
+for me to show you
+
+145
+00:09:07,519 --> 00:09:12,029
+so I was geeky kid
+
+146
+00:09:12,029 --> 00:09:16,890
+I went on to be geeky teenager and to be
+geeky young adult and then a geeky adult
+
+147
+00:09:16,890 --> 00:09:21,579
+I got a PhD in Greek and Latin
+literature
+
+148
+00:09:21,579 --> 00:09:25,820
+then huh along the way in a story that's
+really too complicated for happy hour
+
+149
+00:09:25,820 --> 00:09:26,630
+talk
+
+150
+00:09:26,630 --> 00:09:30,400
+I ended up switching from being are a
+Latin teacher
+
+151
+00:09:30,400 --> 00:09:33,490
+to a school Technology Director
+
+152
+00:09:33,490 --> 00:09:37,410
+software developer I teacher
+
+153
+00:09:37,410 --> 00:09:42,230
+I chief d/b/a are pretty much everything
+
+154
+00:09:42,230 --> 00:09:46,690
+so I ended up doing a live programming
+starting in the ER
+
+155
+00:09:46,690 --> 00:09:51,740
+late eighties I programmed in artsy in
+Pascal
+
+156
+00:09:51,740 --> 00:09:56,730
+I in Visual Basic I am ashamed to say
+it's my only option for something don't
+
+157
+00:09:56,730 --> 00:09:57,520
+judge me
+
+158
+00:09:57,520 --> 00:10:00,730
+II did various things like that along
+the way actually
+
+159
+00:10:00,730 --> 00:10:04,220
+open source came around and I thought
+this was just great stuff
+
+160
+00:10:04,220 --> 00:10:09,060
+arm I i switched to Linux I switch the
+school's servers the Linux
+
+161
+00:10:09,060 --> 00:10:12,250
+that's the great thing about being the
+technology director nobody can stop you
+
+162
+00:10:12,250 --> 00:10:16,490
+ice started a lug I am
+
+163
+00:10:16,490 --> 00:10:21,180
+I actually at a Linux world and Nathan
+our kind trying to decide it was 2000 or
+
+164
+00:10:21,180 --> 00:10:22,520
+2001
+
+165
+00:10:22,520 --> 00:10:25,960
+I learn Python so in fact
+
+166
+00:10:25,960 --> 00:10:29,190
+at least a few love you may have met
+this guy here
+
+167
+00:10:29,190 --> 00:10:33,050
+he doesn't work here anymore so
+
+168
+00:10:33,050 --> 00:10:37,060
+I became involved in the Python
+community fairly early on
+
+169
+00:10:37,060 --> 00:10:40,120
+the matter-of-fact I think it was with
+the in
+
+170
+00:10:40,120 --> 00:10:43,360
+three or four weeks %uh learning Python
+that we were teaching it
+
+171
+00:10:43,360 --> 00:10:46,970
+are two ninth graders at the school I
+was at
+
+172
+00:10:46,970 --> 00:10:49,640
+that's because the alternative would
+have been teaching them something like
+
+173
+00:10:49,640 --> 00:10:52,529
+Java and that just made me cry
+
+174
+00:10:52,529 --> 00:10:57,150
+I and it worked really well I ended up
+teaching this to other teachers at state
+
+175
+00:10:57,150 --> 00:10:58,560
+national things
+
+176
+00:10:58,560 --> 00:11:01,870
+I'm I taught this to people at Lenox
+mass
+
+177
+00:11:01,870 --> 00:11:05,520
+I it's a story that other people have to
+tell to once we got started we really
+
+178
+00:11:05,520 --> 00:11:06,870
+wouldn't shut up
+
+179
+00:11:06,870 --> 00:11:11,960
+arm I E started speaking fairly early on
+
+180
+00:11:11,960 --> 00:11:15,250
+again on Ethan you're going to give a
+talk at the first
+
+181
+00:11:15,250 --> 00:11:20,490
+up icon that really was a pike on back
+in 2003 we were just talking about that
+
+182
+00:11:20,490 --> 00:11:24,490
+I I talked it some arm state and
+national
+
+183
+00:11:24,490 --> 00:11:28,540
+our computer educators things I just
+felt tonight used to do kind of a road
+
+184
+00:11:28,540 --> 00:11:29,810
+show to the National
+
+185
+00:11:29,810 --> 00:11:34,320
+educational computer coordinators
+convention um
+
+186
+00:11:34,320 --> 00:11:37,730
+I did things like that I ended up doing
+some writing
+
+187
+00:11:37,730 --> 00:11:41,250
+up my writing career was a little bit
+peculiar I went from being the humor
+
+188
+00:11:41,250 --> 00:11:43,800
+columnist for a dog training magazine
+
+189
+00:11:43,800 --> 00:11:48,580
+I to working on I'm not making that up
+II was on the cover once
+
+190
+00:11:48,580 --> 00:11:52,520
+arm cell %uh to arm
+
+191
+00:11:52,520 --> 00:11:56,450
+actually working on a couple attack but
+projects are most recently I did the
+
+192
+00:11:56,450 --> 00:11:58,740
+second edition adequate python book
+
+193
+00:11:58,740 --> 00:12:03,120
+are which sells well enough thank God I
+actually get a little money for it so I
+
+194
+00:12:03,120 --> 00:12:04,620
+invite you to help that
+
+195
+00:12:04,620 --> 00:12:07,740
+arm I E at
+
+196
+00:12:07,740 --> 00:12:14,180
+made the mistake I've saying to Steve
+Holden when he was such a rough the PSF
+
+197
+00:12:14,180 --> 00:12:17,580
+you know him there's anything I can ever
+do
+
+198
+00:12:17,580 --> 00:12:20,850
+and before I really even got that
+finished
+
+199
+00:12:20,850 --> 00:12:24,820
+I he said you like really like a poster
+session up icon
+
+200
+00:12:24,820 --> 00:12:28,720
+okay I'd honestly never even seen a
+poster session but the man had spoken so
+
+201
+00:12:28,720 --> 00:12:30,430
+we figured out how to do that
+
+202
+00:12:30,430 --> 00:12:34,440
+are and through some twisted events that
+I haven't quite found them
+
+203
+00:12:34,440 --> 00:12:38,350
+I ended up in the Python Software
+Foundation so
+
+204
+00:12:38,350 --> 00:12:42,900
+basically I was getting a lot from the
+Python community this was something that
+
+205
+00:12:42,900 --> 00:12:44,350
+I liked a lot
+
+206
+00:12:44,350 --> 00:12:48,290
+I think are you know Brett summed it up
+for a lot of us out when he said he came
+
+207
+00:12:48,290 --> 00:12:50,570
+for the language in stayed for the
+community
+
+208
+00:12:50,570 --> 00:12:54,320
+iight this was really a good thing for
+me
+
+209
+00:12:54,320 --> 00:12:57,850
+the problem was I was still
+transgendered
+
+210
+00:12:57,850 --> 00:13:01,380
+and it's hard to describe but this is
+like the whole phrase
+
+211
+00:13:01,380 --> 00:13:05,029
+born in the wrong body you're trapped in
+the wrong body is something made up
+
+212
+00:13:05,029 --> 00:13:08,970
+by a journalist doesn't describe my
+experience certainly
+
+213
+00:13:08,970 --> 00:13:12,529
+instead the best analogy that I've been
+able to come up with so far
+
+214
+00:13:12,529 --> 00:13:16,330
+is if you know you really tired and you
+know you've got a really long day the
+
+215
+00:13:16,330 --> 00:13:17,500
+next day
+
+216
+00:13:17,500 --> 00:13:20,680
+and you can't sleep and you lie in bed
+and you think about
+
+217
+00:13:20,680 --> 00:13:24,240
+how you need sleep than you think about
+how you're wasting the time
+
+218
+00:13:24,240 --> 00:13:26,860
+you should be sleeping thinking about
+how you need sleep when you think about
+
+219
+00:13:26,860 --> 00:13:29,440
+how you got to think about needing sleep
+use to sleep
+
+220
+00:13:29,440 --> 00:13:32,320
+and then you're back to thinking about
+how much needed sleep and you sir go
+
+221
+00:13:32,320 --> 00:13:33,140
+through that for what
+
+222
+00:13:33,140 --> 00:13:36,240
+it's like that every our every day when
+you
+
+223
+00:13:36,240 --> 00:13:39,310
+for me at least it was when you
+transgender I think that gender
+
+224
+00:13:39,310 --> 00:13:41,810
+I think about how much time wasting
+thinking about gender thing about I'm
+
+225
+00:13:41,810 --> 00:13:42,470
+not gonna
+
+226
+00:13:42,470 --> 00:13:46,050
+you back it just continually grinds away
+at you
+
+227
+00:13:46,050 --> 00:13:50,040
+so I started telling myself if I could
+just hold on until I died
+
+228
+00:13:50,040 --> 00:13:55,040
+it would be okay the problem is I wasn't
+dying fast enough
+
+229
+00:13:55,040 --> 00:13:59,029
+I and in fact people think this is maybe
+me being a drama queen or something
+
+230
+00:13:59,029 --> 00:14:03,180
+forty-one percent of transgender people
+attempt to kill themselves
+
+231
+00:14:03,180 --> 00:14:07,190
+this is just a fact because almost every
+trans person I've talked to
+
+232
+00:14:07,190 --> 00:14:10,750
+has come to this point with the only way
+this can and is when I die
+
+233
+00:14:10,750 --> 00:14:14,060
+that's not a generalization about
+transgender people particularly by the
+
+234
+00:14:14,060 --> 00:14:17,380
+way that's a generalization about how
+you're treated
+
+235
+00:14:17,380 --> 00:14:20,850
+so this led me to
+
+236
+00:14:20,850 --> 00:14:24,890
+too stupid to think have some weird
+things and I started thinking that the
+
+237
+00:14:24,890 --> 00:14:26,570
+only thing that I could do
+
+238
+00:14:26,570 --> 00:14:30,300
+was embrace my truth and you notice they
+say my truth because the truth that
+
+239
+00:14:30,300 --> 00:14:31,990
+society had been telling me
+
+240
+00:14:31,990 --> 00:14:36,200
+or the world had been telling me was
+that I couldn't exist
+
+241
+00:14:36,200 --> 00:14:39,750
+and I decided that to do that
+
+242
+00:14:39,750 --> 00:14:44,200
+would probably mean giving up everything
+remember back at thirteen I had absorbed
+
+243
+00:14:44,200 --> 00:14:45,850
+this into my brain
+
+244
+00:14:45,850 --> 00:14:49,390
+that the only way you're going to get
+out if this was to basically leave
+
+245
+00:14:49,390 --> 00:14:51,210
+everything
+
+246
+00:14:51,210 --> 00:14:54,770
+and this was a very painful thing to
+think about but like a lot of trans
+
+247
+00:14:54,770 --> 00:14:56,160
+people had come to the point where
+
+248
+00:14:56,160 --> 00:15:00,060
+even if I lost everything that was fine
+so
+
+249
+00:15:00,060 --> 00:15:04,839
+I E started to think about other
+alternatives here
+
+250
+00:15:04,839 --> 00:15:08,260
+arm I had toyed with the idea of doing
+the education summit
+
+251
+00:15:08,260 --> 00:15:11,930
+as a farewell thing to the community I
+would do it and then disappear
+
+252
+00:15:11,930 --> 00:15:15,790
+going to the prions witness protection
+program the only problem was
+
+253
+00:15:15,790 --> 00:15:19,339
+actually started accelerating the peace
+my transition because well
+
+254
+00:15:19,339 --> 00:15:22,930
+it was just such a freak relief to start
+moving in that direction
+
+255
+00:15:22,930 --> 00:15:27,450
+iight that that wouldn't work so I
+actually thought about
+
+256
+00:15:27,450 --> 00:15:31,600
+what was for me harking back to learn
+Cox a very revolutionary
+
+257
+00:15:31,600 --> 00:15:36,029
+night idea what if I just did it and was
+open about it
+
+258
+00:15:36,029 --> 00:15:39,250
+up first thing I looked at codes of
+conduct
+
+259
+00:15:39,250 --> 00:15:42,360
+I look for specifics what happens to me
+if there is
+
+260
+00:15:42,360 --> 00:15:46,600
+a problem if I am harassed this was
+important to me
+
+261
+00:15:46,600 --> 00:15:50,980
+other thing I did was they started
+telling a few people I Jesse Noller
+
+262
+00:15:50,980 --> 00:15:54,210
+a V alaska some people I would work with
+them high con- and they were all pretty
+
+263
+00:15:54,210 --> 00:15:56,140
+cool with the idea
+
+264
+00:15:56,140 --> 00:15:59,080
+and the more I talked about it the more
+I decided that I would go ahead and take
+
+265
+00:15:59,080 --> 00:16:00,140
+that chance
+
+266
+00:16:00,140 --> 00:16:03,149
+so I did I started by teaching at some
+
+267
+00:16:03,149 --> 00:16:07,089
+Python workshops for women I i spoke to
+conferences
+
+268
+00:16:07,089 --> 00:16:11,649
+went icon it was good the education
+summit was fine
+
+269
+00:16:11,649 --> 00:16:14,980
+okay some other people I work with an
+organizing it were a little bit confused
+
+270
+00:16:14,980 --> 00:16:17,440
+when the names on the emails change
+typology I
+
+271
+00:16:17,440 --> 00:16:20,500
+up but in general it went pretty well
+arm
+
+272
+00:16:20,500 --> 00:16:24,070
+in fact the more open I was the easier
+it was on it was for me
+
+273
+00:16:24,070 --> 00:16:27,440
+because I didn't have to worry about
+being outed it was easier for other
+
+274
+00:16:27,440 --> 00:16:28,440
+people because
+
+275
+00:16:28,440 --> 00:16:31,850
+they certainly know what to expect at
+the other interesting sidelight
+
+276
+00:16:31,850 --> 00:16:34,610
+is that when I told people they
+sometimes felt an obligation to share
+
+277
+00:16:34,610 --> 00:16:37,420
+some deep dark secret about themselves
+like i cud
+
+278
+00:16:37,420 --> 00:16:40,620
+prompt the man they had it to answer
+back I'm
+
+279
+00:16:40,620 --> 00:16:43,620
+cell my takeaway here is that
+
+280
+00:16:43,620 --> 00:16:46,910
+we talk a lot about diversity and that's
+real
+
+281
+00:16:46,910 --> 00:16:50,870
+soul but we should be ending on this
+point except that
+
+282
+00:16:50,870 --> 00:16:54,180
+I'm I'm a contrary in in my old age
+
+283
+00:16:54,180 --> 00:16:58,120
+%uh so it is not quite all rainbows and
+unicorns
+
+284
+00:16:58,120 --> 00:17:02,339
+or as you might put it this is kinda
+common in social justice state circles
+
+285
+00:17:02,339 --> 00:17:02,959
+right now
+
+286
+00:17:02,959 --> 00:17:06,760
+we don't get a cookie we the Python
+community quite yet
+
+287
+00:17:06,760 --> 00:17:11,149
+um I want to tell you a little bit about
+the realities that remain
+
+288
+00:17:11,149 --> 00:17:14,449
+I am almost always the only openly trans
+person in
+
+289
+00:17:14,449 --> 00:17:17,529
+in the room and we talked a little bit
+last night the transmit up about how
+
+290
+00:17:17,529 --> 00:17:18,750
+weird it is to actually
+
+291
+00:17:18,750 --> 00:17:22,470
+be in the company of many other trans
+people all in the same place school
+
+292
+00:17:22,470 --> 00:17:25,829
+that's weird arm and
+
+293
+00:17:25,829 --> 00:17:29,380
+by openly trans UK government suggests
+that
+
+294
+00:17:29,380 --> 00:17:32,830
+are rather the UK government's official
+figure which is the only official figure
+
+295
+00:17:32,830 --> 00:17:33,440
+I've heard
+
+296
+00:17:33,440 --> 00:17:37,500
+is that one percent of the population is
+transgender in some way
+
+297
+00:17:37,500 --> 00:17:41,220
+and yet people tell me all the time that
+I'm the only or the first trans person
+
+298
+00:17:41,220 --> 00:17:42,190
+they've met
+
+299
+00:17:42,190 --> 00:17:46,200
+somebody's not telling the truth I and
+they have a very good reasons they can
+
+300
+00:17:46,200 --> 00:17:47,270
+they they don't dare be
+
+301
+00:17:47,270 --> 00:17:52,010
+out I'm not real I was never I never
+thought less of a real man
+
+302
+00:17:52,010 --> 00:17:55,480
+now many people don't consider me a real
+woman I am not real
+
+303
+00:17:55,480 --> 00:17:59,899
+are I have become a thing a curiosity
+something so weird it's perfectly
+
+304
+00:17:59,899 --> 00:18:01,330
+acceptable to ask me
+
+305
+00:18:01,330 --> 00:18:05,340
+are who I love how and when up which
+bathroom I use how and when
+
+306
+00:18:05,340 --> 00:18:09,889
+are all sorts of things like that that
+you would ask other people
+
+307
+00:18:09,889 --> 00:18:12,899
+there is sometimes a flinch factor
+
+308
+00:18:12,899 --> 00:18:16,059
+in being seen as beauty friends
+acquaintances whatever I think somehow
+
+309
+00:18:16,059 --> 00:18:16,629
+the rice
+
+310
+00:18:16,629 --> 00:18:20,679
+she's trans people to realize she's
+transfer you can think about me
+
+311
+00:18:20,679 --> 00:18:23,980
+this happens I have lost friends
+
+312
+00:18:23,980 --> 00:18:27,409
+virtually all the couple my family no
+longer speak to me
+
+313
+00:18:27,409 --> 00:18:30,730
+arm a career I spent over 20
+
+314
+00:18:30,730 --> 00:18:34,379
+well over 25 years teaching it's very
+frustrating for me to hear people
+
+315
+00:18:34,379 --> 00:18:35,860
+talking about the need for
+
+316
+00:18:35,860 --> 00:18:39,559
+educators who also know how to program
+because in fact the odds me ever
+
+317
+00:18:39,559 --> 00:18:42,080
+appearing in front of high school and
+middle school students again are
+
+318
+00:18:42,080 --> 00:18:43,649
+virtually nil
+
+319
+00:18:43,649 --> 00:18:46,549
+and if you think I'm overstating that
+you just think about how you would pitch
+
+320
+00:18:46,549 --> 00:18:50,470
+that to your local neighborhood
+
+321
+00:18:50,470 --> 00:18:53,649
+okay I am more joy
+
+322
+00:18:53,649 --> 00:18:57,879
+I when your trans you're always the
+punchline have an easy joke
+
+323
+00:18:57,879 --> 00:19:00,970
+if I never hear the punchline and she
+used to be a dude
+
+324
+00:19:00,970 --> 00:19:05,249
+again in my life I will still have more
+than a lifetime supply
+
+325
+00:19:05,249 --> 00:19:09,039
+are their issues with rates there is
+
+326
+00:19:09,039 --> 00:19:12,129
+a very heightened risk violence
+
+327
+00:19:12,129 --> 00:19:15,259
+and as a a white person up
+
+328
+00:19:15,259 --> 00:19:18,999
+I've what's a privilege still I have a
+job I have money all of that
+
+329
+00:19:18,999 --> 00:19:23,159
+I am far less likely to suffer this then
+a trans woman of color
+
+330
+00:19:23,159 --> 00:19:26,860
+but even so relatively speaking
+everybody's percentage goes up
+
+331
+00:19:26,860 --> 00:19:32,789
+if you're a trans woman this is all the
+price that I have to pay to be who I am
+
+332
+00:19:32,789 --> 00:19:37,570
+but honestly I wouldn't change this if I
+could it took me a long time to get here
+
+333
+00:19:37,570 --> 00:19:41,179
+but I'm at the place where now if you
+offered me the chance to go back
+
+334
+00:19:41,179 --> 00:19:44,779
+are long long time ago to central
+Nebraska and fix things
+
+335
+00:19:44,779 --> 00:19:50,029
+I don't even know what that would mean I
+wouldn't take it
+
+336
+00:19:50,029 --> 00:19:53,399
+and that's partly because I think that
+as trans people we have something that
+
+337
+00:19:53,399 --> 00:19:54,399
+is very rare
+
+338
+00:19:54,399 --> 00:20:00,429
+in very valuable we've actually seen
+some of these things from both sides
+
+339
+00:20:00,429 --> 00:20:04,070
+high-impact what was surprising to me
+
+340
+00:20:04,070 --> 00:20:08,539
+transitioning to to to be perceived as a
+woman
+
+341
+00:20:08,539 --> 00:20:12,139
+were all things that I thought I had
+figured out that I thought I knew
+
+342
+00:20:12,139 --> 00:20:15,379
+I and in fact
+
+343
+00:20:15,379 --> 00:20:18,789
+it's different when they really apply to
+you as opposed to just thinking about
+
+344
+00:20:18,789 --> 00:20:22,330
+so I met some people who I thought we
+just amazingly bring it
+
+345
+00:20:22,330 --> 00:20:26,249
+that seem to have no recognition
+whatsoever
+
+346
+00:20:26,249 --> 00:20:29,369
+that didn't feel like they were welcome
+
+347
+00:20:29,369 --> 00:20:32,539
+that didn't even always feel safe in
+other words
+
+348
+00:20:32,539 --> 00:20:35,690
+I was in a different world
+
+349
+00:20:35,690 --> 00:20:41,190
+arm and you know someone these things
+and stephen was alluded to when we were
+
+350
+00:20:41,190 --> 00:20:45,489
+people were talking at the pie ladies
+lunch I now in technical
+
+351
+00:20:45,489 --> 00:20:49,710
+no contacts here think I've been many
+others certainly at work
+
+352
+00:20:49,710 --> 00:20:53,609
+I'm the only woman in the room I have
+now become invisible this one was a real
+
+353
+00:20:53,609 --> 00:20:54,700
+surprise to me
+
+354
+00:20:54,700 --> 00:20:57,879
+I was all worried about being harassed
+me came to Python the first time
+
+355
+00:20:57,879 --> 00:21:02,499
+as a woman no I was invisible basically
+almost every woman died
+
+356
+00:21:02,499 --> 00:21:06,909
+even maybe interacted with on Twitter
+recognize me or interacted with me
+
+357
+00:21:06,909 --> 00:21:11,609
+and almost every guy including people I
+had known for 10 years or more
+
+358
+00:21:11,609 --> 00:21:16,249
+looked right through me I honestly and
+and and again it's sorry but this is
+
+359
+00:21:16,249 --> 00:21:19,249
+true I honestly had to step in front of
+some of these people
+
+360
+00:21:19,249 --> 00:21:22,769
+and yell at them to get them to see me I
+N and it's
+
+361
+00:21:22,769 --> 00:21:26,330
+it's not as though they didn't know I
+had transitioned or anything like that
+
+362
+00:21:26,330 --> 00:21:29,749
+%uh so and and eventually done some
+looking around this is actually fairly
+
+363
+00:21:29,749 --> 00:21:30,679
+common thing
+
+364
+00:21:30,679 --> 00:21:34,899
+are Men arcade have trained not to pay
+attention to women in professional
+
+365
+00:21:34,899 --> 00:21:35,619
+settings
+
+366
+00:21:35,619 --> 00:21:38,679
+so this is it's just I I found it to be
+true
+
+367
+00:21:38,679 --> 00:21:43,419
+I am now always judged by my appearance
+as anywhere else female in the room
+
+368
+00:21:43,419 --> 00:21:47,409
+will be able to talk about a great lakes
+I cannot assume personal security
+
+369
+00:21:47,409 --> 00:21:48,090
+anymore
+
+370
+00:21:48,090 --> 00:21:51,159
+this is something that i think is a guy
+you don't even think about you go where
+
+371
+00:21:51,159 --> 00:21:52,720
+you want when you want
+
+372
+00:21:52,720 --> 00:21:57,749
+I can't do that anymore double standards
+are now the norm
+
+373
+00:21:57,749 --> 00:22:01,460
+as a guy a used to be arm just a nice
+guy
+
+374
+00:22:01,460 --> 00:22:04,489
+not just a nice guy as as a woman
+
+375
+00:22:04,489 --> 00:22:08,210
+shortly after a transition I got
+feedback both that I was too nice
+
+376
+00:22:08,210 --> 00:22:11,919
+and I was an approachable at the same
+him
+
+377
+00:22:11,919 --> 00:22:16,220
+I don't know how to do that so these are
+all things that kind of
+
+378
+00:22:16,220 --> 00:22:19,649
+that have to do with being marginalized
+and
+
+379
+00:22:19,649 --> 00:22:22,659
+so if you're not a if you're not
+marginalized
+
+380
+00:22:22,659 --> 00:22:27,009
+you don't understand that you know the
+things that you want for a conference
+
+381
+00:22:27,009 --> 00:22:28,509
+for space for anything
+
+382
+00:22:28,509 --> 00:22:32,559
+tend to be viewed by the group as extra
+in your not always sure
+
+383
+00:22:32,559 --> 00:22:37,330
+if you're welcome arm if you object to
+something
+
+384
+00:22:37,330 --> 00:22:40,649
+and these are all sorted from my
+experience interacting particularly on
+
+385
+00:22:40,649 --> 00:22:44,059
+I with with people in the pipeline
+community even I
+
+386
+00:22:44,059 --> 00:22:47,639
+if you object to something you're angry
+and probably your bad attitude is
+
+387
+00:22:47,639 --> 00:22:49,179
+hurting your cause
+
+388
+00:22:49,179 --> 00:22:52,239
+I am and and being angry can be like
+
+389
+00:22:52,239 --> 00:22:55,340
+just sort of know I just said dishonor I
+am
+
+390
+00:22:55,340 --> 00:22:59,269
+you can if you call somebody out these
+are two words that I really hate
+
+391
+00:22:59,269 --> 00:23:02,639
+you can be bullying people with
+political correctness are starting which
+
+392
+00:23:02,639 --> 00:23:02,929
+%uh
+
+393
+00:23:02,929 --> 00:23:07,119
+I've never seen anybody start a real
+witch hunt
+
+394
+00:23:07,119 --> 00:23:10,989
+these ball strike me as people who are
+privileged to don't want things to
+
+395
+00:23:10,989 --> 00:23:13,379
+change this is what I see when I see
+those words
+
+396
+00:23:13,379 --> 00:23:17,259
+and no matter what kind blowback you get
+you started
+
+397
+00:23:17,259 --> 00:23:21,919
+and we've seen this in the pike on world
+many times we've seen on tech world
+
+398
+00:23:21,919 --> 00:23:25,929
+we get a big blow up this way probably
+every six to nine months in the tech
+
+399
+00:23:25,929 --> 00:23:26,639
+world
+
+400
+00:23:26,639 --> 00:23:29,730
+this just happens so
+
+401
+00:23:29,730 --> 00:23:33,299
+those are all the things are going on in
+them
+
+402
+00:23:33,299 --> 00:23:36,489
+business world I know this cuz I had to
+go through when I i transition we talked
+
+403
+00:23:36,489 --> 00:23:37,720
+about this a great link
+
+404
+00:23:37,720 --> 00:23:42,159
+there's a business case for diversity
+businesses now no
+
+405
+00:23:42,159 --> 00:23:45,440
+in the business that I work with I'm the
+only out transgender person in
+
+406
+00:23:45,440 --> 00:23:49,720
+are North America a 16,000 employees
+
+407
+00:23:49,720 --> 00:23:52,799
+okay it's a very all 85-year-old
+conservative company
+
+408
+00:23:52,799 --> 00:23:57,279
+Daisy have a party line that diverse
+group called to solve problems better
+
+409
+00:23:57,279 --> 00:24:01,230
+and that we need every single talented
+employees we can get we don't wanna lose
+
+410
+00:24:01,230 --> 00:24:04,440
+the people we have already we want the
+biggest possible employees pool
+
+411
+00:24:04,440 --> 00:24:07,970
+all those things are the standard
+business case
+
+412
+00:24:07,970 --> 00:24:11,070
+for diversity
+
+413
+00:24:11,070 --> 00:24:16,100
+so this should also then be true the
+should be even more true
+
+414
+00:24:16,100 --> 00:24:20,619
+in the open source impact on communities
+I and yeah I honestly I'd
+
+415
+00:24:20,619 --> 00:24:24,869
+I was not able to catch adidas keynote
+but I gather that's exactly what he said
+
+416
+00:24:24,869 --> 00:24:27,200
+I want to listen to that part definitely
+
+417
+00:24:27,200 --> 00:24:31,119
+um if we're talking about being
+
+418
+00:24:31,119 --> 00:24:35,639
+open which we do all the time that
+necessarily implies
+
+419
+00:24:35,639 --> 00:24:39,989
+I at you know the notion inclusion and
+diversity
+
+420
+00:24:39,989 --> 00:24:45,009
+so here again i at the end and the Wii
+is in question marks because these I am
+
+421
+00:24:45,009 --> 00:24:47,330
+not speaking for every March wise person
+in the world
+
+422
+00:24:47,330 --> 00:24:50,619
+I am just trying to give you an idea of
+some things that occurred to me what do
+
+423
+00:24:50,619 --> 00:24:52,200
+we want how can you shot us
+
+424
+00:24:52,200 --> 00:24:55,710
+up how can you keep us from being so
+irritating arm
+
+425
+00:24:55,710 --> 00:25:00,119
+okay here your some things first wall
+understand that everyone is different I
+
+426
+00:25:00,119 --> 00:25:02,080
+don't mean this in the sense of
+diversity
+
+427
+00:25:02,080 --> 00:25:05,659
+we're going to get a certain
+predetermined ratio of genders in colors
+
+428
+00:25:05,659 --> 00:25:06,950
+and things like that mean
+
+429
+00:25:06,950 --> 00:25:10,129
+everyone is different in a murine a
+different weights
+
+430
+00:25:10,129 --> 00:25:15,429
+alright we have a whole like enormous
+bank of different little settings all
+
+431
+00:25:15,429 --> 00:25:16,539
+that can be different
+
+432
+00:25:16,539 --> 00:25:20,029
+aren't you could have sexuality said
+here you can generate issue here
+
+433
+00:25:20,029 --> 00:25:23,100
+reset here religion here all of these
+things
+
+434
+00:25:23,100 --> 00:25:27,909
+and they are not connected the fact that
+two people happen to have their
+
+435
+00:25:27,909 --> 00:25:29,009
+sexuality setting
+
+436
+00:25:29,009 --> 00:25:32,399
+in the or less the same place whatever
+that might be says nothing about the
+
+437
+00:25:32,399 --> 00:25:33,679
+rest a bit
+
+438
+00:25:33,679 --> 00:25:37,609
+I think the more that we embrace this
+fact the more than a lot of the other
+
+439
+00:25:37,609 --> 00:25:39,820
+issues go away
+
+440
+00:25:39,820 --> 00:25:43,100
+lipsky um listen to its
+
+441
+00:25:43,100 --> 00:25:46,600
+spots a social justice movements now
+have kind of a little motto nothing
+
+442
+00:25:46,600 --> 00:25:48,799
+about us without us
+
+443
+00:25:48,799 --> 00:25:52,139
+but codes of conduct
+
+444
+00:25:52,139 --> 00:25:55,859
+up codes of conduct that actually say
+something real
+
+445
+00:25:55,859 --> 00:26:00,419
+are very important codes of conduct it's
+a trust us we're all nice guys
+
+446
+00:26:00,419 --> 00:26:03,999
+don't in fact those make me angry
+because that missing the entire point
+
+447
+00:26:03,999 --> 00:26:07,720
+a code of conduct I outreach matters
+
+448
+00:26:07,720 --> 00:26:10,739
+I I need to thank I would never have
+given the stalk
+
+449
+00:26:10,739 --> 00:26:14,629
+anywhere if somebody had asked me to do
+it I certainly wouldn't be giving it
+
+450
+00:26:14,629 --> 00:26:15,239
+here
+
+451
+00:26:15,239 --> 00:26:18,190
+if Jessica and asked me to give a talk I
+don't think this was the one she was
+
+452
+00:26:18,190 --> 00:26:20,379
+barking on but she's been very gracious
+about it
+
+453
+00:26:20,379 --> 00:26:24,210
+arm outreach matters allies matter
+
+454
+00:26:24,210 --> 00:26:29,299
+this is important I have never witnessed
+in decades being undercover as a sis
+
+455
+00:26:29,299 --> 00:26:30,299
+gender person
+
+456
+00:26:30,299 --> 00:26:33,960
+and being undercover as a male person I
+have never witnessed
+
+457
+00:26:33,960 --> 00:26:38,080
+when when when it's just that group I
+have never witnessed somebody standing
+
+458
+00:26:38,080 --> 00:26:38,570
+up
+
+459
+00:26:38,570 --> 00:26:41,779
+to say not that you really shouldn't do
+that that's transphobic
+
+460
+00:26:41,779 --> 00:26:45,289
+or no you really shouldn't do that
+that's sexist I'm not saying it's never
+
+461
+00:26:45,289 --> 00:26:46,379
+happened I'm saying
+
+462
+00:26:46,379 --> 00:26:51,609
+for decades I've never seen it we need
+allies that will actually do that
+
+463
+00:26:51,609 --> 00:26:54,909
+safe spaces spaces where you can go one
+way or another whether it's
+
+464
+00:26:54,909 --> 00:27:00,289
+all trans R all women or whatever or if
+it's some other strategy
+
+465
+00:27:00,289 --> 00:27:03,789
+ways to make yourself comfortable so
+that you'll take part
+
+466
+00:27:03,789 --> 00:27:08,559
+are very very important so to conclude
+
+467
+00:27:08,559 --> 00:27:11,669
+if we're gonna throw around words like
+open fair inclusion
+
+468
+00:27:11,669 --> 00:27:16,869
+inclusive things like that I would argue
+those have to be true for everyone
+
+469
+00:27:16,869 --> 00:27:23,869
+and that's all I've got thank you
+
+470
+00:27:30,130 --> 00:27:36,200
+look
+
+471
+00:27:36,200 --> 00:27:41,540
+now I am freaked out thank you so much
+hmm
+
+472
+00:27:41,540 --> 00:27:45,820
+we have time for what one or two
+questions but wanted to you
+
+473
+00:27:45,820 --> 00:27:52,110
+yeah sure thank you so much for sharing
+that experience as
+
+474
+00:27:52,110 --> 00:27:55,670
+arm one thing that I have noticed in the
+community and
+
+475
+00:27:55,670 --> 00:27:58,940
+not everyone does their but on
+
+476
+00:27:58,940 --> 00:28:03,170
+people who are in a marginalized group
+often feel very threatened to the point
+
+477
+00:28:03,170 --> 00:28:03,970
+where
+
+478
+00:28:03,970 --> 00:28:07,060
+if they genuinely are being a jerk to
+someone and you say
+
+479
+00:28:07,060 --> 00:28:11,200
+hey stop that your being a jerk to them
+just the way that you would say that to
+
+480
+00:28:11,200 --> 00:28:12,890
+any non marginalize person
+
+481
+00:28:12,890 --> 00:28:15,910
+they go your assaulting my identity
+
+482
+00:28:15,910 --> 00:28:19,430
+rather than going you're criticizing my
+behavior
+
+483
+00:28:19,430 --> 00:28:23,200
+do you have any suggestions on how one
+can give them that feedback
+
+484
+00:28:23,200 --> 00:28:27,000
+to maintain and non-hostile community
+when that hostility
+
+485
+00:28:27,000 --> 00:28:30,220
+is coming from and marginalized group
+
+486
+00:28:30,220 --> 00:28:33,980
+have I don't I guess the thing that I
+would like it
+
+487
+00:28:33,980 --> 00:28:37,450
+if I were doing that in that case and if
+it really was
+
+488
+00:28:37,450 --> 00:28:41,390
+sorted that threatening a at the
+situation is somebody that release
+
+489
+00:28:41,390 --> 00:28:42,780
+really clearly that I am
+
+490
+00:28:42,780 --> 00:28:47,010
+you know felt that way is that maybe
+this
+
+491
+00:28:47,010 --> 00:28:51,200
+would be done sir Dave in a very low key
+kinda privately first
+
+492
+00:28:51,200 --> 00:28:55,400
+I i hesitate to say oh well you know we
+deserve special treatment or something
+
+493
+00:28:55,400 --> 00:28:57,510
+like that we've got somebody who's
+scared already
+
+494
+00:28:57,510 --> 00:29:00,920
+then maybe keeping things very low-level
+might be
+
+495
+00:29:00,920 --> 00:29:04,230
+a way to start but I I don't know it
+depends you
+
+496
+00:29:04,230 --> 00:29:10,470
+thank you very much 11 high and you were
+talking about the experiences
+
+497
+00:29:10,470 --> 00:29:14,400
+being invisible are feeling invisible
+when you came to the conference
+
+498
+00:29:14,400 --> 00:29:18,040
+and I wonder am I if that
+
+499
+00:29:18,040 --> 00:29:22,000
+in some way for some people whom I did
+been looking right through you
+
+500
+00:29:22,000 --> 00:29:26,940
+if it was at a flip side reaction to
+
+501
+00:29:26,940 --> 00:29:32,520
+not wantin to staring not knowing how to
+relate to you like to do you think that
+
+502
+00:29:32,520 --> 00:29:32,980
+there is
+
+503
+00:29:32,980 --> 00:29:36,040
+that kind of misunderstanding going on
+or
+
+504
+00:29:36,040 --> 00:29:41,940
+how how would you know I I considered
+that but the vast majority of them
+
+505
+00:29:41,940 --> 00:29:45,790
+the really they looked certain right at
+me and then read on
+
+506
+00:29:45,790 --> 00:29:50,430
+through me and any update it really was
+almost surprising it wasn't one of these
+
+507
+00:29:50,430 --> 00:29:50,970
+third
+
+508
+00:29:50,970 --> 00:29:55,460
+it was just sort if and and that their
+reactions have completely
+
+509
+00:29:55,460 --> 00:29:59,510
+surprise when I actually would say
+something tended to confirm that
+
+510
+00:29:59,510 --> 00:30:06,510
+right thank mmm get big again the next
+talk in this room is married
+
+511
+00:30:06,750 --> 00:30:10,480
+are talking about the Vino married her
+temperament get outta here
+

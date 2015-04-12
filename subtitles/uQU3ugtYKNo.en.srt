@@ -1,0 +1,1488 @@
+1
+00:00:00,120 --> 00:00:03,659
+I'm yes so let's let's welcome
+vandenberg
+
+2
+00:00:03,659 --> 00:00:10,659
+so one of the things that I can do
+
+3
+00:00:12,540 --> 00:00:15,540
+that is really really the best part
+
+4
+00:00:15,540 --> 00:00:19,699
+have I love descend this entire thing is
+that I get to say thanks
+
+5
+00:00:19,699 --> 00:00:24,230
+so I'm gonna begin by actually taking a
+survey about who's using few different P
+
+6
+00:00:24,230 --> 00:00:28,269
+features in Python if you wanna rip use
+one of these features please raise your
+
+7
+00:00:28,269 --> 00:00:28,830
+hand
+
+8
+00:00:28,830 --> 00:00:33,329
+I bisect collections
+
+9
+00:00:33,329 --> 00:00:36,710
+de small punk tools
+
+10
+00:00:36,710 --> 00:00:40,040
+keep cue inter tools
+
+11
+00:00:40,040 --> 00:00:44,210
+Jas on math cue
+
+12
+00:00:44,210 --> 00:00:47,890
+random names to pull
+
+13
+00:00:47,890 --> 00:00:51,500
+enumerate sets
+
+14
+00:00:51,500 --> 00:00:56,199
+the new conditional expressions reverse
+iteration
+
+15
+00:00:56,199 --> 00:00:59,690
+ordered X have a generator expressions
+
+16
+00:00:59,690 --> 00:01:04,030
+if you use any of these features
+
+17
+00:01:04,030 --> 00:01:11,030
+you need to think Raymond Hettinger
+
+18
+00:01:15,810 --> 00:01:19,510
+Raymond is the originator maintain our
+pep author for each one of these
+
+19
+00:01:19,510 --> 00:01:20,150
+features
+
+20
+00:01:20,150 --> 00:01:24,060
+and he's done an amazing amount more
+he's been around the pad thai community
+
+21
+00:01:24,060 --> 00:01:25,730
+for well over a decade
+
+22
+00:01:25,730 --> 00:01:29,720
+I believe about 12 years since his first
+post on comp in Python
+
+23
+00:01:29,720 --> 00:01:33,190
+he has three thousand 812 commits to
+
+24
+00:01:33,190 --> 00:01:36,590
+the Python depository he has a 160
+
+25
+00:01:36,590 --> 00:01:40,140
+commits to the paper posit ori and 8,000
+
+26
+00:01:40,140 --> 00:01:45,660
+89,000 716 lines and Python repository
+where either added or changed by him
+
+27
+00:01:45,660 --> 00:01:50,560
+he's also served as director the Python
+Software Foundation
+
+28
+00:01:50,560 --> 00:01:53,900
+and been a mentor to many many people on
+a meaningless
+
+29
+00:01:53,900 --> 00:01:57,110
+so I'm happy today
+
+30
+00:01:57,110 --> 00:02:04,110
+Raymond coming up here
+
+31
+00:02:21,900 --> 00:02:28,900
+and
+
+32
+00:02:46,550 --> 00:02:50,540
+the Distinguished Service Award is the
+highest award given by the pipe and
+
+33
+00:02:50,540 --> 00:02:51,670
+stopper foundation
+
+34
+00:02:51,670 --> 00:02:55,099
+signifies essentially a life and work
+
+35
+00:02:55,099 --> 00:03:02,099
+and sell thank you a min
+
+36
+00:03:08,099 --> 00:03:11,489
+I also get to highlight a couple other
+people on
+
+37
+00:03:11,489 --> 00:03:18,360
+David are David Murray come up
+
+38
+00:03:18,360 --> 00:03:21,480
+young
+
+39
+00:03:21,480 --> 00:03:25,840
+dollar where the switch to unit code in
+Python 3
+
+40
+00:03:25,840 --> 00:03:29,170
+well one of the places in which that
+gets the most hairy
+
+41
+00:03:29,170 --> 00:03:32,430
+is in the email module and
+
+42
+00:03:32,430 --> 00:03:36,680
+david has spent the past several years
+untangling that because
+
+43
+00:03:36,680 --> 00:03:40,750
+all up the email RC's were written
+before you know code literally
+
+44
+00:03:40,750 --> 00:03:44,120
+and so it's a complete mess Masham
+understanding
+
+45
+00:03:44,120 --> 00:03:47,319
+sometimes it stayed at sometimes had sex
+in going back and forth
+
+46
+00:03:47,319 --> 00:03:51,769
+and he's also been a longtime mentor for
+new contributors
+
+47
+00:03:51,769 --> 00:03:55,160
+he helped people in the car mentorship
+main less some pipe and av
+
+48
+00:03:55,160 --> 00:03:59,250
+on the IRC channel he's a Google Summer
+of Code mentor
+
+49
+00:03:59,250 --> 00:04:02,330
+been a big help on-boarding Google
+Summer of Code and
+
+50
+00:04:02,330 --> 00:04:07,430
+and unknown ok and its his patience is
+really unparalleled
+
+51
+00:04:07,430 --> 00:04:11,709
+and so I am happy to award the community
+service work AR David Murray
+
+52
+00:04:11,709 --> 00:04:18,709
+the
+
+53
+00:04:24,949 --> 00:04:27,509
+I also wanted to recognize Benjamin
+Pearson
+
+54
+00:04:27,509 --> 00:04:30,639
+%ah Benjamin is since so many different
+places
+
+55
+00:04:30,639 --> 00:04:37,639
+in Benjamin are you here he's probably
+fixing code
+
+56
+00:04:38,880 --> 00:04:41,800
+and I think I don't know if you noticed
+that
+
+57
+00:04:41,800 --> 00:04:46,350
+Fernanda per said that he needed
+something had I think was pat 465 maybe
+
+58
+00:04:46,350 --> 00:04:50,240
+3465 and Benjamin a couple hours later
+he did it
+
+59
+00:04:50,240 --> 00:04:54,020
+and he the release manager for pat on 27
+
+60
+00:04:54,020 --> 00:04:57,810
+who works on the six compatibility
+libraries pics many many bugs on the new
+
+61
+00:04:57,810 --> 00:04:58,780
+bike and our org
+
+62
+00:04:58,780 --> 00:05:04,160
+he artiste received eight community
+service were in 2011 but we wanted to
+
+63
+00:05:04,160 --> 00:05:09,340
+give him a special recognition for all
+the things he's done in it's actually
+
+64
+00:05:09,340 --> 00:05:10,260
+one more word
+
+65
+00:05:10,260 --> 00:05:14,840
+i've been searching about the code and
+people who have affected
+
+66
+00:05:14,840 --> 00:05:18,090
+almost through the code but there's one
+way the
+
+67
+00:05:18,090 --> 00:05:22,200
+other thing that all of us in this room
+share and that is that we have been
+
+68
+00:05:22,200 --> 00:05:24,040
+touched in affected by this person
+
+69
+00:05:24,040 --> 00:05:27,740
+this is the largest gathering
+
+70
+00:05:27,740 --> 00:05:32,530
+I love Python programmers that will take
+place in the world this year
+
+71
+00:05:32,530 --> 00:05:36,000
+and there are so many people to thank
+
+72
+00:05:36,000 --> 00:05:39,530
+I Matthew David Yanick Stewart
+
+73
+00:05:39,530 --> 00:05:43,200
+all the Montreal Python but there's one
+
+74
+00:05:43,200 --> 00:05:50,200
+yes
+
+75
+00:05:51,710 --> 00:05:54,910
+there are literally too many to name but
+there's
+
+76
+00:05:54,910 --> 00:05:59,120
+one person who has put in literally the
+many many hundreds about hours
+
+77
+00:05:59,120 --> 00:06:02,240
+to chair Pike on this year
+
+78
+00:06:02,240 --> 00:06:09,240
+and that's Diana Clark
+
+79
+00:06:42,280 --> 00:06:42,860
+in own
+
+80
+00:06:42,860 --> 00:06:46,750
+it's amazing to have so many people who
+are willing to share in contribute
+
+81
+00:06:46,750 --> 00:06:52,130
+in our community in a community that's a
+really important word for us
+
+82
+00:06:52,130 --> 00:06:56,360
+three years ago
+
+83
+00:06:56,360 --> 00:07:01,750
+a couple professors actually I
+
+84
+00:07:01,750 --> 00:07:05,030
+war decided study code diversity
+
+85
+00:07:05,030 --> 00:07:08,440
+instead the study community actually the
+the growth and development various
+
+86
+00:07:08,440 --> 00:07:09,050
+communities
+
+87
+00:07:09,050 --> 00:07:13,860
+and the fountain indicators and growth
+and development and well-being and
+
+88
+00:07:13,860 --> 00:07:14,610
+happiness
+
+89
+00:07:14,610 --> 00:07:17,860
+and they found various communities that
+had had
+
+90
+00:07:17,860 --> 00:07:22,300
+historic record a history going back
+thousands have years and some that had
+
+91
+00:07:22,300 --> 00:07:22,780
+been
+
+92
+00:07:22,780 --> 00:07:27,550
+isolated until relatively recently and
+they studied these
+
+93
+00:07:27,550 --> 00:07:31,620
+and they've decided to stand see what
+made these communities successful
+
+94
+00:07:31,620 --> 00:07:35,170
+don't wanna share three things from
+their study
+
+95
+00:07:35,170 --> 00:07:38,640
+the key question their research was
+
+96
+00:07:38,640 --> 00:07:41,680
+is it better to be more similar
+
+97
+00:07:41,680 --> 00:07:44,760
+or more different and they look at a lot
+of different
+
+98
+00:07:44,760 --> 00:07:48,380
+end indications I'd I'm entered a look
+at economic growth they look dead
+
+99
+00:07:48,380 --> 00:07:52,220
+well-being they look it migration
+patterns they look at the ability
+
+100
+00:07:52,220 --> 00:07:56,320
+have other people to get there they look
+at records from other people visiting
+
+101
+00:07:56,320 --> 00:07:59,740
+and look at all these things and they
+tried to figure out
+
+102
+00:07:59,740 --> 00:08:03,550
+it having more and different people a
+benefit
+
+103
+00:08:03,550 --> 00:08:08,040
+or is it something that that it really
+hold you back
+
+104
+00:08:08,040 --> 00:08:11,220
+and what they found was really really
+interesting
+
+105
+00:08:11,220 --> 00:08:15,060
+they found that when a community with
+very new
+
+106
+00:08:15,060 --> 00:08:20,050
+it was being having people be very
+similar be very homogeneous
+
+107
+00:08:20,050 --> 00:08:23,790
+was a huge asset and the reason why is
+because
+
+108
+00:08:23,790 --> 00:08:26,960
+when you were new you didn't have to ask
+
+109
+00:08:26,960 --> 00:08:30,480
+what your neighbor would think about
+something you just knew because you knew
+
+110
+00:08:30,480 --> 00:08:32,080
+how your neighbours think you know
+they're
+
+111
+00:08:32,080 --> 00:08:35,500
+how they would react you
+
+112
+00:08:35,500 --> 00:08:39,349
+were able to be aligned because
+everybody was unlike
+
+113
+00:08:39,349 --> 00:08:43,160
+now here's the surprising part debt as
+
+114
+00:08:43,160 --> 00:08:47,980
+society started to become more complex
+through the Renaissance and especially
+
+115
+00:08:47,980 --> 00:08:50,060
+through the Industrial Revolution
+
+116
+00:08:50,060 --> 00:08:53,580
+devalue ugh similarity
+
+117
+00:08:53,580 --> 00:08:57,150
+plummeted and the value of being
+different
+
+118
+00:08:57,150 --> 00:09:01,110
+skyrocketed it actually turned out
+
+119
+00:09:01,110 --> 00:09:04,190
+that these communities that had had a
+little bit
+
+120
+00:09:04,190 --> 00:09:08,900
+%uh the head start earlier earlier in
+basically agricultural times
+
+121
+00:09:08,900 --> 00:09:12,230
+started to stagnate and the ones that
+had
+
+122
+00:09:12,230 --> 00:09:16,020
+these influences from all over had
+different viewpoints different people
+
+123
+00:09:16,020 --> 00:09:19,900
+different values different points of
+view day
+
+124
+00:09:19,900 --> 00:09:24,030
+started to really become successful a
+model on many different direct
+
+125
+00:09:24,030 --> 00:09:27,850
+dimensions so
+
+126
+00:09:27,850 --> 00:09:31,760
+this is the first point diversity
+
+127
+00:09:31,760 --> 00:09:37,100
+is a necessary response a complexity
+unless we are willing
+
+128
+00:09:37,100 --> 00:09:41,290
+to accept many people with many
+different viewpoints into our community
+
+129
+00:09:41,290 --> 00:09:44,380
+we are going have been the different in
+
+130
+00:09:44,380 --> 00:09:49,400
+all the different inputs that we really
+need to grow second
+
+131
+00:09:49,400 --> 00:09:53,120
+is that date at that look further into
+the data they found that there was a
+
+132
+00:09:53,120 --> 00:09:54,690
+rich get richer affect
+
+133
+00:09:54,690 --> 00:09:58,680
+foreign many these communities some of
+them
+
+134
+00:09:58,680 --> 00:10:02,140
+at society advances the communities that
+are relatively more diverse
+
+135
+00:10:02,140 --> 00:10:06,180
+tend to attract more opportunities they
+have more growth
+
+136
+00:10:06,180 --> 00:10:10,470
+and so that brings in new people and new
+ideas and new viewpoints
+
+137
+00:10:10,470 --> 00:10:14,610
+which sets of a virtuous cycle but
+
+138
+00:10:14,610 --> 00:10:18,110
+it also they also found that the
+communities that were relatively less
+
+139
+00:10:18,110 --> 00:10:18,750
+diverse
+
+140
+00:10:18,750 --> 00:10:22,089
+tended to have fewer people in few
+opportunities
+
+141
+00:10:22,089 --> 00:10:26,010
+and two people left opportunities dried
+up and they stagnated
+
+142
+00:10:26,010 --> 00:10:29,400
+this is the second point
+
+143
+00:10:29,400 --> 00:10:32,410
+is that diversity creates a virtuous
+cycle
+
+144
+00:10:32,410 --> 00:10:35,500
+if we are willing to reach out
+
+145
+00:10:35,500 --> 00:10:38,770
+we can outgrow and out thinkin
+out-compete
+
+146
+00:10:38,770 --> 00:10:42,220
+the people around us now this is true
+
+147
+00:10:42,220 --> 00:10:45,270
+in open source communities as well
+
+148
+00:10:45,270 --> 00:10:48,930
+particularly this is true in the Python
+community
+
+149
+00:10:48,930 --> 00:10:53,400
+when first started out it's true we had
+a as substantial
+
+150
+00:10:53,400 --> 00:10:57,320
+group people we were very similar who
+had a couple people and I'd like to
+
+151
+00:10:57,320 --> 00:11:00,850
+especially I highlight people like lynn
+route
+
+152
+00:11:00,850 --> 00:11:07,850
+and Jessica McKellar who've been
+
+153
+00:11:12,390 --> 00:11:15,980
+we had these people who are dedicated to
+helping us reach out
+
+154
+00:11:15,980 --> 00:11:20,490
+and we've had about five years an effort
+and since then we've been on the path
+
+155
+00:11:20,490 --> 00:11:22,560
+for greater growth in greater diversity
+
+156
+00:11:22,560 --> 00:11:26,530
+and you can see it in this hall
+reflected at this conference we have
+
+157
+00:11:26,530 --> 00:11:29,839
+people from fifty did two different
+nations across
+
+158
+00:11:29,839 --> 00:11:35,700
+all inhabit six continents mosey it even
+more in gender diversity
+
+159
+00:11:35,700 --> 00:11:40,070
+we don't ask for gender on on our
+registration form
+
+160
+00:11:40,070 --> 00:11:44,820
+but we can do a little bit love machine
+learning on your names and we can look
+
+161
+00:11:44,820 --> 00:11:46,360
+at T-shirts
+
+162
+00:11:46,360 --> 00:11:50,190
+I we conditions Disick assist this is
+statistical sampling
+
+163
+00:11:50,190 --> 00:11:53,970
+and sometimes I can say that weren't
+sometimes I can't
+
+164
+00:11:53,970 --> 00:11:57,160
+and it will it appears to us from all
+the data that we have
+
+165
+00:11:57,160 --> 00:12:00,760
+is not only do we have one-third women
+speakers we have one third win in
+
+166
+00:12:00,760 --> 00:12:07,760
+attendees the
+
+167
+00:12:11,490 --> 00:12:13,930
+so I'm really excited about that number
+
+168
+00:12:13,930 --> 00:12:19,240
+because the most recent survey from the
+computing research associations
+
+169
+00:12:19,240 --> 00:12:23,000
+I graduation numbers indicated that only
+12 percent
+
+170
+00:12:23,000 --> 00:12:27,480
+computer science graduates in the in the
+year 2011 to 2012
+
+171
+00:12:27,480 --> 00:12:32,020
+where women that means that we are
+pulling more than our weight
+
+172
+00:12:32,020 --> 00:12:35,260
+amongst various communities we
+
+173
+00:12:35,260 --> 00:12:39,370
+and
+
+174
+00:12:39,370 --> 00:12:44,020
+we are winning we r on that virtuous
+cycle and sell
+
+175
+00:12:44,020 --> 00:12:47,070
+when I look out across as through icy
+community
+
+176
+00:12:47,070 --> 00:12:50,850
+that it better prepared to meet the
+future and better prepare to win and
+
+177
+00:12:50,850 --> 00:12:51,490
+compete
+
+178
+00:12:51,490 --> 00:12:55,580
+than any other that brings me to the
+fair point
+
+179
+00:12:55,580 --> 00:12:59,870
+and that is that diversity requires
+individualization
+
+180
+00:12:59,870 --> 00:13:04,580
+diversity maybe 8 necessary response to
+complexity
+
+181
+00:13:04,580 --> 00:13:07,730
+but diversity itself brings
+
+182
+00:13:07,730 --> 00:13:12,850
+with it its own complexity think back to
+the professors in their study
+
+183
+00:13:12,850 --> 00:13:17,260
+when people are very similar it's really
+easy for people communicate again
+
+184
+00:13:17,260 --> 00:13:17,980
+because they're
+
+185
+00:13:17,980 --> 00:13:21,459
+all like because there are they're all
+lined because they're all like
+
+186
+00:13:21,459 --> 00:13:25,740
+but when society starts to become more
+complex
+
+187
+00:13:25,740 --> 00:13:30,120
+the communities with greater diversity
+are able to prosper because they include
+
+188
+00:13:30,120 --> 00:13:31,930
+people with different points of view
+
+189
+00:13:31,930 --> 00:13:36,900
+and who think and value different things
+who have different use cases and want
+
+190
+00:13:36,900 --> 00:13:40,100
+and may at hugely different number
+
+191
+00:13:40,100 --> 00:13:44,720
+to go ahead choose a different number
+directions you can't predict
+
+192
+00:13:44,720 --> 00:13:48,420
+what your neighbors going think anymore
+though so you need to take more time to
+
+193
+00:13:48,420 --> 00:13:49,089
+communicate
+
+194
+00:13:49,089 --> 00:13:54,240
+in our own community we need to think
+about this in terms
+
+195
+00:13:54,240 --> 00:14:00,160
+up acceptance an individualization
+greater diversity means that we need to
+
+196
+00:14:00,160 --> 00:14:02,450
+work harder to understand those around
+us
+
+197
+00:14:02,450 --> 00:14:06,580
+and to be empathetic to the very man the
+various places that they're coming from
+
+198
+00:14:06,580 --> 00:14:10,820
+you know I was talking with a couple
+attendees the other night
+
+199
+00:14:10,820 --> 00:14:14,790
+and one of them said and this is calling
+it as close as I can
+
+200
+00:14:14,790 --> 00:14:18,700
+said I consider it much more important
+that I was raised in New York
+
+201
+00:14:18,700 --> 00:14:22,959
+and had a liberal arts major before I
+started code those things do much more
+
+202
+00:14:22,959 --> 00:14:25,760
+to define me and Who I am than the fact
+that I'm a woman
+
+203
+00:14:25,760 --> 00:14:31,810
+it was well said I we can't be lazy
+
+204
+00:14:31,810 --> 00:14:35,250
+and treat people like their
+one-dimensional on any line
+
+205
+00:14:35,250 --> 00:14:39,690
+be it race or gender or politics or
+culture
+
+206
+00:14:39,690 --> 00:14:43,360
+or anything because the value comes in
+understanding
+
+207
+00:14:43,360 --> 00:14:46,560
+that we have many different viewpoints
+in are many different people
+
+208
+00:14:46,560 --> 00:14:50,640
+at this is were Frank and
+
+209
+00:14:50,640 --> 00:14:54,100
+this is were affected in the code of
+conduct for MPS after I know we talked
+
+210
+00:14:54,100 --> 00:14:54,880
+about this
+
+211
+00:14:54,880 --> 00:14:58,209
+%uh the codes of conduct a little bit
+Brett dead
+
+212
+00:14:58,209 --> 00:15:02,100
+on the first day so many are familiar
+with his and a pipe on
+
+213
+00:15:02,100 --> 00:15:06,329
+and what how that has guided us in
+actually
+
+214
+00:15:06,329 --> 00:15:10,829
+creating iconic code but there is really
+
+215
+00:15:10,829 --> 00:15:15,040
+a then have Python community and i think
+that that was the one that was written
+
+216
+00:15:15,040 --> 00:15:16,160
+by Brian curtain
+
+217
+00:15:16,160 --> 00:15:20,260
+you know
+
+218
+00:15:20,260 --> 00:15:23,450
+you can see it
+
+219
+00:15:23,450 --> 00:15:26,870
+my favorite quote from this conference
+so far came actually from Lawrence and
+
+220
+00:15:26,870 --> 00:15:27,450
+cut then
+
+221
+00:15:27,450 --> 00:15:31,589
+who said that just being at Pike and
+make some more optimistic around the
+
+222
+00:15:31,589 --> 00:15:32,020
+world
+
+223
+00:15:32,020 --> 00:15:35,589
+so the colored contact this
+
+224
+00:15:35,589 --> 00:15:41,300
+den a python community is says and I'm
+gonna read it to make sure I get it
+
+225
+00:15:41,300 --> 00:15:41,630
+right
+
+226
+00:15:41,630 --> 00:15:45,420
+the Python community is made up of
+members from around the globe
+
+227
+00:15:45,420 --> 00:15:48,940
+with a diverse set of skills
+personalities and experiences
+
+228
+00:15:48,940 --> 00:15:52,870
+is through these differences that our
+community experiences great successes
+
+229
+00:15:52,870 --> 00:15:54,209
+and continued growth
+
+230
+00:15:54,209 --> 00:15:57,470
+when you're working with members to the
+community we encourage you to follow
+
+231
+00:15:57,470 --> 00:16:00,040
+these guidelines: which help steer our
+interactions
+
+232
+00:16:00,040 --> 00:16:03,630
+and strive to keep right on a positive
+success on growing community
+
+233
+00:16:03,630 --> 00:16:06,920
+and member the Python community is open
+
+234
+00:16:06,920 --> 00:16:10,750
+we're open members of the community are
+open collaboration with their time
+
+235
+00:16:10,750 --> 00:16:11,250
+perhaps
+
+236
+00:16:11,250 --> 00:16:16,740
+patches problems or otherwise were Sep
+22 destructive common criticism
+
+237
+00:16:16,740 --> 00:16:20,270
+as experiences and skills that other
+members contribute to the hole in our
+
+238
+00:16:20,270 --> 00:16:21,170
+efforts
+
+239
+00:16:21,170 --> 00:16:24,339
+work setting up all who wish to take
+part in our activities
+
+240
+00:16:24,339 --> 00:16:28,150
+fostering an environment where anyone
+can participate any everyone can make a
+
+241
+00:16:28,150 --> 00:16:29,720
+difference
+
+242
+00:16:29,720 --> 00:16:34,579
+considered members to the community
+community are considered up their peers
+
+243
+00:16:34,579 --> 00:16:39,220
+other Python users working at toppling
+addressing the efforts of others keeping
+
+244
+00:16:39,220 --> 00:16:41,620
+in mind that oftentimes the labor
+
+245
+00:16:41,620 --> 00:16:44,699
+was completed simply for the good of the
+community
+
+246
+00:16:44,699 --> 00:16:47,699
+where attentive in our communications
+whether in person or online
+
+247
+00:16:47,699 --> 00:16:51,839
+more tactful one approach approaching
+different views
+
+248
+00:16:51,839 --> 00:16:55,140
+highly respectful members the community
+are respectful
+
+249
+00:16:55,140 --> 00:16:58,660
+respectful of others depositions their
+skills their commitment and their
+
+250
+00:16:58,660 --> 00:16:59,790
+efforts
+
+251
+00:16:59,790 --> 00:17:03,640
+we respect for the volunteer efforts
+that permeate the pipe and community
+
+252
+00:17:03,640 --> 00:17:06,829
+we respect for the processes set forth
+in our community
+
+253
+00:17:06,829 --> 00:17:12,390
+and we work within them when we disagree
+we are courteous and raising our issues
+
+254
+00:17:12,390 --> 00:17:16,370
+overall we are good to each other we
+contribute to this community not because
+
+255
+00:17:16,370 --> 00:17:17,250
+we have to
+
+256
+00:17:17,250 --> 00:17:20,740
+but because we want to if we remember
+that these guidelines will come
+
+257
+00:17:20,740 --> 00:17:24,120
+naturally
+
+258
+00:17:24,120 --> 00:17:29,020
+you'll notice the Python code of conduct
+and quote by the way
+
+259
+00:17:29,020 --> 00:17:33,800
+is about who we are and what we value
+here in the Python community
+
+260
+00:17:33,800 --> 00:17:36,620
+we recognize that we are different
+people with different experiences and we
+
+261
+00:17:36,620 --> 00:17:38,770
+explicitly value that
+
+262
+00:17:38,770 --> 00:17:43,350
+we reach out but where does that leave
+the PSF
+
+263
+00:17:43,350 --> 00:17:48,150
+it's clear that as a community we have
+turned toward the corner toward greater
+
+264
+00:17:48,150 --> 00:17:49,870
+growth and greater diversity
+
+265
+00:17:49,870 --> 00:17:54,640
+and we're starting to rate the the
+benefits at that
+
+266
+00:17:54,640 --> 00:17:57,700
+but I have to say dad as
+
+267
+00:17:57,700 --> 00:18:02,480
+an organization PSF hasn't kept him
+hasn't kept up
+
+268
+00:18:02,480 --> 00:18:05,770
+it's over the past year and a half their
+Ben many discussions
+
+269
+00:18:05,770 --> 00:18:11,780
+and boats and a lot of work thinking
+about what defines us as an organization
+
+270
+00:18:11,780 --> 00:18:15,440
+and how we can better reflect the
+worldwide Python community
+
+271
+00:18:15,440 --> 00:18:20,320
+and so I'm happy today to announce the
+combination up that effort
+
+272
+00:18:20,320 --> 00:18:24,590
+cell love those who are here now how
+many are currently members at the PSF
+
+273
+00:18:24,590 --> 00:18:28,770
+be courageous and
+
+274
+00:18:28,770 --> 00:18:35,770
+gate now others who are here how many
+members at the pad thai community
+
+275
+00:18:36,450 --> 00:18:41,919
+you see the difference that's completely
+unacceptable
+
+276
+00:18:41,919 --> 00:18:46,060
+our communities become bigger and more
+diverse
+
+277
+00:18:46,060 --> 00:18:50,450
+and stronger and we as an organization
+were in keeping up
+
+278
+00:18:50,450 --> 00:18:54,570
+that is why as it today the PSF is
+transitioning to an open membership
+
+279
+00:18:54,570 --> 00:18:56,310
+model
+
+280
+00:18:56,310 --> 00:19:00,780
+everybody who's in the Python community
+is welcomed and encouraged
+
+281
+00:19:00,780 --> 00:19:03,900
+to become a member the PSF
+
+282
+00:19:03,900 --> 00:19:10,900
+the
+
+283
+00:19:12,490 --> 00:19:16,280
+in fact if you go to the new Python a
+dork and you scroll down to the bottom
+
+284
+00:19:16,280 --> 00:19:19,510
+you'll see a button that says become a
+member PSF
+
+285
+00:19:19,510 --> 00:19:23,200
+you fill out a form you agree to the
+code of conduct
+
+286
+00:19:23,200 --> 00:19:27,670
+he say I am a part of this community and
+I agreed to these values
+
+287
+00:19:27,670 --> 00:19:30,910
+I will be kind I will be respectful I
+will be considerate
+
+288
+00:19:30,910 --> 00:19:35,510
+and you are a member the PSF we've also
+said it
+
+289
+00:19:35,510 --> 00:19:38,770
+we've also created a new structure
+called working group
+
+290
+00:19:38,770 --> 00:19:41,860
+where people can we can
+
+291
+00:19:41,860 --> 00:19:45,810
+bring up the things that they are doing
+to help support
+
+292
+00:19:45,810 --> 00:19:49,380
+others in the community we don't have to
+think about all these ideas are cells
+
+293
+00:19:49,380 --> 00:19:52,770
+and the PSF can in a structured way
+
+294
+00:19:52,770 --> 00:19:57,650
+help you and recognize you and those who
+are working in dedicating
+
+295
+00:19:57,650 --> 00:20:02,480
+whether it be in organization whether it
+be in cold weather been documentation or
+
+296
+00:20:02,480 --> 00:20:03,180
+Tess
+
+297
+00:20:03,180 --> 00:20:07,200
+or leadership or outreach we want to
+support you
+
+298
+00:20:07,200 --> 00:20:11,530
+and those who are involved will have the
+opportunity to be
+
+299
+00:20:11,530 --> 00:20:14,890
+do to actually be eligible to vote an
+exercise
+
+300
+00:20:14,890 --> 00:20:18,470
+a role in guiding where r where the PSF
+goes in the future
+
+301
+00:20:18,470 --> 00:20:21,640
+we've reworked are
+
+302
+00:20:21,640 --> 00:20:25,130
+the bylaws to be radically more
+inclusive and representative
+
+303
+00:20:25,130 --> 00:20:31,210
+Python community as a whole and this is
+one of the things that
+
+304
+00:20:31,210 --> 00:20:34,400
+where we're just starting on this is
+
+305
+00:20:34,400 --> 00:20:39,610
+a new direction that frankly no other
+community that I'm aware of has gone in
+
+306
+00:20:39,610 --> 00:20:43,980
+especially with regard to creating
+
+307
+00:20:43,980 --> 00:20:47,870
+the way for us to elevate empower and
+support
+
+308
+00:20:47,870 --> 00:20:50,930
+individual efforts from across the
+Python community
+
+309
+00:20:50,930 --> 00:20:54,910
+so I ask you for your patience as we go
+forward
+
+310
+00:20:54,910 --> 00:20:58,870
+because we're gonna have various places
+where it's going
+
+311
+00:20:58,870 --> 00:21:03,340
+word gonna have glitches and we're not
+always going to do it right but from
+
+312
+00:21:03,340 --> 00:21:04,080
+here on
+
+313
+00:21:04,080 --> 00:21:08,010
+I hope that I can how to coming out of
+icon
+
+314
+00:21:08,010 --> 00:21:11,550
+I'd like every single one of you to be a
+member the PSF
+
+315
+00:21:11,550 --> 00:21:15,220
+by the end of the year I'd like to have
+30,000 members
+
+316
+00:21:15,220 --> 00:21:21,130
+at the PSF worldwide or even more
+because Dad is true that the community
+
+317
+00:21:21,130 --> 00:21:21,840
+is about
+
+318
+00:21:21,840 --> 00:21:26,050
+so we can support each other we can
+empower each other and we can truly
+
+319
+00:21:26,050 --> 00:21:29,950
+represent be representative I'll this
+community
+
+320
+00:21:29,950 --> 00:21:33,550
+in all in in all its diversity thank you
+

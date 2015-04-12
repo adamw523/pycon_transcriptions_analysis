@@ -1,0 +1,3957 @@
+1
+00:00:06,170 --> 00:00:08,450
+I'll I we had
+
+2
+00:00:08,450 --> 00:00:11,889
+her and she's here in stage and I'll
+talk to us about how to turn your
+
+3
+00:00:11,889 --> 00:00:13,410
+computer into a server
+
+4
+00:00:13,410 --> 00:00:19,349
+peace will come
+
+5
+00:00:19,349 --> 00:00:19,660
+hi
+
+6
+00:00:19,660 --> 00:00:23,050
+the okay alright a high
+
+7
+00:00:23,050 --> 00:00:27,289
+I'm Karen I'm a freelance web developer
+based in Mountain View Calif
+
+8
+00:00:27,289 --> 00:00:31,480
+hi I'm a sheepish I'm a security
+engineer at event bright in San
+
+9
+00:00:31,480 --> 00:00:32,169
+Francisco
+
+10
+00:00:32,169 --> 00:00:36,140
+yeah but by people in the middle yeah
+
+11
+00:00:36,140 --> 00:00:40,410
+the this is turn your computer into the
+server it's in introductory level talk
+
+12
+00:00:40,410 --> 00:00:43,940
+and we have three main goals for the
+stalk
+
+13
+00:00:43,940 --> 00:00:48,120
+that first by the end of it you have a
+basic understanding
+
+14
+00:00:48,120 --> 00:00:51,270
+love computer networking on you
+
+15
+00:00:51,270 --> 00:00:54,680
+believe that if you have a computer they
+can access the Internet
+
+16
+00:00:54,680 --> 00:00:57,870
+you can run a server on it and you some
+ideas how to do so
+
+17
+00:00:57,870 --> 00:01:00,920
+and family you have faith that you can
+do this
+
+18
+00:01:00,920 --> 00:01:04,250
+and not get immediately hacked or have
+you can get a break
+
+19
+00:01:04,250 --> 00:01:07,970
+or anything terribly awful bad happen so
+
+20
+00:01:07,970 --> 00:01:11,100
+30 parts the stock the first part
+
+21
+00:01:11,100 --> 00:01:15,200
+is about simple sharing sharing in
+progress work or files from
+
+22
+00:01:15,200 --> 00:01:18,539
+your work computer and either
+
+23
+00:01:18,539 --> 00:01:21,970
+within a given network or across
+networks and
+
+24
+00:01:21,970 --> 00:01:26,050
+part 2 will talk about home servers
+which is a case where you want it to be
+
+25
+00:01:26,050 --> 00:01:27,119
+up basically all
+
+26
+00:01:27,119 --> 00:01:30,179
+time versus just one of connections and
+
+27
+00:01:30,179 --> 00:01:33,539
+the specific considerations associated
+that use case
+
+28
+00:01:33,539 --> 00:01:36,989
+so but Medina scenario
+
+29
+00:01:36,989 --> 00:01:39,989
+your building your first web application
+
+30
+00:01:39,989 --> 00:01:44,289
+inlets a Django and you run
+
+31
+00:01:44,289 --> 00:01:47,479
+United tutorial you run the built-in web
+server
+
+32
+00:01:47,479 --> 00:01:51,209
+command and the tutorial policing go to
+this
+
+33
+00:01:51,209 --> 00:01:54,479
+local host corn 8,000 address in your
+browser see do so
+
+34
+00:01:54,479 --> 00:01:57,550
+and you see your django application show
+up
+
+35
+00:01:57,550 --> 00:02:01,090
+that's pretty exciting in fact you're so
+excited
+
+36
+00:02:01,090 --> 00:02:04,459
+and I may or may not have done this
+myself a
+
+37
+00:02:04,459 --> 00:02:08,440
+you quickly copy and paste the link
+insanity remade to show off your work
+
+38
+00:02:08,440 --> 00:02:13,420
+I've course you quickly realize this
+isn't going to work
+
+39
+00:02:13,420 --> 00:02:17,379
+local host that that only works on my
+computer it's not going to be seen by
+
+40
+00:02:17,379 --> 00:02:18,239
+anybody else
+
+41
+00:02:18,239 --> 00:02:21,379
+so okay well you get clever
+
+42
+00:02:21,379 --> 00:02:24,829
+you like well I know the name of my
+computer like and
+
+43
+00:02:24,829 --> 00:02:28,439
+so our place local host with my computer
+that local in the URL
+
+44
+00:02:28,439 --> 00:02:32,040
+and that's going to work right well
+
+45
+00:02:32,040 --> 00:02:35,510
+not exactly and so your
+
+46
+00:02:35,510 --> 00:02:39,489
+roommates still can't see your django
+application that you want to show off to
+
+47
+00:02:39,489 --> 00:02:39,840
+them
+
+48
+00:02:39,840 --> 00:02:43,450
+so to figure out why that didn't work
+and how to fix it
+
+49
+00:02:43,450 --> 00:02:47,299
+we're gonna look a different tool for
+basic local sharing
+
+50
+00:02:47,299 --> 00:02:50,379
+which is called simple issues P server
+
+51
+00:02:50,379 --> 00:02:54,430
+this is a model built and built-in comes
+a pipe on
+
+52
+00:02:54,430 --> 00:02:57,579
+you have it on your computer if you
+papon and the way the
+
+53
+00:02:57,579 --> 00:03:01,650
+use its is you go into a given directory
+
+54
+00:03:01,650 --> 00:03:05,290
+you run this command and files within a
+directory will be served
+
+55
+00:03:05,290 --> 00:03:08,780
+by default template thousand you can
+specify the port and
+
+56
+00:03:08,780 --> 00:03:11,879
+this is a really useful tool for doing
+in sharing
+
+57
+00:03:11,879 --> 00:03:15,629
+fun and projects it smell CSS JavaScript
+on
+
+58
+00:03:15,629 --> 00:03:19,370
+or basic file sharing and what's neat
+about it
+
+59
+00:03:19,370 --> 00:03:22,760
+is it doesn't just work at local host
+Hornets thousand
+
+60
+00:03:22,760 --> 00:03:26,700
+it works even at my computer that local
+colony thousand
+
+61
+00:03:26,700 --> 00:03:30,079
+so this works but
+
+62
+00:03:30,079 --> 00:03:33,950
+the Jenga built-in server doesn't so
+let's compare the two and figure out how
+
+63
+00:03:33,950 --> 00:03:34,790
+we can make
+
+64
+00:03:34,790 --> 00:03:38,480
+the Django built-in server act like this
+simply
+
+65
+00:03:38,480 --> 00:03:41,639
+TP server so when we look at the log
+message:
+
+66
+00:03:41,639 --> 00:03:45,469
+that we get when we run the simple HTTP
+Server we get
+
+67
+00:03:45,469 --> 00:03:49,049
+serving HTTP at on
+
+68
+00:03:49,049 --> 00:03:52,379
+0 to 0 to 0 to 0 port a thousand
+
+69
+00:03:52,379 --> 00:03:55,519
+and I don't really know this 40 think
+
+70
+00:03:55,519 --> 00:03:59,279
+a but when I compare it to the Django
+log message:
+
+71
+00:03:59,279 --> 00:04:04,099
+but I get there's a bunch of stuff and
+it says it's serving at 127 dot the road
+
+72
+00:04:04,099 --> 00:04:05,200
+at 0 to 1
+
+73
+00:04:05,200 --> 00:04:08,650
+it doesn't have their daughter died 02 0
+whatever that is
+
+74
+00:04:08,650 --> 00:04:12,389
+well you might try something other and
+
+75
+00:04:12,389 --> 00:04:16,480
+in be run server command instead of just
+specifying the port
+
+76
+00:04:16,480 --> 00:04:20,880
+you might try putting the 40 thing in
+front of it so it looks like this
+
+77
+00:04:20,880 --> 00:04:25,040
+and in the lot method you can see that
+is no longer serving at 127
+
+78
+00:04:25,040 --> 00:04:28,090
+it serving at zeroed out there that
+they're out at zero
+
+79
+00:04:28,090 --> 00:04:32,030
+cool so what to do that experiment
+
+80
+00:04:32,030 --> 00:04:35,720
+you ask your roommate to try again my
+computer that local and
+
+81
+00:04:35,720 --> 00:04:39,520
+they see what you see they see your day
+go out the kitchen that's pretty cool
+
+82
+00:04:39,520 --> 00:04:42,730
+it works but we still don't know why or
+what
+
+83
+00:04:42,730 --> 00:04:45,970
+dur da dur da dur that 0 which employs
+six saying
+
+84
+00:04:45,970 --> 00:04:50,820
+means though to explain we need to
+discuss
+
+85
+00:04:50,820 --> 00:04:55,600
+a talk about a bit about how ports and
+interfaces work in computer networking
+
+86
+00:04:55,600 --> 00:04:58,960
+you might already be familiar with ports
+might've heard them
+
+87
+00:04:58,960 --> 00:05:02,400
+heard of them at least its easy to
+conceptualize them
+
+88
+00:05:02,400 --> 00:05:07,920
+as these gateways a
+
+89
+00:05:07,920 --> 00:05:11,290
+a these entryways and your computer are
+numbered
+
+90
+00:05:11,290 --> 00:05:14,560
+numbered 1 through over 60,000
+
+91
+00:05:14,560 --> 00:05:19,190
+and so they're not all John here
+
+92
+00:05:19,190 --> 00:05:22,740
+and different applications will listen
+or buy into
+
+93
+00:05:22,740 --> 00:05:26,340
+different ports and so we know Django's
+listening
+
+94
+00:05:26,340 --> 00:05:30,910
+to 40,000 and so it's listening for
+requests to come in
+
+95
+00:05:30,910 --> 00:05:34,090
+a from outside the computer and sending
+responses
+
+96
+00:05:34,090 --> 00:05:38,150
+moralist so that sort of our basic model
+what ports are
+
+97
+00:05:38,150 --> 00:05:40,830
+the reality is actually a little bit
+more complicated because you don't just
+
+98
+00:05:40,830 --> 00:05:41,820
+supports
+
+99
+00:05:41,820 --> 00:05:44,830
+you also have interfaces so really looks
+more
+
+100
+00:05:44,830 --> 00:05:48,820
+something like this um these the what an
+interface is
+
+101
+00:05:48,820 --> 00:05:52,580
+is a way that your computer get online
+so here
+
+102
+00:05:52,580 --> 00:05:55,700
+this computer has three interfaces
+there's wn2
+
+103
+00:05:55,700 --> 00:06:00,450
+which is your wireless card there's eth1
+which is your internet connection
+
+104
+00:06:00,450 --> 00:06:03,640
+and then there's hello which is local
+loopback
+
+105
+00:06:03,640 --> 00:06:07,690
+which is sort of a virtual interface you
+can't actually connected from outside
+
+106
+00:06:07,690 --> 00:06:11,160
+it only works inside your computer and
+so
+
+107
+00:06:11,160 --> 00:06:14,810
+each up these interfaces have their own
+bankers ports
+
+108
+00:06:14,810 --> 00:06:19,290
+on you don't just have one port a
+thousand you have in this case 3
+
+109
+00:06:19,290 --> 00:06:22,640
+you can see what interfaces your
+computer has and some information about
+
+110
+00:06:22,640 --> 00:06:23,360
+them
+
+111
+00:06:23,360 --> 00:06:26,380
+if you run the command I F config on the
+command line
+
+112
+00:06:26,380 --> 00:06:30,890
+on most you next the system's and I'll
+give you some useful information about
+
+113
+00:06:30,890 --> 00:06:34,470
+your computer on so
+
+114
+00:06:34,470 --> 00:06:37,760
+we can see here that the reason why
+
+115
+00:06:37,760 --> 00:06:40,920
+with the default Django run server setup
+
+116
+00:06:40,920 --> 00:06:45,330
+your roommate wasn't able to see it is
+by default only binds to port 8000
+
+117
+00:06:45,330 --> 00:06:50,280
+on the local loopback interface which
+you're able to access via local host
+
+118
+00:06:50,280 --> 00:06:54,230
+but when your roommate rise their
+connecting over the wifi
+
+119
+00:06:54,230 --> 00:06:58,320
+its checking a completely different port
+8000 and nothing's listening there
+
+120
+00:06:58,320 --> 00:07:03,200
+were not able to connect what the 0 to 0
+to 0 to 0
+
+121
+00:07:03,200 --> 00:07:06,910
+a shorthand means is bind to the sport
+
+122
+00:07:06,910 --> 00:07:10,150
+on all available interfaces and so
+django does so
+
+123
+00:07:10,150 --> 00:07:13,340
+and for now you can connect
+
+124
+00:07:13,340 --> 00:07:16,880
+over local host and a roommate can
+connect over WiFi and if we had people
+
+125
+00:07:16,880 --> 00:07:19,780
+connected on even if they could get
+there too
+
+126
+00:07:19,780 --> 00:07:22,800
+pretty cool so
+
+127
+00:07:22,800 --> 00:07:27,040
+great we've accomplish our first or we
+can show off her work
+
+128
+00:07:27,040 --> 00:07:31,010
+and show off how awesome your Django
+programming skills art your roommate
+
+129
+00:07:31,010 --> 00:07:34,410
+or anyone else who happens to be on the
+same network but
+
+130
+00:07:34,410 --> 00:07:38,540
+we've got a friends who don't live with
+us who don't share wifi
+
+131
+00:07:38,540 --> 00:07:41,950
+a were elsewhere on the internet that we
+also want to show off to you
+
+132
+00:07:41,950 --> 00:07:46,670
+and so we need different tools to be
+able to communicate with them
+
+133
+00:07:46,670 --> 00:07:50,060
+am in order understand both
+
+134
+00:07:50,060 --> 00:07:53,890
+to understand how to do this we need the
+first discuss IP addresses
+
+135
+00:07:53,890 --> 00:07:57,010
+a Internet Protocol addresses am
+
+136
+00:07:57,010 --> 00:08:01,030
+these are what are used for routing on
+the Internet and there's two kinds
+
+137
+00:08:01,030 --> 00:08:05,870
+the first is private IP addresses which
+exist within a given network
+
+138
+00:08:05,870 --> 00:08:09,580
+so if we imagine that this is your
+network at home
+
+139
+00:08:09,580 --> 00:08:12,960
+um is your wifi router and there's you
+and your roommate
+
+140
+00:08:12,960 --> 00:08:16,830
+and then the router standing between you
+and the rest the Internet
+
+141
+00:08:16,830 --> 00:08:20,650
+private IP addresses only apply on the
+left side with the
+
+142
+00:08:20,650 --> 00:08:24,110
+diagram between you and the router
+
+143
+00:08:24,110 --> 00:08:28,780
+on certain IP address blocks are
+assigned to be private I'd
+
+144
+00:08:28,780 --> 00:08:33,849
+private addresses so if you see an
+address starts with 19 2.1 6 8
+
+145
+00:08:33,849 --> 00:08:37,760
+or was her 172 dot some stuff
+
+146
+00:08:37,760 --> 00:08:41,349
+or 10 doubt stuff and that means you're
+looking at a private address not a
+
+147
+00:08:41,349 --> 00:08:43,019
+public address
+
+148
+00:08:43,019 --> 00:08:46,560
+and you can find out what your
+computer's private IP address
+
+149
+00:08:46,560 --> 00:08:50,459
+another is a number ways if configured
+value for one
+
+150
+00:08:50,459 --> 00:08:55,439
+another way is using are simply CP
+server that we're
+
+151
+00:08:55,439 --> 00:09:00,860
+doing for when you run it and you access
+it over local host
+
+152
+00:09:00,860 --> 00:09:04,199
+when you look at the log message in the
+terminal window you'll see one thing
+
+153
+00:09:04,199 --> 00:09:05,019
+you'll see it
+
+154
+00:09:05,019 --> 00:09:08,939
+a connection from 127 that the road out
+there that what from local host
+
+155
+00:09:08,939 --> 00:09:12,800
+but when you connect over my computer at
+local instead you'll see something else
+
+156
+00:09:12,800 --> 00:09:14,029
+the logs
+
+157
+00:09:14,029 --> 00:09:18,949
+you'll see 172 in this case that 27 that
+the road at 14 and that is your private
+
+158
+00:09:18,949 --> 00:09:19,889
+IP address
+
+159
+00:09:19,889 --> 00:09:23,029
+on the network you're currently
+connected to so
+
+160
+00:09:23,029 --> 00:09:26,509
+that's pretty cool and that means that
+you can see roommates private IP address
+
+161
+00:09:26,509 --> 00:09:27,759
+to take an x
+
+162
+00:09:27,759 --> 00:09:32,360
+over the service you'll see a different
+IP address belonging to your roommate
+
+163
+00:09:32,360 --> 00:09:36,180
+show up there an
+
+164
+00:09:36,180 --> 00:09:40,899
+yes lets private IP addresses thanks
+karen I wanna talk a little bit about
+
+165
+00:09:40,899 --> 00:09:45,060
+public services so website like event
+right we don't just want to be available
+
+166
+00:09:45,060 --> 00:09:48,689
+inside the office montana beach ball
+from all over the world
+
+167
+00:09:48,689 --> 00:09:52,060
+for the only thing with the kinda
+website you guys wanna work on also
+
+168
+00:09:52,060 --> 00:09:55,519
+and to make that happen you need to talk
+up we need to talk about
+
+169
+00:09:55,519 --> 00:09:59,139
+public IP addresses which IP addresses
+that will route
+
+170
+00:09:59,139 --> 00:10:02,889
+from anywhere on the internet so karen
+mentioned that
+
+171
+00:10:02,889 --> 00:10:07,339
+IP addresses are what the Internet
+routes messages based on
+
+172
+00:10:07,339 --> 00:10:10,829
+which means that if you type in
+something like Google to comment your
+
+173
+00:10:10,829 --> 00:10:12,029
+browser
+
+174
+00:10:12,029 --> 00:10:15,410
+then your brother has to first look up
+what the address is
+
+175
+00:10:15,410 --> 00:10:18,620
+other lot com so that it can send a
+message to Google
+
+176
+00:10:18,620 --> 00:10:21,920
+have the web conversation to show you
+the webpage an art show you what that
+
+177
+00:10:21,920 --> 00:10:22,689
+looks like
+
+178
+00:10:22,689 --> 00:10:26,589
+through a few her teens and I think that
+Lynn route just gave a talk about DNS
+
+179
+00:10:26,589 --> 00:10:28,110
+this is going to be much shorter
+
+180
+00:10:28,110 --> 00:10:31,620
+dinners %ah but therefore you prolly one
+look at hers
+
+181
+00:10:31,620 --> 00:10:34,990
+in the videos if you haven't so briefly
+
+182
+00:10:34,990 --> 00:10:38,779
+when you want to visit google.com your
+brother sent a message to your home
+
+183
+00:10:38,779 --> 00:10:39,559
+router
+
+184
+00:10:39,559 --> 00:10:42,800
+and says hey what is the address for
+Google com
+
+185
+00:10:42,800 --> 00:10:46,050
+your router may have it stored may have
+a the answer
+
+186
+00:10:46,050 --> 00:10:49,160
+cached locally maybe look this up
+recently
+
+187
+00:10:49,160 --> 00:10:52,550
+or maybe this is an address that is
+based inside your home network
+
+188
+00:10:52,550 --> 00:10:56,089
+and so it sorta authoritative for the
+answer if not
+
+189
+00:10:56,089 --> 00:10:59,720
+then it passes that request along to the
+global DNS service one of the servers
+
+190
+00:10:59,720 --> 00:11:03,129
+might be Google's one is reversed my
+belong to your ISP
+
+191
+00:11:03,129 --> 00:11:06,680
+eventually an answer comes back which
+looks like this
+
+192
+00:11:06,680 --> 00:11:09,819
+and you rather than pass it along to you
+
+193
+00:11:09,819 --> 00:11:13,629
+so now your browser does what the
+address israel %uh com
+
+194
+00:11:13,629 --> 00:11:17,699
+so they can then send a message there
+
+195
+00:11:17,699 --> 00:11:21,220
+but what if you just typed this IP
+address into your address bar
+
+196
+00:11:21,220 --> 00:11:24,350
+will allow to cool here's URL with that
+
+197
+00:11:24,350 --> 00:11:29,089
+sup and it turns out if you the best yes
+you get to go home page
+
+198
+00:11:29,089 --> 00:11:32,490
+this IP address just interchangeable for
+that name
+
+199
+00:11:32,490 --> 00:11:35,620
+in terms of how the package get there
+
+200
+00:11:35,620 --> 00:11:39,740
+so for that's great %ah
+
+201
+00:11:39,740 --> 00:11:43,189
+this mean that you can route packets to
+you computers based on names
+
+202
+00:11:43,189 --> 00:11:46,600
+and if you happen one look up a computer
+based on his name you can use the
+
+203
+00:11:46,600 --> 00:11:48,540
+command-line tool called host
+
+204
+00:11:48,540 --> 00:11:52,430
+which you can query for some particular
+name like Google com
+
+205
+00:11:52,430 --> 00:11:57,860
+and it will tell you what address car
+sponsor that
+
+206
+00:11:57,860 --> 00:12:02,650
+so
+
+207
+00:12:02,650 --> 00:12:03,060
+alright
+
+208
+00:12:03,060 --> 00:12:08,300
+%uh so we've seen real web sites have
+public IP addresses at least one
+
+209
+00:12:08,300 --> 00:12:11,780
+public IP address is standing up for any
+website or web service
+
+210
+00:12:11,780 --> 00:12:15,850
+they are able to access over the wider
+Internet but your computer
+
+211
+00:12:15,850 --> 00:12:19,670
+your laptop almost certainly doesn't
+have a public IP address
+
+212
+00:12:19,670 --> 00:12:23,510
+and yet your computer still able to
+communicate with the rest the Internet
+
+213
+00:12:23,510 --> 00:12:26,560
+it able to do so because a trick that
+you're at it does
+
+214
+00:12:26,560 --> 00:12:30,500
+called network address translation
+ornette a
+
+215
+00:12:30,500 --> 00:12:34,500
+and so the way this works going back to
+this diagram here's our network
+
+216
+00:12:34,500 --> 00:12:37,950
+and a router is standing between the
+machines on your local network
+
+217
+00:12:37,950 --> 00:12:41,700
+and the rest to the Internet an
+important thing that you're at it needs
+
+218
+00:12:41,700 --> 00:12:42,300
+to do
+
+219
+00:12:42,300 --> 00:12:46,090
+is to keep track of who's traffickers
+whose you don't want your router's
+
+220
+00:12:46,090 --> 00:12:46,610
+sending
+
+221
+00:12:46,610 --> 00:12:50,890
+the packets you requested to your
+roommate or vice versa the way that
+
+222
+00:12:50,890 --> 00:12:52,080
+you're at it does this
+
+223
+00:12:52,080 --> 00:12:56,610
+is so let's look at a request you're
+sending a packet to website somewhere on
+
+224
+00:12:56,610 --> 00:12:57,280
+the internet
+
+225
+00:12:57,280 --> 00:13:01,270
+books something like this there's among
+other
+
+226
+00:13:01,270 --> 00:13:06,130
+meta-data Thursday to address and the
+from address the to address
+
+227
+00:13:06,130 --> 00:13:10,890
+is the public IP address I'll the
+website you trying to access
+
+228
+00:13:10,890 --> 00:13:14,280
+a ends in a port colon eighty which is
+
+229
+00:13:14,280 --> 00:13:18,370
+the default port for web services and
+the from address
+
+230
+00:13:18,370 --> 00:13:22,500
+is your private IP address colon some
+arbitrary port switch
+
+231
+00:13:22,500 --> 00:13:25,800
+computer picked out for this particular
+TCP connection
+
+232
+00:13:25,800 --> 00:13:28,820
+the details that aren't important just
+that
+
+233
+00:13:28,820 --> 00:13:32,440
+this particular connection has a
+particular port on
+
+234
+00:13:32,440 --> 00:13:35,760
+so you some material at her rather
+what's the packet
+
+235
+00:13:35,760 --> 00:13:38,800
+and takes the from address that you gave
+it
+
+236
+00:13:38,800 --> 00:13:42,460
+and assigns it to a random
+
+237
+00:13:42,460 --> 00:13:46,810
+unused port number more less random a
+and stores that in the net table
+
+238
+00:13:46,810 --> 00:13:50,420
+which is stored in your router so here
+we were signed
+
+239
+00:13:50,420 --> 00:13:55,090
+the sport number four for 43 after does
+this
+
+240
+00:13:55,090 --> 00:13:58,870
+it deface is your package a rewrite it
+
+241
+00:13:58,870 --> 00:14:02,340
+um removes the original from address and
+instead
+
+242
+00:14:02,340 --> 00:14:06,890
+rates the routers public IP address
+colon the sport
+
+243
+00:14:06,890 --> 00:14:10,530
+that it just a sign you after it takes
+your
+
+244
+00:14:10,530 --> 00:14:14,100
+poor defaced packet sent along to the
+rest the Internet
+
+245
+00:14:14,100 --> 00:14:17,940
+hopefully eventually you get a response
+back
+
+246
+00:14:17,940 --> 00:14:22,000
+and course this response isn't obviously
+sent to you it sent
+
+247
+00:14:22,000 --> 00:14:25,420
+to your router's public IP address and I
+might have been a lot of requests
+
+248
+00:14:25,420 --> 00:14:27,010
+between when this was sent
+
+249
+00:14:27,010 --> 00:14:30,400
+and one you're at it gets the response
+and so you're at it needs to figure out
+
+250
+00:14:30,400 --> 00:14:32,500
+where is this packet suppose to
+ultimately go
+
+251
+00:14:32,500 --> 00:14:35,700
+does this by again looking in
+
+252
+00:14:35,700 --> 00:14:39,320
+the net table a based on the port number
+
+253
+00:14:39,320 --> 00:14:43,150
+and okay 4443 is here and corresponds
+with this
+
+254
+00:14:43,150 --> 00:14:47,140
+private IP address a it rewrites the
+packet again
+
+255
+00:14:47,140 --> 00:14:51,390
+to give it your private IP and sent it
+along to you
+
+256
+00:14:51,390 --> 00:14:54,660
+and so this is happening each time
+you're making requests
+
+257
+00:14:54,660 --> 00:14:57,910
+over the network and as far as you can
+tell your seamlessly connecting with
+
+258
+00:14:57,910 --> 00:14:58,530
+Google
+
+259
+00:14:58,530 --> 00:15:02,380
+even though the packets are getting
+changed back and forth by rather
+
+260
+00:15:02,380 --> 00:15:05,570
+so and that's pretty useful
+
+261
+00:15:05,570 --> 00:15:10,190
+on the good thing about it is it means
+multiple devices can share one public IP
+
+262
+00:15:10,190 --> 00:15:10,830
+address
+
+263
+00:15:10,830 --> 00:15:14,830
+so if you don't have enough public IP
+addresses you can still get
+
+264
+00:15:14,830 --> 00:15:19,020
+online which is pretty knees I like
+being online be bad thing about it
+
+265
+00:15:19,020 --> 00:15:22,670
+is it makes it hard for people outside
+your network to reach you
+
+266
+00:15:22,670 --> 00:15:27,200
+because you don't have a globally
+accessible address you rather just like
+
+267
+00:15:27,200 --> 00:15:30,520
+I don't know where this goes you can
+contact your router but you can't
+
+268
+00:15:30,520 --> 00:15:31,150
+contact
+
+269
+00:15:31,150 --> 00:15:34,510
+computers within the route the network
+that the router
+
+270
+00:15:34,510 --> 00:15:38,960
+controls so I would still want to show
+to the network
+
+271
+00:15:38,960 --> 00:15:42,300
+even though we have this difficulty we
+need here on this issue and there's
+
+272
+00:15:42,300 --> 00:15:43,370
+several ways to do so
+
+273
+00:15:43,370 --> 00:15:46,470
+%uh the first one we're going to talk
+about is SSH tunneling
+
+274
+00:15:46,470 --> 00:15:49,490
+on at this H is
+
+275
+00:15:49,490 --> 00:15:52,880
+eighty protocol you may have heard a bit
+equipped to get graphic protocol that
+
+276
+00:15:52,880 --> 00:15:53,870
+does a lot of things
+
+277
+00:15:53,870 --> 00:15:57,160
+the thing that we're doing with it is
+called remote port forwarding
+
+278
+00:15:57,160 --> 00:16:00,350
+and so in order to do this the first
+thing you need
+
+279
+00:16:00,350 --> 00:16:04,710
+is access to a computer somewhere that
+does have a public IP address
+
+280
+00:16:04,710 --> 00:16:08,020
+and as many ways to get access a you
+might have
+
+281
+00:16:08,020 --> 00:16:12,020
+University account that has such access
+
+282
+00:16:12,020 --> 00:16:15,190
+or line 0 or Amazon ec2 account
+
+283
+00:16:15,190 --> 00:16:19,090
+or just a friend with the server who's
+willing to give you SSH access
+
+284
+00:16:19,090 --> 00:16:24,100
+once you have this are you connect to
+the remote machine pssh
+
+285
+00:16:24,100 --> 00:16:26,810
+this works like any other Internet
+connection even if there happens to be
+
+286
+00:16:26,810 --> 00:16:28,980
+not in the middle
+
+287
+00:16:28,980 --> 00:16:33,390
+%uh the protocol also connects whatev
+reported using for the connection
+
+288
+00:16:33,390 --> 00:16:36,460
+with the port their application is
+running on the specified
+
+289
+00:16:36,460 --> 00:16:39,800
+so our application is running on twenty
+thousand so
+
+290
+00:16:39,800 --> 00:16:43,000
+were making should pay attention to it
+and similarly
+
+291
+00:16:43,000 --> 00:16:46,870
+we pick out reports that script being
+unused on the other machine
+
+292
+00:16:46,870 --> 00:16:50,290
+in this case port 9,999
+
+293
+00:16:50,290 --> 00:16:54,430
+and connect to their as well and once
+we've done this
+
+294
+00:16:54,430 --> 00:16:57,540
+then people anywhere on the internet ken
+
+295
+00:16:57,540 --> 00:17:01,970
+connect to the remote machines IP
+address horse domain name it has one
+
+296
+00:17:01,970 --> 00:17:05,910
+and on the chosen port that that request
+will get sent
+
+297
+00:17:05,910 --> 00:17:09,270
+through the SSH tunnel to your laptop
+
+298
+00:17:09,270 --> 00:17:14,740
+and group responses back we'll go back
+the same way
+
+299
+00:17:14,740 --> 00:17:18,790
+be indentation on the command line that
+does all this look something like this:
+
+300
+00:17:18,790 --> 00:17:22,380
+um that's our beans do for din of
+traffic
+
+301
+00:17:22,380 --> 00:17:27,100
+St means date reports means use all
+interfaces not just local loopback
+
+302
+00:17:27,100 --> 00:17:31,280
+and then the arguments we have first the
+port on the remote machine that we want
+
+303
+00:17:31,280 --> 00:17:31,900
+to use
+
+304
+00:17:31,900 --> 00:17:36,280
+where staffers going to be accessible a
+what interface port combination that we
+
+305
+00:17:36,280 --> 00:17:38,500
+want to be connecting on your local
+machine
+
+306
+00:17:38,500 --> 00:17:42,110
+and finally the IP address or domain
+name for the remote machine the you're
+
+307
+00:17:42,110 --> 00:17:43,760
+connecting to
+
+308
+00:17:43,760 --> 00:17:48,410
+are so great we've got this your L we
+can send it to all over friends
+
+309
+00:17:48,410 --> 00:17:52,130
+and they're going to be able to access
+an application that's running
+
+310
+00:17:52,130 --> 00:17:55,370
+on just your laptop even behind that
+
+311
+00:17:55,370 --> 00:17:59,810
+all you need to have this access
+anywhere on the web
+
+312
+00:17:59,810 --> 00:18:03,450
+is money to pay for remote server or a
+friend who's willing to give you SSH
+
+313
+00:18:03,450 --> 00:18:06,620
+access
+
+314
+00:18:06,620 --> 00:18:10,630
+so that works great if you have friends
+money or SSH access
+
+315
+00:18:10,630 --> 00:18:15,400
+but i wanna tell you that my communique
+even if you have none of those
+
+316
+00:18:15,400 --> 00:18:20,430
+on I do notice I'm not super on the wifi
+
+317
+00:18:20,430 --> 00:18:23,140
+a
+
+318
+00:18:23,140 --> 00:18:26,230
+we'll see about my demo okay so %ah
+
+319
+00:18:26,230 --> 00:18:29,940
+there are a couple of services on the
+net that are willing to act as relays
+
+320
+00:18:29,940 --> 00:18:32,100
+for you in the way like an described
+
+321
+00:18:32,100 --> 00:18:35,940
+they are and rock and paid kite and rock
+
+322
+00:18:35,940 --> 00:18:39,289
+is designed to help you debug your
+applications
+
+323
+00:18:39,289 --> 00:18:42,429
+anyone can set up whatever demand they
+want start
+
+324
+00:18:42,429 --> 00:18:46,230
+and rock dot com and rock have a tunnel
+client that they can you that you can
+
+325
+00:18:46,230 --> 00:18:46,750
+use
+
+326
+00:18:46,750 --> 00:18:49,840
+kinda like estate client we saw Inc and
+example
+
+327
+00:18:49,840 --> 00:18:53,950
+paid kite is free for open source
+developers like five dollars a month or
+
+328
+00:18:53,950 --> 00:18:54,510
+something
+
+329
+00:18:54,510 --> 00:18:57,580
+not for everyone else and there
+
+330
+00:18:57,580 --> 00:19:01,429
+they have a sort of freedom and privacy
+bent but look at these anyway
+
+331
+00:19:01,429 --> 00:19:05,080
+our services that you can that we're
+willing to broker a tunnel for you
+
+332
+00:19:05,080 --> 00:19:08,510
+you can borrow some demand from them and
+I'll put your website online
+
+333
+00:19:08,510 --> 00:19:12,650
+and if I were online now i would tell
+you all to go to this
+
+334
+00:19:12,650 --> 00:19:16,130
+URL then you have your computers open
+and you are online and you go there
+
+335
+00:19:16,130 --> 00:19:16,710
+actually
+
+336
+00:19:16,710 --> 00:19:20,080
+you'll see a message from and rock that
+says the tunnel is down
+
+337
+00:19:20,080 --> 00:19:23,210
+because the wifi sounds years right %ah
+
+338
+00:19:23,210 --> 00:19:27,049
+but I do have a Django app running on
+this machine and i'm happy to show you
+
+339
+00:19:27,049 --> 00:19:27,570
+this
+
+340
+00:19:27,570 --> 00:19:32,250
+a low it is working ok great so you can
+impact go to death
+
+341
+00:19:32,250 --> 00:19:35,460
+bizarrely okay share
+
+342
+00:19:35,460 --> 00:19:39,980
+whatever I go to it okay nevermind great
+
+343
+00:19:39,980 --> 00:19:43,429
+so we have this great angle at my
+apologies for
+
+344
+00:19:43,429 --> 00:19:46,890
+my own stress our meilani
+
+345
+00:19:46,890 --> 00:19:51,020
+shimon ra and Tony a blow us away had
+taken the tanker tutorial
+
+346
+00:19:51,020 --> 00:19:54,480
+added a few images and put in to give
+repo I'm not running that here
+
+347
+00:19:54,480 --> 00:19:59,340
+the basic pulled up you can go in and
+you the existing polls
+
+348
+00:19:59,340 --> 00:20:04,330
+you can wonder which is the most awesome
+not to misuse teaching go
+
+349
+00:20:04,330 --> 00:20:07,500
+it did somebody break into admin nice
+wirklich
+
+350
+00:20:07,500 --> 00:20:10,710
+of course they did right so in that case
+I guess
+
+351
+00:20:10,710 --> 00:20:14,230
+lawls are better that any ideas and will
+vote
+
+352
+00:20:14,230 --> 00:20:20,450
+so I'm glad you all agree but usually
+
+353
+00:20:20,450 --> 00:20:23,460
+crucially this website mobile talk about
+security cynic
+
+354
+00:20:23,460 --> 00:20:26,610
+I crucially
+
+355
+00:20:26,610 --> 00:20:30,280
+refresh a not afraid to use I want
+
+356
+00:20:30,280 --> 00:20:33,480
+up anyway yeah lucien
+
+357
+00:20:33,480 --> 00:20:37,289
+a look here it is demonstrated that you
+can connect to you this laptop running
+
+358
+00:20:37,289 --> 00:20:38,200
+right here
+
+359
+00:20:38,200 --> 00:20:41,659
+the website even though it says pie
+conduct and rock dot com in the address
+
+360
+00:20:41,659 --> 00:20:42,200
+bar
+
+361
+00:20:42,200 --> 00:20:47,840
+is that a host on my laptop here and
+
+362
+00:20:47,840 --> 00:20:52,409
+%ah for a while I thought this seemed
+
+363
+00:20:52,409 --> 00:20:57,150
+think
+
+364
+00:20:57,150 --> 00:21:00,180
+yeah okay go yeah so anyway in the
+nineties
+
+365
+00:21:00,180 --> 00:21:03,830
+%ah I read this fake news article by
+fake person
+
+366
+00:21:03,830 --> 00:21:06,950
+in a pic MIT news magazine about the
+coming and
+
+367
+00:21:06,950 --> 00:21:11,700
+up addresses on the internet %ah and I
+thought this is a pretty funny thing
+
+368
+00:21:11,700 --> 00:21:15,460
+and this article hinges on that idea
+that light fixtures will soon
+
+369
+00:21:15,460 --> 00:21:20,130
+have IP addresses yeah right but then
+last year I went to a friend's apartment
+
+370
+00:21:20,130 --> 00:21:24,060
+and I found with the Phillip Hughes that
+you combine for two hundred dollars
+
+371
+00:21:24,060 --> 00:21:27,410
+at the Apple Store their eighth grade
+redid for a5
+
+372
+00:21:27,410 --> 00:21:31,600
+people seem to like them and they are
+Internet address ball
+
+373
+00:21:31,600 --> 00:21:35,160
+light fixtures so it turns out that we
+are really going to run
+
+374
+00:21:35,160 --> 00:21:38,390
+out if I P version for addresses there
+aren't enough
+
+375
+00:21:38,390 --> 00:21:42,110
+addresses to go around for all the light
+bulbs and all mobile phones in the world
+
+376
+00:21:42,110 --> 00:21:46,620
+in particular the least 6 billion mobile
+phones currently deployed
+
+377
+00:21:46,620 --> 00:21:49,960
+and we don't have that many IP addresses
+
+378
+00:21:49,960 --> 00:21:53,790
+IP version 4 which is the current most
+widely used version of the Internet
+
+379
+00:21:53,790 --> 00:21:54,540
+Protocol
+
+380
+00:21:54,540 --> 00:21:58,680
+gives you 32-bit for IP address: which
+means that they can be at most
+
+381
+00:21:58,680 --> 00:22:01,700
+to 232 or about four billion addresses
+
+382
+00:22:01,700 --> 00:22:05,910
+fewer than the number mobile phones but
+luckily also in the nineties
+
+383
+00:22:05,910 --> 00:22:09,380
+perhaps related to an article that i
+read they invented a new version of the
+
+384
+00:22:09,380 --> 00:22:10,360
+Internet Protocol
+
+385
+00:22:10,360 --> 00:22:14,560
+IP version 6 and the addresses are so
+long but they wanted on the screen
+
+386
+00:22:14,560 --> 00:22:17,640
+there are 128 bits long they
+
+387
+00:22:17,640 --> 00:22:21,040
+are there are more IQ version 6
+addresses then there are protons
+
+388
+00:22:21,040 --> 00:22:22,440
+electrons neutrons
+
+389
+00:22:22,440 --> 00:22:25,480
+particles in the universe so hopefully
+will crowd out
+
+390
+00:22:25,480 --> 00:22:28,620
+this time and %ah
+
+391
+00:22:28,620 --> 00:22:32,560
+this of course means that there's a next
+generation transition that has to happen
+
+392
+00:22:32,560 --> 00:22:35,920
+now wept for pipe on people here
+
+393
+00:22:35,920 --> 00:22:38,950
+we're very familiar with the
+next-generation transitions
+
+394
+00:22:38,950 --> 00:22:43,100
+that require backwards compatible
+changes and asking everyone to you our
+
+395
+00:22:43,100 --> 00:22:46,400
+Changer app so that they work according
+to the new standards
+
+396
+00:22:46,400 --> 00:22:51,340
+and IP version 6 have had at least as
+much success as pat on three
+
+397
+00:22:51,340 --> 00:22:55,020
+so I you're a little over a year and a
+half ago
+
+398
+00:22:55,020 --> 00:22:59,070
+fourteen years after the release a IP
+version 6
+
+399
+00:22:59,070 --> 00:23:03,520
+a quarter of a percent all the traffic
+to Google's web services were over IP
+
+400
+00:23:03,520 --> 00:23:04,260
+version 6
+
+401
+00:23:04,260 --> 00:23:08,170
+not that many %ah results guarantee no
+
+402
+00:23:08,170 --> 00:23:11,820
+okay but okay right I think that he pee
+found that
+
+403
+00:23:11,820 --> 00:23:15,120
+recently Python 3 accounts for about 1
+percent
+
+404
+00:23:15,120 --> 00:23:18,450
+are a year or so ago I covered in six
+accounted for about 1 percent of
+
+405
+00:23:18,450 --> 00:23:19,470
+Internet traffic but
+
+406
+00:23:19,470 --> 00:23:22,950
+IP version 6 the doing even better now
+were up to you
+
+407
+00:23:22,950 --> 00:23:26,910
+%ah a tenth a quarter of the Internet
+but
+
+408
+00:23:26,910 --> 00:23:30,210
+%uh the nice thing is that this uptake
+is increasing and
+
+409
+00:23:30,210 --> 00:23:33,770
+if you don't believe me I'll show you
+this graph from Google
+
+410
+00:23:33,770 --> 00:23:37,080
+are you can look this up yourselves but
+I'm not as making these up is a really
+
+411
+00:23:37,080 --> 00:23:37,860
+Google's numbers
+
+412
+00:23:37,860 --> 00:23:42,040
+so I'm not here just to tell you about
+like you were in sixth
+
+413
+00:23:42,040 --> 00:23:45,900
+because I love it so very much I'm here
+to tell you about it because
+
+414
+00:23:45,900 --> 00:23:49,880
+what it means for getting a computer
+online what we've talked about with the
+
+415
+00:23:49,880 --> 00:23:51,100
+tunneling services
+
+416
+00:23:51,100 --> 00:23:54,700
+you have to borrow a port or hostname
+from somebody from a friend on the
+
+417
+00:23:54,700 --> 00:23:55,380
+Internet
+
+418
+00:23:55,380 --> 00:24:00,090
+from and rock dot com assuming their
+online and they do this complicated
+
+419
+00:24:00,090 --> 00:24:04,430
+complicated rewriting track but the way
+the internet was supposed to work as you
+
+420
+00:24:04,430 --> 00:24:05,350
+just show up
+
+421
+00:24:05,350 --> 00:24:09,030
+on your computer and you get had an
+address and then
+
+422
+00:24:09,030 --> 00:24:12,390
+whatever services you're running are
+just available to the entire Internet
+
+423
+00:24:12,390 --> 00:24:16,460
+and since IP version 6 have so many
+under says most
+
+424
+00:24:16,460 --> 00:24:20,190
+up the as those addresses our public
+between the you can find your way
+
+425
+00:24:20,190 --> 00:24:24,440
+to getting a v6 address right now and
+what else is on the verge in six network
+
+426
+00:24:24,440 --> 00:24:28,640
+can be directly without bother with any
+tunnels and there are a few
+
+427
+00:24:28,640 --> 00:24:32,740
+services that let you do that without
+asking for permission my favorite the
+
+428
+00:24:32,740 --> 00:24:36,000
+is one called me rindo weirdo and its
+
+429
+00:24:36,000 --> 00:24:40,390
+protocol call Terada or supported on
+Windows and Linux systems I think
+
+430
+00:24:40,390 --> 00:24:41,340
+there's a Mac port
+
+431
+00:24:41,340 --> 00:24:45,140
+these let you even if you're behind some
+network address translation box
+
+432
+00:24:45,140 --> 00:24:48,780
+sorta fight your way into getting a
+virgin take address on your computer
+
+433
+00:24:48,780 --> 00:24:51,850
+and from that point forward any services
+listening
+
+434
+00:24:51,850 --> 00:24:56,130
+on that version 6 virtual interface on
+your computer are accessible globally
+
+435
+00:24:56,130 --> 00:24:59,600
+without you having to get specific
+permission or
+
+436
+00:24:59,600 --> 00:25:03,490
+proxying for any particular service so
+
+437
+00:25:03,490 --> 00:25:09,220
+I'll take that the back to you so we've
+covered a bunch of different ways
+
+438
+00:25:09,220 --> 00:25:12,480
+but you can share applications or files
+
+439
+00:25:12,480 --> 00:25:16,340
+on your laptop with people anywhere in
+the world or within your network
+
+440
+00:25:16,340 --> 00:25:22,530
+on usually in use cases was just for a
+limited time you want to get feedback on
+
+441
+00:25:22,530 --> 00:25:23,580
+something you made
+
+442
+00:25:23,580 --> 00:25:27,730
+or just one show off um so its part 10
+the stock part 2
+
+443
+00:25:27,730 --> 00:25:32,690
+the stock is about the specific
+considerations for a few actually want
+
+444
+00:25:32,690 --> 00:25:33,770
+to run a machine
+
+445
+00:25:33,770 --> 00:25:37,410
+at hosting something full time from home
+so and always
+
+446
+00:25:37,410 --> 00:25:40,720
+up caveats server
+
+447
+00:25:40,720 --> 00:25:44,340
+so like computer ownership in general
+Asus admitting
+
+448
+00:25:44,340 --> 00:25:47,510
+a home server is sometimes fun and
+exciting a
+
+449
+00:25:47,510 --> 00:25:51,280
+sometimes things break sometimes things
+crashed a
+
+450
+00:25:51,280 --> 00:25:54,590
+hopefully your server never looks like
+this
+
+451
+00:25:54,590 --> 00:25:57,870
+the but there are some reasons why
+
+452
+00:25:57,870 --> 00:26:01,650
+maintaining a home server and having a
+dedicated machine for the sort of thing
+
+453
+00:26:01,650 --> 00:26:04,830
+may be worth it for you so
+
+454
+00:26:04,830 --> 00:26:08,990
+one thing that you can do the home
+servers home automation so maybe you got
+
+455
+00:26:08,990 --> 00:26:12,640
+a Raspberry Pi last year's icon and
+you're excited about
+
+456
+00:26:12,640 --> 00:26:17,440
+turn your lights on and off or you have
+sensors and you want to track your
+
+457
+00:26:17,440 --> 00:26:20,490
+temperature and humidity in your house
+or any number of other things
+
+458
+00:26:20,490 --> 00:26:23,660
+and what bill to access that information
+not just when you're already at home and
+
+459
+00:26:23,660 --> 00:26:25,490
+you can see that lights are on
+
+460
+00:26:25,490 --> 00:26:29,270
+but when you're elsewhere and so if
+you're going to do that
+
+461
+00:26:29,270 --> 00:26:32,580
+having a machine that you can contact
+from outside
+
+462
+00:26:32,580 --> 00:26:36,680
+your home all the time is really useful
+
+463
+00:26:36,680 --> 00:26:40,740
+on you've got this django application
+and it doesn't be useful for you
+
+464
+00:26:40,740 --> 00:26:44,660
+and you want to run all the time simple
+as that an
+
+465
+00:26:44,660 --> 00:26:48,970
+orders services that we often use posted
+by other people
+
+466
+00:26:48,970 --> 00:26:52,160
+but you may want to host them yourself
+for a variety of reasons
+
+467
+00:26:52,160 --> 00:26:57,160
+increase control increase privacy in the
+current regulatory environment
+
+468
+00:26:57,160 --> 00:27:01,670
+it's a lot harder for emails gets nuked
+if they're literally in your house
+
+469
+00:27:01,670 --> 00:27:04,840
+and and similarly you can run
+
+470
+00:27:04,840 --> 00:27:10,100
+I your own web services at home %uh so
+your bookmarks your RSS
+
+471
+00:27:10,100 --> 00:27:13,660
+notes photos but music all sorts of
+things
+
+472
+00:27:13,660 --> 00:27:17,060
+and live right ive examples of services
+even poster self
+
+473
+00:27:17,060 --> 00:27:20,320
+they're open source for those sorts
+applications and
+
+474
+00:27:20,320 --> 00:27:24,420
+the added benefit with those is not just
+increase privacy in control
+
+475
+00:27:24,420 --> 00:27:27,430
+specifically you don't have to worry
+about your favorite service getting
+
+476
+00:27:27,430 --> 00:27:29,710
+Carlos Lee shut down by some large tech
+
+477
+00:27:29,710 --> 00:27:33,450
+longer than just bought the startup but
+does the thing that you love
+
+478
+00:27:33,450 --> 00:27:37,450
+on if you control yourself and host
+yourself that's never going to happen a
+
+479
+00:27:37,450 --> 00:27:38,200
+must
+
+480
+00:27:38,200 --> 00:27:41,870
+your house will get spotted
+
+481
+00:27:41,870 --> 00:27:45,330
+a so that yet so there's some some
+
+482
+00:27:45,330 --> 00:27:49,180
+site Solus benefits to having home
+servers and being able to do this
+
+483
+00:27:49,180 --> 00:27:53,490
+on and so sheesh is going to demonstrate
+one service
+
+484
+00:27:53,490 --> 00:27:56,800
+that so %ah
+
+485
+00:27:56,800 --> 00:28:00,660
+if you have that web service at high
+combat and rock dot com
+
+486
+00:28:00,660 --> 00:28:05,560
+you remember that it's only available
+from I it's available via a tunnel
+
+487
+00:28:05,560 --> 00:28:08,990
+that means that it could go down if that
+tunnel fails but i wanna talk with you
+
+488
+00:28:08,990 --> 00:28:09,730
+about
+
+489
+00:28:09,730 --> 00:28:13,860
+is hosting that in a way where your home
+network
+
+490
+00:28:13,860 --> 00:28:17,560
+make sure that stays up consistently so
+
+491
+00:28:17,560 --> 00:28:23,010
+for this demo will view website at hi
+com dot dot the end of story
+
+492
+00:28:23,010 --> 00:28:26,340
+and with the way to step it up on your
+home router is what's called
+
+493
+00:28:26,340 --> 00:28:30,830
+home port forwarding so let's say that
+this tango app is running on your laptop
+
+494
+00:28:30,830 --> 00:28:35,000
+on port 8,000 and you want to be
+accessible globally on the Internet
+
+495
+00:28:35,000 --> 00:28:38,190
+by port eighty which is the normal
+that's our report
+
+496
+00:28:38,190 --> 00:28:41,910
+to do that you would need to configure
+something that looks a bit like this
+
+497
+00:28:41,910 --> 00:28:45,300
+you need to tell your home router
+whenever packets arrive destined for
+
+498
+00:28:45,300 --> 00:28:46,730
+poor eighty
+
+499
+00:28:46,730 --> 00:28:50,670
+turn them over to my computer on port
+8000 and would need to make this rule
+
+500
+00:28:50,670 --> 00:28:51,810
+somehow permanent
+
+501
+00:28:51,810 --> 00:28:55,890
+not just transitory while a connection
+it made and a way to do this
+
+502
+00:28:55,890 --> 00:29:00,420
+is called port forwarding free router
+and I'll show you what that looks like
+
+503
+00:29:00,420 --> 00:29:03,800
+in the assure that looks like when
+packets both room
+
+504
+00:29:03,800 --> 00:29:07,340
+when they arrive they're destined to the
+router on port 80 because no one on the
+
+505
+00:29:07,340 --> 00:29:08,070
+Internet
+
+506
+00:29:08,070 --> 00:29:12,120
+outside her home knows about your
+internal address
+
+507
+00:29:12,120 --> 00:29:16,570
+the rather look that this port
+forwarding rule and rewrites the packet
+
+508
+00:29:16,570 --> 00:29:19,990
+and send it off to you and then your
+computer will respond
+
+509
+00:29:19,990 --> 00:29:23,300
+nationally through the router so
+
+510
+00:29:23,300 --> 00:29:27,180
+to configure something like that you
+need a at you need to log into your
+
+511
+00:29:27,180 --> 00:29:31,670
+home wifi router and you'll find
+interface that looks kinda like this
+
+512
+00:29:31,670 --> 00:29:34,350
+you'll see there's a bunch of options
+here what's important is that the
+
+513
+00:29:34,350 --> 00:29:35,480
+external port is that
+
+514
+00:29:35,480 --> 00:29:39,920
+eighty the internal ports at eight
+thousand and internal IP address
+
+515
+00:29:39,920 --> 00:29:43,870
+is set to the address your laptop inside
+the network there's also the drop down
+
+516
+00:29:43,870 --> 00:29:46,000
+about TCP and maybe other things
+
+517
+00:29:46,000 --> 00:29:50,100
+for the purposes of this talk TCP is the
+only right answer that
+
+518
+00:29:50,100 --> 00:29:53,200
+but for different services you much is
+something else you can read about this
+
+519
+00:29:53,200 --> 00:29:55,000
+later
+
+520
+00:29:55,000 --> 00:29:58,820
+in order to people to reach your service
+though they're going to need to know
+
+521
+00:29:58,820 --> 00:30:02,700
+what the address above your Radaris so
+you need to know
+
+522
+00:30:02,700 --> 00:30:08,520
+what is my IP now if you just asked this
+tool I F configure on your computer
+
+523
+00:30:08,520 --> 00:30:12,190
+ill show you your computer's internal IP
+on your network if you actually Google
+
+524
+00:30:12,190 --> 00:30:13,630
+for this question
+
+525
+00:30:13,630 --> 00:30:16,950
+the Google servers will be happy to tell
+you do that people will say
+
+526
+00:30:16,950 --> 00:30:20,350
+in the surface parties your public IP
+addresses
+
+527
+00:30:20,350 --> 00:30:24,090
+whatever it is and if you want to get
+that automatically
+
+528
+00:30:24,090 --> 00:30:29,110
+through some kind give API there are
+services that let you do that to you
+
+529
+00:30:29,110 --> 00:30:33,140
+so this is great for letting people surf
+to the routers IP address
+
+530
+00:30:33,140 --> 00:30:37,760
+and get routed by a router to your
+Django server running inside a network
+
+531
+00:30:37,760 --> 00:30:40,770
+but if you want to give them some nice
+to main like this
+
+532
+00:30:40,770 --> 00:30:43,950
+hi conduct and after Oregon address
+
+533
+00:30:43,950 --> 00:30:47,570
+then you need to register that somehow
+so
+
+534
+00:30:47,570 --> 00:30:51,000
+there are these so-called dynamic DNS
+services
+
+535
+00:30:51,000 --> 00:30:54,650
+for example ducked in ass this is the
+logo by the way I'll be hatin support
+
+536
+00:30:54,650 --> 00:30:57,060
+questions for them in the answer them
+really quickly
+
+537
+00:30:57,060 --> 00:31:01,530
+on their Google+ community and added new
+features for us there happen to be free
+
+538
+00:31:01,530 --> 00:31:04,580
+but the cool thing about dynamic DNS
+services in general
+
+539
+00:31:04,580 --> 00:31:09,450
+is that if your home routers IP address
+changes for whatever reason let's say
+
+540
+00:31:09,450 --> 00:31:12,840
+you turn it off and on and as a result
+you gonna sign in your address
+
+541
+00:31:12,840 --> 00:31:16,440
+these things make it really easy to
+update your DNS name
+
+542
+00:31:16,440 --> 00:31:21,110
+with the new address
+
+543
+00:31:21,110 --> 00:31:25,020
+out so up that's all great for
+
+544
+00:31:25,020 --> 00:31:28,510
+letting people route to your server but
+if they happen to do a lot with it if
+
+545
+00:31:28,510 --> 00:31:29,000
+they
+
+546
+00:31:29,000 --> 00:31:32,540
+send you are requesting you happen to
+respond %ah
+
+547
+00:31:32,540 --> 00:31:35,100
+there might be some limitations and
+they're probably some limitations that
+
+548
+00:31:35,100 --> 00:31:37,090
+is being inside the hike on network here
+
+549
+00:31:37,090 --> 00:31:40,210
+so all I can talk about that and yeah
+
+550
+00:31:40,210 --> 00:31:43,679
+so you can imagine with are Django polls
+at
+
+551
+00:31:43,679 --> 00:31:47,670
+if the images on the app works
+
+552
+00:31:47,670 --> 00:31:51,080
+we don't resize them properly their full
+size huge and
+
+553
+00:31:51,080 --> 00:31:54,250
+lots of people wanted to use our POS
+application at once
+
+554
+00:31:54,250 --> 00:31:58,610
+then that could be kind of a drag and so
+with the limitations associate with
+
+555
+00:31:58,610 --> 00:32:01,310
+running home server the first one of
+course is banned with
+
+556
+00:32:01,310 --> 00:32:04,770
+on any traffic either requests to your
+
+557
+00:32:04,770 --> 00:32:08,140
+server or people applauding files to
+your server if it's now position that
+
+558
+00:32:08,140 --> 00:32:08,890
+does that
+
+559
+00:32:08,890 --> 00:32:12,070
+will use up your home and with which
+
+560
+00:32:12,070 --> 00:32:16,290
+if two extremes I can interfere with
+your regular
+
+561
+00:32:16,290 --> 00:32:19,480
+with anyone else on your network surfing
+or using the Internet
+
+562
+00:32:19,480 --> 00:32:22,560
+normally an important thing to be
+
+563
+00:32:22,560 --> 00:32:26,850
+aware within that is others term called
+buffer bloat
+
+564
+00:32:26,850 --> 00:32:30,230
+which is something especially bad with
+Ben with that happened
+
+565
+00:32:30,230 --> 00:32:34,150
+if you're dealing with large files I
+where the large file world
+
+566
+00:32:34,150 --> 00:32:37,990
+get privileged in its loading but like
+regular tiny requests will just like
+
+567
+00:32:37,990 --> 00:32:41,550
+get backed up behind not be terrible
+obsessed with googling
+
+568
+00:32:41,550 --> 00:32:46,360
+I'm sensible router a configuration can
+
+569
+00:32:46,360 --> 00:32:50,560
+make up for both these in partially
+mitigate them another thing to be aware
+
+570
+00:32:50,560 --> 00:32:55,040
+is called is max connections so when
+you're running a service
+
+571
+00:32:55,040 --> 00:32:58,419
+under computer on many services
+
+572
+00:32:58,419 --> 00:33:02,650
+can really take basically all the
+connections you can throw at them
+
+573
+00:33:02,650 --> 00:33:05,760
+if you're hosting some static files with
+Apache
+
+574
+00:33:05,760 --> 00:33:09,169
+it'll be fine the traffic is it where
+you have to worry about well you have to
+
+575
+00:33:09,169 --> 00:33:11,730
+worry about more so is your home router
+
+576
+00:33:11,730 --> 00:33:16,120
+most home routers will not put up very
+well with having hundreds of connections
+
+577
+00:33:16,120 --> 00:33:17,520
+per second coming in
+
+578
+00:33:17,520 --> 00:33:20,590
+pouring and sometimes even left them at
+depending on the router
+
+579
+00:33:20,590 --> 00:33:24,010
+um what will happen is the net table
+
+580
+00:33:24,010 --> 00:33:27,290
+which we saw earlier in the diagrams
+will fill up
+
+581
+00:33:27,290 --> 00:33:31,100
+and out when that happens then either
+you can't just can't make any more
+
+582
+00:33:31,100 --> 00:33:31,820
+connections
+
+583
+00:33:31,820 --> 00:33:36,190
+or existing connections get dropped on
+the floor neither which is very good
+
+584
+00:33:36,190 --> 00:33:39,390
+if you've ever had to restart your
+router after someone on your network use
+
+585
+00:33:39,390 --> 00:33:40,620
+bit torrent
+
+586
+00:33:40,620 --> 00:33:43,810
+that the very similar phenomenon were
+too many connections are just
+
+587
+00:33:43,810 --> 00:33:47,790
+making a router break am
+
+588
+00:33:47,790 --> 00:33:50,980
+your internet service provider may have
+rules about where large do on your
+
+589
+00:33:50,980 --> 00:33:51,740
+network
+
+590
+00:33:51,740 --> 00:33:56,290
+on for example until relatively recently
+Google fiber's Terms of Service will not
+
+591
+00:33:56,290 --> 00:33:58,030
+allow you to run home server
+
+592
+00:33:58,030 --> 00:34:01,810
+and so that's something to be aware
+similarly some ISP's
+
+593
+00:34:01,810 --> 00:34:05,310
+filter certain ports before they even
+get your house
+
+594
+00:34:05,310 --> 00:34:08,730
+on port 25 the default port for email
+
+595
+00:34:08,730 --> 00:34:12,300
+is blocks both incoming and outgoing by
+many eyes peas
+
+596
+00:34:12,300 --> 00:34:14,970
+so if you want to host your own email
+you're going to have to do some sort of
+
+597
+00:34:14,970 --> 00:34:18,300
+work around to get around that
+
+598
+00:34:18,300 --> 00:34:22,750
+and so that's just limitations things
+that can go all wrong
+
+599
+00:34:22,750 --> 00:34:25,990
+or slow down your home internet are just
+kind of a pain
+
+600
+00:34:25,990 --> 00:34:29,120
+but there's also security considerations
+were someone
+
+601
+00:34:29,120 --> 00:34:32,609
+the faces you about ligation or breaks
+into the database behind a web
+
+602
+00:34:32,609 --> 00:34:33,520
+application
+
+603
+00:34:33,520 --> 00:34:37,870
+and can thus do various things and so
+I'm going to lead
+
+604
+00:34:37,870 --> 00:34:42,910
+event bright security engineer sheesh
+attack about those
+
+605
+00:34:42,910 --> 00:34:46,780
+thanks although it almost seems like we
+should have Luke talk about them
+
+606
+00:34:46,780 --> 00:34:51,940
+unfortunately I have the mic tho a there
+are some risks that applied to any and
+
+607
+00:34:51,940 --> 00:34:55,230
+service weather is running on your home
+computer
+
+608
+00:34:55,230 --> 00:34:59,690
+weather is running on the Internet in
+the cloud rack in a data center
+
+609
+00:34:59,690 --> 00:35:04,060
+however are one of the most important
+things you might care about your web app
+
+610
+00:35:04,060 --> 00:35:07,680
+is that it actually stay online it what
+you don't want is for people to show up
+
+611
+00:35:07,680 --> 00:35:08,650
+to your web at
+
+612
+00:35:08,650 --> 00:35:13,220
+and a center seeing your beautiful
+images they see a broken image icon
+
+613
+00:35:13,220 --> 00:35:16,810
+this is bite happen to you if your
+website gets too popular
+
+614
+00:35:16,810 --> 00:35:20,960
+up for all sorts of reasons on
+
+615
+00:35:20,960 --> 00:35:24,130
+another problem that might occur is that
+users might be able to break into each
+
+616
+00:35:24,130 --> 00:35:25,240
+other's information
+
+617
+00:35:25,240 --> 00:35:28,660
+so this could happen if users that bad
+passwords
+
+618
+00:35:28,660 --> 00:35:32,470
+it could also happen if there's some
+like was probably what we did by the way
+
+619
+00:35:32,470 --> 00:35:35,690
+%ah thanks a lot shimon inmate who set
+up that demo
+
+620
+00:35:35,690 --> 00:35:38,859
+have a and it also might happen
+
+621
+00:35:38,859 --> 00:35:42,100
+if you fight if somebody find the
+security bug in the code that you're
+
+622
+00:35:42,100 --> 00:35:44,150
+running
+
+623
+00:35:44,150 --> 00:35:47,900
+the something else have you ever which
+is that most frameworks have settings
+
+624
+00:35:47,900 --> 00:35:49,240
+that you can set
+
+625
+00:35:49,240 --> 00:35:52,780
+to you make the app be running in a way
+in a way that safe
+
+626
+00:35:52,780 --> 00:35:56,290
+for other people to access Django had a
+debug equals
+
+627
+00:35:56,290 --> 00:35:59,340
+line that you can set to true or false
+if you set it to true
+
+628
+00:35:59,340 --> 00:36:03,100
+then if any then if you tell that 20
+Janko
+
+629
+00:36:03,100 --> 00:36:06,859
+or contributors will be like know how
+could you do that because the
+
+630
+00:36:06,859 --> 00:36:10,390
+documentation has very clearly not to it
+says to set it to false if you plead on
+
+631
+00:36:10,390 --> 00:36:10,870
+trust
+
+632
+00:36:10,870 --> 00:36:14,750
+are accessing the site the thing is that
+if your running stuff at home there's
+
+633
+00:36:14,750 --> 00:36:16,010
+more stuff at risk
+
+634
+00:36:16,010 --> 00:36:19,450
+if somebody breaks into that service at
+your house
+
+635
+00:36:19,450 --> 00:36:22,670
+hypothetically they can read all sorts
+of havoc they could change your home
+
+636
+00:36:22,670 --> 00:36:23,700
+wifi router
+
+637
+00:36:23,700 --> 00:36:26,900
+so that when you go to wipe it is like
+e-bay what you see
+
+638
+00:36:26,900 --> 00:36:30,710
+is all the images come back upside down
+that it will get for this
+
+639
+00:36:30,710 --> 00:36:34,000
+I'll give you the week after that you
+want Kathleen Q&A
+
+640
+00:36:34,000 --> 00:36:37,580
+but are given that there are
+
+641
+00:36:37,580 --> 00:36:40,990
+us a few considerations apply
+specifically to running stuff at home
+
+642
+00:36:40,990 --> 00:36:45,090
+and they apply to the security of your
+router and your computer in particular
+
+643
+00:36:45,090 --> 00:36:48,710
+so if you rather have the week admin
+password
+
+644
+00:36:48,710 --> 00:36:51,750
+and somebody breaks into the web app or
+other services you're running
+
+645
+00:36:51,750 --> 00:36:55,280
+they can then log in to your other
+change your password
+
+646
+00:36:55,280 --> 00:36:59,340
+or reconfigure it they can also attack
+other computers
+
+647
+00:36:59,340 --> 00:37:03,290
+and with a serious problem recently
+where a bunch a homer
+
+648
+00:37:03,290 --> 00:37:06,530
+network attached storage like network
+hardest boxes
+
+649
+00:37:06,530 --> 00:37:09,960
+have been broken into like tens or
+hundreds of thousands of them
+
+650
+00:37:09,960 --> 00:37:13,420
+and we're all mining declines so
+
+651
+00:37:13,420 --> 00:37:16,480
+a their sisters risks about this
+actually
+
+652
+00:37:16,480 --> 00:37:19,380
+they can also break into your computer
+particular especially if your running
+
+653
+00:37:19,380 --> 00:37:20,010
+stuff
+
+654
+00:37:20,010 --> 00:37:23,980
+the running the web app on your computer
+they could then install a keylogger and
+
+655
+00:37:23,980 --> 00:37:25,660
+record all your keystrokes
+
+656
+00:37:25,660 --> 00:37:28,530
+decade install mouth recorders and see
+all the things you're clicking around
+
+657
+00:37:28,530 --> 00:37:30,030
+and so on
+
+658
+00:37:30,030 --> 00:37:33,080
+someone talk for a bit about how to
+mitigate those in a few minutes we have
+
+659
+00:37:33,080 --> 00:37:34,020
+left
+
+660
+00:37:34,020 --> 00:37:37,880
+wanna most important things is to stay
+up to date so
+
+661
+00:37:37,880 --> 00:37:41,630
+are ten years ago I was running a wiki
+call TWiki
+
+662
+00:37:41,630 --> 00:37:45,130
+that was my personal website on Home
+Server and
+
+663
+00:37:45,130 --> 00:37:48,480
+then a few days job well at one point
+
+664
+00:37:48,480 --> 00:37:52,210
+I discovered my server was being used to
+send out spam
+
+665
+00:37:52,210 --> 00:37:55,850
+and this is because basically I haven't
+upgraded my wiki there is a publicly
+
+666
+00:37:55,850 --> 00:37:58,790
+announce security vulnerability where
+people could run whatever they want
+
+667
+00:37:58,790 --> 00:38:02,260
+by misusing the version control feature
+
+668
+00:38:02,260 --> 00:38:05,260
+not sitting and not staying up-to-date I
+had to go clean up after that you're in
+
+669
+00:38:05,260 --> 00:38:06,720
+total mass
+
+670
+00:38:06,720 --> 00:38:10,770
+upgrade the second thing that the most
+important to say
+
+671
+00:38:10,770 --> 00:38:15,040
+if take backups and backups our way to
+recover from whatever crazy thing
+
+672
+00:38:15,040 --> 00:38:16,900
+happens to your server so
+
+673
+00:38:16,900 --> 00:38:20,830
+if you have a live replication setup
+where any changes may hear automatically
+
+674
+00:38:20,830 --> 00:38:22,900
+synchronize our second hard disk
+
+675
+00:38:22,900 --> 00:38:26,130
+then when an attacker break senator lose
+all your data that is Emilie
+
+676
+00:38:26,130 --> 00:38:26,980
+synchronized
+
+677
+00:38:26,980 --> 00:38:31,440
+your second hardest that's not a backup
+you need a way to restore
+
+678
+00:38:31,440 --> 00:38:34,850
+in his whatever happens not
+
+679
+00:38:34,850 --> 00:38:38,920
+yeah not back tho there are some
+particular ways to mitigate
+
+680
+00:38:38,920 --> 00:38:42,370
+other problems and the key is usually
+separating concerned so
+
+681
+00:38:42,370 --> 00:38:46,089
+if you run your home server on your own
+computer
+
+682
+00:38:46,089 --> 00:38:49,120
+then at least run inside a different
+user account you can use the user's
+
+683
+00:38:49,120 --> 00:38:50,400
+group features so that
+
+684
+00:38:50,400 --> 00:38:53,960
+if they do break into that app they
+can't go then look at your browsing
+
+685
+00:38:53,960 --> 00:38:54,810
+history
+
+686
+00:38:54,810 --> 00:38:58,890
+or modify your browser configuration to
+give the attacker your Gmail password
+
+687
+00:38:58,890 --> 00:39:02,270
+for example which they could have a
+running as your user account and they
+
+688
+00:39:02,270 --> 00:39:04,030
+had total control
+
+689
+00:39:04,030 --> 00:39:07,140
+another thing you can do is separated
+two runs on a different machine for
+
+690
+00:39:07,140 --> 00:39:08,069
+example
+
+691
+00:39:08,069 --> 00:39:11,690
+we have a Raspberry Pi my apartment
+thanks to my friend keith mcallister
+
+692
+00:39:11,690 --> 00:39:16,180
+which configure which I is responsible
+for letting up a great ability is in the
+
+693
+00:39:16,180 --> 00:39:17,290
+living room
+
+694
+00:39:17,290 --> 00:39:22,050
+and that thing if somebody breaks into
+it you can accessorize the after all
+
+695
+00:39:22,050 --> 00:39:25,240
+that thing can't attack %ah
+
+696
+00:39:25,240 --> 00:39:28,310
+my personal data that's not stored on
+the Raspberry Pi
+
+697
+00:39:28,310 --> 00:39:32,900
+similarly you can isolate networks we've
+talked a bit about public and private IP
+
+698
+00:39:32,900 --> 00:39:33,819
+addresses
+
+699
+00:39:33,819 --> 00:39:37,260
+there's another term you can look into
+you call DMZ which is the way to have
+
+700
+00:39:37,260 --> 00:39:41,850
+a public service on your home network
+where it can't reach the internal hosts
+
+701
+00:39:41,850 --> 00:39:45,580
+so then it wouldn't be able to reach
+into your router even if the attacker
+
+702
+00:39:45,580 --> 00:39:48,589
+had broken and there's a lot more you
+can learn about
+
+703
+00:39:48,589 --> 00:39:52,050
+web security in general the open web app
+security project
+
+704
+00:39:52,050 --> 00:39:55,859
+has published list arrests call the top
+10 list I recommend reading that
+
+705
+00:39:55,859 --> 00:40:00,630
+we can also talk talk more after that
+after the stock
+
+706
+00:40:00,630 --> 00:40:04,130
+but having said all this order negative
+stuff
+
+707
+00:40:04,130 --> 00:40:08,140
+I wanna say I wanna give you the picture
+from the Chaos Computer congress
+
+708
+00:40:08,140 --> 00:40:11,960
+most the time your home server will be
+fine doesn't want ads or at all about
+
+709
+00:40:11,960 --> 00:40:13,040
+people breaking in
+
+710
+00:40:13,040 --> 00:40:17,380
+I can avoid that if I upgraded but I
+want to tell you one last story
+
+711
+00:40:17,380 --> 00:40:20,730
+about how things can go wrong and it is
+where
+
+712
+00:40:20,730 --> 00:40:23,859
+a sophomore year in college received a
+phone call from my mom
+
+713
+00:40:23,859 --> 00:40:27,500
+and he said pay dinner at home is
+running really slowly
+
+714
+00:40:27,500 --> 00:40:31,480
+I said well I'm here in Baltimore you
+out there in Rochester New York
+
+715
+00:40:31,480 --> 00:40:35,990
+how can I possibly help maybe the
+neighbors are using the wifi lot maybe
+
+716
+00:40:35,990 --> 00:40:38,560
+the new network in town you need to
+change
+
+717
+00:40:38,560 --> 00:40:41,960
+that wifi channel I don't know so I hung
+up
+
+718
+00:40:41,960 --> 00:40:45,380
+and I want to be my email and I couldn't
+
+719
+00:40:45,380 --> 00:40:49,620
+I realize but you know is hosted in my
+parents basement on Home Server
+
+720
+00:40:49,620 --> 00:40:52,800
+they might be onto something here and
+
+721
+00:40:52,800 --> 00:40:56,400
+when nothing else to do a district
+website on myself Google
+
+722
+00:40:56,400 --> 00:41:00,020
+a new website do love the day with metal
+products that so
+
+723
+00:41:00,020 --> 00:41:03,710
+i click to their happened click on the
+Google Image Search tab
+
+724
+00:41:03,710 --> 00:41:08,220
+analysts are really familiar picture in
+the top bro the images search
+
+725
+00:41:08,220 --> 00:41:12,160
+and this picture I realized for the
+photo about a picture of the Mandelbrot
+
+726
+00:41:12,160 --> 00:41:12,790
+set
+
+727
+00:41:12,790 --> 00:41:15,790
+the my friend Jonathan had put on my
+home server
+
+728
+00:41:15,790 --> 00:41:19,830
+on his personal hosting account there
+for a high school product he made into
+
+729
+00:41:19,830 --> 00:41:20,900
+this class
+
+730
+00:41:20,900 --> 00:41:24,920
+so I click on that and lo and behold
+really slow to load
+
+731
+00:41:24,920 --> 00:41:28,400
+so that I was going on there Ubuntu
+random people really excited by Google
+
+732
+00:41:28,400 --> 00:41:30,520
+by Mandelbrot set and tried to load the
+serb
+
+733
+00:41:30,520 --> 00:41:34,240
+server page in my parents basement
+eventually allowed into that server
+
+734
+00:41:34,240 --> 00:41:38,160
+and I set up a redirect to that that
+image got served not my parents basement
+
+735
+00:41:38,160 --> 00:41:42,870
+and everything handled the helpline this
+is by and large one of the worst or as I
+
+736
+00:41:42,870 --> 00:41:43,770
+can tell you
+
+737
+00:41:43,770 --> 00:41:46,850
+so it's really there's not that much to
+panic about especially if you do the
+
+738
+00:41:46,850 --> 00:41:49,920
+kind of separation we talked about
+
+739
+00:41:49,920 --> 00:41:53,810
+so that's all we have for you today I
+hope that we left you with these
+
+740
+00:41:53,810 --> 00:41:56,900
+takeaways that you understand basic
+networking now
+
+741
+00:41:56,900 --> 00:42:00,060
+that you know that if you're online you
+can use tunnels are other mechanisms
+
+742
+00:42:00,060 --> 00:42:04,130
+to run a server and you understand the
+basics on how to do so safely
+
+743
+00:42:04,130 --> 00:42:07,970
+so with that said we're happy to take
+questions I will say that we have the
+
+744
+00:42:07,970 --> 00:42:09,780
+slides and also have the video
+
+745
+00:42:09,780 --> 00:42:16,780
+at this domain here I'm sorry donna
+thanks
+
+746
+00:42:21,890 --> 00:42:22,190
+0
+
+747
+00:42:22,190 --> 00:42:26,089
+par top like 0
+
+748
+00:42:26,089 --> 00:42:31,060
+her there
+
+749
+00:42:31,060 --> 00:42:36,630
+I can governors hi karen is sheesh thank
+you so much for your talk
+
+750
+00:42:36,630 --> 00:42:41,210
+I feel a lot more jazzed about running
+stuff from my home
+
+751
+00:42:41,210 --> 00:42:45,390
+on I want to ask I'll whether you think
+that
+
+752
+00:42:45,390 --> 00:42:48,670
+stand-alone appliances like freedom box
+
+753
+00:42:48,670 --> 00:42:52,650
+are things that people would wanna look
+into right now are they do you happen to
+
+754
+00:42:52,650 --> 00:42:53,490
+know whether they're ready
+
+755
+00:42:53,490 --> 00:42:57,080
+or do you think that running something
+from something like a Raspberry Pi
+
+756
+00:42:57,080 --> 00:43:00,910
+or or your own via tower laptop would be
+
+757
+00:43:00,910 --> 00:43:04,770
+the best way to go for stuff like
+hosting hosting an email hosting and
+
+758
+00:43:04,770 --> 00:43:05,800
+photo stuff like that
+
+759
+00:43:05,800 --> 00:43:11,240
+so i cant yet so the question is about
+
+760
+00:43:11,240 --> 00:43:15,080
+%uh stand-alone boxes that's come
+pre-configured with
+
+761
+00:43:15,080 --> 00:43:18,960
+home server software for example for the
+box um
+
+762
+00:43:18,960 --> 00:43:22,190
+so I have no particular experience
+running a bit about software but in
+
+763
+00:43:22,190 --> 00:43:22,680
+general
+
+764
+00:43:22,680 --> 00:43:25,750
+is kinda Raspberry Pi like machine that
+runs
+
+765
+00:43:25,750 --> 00:43:29,600
+a Debian based operating system I think
+that
+
+766
+00:43:29,600 --> 00:43:34,280
+at least right now it's good to
+understand what's going on
+
+767
+00:43:34,280 --> 00:43:38,870
+and so I think that installing Debian on
+some computer
+
+768
+00:43:38,870 --> 00:43:42,800
+and learning about log files is a pretty
+Duyvil thing to do
+
+769
+00:43:42,800 --> 00:43:46,160
+and at that point mostly you are getting
+that much by running
+
+770
+00:43:46,160 --> 00:43:49,980
+the zone 1 cats but then again I've been
+running Debian since 2001
+
+771
+00:43:49,980 --> 00:43:53,280
+so you are my different opinions try
+whatever you want I mean
+
+772
+00:43:53,280 --> 00:43:56,820
+yes so I'm excited about the PM box
+project a lot and similar products like
+
+773
+00:43:56,820 --> 00:43:57,150
+it
+
+774
+00:43:57,150 --> 00:44:00,340
+a I think everyone should run stuff but
+
+775
+00:44:00,340 --> 00:44:03,760
+a I don't have that much experience with
+what
+
+776
+00:44:03,760 --> 00:44:07,230
+the experience in running one is like at
+this point a
+
+777
+00:44:07,230 --> 00:44:10,470
+and I do think it's important to know
+how the freedom box like any other
+
+778
+00:44:10,470 --> 00:44:11,860
+machine you would read homeworks
+
+779
+00:44:11,860 --> 00:44:16,080
+so that's on my dick one other quick
+addition is that
+
+780
+00:44:16,080 --> 00:44:19,200
+whether or not you're using some
+standard appliance
+
+781
+00:44:19,200 --> 00:44:22,220
+upgrading matters an extremely large
+amount
+
+782
+00:44:22,220 --> 00:44:25,960
+otherwise your commercially configured
+
+783
+00:44:25,960 --> 00:44:29,710
+home network appliance storage network
+attached storage box will be mine back
+
+784
+00:44:29,710 --> 00:44:30,230
+lines
+
+785
+00:44:30,230 --> 00:44:35,230
+I was actually looking good
+
+786
+00:44:35,230 --> 00:44:38,390
+%um runnings up
+
+787
+00:44:38,390 --> 00:44:41,820
+and I was very route couple weeks ago
+next system
+
+788
+00:44:41,820 --> 00:44:46,150
+Ross P&P which seems said
+
+789
+00:44:46,150 --> 00:44:49,470
+things didn't mention that for example
+
+790
+00:44:49,470 --> 00:44:53,170
+basically all routers p and equipped
+
+791
+00:44:53,170 --> 00:44:56,330
+you can just I think it is packing the
+next
+
+792
+00:44:56,330 --> 00:45:02,340
+used talk to you water and to get the
+external appeared
+
+793
+00:45:02,340 --> 00:45:06,570
+anything just from the applied and then
+you can actually say
+
+794
+00:45:06,570 --> 00:45:09,640
+would
+
+795
+00:45:09,640 --> 00:45:16,640
+this total yes and it's completely
+automated
+
+796
+00:45:17,190 --> 00:45:21,330
+soul would you recommend using that said
+
+797
+00:45:21,330 --> 00:45:25,310
+you know about you think it's a good
+idea to go down yeah
+
+798
+00:45:25,310 --> 00:45:29,260
+said to repeat that there's a protocol
+call UPnP
+
+799
+00:45:29,260 --> 00:45:33,840
+are universal plug and play much let's
+applications inside your home network
+
+800
+00:45:33,840 --> 00:45:37,420
+configure the router without you logging
+into the router's admin interface
+
+801
+00:45:37,420 --> 00:45:40,790
+and the question was is that great and
+the answer is that is great
+
+802
+00:45:40,790 --> 00:45:44,150
+yeah we didn't mention it here be
+
+803
+00:45:44,150 --> 00:45:48,010
+cuz I've never used it basically I'm so
+you sick looking around configuring
+
+804
+00:45:48,010 --> 00:45:52,920
+also you can like write a python script
+to get stuff from it but it's not
+
+805
+00:45:52,920 --> 00:45:53,930
+integrated into
+
+806
+00:45:53,930 --> 00:45:58,230
+Django or anything else so you need to
+be aware that stuff anyway
+
+807
+00:45:58,230 --> 00:46:04,640
+be are you can't you can be a shortcut
+is
+
+808
+00:46:04,640 --> 00:46:08,960
+thanks for putting stop up to talk a
+little bit more about the
+
+809
+00:46:08,960 --> 00:46:12,730
+units this morning freed or
+
+810
+00:46:12,730 --> 00:46:17,570
+and how does dan yes compare read
+
+811
+00:46:17,570 --> 00:46:22,930
+so I'm
+
+812
+00:46:22,930 --> 00:46:26,820
+Saint sure whatever a.m. yes so I guess
+
+813
+00:46:26,820 --> 00:46:31,120
+the distinction between as a shelling
+and dynamic dns which may reading
+
+814
+00:46:31,120 --> 00:46:34,380
+super get in the talk is the idea
+
+815
+00:46:34,380 --> 00:46:37,890
+a like I do you just wanna send people
+to a port
+
+816
+00:46:37,890 --> 00:46:41,810
+random port somewhere in time domain is
+that good enough or a subdomain if it's
+
+817
+00:46:41,810 --> 00:46:42,770
+a service like
+
+818
+00:46:42,770 --> 00:46:46,000
+I am service like and rock
+
+819
+00:46:46,000 --> 00:46:49,530
+or would you rather have your own domain
+name that you want
+
+820
+00:46:49,530 --> 00:46:53,330
+to get sent to forward to your home
+server
+
+821
+00:46:53,330 --> 00:46:56,650
+and if you're setting that up you're
+going to need a
+
+822
+00:46:56,650 --> 00:47:00,220
+you know be make sure that your domain
+name is able to
+
+823
+00:47:00,220 --> 00:47:04,210
+stay in contact with your home IP and
+since your router's IP address often
+
+824
+00:47:04,210 --> 00:47:04,970
+changes
+
+825
+00:47:04,970 --> 00:47:08,640
+um SonoSite only cheated once years and
+have the jitters are a few weeks
+
+826
+00:47:08,640 --> 00:47:12,070
+depends on your eyes P dynamic dns
+
+827
+00:47:12,070 --> 00:47:16,360
+is necessary just to make sure that your
+domain name is still pointing at the
+
+828
+00:47:16,360 --> 00:47:17,010
+right thing
+
+829
+00:47:17,010 --> 00:47:21,250
+and so that sorted in general what a
+dynamic DNS server does
+
+830
+00:47:21,250 --> 00:47:25,230
+a service does and so ducked you know
+it's also gives you the domain name
+
+831
+00:47:25,230 --> 00:47:28,890
+you could use your own domain name with
+the service as well I believe you
+
+832
+00:47:28,890 --> 00:47:32,780
+fire name record yeah okay our
+
+833
+00:47:32,780 --> 00:47:37,540
+yet so that's where the distinction
+where's the tunnel is
+
+834
+00:47:37,540 --> 00:47:40,430
+while you're gonna need a port number
+Ford and it's gonna be on someone else's
+
+835
+00:47:40,430 --> 00:47:41,470
+domain
+
+836
+00:47:41,470 --> 00:47:44,500
+while us and just add one other thought
+
+837
+00:47:44,500 --> 00:47:47,860
+maybe two other quick parts duck DNS to
+summarize
+
+838
+00:47:47,860 --> 00:47:51,380
+is to is just a free dynamic DNS service
+
+839
+00:47:51,380 --> 00:47:55,450
+and also I find that my SSH tunnels
+
+840
+00:47:55,450 --> 00:47:59,150
+sometimes go down when I'm not looking
+and that's
+
+841
+00:47:59,150 --> 00:48:03,680
+why our router port forwarding is what I
+would recommend instead of that if you
+
+842
+00:48:03,680 --> 00:48:10,680
+want to make sure it's set up
+
+843
+00:48:12,140 --> 00:48:14,030
+thank you so much for sometime
+

@@ -1,0 +1,1931 @@
+1
+00:00:00,070 --> 00:00:07,070
+please note:
+
+2
+00:00:17,859 --> 00:00:18,500
+doc is
+
+3
+00:00:18,500 --> 00:00:19,950
+at to infinity and
+
+4
+00:00:19,950 --> 00:00:24,760
+it did in by 10 to infinity and beyond I
+was the key back doing does this
+
+5
+00:00:24,760 --> 00:00:30,240
+I still love it and just want to say one
+few lines
+
+6
+00:00:30,240 --> 00:00:33,530
+about myself my name's but alas
+
+7
+00:00:33,530 --> 00:00:37,170
+I'm from India I'm out Federer
+contributor
+
+8
+00:00:37,170 --> 00:00:40,300
+a fellow member in BSF and
+
+9
+00:00:40,300 --> 00:00:44,400
+I work as a community Gardiner in a
+company called eucalyptus systems
+
+10
+00:00:44,400 --> 00:00:47,530
+I'm so
+
+11
+00:00:47,530 --> 00:00:51,620
+I should just thank them once because
+the response on my travel and staying
+
+12
+00:00:51,620 --> 00:00:52,320
+and stuff
+
+13
+00:00:52,320 --> 00:00:56,020
+and I shirt and bike on also portrayed
+sponsoring my
+
+14
+00:00:56,020 --> 00:01:00,000
+bike on picket to finance the late and
+
+15
+00:01:00,000 --> 00:01:05,000
+maybe against start the real talk no so
+
+16
+00:01:05,000 --> 00:01:08,259
+the stock is actually about hearing
+
+17
+00:01:08,259 --> 00:01:12,100
+all our experiences and
+
+18
+00:01:12,100 --> 00:01:16,340
+teams which worked and what didn't work
+far-out online summer training
+
+19
+00:01:16,340 --> 00:01:19,580
+we started this training
+
+20
+00:01:19,580 --> 00:01:22,800
+back in 2000 8 its
+
+21
+00:01:22,800 --> 00:01:26,520
+on lane its are it runs on IRC
+
+22
+00:01:26,520 --> 00:01:30,220
+its runs for anyone who has the
+
+23
+00:01:30,220 --> 00:01:33,770
+comparatively new Linux distribution on
+
+24
+00:01:33,770 --> 00:01:38,170
+open mind to learn stuff and
+
+25
+00:01:38,170 --> 00:01:42,020
+basically whoever wants to become a
+contributor so
+
+26
+00:01:42,020 --> 00:01:45,479
+if you see that name BDP Lugt
+
+27
+00:01:45,479 --> 00:01:48,600
+thats you can guess elude use Linux
+users group
+
+28
+00:01:48,600 --> 00:01:51,869
+and DB is the place where I'm from dude
+up will
+
+29
+00:01:51,869 --> 00:01:57,660
+the nearest down from my village and
+wind its mint I started that lot back in
+
+30
+00:01:57,660 --> 00:01:58,590
+2004
+
+31
+00:01:58,590 --> 00:02:01,660
+and during that time there was almost no
+one
+
+32
+00:02:01,660 --> 00:02:05,619
+to pay less what exactly to do with this
+thing called NX
+
+33
+00:02:05,619 --> 00:02:09,310
+other than clicking randomly and so
+
+34
+00:02:09,310 --> 00:02:13,280
+the goal of our whole lug was to learn
+yourself
+
+35
+00:02:13,280 --> 00:02:16,610
+and peach others in Bengali Lake
+
+36
+00:02:16,610 --> 00:02:20,520
+chic or even Chicago me that the
+transmission so
+
+37
+00:02:20,520 --> 00:02:24,349
+that's how we started doing or lug and
+going ahead
+
+38
+00:02:24,349 --> 00:02:28,970
+but denby phone that there are many
+enduring colleges
+
+39
+00:02:28,970 --> 00:02:32,989
+in that local 80 where we have so many
+during college students
+
+40
+00:02:32,989 --> 00:02:36,689
+we're going to random companies to do
+their summer training
+
+41
+00:02:36,689 --> 00:02:40,120
+where basically dead just being forty
+months
+
+42
+00:02:40,120 --> 00:02:43,720
+summer amount of money learning nothing
+
+43
+00:02:43,720 --> 00:02:47,120
+at the end up the team is just they're
+just getting a certificate
+
+44
+00:02:47,120 --> 00:02:50,549
+and they're trying to use that
+certificate to get a better job
+
+45
+00:02:50,549 --> 00:02:54,439
+during college interviews in the final
+year but
+
+46
+00:02:54,439 --> 00:02:57,969
+on most do you know knowledge Syrian the
+so
+
+47
+00:02:57,969 --> 00:03:02,110
+destroy any started to actually have a
+replacement for those kind of
+
+48
+00:03:02,110 --> 00:03:07,060
+I should say nonsense trainings where
+people can only go only to beat seem
+
+49
+00:03:07,060 --> 00:03:10,530
+library management system yet after yet
+and because
+
+50
+00:03:10,530 --> 00:03:13,540
+we already started doing a lot of free
+software walk
+
+51
+00:03:13,540 --> 00:03:16,569
+as a contributor in different parts and
+different projects
+
+52
+00:03:16,569 --> 00:03:20,780
+we talk that weekend actually feared the
+whole King
+
+53
+00:03:20,780 --> 00:03:27,780
+as a summer training program so
+
+54
+00:03:27,900 --> 00:03:31,569
+from the very first year our goal was
+always to
+
+55
+00:03:31,569 --> 00:03:35,689
+guarded the local people forced and then
+the in a global event
+
+56
+00:03:35,689 --> 00:03:39,260
+so the initial idea was to go for of
+lame campaign
+
+57
+00:03:39,260 --> 00:03:43,640
+as much as possible we started we
+talking with the students who
+
+58
+00:03:43,640 --> 00:03:47,900
+we knew personally and then getting de
+France contacts from their lake
+
+59
+00:03:47,900 --> 00:03:51,629
+in the same area audino other colleges
+to ok India and
+
+60
+00:03:51,629 --> 00:03:55,859
+when I said quote India we started
+getting into the part of mailing list
+
+61
+00:03:55,859 --> 00:03:59,159
+so that we announce it or mailing list
+and
+
+62
+00:03:59,159 --> 00:04:03,069
+then it studied slowly started becoming
+global effort
+
+63
+00:04:03,069 --> 00:04:06,599
+at the beginning it was only me
+
+64
+00:04:06,599 --> 00:04:11,370
+but I'll I'm going to name another
+person here said the gunmen
+
+65
+00:04:11,370 --> 00:04:16,370
+he's not here but he is very well known
+feder for us develop and mentor from
+
+66
+00:04:16,370 --> 00:04:16,930
+India
+
+67
+00:04:16,930 --> 00:04:20,280
+so he also teamed up with me to help out
+the students
+
+68
+00:04:20,280 --> 00:04:25,160
+and we set up de ni si el parque Odom
+thinks
+
+69
+00:04:25,160 --> 00:04:28,540
+to be done meet at any minimum req and
+
+70
+00:04:28,540 --> 00:04:32,639
+10 things we week think that we can get
+out of this whole program
+
+71
+00:04:32,639 --> 00:04:38,120
+how things will go I and from there
+
+72
+00:04:38,120 --> 00:04:43,150
+Lake up him and he has a lot of people
+are these tutorials online in this site
+
+73
+00:04:43,150 --> 00:04:46,690
+which you can just fine his name Google
+you find those things
+
+74
+00:04:46,690 --> 00:04:50,060
+and then came the next tip because
+
+75
+00:04:50,060 --> 00:04:53,420
+on during those days I never heard the
+word MOOC
+
+76
+00:04:53,420 --> 00:04:57,440
+as such and I know when you comin I only
+know what the sites where we can go in
+
+77
+00:04:57,440 --> 00:05:01,250
+see some videos online videos to learn
+about something
+
+78
+00:05:01,250 --> 00:05:04,250
+but which brings into this problem that
+
+79
+00:05:04,250 --> 00:05:09,600
+why we chose IRC as I what dude our
+technology
+
+80
+00:05:09,600 --> 00:05:12,780
+we never had good band week when I spew
+don't have
+
+81
+00:05:12,780 --> 00:05:17,330
+good banquet I'm right now the fastest
+internet connection of my life
+
+82
+00:05:17,330 --> 00:05:21,140
+4mbps that is Lake and being a hundred
+dollars for it
+
+83
+00:05:21,140 --> 00:05:25,160
+but I know most of the students in India
+they don't have access to any
+
+84
+00:05:25,160 --> 00:05:28,740
+such internet now if they're lucky
+
+85
+00:05:28,740 --> 00:05:31,890
+daily Gate maybe 256 kbps if they are
+
+86
+00:05:31,890 --> 00:05:34,970
+in a big city there we get it read it is
+this
+
+87
+00:05:34,970 --> 00:05:38,810
+of course but I S E was something which
+
+88
+00:05:38,810 --> 00:05:42,950
+was part of free software community I
+thing from the very beginning
+
+89
+00:05:42,950 --> 00:05:46,070
+it walks it just works it's very less
+
+90
+00:05:46,070 --> 00:05:50,270
+man do it we can actually record the
+stock because it's text
+
+91
+00:05:50,270 --> 00:05:54,890
+and weekend just keep the fights for the
+later use
+
+92
+00:05:54,890 --> 00:05:59,260
+and I hope even in the time on nuclear
+blasts and any other kind of catastrophe
+
+93
+00:05:59,260 --> 00:06:03,990
+IRC will be still there so that we can
+contact with each other somehow
+
+94
+00:06:03,990 --> 00:06:08,130
+so regard okay we cry with IRC
+
+95
+00:06:08,130 --> 00:06:12,010
+and we did that offline and online
+campaign in 2008
+
+96
+00:06:12,010 --> 00:06:15,980
+so first year we started out on
+
+97
+00:06:15,980 --> 00:06:19,390
+in students in doug has did you believe
+buchanan
+
+98
+00:06:19,390 --> 00:06:22,810
+by the withdrawal we are calling it a
+summer training we actually start on
+
+99
+00:06:22,810 --> 00:06:24,670
+most in the rainy season in India
+
+100
+00:06:24,670 --> 00:06:27,800
+Lake end of big government middle of
+June
+
+101
+00:06:27,800 --> 00:06:31,190
+that start start timing so
+
+102
+00:06:31,190 --> 00:06:36,050
+out of 10 student I think I am the
+training ran for three months
+
+103
+00:06:36,050 --> 00:06:41,820
+so a little bit more on the training is
+that this is a addict
+
+104
+00:06:41,820 --> 00:06:45,440
+talk I mean dick on princess and I
+should say between pic trainers and
+
+105
+00:06:45,440 --> 00:06:46,780
+students
+
+106
+00:06:46,780 --> 00:06:50,820
+so trainers will start talking in the
+IRC channel and it will go on
+
+107
+00:06:50,820 --> 00:06:54,770
+deal many are some things like six hours
+and d 2 a.m. in the night
+
+108
+00:06:54,770 --> 00:06:58,530
+for the student reduce a sense almost
+every day night
+
+109
+00:06:58,530 --> 00:07:02,060
+other than weekends for first two months
+and then
+
+110
+00:07:02,060 --> 00:07:05,720
+one month on are one and half month an
+art project works
+
+111
+00:07:05,720 --> 00:07:08,850
+where we try to pose the same people
+into afternoon
+
+112
+00:07:08,850 --> 00:07:13,820
+basis so out up in students regardless I
+don't feel for students who stayed with
+
+113
+00:07:13,820 --> 00:07:14,800
+us
+
+114
+00:07:14,800 --> 00:07:17,860
+later they went in to defend other
+projects
+
+115
+00:07:17,860 --> 00:07:22,720
+and that was the first year so we
+started doing this year after year
+
+116
+00:07:22,720 --> 00:07:26,670
+2014 will be 78 for us
+
+117
+00:07:26,670 --> 00:07:30,150
+to last year
+
+118
+00:07:30,150 --> 00:07:34,400
+we started with AP students from
+
+119
+00:07:34,400 --> 00:07:38,470
+very different backgrounds when I
+started these
+
+120
+00:07:38,470 --> 00:07:42,410
+the coolest injuring students but
+
+121
+00:07:42,410 --> 00:07:45,410
+I can give you an idea like what kind of
+people we got our
+
+122
+00:07:45,410 --> 00:07:49,860
+not only from India from the side of the
+world Lake North America
+
+123
+00:07:49,860 --> 00:07:53,490
+on after see it off Afghanistan Sri
+Lanka
+
+124
+00:07:53,490 --> 00:07:56,910
+Obama this and
+
+125
+00:07:56,910 --> 00:07:59,990
+people came people talk with us many
+people stayed
+
+126
+00:07:59,990 --> 00:08:04,310
+Lake out of eighty students you're
+almost forty plus de ti that
+
+127
+00:08:04,310 --> 00:08:08,050
+three months training course they came
+online almost every day
+
+128
+00:08:08,050 --> 00:08:11,250
+on time and gap between I mean
+
+129
+00:08:11,250 --> 00:08:15,090
+the Cape doing the stuff which was a
+good
+
+130
+00:08:15,090 --> 00:08:18,430
+salt other than in years we had a me
+this yen
+
+131
+00:08:18,430 --> 00:08:21,980
+was like being Masters in music and
+wanted to learn by 10
+
+132
+00:08:21,980 --> 00:08:25,370
+and now as far as I know that he's
+moving from Spain
+
+133
+00:08:25,370 --> 00:08:29,880
+to export and and on his music masters
+degree he's
+
+134
+00:08:29,880 --> 00:08:34,019
+big he became our half but dayum Django
+developer
+
+135
+00:08:34,019 --> 00:08:37,039
+we got there from Sudan I think we gotta
+
+136
+00:08:37,039 --> 00:08:40,870
+primary school English teacher who was
+the food came by my school teacher
+
+137
+00:08:40,870 --> 00:08:44,010
+from there he moved into halftime apart
+pain and
+
+138
+00:08:44,010 --> 00:08:47,329
+other part time as a sysadmin and bite
+and developer
+
+139
+00:08:47,329 --> 00:08:51,260
+and fuse he said means from Germany who
+became per game developers
+
+140
+00:08:51,260 --> 00:08:58,260
+just to move up the carrier and
+regulating in college student
+
+141
+00:08:58,930 --> 00:09:02,100
+back an we had friends got it
+
+142
+00:09:02,100 --> 00:09:05,360
+we started this program based on our
+friends we
+
+143
+00:09:05,360 --> 00:09:09,010
+try to talk with to them we try to talk
+to their friends and get students into
+
+144
+00:09:09,010 --> 00:09:11,440
+this project
+
+145
+00:09:11,440 --> 00:09:14,450
+and we never part I would award which
+I'm hearing
+
+146
+00:09:14,450 --> 00:09:18,480
+in the last few years a lot of time the
+word is
+
+147
+00:09:18,480 --> 00:09:22,640
+every 30 I we never acted the part about
+that
+
+148
+00:09:22,640 --> 00:09:26,310
+white from the very beginning we had
+
+149
+00:09:26,310 --> 00:09:29,770
+about 50 percent all men participation
+
+150
+00:09:29,770 --> 00:09:34,560
+save money last year out of eighty-plus
+students we had almost 42 or 43
+
+151
+00:09:34,560 --> 00:09:38,660
+woman participating in this program we
+never had a problem
+
+152
+00:09:38,660 --> 00:09:41,930
+where it was Lake pic too many boys
+auditors Lake
+
+153
+00:09:41,930 --> 00:09:45,060
+are too many men centric program or
+anything or did
+
+154
+00:09:45,060 --> 00:09:48,320
+it was all is almost in the same 11
+
+155
+00:09:48,320 --> 00:09:53,820
+at from the very beginning and we also
+makes you know that
+
+156
+00:09:53,820 --> 00:09:57,000
+the message board it goes out in a
+proper way
+
+157
+00:09:57,000 --> 00:10:01,400
+due to different colleges so after just
+after the first year
+
+158
+00:10:01,400 --> 00:10:05,040
+when we got few people who are doing
+good both
+
+159
+00:10:05,040 --> 00:10:08,790
+men and a woman we actually tried to put
+them up
+
+160
+00:10:08,790 --> 00:10:12,070
+in the local community as local
+superheroes
+
+161
+00:10:12,070 --> 00:10:16,480
+so they went to their colleges to their
+friends and he had their own knowledge
+
+162
+00:10:16,480 --> 00:10:20,310
+and their life story that how they
+started from the UN
+
+163
+00:10:20,310 --> 00:10:25,120
+they become something and which keep
+bringing in more and more students
+
+164
+00:10:25,120 --> 00:10:28,460
+from bolt men and a woman like that
+
+165
+00:10:28,460 --> 00:10:31,560
+diverse city park
+
+166
+00:10:31,560 --> 00:10:36,310
+few times we thought they come and
+because its online sessions
+
+167
+00:10:36,310 --> 00:10:39,430
+you know people speak many random things
+
+168
+00:10:39,430 --> 00:10:44,580
+sometimes the doctrine as and few of us
+who do take lessons we become kinda ET
+
+169
+00:10:44,580 --> 00:10:47,640
+and be use lot of sarcasm maybe
+
+170
+00:10:47,640 --> 00:10:51,660
+but it go so well in both cases there is
+no Lake
+
+171
+00:10:51,660 --> 00:10:58,660
+if you are a student you are just a
+student
+
+172
+00:10:58,760 --> 00:11:01,950
+one more thing which worked really well
+West
+
+173
+00:11:01,950 --> 00:11:06,850
+staying in touch so we are not a kind a
+program where he just runs for three
+
+174
+00:11:06,850 --> 00:11:08,940
+months and it's over
+
+175
+00:11:08,940 --> 00:11:12,710
+instead those students become our
+friends this day online
+
+176
+00:11:12,710 --> 00:11:15,930
+in the same place again and again year
+after year
+
+177
+00:11:15,930 --> 00:11:19,770
+we mix week trip we try to guide
+imploded college-level
+
+178
+00:11:19,770 --> 00:11:24,450
+and even in Dec 11 wind lake which
+companies to join wear to work on
+
+179
+00:11:24,450 --> 00:11:30,700
+Lake what kinda project we can walk in
+future
+
+180
+00:11:30,700 --> 00:11:34,020
+the differences actually beauty that
+
+181
+00:11:34,020 --> 00:11:37,940
+when when is someone new is coming in
+they might take that
+
+182
+00:11:37,940 --> 00:11:42,070
+old XD it's a huge community I just want
+to go and learn something
+
+183
+00:11:42,070 --> 00:11:45,990
+we want to break that part aren't we
+want to make sure that they learnt that
+
+184
+00:11:45,990 --> 00:11:47,720
+dr. the community
+
+185
+00:11:47,720 --> 00:11:53,000
+the out part of this we if we have to
+grow we have to grow old together
+
+186
+00:11:53,000 --> 00:11:56,470
+and this message
+
+187
+00:11:56,470 --> 00:11:59,770
+on list is if we make sure that people
+are coming back
+
+188
+00:11:59,770 --> 00:12:03,380
+people are staying in touch and repeat
+the same exercise
+
+189
+00:12:03,380 --> 00:12:07,810
+yet after year
+
+190
+00:12:07,810 --> 00:12:12,020
+a little bit on the course outline what
+we teach
+
+191
+00:12:12,020 --> 00:12:15,920
+starting from communication bike lanes
+Mill English guidelines for Desire C you
+
+192
+00:12:15,920 --> 00:12:17,890
+are mailing list how you should talk
+
+193
+00:12:17,890 --> 00:12:22,960
+whack went to talk from the air to
+basics of Linux distributions dominoes
+
+194
+00:12:22,960 --> 00:12:28,180
+demands you have to learn source code
+management system
+
+195
+00:12:28,180 --> 00:12:32,520
+a lot ups trimming dine goes into
+documentation
+
+196
+00:12:32,520 --> 00:12:35,830
+why documentation is necessary making
+sure everything
+
+197
+00:12:35,830 --> 00:12:38,990
+everyone loans about documents and fast
+
+198
+00:12:38,990 --> 00:12:43,400
+even before the start writing any code
+and we try to push it too hard to that
+
+199
+00:12:43,400 --> 00:12:44,240
+it becomes the head
+
+200
+00:12:44,240 --> 00:12:47,770
+natural habit to write good
+documentation and
+
+201
+00:12:47,770 --> 00:12:51,290
+we're getting kinda good result out
+there
+
+202
+00:12:51,290 --> 00:12:54,710
+and the final part of the training is
+actually taking those individual
+
+203
+00:12:54,710 --> 00:12:57,290
+students and making them a contributor
+to some
+
+204
+00:12:57,290 --> 00:13:00,330
+upstream project it can be anything
+
+205
+00:13:00,330 --> 00:13:05,589
+i coming to the project a little bit
+later
+
+206
+00:13:05,589 --> 00:13:09,650
+so whatever happened in the last few
+years seven years
+
+207
+00:13:09,650 --> 00:13:13,940
+past six years the log said their in
+that you are if you go you'll find that
+
+208
+00:13:13,940 --> 00:13:14,589
+last
+
+209
+00:13:14,589 --> 00:13:18,300
+this unlocks this thing helps too
+
+210
+00:13:18,300 --> 00:13:23,480
+to revisit though whatever we did before
+you find many fancy funny things
+
+211
+00:13:23,480 --> 00:13:26,589
+on the consistence kinda questions
+people ask
+
+212
+00:13:26,589 --> 00:13:33,589
+so you may want to just go and visited
+later on
+
+213
+00:13:34,740 --> 00:13:37,960
+and in any kind of citizens we
+
+214
+00:13:37,960 --> 00:13:41,010
+always said that you should start from
+the scratch
+
+215
+00:13:41,010 --> 00:13:44,440
+do not as the only that your students
+are the people who are here
+
+216
+00:13:44,440 --> 00:13:48,400
+Dino this thing are detecting in
+technology
+
+217
+00:13:48,400 --> 00:13:51,900
+they may be are coming from a complete
+different word nothing to do with
+
+218
+00:13:51,900 --> 00:13:52,770
+technology
+
+219
+00:13:52,770 --> 00:13:55,990
+they just want to learn it so
+
+220
+00:13:55,990 --> 00:14:00,120
+the clock to progress based on that
+speed up the snow is student
+
+221
+00:14:00,120 --> 00:14:03,540
+not on the people who can just learn
+everything every day
+
+222
+00:14:03,540 --> 00:14:09,050
+so we try to piece that class based on
+that
+
+223
+00:14:09,050 --> 00:14:14,380
+this brings in some a funny story is
+Lake lessons learned even seen one way
+
+224
+00:14:14,380 --> 00:14:18,460
+late so during the command line tools
+and training sparked
+
+225
+00:14:18,460 --> 00:14:21,510
+we try to teach people how to do the
+basic
+
+226
+00:14:21,510 --> 00:14:26,330
+level up building c:\program celebrities
+and what is believed to be an issue what
+
+227
+00:14:26,330 --> 00:14:27,370
+is make
+
+228
+00:14:27,370 --> 00:14:30,370
+on the basic things
+
+229
+00:14:30,370 --> 00:14:33,850
+and no one under says and we can really
+say
+
+230
+00:14:33,850 --> 00:14:38,750
+install Fedora by default up but if you
+are coming with Anna the distribution
+
+231
+00:14:38,750 --> 00:14:40,040
+today be another 12
+
+232
+00:14:40,040 --> 00:14:44,120
+will still help you we tell you what is
+the exact command to use to
+
+233
+00:14:44,120 --> 00:14:47,640
+get things done so defile answer for
+
+234
+00:14:47,640 --> 00:14:52,180
+installing all our disaffected was the
+only study City
+
+235
+00:14:52,180 --> 00:14:56,790
+everyone said it worked it worked yet
+what and suddenly one student came up is
+
+236
+00:14:56,790 --> 00:14:57,210
+Lake
+
+237
+00:14:57,210 --> 00:15:00,920
+it's not working it's not working for
+almost half an hour
+
+238
+00:15:00,920 --> 00:15:04,200
+make three or four of us were trying to
+help him out
+
+239
+00:15:04,200 --> 00:15:08,220
+and after all the commands we actually
+knew to figure out what's wrong with the
+
+240
+00:15:08,220 --> 00:15:09,529
+yom in that box
+
+241
+00:15:09,529 --> 00:15:13,950
+somebody actually of steam or by the way
+which distribution you are in
+
+242
+00:15:13,950 --> 00:15:18,700
+well I mean going to and make
+
+243
+00:15:18,700 --> 00:15:22,200
+okay so how you got the young in the
+first place
+
+244
+00:15:22,200 --> 00:15:25,380
+I said you people like telling everyone
+to do YUM
+
+245
+00:15:25,380 --> 00:15:29,370
+so I D just did at getting star YUM
+
+246
+00:15:29,370 --> 00:15:33,070
+why can't you just apt-get install gcc
+instead
+
+247
+00:15:33,070 --> 00:15:37,220
+but yep that's a part of the whole
+process so we as human that the student
+
+248
+00:15:37,220 --> 00:15:38,520
+knows the difference between
+
+249
+00:15:38,520 --> 00:15:41,700
+back to use the arm already used the CC
+
+250
+00:15:41,700 --> 00:15:46,490
+out wrong adamson so did this we just
+think that everyone knows nothing
+
+251
+00:15:46,490 --> 00:15:51,240
+and let's start from the scratch people
+who can pick up fast don't pick up fast
+
+252
+00:15:51,240 --> 00:15:58,240
+but we is the program based on all
+students
+
+253
+00:15:59,020 --> 00:16:02,770
+okay how to manage fifty-plus students
+on as the channel
+
+254
+00:16:02,770 --> 00:16:06,450
+this is something was not I we
+discovered we just reused
+
+255
+00:16:06,450 --> 00:16:10,130
+the process we each we have been fed our
+project
+
+256
+00:16:10,130 --> 00:16:13,520
+so Peter project has this meeting rooms
+Federer had been meeting figure I've
+
+257
+00:16:13,520 --> 00:16:14,800
+been meeting had been one
+
+258
+00:16:14,800 --> 00:16:19,640
+when we get many people at the same time
+and by gays that person we speaking
+
+259
+00:16:19,640 --> 00:16:22,910
+domain are bus and we think year
+
+260
+00:16:22,910 --> 00:16:27,020
+he or she will be keep talking and other
+people if they have any question do in
+
+261
+00:16:27,020 --> 00:16:31,480
+just died a clinician mark then the
+moderate and the person who isn't here
+
+262
+00:16:31,480 --> 00:16:35,930
+in our case our trainers they would see
+does exclamation marks and they will
+
+263
+00:16:35,930 --> 00:16:40,089
+allow people are asked people to speak
+up and the students with end with that
+
+264
+00:16:40,089 --> 00:16:41,839
+yo mouf message
+
+265
+00:16:41,839 --> 00:16:45,480
+so that we know that he's done we can
+say back
+
+266
+00:16:45,480 --> 00:16:50,180
+and along with eighty-plus student it
+worked really well
+
+267
+00:16:50,180 --> 00:16:53,500
+there was never ever any problem where
+make
+
+268
+00:16:53,500 --> 00:16:56,830
+following the roots but we had to mix
+your dad the rule is being followed
+
+269
+00:16:56,830 --> 00:16:57,640
+strictly
+
+270
+00:16:57,640 --> 00:17:03,029
+if not we just saw back with gaps
+
+271
+00:17:03,029 --> 00:17:06,380
+to as I said let wheat when it comes to
+burp
+
+272
+00:17:06,380 --> 00:17:09,899
+programming and bring stuff and I new
+people coming up
+
+273
+00:17:09,899 --> 00:17:13,309
+a lot with this problem
+
+274
+00:17:13,309 --> 00:17:17,409
+in addition issues so don't try to solve
+it dear
+
+275
+00:17:17,409 --> 00:17:21,270
+just teach them some beta radiators it
+can be any edta can be just type in
+
+276
+00:17:21,270 --> 00:17:22,279
+notebook
+
+277
+00:17:22,279 --> 00:17:26,079
+that release all the New People's inland
+is an issue
+
+278
+00:17:26,079 --> 00:17:33,079
+totally do not have that problem at all
+
+279
+00:17:33,429 --> 00:17:36,929
+sold reelect problems during the NECA
+project is
+
+280
+00:17:36,929 --> 00:17:41,489
+we asked the students to solve problems
+which are baiting yet dude im
+
+281
+00:17:41,489 --> 00:17:44,509
+instead the problems like any
+mathematical quise or any other problems
+
+282
+00:17:44,509 --> 00:17:46,480
+which we think is good
+
+283
+00:17:46,480 --> 00:17:49,899
+to with the last few years we saw people
+solving
+
+284
+00:17:49,899 --> 00:17:53,749
+are creating programs too late
+downloading subtitles for the movies
+
+285
+00:17:53,749 --> 00:17:54,679
+they have
+
+286
+00:17:54,679 --> 00:17:58,220
+are one student actually an wrote that
+cool
+
+287
+00:17:58,220 --> 00:18:01,299
+who scrap through all his movie
+selection
+
+288
+00:18:01,299 --> 00:18:04,759
+getting all the meter data from IMDB and
+so kissing in a nice
+
+289
+00:18:04,759 --> 00:18:08,470
+you right people are writing note-taking
+applications
+
+290
+00:18:08,470 --> 00:18:11,610
+our system monitoring tool
+
+291
+00:18:11,610 --> 00:18:15,960
+compiling C++ programs from Windows to a
+Linux box there are some areas
+
+292
+00:18:15,960 --> 00:18:20,659
+to some simple by conscripts stuff like
+that two teams which are very near to
+
+293
+00:18:20,659 --> 00:18:22,059
+the students
+
+294
+00:18:22,059 --> 00:18:26,059
+and we believe that's the only way is to
+students we love
+
+295
+00:18:26,059 --> 00:18:30,049
+the problem statement audited maybe just
+some problem which is given by the
+
+296
+00:18:30,049 --> 00:18:30,889
+teacher
+
+297
+00:18:30,889 --> 00:18:34,909
+to talk but in this where do we find oh
+this is something
+
+298
+00:18:34,909 --> 00:18:38,389
+can help me too on my friends too and
+they can write it
+
+299
+00:18:38,389 --> 00:18:41,950
+and they can actually talk to the
+students
+
+300
+00:18:41,950 --> 00:18:45,539
+other friend students
+
+301
+00:18:45,539 --> 00:18:48,980
+one big thing in our program superheroes
+
+302
+00:18:48,980 --> 00:18:52,210
+so for us the superheroes that they are
+other
+
+303
+00:18:52,210 --> 00:18:55,779
+contributors were doing great things for
+us for a long time
+
+304
+00:18:55,779 --> 00:18:58,919
+so we call this missile system says
+guess since
+
+305
+00:18:58,919 --> 00:19:02,200
+our guest lectures where people from of
+deemed
+
+306
+00:19:02,200 --> 00:19:07,919
+diplomat are any kind up often projects
+come over and keep talks
+
+307
+00:19:07,919 --> 00:19:13,330
+most of the talks are on in general Lake
+howdy started LA from zero knowledge to
+
+308
+00:19:13,330 --> 00:19:16,539
+where they are now direct talks on
+
+309
+00:19:16,539 --> 00:19:20,889
+see Creative Commons license
+documentations licensing in general
+
+310
+00:19:20,889 --> 00:19:23,970
+last year nicole blood started that
+talks
+
+311
+00:19:23,970 --> 00:19:27,279
+I'm his talk was the first Catholic
+decision
+
+312
+00:19:27,279 --> 00:19:31,309
+this year hopefully many about that by
+cannisters we come over and
+
+313
+00:19:31,309 --> 00:19:36,869
+gives isn't like this this actually
+helps the students to
+
+314
+00:19:36,869 --> 00:19:41,779
+stain doctor to see that Dec person I
+known that name
+
+315
+00:19:41,779 --> 00:19:44,860
+who wrote all these applications is
+actually do. person
+
+316
+00:19:44,860 --> 00:19:49,159
+I can talk to him or her and I can ask
+anything
+
+317
+00:19:49,159 --> 00:19:52,659
+so that gives them a much more
+confidence so we try to sell them that
+
+318
+00:19:52,659 --> 00:19:54,389
+give them hope give them heroes
+
+319
+00:19:54,389 --> 00:20:01,009
+so that they can follow and they can
+become better heal
+
+320
+00:20:01,009 --> 00:20:05,039
+we have a small home task and submission
+system which is written in by 10
+
+321
+00:20:05,039 --> 00:20:08,129
+I'll I passed the link later on
+
+322
+00:20:08,129 --> 00:20:12,559
+so from all the strings what they found
+
+323
+00:20:12,559 --> 00:20:16,080
+people who are contributing to projects
+like Federer Katie
+
+324
+00:20:16,080 --> 00:20:20,379
+OpenStreetMap people who are in
+companies like a red hat Amazon
+
+325
+00:20:20,379 --> 00:20:25,679
+and Yahoo the new startups coming up and
+all across the Indian IT service
+
+326
+00:20:25,679 --> 00:20:27,070
+companies
+
+327
+00:20:27,070 --> 00:20:31,409
+they got picked up baby faced which was
+
+328
+00:20:31,409 --> 00:20:34,619
+kinda followed going to actually get
+this going to be just oppan
+
+329
+00:20:34,619 --> 00:20:38,379
+running
+
+330
+00:20:38,379 --> 00:20:43,399
+musically to that the things I think
+wanted to talk about and
+
+331
+00:20:43,399 --> 00:20:47,159
+if you have pictures on doing the
+questions I just want to take some
+
+332
+00:20:47,159 --> 00:20:48,190
+questions if they're
+
+333
+00:20:48,190 --> 00:20:51,789
+did a few students from the different
+rating systems we just think in their
+
+334
+00:20:51,789 --> 00:20:52,629
+pictures
+
+335
+00:20:52,629 --> 00:20:57,830
+just before this bike on so that we can
+just predicted there
+
+336
+00:20:57,830 --> 00:21:01,700
+we find like this guy he started as a
+translator
+
+337
+00:21:01,700 --> 00:21:06,549
+it doesn't too fast but I'm and from
+there I think he's doing a lot of
+
+338
+00:21:06,549 --> 00:21:09,690
+OpenStack nomination work I think he was
+the second-highest coming during the
+
+339
+00:21:09,690 --> 00:21:10,419
+documentation
+
+340
+00:21:10,419 --> 00:21:14,200
+something that thing left few months
+back so to
+
+341
+00:21:14,200 --> 00:21:19,659
+just like that we we do have are
+sometimes questions if anybody's got one
+
+342
+00:21:19,659 --> 00:21:26,659
+arm
+
+343
+00:21:27,570 --> 00:21:31,039
+want can you expand the a
+
+344
+00:21:31,039 --> 00:21:34,850
+E all and y'all F
+
+345
+00:21:34,850 --> 00:21:38,309
+for cuts from I have a/c I'll
+
+346
+00:21:38,309 --> 00:21:42,320
+that's not a stalker actually just died
+Bangla back its and baby you if
+
+347
+00:21:42,320 --> 00:21:46,570
+just so that we can understand the
+message is over book messages over and
+
+348
+00:21:46,570 --> 00:21:47,999
+the second reason
+
+349
+00:21:47,999 --> 00:21:51,230
+and of something F on Lake
+
+350
+00:21:51,230 --> 00:21:54,859
+you can type I don't know that
+indomethacin to fight
+
+351
+00:21:54,859 --> 00:21:59,429
+okay like that he said that you have
+students come in with
+
+352
+00:21:59,429 --> 00:22:03,039
+problems that they want us all the you
+you actually require that is part of it
+
+353
+00:22:03,039 --> 00:22:03,470
+are
+
+354
+00:22:03,470 --> 00:22:06,590
+X we tried to do that before with
+educational efforts were you want people
+
+355
+00:22:06,590 --> 00:22:08,359
+come in with the project
+
+356
+00:22:08,359 --> 00:22:12,619
+not mine are actually no because not
+everyone can come up with ideas
+
+357
+00:22:12,619 --> 00:22:16,799
+it will be Lake are the forty maybe five
+or six we come up with their own I guess
+
+358
+00:22:16,799 --> 00:22:20,720
+rip artist up then we have some think
+little bit similar kind of things
+
+359
+00:22:20,720 --> 00:22:25,690
+but we take it was them like what you
+like next spent 15 defense 120 days and
+
+360
+00:22:25,690 --> 00:22:26,409
+fined 02
+
+361
+00:22:26,409 --> 00:22:30,029
+what kinda problems you have in your
+daily life we try to talk a lot
+
+362
+00:22:30,029 --> 00:22:33,690
+where C get an ex its cuz we we had the
+same problem not a not everybody's gonna
+
+363
+00:22:33,690 --> 00:22:35,600
+come up with an idea and I was always
+kinda
+
+364
+00:22:35,600 --> 00:22:40,809
+a challenge yeah it's always a big
+challenge
+
+365
+00:22:40,809 --> 00:22:44,190
+hi kinda good me
+
+366
+00:22:44,190 --> 00:22:48,489
+hi turned into that arm when you come up
+for the challenge and they were coming
+
+367
+00:22:48,489 --> 00:22:49,539
+up the challenges
+
+368
+00:22:49,539 --> 00:22:54,989
+did you find a week with conceptual I
+call the computer scientist and social
+
+369
+00:22:54,989 --> 00:22:56,909
+things they need to learn did you find
+that
+
+370
+00:22:56,909 --> 00:23:01,080
+they were gone and miss some gap so that
+all or the pollen said end up covering
+
+371
+00:23:01,080 --> 00:23:02,059
+all the gaps
+
+372
+00:23:02,059 --> 00:23:06,809
+I of course they're going to be some
+gaps so during this isn't what we also
+
+373
+00:23:06,809 --> 00:23:09,499
+do is to pass them different book names
+
+374
+00:23:09,499 --> 00:23:13,489
+which meeting can give them some basic
+idea say about opening systems
+
+375
+00:23:13,489 --> 00:23:16,980
+sale data structures what are these
+things time to time
+
+376
+00:23:16,980 --> 00:23:20,899
+and we try to push them to other late
+whatever be elected to be fine
+
+377
+00:23:20,899 --> 00:23:24,350
+which are useful things like that
+because on leader maybe
+
+378
+00:23:24,350 --> 00:23:28,019
+I mean not everyone can actually learn
+those things writing only solving
+
+379
+00:23:28,019 --> 00:23:29,330
+problems
+
+380
+00:23:29,330 --> 00:23:34,899
+but still relates problems is lead we
+give them a chance to learn things
+
+381
+00:23:34,899 --> 00:23:38,950
+for example if you are writing a program
+which and one game maybe
+
+382
+00:23:38,950 --> 00:23:42,289
+they can number guessing or something
+would you want to give it be up free
+
+383
+00:23:42,289 --> 00:23:43,249
+next
+
+384
+00:23:43,249 --> 00:23:46,259
+so you have to learn about packaging
+that how to pack is that thing so that
+
+385
+00:23:46,259 --> 00:23:47,710
+you can actually give it back ross
+
+386
+00:23:47,710 --> 00:23:53,220
+your friend so you have to do that and
+learn something out of it
+
+387
+00:23:53,220 --> 00:23:56,879
+get up I actually Evelyn question one
+other things it comes up
+
+388
+00:23:56,879 --> 00:24:01,139
+somewhat frequently is are people who
+are kinda want to jump into
+
+389
+00:24:01,139 --> 00:24:04,929
+open source but don't miss reno what
+project
+
+390
+00:24:04,929 --> 00:24:08,989
+to you dude you have advice that you can
+give to the PPS doing your seems
+
+391
+00:24:08,989 --> 00:24:13,059
+yet how to go about that so what we do
+is we just to try to keep a track of the
+
+392
+00:24:13,059 --> 00:24:16,320
+students how they're performing what are
+the kind of things they like
+
+393
+00:24:16,320 --> 00:24:19,820
+because we not only talk about
+programming and computer we talk I would
+
+394
+00:24:19,820 --> 00:24:20,700
+natural thing sold
+
+395
+00:24:20,700 --> 00:24:24,109
+I mean normal things what did we daily
+life kind of thing start to become
+
+396
+00:24:24,109 --> 00:24:25,479
+friends to them
+
+397
+00:24:25,479 --> 00:24:28,739
+so that we can identify the points
+liquid kind of things the lake do the
+
+398
+00:24:28,739 --> 00:24:30,440
+lake to use going on What Katie
+
+399
+00:24:30,440 --> 00:24:33,929
+would you like use gonna get easily May
+12 men don't learn a little bit of sleep
+
+400
+00:24:33,929 --> 00:24:34,809
+last night
+
+401
+00:24:34,809 --> 00:24:37,820
+here at the feelings which can study
+this if you have a problem
+
+402
+00:24:37,820 --> 00:24:41,289
+hear the people in our group who can
+help you with the simplest most def
+
+403
+00:24:41,289 --> 00:24:44,649
+and from this lonely stepping up because
+
+404
+00:24:44,649 --> 00:24:48,149
+otherwise it's that like problem
+identify that thing
+
+405
+00:24:48,149 --> 00:24:52,119
+because that's the question every time
+it comes up so aseptic unknown if you
+
+406
+00:24:52,119 --> 00:24:53,009
+said his name
+
+407
+00:24:53,009 --> 00:24:57,679
+he has wanna bet a document called I you
+want to do a project what should I do
+
+408
+00:24:57,679 --> 00:24:58,840
+now or something
+
+409
+00:24:58,840 --> 00:25:02,330
+so he actually explained it in that
+completely that if you want to do a
+
+410
+00:25:02,330 --> 00:25:03,970
+project what are the steps
+
+411
+00:25:03,970 --> 00:25:08,159
+just follow it up there well if there's
+no more questions
+
+412
+00:25:08,159 --> 00:25:14,729
+but something crucial thank you sky
+

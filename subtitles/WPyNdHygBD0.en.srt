@@ -1,0 +1,2174 @@
+1
+00:00:28,770 --> 00:00:29,420
+over one
+
+2
+00:00:29,420 --> 00:00:33,150
+up review hearing from Michael Backes
+topics real-time predictive analytics
+
+3
+00:00:33,150 --> 00:00:33,920
+using cyclic
+
+4
+00:00:33,920 --> 00:00:40,920
+learn and rabbit
+
+5
+00:00:43,739 --> 00:00:46,570
+thanks everybody so
+
+6
+00:00:46,570 --> 00:00:50,280
+a thanks for coming out my name is
+Michael Becker
+
+7
+00:00:50,280 --> 00:00:54,090
+I work for their data analysis
+management is at a waiver
+
+8
+00:00:54,090 --> 00:00:59,290
+a Weber is any now a service provider
+located just outside of
+
+9
+00:00:59,290 --> 00:01:02,780
+Philadelphia with over a hundred twenty
+thousand customers
+
+10
+00:01:02,780 --> 00:01:06,340
+if you've never heard of a Weber before
+that's cool
+
+11
+00:01:06,340 --> 00:01:10,210
+on we're the company with the MP booth
+downstairs
+
+12
+00:01:10,210 --> 00:01:14,090
+so anybody else from the
+
+13
+00:01:14,090 --> 00:01:17,580
+Philadelphia area okay so
+
+14
+00:01:17,580 --> 00:01:21,390
+I'm also the founder the day to Philly
+meet up
+
+15
+00:01:21,390 --> 00:01:25,119
+with over 600 members if you're not
+already a member well
+
+16
+00:01:25,119 --> 00:01:28,160
+shame on you so
+
+17
+00:01:28,160 --> 00:01:31,830
+you can find me on Twitter i'ma at
+Becker 44
+
+18
+00:01:31,830 --> 00:01:35,410
+my blog is back for 4-4 dot com and
+
+19
+00:01:35,410 --> 00:01:40,039
+I'll probably post a blog post on my
+website
+
+20
+00:01:40,039 --> 00:01:44,009
+with of follow-up material oh and a
+
+21
+00:01:44,009 --> 00:01:47,640
+also you can find the slides and other
+material
+
+22
+00:01:47,640 --> 00:01:52,110
+on I get home so working
+
+23
+00:01:52,110 --> 00:01:55,689
+on the damn team at a Weber I've
+introduced
+
+24
+00:01:55,689 --> 00:01:59,950
+several predictive algorithms into our
+application my coworkers
+
+25
+00:01:59,950 --> 00:02:03,970
+think that I'm some sort of math
+superhero reading scholarly papers by
+
+26
+00:02:03,970 --> 00:02:05,890
+day and fighting crime by night
+
+27
+00:02:05,890 --> 00:02:10,060
+the truth is much more sinister
+fortunately for me
+
+28
+00:02:10,060 --> 00:02:14,340
+I don't have to be a math genius to look
+like a superhero
+
+29
+00:02:14,340 --> 00:02:17,690
+I just have to use I can learn I am so
+
+30
+00:02:17,690 --> 00:02:21,959
+while cover some madness talk are mainly
+became things high-level
+
+31
+00:02:21,959 --> 00:02:25,269
+and this is because I'm not a math
+genius I'm
+
+32
+00:02:25,269 --> 00:02:28,570
+the developers this I can learn our math
+geniuses and
+
+33
+00:02:28,570 --> 00:02:33,760
+if I get in the math wrong feel free to
+call me out on the Internet so
+
+34
+00:02:33,760 --> 00:02:37,530
+this talk will cover a lot of the
+logistics behind utilizing a train sigh
+
+35
+00:02:37,530 --> 00:02:39,950
+can learn model in a real-life
+production environment
+
+36
+00:02:39,950 --> 00:02:43,900
+I'll start off by giving a brief
+overview of supervised learning
+
+37
+00:02:43,900 --> 00:02:48,810
+machine learning and text processing
+with psych it learn I'll
+
+38
+00:02:48,810 --> 00:02:53,769
+cover how to distribute your model I'll
+discuss
+
+39
+00:02:53,769 --> 00:02:59,400
+how to get new data tear model for
+prediction I'll introduce rabbit MQ
+
+40
+00:02:59,400 --> 00:03:03,109
+and why you should care: %uh demonstrate
+
+41
+00:03:03,109 --> 00:03:06,480
+how we can put all this together
+together into a finished product
+
+42
+00:03:06,480 --> 00:03:10,220
+are discussed how to scale your model
+
+43
+00:03:10,220 --> 00:03:13,970
+and finally %ah cover some additional
+things to consider
+
+44
+00:03:13,970 --> 00:03:20,970
+when using so I can learn models in a
+real time production environment so
+
+45
+00:03:21,799 --> 00:03:24,970
+the demo in this talk I I we I'm gonna
+
+46
+00:03:24,970 --> 00:03:29,510
+demonstrate a supervised learning
+algorithm so let's start off by defining
+
+47
+00:03:29,510 --> 00:03:34,130
+what the training process looks like for
+surprise model so
+
+48
+00:03:34,130 --> 00:03:37,190
+you start off with some input that may
+or may not be numerical
+
+49
+00:03:37,190 --> 00:03:40,410
+for example you might have tax documents
+as input
+
+50
+00:03:40,410 --> 00:03:46,169
+you also have labels for each piece of
+training data
+
+51
+00:03:46,169 --> 00:03:49,329
+you back to rise your
+
+52
+00:03:49,329 --> 00:03:53,160
+your training data which means
+converting it to an america form
+
+53
+00:03:53,160 --> 00:03:58,040
+then you train your machine learning
+algorithm using
+
+54
+00:03:58,040 --> 00:04:01,489
+your vector ice training data and the
+labels as input
+
+55
+00:04:01,489 --> 00:04:05,500
+so this is all often referred to as
+fitting your model
+
+56
+00:04:05,500 --> 00:04:09,840
+and at this point you have a model that
+can take
+
+57
+00:04:09,840 --> 00:04:13,019
+a new piece of unlabeled a big data and
+predict the label
+
+58
+00:04:13,019 --> 00:04:17,190
+so again you need a victory at the back
+to rise your new
+
+59
+00:04:17,190 --> 00:04:21,870
+data point then you input into your
+train algorithm
+
+60
+00:04:21,870 --> 00:04:24,919
+and you're our them spit out
+
+61
+00:04:24,919 --> 00:04:28,960
+a predicted label for this new data
+point there's all types a machine
+
+62
+00:04:28,960 --> 00:04:32,360
+learning algorithms but today I'll be
+concentrating mainly on supervised
+
+63
+00:04:32,360 --> 00:04:32,800
+learning
+
+64
+00:04:32,800 --> 00:04:36,490
+so in this talk
+
+65
+00:04:36,490 --> 00:04:39,490
+I'm going to demonstrate when the first
+models I ever created
+
+66
+00:04:39,490 --> 00:04:43,290
+and it's a model that predicts buying
+which for input.text
+
+67
+00:04:43,290 --> 00:04:46,340
+up input tax and at the time
+
+68
+00:04:46,340 --> 00:04:50,870
+I needed a way to identify the language
+of content created by our customers
+
+69
+00:04:50,870 --> 00:04:56,400
+so to create this model I used 38 at the
+top Wikipedia is based on
+
+70
+00:04:56,400 --> 00:05:01,200
+the number of articles and I don't
+several the most popular articles from
+
+71
+00:05:01,200 --> 00:05:04,410
+each of these Wikipedia's
+
+72
+00:05:04,410 --> 00:05:08,750
+so going back to my diagram from before
+the first thing we need to do is back to
+
+73
+00:05:08,750 --> 00:05:09,950
+rise the text
+
+74
+00:05:09,950 --> 00:05:14,290
+so to start of I converted the wiki
+markup the plaintext
+
+75
+00:05:14,290 --> 00:05:17,290
+and I had read about this approach
+online that
+
+76
+00:05:17,290 --> 00:05:21,910
+worked well for language classification
+on basically involves counting all the
+
+77
+00:05:21,910 --> 00:05:23,210
+combinations
+
+78
+00:05:23,210 --> 00:05:27,280
+out n character sequences in a dataset
+an
+
+79
+00:05:27,280 --> 00:05:30,950
+bizarre commonly called n-grams and
+n-grams
+
+80
+00:05:30,950 --> 00:05:34,320
+are lot easier to understand if you
+visualize them salami
+
+81
+00:05:34,320 --> 00:05:38,200
+show you an example so
+
+82
+00:05:38,200 --> 00:05:41,610
+to generate this work loud I downloaded
+6
+
+83
+00:05:41,610 --> 00:05:44,720
+up HG Wells books from Project Gutenberg
+
+84
+00:05:44,720 --> 00:05:48,910
+and here's what were the world looks
+like if we visualize the brawl bird
+
+85
+00:05:48,910 --> 00:05:50,900
+counts for each word
+
+86
+00:05:50,900 --> 00:05:56,310
+and you can accomplish this with one
+line a psychic learn
+
+87
+00:05:56,310 --> 00:06:00,930
+so the size of the word is based on the
+number of times award shows up in a
+
+88
+00:06:00,930 --> 00:06:04,340
+in the book one thing you'll notice
+looking at the
+
+89
+00:06:04,340 --> 00:06:07,450
+text is that the word martians
+
+90
+00:06:07,450 --> 00:06:12,100
+occurs about as frequently as the word
+words people and time
+
+91
+00:06:12,100 --> 00:06:17,190
+and this is counter-intuitive you think
+that Martians are much more important to
+
+92
+00:06:17,190 --> 00:06:20,870
+world the world stand these other words
+
+93
+00:06:20,870 --> 00:06:24,990
+so fortunately there's another hour then
+call TF RDF which
+
+94
+00:06:24,990 --> 00:06:28,880
+that can help solve this problem Scotti
+FIDs
+
+95
+00:06:28,880 --> 00:06:32,460
+stands for term frequency inverse
+document frequency
+
+96
+00:06:32,460 --> 00:06:36,650
+and it reflects how important a word is
+to a specific document in a collection
+
+97
+00:06:36,650 --> 00:06:38,150
+of documents
+
+98
+00:06:38,150 --> 00:06:44,060
+so the TF idea value increases based on
+the number of times an n-gram appears
+
+99
+00:06:44,060 --> 00:06:47,810
+in a specific document but this is
+offset
+
+100
+00:06:47,810 --> 00:06:51,790
+by the frequency of the n-gram in the
+rest at the documents
+
+101
+00:06:51,790 --> 00:06:54,889
+so in this example a document is one of
+the six
+
+102
+00:06:54,889 --> 00:06:58,790
+HG Wells books that I downloaded
+
+103
+00:06:58,790 --> 00:07:04,010
+and what you'll notice here is the board
+martians is comparatively bigger
+
+104
+00:07:04,010 --> 00:07:08,750
+because it was rated higher than more
+commonly words again like people in time
+
+105
+00:07:08,750 --> 00:07:12,420
+and this is because martians are
+important too
+
+106
+00:07:12,420 --> 00:07:15,650
+the book world the world and
+
+107
+00:07:15,650 --> 00:07:19,030
+however RTF here idea does have some
+trade-offs
+
+108
+00:07:19,030 --> 00:07:22,350
+on very large corpus is a text it may
+
+109
+00:07:22,350 --> 00:07:26,490
+it might not be computationally
+practical arm but for my particular
+
+110
+00:07:26,490 --> 00:07:30,460
+classifier I ended up using TF I DF
+because increase the accuracy of my
+
+111
+00:07:30,460 --> 00:07:32,470
+model by about 1 percent
+
+112
+00:07:32,470 --> 00:07:37,280
+and every percentage counts
+
+113
+00:07:37,280 --> 00:07:41,870
+so let's see how to put this all
+together with a simple classifier
+
+114
+00:07:41,870 --> 00:07:45,880
+I we call this typing out about where
+the classifier because you provide some
+
+115
+00:07:45,880 --> 00:07:49,310
+input tax and classifies it as one of
+multiple classes
+
+116
+00:07:49,310 --> 00:07:53,230
+so in the case of my over them you
+provide some taxes import
+
+117
+00:07:53,230 --> 00:07:57,290
+and it will classify the tech at the
+language overtaxed
+
+118
+00:07:57,290 --> 00:08:00,770
+and to start of I define a pipeline
+combining
+
+119
+00:08:00,770 --> 00:08:04,030
+RTF I T PF idea vector riser
+
+120
+00:08:04,030 --> 00:08:07,320
+with a SBC classifier
+
+121
+00:08:07,320 --> 00:08:11,810
+so a pipeline is utility use to build a
+composite classifier
+
+122
+00:08:11,810 --> 00:08:15,930
+that TD DFID F back to rise are converts
+the week EP articles to mir
+
+123
+00:08:15,930 --> 00:08:19,490
+numerical form the back toward the first
+counts the number of occurrences
+
+124
+00:08:19,490 --> 00:08:23,480
+each and Grammy each document to back to
+raise the tax it then applies
+
+125
+00:08:23,480 --> 00:08:26,730
+the TF idea algorithm and then
+
+126
+00:08:26,730 --> 00:08:30,810
+the pipeline understands how to connect
+the output affect a riser to the input
+
+127
+00:08:30,810 --> 00:08:32,099
+at the classifier
+
+128
+00:08:32,099 --> 00:08:36,490
+soul that's what to do is to fit our
+data to our model
+
+129
+00:08:36,490 --> 00:08:39,500
+arm which is the last line and let's
+take a closer look
+
+130
+00:08:39,500 --> 00:08:42,519
+at X train in white rain
+
+131
+00:08:42,519 --> 00:08:47,399
+so X train is the portion of my data but
+I set aside for training
+
+132
+00:08:47,399 --> 00:08:50,860
+generally speaking you don't wanna
+training algorithm using your full data
+
+133
+00:08:50,860 --> 00:08:54,519
+set because many our times can suffer
+from an issue called overfitting
+
+134
+00:08:54,519 --> 00:08:57,949
+overfitting is when a model is very good
+at making predictions about your
+
+135
+00:08:57,949 --> 00:08:58,930
+training set
+
+136
+00:08:58,930 --> 00:09:02,339
+by when presented with new data it
+performs poorly
+
+137
+00:09:02,339 --> 00:09:06,420
+psych it learn has tools but I built in
+to help avoid overfitting
+
+138
+00:09:06,420 --> 00:09:10,130
+I I'm not gonna go into much detail
+during my talk but
+
+139
+00:09:10,130 --> 00:09:13,190
+there's plenty of details in the psych
+at one doc such act those for more
+
+140
+00:09:13,190 --> 00:09:15,080
+details
+
+141
+00:09:15,080 --> 00:09:18,430
+on X train is an array have taxed from
+
+142
+00:09:18,430 --> 00:09:22,020
+the Wikipedia articles besides stripping
+
+143
+00:09:22,020 --> 00:09:25,270
+out the wiki markup I don't do anything
+else to promote
+
+144
+00:09:25,270 --> 00:09:29,620
+to prepare the data on the back to riser
+handles converting the tax
+
+145
+00:09:29,620 --> 00:09:35,010
+to the numerical form required by the
+SPCA algorithm
+
+146
+00:09:35,010 --> 00:09:41,240
+okay so why train is the labels for our
+training set
+
+147
+00:09:41,240 --> 00:09:45,080
+so in this code here why is a
+one-dimensional array
+
+148
+00:09:45,080 --> 00:09:48,580
+in this case it contains the language a
+beach article
+
+149
+00:09:48,580 --> 00:09:53,150
+unlike X train I do not I do need to
+convert these two numerical form prior
+
+150
+00:09:53,150 --> 00:09:55,690
+to passing them to the fit method
+
+151
+00:09:55,690 --> 00:09:59,950
+so for each Wikipedia so to do that I
+can you can use the word and the
+
+152
+00:09:59,950 --> 00:10:00,830
+labeling coder
+
+153
+00:10:00,830 --> 00:10:04,760
+and but that does is assigned numerical
+value to each of your
+
+154
+00:10:04,760 --> 00:10:08,870
+in parts and for each Wikipedia page
+
+155
+00:10:08,870 --> 00:10:15,870
+in X train there is a corresponding
+labeling why train
+
+156
+00:10:15,890 --> 00:10:18,970
+so one trick I often use
+
+157
+00:10:18,970 --> 00:10:22,970
+when dealing with TextEdit which speeds
+up the training process
+
+158
+00:10:22,970 --> 00:10:26,740
+and lowers memory consumption is to use
+a technique called
+
+159
+00:10:26,740 --> 00:10:30,020
+dimensionality reduction so
+dimensionality reduction
+
+160
+00:10:30,020 --> 00:10:33,880
+is the task deriving a set up new
+abstract features
+
+161
+00:10:33,880 --> 00:10:37,450
+that is smaller than the original
+feature set while retaining most of the
+
+162
+00:10:37,450 --> 00:10:38,060
+parents
+
+163
+00:10:38,060 --> 00:10:41,750
+variants of the original data one such
+algorithm
+
+164
+00:10:41,750 --> 00:10:45,710
+for doing this since I can learn is
+randomized PCA
+
+165
+00:10:45,710 --> 00:10:49,500
+so PCA which stands for principal
+component analysis
+
+166
+00:10:49,500 --> 00:10:52,700
+allows you to really express a set of
+data points
+
+167
+00:10:52,700 --> 00:10:57,149
+in terms of basic components that
+explain the most variance in the data
+
+168
+00:10:57,149 --> 00:11:00,470
+so in this case with specify that the
+number
+
+169
+00:11:00,470 --> 00:11:05,870
+new feature should be fifty its either
+at PCA to my classifier
+
+170
+00:11:05,870 --> 00:11:10,200
+I just have the added to the pipeline so
+let's break down the pipe lines that we
+
+171
+00:11:10,200 --> 00:11:14,300
+can see what's really going on under the
+hood
+
+172
+00:11:14,300 --> 00:11:18,520
+so if we just run the vectorized by
+itself it produces a dataset with over
+
+173
+00:11:18,520 --> 00:11:20,649
+one million features
+
+174
+00:11:20,649 --> 00:11:24,020
+up because this is text data the data
+set is sparse
+
+175
+00:11:24,020 --> 00:11:27,120
+this is because each column in our
+dataset represents
+
+176
+00:11:27,120 --> 00:11:30,980
+an n-gram that was seen in at least one
+a the documents
+
+177
+00:11:30,980 --> 00:11:34,000
+an for any given document most these
+n-grams
+
+178
+00:11:34,000 --> 00:11:38,040
+will have accountants 0 so let's see
+what happens when we run PC and the
+
+179
+00:11:38,040 --> 00:11:40,580
+dataset
+
+180
+00:11:40,580 --> 00:11:44,690
+okay so now we've decrease the number of
+features from
+
+181
+00:11:44,690 --> 00:11:49,070
+over a million to 50 but how can we be
+certain this will negatively impact the
+
+182
+00:11:49,070 --> 00:11:51,240
+accuracy of her final classifier
+
+183
+00:11:51,240 --> 00:11:55,630
+the PCA algorithm has a primer called
+explained variance ratio that cokie
+
+184
+00:11:55,630 --> 00:12:00,370
+that calculate during the filling
+process
+
+185
+00:12:00,370 --> 00:12:03,670
+you can see are you can use this to see
+if you picked a good value for and
+
+186
+00:12:03,670 --> 00:12:06,000
+components
+
+187
+00:12:06,000 --> 00:12:10,180
+we can see by adding all these values
+together that we retain almost all be
+
+188
+00:12:10,180 --> 00:12:10,520
+there
+
+189
+00:12:10,520 --> 00:12:15,149
+variants from the original dataset all
+while significantly decreasing the size
+
+190
+00:12:15,149 --> 00:12:17,250
+of the input to our classifier
+
+191
+00:12:17,250 --> 00:12:21,610
+so this is really awesome but one last
+thing
+
+192
+00:12:21,610 --> 00:12:25,140
+don't use randomized PCA on sparse
+matrices
+
+193
+00:12:25,140 --> 00:12:28,860
+such as those output by TF ID affect a
+riser
+
+194
+00:12:28,860 --> 00:12:32,880
+so there's another hour them called
+truncated SBD
+
+195
+00:12:32,880 --> 00:12:36,480
+which was designed to work efficiently
+on sparse matrices
+
+196
+00:12:36,480 --> 00:12:40,790
+ansa support for them will be dropped
+from randomized PCA
+
+197
+00:12:40,790 --> 00:12:45,480
+in a future release a psych and Burn so
+I use randomized PCA here because
+
+198
+00:12:45,480 --> 00:12:49,250
+truncated SPD doesn't currently
+calculate the explained variance ratio
+
+199
+00:12:49,250 --> 00:12:53,770
+but I'll pick probably be added in a
+future release
+
+200
+00:12:53,770 --> 00:12:57,540
+so one last tip before I move on psychic
+learn
+
+201
+00:12:57,540 --> 00:13:00,839
+comes with a ton about rhythms build-in
+and many of them have multiple
+
+202
+00:13:00,839 --> 00:13:02,440
+parameters you can tweak
+
+203
+00:13:02,440 --> 00:13:05,450
+it can be daunting to figure out which
+are written to use
+
+204
+00:13:05,450 --> 00:13:08,930
+and what values to pick for the printers
+Walkley
+
+205
+00:13:08,930 --> 00:13:11,910
+there a lot of tools built in the psych
+you learn to help you to your models
+
+206
+00:13:11,910 --> 00:13:12,640
+that you
+
+207
+00:13:12,640 --> 00:13:17,070
+get a the best performance out a bit I
+recommend randomized searched
+
+208
+00:13:17,070 --> 00:13:21,890
+CB you give it some random you get ready
+my search arrange a values
+
+209
+00:13:21,890 --> 00:13:25,070
+to try for each parameter and then it
+randomly chooses some other values and
+
+210
+00:13:25,070 --> 00:13:27,020
+test them
+
+211
+00:13:27,020 --> 00:13:30,700
+what the search is completely you can
+get the highest scoring classifier
+
+212
+00:13:30,700 --> 00:13:34,880
+along with its core and parameters and
+you can easily run this kind of search a
+
+213
+00:13:34,880 --> 00:13:35,890
+multiple algorithms
+
+214
+00:13:35,890 --> 00:13:41,190
+figure out which one will perform best
+for your particular dataset
+
+215
+00:13:41,190 --> 00:13:44,310
+alright so now that you have this
+awesome model
+
+216
+00:13:44,310 --> 00:13:48,589
+now what one of the first promise you'll
+want to solve is how to distribute your
+
+217
+00:13:48,589 --> 00:13:49,380
+model
+
+218
+00:13:49,380 --> 00:13:52,390
+the recommended method for disturbing
+your motto is to use the built-in pickle
+
+219
+00:13:52,390 --> 00:13:53,070
+module
+
+220
+00:13:53,070 --> 00:13:57,089
+to serialize the model at to disk and to
+distribute as part
+
+221
+00:13:57,089 --> 00:14:00,149
+at as your part of the application so
+
+222
+00:14:00,149 --> 00:14:03,560
+you can store it in a database such as
+great a faster Amazon s3
+
+223
+00:14:03,560 --> 00:14:07,100
+in the case of my model it took up
+roughly 200 megabyte memory
+
+224
+00:14:07,100 --> 00:14:10,700
+is a pretty big but its is at least
+orrible on and on desk and more
+
+225
+00:14:10,700 --> 00:14:11,230
+importantly
+
+226
+00:14:11,230 --> 00:14:14,610
+in memory so one caveat to this approach
+is
+
+227
+00:14:14,610 --> 00:14:18,279
+if you upgrade cycle earn your pickle
+model is not guaranteed to work
+
+228
+00:14:18,279 --> 00:14:21,279
+so it's very important that you keep
+detailed records
+
+229
+00:14:21,279 --> 00:14:24,490
+other training set and your models
+training prior manners
+
+230
+00:14:24,490 --> 00:14:28,000
+if you want to be able to upgrade cycle
+earning the future
+
+231
+00:14:28,000 --> 00:14:31,540
+so take care when up getting psychic
+morning production to make sure you're
+
+232
+00:14:31,540 --> 00:14:35,080
+not going to break your application
+
+233
+00:14:35,080 --> 00:14:38,240
+right next to discuss how we're going to
+get data into our model
+
+234
+00:14:38,240 --> 00:14:41,680
+so you did it could be coming from many
+types of sources
+
+235
+00:14:41,680 --> 00:14:45,110
+a web front and a database trigger in
+many cases you can
+
+236
+00:14:45,110 --> 00:14:48,769
+easily control the rate up incoming data
+and you don't want to hold up the front
+
+237
+00:14:48,769 --> 00:14:52,110
+and/or the database while you wait for
+protection to be made
+
+238
+00:14:52,110 --> 00:14:56,610
+in these cases its use will be able to
+process your data is synchronously
+
+239
+00:14:56,610 --> 00:15:00,649
+so in the example given today we created
+a simple web front-end
+
+240
+00:15:00,649 --> 00:15:04,620
+someone to Google Translate where a user
+can enter some text to be classified
+
+241
+00:15:04,620 --> 00:15:08,200
+and get a classification back we don't
+wanna hold up a threat or process in the
+
+242
+00:15:08,200 --> 00:15:10,720
+client waiting on our class prior to do
+its thing
+
+243
+00:15:10,720 --> 00:15:14,589
+so rather the front and sends input to
+read REST API
+
+244
+00:15:14,589 --> 00:15:18,459
+which will record the text input and
+return a tracking ID
+
+245
+00:15:18,459 --> 00:15:22,399
+that the client can then use to get the
+result there are several other ways we
+
+246
+00:15:22,399 --> 00:15:22,750
+could
+
+247
+00:15:22,750 --> 00:15:28,160
+design this but for our particular
+application this design works fine
+
+248
+00:15:28,160 --> 00:15:32,360
+so decoupling the UI from the back and
+in this way solves one design issue
+
+249
+00:15:32,360 --> 00:15:35,390
+however another thing to consider is
+whether you can afford
+
+250
+00:15:35,390 --> 00:15:39,529
+to lose messages if all of your data
+needs to be processed you have two
+
+251
+00:15:39,529 --> 00:15:41,170
+options you can either
+
+252
+00:15:41,170 --> 00:15:44,380
+build in a retry mechanism on your front
+and
+
+253
+00:15:44,380 --> 00:15:49,570
+or you need a persistent herbal cue to
+hold your messages in the back n
+
+254
+00:15:49,570 --> 00:15:53,959
+so anti-rabbit MQ one of the many
+features provided by robin MQ is highly
+
+255
+00:15:53,959 --> 00:15:55,269
+available cues
+
+256
+00:15:55,269 --> 00:15:59,330
+by using rabbit MQ you can ensure that
+every message is process without needing
+
+257
+00:15:59,330 --> 00:16:00,630
+to implement a fancy
+
+258
+00:16:00,630 --> 00:16:05,390
+and likely error-prone retry message
+mechanism in your front and
+
+259
+00:16:05,390 --> 00:16:10,040
+surrounding cue uses aim QP which stands
+for advance message queuing protocol
+
+260
+00:16:10,040 --> 00:16:14,459
+for all client communications using MPP
+allows clients running
+
+261
+00:16:14,459 --> 00:16:17,920
+on different platforms are written in
+different languages to easily send
+
+262
+00:16:17,920 --> 00:16:18,850
+messages to
+
+263
+00:16:18,850 --> 00:16:24,029
+each other from a high-level MPP enables
+clients to publish messages and allows
+
+264
+00:16:24,029 --> 00:16:26,290
+other clients to consume those messages
+
+265
+00:16:26,290 --> 00:16:31,260
+it does all this without requiring it to
+roll your own protocol or library
+
+266
+00:16:31,260 --> 00:16:34,339
+for anyone who's new to MPP I would
+recommend you check out the peak a
+
+267
+00:16:34,339 --> 00:16:35,209
+library
+
+268
+00:16:35,209 --> 00:16:39,079
+which has some pretty awesome
+documentation
+
+269
+00:16:39,079 --> 00:16:42,610
+I rabbit all thank you also has some
+pretty awesome resources on its site for
+
+270
+00:16:42,610 --> 00:16:43,250
+beginners
+
+271
+00:16:43,250 --> 00:16:47,370
+and their blog is also a really
+excellent resource
+
+272
+00:16:47,370 --> 00:16:50,380
+finally for anyone whose interest in
+learning more about the nitty-gritty
+
+273
+00:16:50,380 --> 00:16:53,320
+details that using rabbit MQ in a
+production environment
+
+274
+00:16:53,320 --> 00:16:57,130
+my coworker up Gavin Android who is the
+maintainer
+
+275
+00:16:57,130 --> 00:17:00,779
+speaker has an excellent book coming out
+called braddock you in-depth
+
+276
+00:17:00,779 --> 00:17:07,360
+and Gavin if you're in the audience I am
+happy to accept the commission check
+
+277
+00:17:07,360 --> 00:17:11,779
+finally if you don't like robin MQ this
+kind of solution should work pretty if
+
+278
+00:17:11,779 --> 00:17:12,970
+work fine with pretty much
+
+279
+00:17:12,970 --> 00:17:16,419
+any other message queuing or any other
+message queuing system
+
+280
+00:17:16,419 --> 00:17:20,980
+so use whichever one you are familiar
+with
+
+281
+00:17:20,980 --> 00:17:25,049
+so what you have p.m. the your data
+input source into your message queuing
+
+282
+00:17:25,049 --> 00:17:25,850
+system
+
+283
+00:17:25,850 --> 00:17:29,019
+and you start publishing data all you
+need to do is put your model in a
+
+284
+00:17:29,019 --> 00:17:32,559
+persistent worker and start consuming
+input
+
+285
+00:17:32,559 --> 00:17:35,519
+in the case of my language
+classification model we met implemented
+
+286
+00:17:35,519 --> 00:17:36,870
+a simple consumer
+
+287
+00:17:36,870 --> 00:17:41,600
+so firstly on pickles the classifier and
+subscribes to an input queue
+
+288
+00:17:41,600 --> 00:17:46,070
+it then runs an event loop and the event
+where polls new messages as BB
+
+289
+00:17:46,070 --> 00:17:50,359
+as they become available and passes them
+to the to process a bet
+
+290
+00:17:50,359 --> 00:17:54,909
+process event calls predict on our model
+and converts the numerical prediction
+
+291
+00:17:54,909 --> 00:17:58,659
+to a human readable format this
+prediction is then stored in our
+
+292
+00:17:58,659 --> 00:17:59,799
+database in this case
+
+293
+00:17:59,799 --> 00:18:02,889
+among a DB and for
+
+294
+00:18:02,889 --> 00:18:06,889
+for the front end to retrieve so that's
+basically it
+
+295
+00:18:06,889 --> 00:18:11,129
+our design a little something like this:
+the input comes from the UI where the
+
+296
+00:18:11,129 --> 00:18:14,190
+user enters syntax they wish to
+classifying
+
+297
+00:18:14,190 --> 00:18:19,200
+the UI hits a flask rest baby I be a GET
+request
+
+298
+00:18:19,200 --> 00:18:23,249
+the API stores the request in the
+database
+
+299
+00:18:23,249 --> 00:18:27,239
+papi then sent a message to rabbit MQ
+with the text to classify and the
+
+300
+00:18:27,239 --> 00:18:30,600
+tracking ID for storing the resulting
+classification
+
+301
+00:18:30,600 --> 00:18:35,389
+the API returns a Jason response the UI
+with the tracking ID
+
+302
+00:18:35,389 --> 00:18:39,970
+the consumer polls the message of the
+queue in rabbit MQ
+
+303
+00:18:39,970 --> 00:18:43,809
+the consumer 'cause predict on the
+classifier with the taxes import
+
+304
+00:18:43,809 --> 00:18:47,710
+the classifier returns a prediction and
+then the consumer
+
+305
+00:18:47,710 --> 00:18:51,190
+stores that prediction in the database
+
+306
+00:18:51,190 --> 00:18:54,730
+finally Puri displays the result
+
+307
+00:18:54,730 --> 00:18:59,359
+so there isn't really one right way to
+design a solution like this
+
+308
+00:18:59,359 --> 00:19:02,940
+for example you could in Singapore
+having the UI Paul the API
+
+309
+00:19:02,940 --> 00:19:07,350
+you could utilize something like
+WebSockets alright so let's see what
+
+310
+00:19:07,350 --> 00:19:09,419
+this looks like an action
+
+311
+00:19:09,419 --> 00:19:12,509
+so I'm not I wanna start off by saying
+I'm not a linguist
+
+312
+00:19:12,509 --> 00:19:15,559
+so by I've read that Danish
+
+313
+00:19:15,559 --> 00:19:19,539
+Norwegian Swedish and Dutch you similar
+character sets so
+
+314
+00:19:19,539 --> 00:19:26,539
+I'm any use them for my demo
+
+315
+00:19:29,910 --> 00:19:34,860
+alright so this is what are front and
+looks like what's just test it out to
+
+316
+00:19:34,860 --> 00:19:36,060
+make sure everything's working
+
+317
+00:19:36,060 --> 00:19:40,160
+can everyone really in the back
+
+318
+00:19:40,160 --> 00:19:44,640
+how's that
+
+319
+00:19:44,640 --> 00:19:49,050
+up we can see the result about that
+
+320
+00:19:49,050 --> 00:19:52,450
+at alright what they would have to do
+
+321
+00:19:52,450 --> 00:19:59,450
+so let's let's test this out real quick
+
+322
+00:20:03,200 --> 00:20:05,310
+for a day
+
+323
+00:20:05,310 --> 00:20:08,050
+alright slickly something a little more
+interesting
+
+324
+00:20:08,050 --> 00:20:11,440
+so
+
+325
+00:20:11,440 --> 00:20:14,700
+I
+
+326
+00:20:14,700 --> 00:20:17,980
+so I as i said i have some data in
+
+327
+00:20:17,980 --> 00:20:22,850
+a few different languages here I let's
+start off with Danish so
+
+328
+00:20:22,850 --> 00:20:26,280
+i won't. get some a information
+
+329
+00:20:26,280 --> 00:20:29,750
+from in these different for different
+languages but I wanted them to be about
+
+330
+00:20:29,750 --> 00:20:32,930
+the same topic so what I did was I found
+news articles
+
+331
+00:20:32,930 --> 00:20:37,580
+about the heart be I hardly open SSL Bok
+Bok
+
+332
+00:20:37,580 --> 00:20:41,660
+in each of these four languages so let's
+let's see how are often handles this
+
+333
+00:20:41,660 --> 00:20:48,660
+so
+
+334
+00:20:49,700 --> 00:20:54,020
+this one according to Google is Danish
+and it
+
+335
+00:20:54,020 --> 00:21:01,020
+we also think its Danish sorry for the
+advertisements
+
+336
+00:21:01,220 --> 00:21:06,800
+I this one
+
+337
+00:21:06,800 --> 00:21:13,800
+is Swedish we also think its Swedish
+
+338
+00:21:16,210 --> 00:21:19,900
+this one is Norwegian we also think its
+Norwegian
+
+339
+00:21:19,900 --> 00:21:23,409
+and
+
+340
+00:21:23,409 --> 00:21:29,650
+finally Dutch its Dutch
+
+341
+00:21:29,650 --> 00:21:36,650
+alright
+
+342
+00:21:42,410 --> 00:21:42,880
+so
+
+343
+00:21:42,880 --> 00:21:47,310
+beside the basic design concerns I've
+already covered there are a few
+
+344
+00:21:47,310 --> 00:21:50,750
+more things worth mentioning the worst
+thing that can happen when you're
+
+345
+00:21:50,750 --> 00:21:52,360
+processing data is synchronously
+
+346
+00:21:52,360 --> 00:21:57,280
+is for your Q-tip cue to back up so
+backups will result in longer processing
+
+347
+00:21:57,280 --> 00:21:58,300
+times and
+
+348
+00:21:58,300 --> 00:22:01,950
+if up there on bounded you could crash
+rabbit MQ
+
+349
+00:22:01,950 --> 00:22:05,850
+so the easiest way to scale your
+consumers is the start another instance
+
+350
+00:22:05,850 --> 00:22:09,760
+using the strategy processing should
+scale roughly linearly
+
+351
+00:22:09,760 --> 00:22:15,000
+in my experience you can easily handle
+thousands of messages a second this way
+
+352
+00:22:15,000 --> 00:22:18,850
+also if you want to prevent backups
+consider using
+
+353
+00:22:18,850 --> 00:22:22,160
+of rabbit MQ feature called TTL cues 22
+
+354
+00:22:22,160 --> 00:22:27,770
+detect and prevent backups another way
+to scale your consumer
+
+355
+00:22:27,770 --> 00:22:30,830
+is to convert it to processing request
+in batches
+
+356
+00:22:30,830 --> 00:22:34,130
+many of the algorithm since I can't
+learn scale
+
+357
+00:22:34,130 --> 00:22:38,380
+super linearly when you pass multiple
+samples to their predict method
+
+358
+00:22:38,380 --> 00:22:42,900
+so the downside of this is that you will
+no longer be able to process results in
+
+359
+00:22:42,900 --> 00:22:43,680
+real time
+
+360
+00:22:43,680 --> 00:22:46,900
+however if you're restricted on
+resources and this trade-off
+
+361
+00:22:46,900 --> 00:22:49,840
+is acceptable for your particular
+application this might be a worthwhile
+
+362
+00:22:49,840 --> 00:22:50,780
+alternative
+
+363
+00:22:50,780 --> 00:22:54,550
+I keep an eye on your Q's
+
+364
+00:22:54,550 --> 00:22:57,800
+the their site the queue sizes and alert
+when
+
+365
+00:22:57,800 --> 00:23:01,580
+they back up so scale your consumers
+
+366
+00:23:01,580 --> 00:23:06,520
+as needed possibly automatically you
+could use something like a.w.s or skill
+
+367
+00:23:06,520 --> 00:23:07,130
+for that
+
+368
+00:23:07,130 --> 00:23:11,710
+on you can also monitor other things
+such as how many consumers are connected
+
+369
+00:23:11,710 --> 00:23:12,540
+to your queue
+
+370
+00:23:12,540 --> 00:23:16,190
+your message ingress and out press rates
+and other things
+
+371
+00:23:16,190 --> 00:23:20,530
+so understand your load requirements
+
+372
+00:23:20,530 --> 00:23:24,000
+blood test end to end to verify that you
+can handle
+
+373
+00:23:24,000 --> 00:23:28,270
+the expected vote for your application
+so
+
+374
+00:23:28,270 --> 00:23:32,690
+a predictive our them is a lot like a
+piano if not in tune its gonna suck
+
+375
+00:23:32,690 --> 00:23:38,220
+so how do you make sure your predictive
+algorithm is performing well with new
+
+376
+00:23:38,220 --> 00:23:38,770
+data
+
+377
+00:23:38,770 --> 00:23:42,580
+one solution is to periodically review
+our fire
+
+378
+00:23:42,580 --> 00:23:46,330
+algorithm using new data I depending on
+your use case
+
+379
+00:23:46,330 --> 00:23:50,620
+this might not be easy to accomplish so
+in the case in my language classifier
+
+380
+00:23:50,620 --> 00:23:51,880
+how would we collect
+
+381
+00:23:51,880 --> 00:23:55,380
+new label data maybe we can add a button
+
+382
+00:23:55,380 --> 00:23:58,800
+that allows users to report problems I'm
+
+383
+00:23:58,800 --> 00:24:01,910
+then we could go through some of these
+results and label them manually and then
+
+384
+00:24:01,910 --> 00:24:03,520
+return the hour them against them
+
+385
+00:24:03,520 --> 00:24:06,540
+another technique
+
+386
+00:24:06,540 --> 00:24:09,650
+um which I I'm sorry by but your name a
+
+387
+00:24:09,650 --> 00:24:13,280
+which I learned from Libya gravel is to
+train
+
+388
+00:24:13,280 --> 00:24:16,460
+a new classifier to predict new verses
+all data
+
+389
+00:24:16,460 --> 00:24:20,720
+so bennett the accuracy of this
+classifiers hi maybe above fifty years
+
+390
+00:24:20,720 --> 00:24:24,170
+55 or 60 percent at the distribution
+
+391
+00:24:24,170 --> 00:24:27,710
+a few new data has drifted from your
+training set so this means it's probably
+
+392
+00:24:27,710 --> 00:24:30,120
+time to retrain your classifier with new
+data
+
+393
+00:24:30,120 --> 00:24:33,870
+in this scenario you'd still need to
+label your new data
+
+394
+00:24:33,870 --> 00:24:37,630
+before you could retrain your armor them
+so no matter how
+
+395
+00:24:37,630 --> 00:24:42,320
+you handle to near our them make sure
+that you first control your classifier
+
+396
+00:24:42,320 --> 00:24:45,450
+and keep detailed change logs and
+performance metrics
+
+397
+00:24:45,450 --> 00:24:49,430
+I on your on your on your changes
+
+398
+00:24:49,430 --> 00:24:52,640
+alright
+
+399
+00:24:52,640 --> 00:24:57,310
+so I'd like to thank Kelly O'Brien and
+Matt park for helping me with the back
+
+400
+00:24:57,310 --> 00:24:59,910
+end and the front and respectively for
+my demo
+
+401
+00:24:59,910 --> 00:25:03,540
+and
+
+402
+00:25:03,540 --> 00:25:07,280
+thanks again for coming out my talk
+here's my information if you'd like to
+
+403
+00:25:07,280 --> 00:25:08,560
+get a hold of me I
+
+404
+00:25:08,560 --> 00:25:15,560
+I'm Mike at Becker purple dot com if
+you'd like to email me
+
+405
+00:25:20,680 --> 00:25:23,840
+thank thank you may give any questions
+for most good online right here
+
+406
+00:25:23,840 --> 00:25:30,840
+I just was curious about how
+
+407
+00:25:32,740 --> 00:25:36,280
+will text you could put in eyes just
+copy/paste
+
+408
+00:25:36,280 --> 00:25:39,830
+things dual-key repair so arm so
+
+409
+00:25:39,830 --> 00:25:43,840
+some something to keep in mind as I
+didn't that tune my over them to
+
+410
+00:25:43,840 --> 00:25:47,980
+work with small amount attacks because I
+the training set was from Wikipedia
+
+411
+00:25:47,980 --> 00:25:48,430
+which are
+
+412
+00:25:48,430 --> 00:25:51,350
+and they were like the top articles in
+these Wikipedia so they're generally
+
+413
+00:25:51,350 --> 00:25:52,040
+larger
+
+414
+00:25:52,040 --> 00:25:56,460
+arm I I haven't writing it for small
+text but I can say from experience that
+
+415
+00:25:56,460 --> 00:25:57,460
+doesn't work great
+
+416
+00:25:57,460 --> 00:26:01,160
+on small input so for example when I've
+tested out the very beginning
+
+417
+00:26:01,160 --> 00:26:05,040
+I gave his input hello world my was
+getting ready for the presentation I
+
+418
+00:26:05,040 --> 00:26:05,800
+actually typed
+
+419
+00:26:05,800 --> 00:26:08,970
+hello world with a capital W and I
+thought it was Malaysian
+
+420
+00:26:08,970 --> 00:26:14,610
+so thank you very much for your car can
+
+421
+00:26:14,610 --> 00:26:18,480
+impressive library and Mike Russian news
+
+422
+00:26:18,480 --> 00:26:23,370
+lol to me and bass these library support
+any distributed
+
+423
+00:26:23,370 --> 00:26:26,700
+cheney because his pre he critical
+
+424
+00:26:26,700 --> 00:26:30,130
+to Chambery lives date
+
+425
+00:26:30,130 --> 00:26:33,340
+I so a lot of the algorithm supports
+
+426
+00:26:33,340 --> 00:26:37,420
+a setting a primer called and jobs which
+
+427
+00:26:37,420 --> 00:26:41,120
+will scale across CPU's I'm not
+
+428
+00:26:41,120 --> 00:26:44,370
+certain about us scaling across machines
+
+429
+00:26:44,370 --> 00:26:47,700
+arm by yeah I would definitely at
+
+430
+00:26:47,700 --> 00:26:51,640
+II by the way I'm I'm not gonna the
+contributors to to psych it learned
+
+431
+00:26:51,640 --> 00:26:56,090
+by a I would definitely recommend like
+asking a question on the secular mailing
+
+432
+00:26:56,090 --> 00:26:56,500
+list
+
+433
+00:26:56,500 --> 00:26:59,830
+did you find
+
+434
+00:26:59,830 --> 00:27:03,140
+there anyway which is a group of
+languages that were particular difficult
+
+435
+00:27:03,140 --> 00:27:03,920
+to distinguish
+
+436
+00:27:03,920 --> 00:27:08,250
+arm so the ones that I picked my demo I
+picked specifically because they were
+
+437
+00:27:08,250 --> 00:27:12,650
+there's at least two in that group that
+I chose on that use the same character
+
+438
+00:27:12,650 --> 00:27:13,130
+set
+
+439
+00:27:13,130 --> 00:27:16,430
+it actually really at not being a fling
+with its really hard
+
+440
+00:27:16,430 --> 00:27:20,160
+to find languages that use the Stig Zack
+same character set
+
+441
+00:27:20,160 --> 00:27:24,040
+so and if you try to look it up online
+there's like all sorts of
+
+442
+00:27:24,040 --> 00:27:27,170
+at noise out there so I'm
+
+443
+00:27:27,170 --> 00:27:31,930
+I would say in general I tried to pick
+the hardest
+
+444
+00:27:31,930 --> 00:27:38,320
+a example possible hi
+
+445
+00:27:38,320 --> 00:27:41,800
+you mentioned that the we use in the
+model is through pickle you know if it
+
+446
+00:27:41,800 --> 00:27:42,150
+supports
+
+447
+00:27:42,150 --> 00:27:45,350
+others realizations I'm not sure
+
+448
+00:27:45,350 --> 00:27:49,390
+so prior to my talk I actually a asked
+to Olivier
+
+449
+00:27:49,390 --> 00:27:53,240
+what's that is is pickle still the
+recommended way over
+
+450
+00:27:53,240 --> 00:27:56,560
+serializing model and at he
+
+451
+00:27:56,560 --> 00:27:59,980
+he let me know that yes it is and he may
+have gone into little more detail but
+
+452
+00:27:59,980 --> 00:28:00,230
+I'm
+
+453
+00:28:00,220 --> 00:28:07,220
+I'm forgetting right now arm so maybe
+hype
+
+454
+00:28:09,390 --> 00:28:12,620
+you talked about the problem of over
+fitting the model
+
+455
+00:28:12,620 --> 00:28:16,930
+amount hat worsen the problem was
+classifying images and
+
+456
+00:28:16,930 --> 00:28:20,300
+pet project of mine do you have any
+recommendations to
+
+457
+00:28:20,300 --> 00:28:23,630
+Lloyd arm so their is a
+
+458
+00:28:23,630 --> 00:28:29,040
+um there's a algorithm that's part if I
+can learn called extremely random forest
+
+459
+00:28:29,040 --> 00:28:33,440
+and at least according to the the the
+papers that I've read and keep in mind
+
+460
+00:28:33,440 --> 00:28:34,480
+I'm not an expert
+
+461
+00:28:34,480 --> 00:28:38,080
+I it the paper claim that
+
+462
+00:28:38,080 --> 00:28:41,390
+extremely random forest aren't not as
+susceptible
+
+463
+00:28:41,390 --> 00:28:44,760
+to overfitting so I would recommend
+checking checking that our them out
+
+464
+00:28:44,760 --> 00:28:50,230
+thanks ima questions
+
+465
+00:28:50,230 --> 00:28:53,650
+thanks for coming out thank you
+

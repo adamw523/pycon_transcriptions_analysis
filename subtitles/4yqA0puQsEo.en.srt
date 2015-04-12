@@ -1,0 +1,1755 @@
+1
+00:00:14,450 --> 00:00:14,880
+hello
+
+2
+00:00:14,880 --> 00:00:20,099
+hi are so we have a show in your county
+from India
+
+3
+00:00:20,099 --> 00:00:25,099
+today and she's gonna speak to us about
+won't hurt others had me on disconnect
+
+4
+00:00:25,099 --> 00:00:32,099
+thank you please welcome us
+
+5
+00:00:33,030 --> 00:00:34,760
+hi everyone I
+
+6
+00:00:34,760 --> 00:00:38,820
+thanks for coming to the stock %uh mean
+and disconnect is actually
+
+7
+00:00:38,820 --> 00:00:42,940
+a song by Porcupine Tree I did not make
+up the good name myself
+
+8
+00:00:42,940 --> 00:00:46,230
+a this dog is about a
+
+9
+00:00:46,230 --> 00:00:50,670
+a happy eyeballs a guarded them that
+implemented interested
+
+10
+00:00:50,670 --> 00:00:54,449
+edited boring guy the hostname important
+I
+
+11
+00:00:54,449 --> 00:00:58,010
+today in this dog I'm gonna talk about
+all the
+
+12
+00:00:58,010 --> 00:01:01,210
+Catholic a think programming mistakes
+that I made
+
+13
+00:01:01,210 --> 00:01:04,699
+to do it and no how to do things right
+
+14
+00:01:04,699 --> 00:01:08,190
+though you can do them right from the
+get-go and a
+
+15
+00:01:08,190 --> 00:01:11,560
+hopefully you'll also get a themself
+
+16
+00:01:11,560 --> 00:01:15,509
+the amazingly awesome community that
+
+17
+00:01:15,509 --> 00:01:19,590
+blistered hands an Abergavenny
+
+18
+00:01:19,590 --> 00:01:23,080
+I'm studying computer science and money
+by India
+
+19
+00:01:23,080 --> 00:01:26,340
+and I'll lately I've been working on a
+
+20
+00:01:26,340 --> 00:01:30,850
+%eh be BM God hippie that that
+
+21
+00:01:30,850 --> 00:01:35,050
+implementation and by well
+
+22
+00:01:35,050 --> 00:01:38,530
+happy I bought I implemented this
+because it sounded good
+
+23
+00:01:38,530 --> 00:01:42,820
+no I'm lying I implemented those because
+everyone kept telling me that
+
+24
+00:01:42,820 --> 00:01:46,320
+it's a crazy complicated and buying
+
+25
+00:01:46,320 --> 00:01:46,950
+and
+
+26
+00:01:46,950 --> 00:01:51,780
+and on up if you're not be you bite out
+to be 100
+
+27
+00:01:51,780 --> 00:01:55,179
+vie est belle garden exist and
+
+28
+00:01:55,179 --> 00:01:58,469
+how it is useful but the BIRT
+
+29
+00:01:58,469 --> 00:02:01,500
+I really didn't are getting all have
+died
+
+30
+00:02:01,500 --> 00:02:05,060
+and after implemented still
+
+31
+00:02:05,060 --> 00:02:10,050
+endpoint interested there API is that to
+breed the implementation
+
+32
+00:02:10,050 --> 00:02:13,299
+up servers and clients from what they're
+supposed to do
+
+33
+00:02:13,299 --> 00:02:17,670
+so up that a client and buying basically
+
+34
+00:02:17,670 --> 00:02:21,640
+article updates so has the connect
+method that big so
+
+35
+00:02:21,640 --> 00:02:25,810
+fact he and other day loans are deferred
+fighting with the connected to depart
+
+36
+00:02:25,810 --> 00:02:29,980
+most important in particular are big to
+host name
+
+37
+00:02:29,980 --> 00:02:33,390
+resolved addendum I double host
+addresses and %ah
+
+38
+00:02:33,390 --> 00:02:37,760
+you don't the connection to the rules
+that is established first
+
+39
+00:02:37,760 --> 00:02:42,459
+so the name is illusion by peter is done
+by
+
+40
+00:02:42,459 --> 00:02:45,630
+sockets energy I meant good and
+
+41
+00:02:45,630 --> 00:02:49,329
+the V this works is that when you pass a
+horse named
+
+42
+00:02:49,329 --> 00:02:54,380
+this method it does also into might've
+been posted this is redundant mister
+
+43
+00:02:54,380 --> 00:02:55,870
+those connected the hosts
+
+44
+00:02:55,870 --> 00:02:58,920
+end a no dead
+
+45
+00:02:58,920 --> 00:03:02,290
+these addresses can be ipv4 ipv6
+
+46
+00:03:02,290 --> 00:03:06,340
+what this means for us is bad I am
+
+47
+00:03:06,340 --> 00:03:09,840
+then you want to connect whatsoever you
+
+48
+00:03:09,840 --> 00:03:13,230
+need to identify it but then address so
+
+49
+00:03:13,230 --> 00:03:17,180
+a ipv4 is the therefore division of
+
+50
+00:03:17,180 --> 00:03:20,790
+Internet Protocol and uses it could be
+due bird addressing scheme
+
+51
+00:03:20,790 --> 00:03:24,359
+this gives this arm just over $2.4
+billion
+
+52
+00:03:24,359 --> 00:03:27,430
+addresses but they aren't allowed though
+
+53
+00:03:27,430 --> 00:03:30,959
+there as expanding so fast that this
+
+54
+00:03:30,959 --> 00:03:35,359
+is not enough you started running
+charter practices know that's why I B
+
+55
+00:03:35,359 --> 00:03:36,510
+six comes in
+
+56
+00:03:36,510 --> 00:03:41,220
+and saves the day basically it uses 128
+bit
+
+57
+00:03:41,220 --> 00:03:44,430
+addressing scheme and a gives us many
+many more
+
+58
+00:03:44,430 --> 00:03:50,049
+addison's and a the long-term goal is to
+transition to work completely
+
+59
+00:03:50,049 --> 00:03:53,849
+eventually bike it up
+
+60
+00:03:53,849 --> 00:03:58,680
+I mean might be fought applications do
+prefer ipv6 because after all it's the
+
+61
+00:03:58,680 --> 00:04:00,010
+internet up the future
+
+62
+00:04:00,010 --> 00:04:05,349
+bike don't start that although some most
+of the applications have this
+
+63
+00:04:05,349 --> 00:04:10,209
+ipv6 addresses be balloon art book
+properly in the servers
+
+64
+00:04:10,209 --> 00:04:16,489
+so if %uh servers a ipv4 by Tim Berg on
+a looking but ipv6 connectivity is
+
+65
+00:04:16,489 --> 00:04:17,079
+impaired
+
+66
+00:04:17,079 --> 00:04:21,789
+though body is ipv6 capable applications
+like
+
+67
+00:04:21,789 --> 00:04:25,210
+their browsers email clients on the
+those word
+
+68
+00:04:25,210 --> 00:04:28,880
+arm let's see they would
+
+69
+00:04:28,880 --> 00:04:32,020
+in got a few seconds I believe not to
+Genzyme
+
+70
+00:04:32,020 --> 00:04:36,070
+don't know how long it big but yeah
+April a incurs some delay
+
+71
+00:04:36,070 --> 00:04:39,390
+before falling bach to ipv4 and
+
+72
+00:04:39,390 --> 00:04:43,250
+back harms though application
+performance then
+
+73
+00:04:43,250 --> 00:04:46,580
+users a experience with ipv6
+
+74
+00:04:46,580 --> 00:04:49,890
+and it slows down a doctor bins and
+
+75
+00:04:49,890 --> 00:04:54,469
+dots a problem so happy eyeball to guard
+them
+
+76
+00:04:54,469 --> 00:04:57,669
+solves this problem for us it say is
+that
+
+77
+00:04:57,669 --> 00:05:00,830
+once we have the list of resolved whose
+dad this is
+
+78
+00:05:00,830 --> 00:05:05,090
+we should a connect who work in the
+order in which they are
+
+79
+00:05:05,090 --> 00:05:08,789
+don't endo you're done the connection
+
+80
+00:05:08,789 --> 00:05:13,210
+that established first this means that
+we are trying to connect to multiple
+
+81
+00:05:13,210 --> 00:05:14,330
+hosts
+
+82
+00:05:14,330 --> 00:05:19,080
+who showed us is that was returned to us
+but the thing is that
+
+83
+00:05:19,080 --> 00:05:22,810
+okay initially when I heard the song by
+them I thought that okay maybe
+
+84
+00:05:22,810 --> 00:05:26,849
+what be you going to do here
+disconnected the first address and
+
+85
+00:05:26,849 --> 00:05:33,000
+a regard how long back ok then the next
+Addison the less regard how long dark BX
+
+86
+00:05:33,000 --> 00:05:36,530
+then compare the two dimes and then
+probably
+
+87
+00:05:36,530 --> 00:05:40,460
+a the one-dot eggs less a bank and it
+back one
+
+88
+00:05:40,460 --> 00:05:43,460
+but I was very wrong are what happens
+here
+
+89
+00:05:43,460 --> 00:05:46,570
+though high-level objective of the
+SunGard them is
+
+90
+00:05:46,570 --> 00:05:50,479
+do I returned a connection ass quickly
+as possible
+
+91
+00:05:50,479 --> 00:05:53,800
+and up the VI the example that I just
+
+92
+00:05:53,800 --> 00:05:57,950
+explain used pecan expand that would be
+a lot of time
+
+93
+00:05:57,950 --> 00:06:02,620
+so what do you do is be the the
+initiated several connections
+
+94
+00:06:02,620 --> 00:06:08,500
+in badelain and then the one that
+connects posters were done by the others
+
+95
+00:06:08,500 --> 00:06:09,140
+are dropped
+
+96
+00:06:09,140 --> 00:06:12,560
+bike another objective abyss
+
+97
+00:06:12,560 --> 00:06:16,930
+a guide them and Latino and bind because
+you're starting to talk about then point
+
+98
+00:06:16,930 --> 00:06:21,089
+is do a is to basically you
+
+99
+00:06:21,089 --> 00:06:24,250
+seve network resources and
+
+100
+00:06:24,250 --> 00:06:28,200
+if the first host addresses connection
+
+101
+00:06:28,200 --> 00:06:33,029
+is establish quick enough there could be
+a beast of follow-up
+
+102
+00:06:33,029 --> 00:06:36,990
+resources to connect to other areas as
+well
+
+103
+00:06:36,990 --> 00:06:40,089
+so we introduce a $300 million secondly
+
+104
+00:06:40,089 --> 00:06:44,779
+that means third we don't actually
+initiate all the connections together
+
+105
+00:06:44,779 --> 00:06:48,149
+the subsequent connections are
+
+106
+00:06:48,149 --> 00:06:52,599
+initiated up here a little bit be so now
+moving
+
+107
+00:06:52,599 --> 00:06:57,320
+on up a missus and mister ten-point and
+be wanting to balance things in it how
+
+108
+00:06:57,320 --> 00:06:58,409
+do we do that
+
+109
+00:06:58,409 --> 00:07:01,690
+listed as any synchronous Iran given
+night looking for a book
+
+110
+00:07:01,690 --> 00:07:04,849
+and I just want balance things
+
+111
+00:07:04,849 --> 00:07:08,339
+so well the good news is that the state
+is good i doing
+
+112
+00:07:08,339 --> 00:07:12,969
+badly things especially deleted network
+operations
+
+113
+00:07:12,969 --> 00:07:16,399
+the reactor that busted reactor
+
+114
+00:07:16,399 --> 00:07:19,459
+is good doing might build things at once
+
+115
+00:07:19,459 --> 00:07:24,180
+by doing multiple things I mean that
+Bates formidable think that once
+
+116
+00:07:24,180 --> 00:07:27,750
+and that its job essentially
+
+117
+00:07:27,750 --> 00:07:30,789
+so what happened here is that connect
+PCB
+
+118
+00:07:30,789 --> 00:07:34,990
+returns immediately it doesn't babe for
+the connection to actually be
+
+119
+00:07:34,990 --> 00:07:36,430
+established
+
+120
+00:07:36,430 --> 00:07:42,269
+it just Rick dunce initiates the process
+of starting a TCP connection
+
+121
+00:07:42,269 --> 00:07:45,680
+and then returns adeptly and a
+
+122
+00:07:45,680 --> 00:07:48,690
+the reactor caused this method F
+
+123
+00:07:48,690 --> 00:07:51,969
+bend the connection is finally done an
+established
+
+124
+00:07:51,969 --> 00:07:57,320
+so that back to me the been you to
+specify a call back back would be God
+
+125
+00:07:57,320 --> 00:08:02,300
+led the do so let me know that the
+connection is done
+
+126
+00:08:02,300 --> 00:08:05,450
+now the second part of that are the
+members about
+
+127
+00:08:05,450 --> 00:08:09,419
+should willingly both the early October
+the method by
+
+128
+00:08:09,419 --> 00:08:12,519
+gone leader does this for us and
+
+129
+00:08:12,519 --> 00:08:16,130
+in this your basically should you link
+the
+
+130
+00:08:16,130 --> 00:08:20,479
+a applied to the function F after 5
+seconds
+
+131
+00:08:20,479 --> 00:08:25,159
+so that's what bag does and now that I
+knew that
+
+132
+00:08:25,159 --> 00:08:29,659
+what I needed to do and that was to
+growers capable of letting me do this
+
+133
+00:08:29,659 --> 00:08:32,950
+I love being too hard to write unit
+tests for this
+
+134
+00:08:32,950 --> 00:08:36,149
+because the spec is kind of complicated
+
+135
+00:08:36,149 --> 00:08:39,269
+and the only way to know if viv done it
+right
+
+136
+00:08:39,269 --> 00:08:42,289
+is do bill would the as
+
+137
+00:08:42,289 --> 00:08:46,440
+driven development be so the first thing
+that
+
+138
+00:08:46,440 --> 00:08:51,149
+I needed to know was should I use the
+word he acted in the best
+
+139
+00:08:51,149 --> 00:08:55,640
+are not so what happens here is bad um
+
+140
+00:08:55,640 --> 00:08:59,209
+but I did this the early October
+actually
+
+141
+00:08:59,209 --> 00:09:04,130
+tries to better delivered the operating
+system event in real-time
+
+142
+00:09:04,130 --> 00:09:07,459
+doctor that stone avoid by the but
+
+143
+00:09:07,459 --> 00:09:10,800
+beauty testing UN unit testing
+especially
+
+144
+00:09:10,800 --> 00:09:14,580
+V should limit are going docked with
+external word
+
+145
+00:09:14,580 --> 00:09:18,589
+as much as possible and the actor
+doesn't do that for us said
+
+146
+00:09:18,589 --> 00:09:22,700
+just it is the means to talk to the
+outside world
+
+147
+00:09:22,700 --> 00:09:26,220
+and me to avoid that so
+
+148
+00:09:26,220 --> 00:09:30,260
+don't be gone do this that's wrong but
+not long but
+
+149
+00:09:30,260 --> 00:09:33,310
+thats not advisable I T so
+
+150
+00:09:33,310 --> 00:09:37,019
+there's a SW guide Clark interested
+
+151
+00:09:37,019 --> 00:09:40,200
+died on what does the same thing bag
+
+152
+00:09:40,200 --> 00:09:43,240
+a we were going to test for dinner got
+
+153
+00:09:43,240 --> 00:09:46,510
+up it how the gonadal mattered bag a
+third
+
+154
+00:09:46,510 --> 00:09:49,829
+should you've delayed called and it has
+I'll
+
+155
+00:09:49,829 --> 00:09:53,240
+a method got a good month so what's
+happening here is my belly
+
+156
+00:09:53,240 --> 00:09:58,050
+clock initiative you're telling it that
+okay this is the function that I want to
+
+157
+00:09:58,050 --> 00:10:01,730
+gone after five seconds and then second
+
+158
+00:10:01,730 --> 00:10:05,420
+you're saying that okay here I want to
+know what would happen if packwood bonds
+
+159
+00:10:05,420 --> 00:10:06,690
+by fights against
+
+160
+00:10:06,690 --> 00:10:10,200
+what about event will take place on
+basically triggers
+
+161
+00:10:10,200 --> 00:10:14,320
+the third it's like I aim is frozen and
+yeah I bonds in the clock
+
+162
+00:10:14,320 --> 00:10:19,190
+I'm as as in how we like so
+
+163
+00:10:19,190 --> 00:10:22,380
+now moving on to the and implementation
+
+164
+00:10:22,380 --> 00:10:26,930
+I didn't have a name for this it doesn't
+always go Idaho standpoint
+
+165
+00:10:26,930 --> 00:10:30,110
+so we had a discussion about that the
+first edition
+
+166
+00:10:30,110 --> 00:10:33,340
+was hostname endpoint because it big
+whose name
+
+167
+00:10:33,340 --> 00:10:36,870
+an the next word or whatever purple
+colours
+
+168
+00:10:36,870 --> 00:10:41,340
+appropriate the next addition misty CBN
+white
+
+169
+00:10:41,340 --> 00:10:44,490
+mostly because we hadn't used the name
+yet but
+
+170
+00:10:44,490 --> 00:10:47,640
+a also because it the
+
+171
+00:10:47,640 --> 00:10:50,800
+dog connection was established by RTT
+
+172
+00:10:50,800 --> 00:10:54,290
+but the thing is a host names are not
+parts
+
+173
+00:10:54,290 --> 00:10:57,560
+BC they are not even part if I P
+
+174
+00:10:57,560 --> 00:11:02,250
+they are about to be in it and on
+ninety-nine percent though
+
+175
+00:11:02,250 --> 00:11:06,240
+this endpoints mentality was the NS so
+
+176
+00:11:06,240 --> 00:11:09,800
+BNs and buying but then again
+
+177
+00:11:09,800 --> 00:11:13,820
+a BNs can be used to resolve names
+
+178
+00:11:13,820 --> 00:11:17,780
+for other things as well and this
+endpoint won't let us do that
+
+179
+00:11:17,780 --> 00:11:23,530
+its its just to establish connections to
+servers and clients using BCP
+
+180
+00:11:23,530 --> 00:11:26,670
+so this name wasn't right either so
+
+181
+00:11:26,670 --> 00:11:30,420
+the important thing to remember here is
+docked a
+
+182
+00:11:30,420 --> 00:11:33,610
+ECP NBN as the girl implementation
+
+183
+00:11:33,610 --> 00:11:37,370
+implementation details that important
+implementation details
+
+184
+00:11:37,370 --> 00:11:41,460
+but nevertheless the I dot so
+
+185
+00:11:41,460 --> 00:11:45,780
+what we need to remember about this and
+buying is that it be true was named
+
+186
+00:11:45,780 --> 00:11:51,710
+and the next do it gives us the
+connection sold them and point it was
+
+187
+00:11:51,710 --> 00:11:54,900
+now moving on to the implementation a
+
+188
+00:11:54,900 --> 00:11:58,250
+I had no idea how to go about that it
+was even if
+
+189
+00:11:58,250 --> 00:12:01,870
+I did understand the spec after a lot of
+
+190
+00:12:01,870 --> 00:12:05,800
+I dunno speculation it it makes sense
+
+191
+00:12:05,800 --> 00:12:09,570
+but I had no idea where to start so a
+
+192
+00:12:09,570 --> 00:12:14,200
+john paul was my mentor during mice deal
+with some other food project
+
+193
+00:12:14,200 --> 00:12:18,590
+would I was doing around the same time
+suggested a few simple steps to get
+
+194
+00:12:18,590 --> 00:12:19,300
+started
+
+195
+00:12:19,300 --> 00:12:22,480
+the first one is this listing its
+feeders
+
+196
+00:12:22,480 --> 00:12:25,550
+on a piece of paper are a txt file
+
+197
+00:12:25,550 --> 00:12:29,279
+something something next we're starting
+them
+
+198
+00:12:29,279 --> 00:12:32,990
+now a idea behind starting it from the
+simplest dude
+
+199
+00:12:32,990 --> 00:12:36,570
+the most complex is that I'd
+
+200
+00:12:36,570 --> 00:12:39,850
+the complicating things are only
+complicated than you tried on
+
+201
+00:12:39,850 --> 00:12:44,060
+do them honored once so if you first
+finish
+
+202
+00:12:44,060 --> 00:12:47,120
+implementing are dealing with the simple
+
+203
+00:12:47,120 --> 00:12:50,350
+pings are simple parts of then buying
+then
+
+204
+00:12:50,350 --> 00:12:54,200
+the complicated but don't seem to want
+to get enough to draw
+
+205
+00:12:54,200 --> 00:12:59,110
+so bob was the second step well with her
+grandmother died in your dust
+
+206
+00:12:59,110 --> 00:13:03,340
+for the first thing in that list that's
+made sense because
+
+207
+00:13:03,340 --> 00:13:06,600
+I already talked about is driven
+development
+
+208
+00:13:06,600 --> 00:13:10,490
+so coming together lighting best part
+
+209
+00:13:10,490 --> 00:13:14,510
+okay before that on then a
+
+210
+00:13:14,510 --> 00:13:18,900
+now I'm going to this doubt all the
+different mistake that I made to out
+
+211
+00:13:18,900 --> 00:13:21,920
+this endpoints development
+
+212
+00:13:21,920 --> 00:13:25,210
+the first one was that then I was trying
+to implemented
+
+213
+00:13:25,210 --> 00:13:28,950
+I was trying to catch the failure
+
+214
+00:13:28,950 --> 00:13:32,120
+that was supposed to it bill in an
+exception
+
+215
+00:13:32,120 --> 00:13:36,220
+in it in an acceptable Aug and I had a
+unit test for this
+
+216
+00:13:36,220 --> 00:13:39,610
+and it was feeling and I was
+
+217
+00:13:39,610 --> 00:13:43,210
+kind of confused about what was
+happening and turns out
+
+218
+00:13:43,210 --> 00:13:46,820
+its its the movie that de foods book
+
+219
+00:13:46,820 --> 00:13:50,770
+what do you do with like a lot the first
+line with the word it forward
+
+220
+00:13:50,770 --> 00:13:53,860
+I'll give me a connection and
+
+221
+00:13:53,860 --> 00:13:57,330
+the death would be good fire but the got
+back on it
+
+222
+00:13:57,330 --> 00:14:01,670
+I dinner back the important thing here
+is that B is rebuilding
+
+223
+00:14:01,670 --> 00:14:06,200
+and the bay by two functions work is
+back a
+
+224
+00:14:06,200 --> 00:14:10,330
+you can either get done are you can
+raise but you can I bought
+
+225
+00:14:10,330 --> 00:14:13,500
+and since it was returning something
+there was
+
+226
+00:14:13,500 --> 00:14:17,740
+the sting was wrong the right thing to
+do here would have been this
+
+227
+00:14:17,740 --> 00:14:22,350
+we could have us top 10 i Barack where
+back over girl
+
+228
+00:14:22,350 --> 00:14:26,820
+overdid effort and I would do the air
+handling finance
+
+229
+00:14:26,820 --> 00:14:30,290
+this first the first mistake I meet and
+alone
+
+230
+00:14:30,290 --> 00:14:35,040
+something out of it second one than you
+think is driven development
+
+231
+00:14:35,040 --> 00:14:38,210
+this is the back like is opposed to get
+
+232
+00:14:38,210 --> 00:14:41,970
+a first you write the best that fields
+then implement the feeder
+
+233
+00:14:41,970 --> 00:14:45,540
+and the best spots you like another
+guess that feels
+
+234
+00:14:45,540 --> 00:14:48,920
+you implement another feature and things
+bus
+
+235
+00:14:48,920 --> 00:14:54,080
+but the back in that I was getting was
+this
+
+236
+00:14:54,080 --> 00:14:57,529
+and it was beard
+
+237
+00:14:57,529 --> 00:15:01,390
+by a on my best to had one thing in
+common
+
+238
+00:15:01,390 --> 00:15:04,430
+bacteria residing at a time arguing the
+
+239
+00:15:04,430 --> 00:15:08,810
+run it was the last night the mistake
+that was doing here
+
+240
+00:15:08,810 --> 00:15:13,510
+is bad I was rebuilding a good effort
+from the deaths
+
+241
+00:15:13,510 --> 00:15:17,529
+i've a store they're doing best what's
+been the bill but mister B actor
+
+242
+00:15:17,529 --> 00:15:20,800
+and we don't want to do that
+
+243
+00:15:20,800 --> 00:15:25,260
+for reasons that I had mentioned before
+that reactor is a means to connect with
+
+244
+00:15:25,260 --> 00:15:26,339
+outside Boyd
+
+245
+00:15:26,339 --> 00:15:32,100
+man Espino mister Diack up nobody out
+there what it does is add rice to
+
+246
+00:15:32,100 --> 00:15:35,640
+again panicked about a boy and
+third-best
+
+247
+00:15:35,640 --> 00:15:39,940
+week for some message to come back from
+there
+
+248
+00:15:39,940 --> 00:15:44,320
+and they'd forever basically but dryer
+the twisted best
+
+249
+00:15:44,320 --> 00:15:47,870
+to a defines forever to be about by
+
+250
+00:15:47,870 --> 00:15:50,940
+120 seconds I think so it
+
+251
+00:15:50,940 --> 00:15:53,990
+boers dining out the best for dining out
+
+252
+00:15:53,990 --> 00:15:57,380
+so the lesson to be learned here is that
+we don't want to go and efforts from
+
+253
+00:15:57,380 --> 00:15:59,100
+tests
+
+254
+00:15:59,100 --> 00:16:02,399
+we don't want to do that that goes a
+
+255
+00:16:02,399 --> 00:16:05,880
+then be our dining unit a sec if you to
+death
+
+256
+00:16:05,880 --> 00:16:08,980
+we want to limit how to much be docked
+dew
+
+257
+00:16:08,980 --> 00:16:12,680
+external being its you might keep need
+to be
+
+258
+00:16:12,680 --> 00:16:16,680
+doing this if you're see if your guests
+are talking to
+
+259
+00:16:16,680 --> 00:16:19,810
+the next on a database I think they got
+
+260
+00:16:19,810 --> 00:16:23,899
+but in even in case you need to do that
+you need to remember
+
+261
+00:16:23,899 --> 00:16:28,490
+a simple basic rule that probably a unit
+that shouldn't be talking to
+
+262
+00:16:28,490 --> 00:16:31,960
+things outside of your application
+
+263
+00:16:31,960 --> 00:16:38,290
+still other something else that I needed
+to remember never it never ever getting
+
+264
+00:16:38,290 --> 00:16:42,790
+efforts from unit tests unless you
+really have to
+
+265
+00:16:42,790 --> 00:16:47,870
+and if you have to just bring you think
+the design of your abit
+
+266
+00:16:47,870 --> 00:16:53,130
+okay moving on bill so this is the right
+thing to do I just moved back by nine
+
+267
+00:16:53,130 --> 00:16:57,580
+and on the year thus were busing until
+everyone is happy
+
+268
+00:16:57,580 --> 00:17:01,670
+now I mentioned something God a
+
+269
+00:17:01,670 --> 00:17:04,730
+dog dog advance in the years lights
+
+270
+00:17:04,730 --> 00:17:07,980
+I E worse to more for big dick dying
+
+271
+00:17:07,980 --> 00:17:11,409
+because time is presented as double a
+very act dumb
+
+272
+00:17:11,409 --> 00:17:15,490
+the pink is a good so far I was not
+
+273
+00:17:15,490 --> 00:17:18,970
+dealing with the should be regarded by
+to the end point because
+
+274
+00:17:18,970 --> 00:17:22,230
+remember simple things first complicated
+things needed a
+
+275
+00:17:22,230 --> 00:17:25,480
+still the simple things were working and
+everything was going
+
+276
+00:17:25,480 --> 00:17:28,679
+now I just introduced a single I know
+
+277
+00:17:28,679 --> 00:17:31,730
+believe God's and my best
+
+278
+00:17:31,730 --> 00:17:35,820
+very dining out again they were feeling
+are sometimes timing out
+
+279
+00:17:35,820 --> 00:17:39,210
+but not in a way that would tell me what
+was going on
+
+280
+00:17:39,210 --> 00:17:43,480
+so I blame all you do for those because
+
+281
+00:17:43,480 --> 00:17:47,260
+then I didn't interviews died and my
+court up
+
+282
+00:17:47,260 --> 00:17:51,429
+everything was working II the back and
+everything stopped working
+
+283
+00:17:51,429 --> 00:17:55,260
+and up initially 300 milliseconds was
+the
+
+284
+00:17:55,260 --> 00:17:59,120
+bang that I was using I change that busy
+goes against
+
+285
+00:17:59,120 --> 00:18:03,250
+so that I would know what was going
+wrong and years again the immediately
+
+286
+00:18:03,250 --> 00:18:04,020
+that's like
+
+287
+00:18:04,020 --> 00:18:07,789
+right now grade I would need to advance
+dying for this
+
+288
+00:18:07,789 --> 00:18:12,090
+by a don't sell out I was wrong
+
+289
+00:18:12,090 --> 00:18:15,289
+I didn't get how all of this was looking
+
+290
+00:18:15,289 --> 00:18:19,970
+so lift who was a the person who died
+right to be your game and then ended up
+
+291
+00:18:19,970 --> 00:18:21,690
+writing twisted instead
+
+292
+00:18:21,690 --> 00:18:25,049
+a he was helping me a
+
+293
+00:18:25,049 --> 00:18:28,960
+on he was answering my questions and
+helping me fix things and then buying
+
+294
+00:18:28,960 --> 00:18:32,240
+and he said that he courted marty is
+from the matrix and
+
+295
+00:18:32,240 --> 00:18:35,409
+he said that I was thinking too hard
+about it he said that
+
+296
+00:18:35,409 --> 00:18:38,789
+it he said it's just a number and no
+
+297
+00:18:38,789 --> 00:18:42,429
+devere clark's call you to my pic books
+
+298
+00:18:42,429 --> 00:18:46,460
+is bad it's art it connects although a
+called third
+
+299
+00:18:46,460 --> 00:18:50,190
+I B over me then sorts them by number
+
+300
+00:18:50,190 --> 00:18:54,159
+read this number is the time of they
+should you got
+
+301
+00:18:54,159 --> 00:18:58,239
+and then cause them one by one and
+
+302
+00:18:58,239 --> 00:19:01,989
+that Sarda made sense and our
+
+303
+00:19:01,989 --> 00:19:05,419
+Bang Bus frozen but still the US against
+
+304
+00:19:05,419 --> 00:19:10,309
+had be like to hike to bed the clogged
+ears again top bud and it is supposed to
+
+305
+00:19:10,309 --> 00:19:11,669
+move forward now
+
+306
+00:19:11,669 --> 00:19:14,970
+that ok as doubles work and
+
+307
+00:19:14,970 --> 00:19:18,149
+there that's how things were bare I
+
+308
+00:19:18,149 --> 00:19:21,379
+bid Sardo falling boo
+
+309
+00:19:21,379 --> 00:19:25,659
+more I a I did talk to fall into
+
+310
+00:19:25,659 --> 00:19:28,869
+more Gabbana end up the main
+
+311
+00:19:28,869 --> 00:19:33,110
+even behind all of this with that others
+trying to what things together
+
+312
+00:19:33,110 --> 00:19:36,779
+too high I was trying to understand the
+bigger picture and how things fit
+
+313
+00:19:36,779 --> 00:19:38,129
+together
+
+314
+00:19:38,129 --> 00:19:41,769
+even before implemented the smaller
+parts a baby I
+
+315
+00:19:41,769 --> 00:19:44,980
+so again this was glyphs idea that
+
+316
+00:19:44,980 --> 00:19:48,029
+I levy need to stop thinking so hard
+
+317
+00:19:48,029 --> 00:19:53,879
+about those and Eventbrite turns out you
+can you would like without knowing by
+
+318
+00:19:53,879 --> 00:19:57,690
+you can most of these are just things
+guarding a
+
+319
+00:19:57,690 --> 00:20:02,879
+other things and end there is no reason
+behind it sometimes even
+
+320
+00:20:02,879 --> 00:20:06,570
+its just sunless to think that you need
+to
+
+321
+00:20:06,570 --> 00:20:10,149
+do and the out their needs in order and
+the
+
+322
+00:20:10,149 --> 00:20:13,489
+person was implementing it too was a
+particular order and
+
+323
+00:20:13,489 --> 00:20:19,259
+that's about it so this help and
+
+324
+00:20:19,259 --> 00:20:22,389
+not it it was riding behind a nice abie
+
+325
+00:20:22,389 --> 00:20:25,639
+it seem to follow the spate properly
+
+326
+00:20:25,639 --> 00:20:31,909
+but then by the perfect a the only way
+to know this was due
+
+327
+00:20:31,909 --> 00:20:35,929
+get it for a good review the be twisted
+scored review process books
+
+328
+00:20:35,929 --> 00:20:40,200
+is that a you were going to get you
+submit it would review
+
+329
+00:20:40,200 --> 00:20:43,690
+be booed review it and then they assign
+it back to you
+
+330
+00:20:43,690 --> 00:20:47,029
+you improve it but the comment and he
+summitted back in the review
+
+331
+00:20:47,029 --> 00:20:50,360
+any Sunday sometime men it looks good
+
+332
+00:20:50,360 --> 00:20:53,460
+you get to merge it so
+
+333
+00:20:53,460 --> 00:20:57,600
+this Holme the connect method for this
+endpoint look
+
+334
+00:20:57,600 --> 00:21:02,239
+it was working but it's like more than
+hafer though method are nested
+
+335
+00:21:02,239 --> 00:21:06,009
+and on Dhanbad suggested that
+
+336
+00:21:06,009 --> 00:21:10,460
+connect could possibly be implemented as
+an independent object
+
+337
+00:21:10,460 --> 00:21:14,809
+instead of having so many nested
+functions inside even suggested that
+
+338
+00:21:14,809 --> 00:21:19,509
+in bringing this to finite state machine
+would be a great idea
+
+339
+00:21:19,509 --> 00:21:23,649
+if we have a state machine framework for
+missed it because it's
+
+340
+00:21:23,649 --> 00:21:28,179
+sold by the way if you're staying for
+the Sprint you should diner suggested
+
+341
+00:21:28,179 --> 00:21:31,929
+we can work on this together if that
+something
+
+342
+00:21:31,929 --> 00:21:36,110
+so fine a state machines I what's coming
+up next
+
+343
+00:21:36,110 --> 00:21:39,419
+hopefully double it proved to be the
+cord look
+
+344
+00:21:39,419 --> 00:21:43,919
+the previous night and at last I wanna
+see that
+
+345
+00:21:43,919 --> 00:21:47,259
+there will be a day another come up on
+the stage in talk about how I
+
+346
+00:21:47,259 --> 00:21:48,399
+implemented
+
+347
+00:21:48,399 --> 00:21:52,230
+some software that save the word and
+
+348
+00:21:52,230 --> 00:21:57,239
+I dunno defeated the aliens gave his
+glorious victory but that is not the
+
+349
+00:21:57,239 --> 00:21:58,609
+date
+
+350
+00:21:58,609 --> 00:22:02,179
+a bit embarrassed are good ass targeted
+art there was
+
+351
+00:22:02,179 --> 00:22:07,059
+helpers always there sometime at in the
+form of a good review
+
+352
+00:22:07,059 --> 00:22:11,820
+sometime as a Bay program in session
+sometimes as
+
+353
+00:22:11,820 --> 00:22:15,440
+a simple reminder that I needed more
+sleep
+
+354
+00:22:15,440 --> 00:22:19,789
+so a what I'm going to see is that
+
+355
+00:22:19,789 --> 00:22:22,999
+I wouldn't have been able to die I do
+this alone
+
+356
+00:22:22,999 --> 00:22:27,299
+the dog the patient why is and amazing
+mentorship by
+
+357
+00:22:27,299 --> 00:22:31,529
+John Boyle be there if and in fact on
+the twisted community
+
+358
+00:22:31,529 --> 00:22:35,309
+so what i'm saying is that I'm really
+happy to have
+
+359
+00:22:35,309 --> 00:22:39,570
+all these all the friends here out there
+and open
+
+360
+00:22:39,570 --> 00:22:43,190
+the community so thank you and no
+
+361
+00:22:43,190 --> 00:22:47,929
+this is the link to the beget in case
+you're interested in
+
+362
+00:22:47,929 --> 00:22:51,509
+taking a look at the development
+yourself and thats
+
+363
+00:22:51,509 --> 00:22:55,440
+me on Twitter you couldn't read it you
+can barely audible to stop winter
+
+364
+00:22:55,440 --> 00:22:58,539
+if you like something about it you
+didn't like something
+
+365
+00:22:58,539 --> 00:23:05,539
+that would be great so thank you
+
+366
+00:23:13,070 --> 00:23:15,540
+better question okay but he has a
+
+367
+00:23:15,540 --> 00:23:18,690
+Shin so any questions
+
+368
+00:23:18,690 --> 00:23:25,690
+anyone I guess
+
+369
+00:23:25,990 --> 00:23:32,840
+no one yes I would
+
+370
+00:23:32,840 --> 00:23:36,500
+okay so I was asked by the by the mascot
+happy eyeballs
+
+371
+00:23:36,500 --> 00:23:41,150
+it is a good question because it's a
+funny name a out there though
+
+372
+00:23:41,150 --> 00:23:46,230
+let's a every debate about the gay
+shouldn't wants the user's
+
+373
+00:23:46,230 --> 00:23:49,950
+do be there but that and so
+
+374
+00:23:49,950 --> 00:23:53,000
+baby the bed uses
+
+375
+00:23:53,000 --> 00:23:56,010
+the word happy I boats to differ do it
+
+376
+00:23:56,010 --> 00:24:00,250
+audience the people you are viewing this
+happy eyeball to guard the basic needs
+
+377
+00:24:00,250 --> 00:24:00,610
+that
+
+378
+00:24:00,610 --> 00:24:04,090
+the user's of the web applications
+
+379
+00:24:04,090 --> 00:24:07,590
+and %ah they're happy because the sting
+
+380
+00:24:07,590 --> 00:24:12,390
+is working fine day so anyone else
+
+381
+00:24:12,390 --> 00:24:16,460
+then thank you Ashley for talk
+
+382
+00:24:16,460 --> 00:24:16,780
+thank you
+

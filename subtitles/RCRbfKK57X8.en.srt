@@ -1,0 +1,2762 @@
+1
+00:00:07,049 --> 00:00:07,919
+placed a kissy
+
+2
+00:00:07,919 --> 00:00:14,530
+whereabouts makes starts and thank you
+everyone for coming along
+
+3
+00:00:14,530 --> 00:00:17,670
+to this seconds session after lunch here
+
+4
+00:00:17,670 --> 00:00:21,770
+icon 2014 here in Montreal annex
+presenter
+
+5
+00:00:21,770 --> 00:00:25,359
+has a PhD in developmental biology from
+Caltech
+
+6
+00:00:25,359 --> 00:00:29,130
+and I am he says he likes piped into law
+
+7
+00:00:29,130 --> 00:00:32,649
+he currently works at Michigan State
+University and today is going to talk
+
+8
+00:00:32,649 --> 00:00:33,480
+about
+
+9
+00:00:33,480 --> 00:00:37,920
+dot intensive biology in the cloud
+Instruments Inc all the things
+
+10
+00:00:37,920 --> 00:00:44,920
+please welcome Titus brown right
+
+11
+00:00:46,180 --> 00:00:49,410
+alright a thank you all for coming um
+
+12
+00:00:49,410 --> 00:00:52,469
+so I want to start with a few up-front
+definitions
+
+13
+00:00:52,469 --> 00:00:56,789
+first of all arm %uh there's a lot of
+confusion about what big data means
+
+14
+00:00:56,789 --> 00:00:59,739
+and I'd like to point out as far as I'm
+concerned it means whatever is still
+
+15
+00:00:59,739 --> 00:01:01,180
+inconvenient to compute upon
+
+16
+00:01:01,180 --> 00:01:04,909
+if you can do the computation easily
+it's no longer big data I
+
+17
+00:01:04,909 --> 00:01:08,270
+data scientist you may have seen this
+before two statistician who lives in San
+
+18
+00:01:08,270 --> 00:01:09,010
+Francisco
+
+19
+00:01:09,010 --> 00:01:14,030
+arm and a professor was able to find a
+earlier a
+
+20
+00:01:14,030 --> 00:01:17,490
+earlier today by Fernanda Press someone
+who writes grants to fund the people who
+
+21
+00:01:17,490 --> 00:01:18,200
+do the work
+
+22
+00:01:18,200 --> 00:01:23,290
+I'm and so I am a professor
+
+23
+00:01:23,290 --> 00:01:26,479
+and not a data scientist because I live
+in Michigan arm
+
+24
+00:01:26,479 --> 00:01:29,820
+and I write grants so that others can do
+data-intensive biology
+
+25
+00:01:29,820 --> 00:01:33,759
+I also like to dedicate this talk to
+Terry paper so I
+
+26
+00:01:33,759 --> 00:01:37,979
+Terry is ur friend who helps run the
+testing in Python birds of a feather he
+
+27
+00:01:37,979 --> 00:01:39,220
+couldn't be here this year
+
+28
+00:01:39,220 --> 00:01:42,600
+on for the last five years as they've
+taken on my faculty position
+
+29
+00:01:42,600 --> 00:01:46,290
+he's arm he's progressively grown less
+
+30
+00:01:46,290 --> 00:01:50,500
+understanding of what it is that I do
+arm and so every year like what i'd
+
+31
+00:01:50,500 --> 00:01:53,570
+I didn't understand us to be blessed
+your talk this year than I did last year
+
+32
+00:01:53,570 --> 00:01:57,579
+so it struck me that um thus up this
+winter we are stuck
+
+33
+00:01:57,579 --> 00:02:00,780
+I don't know how many people live in the
+north the frozen wastes
+
+34
+00:02:00,780 --> 00:02:04,659
+arm this year we had lot of snow in
+Michigan its I spent a lot of time
+
+35
+00:02:04,659 --> 00:02:05,340
+indoors
+
+36
+00:02:05,340 --> 00:02:09,470
+my six-year-old are doing puzzles and
+and it struck me that she was asking the
+
+37
+00:02:09,470 --> 00:02:11,940
+same question the Terry was asking me
+and I figured that
+
+38
+00:02:11,940 --> 00:02:15,840
+if I could explain what I do at work to
+my six-year-old probably Terry might
+
+39
+00:02:15,840 --> 00:02:16,959
+understand it also
+
+40
+00:02:16,959 --> 00:02:21,640
+so what I do is actually a sample
+puzzles for a living
+
+41
+00:02:21,640 --> 00:02:25,670
+and and I told us to my six-year-old you
+actually working on a puzzle inches
+
+42
+00:02:25,670 --> 00:02:29,709
+she looked at me a certain wide-eyed
+wonder it said you actually get paid to
+
+43
+00:02:29,709 --> 00:02:30,340
+do that
+
+44
+00:02:30,340 --> 00:02:33,970
+said well it's a little more complicated
+I strategize about solving
+
+45
+00:02:33,970 --> 00:02:35,170
+multi-dimensional pas
+
+46
+00:02:35,170 --> 00:02:39,150
+billion to pieces and no picture on the
+box but it's still solving puzzles
+
+47
+00:02:39,150 --> 00:02:42,230
+so if you if I give you
+
+48
+00:02:42,230 --> 00:02:45,620
+many many many many many pieces of a
+puzzle and I
+
+49
+00:02:45,620 --> 00:02:49,160
+ass could come up with a strategy either
+through three basic strategies that you
+
+50
+00:02:49,160 --> 00:02:49,700
+could use
+
+51
+00:02:49,700 --> 00:02:52,700
+you're all strategy used in genome
+assembly which is what I actually work
+
+52
+00:02:52,700 --> 00:02:53,050
+on
+
+53
+00:02:53,050 --> 00:02:57,019
+and the three strategies are a greedy
+strategy reset hey this peace or to fix
+
+54
+00:02:57,019 --> 00:02:58,629
+this piece that smashed together
+
+55
+00:02:58,629 --> 00:03:02,180
+arm which has some obvious flaws as my
+six-year-old has found out
+
+56
+00:03:02,180 --> 00:03:06,159
+arm ence where did these two pieces
+patch about these two pieces how about
+
+57
+00:03:06,159 --> 00:03:07,080
+these two pieces
+
+58
+00:03:07,080 --> 00:03:10,370
+arm and then the Dutch approach and I
+figure for the for pike on
+
+59
+00:03:10,370 --> 00:03:13,620
+the Dutch approach is obviously going to
+be the right one and so I thought I'd
+
+60
+00:03:13,620 --> 00:03:16,659
+try and explain it this way so that
+don't approach is also known as to Brian
+
+61
+00:03:16,659 --> 00:03:17,260
+assembly
+
+62
+00:03:17,260 --> 00:03:20,730
+and the idea behind it is that what you
+do is you you did decompose
+
+63
+00:03:20,730 --> 00:03:24,090
+each puzzle piece down into small
+patches and then you look for
+
+64
+00:03:24,090 --> 00:03:27,349
+similarities among those patches and and
+essentially with these patches that you
+
+65
+00:03:27,349 --> 00:03:28,459
+decompose things into
+
+66
+00:03:28,459 --> 00:03:32,150
+can be easily Hashim compared and a hash
+table which actually ends up making
+
+67
+00:03:32,150 --> 00:03:34,159
+turning everything into linear problem
+
+68
+00:03:34,159 --> 00:03:37,420
+and you're finding the similarities with
+your puzzle pieces
+
+69
+00:03:37,420 --> 00:03:41,099
+and algorithmically it's pretty awesome
+linear in time with the number of pieces
+
+70
+00:03:41,099 --> 00:03:45,069
+which is way better than and square
+right however it's also a linear in
+
+71
+00:03:45,069 --> 00:03:47,709
+memory of the via the data in this is
+largely due to errors in the
+
+72
+00:03:47,709 --> 00:03:48,959
+digitization process
+
+73
+00:03:48,959 --> 00:03:51,959
+if you have small errors when you're
+reading the pieces into the computer
+
+74
+00:03:51,959 --> 00:03:52,379
+memory
+
+75
+00:03:52,379 --> 00:03:56,480
+those errors will cause problems with
+the hashing and you end up having to
+
+76
+00:03:56,480 --> 00:03:59,459
+keep track of all the different tight
+little patterns that you have
+
+77
+00:03:59,459 --> 00:04:03,220
+and so this is basically the problem
+that we've spent five or six years in my
+
+78
+00:04:03,220 --> 00:04:06,860
+lab trying to solve I'm just to show you
+the practical effect to this for about
+
+79
+00:04:06,860 --> 00:04:08,000
+five hundred dollars
+
+80
+00:04:08,000 --> 00:04:12,569
+a sequencing data today week we would
+require about 200 gigabytes of RAM in
+
+81
+00:04:12,569 --> 00:04:13,140
+order to
+
+82
+00:04:13,140 --> 00:04:16,250
+to put that puzzle together to put the
+sequence together
+
+83
+00:04:16,250 --> 00:04:19,160
+I'm and so this was a real problem a
+couple years back it's still a real
+
+84
+00:04:19,160 --> 00:04:19,790
+problem
+
+85
+00:04:19,790 --> 00:04:24,130
+I within the field although we've
+prevent we've provided some sleep
+
+86
+00:04:24,130 --> 00:04:28,669
+some approaches that help deal with it
+so our research challenges
+
+87
+00:04:28,669 --> 00:04:31,710
+a the research challenge that we talk on
+my lap
+
+88
+00:04:31,710 --> 00:04:34,500
+right now the only costs about ten
+thousand dollars and and takes about a
+
+89
+00:04:34,500 --> 00:04:36,259
+week to generate enough sequence
+
+90
+00:04:36,259 --> 00:04:39,449
+that really know commodity computer can
+handle it and even really very few
+
+91
+00:04:39,449 --> 00:04:41,500
+supercomputers can handle that amount
+sequence
+
+92
+00:04:41,500 --> 00:04:45,560
+in terms of us doing the sort a puzzle
+piece putting sequences back together
+
+93
+00:04:45,560 --> 00:04:48,889
+arm and the other problem is that
+hundreds to thousands of such datasets
+
+94
+00:04:48,889 --> 00:04:51,770
+are actually being generated by
+biologists on a on a weekly
+
+95
+00:04:51,770 --> 00:04:55,780
+tempt a monthly basis and so this is
+really a really basque data analysis
+
+96
+00:04:55,780 --> 00:04:56,389
+problem
+
+97
+00:04:56,389 --> 00:04:59,190
+so the inverse to the particle
+accelerator problem where you have one
+
+98
+00:04:59,190 --> 00:05:02,810
+big particle accelerator generating but
+massive fines a date and thousands of
+
+99
+00:05:02,810 --> 00:05:04,150
+people looking at the data
+
+100
+00:05:04,150 --> 00:05:07,289
+here yet many thousands of people
+generating dated only a few people can
+
+101
+00:05:07,289 --> 00:05:09,370
+analyze
+
+102
+00:05:09,370 --> 00:05:13,160
+so the nice thing is that over the last
+five or six years we basically solved or
+
+103
+00:05:13,160 --> 00:05:13,530
+at least
+
+104
+00:05:13,530 --> 00:05:17,410
+address to this top approach and what
+are you talking about today is
+
+105
+00:05:17,410 --> 00:05:20,620
+summer the outcomes are attempts to
+address this bottom-up issue which is
+
+106
+00:05:20,620 --> 00:05:23,240
+that we're generating lots of these
+datasets
+
+107
+00:05:23,240 --> 00:05:26,710
+so our research I the computer science
+at her research
+
+108
+00:05:26,710 --> 00:05:29,780
+is that we've built a streaming washy
+compression approach and basin week
+
+109
+00:05:29,780 --> 00:05:30,710
+newsweek unbeaten
+
+110
+00:05:30,710 --> 00:05:33,960
+each piece it one at a time and say have
+we seen this piece before not enough we
+
+111
+00:05:33,960 --> 00:05:35,180
+have seen the piece before
+
+112
+00:05:35,180 --> 00:05:38,949
+we can discard it and decrease the total
+number pieces were looking at
+
+113
+00:05:38,949 --> 00:05:42,150
+I and it turns out to be a single-pass
+algorithm it's really nice and low
+
+114
+00:05:42,150 --> 00:05:43,530
+memory and all that
+
+115
+00:05:43,530 --> 00:05:46,830
+we've also invest heavily in a lot a
+probabilistic data structures low memory
+
+116
+00:05:46,830 --> 00:05:48,190
+probabilistic data structures
+
+117
+00:05:48,190 --> 00:05:51,449
+I talked about last year and we're now
+to reached a point with a computer
+
+118
+00:05:51,449 --> 00:05:54,590
+science research where r Memory now
+scales considerably better skills are
+
+119
+00:05:54,590 --> 00:05:57,490
+thematic information on the puzzle to
+base the size the picture
+
+120
+00:05:57,490 --> 00:06:01,449
+which is always much smaller the number
+pieces we have and this I is sample
+
+121
+00:06:01,449 --> 00:06:05,199
+dependent but typically it's 120 if
+there are less than the number pieces in
+
+122
+00:06:05,199 --> 00:06:06,169
+the
+
+123
+00:06:06,169 --> 00:06:09,830
+in it that we have in front of us the
+other research approach in
+
+124
+00:06:09,830 --> 00:06:13,330
+the other competitor research is arm
+really was
+
+125
+00:06:13,330 --> 00:06:16,770
+was addressed very nicely by Fernando
+this morning so I'm we've invested
+
+126
+00:06:16,770 --> 00:06:17,430
+heavily
+
+127
+00:06:17,430 --> 00:06:20,590
+coming for the pipe and community I've
+invested heavily in things like open
+
+128
+00:06:20,590 --> 00:06:23,970
+source open science open access
+reproducible computational research
+
+129
+00:06:23,970 --> 00:06:27,229
+using tools that are pretty familiar
+here and I really never heard of in
+
+130
+00:06:27,229 --> 00:06:28,449
+scientific conferences
+
+131
+00:06:28,449 --> 00:06:32,039
+so use get hub we use automated testing
+these continuous integration have a
+
+132
+00:06:32,039 --> 00:06:33,870
+literate testing framework that we've
+just
+
+133
+00:06:33,870 --> 00:06:37,699
+put in place we r blog about our stuff
+we tweet about our stuff and use I pipe
+
+134
+00:06:37,699 --> 00:06:39,699
+and a pic to do all over data analysis
+
+135
+00:06:39,699 --> 00:06:43,460
+essentially our papers do come as
+Fernando says because here's the data
+
+136
+00:06:43,460 --> 00:06:47,360
+here's the GitHub repository here's a
+make file tight makin here's your
+
+137
+00:06:47,360 --> 00:06:51,050
+cures all your data analyzed just as we
+did
+
+138
+00:06:51,050 --> 00:06:54,660
+I'm and as part of this we've been
+extending our efforts into more general
+
+139
+00:06:54,660 --> 00:06:55,599
+protocols
+
+140
+00:06:55,599 --> 00:06:59,419
+so our papers are on our software but
+then we also want to integrate are
+
+141
+00:06:59,419 --> 00:07:01,470
+softer into a larger ecosystem
+
+142
+00:07:01,470 --> 00:07:05,180
+love of stuff that people actually used
+to do biological sequence analysis
+
+143
+00:07:05,180 --> 00:07:08,509
+and for for that purpose we've actually
+been developing these protocols
+
+144
+00:07:08,509 --> 00:07:12,880
+arm and applying them to tackle squishy
+biology problem so I thought I should
+
+145
+00:07:12,880 --> 00:07:14,289
+put a real biology
+
+146
+00:07:14,289 --> 00:07:17,720
+slide in these are our two organisms
+that we work on the find of the Costa
+
+147
+00:07:17,720 --> 00:07:19,780
+France they look basically like rocks
+for
+
+148
+00:07:19,780 --> 00:07:23,139
+for disguise their sea squirts and this
+is what they look like underneath their
+
+149
+00:07:23,139 --> 00:07:23,830
+tunic
+
+150
+00:07:23,830 --> 00:07:26,979
+is actually the gun at which we can
+harvest eggs and sperm from and
+
+151
+00:07:26,979 --> 00:07:30,110
+Tom generate embryos which we then do
+horrible things to
+
+152
+00:07:30,110 --> 00:07:35,509
+arm so a um these protocols are actually
+directly useful for real biological
+
+153
+00:07:35,509 --> 00:07:39,300
+purpose is my me to talk tough the rest
+to the debt for the rest my talk is
+
+154
+00:07:39,300 --> 00:07:43,509
+is are trying to understand how these
+protocols perform computationally
+
+155
+00:07:43,509 --> 00:07:47,479
+so the the trick is rather than writing
+a black box pipeline a set of scripts
+
+156
+00:07:47,479 --> 00:07:48,780
+the fee data into an
+
+157
+00:07:48,780 --> 00:07:53,099
+outputs something arm we actually
+Britain a set of tutorials
+
+158
+00:07:53,099 --> 00:07:56,270
+for running through date announced from
+start to finish
+
+159
+00:07:56,270 --> 00:07:59,789
+in the cloud so the great thing about
+the cloud is you you know what machine
+
+160
+00:07:59,789 --> 00:08:02,590
+you're gonna get you know it resources
+you have you can configure it exactly
+
+161
+00:08:02,590 --> 00:08:05,190
+the way you want it can be 100 percent
+reproducible
+
+162
+00:08:05,190 --> 00:08:09,210
+it's we've written these tutorials which
+can go fine on mine very easily a social
+
+163
+00:08:09,210 --> 00:08:10,599
+with my blog post
+
+164
+00:08:10,599 --> 00:08:13,910
+arm and we've written in English with a
+buncha shall commence
+
+165
+00:08:13,910 --> 00:08:17,860
+just basically know how to use ssh and
+and start up a cloud machinery to run
+
+166
+00:08:17,860 --> 00:08:18,690
+them
+
+167
+00:08:18,690 --> 00:08:22,370
+up and then us we've been using them for
+education and actually on Monday I'll be
+
+168
+00:08:22,370 --> 00:08:24,120
+getting supper carpentry
+
+169
+00:08:24,120 --> 00:08:27,930
+tutorial that's running through some of
+these I'm but then we've also
+
+170
+00:08:27,930 --> 00:08:31,560
+said we'll why stop there why not do
+literate testing so what we've done is
+
+171
+00:08:31,560 --> 00:08:32,959
+we've written a a
+
+172
+00:08:32,959 --> 00:08:37,589
+arm a a very simple shell script that
+actually runs through all our protocols
+
+173
+00:08:37,589 --> 00:08:38,519
+pulls out the
+
+174
+00:08:38,519 --> 00:08:41,589
+shell commands and then turn them into
+shell scripts that can be run for
+
+175
+00:08:41,589 --> 00:08:42,750
+suffered for purposes
+
+176
+00:08:42,750 --> 00:08:46,339
+one purpose is for to competition so if
+people wanna swap in different tools and
+
+177
+00:08:46,339 --> 00:08:46,720
+run
+
+178
+00:08:46,720 --> 00:08:50,390
+the same workload with one thing changed
+they can do that for usually
+
+179
+00:08:50,390 --> 00:08:53,649
+we've actually implement them as
+acceptance tests on our actual course of
+
+180
+00:08:53,649 --> 00:08:56,000
+her which is integrated into these
+protocols
+
+181
+00:08:56,000 --> 00:08:58,500
+and then we are also using the for
+benchmarking and that's what we talked
+
+182
+00:08:58,500 --> 00:08:59,560
+about the rest
+
+183
+00:08:59,560 --> 00:09:02,490
+and I think one thing that that we've
+been seeing is that when you actually do
+
+184
+00:09:02,490 --> 00:09:05,540
+all this when you do these things
+correctly you have everything and get
+
+185
+00:09:05,540 --> 00:09:07,690
+have you have everything automatically
+tested
+
+186
+00:09:07,690 --> 00:09:10,839
+abuse it sorta becomes unstoppable of a
+
+187
+00:09:10,839 --> 00:09:13,920
+force for forward momentum in science
+because I'm
+
+188
+00:09:13,920 --> 00:09:17,680
+we don't have to worry about bedrock are
+our our our backs are protected because
+
+189
+00:09:17,680 --> 00:09:21,250
+everything that that we do is sort of
+automatically I'm run on a pretty
+
+190
+00:09:21,250 --> 00:09:22,459
+regular basis
+
+191
+00:09:22,459 --> 00:09:25,790
+with a few exceptions okay so
+
+192
+00:09:25,790 --> 00:09:29,010
+this talk will be about benchmarking so
+when I get to some benchmarking
+
+193
+00:09:29,010 --> 00:09:32,300
+sir benchmarking strategy was basically
+to go out and find how are protocols ran
+
+194
+00:09:32,300 --> 00:09:33,620
+on real computers
+
+195
+00:09:33,620 --> 00:09:36,620
+arm and I real computers I'm in Fig
+computers that you ran from Amazon
+
+196
+00:09:36,620 --> 00:09:37,730
+Rackspace
+
+197
+00:09:37,730 --> 00:09:41,410
+so we went invented a bunch of cloud
+VM's weeks track to the commencement
+
+198
+00:09:41,410 --> 00:09:42,940
+tutorials using our leader
+
+199
+00:09:42,940 --> 00:09:46,029
+resting framework and instructions for
+running all this and then we use this
+
+200
+00:09:46,029 --> 00:09:46,990
+neat package that
+
+201
+00:09:46,990 --> 00:09:50,070
+we'd never i'd never heard it before but
+that several different people found via
+
+202
+00:09:50,070 --> 00:09:51,279
+Google and sent to me
+
+203
+00:09:51,279 --> 00:09:54,360
+arm cops are which is I am
+
+204
+00:09:54,360 --> 00:09:57,839
+system activity report I think part the
+sister package 26
+
+205
+00:09:57,839 --> 00:10:02,240
+simultaneously sample the CPU RAM and
+disk i/o that is currently happening
+
+206
+00:10:02,240 --> 00:10:05,440
+and from that we get output that looks
+like this which is this is really quite
+
+207
+00:10:05,440 --> 00:10:07,990
+call this from an iPad for notebook in
+matplotlib
+
+208
+00:10:07,990 --> 00:10:11,100
+figure I mean what you can see here is
+for
+
+209
+00:10:11,100 --> 00:10:16,060
+data subset the takes about an hour to
+run we have the CPU load in blue
+
+210
+00:10:16,060 --> 00:10:19,120
+we have the RAM a load in
+
+211
+00:10:19,120 --> 00:10:23,720
+gigabytes in red and the disc 2000
+transactions per second and green
+
+212
+00:10:23,720 --> 00:10:27,490
+we can see for the entire run over
+protocol which goes to quality control
+
+213
+00:10:27,490 --> 00:10:30,540
+and some trimming and filtering and some
+assembly and some
+
+214
+00:10:30,540 --> 00:10:33,490
+differential expression as a lot of
+different things going on but all the
+
+215
+00:10:33,490 --> 00:10:34,410
+various different
+
+216
+00:10:34,410 --> 00:10:37,550
+CP requirements disc requirements and
+arm
+
+217
+00:10:37,550 --> 00:10:41,029
+this artist requirements and memory
+requirements and just keep an eye on the
+
+218
+00:10:41,029 --> 00:10:41,529
+RAM
+
+219
+00:10:41,529 --> 00:10:44,220
+the whole purpose of our research
+program for the last six years has been
+
+220
+00:10:44,220 --> 00:10:45,279
+to decrease
+
+221
+00:10:45,279 --> 00:10:50,779
+this red line to the fiery can run on a
+lark larger right if computers
+
+222
+00:10:50,779 --> 00:10:54,260
+so each protocol as many steps right
+labeled them the quality control digital
+
+223
+00:10:54,260 --> 00:10:56,019
+normalization which is our software
+
+224
+00:10:56,019 --> 00:10:59,550
+assembly annotation and differential
+expression
+
+225
+00:10:59,550 --> 00:11:03,360
+analysis and we're really most interest
+in the RAM intensive bits which is the
+
+226
+00:11:03,360 --> 00:11:05,990
+citadel normalization and the assembly
+
+227
+00:11:05,990 --> 00:11:08,360
+and again this takes about an hour and
+when you're running on the entire
+
+228
+00:11:08,360 --> 00:11:09,230
+protocol
+
+229
+00:11:09,230 --> 00:11:12,910
+to a forty-hour so this is about this is
+about how long it takes to run through a
+
+230
+00:11:12,910 --> 00:11:13,959
+protocol for
+
+231
+00:11:13,959 --> 00:11:16,870
+a Saturday the cost about a
+
+232
+00:11:16,870 --> 00:11:20,630
+about a thousand dollars and took about
+a week to generate on a machine when you
+
+233
+00:11:20,630 --> 00:11:21,690
+can see is
+
+234
+00:11:21,690 --> 00:11:25,130
+arm things change one reason the whole
+day to set
+
+235
+00:11:25,130 --> 00:11:29,180
+a arm the did you norm phrase which is
+our software takes less time but then
+
+236
+00:11:29,180 --> 00:11:31,700
+the assembly actually takes a lot of
+time is very
+
+237
+00:11:31,700 --> 00:11:37,870
+arm a fairly intensive CPU eyes and uses
+a lot of memory is someone predictably
+
+238
+00:11:37,870 --> 00:11:41,300
+and then actually uses very little disk
+has very little discs s
+
+239
+00:11:41,300 --> 00:11:45,780
+so this is arm this is our complete
+protocol run on
+
+240
+00:11:45,780 --> 00:11:49,480
+a sorry is our our protocol on run on
+the entire dataset
+
+241
+00:11:49,480 --> 00:11:54,060
+okay so we have all sorts of numbers
+like this on a repository encourage you
+
+242
+00:11:54,060 --> 00:11:55,670
+to go dig through them if you're
+interested
+
+243
+00:11:55,670 --> 00:12:00,080
+well kinda conclusions did we reach so
+one observation is that Rackspace offers
+
+244
+00:12:00,080 --> 00:12:01,730
+by default faster machines
+
+245
+00:12:01,730 --> 00:12:05,760
+so for the 15 gigabyte machine that
+we're using arm it took only thirty four
+
+246
+00:12:05,760 --> 00:12:07,830
+hours to run for our entire protocol
+
+247
+00:12:07,830 --> 00:12:12,080
+for cost about 23 bucks arm and then the
+various hours on machines were
+
+248
+00:12:12,080 --> 00:12:13,740
+considerably slower although
+
+249
+00:12:13,740 --> 00:12:17,260
+given the different cost you can depend
+whether you are optimized for latency or
+
+250
+00:12:17,260 --> 00:12:17,990
+for costra
+
+251
+00:12:17,990 --> 00:12:23,040
+doesn't either you can you can pick
+about the second observation
+
+252
+00:12:23,040 --> 00:12:26,710
+and this one is something that I would
+love to hear phiri's on is that the
+
+253
+00:12:26,710 --> 00:12:30,280
+the Amazon ephemeral storage is faster
+than the EBS block devices
+
+254
+00:12:30,280 --> 00:12:34,620
+even if you turn the IOC's performance
+all the way up so what we did was we
+
+255
+00:12:34,620 --> 00:12:36,870
+have three and wondered x-large machines
+here
+
+256
+00:12:36,870 --> 00:12:40,110
+these are 15 gigabytes of RAM arm and
+that's basically
+
+257
+00:12:40,110 --> 00:12:43,220
+and a couple 100 gigabytes love local
+ephemeral storage
+
+258
+00:12:43,220 --> 00:12:47,440
+and when we added other for the data
+disc or for a working desk
+
+259
+00:12:47,440 --> 00:12:50,970
+arm the max on my ups I'll operations
+per second
+
+260
+00:12:50,970 --> 00:12:55,120
+onto the data disc for the working desk
+we just slowed things down steadily
+
+261
+00:12:55,120 --> 00:12:58,130
+and I should say this all cost money
+
+262
+00:12:58,130 --> 00:13:01,390
+so we're paying more money to get worse
+performance
+
+263
+00:13:01,390 --> 00:13:04,480
+and I didn't factor in the discussed
+here this is just the per hour us the
+
+264
+00:13:04,480 --> 00:13:07,360
+distrust on a 24-hour basis are
+essentially negligible
+
+265
+00:13:07,360 --> 00:13:10,680
+I'm and the only thing I can think up
+here in this is Mike my current working
+
+266
+00:13:10,680 --> 00:13:11,670
+hypothesis is that
+
+267
+00:13:11,670 --> 00:13:16,100
+we're paying for with the IOC's is
+better average behavior arm
+
+268
+00:13:16,100 --> 00:13:18,980
+whereas the federal storage frequently
+can be better but they don't guarantee
+
+269
+00:13:18,980 --> 00:13:19,930
+that
+
+270
+00:13:19,930 --> 00:13:23,050
+they don't guarantee the the worst case
+scenario could be considerably worse I
+
+271
+00:13:23,050 --> 00:13:24,350
+see a few people nodding
+
+272
+00:13:24,350 --> 00:13:28,880
+arm I'd love to hear from you afterward
+if you actually if this isn't the gas on
+
+273
+00:13:28,880 --> 00:13:29,500
+your part
+
+274
+00:13:29,500 --> 00:13:33,510
+um okay observation number three
+
+275
+00:13:33,510 --> 00:13:37,030
+a so the new architecture is arm a
+
+276
+00:13:37,030 --> 00:13:41,070
+an important aspect a big mission such I
+let me take a step back so all over
+
+277
+00:13:41,070 --> 00:13:41,839
+software
+
+278
+00:13:41,839 --> 00:13:44,950
+rights the all our software the cage for
+software
+
+279
+00:13:44,950 --> 00:13:49,560
+I'm works with really large hash tables
+what we do is we gone we allocate
+
+280
+00:13:49,560 --> 00:13:52,730
+you say I want to use a hundred
+megabytes a hundred about memory
+
+281
+00:13:52,730 --> 00:13:56,500
+and i won its put on for hash tables and
+he's a probabilistic data structures and
+
+282
+00:13:56,500 --> 00:13:59,570
+we use them in this way they implement
+account minsk at which I talked about
+
+283
+00:13:59,570 --> 00:14:00,190
+last year
+
+284
+00:14:00,190 --> 00:14:03,410
+and we use them this way because I'm
+it's considerably more memory efficient
+
+285
+00:14:03,410 --> 00:14:04,430
+than any possible
+
+286
+00:14:04,430 --> 00:14:08,390
+a exact data structure but you have to
+specify how much memory you using up
+
+287
+00:14:08,390 --> 00:14:08,820
+front
+
+288
+00:14:08,820 --> 00:14:12,339
+when you have these big hash table the
+%uh indexing into randomly
+
+289
+00:14:12,339 --> 00:14:15,440
+you run into something called the
+non-uniform memory access Architektur
+
+290
+00:14:15,440 --> 00:14:19,860
+on multi-core on multi CPU machines
+their different parts for the memory
+
+291
+00:14:19,860 --> 00:14:21,420
+that a preferential access to each
+
+292
+00:14:21,420 --> 00:14:26,360
+for creatures the CPU's and so if you're
+on this EP if your computing on the CPU
+
+293
+00:14:26,360 --> 00:14:29,220
+and reaching over to this memory will be
+a lot slower potential even if you
+
+294
+00:14:29,220 --> 00:14:29,690
+reaching
+
+295
+00:14:29,690 --> 00:14:34,240
+to sorta memory that's local to that are
+sepia and so here
+
+296
+00:14:34,240 --> 00:14:37,620
+um we're showing the effects of the
+slowdown what what I did was
+
+297
+00:14:37,620 --> 00:14:41,650
+a slowdown due to the sort of long-range
+memory access and so we did was we took
+
+298
+00:14:41,650 --> 00:14:44,940
+a constant ask a very small task the
+took about a minute
+
+299
+00:14:44,940 --> 00:14:48,160
+on ARM with small amount memory
+
+300
+00:14:48,160 --> 00:14:51,700
+and he did the same task over and over
+and over again with increasing amount of
+
+301
+00:14:51,700 --> 00:14:53,870
+total memory use all the way up to a
+terabyte a memory
+
+302
+00:14:53,870 --> 00:14:57,300
+we do have data sets were we need to use
+a terabyte of memory sources all run on
+
+303
+00:14:57,300 --> 00:15:00,510
+our HBC because right now I don't have
+any cloud computing machines offer
+
+304
+00:15:00,510 --> 00:15:04,290
+filter by the memory nor did I want to
+pay for them so
+
+305
+00:15:04,290 --> 00:15:07,480
+arm VR the total time here
+
+306
+00:15:07,480 --> 00:15:11,209
+is in solid blue me basically see that
+you go from something that takes a
+
+307
+00:15:11,209 --> 00:15:14,440
+minute or two some critics almost an
+hour when you got to tear but a memory
+
+308
+00:15:14,440 --> 00:15:18,320
+now this blue line could be caused by
+the fact they are allocating a terabyte
+
+309
+00:15:18,320 --> 00:15:19,900
+of memory need 20 it out
+
+310
+00:15:19,900 --> 00:15:23,800
+maybe the allocation phase is really
+slow so I separately benchmark to the
+
+311
+00:15:23,800 --> 00:15:26,620
+post allocation phase and we can see is
+
+312
+00:15:26,620 --> 00:15:29,790
+computing on the same day to on the same
+machine
+
+313
+00:15:29,790 --> 00:15:33,310
+but are in slightly in considerably
+larger memory
+
+314
+00:15:33,310 --> 00:15:37,079
+you get it really significant slowdown
+just from the fact you're accessing so
+
+315
+00:15:37,079 --> 00:15:38,720
+much memory
+
+316
+00:15:38,720 --> 00:15:42,880
+and he can get the ratio is the lost
+time ratio due only to the RAM access
+
+317
+00:15:42,880 --> 00:15:46,820
+you can see that arm you get a 20- to
+25-foot slowdown
+
+318
+00:15:46,820 --> 00:15:50,560
+for for odd increasing about a member
+using by
+
+319
+00:15:50,560 --> 00:15:53,560
+by I such a great great amount so Bowers
+
+320
+00:15:53,560 --> 00:15:57,709
+a I was quite a surprise actually effect
+we knew from running at that this was a
+
+321
+00:15:57,709 --> 00:15:58,430
+problem but
+
+322
+00:15:58,430 --> 00:16:02,660
+from watching while Granderson probably
+never really benchmark to this extent
+
+323
+00:16:02,660 --> 00:16:05,940
+so the next question is quite can we
+just use a faster computer while his
+
+324
+00:16:05,940 --> 00:16:07,440
+rent a faster computer
+
+325
+00:16:07,440 --> 00:16:11,020
+so turns out Amazon now offers an m3 to
+axle extra-large
+
+326
+00:16:11,020 --> 00:16:14,530
+and M three types large is a computer
+that has to forget about
+
+327
+00:16:14,530 --> 00:16:17,940
+SSD drives and it's about forty percent
+faster cores
+
+328
+00:16:17,940 --> 00:16:21,270
+and we see we run our demo date is that
+we get about a 30 percent
+
+329
+00:16:21,270 --> 00:16:25,430
+a speed boost goes for about 3,000
+seconds about 2,000 seconds
+
+330
+00:16:25,430 --> 00:16:29,160
+so we thought we'd try it out on the
+whole dataset and here's the fun bit
+
+331
+00:16:29,160 --> 00:16:31,010
+about data-intensive computing
+
+332
+00:16:31,010 --> 00:16:34,380
+arm turns out that we ran out of disk
+space because
+
+333
+00:16:34,380 --> 00:16:37,750
+for gigabyte hard drive 88 about hard
+drives in this case actually ran on a
+
+334
+00:16:37,750 --> 00:16:38,709
+2x-large
+
+335
+00:16:38,709 --> 00:16:42,120
+I'm 80 gigabyte hard drives weren't big
+enough for our full data sets would have
+
+336
+00:16:42,120 --> 00:16:44,020
+had to complicate our engineering
+
+337
+00:16:44,020 --> 00:16:47,480
+in order just to spread the data over
+multiple hard drives like I'm not sure
+
+338
+00:16:47,480 --> 00:16:49,680
+160 X would have been enough either
+
+339
+00:16:49,680 --> 00:16:52,990
+so at the moment with a lot of cloud
+computing platforms you can have fastest
+
+340
+00:16:52,990 --> 00:16:55,160
+car lot of disk be can have both on the
+same
+
+341
+00:16:55,160 --> 00:16:58,440
+computer arm or you end up becoming
+really expensive
+
+342
+00:16:58,440 --> 00:17:01,959
+what does your options and so it's an
+interesting lesson that you know
+
+343
+00:17:01,959 --> 00:17:05,000
+you really have to pick what you can
+optimize for you optimize for latency
+
+344
+00:17:05,000 --> 00:17:07,120
+are you care about costra to you
+
+345
+00:17:07,120 --> 00:17:10,560
+what else what other one which means you
+care about um
+
+346
+00:17:10,560 --> 00:17:14,530
+okay so soul for the data oriented
+portions of the future directions I
+
+347
+00:17:14,530 --> 00:17:15,199
+think
+
+348
+00:17:15,199 --> 00:17:18,390
+arm I'm gonna repair ties investing in
+cash local data structures and
+
+349
+00:17:18,390 --> 00:17:19,230
+algorithms
+
+350
+00:17:19,230 --> 00:17:22,280
+rather these massive hash tables that
+are spread all over memory we're gonna
+
+351
+00:17:22,280 --> 00:17:23,230
+try it free I think
+
+352
+00:17:23,230 --> 00:17:26,760
+I think we should figure out how to work
+more locally
+
+353
+00:17:26,760 --> 00:17:30,790
+arm up some of our our pain is caused by
+reading the same data out to disk in
+
+354
+00:17:30,790 --> 00:17:33,110
+reading a back in because we can keep it
+on memory
+
+355
+00:17:33,110 --> 00:17:36,840
+and I think that we have arms Albert we
+have some algorithms in mind for
+
+356
+00:17:36,840 --> 00:17:39,970
+turning everything into a purely
+streaming approach
+
+357
+00:17:39,970 --> 00:17:43,350
+which may cost more memory but might
+actually be considerably faster
+
+358
+00:17:43,350 --> 00:17:46,800
+and then the somewhat surprising
+conclusion to me I mean I guess I was
+
+359
+00:17:46,800 --> 00:17:49,200
+already leaning in this direction it's
+nice to have some numbers
+
+360
+00:17:49,200 --> 00:17:52,020
+I'm worried I don't know that strict
+code optimization infrastructure
+
+361
+00:17:52,020 --> 00:17:52,800
+engineers and
+
+362
+00:17:52,800 --> 00:17:56,390
+into a worthwhile investment force that
+would complicate the protocols would
+
+363
+00:17:56,390 --> 00:17:58,010
+complicate what we're actually doing
+
+364
+00:17:58,010 --> 00:18:02,030
+and it's not clear that sinn give us
+more than a 50 percent speed increase
+
+365
+00:18:02,030 --> 00:18:05,300
+compared to what like cash up to make
+cash local data structures items will
+
+366
+00:18:05,300 --> 00:18:05,760
+give us
+
+367
+00:18:05,760 --> 00:18:08,929
+second thirty or forty fold increase
+speed
+
+368
+00:18:08,929 --> 00:18:12,490
+okay cell I give a lot of talks
+apparently 18
+
+369
+00:18:12,490 --> 00:18:16,300
+speak I'm somewhat approachable which is
+something I'm working on arm
+
+370
+00:18:16,300 --> 00:18:19,919
+and arm so people come up an offer
+solutions
+
+371
+00:18:19,919 --> 00:18:22,929
+so here a couple frequently offered
+solutions so
+
+372
+00:18:22,929 --> 00:18:26,090
+I'm you should like totally multi for
+that arm
+
+373
+00:18:26,090 --> 00:18:30,200
+and so we did this a from we we read a
+chapter
+
+374
+00:18:30,200 --> 00:18:34,320
+a I'm from the performance of a source
+applications and we can actually get
+
+375
+00:18:34,320 --> 00:18:38,160
+a two or four foot speed up before we
+come release all the i/o bound
+
+376
+00:18:38,160 --> 00:18:41,040
+arm and it turns out that the code the
+results from this is is is kind of a
+
+377
+00:18:41,040 --> 00:18:42,929
+mess and has a current maintenance
+headache
+
+378
+00:18:42,929 --> 00:18:46,100
+and so it's not clear it was a great
+investment actually I'm
+
+379
+00:18:46,100 --> 00:18:49,370
+how do people just crush that workload
+dude I get us a lot
+
+380
+00:18:49,370 --> 00:18:53,040
+are it's unlikely be cost-effective we
+have all talk about this in a little bit
+
+381
+00:18:53,040 --> 00:18:54,620
+but we have a lot of data
+
+382
+00:18:54,620 --> 00:18:58,370
+we have no locality in the data we can't
+chart the data easily
+
+383
+00:18:58,370 --> 00:19:02,650
+arm and our individual compute per unit
+of data is essentially trivial
+
+384
+00:19:02,650 --> 00:19:06,890
+and so I'm the cost to distributing it
+fanning out in fanning a backhand and
+
+385
+00:19:06,890 --> 00:19:07,940
+getting it back in
+
+386
+00:19:07,940 --> 00:19:10,940
+is likely to to be the over dominate
+
+387
+00:19:10,940 --> 00:19:14,310
+arm the cost of everything but I'm and
+then
+
+388
+00:19:14,310 --> 00:19:19,000
+arm I think Fernando talked about this
+also have you tried quote my proprietary
+
+389
+00:19:19,000 --> 00:19:20,570
+Big Data technology stack
+
+390
+00:19:20,570 --> 00:19:23,270
+you got a silicon valley in a buncha
+people are like hey I have a company
+
+391
+00:19:23,270 --> 00:19:25,050
+that that they can solve all your
+problems
+
+392
+00:19:25,050 --> 00:19:28,610
+I can't give you the source code but
+it's gonna be awesome when you run it
+
+393
+00:19:28,610 --> 00:19:31,300
+and the problem is that if you actually
+trying to do science having hidden
+
+394
+00:19:31,300 --> 00:19:33,360
+methods that may have unknown effects
+
+395
+00:19:33,360 --> 00:19:37,560
+doesn't that can possibly work arm are
+well it does for a lot of people but I
+
+396
+00:19:37,560 --> 00:19:38,550
+don't think it's good signs
+
+397
+00:19:38,550 --> 00:19:43,000
+some okay so arm here's the ratty
+portion of my talk
+
+398
+00:19:43,000 --> 00:19:47,429
+optimization for scaling so everybody
+wants to suggest a linear-time memory
+
+399
+00:19:47,429 --> 00:19:48,350
+improvements
+
+400
+00:19:48,350 --> 00:19:51,909
+and we actually spent two years eking
+out a 20-fold improvement during which
+
+401
+00:19:51,909 --> 00:19:54,850
+we forgot a hundred fold increase in
+data generation per
+
+402
+00:19:54,850 --> 00:19:57,890
+arm a per unit dollar
+
+403
+00:19:57,890 --> 00:20:02,070
+arm which meant that we were falling
+slightly slower behind and everybody
+
+404
+00:20:02,070 --> 00:20:02,780
+else
+
+405
+00:20:02,780 --> 00:20:06,700
+was not a winning strategy the pasta
+problem is a graph problem it's got big
+
+406
+00:20:06,700 --> 00:20:10,280
+date it's got no locality and it's got
+small computer simply not a friendly
+
+407
+00:20:10,280 --> 00:20:12,820
+computational problem for today's
+architectures
+
+408
+00:20:12,820 --> 00:20:15,940
+and what we really need to do a scale
+our algorithms or rather the algorithms
+
+409
+00:20:15,940 --> 00:20:17,810
+are being used in the entire field
+
+410
+00:20:17,810 --> 00:20:21,300
+and we gone now down to the point where
+machines things that previously needed
+
+411
+00:20:21,300 --> 00:20:23,280
+to run on really expensive you know
+
+412
+00:20:23,280 --> 00:20:27,210
+arm a 16 terabyte memory machines
+
+413
+00:20:27,210 --> 00:20:30,970
+can now run and single chassis computers
+in about 15 gigabytes of memory
+
+414
+00:20:30,970 --> 00:20:34,870
+are because we chose to up stop doing
+
+415
+00:20:34,870 --> 00:20:38,080
+doing be I'll linear-time memory
+improvement and go for
+
+416
+00:20:38,080 --> 00:20:41,110
+for algorithm scaling it to take five
+years but
+
+417
+00:20:41,110 --> 00:20:44,490
+you know I'm an academic that's okay so
+arm
+
+418
+00:20:44,490 --> 00:20:47,880
+optimization for scaling I think many
+people forget when they see something
+
+419
+00:20:47,880 --> 00:20:49,110
+like this and they say why
+
+420
+00:20:49,110 --> 00:20:52,510
+gonna choose the black line because the
+red lines clearly inferior in terms of
+
+421
+00:20:52,510 --> 00:20:55,770
+compute resources needed the forget that
+if you zoom out any tackle a big enough
+
+422
+00:20:55,770 --> 00:20:58,270
+problem that scaling is eventually gonna
+dominate
+
+423
+00:20:58,270 --> 00:21:01,790
+and this can be a better investment have
+your time if your date or size is
+
+424
+00:21:01,790 --> 00:21:02,480
+growing
+
+425
+00:21:02,480 --> 00:21:05,899
+is totally made-up craft just in case
+you're wondering
+
+426
+00:21:05,899 --> 00:21:10,080
+um and I actually see it Pike on an
+online in blogging and so on
+
+427
+00:21:10,080 --> 00:21:13,130
+that a lot of people are focusing on
+pleasantly parallel problems anything
+
+428
+00:21:13,130 --> 00:21:15,280
+that you can shove into her do basically
+
+429
+00:21:15,280 --> 00:21:18,460
+and I worry about a couple things one is
+at hoops fundamentally not that
+
+430
+00:21:18,460 --> 00:21:19,409
+interesting
+
+431
+00:21:19,409 --> 00:21:22,980
+arm another is that if you're actually
+doing research on the stuff it's about a
+
+432
+00:21:22,980 --> 00:21:24,800
+hundred fold improvement not about a
+
+433
+00:21:24,800 --> 00:21:28,159
+can be buy more machines and throw throw
+things at the machines ultimately
+
+434
+00:21:28,159 --> 00:21:30,179
+depending on how your data input scaling
+
+435
+00:21:30,179 --> 00:21:33,270
+you're going to run into problems with
+that approach a man I think research can
+
+436
+00:21:33,270 --> 00:21:33,770
+really
+
+437
+00:21:33,770 --> 00:21:37,600
+a there's a lotta CS research gets a lot
+about press because
+
+438
+00:21:37,600 --> 00:21:40,830
+I'm we look like we're not doing
+anything and maybe sometimes that's true
+
+439
+00:21:40,830 --> 00:21:43,890
+but we're also working on things like
+scaling new problems and evaluating
+
+440
+00:21:43,890 --> 00:21:45,929
+creating new data structures occurs I
+think
+
+441
+00:21:45,929 --> 00:21:49,600
+I'm we performing a valuable useful
+service sometimes
+
+442
+00:21:49,600 --> 00:21:53,929
+I'm this is a talk by Pike on 2011 aside
+from iPad Con 2011 talk so
+
+443
+00:21:53,929 --> 00:21:57,490
+I'd like to make a pitch to all love you
+which is life's too short to tackle
+
+444
+00:21:57,490 --> 00:21:58,560
+these problems
+
+445
+00:21:58,560 --> 00:22:02,450
+you should come work for me for a lot
+less money instead um
+
+446
+00:22:02,450 --> 00:22:06,220
+are academia more generally here we have
+problems that are really hard to
+
+447
+00:22:06,220 --> 00:22:07,419
+paralyze
+
+448
+00:22:07,419 --> 00:22:11,100
+and for which we have no money
+whatsoever its way better than going to
+
+449
+00:22:11,100 --> 00:22:13,890
+a Google in working on Google search
+which is relatively easy
+
+450
+00:22:13,890 --> 00:22:17,669
+so arm you know come talk to me I was
+gonna say um
+
+451
+00:22:17,669 --> 00:22:20,149
+you know Alex Gaynor some points going
+to realize that is life's not a
+
+452
+00:22:20,149 --> 00:22:21,429
+challenging and is going to come
+
+453
+00:22:21,429 --> 00:22:25,010
+work for me for pennies since gonna be
+awesome okay
+
+454
+00:22:25,010 --> 00:22:28,600
+so I think I'll conclude their I leash
+in a min
+
+455
+00:22:28,600 --> 00:22:32,090
+as graduates who started the
+benchmarking project I'm arm
+
+456
+00:22:32,090 --> 00:22:35,750
+I and then a bunch of lab is contributed
+to this Mike Russow Louise Arbour
+
+457
+00:22:35,750 --> 00:22:41,850
+work it camille in QP arm all over stuff
+is freely available under BSD license is
+
+458
+00:22:41,850 --> 00:22:45,419
+I have a blog post with resources and
+pointers to everything
+
+459
+00:22:45,419 --> 00:22:48,950
+I should point out Michael the kit
+Camille and QPR here
+
+460
+00:22:48,950 --> 00:22:52,190
+icon are you can probably afford to buy
+them from me
+
+461
+00:22:52,190 --> 00:22:55,490
+arm I did put the pictures up because I
+wanna make it a little bit more
+
+462
+00:22:55,490 --> 00:22:57,020
+challenging for you to find them
+
+463
+00:22:57,020 --> 00:23:01,110
+arm the reason I say this is actually
+better camille's right over there
+
+464
+00:23:01,110 --> 00:23:04,159
+um I the reason I say this as i've now
+
+465
+00:23:04,159 --> 00:23:09,270
+II had one gradison get his PhD in go to
+Amazon six months before he defended
+
+466
+00:23:09,270 --> 00:23:12,500
+and another graduate student got bought
+by Google i sorry got offered a job by
+
+467
+00:23:12,500 --> 00:23:13,380
+Google
+
+468
+00:23:13,380 --> 00:23:17,139
+arm about 32 years before his defense
+and he was like
+
+469
+00:23:17,139 --> 00:23:20,880
+hey they just offered be triple your
+salary what he say much well should go
+
+470
+00:23:20,880 --> 00:23:26,050
+arm so a arm but is a little frustrating
+to keep on losing people but there are
+
+471
+00:23:26,050 --> 00:23:28,830
+some people in Asia hire them so please
+
+472
+00:23:28,830 --> 00:23:32,310
+go ahead I'll cheer for them while
+crying
+
+473
+00:23:32,310 --> 00:23:39,310
+arm and that's all I have to say thank
+you for listening
+
+474
+00:23:44,180 --> 00:23:47,680
+sorry if you have anything to say I can
+line up
+
+475
+00:23:47,680 --> 00:23:51,880
+is much from here the middle of the room
+I we're taking questions for Titus
+
+476
+00:23:51,880 --> 00:23:58,880
+and job offers for taxes students yes
+
+477
+00:23:58,960 --> 00:24:02,660
+i'd as always on am
+
+478
+00:24:02,660 --> 00:24:05,900
+I think the answer to the question
+advances
+
+479
+00:24:05,900 --> 00:24:09,510
+don't know but II I know I've talked to
+you
+
+480
+00:24:09,510 --> 00:24:13,340
+but I work in a nother in a science lab
+in a different domain
+
+481
+00:24:13,340 --> 00:24:17,540
+thats not related in molecular dynamics
+and
+
+482
+00:24:17,540 --> 00:24:21,660
+this lab has built very custom hardware
+
+483
+00:24:21,660 --> 00:24:26,190
+and as a consequence got to three orders
+of magnitude improvement
+
+484
+00:24:26,190 --> 00:24:29,290
+over the next best supercomputers in the
+world for
+
+485
+00:24:29,290 --> 00:24:32,450
+this problem set and no good for
+anything else
+
+486
+00:24:32,450 --> 00:24:35,750
+we do have like things like I'm
+
+487
+00:24:35,750 --> 00:24:39,220
+memory locality in the partition space
+
+488
+00:24:39,220 --> 00:24:42,290
+although I'm latency requirements in
+
+489
+00:24:42,290 --> 00:24:46,050
+is very crucial so it is a very
+different sort I'm
+
+490
+00:24:46,050 --> 00:24:49,450
+parallelism issues than you have but
+
+491
+00:24:49,450 --> 00:24:54,690
+if you had a lot more money have
+millions and millions to actually design
+
+492
+00:24:54,690 --> 00:24:55,330
+hardware
+
+493
+00:24:55,330 --> 00:24:58,460
+is this something that custom hard work
+
+494
+00:24:58,460 --> 00:25:02,680
+good make you to three orders of
+magnitude faster present pastor
+
+495
+00:25:02,680 --> 00:25:05,780
+Chur so custom hardware so amor
+
+496
+00:25:05,780 --> 00:25:09,430
+yes so so there's a company called I
+think conde
+
+497
+00:25:09,430 --> 00:25:14,250
+that that is doing this um and to the
+the fundamental problem here
+
+498
+00:25:14,250 --> 00:25:17,330
+I'm in part for the fact that some to
+gimme billions of dollars out invest in
+
+499
+00:25:17,330 --> 00:25:18,440
+people rather than hardware but
+
+500
+00:25:18,440 --> 00:25:23,700
+um or vacation but G arm the fundamental
+problem for here is that the data
+
+501
+00:25:23,700 --> 00:25:26,600
+generation capacity has been so
+democratize that there are
+
+502
+00:25:26,600 --> 00:25:29,970
+thousands if not tens of thousands of
+laps generating the stator
+
+503
+00:25:29,970 --> 00:25:34,180
+and so that custom hardware would have
+to be bought by all of them
+
+504
+00:25:34,180 --> 00:25:38,000
+and typically the generate the data or
+provided centrally
+
+505
+00:25:38,000 --> 00:25:42,150
+and and the feel the there's a cultural
+problem feel the files he just doesn't
+
+506
+00:25:42,150 --> 00:25:43,120
+like to play nice
+
+507
+00:25:43,120 --> 00:25:46,150
+that way and and there's a another
+problem which is that I'm
+
+508
+00:25:46,150 --> 00:25:50,770
+the downstream applications change
+applications change fast enough
+
+509
+00:25:50,770 --> 00:25:54,420
+that I worry about the lack flexibility
+so I'd be interested in looking into
+
+510
+00:25:54,420 --> 00:25:57,790
+FPGA style solutions we can reconfigure
+exactly how you doing it
+
+511
+00:25:57,790 --> 00:26:03,340
+but I worry that that the time cost of
+investing in hardware generation
+
+512
+00:26:03,340 --> 00:26:06,550
+would be too long on the scale
+
+513
+00:26:06,550 --> 00:26:10,380
+the speed with which field is moving at
+ano Justin intuition
+
+514
+00:26:10,380 --> 00:26:14,210
+but you know what give me a million as a
+pilot project
+
+515
+00:26:14,210 --> 00:26:19,270
+and and we'll see and I can keep some my
+grad students
+
+516
+00:26:19,270 --> 00:26:23,540
+high tide is very top at maybe its
+different biology but
+
+517
+00:26:23,540 --> 00:26:28,120
+in my own academic experience in
+computer science after engineering
+
+518
+00:26:28,120 --> 00:26:31,679
+unfortunately that funding agencies in
+the journals tended not to care about
+
+519
+00:26:31,679 --> 00:26:33,300
+this incredibly interesting
+
+520
+00:26:33,300 --> 00:26:37,110
+awesome very difficult work necessary to
+build the tools and techniques
+
+521
+00:26:37,110 --> 00:26:40,650
+to do that now quote real research same
+field same field
+
+522
+00:26:40,650 --> 00:26:43,830
+are you see any changes in out I
+
+523
+00:26:43,830 --> 00:26:47,620
+yeah black beanie for a couple years now
+are you seeing any changes in how
+
+524
+00:26:47,620 --> 00:26:51,660
+yeah children season journals look at
+this kind of work for SES
+
+525
+00:26:51,660 --> 00:26:55,950
+your some there's a great post by Jake
+Vander PLAs
+
+526
+00:26:55,950 --> 00:26:59,110
+on the Big Data brain drain and the
+problem is that
+
+527
+00:26:59,110 --> 00:27:02,300
+anybody that knows how to effectively
+develop software and has
+
+528
+00:27:02,300 --> 00:27:05,780
+any intelligence whatsoever fleas
+academia for industry as quickly as
+
+529
+00:27:05,780 --> 00:27:06,410
+possible
+
+530
+00:27:06,410 --> 00:27:09,630
+to getting paid a lot more and they're
+doing work but appreciated
+
+531
+00:27:09,630 --> 00:27:13,790
+and academia especially in biology we
+have this problem that we don't have any
+
+532
+00:27:13,790 --> 00:27:14,290
+senior
+
+533
+00:27:14,290 --> 00:27:17,300
+we don't have many senior people that
+are really focus on software engineering
+
+534
+00:27:17,300 --> 00:27:20,270
+and tool development and so that I
+represent in the granite panels are not
+
+535
+00:27:20,270 --> 00:27:20,670
+risen
+
+536
+00:27:20,670 --> 00:27:24,410
+wreck represented the people that decide
+how the findings allocated and
+
+537
+00:27:24,410 --> 00:27:25,020
+I
+
+538
+00:27:25,020 --> 00:27:28,110
+it's just it's a big problem because
+there's nobody to speak for that I'm
+
+539
+00:27:28,110 --> 00:27:30,929
+it slowly changing in part because
+myself and some other people are finally
+
+540
+00:27:30,929 --> 00:27:32,200
+getting to the point where
+
+541
+00:27:32,200 --> 00:27:36,380
+arm were senior enough to talk to the
+program managers
+
+542
+00:27:36,380 --> 00:27:39,470
+and program managers are also seeing the
+slowdown
+
+543
+00:27:39,470 --> 00:27:42,600
+in biology because all the pile church
+I'll just for generating data
+
+544
+00:27:42,600 --> 00:27:46,899
+but they cannot analyze at all so it
+slowly changing but it's gonna be a
+
+545
+00:27:46,899 --> 00:27:50,059
+generational thing it's always more
+exciting to generate new data you can
+
+546
+00:27:50,059 --> 00:27:52,210
+analyze it that it is to analyze
+
+547
+00:27:52,210 --> 00:27:58,049
+them to do the boring dollar figure to
+analyze the data you already have hi
+
+548
+00:27:58,049 --> 00:28:01,919
+and one green yours specific problem or
+gin every problem apology
+
+549
+00:28:01,919 --> 00:28:05,510
+are the meaningful to you on
+crowdsourcing or outsourcing
+
+550
+00:28:05,510 --> 00:28:10,260
+arm I have to think about it
+
+551
+00:28:10,260 --> 00:28:14,620
+are this one probably not but I think
+we're trying to get to the point where
+
+552
+00:28:14,620 --> 00:28:18,070
+the data we generate the information we
+generate from the data will be amenable
+
+553
+00:28:18,070 --> 00:28:19,149
+to human
+
+554
+00:28:19,149 --> 00:28:22,409
+analysis right now this is all fairly
+boring
+
+555
+00:28:22,409 --> 00:28:26,029
+i'm ok I'm a human time scale we just
+wanna keep you but
+
+556
+00:28:26,029 --> 00:28:29,929
+it means something down the road and and
+that's where we should bring in humans I
+
+557
+00:28:29,929 --> 00:28:31,770
+don't think it's ready for crowdsourcing
+at but
+
+558
+00:28:31,770 --> 00:28:35,929
+have to think about that thank you here
+
+559
+00:28:35,929 --> 00:28:39,950
+isola Amazon again each PC kinda
+networks at
+
+560
+00:28:39,950 --> 00:28:43,059
+and I am think person but what happens
+when commodity
+
+561
+00:28:43,059 --> 00:28:46,169
+together as well run ever learn
+
+562
+00:28:46,169 --> 00:28:50,450
+but I sleep so so I get the sky get the
+kind of question
+
+563
+00:28:50,450 --> 00:28:53,450
+a fair bit what if you had this kind HPC
+and I guess
+
+564
+00:28:53,450 --> 00:28:57,140
+what i'd say is arm were almost entirely
+RAM limited
+
+565
+00:28:57,140 --> 00:29:00,640
+so soon as you have to run across
+multiple chassis it's no longer
+
+566
+00:29:00,640 --> 00:29:04,210
+effective so number HPC offerings from
+
+567
+00:29:04,210 --> 00:29:08,159
+from Amazon in our local HPC at Michigan
+State all have fastener connects
+
+568
+00:29:08,159 --> 00:29:11,340
+but the task the individual charities
+are necessarily that powerful
+
+569
+00:29:11,340 --> 00:29:14,669
+and so we're trying to do everything on
+a single chassis with no you something
+
+570
+00:29:14,669 --> 00:29:17,630
+to consider even like in in a band
+they're going to these higher gas still
+
+571
+00:29:17,630 --> 00:29:18,080
+too slow
+
+572
+00:29:18,080 --> 00:29:21,419
+I I think it's a latency that's a
+problem at the speed
+
+573
+00:29:21,419 --> 00:29:25,690
+Feb related to that
+
+574
+00:29:25,690 --> 00:29:29,630
+Braintree I think the reason believe the
+reason I left is that the job market is
+
+575
+00:29:29,630 --> 00:29:32,850
+for nonessential like you get less but
+it's hard to find a job at all
+
+576
+00:29:32,850 --> 00:29:36,720
+often her what do you think like
+solutions for that event
+
+577
+00:29:36,720 --> 00:29:39,889
+okay so
+
+578
+00:29:39,889 --> 00:29:43,840
+home like we're just more grant money
+solvency sustainable me
+
+579
+00:29:43,840 --> 00:29:48,010
+yeah I
+
+580
+00:29:48,010 --> 00:29:51,570
+maybe it's a systemic it's a systemic
+issue arm
+
+581
+00:29:51,570 --> 00:29:55,419
+enemy more grant money is the is the
+easy is the easy answer I think the
+
+582
+00:29:55,419 --> 00:29:56,880
+better solution is to become
+
+583
+00:29:56,880 --> 00:30:01,760
+I don't know maybe more bebe a little
+more efficient her using grant money
+
+584
+00:30:01,760 --> 00:30:05,020
+allocated to people are doing data
+analysis as well as data generation
+
+585
+00:30:05,020 --> 00:30:08,779
+and then there would be in need right
+now yeah I don't know it's a very ca
+
+586
+00:30:08,779 --> 00:30:12,889
+let's get some beer went up a
+replacement Titus brown
+

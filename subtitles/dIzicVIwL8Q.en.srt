@@ -1,0 +1,1515 @@
+1
+00:00:00,620 --> 00:00:04,529
+so this will be last talk for the day is
+going to be a talk called
+
+2
+00:00:04,529 --> 00:00:07,859
+Python plus geographic data because to
+be a bus
+
+3
+00:00:07,859 --> 00:00:10,980
+please give a hand for Miley sacks Ben
+Burnett
+
+4
+00:00:10,980 --> 00:00:17,980
+there is this fabulous bitly link to my
+talk
+
+5
+00:00:19,900 --> 00:00:23,170
+and including everything that I'm not
+going to have time to say in markdown
+
+6
+00:00:23,170 --> 00:00:23,880
+format
+
+7
+00:00:23,880 --> 00:00:27,210
+cell there's that for your reference
+thank you for hanging out till the end
+
+8
+00:00:27,210 --> 00:00:27,900
+of the day
+
+9
+00:00:27,900 --> 00:00:31,179
+and I'm really excited to share this
+with you
+
+10
+00:00:31,179 --> 00:00:36,380
+so why do a thing Python and geographic
+area gonna be best friends forever
+
+11
+00:00:36,380 --> 00:00:41,270
+well I love maps but making them can be
+a real pain
+
+12
+00:00:41,270 --> 00:00:46,180
+and it the reason is wild card harper's
+don't just trace stuff anymore you have
+
+13
+00:00:46,180 --> 00:00:47,160
+to deal with
+
+14
+00:00:47,160 --> 00:00:51,320
+the dear and an
+
+15
+00:00:51,320 --> 00:00:56,500
+that can be really really really awful
+it is usually not in the format that you
+
+16
+00:00:56,500 --> 00:00:59,160
+need there's like a hundred different
+formats at least
+
+17
+00:00:59,160 --> 00:01:03,809
+several obvious errors everyone with
+sinbad data has created their own now
+
+18
+00:01:03,809 --> 00:01:05,519
+island at some point
+
+19
+00:01:05,519 --> 00:01:08,900
+split up into fifty different files from
+
+20
+00:01:08,900 --> 00:01:13,119
+and is definitely in the wrong
+protection so on
+
+21
+00:01:13,119 --> 00:01:18,630
+sometimes you even have no metadata so
+you don't know what protection it in one
+
+22
+00:01:18,630 --> 00:01:19,920
+including its then
+
+23
+00:01:19,920 --> 00:01:23,950
+it can be pretty awful cell you can
+point and click all day and you're outta
+
+24
+00:01:23,950 --> 00:01:25,590
+the box yes software
+
+25
+00:01:25,590 --> 00:01:28,920
+or you can bring Python it to the max
+
+26
+00:01:28,920 --> 00:01:32,509
+so a little bit about vector geo data
+
+27
+00:01:32,509 --> 00:01:37,119
+and before we get started it can be made
+up of one or several files
+
+28
+00:01:37,119 --> 00:01:41,680
+it will have a cordon it's a steamer
+production associated with it to show
+
+29
+00:01:41,680 --> 00:01:45,369
+held their ground earth ends up on a
+flat surface
+
+30
+00:01:45,369 --> 00:01:49,240
+and it can be made up the one or several
+layers have data
+
+31
+00:01:49,240 --> 00:01:55,159
+each of which has one or more features
+and each feature has to have geometry
+
+32
+00:01:55,159 --> 00:01:59,610
+and that includes both the type so
+whether it's a point line polygon
+
+33
+00:01:59,610 --> 00:02:03,439
+and of course its accordance themselves
+and then
+
+34
+00:02:03,439 --> 00:02:07,310
+each feature also has berries other
+attributes and properties these vary
+
+35
+00:02:07,310 --> 00:02:09,020
+widely depending on the data
+
+36
+00:02:09,020 --> 00:02:14,590
+so now we can talk about some my
+favorite paper on packages to use to
+
+37
+00:02:14,590 --> 00:02:15,890
+deal with this problem
+
+38
+00:02:15,890 --> 00:02:19,120
+of the owners the first one that I
+really like him
+
+39
+00:02:19,120 --> 00:02:22,150
+and what can be an
+
+40
+00:02:22,150 --> 00:02:27,290
+really awesome when you're making a map
+there's great free data all over the
+
+41
+00:02:27,290 --> 00:02:30,160
+place national earth is a great place to
+you
+
+42
+00:02:30,160 --> 00:02:33,950
+get and simplify made world
+
+43
+00:02:33,950 --> 00:02:37,599
+data and country is nice nice car to
+graphically
+
+44
+00:02:37,599 --> 00:02:41,030
+mind out and a lot of interesting
+attributes but it's usually not
+
+45
+00:02:41,030 --> 00:02:45,420
+in a format that I like cell but say we
+wanna change it to dr. Jason
+
+46
+00:02:45,420 --> 00:02:48,440
+so after you download your data
+
+47
+00:02:48,440 --> 00:02:51,810
+you just create a really short sketch
+and with Fianna
+
+48
+00:02:51,810 --> 00:02:56,890
+you can open it up it automatically
+figures out what it means in the open
+
+49
+00:02:56,890 --> 00:02:58,670
+part but then when you open up your
+
+50
+00:02:58,670 --> 00:03:04,569
+output file you need to tell okay which
+coordinate system agony use what's the
+
+51
+00:03:04,569 --> 00:03:08,120
+schema so that includes a geometry and
+the attributes
+
+52
+00:03:08,120 --> 00:03:12,370
+on and what do you want to turn it into
+you so here we're saying we just want to
+
+53
+00:03:12,370 --> 00:03:13,209
+use the same
+
+54
+00:03:13,209 --> 00:03:16,340
+as the input for the corner system and
+
+55
+00:03:16,340 --> 00:03:19,360
+the schema and but we want to change it
+to GA Jason
+
+56
+00:03:19,360 --> 00:03:23,440
+and then for each feature in that
+original file we go through it one by
+
+57
+00:03:23,440 --> 00:03:24,739
+one and say okay
+
+58
+00:03:24,739 --> 00:03:30,440
+the sizes on Antarctica let's keep it
+and you can also filter by bounding box
+
+59
+00:03:30,440 --> 00:03:31,220
+if you want
+
+60
+00:03:31,220 --> 00:03:34,129
+the eastern hemisphere Western
+Hemisphere much smaller or bigger than
+
+61
+00:03:34,129 --> 00:03:34,599
+that
+
+62
+00:03:34,599 --> 00:03:39,470
+you can do that really is Lee with your
+own as well yea data
+
+63
+00:03:39,470 --> 00:03:45,840
+another great Python packages pipe
+wrench so say you I am
+
+64
+00:03:45,840 --> 00:03:48,900
+projections can be a problem that last
+one
+
+65
+00:03:48,900 --> 00:03:53,239
+actually not super pretty especially at
+the top and bottom and
+
+66
+00:03:53,239 --> 00:03:59,010
+at the polls there an if you're tracing
+great circle routes
+
+67
+00:03:59,010 --> 00:04:03,670
+if you are and making a map at the polls
+you definitely need to use an
+
+68
+00:04:03,670 --> 00:04:05,069
+appropriate protection
+
+69
+00:04:05,069 --> 00:04:10,720
+and pay pride works really well with the
+honor to do that so in this example
+
+70
+00:04:10,720 --> 00:04:16,639
+we are gonna go ahead and polling in the
+schema from the original file
+
+71
+00:04:16,639 --> 00:04:20,430
+but then it take the coordinate system
+and put it into production
+
+72
+00:04:20,430 --> 00:04:23,949
+object and then after we open it up
+
+73
+00:04:23,949 --> 00:04:27,199
+the new one and say okay I wanna get
+
+74
+00:04:27,199 --> 00:04:32,000
+I want it to be in projection 2163
+that's a code any PSG code you can with
+
+75
+00:04:32,000 --> 00:04:36,560
+peace out these are well-known codes
+felt kinda different productions
+
+76
+00:04:36,560 --> 00:04:41,570
+and then get ready to go and by putting
+the output protection
+
+77
+00:04:41,570 --> 00:04:44,780
+in a projection and while
+
+78
+00:04:44,780 --> 00:04:49,440
+this is work it's kind of weird on
+natural earth data and some other is
+
+79
+00:04:49,440 --> 00:04:53,860
+polygon something that's multi polygons
+a multi polygon is kinda higher level
+
+80
+00:04:53,860 --> 00:04:56,250
+they can contain a number poly irons
+
+81
+00:04:56,250 --> 00:05:00,860
+South in either those cases you need to
+treat it a little differently cuz the
+
+82
+00:05:00,860 --> 00:05:03,139
+corn its themselves will live one level
+
+83
+00:05:03,139 --> 00:05:08,229
+deeper so depending on whether it's a
+polygon arm of the polygon
+
+84
+00:05:08,229 --> 00:05:13,210
+you use the yeah you you can a stack it
+up a little differently but in either
+
+85
+00:05:13,210 --> 00:05:16,680
+case you used chance form which is fun
+pipe Raj
+
+86
+00:05:16,680 --> 00:05:19,770
+to change every single core net one by
+one
+
+87
+00:05:19,770 --> 00:05:24,070
+from the input production to the output
+production
+
+88
+00:05:24,070 --> 00:05:29,509
+and then you can get something like this
+spree awesome
+
+89
+00:05:29,509 --> 00:05:33,660
+one last year an example so I am a real
+I'm quantified self
+
+90
+00:05:33,660 --> 00:05:37,449
+ke Kai & Bike Wear fit bid at Taconic
+like Ryan's
+
+91
+00:05:37,449 --> 00:05:40,870
+I've never bothered to visualize the
+mall in a map before
+
+92
+00:05:40,870 --> 00:05:44,090
+which is kinda silly colette make maps
+all time
+
+93
+00:05:44,090 --> 00:05:47,300
+I'm one of the biggest problems is that
+have all the separate tracks in out
+
+94
+00:05:47,300 --> 00:05:49,020
+download the all separately
+
+95
+00:05:49,020 --> 00:05:52,220
+and I just wanna do it once it on do it
+over and over and over again
+
+96
+00:05:52,220 --> 00:05:57,150
+sell this example takes a whole bunch a
+GPX tracks puts them in a single file
+
+97
+00:05:57,150 --> 00:06:00,660
+makes a lot easier to map and
+
+98
+00:06:00,660 --> 00:06:04,569
+so here what I do is a gravel one
+example file
+
+99
+00:06:04,569 --> 00:06:07,669
+and grab décor nitsa stem in the schema
+
+100
+00:06:07,669 --> 00:06:12,319
+from that and then I said that your
+normal kinda directory walking
+
+101
+00:06:12,319 --> 00:06:16,440
+operation pull everything that ends in
+dot GP axe
+
+102
+00:06:16,440 --> 00:06:21,819
+and read through it an at it to you this
+final file
+
+103
+00:06:21,819 --> 00:06:24,940
+so that I'm able to make appeals Asian
+like this where I find out that I really
+
+104
+00:06:24,940 --> 00:06:29,220
+don't do much but go back and forth to
+work all the time
+
+105
+00:06:29,220 --> 00:06:34,130
+and but that's okay I'm but before we go
+any further let's talk a little bit
+
+106
+00:06:34,130 --> 00:06:38,139
+about your Jason to why do I keep
+turning everything in GH a sign
+
+107
+00:06:38,139 --> 00:06:43,030
+it is Jason for geo data it's super easy
+to use for web app being when adding
+
+108
+00:06:43,030 --> 00:06:45,220
+libraries and early love it
+
+109
+00:06:45,220 --> 00:06:48,400
+and it's really easy to perceive Python
+because really it's
+
+110
+00:06:48,400 --> 00:06:51,910
+just dictionary
+
+111
+00:06:51,910 --> 00:06:58,139
+so here's kind im a weird example add to
+talk that OpenStreetMap because
+
+112
+00:06:58,139 --> 00:07:02,539
+I'm on the board I love it an
+OpenStreetMap is great because
+
+113
+00:07:02,539 --> 00:07:07,130
+it's a lot of free data proud source
+that you can get from all over the world
+
+114
+00:07:07,130 --> 00:07:10,590
+they can be really hard to find a
+scanner data anywhere else
+
+115
+00:07:10,590 --> 00:07:14,330
+on but the data structures really weird
+
+116
+00:07:14,330 --> 00:07:19,039
+and you get everything all at once so
+what's am planning a trip to Japan which
+
+117
+00:07:19,039 --> 00:07:22,120
+I usually am planning 1 1 I'm going and
+I
+
+118
+00:07:22,120 --> 00:07:26,020
+an and I wanna check out all the
+buildings in this area them interested
+
+119
+00:07:26,020 --> 00:07:26,970
+in
+
+120
+00:07:26,970 --> 00:07:30,080
+you can just download them from the
+OpenStreetMap website
+
+121
+00:07:30,080 --> 00:07:35,110
+but you're gonna get everything all all
+that you can get streets you can get
+
+122
+00:07:35,110 --> 00:07:39,120
+to still you know the country of Japan
+you can get all this by selecting a
+
+123
+00:07:39,120 --> 00:07:41,639
+scary it's kinda crazy
+
+124
+00:07:41,639 --> 00:07:46,120
+I N there are a number of ways to
+convert it over to GH a sign
+
+125
+00:07:46,120 --> 00:07:50,110
+on but really it's just XML data see you
+can dig into it with your favorite XML
+
+126
+00:07:50,110 --> 00:07:50,650
+parser
+
+127
+00:07:50,650 --> 00:07:55,229
+if you like it's while and then process
+it so
+
+128
+00:07:55,229 --> 00:07:58,569
+the reason why I love JJ sign and why
+pick this example
+
+129
+00:07:58,569 --> 00:08:03,090
+is you can just play with the dating
+keep exactly what you want you don't
+
+130
+00:08:03,090 --> 00:08:04,099
+want you have to use
+
+131
+00:08:04,099 --> 00:08:07,120
+anyway I resolve really iron
+
+132
+00:08:07,120 --> 00:08:10,879
+you just load it up by using Jason lutes
+
+133
+00:08:10,879 --> 00:08:14,840
+I'm here we're creating a feature
+collection dictionary that is going to
+
+134
+00:08:14,840 --> 00:08:17,849
+be valid year Jason when it's all done
+
+135
+00:08:17,849 --> 00:08:22,660
+and then we're going to loop through all
+I'll features in that dataset
+
+136
+00:08:22,660 --> 00:08:26,199
+Shack all the tags in it to the way
+OpenStreetMap
+
+137
+00:08:26,199 --> 00:08:29,590
+represented attributes is by
+
+138
+00:08:29,590 --> 00:08:33,250
+having tags for everything cell a
+building with the name
+
+139
+00:08:33,250 --> 00:08:36,700
+is can have been building tag with some
+value and a name tag
+
+140
+00:08:36,700 --> 00:08:41,550
+some value seldom I say that that's what
+I want it so I check if theres
+
+141
+00:08:41,550 --> 00:08:44,580
+building Mary if there's name in there
+
+142
+00:08:44,580 --> 00:08:47,950
+let's go ahead and move on style
+
+143
+00:08:47,950 --> 00:08:53,050
+then we're gonna grab the ID pulled the
+name out of the tags
+
+144
+00:08:53,050 --> 00:08:57,180
+grab all the other information we need
+
+145
+00:08:57,180 --> 00:09:00,870
+and then create on with those variables
+
+146
+00:09:00,870 --> 00:09:04,110
+the final Goga sign version that we want
+cell
+
+147
+00:09:04,110 --> 00:09:07,649
+you put the geometry revlon's the
+corners where they belong
+
+148
+00:09:07,649 --> 00:09:11,120
+keep name outside of tags and keep all
+the other random tags
+
+149
+00:09:11,120 --> 00:09:16,510
+in this separate tactic sherry and go
+ahead and add it to our final file
+
+150
+00:09:16,510 --> 00:09:19,570
+and all you need to do to create that
+final Jason file then
+
+151
+00:09:19,570 --> 00:09:25,100
+is do jason Thompson then you can get
+cool stuff like this
+
+152
+00:09:25,100 --> 00:09:28,500
+and he's all the buildings are at
+Shinjuku I am but I shoulda got the
+
+153
+00:09:28,500 --> 00:09:29,850
+ramen shops instead
+
+154
+00:09:29,850 --> 00:09:35,300
+that's what I really care about now you
+can also do some more operation with CSV
+
+155
+00:09:35,300 --> 00:09:39,269
+or XML data to you all you need to do is
+put it in a dictionary
+
+156
+00:09:39,269 --> 00:09:42,870
+and then put your duties on together so
+I do this when
+
+157
+00:09:42,870 --> 00:09:46,019
+organza datasets from all over the place
+
+158
+00:09:46,019 --> 00:09:49,500
+an and unable to make it so at the end
+
+159
+00:09:49,500 --> 00:09:52,800
+and only the features in the attributes
+that I want
+
+160
+00:09:52,800 --> 00:09:55,800
+at the bench other stuff that I don't
+that I don't need
+
+161
+00:09:55,800 --> 00:09:59,269
+if you have a lot of data that you can
+switch to reading and writing line by
+
+162
+00:09:59,269 --> 00:10:02,880
+line by keeping kinda dictionaries one
+line at a time
+
+163
+00:10:02,880 --> 00:10:06,190
+and I've done this with the whole
+OpenStreetMap planet before
+
+164
+00:10:06,190 --> 00:10:09,910
+several gigs is probably not a good idea
+but it worked
+
+165
+00:10:09,910 --> 00:10:15,100
+it's great and because it's just a
+dictionary it's really easy to create
+
+166
+00:10:15,100 --> 00:10:16,610
+test for the data
+
+167
+00:10:16,610 --> 00:10:19,890
+you can check for required he is cell
+
+168
+00:10:19,890 --> 00:10:25,450
+say an your database that's gonna keep
+the steering use it for something is
+
+169
+00:10:25,450 --> 00:10:28,899
+expecting certain keys to be their knees
+had the boundary type string that
+
+170
+00:10:28,899 --> 00:10:30,779
+represents the datasource
+
+171
+00:10:30,779 --> 00:10:33,950
+you can check each key is and
+
+172
+00:10:33,950 --> 00:10:38,880
+value is what you expected to be you can
+check against the listed known values so
+
+173
+00:10:38,880 --> 00:10:42,300
+say they're only a certain number of
+trusted sources
+
+174
+00:10:42,300 --> 00:10:45,570
+or your filters are expecting certain
+values you can check and make sure
+
+175
+00:10:45,570 --> 00:10:47,940
+that's also had a time
+
+176
+00:10:47,940 --> 00:10:52,130
+you can check the structure you know how
+deep did the dictionaries go
+
+177
+00:10:52,130 --> 00:10:55,640
+and check to make sure the geometry is
+allied so you don't end up with no
+
+178
+00:10:55,640 --> 00:10:58,110
+island
+
+179
+00:10:58,110 --> 00:11:01,440
+so this is a really important if your
+system is expecting a very very
+
+180
+00:11:01,440 --> 00:11:05,370
+particular format will your data comes
+from a Grady of sources so
+
+181
+00:11:05,370 --> 00:11:10,350
+at UA we get data from all over the
+place we get map on exterior week at
+
+182
+00:11:10,350 --> 00:11:12,070
+OpenStreetMap data
+
+183
+00:11:12,070 --> 00:11:15,459
+we get a bunch a random stuff the
+customers give us
+
+184
+00:11:15,459 --> 00:11:19,550
+and it all needs to be in exactly the
+right format every single feature
+
+185
+00:11:19,550 --> 00:11:24,519
+or production incident and after I did
+that once I was never again
+
+186
+00:11:24,519 --> 00:11:29,170
+no more protection incidents vacated the
+said over and said it s really easily
+
+187
+00:11:29,170 --> 00:11:35,290
+and just by going to the dictionaries
+and checking for the things that matter
+
+188
+00:11:35,290 --> 00:11:39,779
+also on you can you speak shapely for
+spatial analysis India manipulation
+
+189
+00:11:39,779 --> 00:11:41,910
+cheaply as a super powerful
+
+190
+00:11:41,910 --> 00:11:47,220
+would but a library and there are tons
+examples in the manual I made this wall
+
+191
+00:11:47,220 --> 00:11:48,750
+tax just a que native
+
+192
+00:11:48,750 --> 00:11:53,079
+show you how many things it can do you
+how powerful it is I N
+
+193
+00:11:53,079 --> 00:11:57,690
+you can construct geometry is simple
+fire create buffer areas
+
+194
+00:11:57,690 --> 00:12:02,630
+murders Union check distances between
+paying this
+
+195
+00:12:02,630 --> 00:12:06,950
+gets a magical dear friend see if one
+object contains the other object on and
+
+196
+00:12:06,950 --> 00:12:07,930
+on and on and on
+
+197
+00:12:07,930 --> 00:12:11,220
+it even works with 3d data and numb hi
+
+198
+00:12:11,220 --> 00:12:15,089
+all kindsa stuff that you can do with it
+
+199
+00:12:15,089 --> 00:12:20,430
+so remember the GPX tracks that we put
+together earlier well someone then it
+
+200
+00:12:20,430 --> 00:12:21,260
+turns out
+
+201
+00:12:21,260 --> 00:12:24,870
+I didn't show them but I have a bunch in
+California I don't deal with a man on a
+
+202
+00:12:24,870 --> 00:12:28,040
+deal with my flight to California either
+I want just the ones that are in
+
+203
+00:12:28,040 --> 00:12:28,860
+Portland
+
+204
+00:12:28,860 --> 00:12:32,589
+and I wanna go through them one by one
+by hand
+
+205
+00:12:32,589 --> 00:12:37,639
+so what i did. first time you just get
+your city as Judy Sun
+
+206
+00:12:37,639 --> 00:12:42,019
+and an I read Portland on an
+
+207
+00:12:42,019 --> 00:12:45,480
+and put it in a shapely shape object
+
+208
+00:12:45,480 --> 00:12:50,230
+its geometry that is and the same thing
+for each had the tracks and that
+
+209
+00:12:50,230 --> 00:12:51,720
+original file
+
+210
+00:12:51,720 --> 00:12:55,779
+I read them into shapely shape our jacks
+and then I was able to do this really
+
+211
+00:12:55,779 --> 00:12:57,450
+easy
+
+212
+00:12:57,450 --> 00:13:01,700
+laying here check if their geometry on
+that track
+
+213
+00:13:01,700 --> 00:13:04,959
+is within the context whole of Portland
+
+214
+00:13:04,959 --> 00:13:09,500
+yet we're gonna keep it I use the convex
+hull because there's a little-known very
+
+215
+00:13:09,500 --> 00:13:12,950
+small city called Maywood park that was
+formed when nobody wanted a freeway
+
+216
+00:13:12,950 --> 00:13:14,690
+built through it
+
+217
+00:13:14,690 --> 00:13:19,010
+and and my Ajax would have been excluded
+that that passed through there
+
+218
+00:13:19,010 --> 00:13:22,760
+so I got the context Hall which is the
+smallest polygon that would contain
+
+219
+00:13:22,760 --> 00:13:24,940
+everything within it
+
+220
+00:13:24,940 --> 00:13:28,170
+menu just to write it out
+
+221
+00:13:28,170 --> 00:13:31,709
+so it kept all the stuff in pink not be
+
+222
+00:13:31,709 --> 00:13:35,000
+plane tracks in the in beige their
+
+223
+00:13:35,000 --> 00:13:38,279
+that I didn't whites that's great
+
+224
+00:13:38,279 --> 00:13:42,070
+on another great option for
+geoprocessing without GIS software
+
+225
+00:13:42,070 --> 00:13:46,370
+is posts s and that is an extension to
+post guess
+
+226
+00:13:46,370 --> 00:13:51,000
+an as you many you probably know it
+already well
+
+227
+00:13:51,000 --> 00:13:55,139
+I'm you can talk to a psycho pg2 it
+works really well and you can run space
+
+228
+00:13:55,139 --> 00:13:56,829
+operations
+
+229
+00:13:56,829 --> 00:14:02,300
+directly with that and it works
+surprisingly well
+
+230
+00:14:02,300 --> 00:14:05,779
+I finally GIS software love despite
+
+231
+00:14:05,779 --> 00:14:09,220
+on our GIS on
+
+232
+00:14:09,220 --> 00:14:13,290
+Azria I think it's actually sponsor Pike
+on has on early
+
+233
+00:14:13,290 --> 00:14:16,529
+cool papon community is set section set
+up
+
+234
+00:14:16,529 --> 00:14:20,940
+and they really like using our Python
+for scripting they set up their own
+
+235
+00:14:20,940 --> 00:14:26,070
+arc pay module on that does all the
+tasks within
+
+236
+00:14:26,070 --> 00:14:33,050
+I our GIS that you can skip to end other
+create tools in Athens with them
+
+237
+00:14:33,050 --> 00:14:37,839
+cue Jess is kinda the closest open
+source alternative to RJs
+
+238
+00:14:37,839 --> 00:14:42,649
+and it has it similarly it has a Python
+console
+
+239
+00:14:42,649 --> 00:14:46,760
+it also has a cute this module that you
+can
+
+240
+00:14:46,760 --> 00:14:50,740
+import from outside Azlan
+
+241
+00:14:50,740 --> 00:14:54,199
+outside a few to sell you can have a
+third party app
+
+242
+00:14:54,199 --> 00:14:57,240
+that brings in the huge issue i
+
+243
+00:14:57,240 --> 00:15:03,060
+or or geoprocessing tools come without
+actually having a Yankee jisne at school
+
+244
+00:15:03,060 --> 00:15:07,209
+on and development to cue just is
+written in C
+
+245
+00:15:07,209 --> 00:15:13,199
+and input on C can contribute to the
+development of it directly
+
+246
+00:15:13,199 --> 00:15:16,550
+there are more than 250 plugins already
+
+247
+00:15:16,550 --> 00:15:19,660
+for teachers and there are written in
+Python
+
+248
+00:15:19,660 --> 00:15:23,779
+you can do you all kinds really really
+interesting stuff this one is a
+
+249
+00:15:23,779 --> 00:15:30,209
+3d export an helps you make a 3d map in
+a web browser with but GL
+
+250
+00:15:30,209 --> 00:15:34,949
+actually I talked way too ass i think im
+over i think im we enter my time
+
+251
+00:15:34,949 --> 00:15:38,459
+so i think im just gonna open up for
+questions that this plane
+
+252
+00:15:38,459 --> 00:15:42,180
+pincus I'll there's a there's a
+microphone over there
+
+253
+00:15:42,180 --> 00:15:49,180
+if you need and
+
+254
+00:15:52,740 --> 00:15:55,820
+hi thank you very much I'd like to
+
+255
+00:15:55,820 --> 00:16:00,399
+ask if you would mind bring your first
+slide back on so many copy your website
+
+256
+00:16:00,399 --> 00:16:01,690
+yes
+
+257
+00:16:01,690 --> 00:16:06,209
+sorry say their ego
+
+258
+00:16:06,209 --> 00:16:09,820
+thanks again for the talk home I've used
+to own
+
+259
+00:16:09,820 --> 00:16:14,449
+no GRN GDAL am not familiar with the
+owner can you
+
+260
+00:16:14,449 --> 00:16:17,620
+talk a little about the differences and
+yeah so OJ
+
+261
+00:16:17,620 --> 00:16:21,160
+on the on actually uses ging Tom
+
+262
+00:16:21,160 --> 00:16:25,040
+armored kill people say either way I am
+
+263
+00:16:25,040 --> 00:16:28,470
+it it's just a paper on it kinda
+interface to them see do you still have
+
+264
+00:16:28,470 --> 00:16:30,600
+to install the man you are actually
+using them
+
+265
+00:16:30,600 --> 00:16:37,120
+just in a panic way
+
+266
+00:16:37,120 --> 00:16:40,350
+night arm great talk thank you think
+
+267
+00:16:40,350 --> 00:16:44,259
+arm I'm working on a project that
+
+268
+00:16:44,259 --> 00:16:49,050
+home SOC in modeling so the results that
+we get
+
+269
+00:16:49,050 --> 00:16:53,389
+arm Havlat long date in the move also
+got currents and stuff
+
+270
+00:16:53,389 --> 00:16:58,269
+we want work a social scientist that use
+GIS so we've got beer in net CDR files
+
+271
+00:16:58,269 --> 00:17:02,699
+ok I N they watch shapefiles okay do you
+have any recommendations on
+
+272
+00:17:02,699 --> 00:17:06,539
+I'll do that so so Oger
+
+273
+00:17:06,539 --> 00:17:10,439
+I am what that the guy in front of you
+brought up came to you
+
+274
+00:17:10,439 --> 00:17:13,669
+almost any translation if ya know
+
+275
+00:17:13,669 --> 00:17:18,230
+works with a lot earlier she earned arm
+
+276
+00:17:18,230 --> 00:17:22,270
+sorry now and the words escaping me a
+lot about your drivers
+
+277
+00:17:22,270 --> 00:17:26,110
+an piano works with them but it doesn't
+support all them
+
+278
+00:17:26,110 --> 00:17:29,590
+I i'm not super familiar with the format
+the
+
+279
+00:17:29,590 --> 00:17:34,350
+let CD after yeah i i'd I have used it
+before said well
+
+280
+00:17:34,350 --> 00:17:38,419
+I don't have a particular tips for that
+but yea I think I go to you may go to
+
+281
+00:17:38,419 --> 00:17:39,850
+his own gr
+
+282
+00:17:39,850 --> 00:17:45,169
+I'm which the only uses I am but doesn't
+always support all the drivers I love
+
+283
+00:17:45,169 --> 00:17:47,120
+and that's just really is a command-line
+
+284
+00:17:47,120 --> 00:17:50,080
+I mean not really easy the people that
+are free to the command line is
+
+285
+00:17:50,080 --> 00:17:51,780
+definitely not easy but
+
+286
+00:17:51,780 --> 00:17:55,549
+months you can to practice with a I'll
+trust that I'm usually does the right
+
+287
+00:17:55,549 --> 00:17:56,250
+thing
+
+288
+00:17:56,250 --> 00:17:59,710
+okay thanks I'm
+
+289
+00:17:59,710 --> 00:18:02,900
+hi a I'm not sure the address the
+spectrum
+
+290
+00:18:02,900 --> 00:18:07,160
+i was just curious about the biking data
+like what format was that in
+
+291
+00:18:07,160 --> 00:18:11,090
+and also what did you use to visualize
+the
+
+292
+00:18:11,090 --> 00:18:14,620
+yeah yet totally I can talk about that I
+skipped
+
+293
+00:18:14,620 --> 00:18:18,940
+past six hours like I'm not gonna have
+enough time in the head at a time
+
+294
+00:18:18,940 --> 00:18:23,549
+I am so this is actually not by King
+David this is all of my data from
+
+295
+00:18:23,549 --> 00:18:27,470
+walking all around and traveling around
+portland is an app called moots
+
+296
+00:18:27,470 --> 00:18:31,640
+and it basically tracks me all the time
+in this is like a few months is
+
+297
+00:18:31,640 --> 00:18:34,740
+have news data and
+
+298
+00:18:34,740 --> 00:18:39,860
+so moose likely has a pretty friendly
+API to plugs into a lot of tools there
+
+299
+00:18:39,860 --> 00:18:40,350
+said
+
+300
+00:18:40,350 --> 00:18:45,809
+an at a tool called moves export to use
+to download a weak data at a time
+
+301
+00:18:45,809 --> 00:18:48,990
+because they didn't want to deal with
+having to download them all individually
+
+302
+00:18:48,990 --> 00:18:54,620
+so once they had every week on as GPX
+data so they will the download them as
+
+303
+00:18:54,620 --> 00:18:56,169
+GPX data
+
+304
+00:18:56,169 --> 00:18:59,419
+I'm fianna
+
+305
+00:18:59,419 --> 00:19:02,720
+can read there are actually several
+layers in GPX data
+
+306
+00:19:02,720 --> 00:19:07,160
+track sir just wanted them see actually
+have to tell Theon okay beat the tracks
+
+307
+00:19:07,160 --> 00:19:07,900
+layer
+
+308
+00:19:07,900 --> 00:19:11,669
+don't read the waypoints and I think
+there are a few others
+
+309
+00:19:11,669 --> 00:19:15,150
+I am but once you have bad
+
+310
+00:19:15,150 --> 00:19:18,730
+and it's all thrown together so this
+isn't that what i'll know
+
+311
+00:19:18,730 --> 00:19:22,280
+which is a knee I don't it's not
+
+312
+00:19:22,280 --> 00:19:25,330
+I don't know if it's open source I think
+it's open source adds put up a company
+
+313
+00:19:25,330 --> 00:19:26,750
+called map box
+
+314
+00:19:26,750 --> 00:19:30,559
+and it's on top of their tiles here and
+you use act something that's actually
+
+315
+00:19:30,559 --> 00:19:32,789
+cop car tow CSS to style
+
+316
+00:19:32,789 --> 00:19:36,070
+up and you get some composite operation
+cited a
+
+317
+00:19:36,070 --> 00:19:39,940
+like a multiplying composite operations
+that would be darker the places that I
+
+318
+00:19:39,940 --> 00:19:41,070
+want more
+
+319
+00:19:41,070 --> 00:19:44,280
+if you want to know more about town I
+can I think Kansas
+
+320
+00:19:44,280 --> 00:19:47,640
+Google pile now a Google Map box and
+it's really easy to get started with
+
+321
+00:19:47,640 --> 00:19:48,419
+them I'm
+
+322
+00:19:48,419 --> 00:19:55,419
+big fan map packs K thank you in
+
+323
+00:19:56,299 --> 00:19:59,530
+ppl
+
+324
+00:19:59,530 --> 00:20:06,270
+thanks guys thanks for coming out to
+talk way
+
+325
+00:20:06,270 --> 00:20:06,520
+ok
+

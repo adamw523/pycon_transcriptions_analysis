@@ -1,0 +1,1362 @@
+1
+00:00:00,849 --> 00:00:03,870
+alright good morning everyone I'm so far
+next talk we have
+
+2
+00:00:03,870 --> 00:00:07,899
+Porsche Britain who be giving a talk
+titled know thy neighbor
+
+3
+00:00:07,899 --> 00:00:11,769
+psych it and the k-nearest neighbor
+album so please give have a Porsche
+
+4
+00:00:11,769 --> 00:00:18,769
+hello
+
+5
+00:00:20,730 --> 00:00:24,300
+on thank you for coming this
+presentation is going to be
+
+6
+00:00:24,300 --> 00:00:28,019
+on the k-nearest neighbor and fight kit
+learn on
+
+7
+00:00:28,019 --> 00:00:31,560
+we're going to keep this presentation
+high-level so we're not gonna get too
+
+8
+00:00:31,560 --> 00:00:32,029
+deep
+
+9
+00:00:32,029 --> 00:00:35,309
+and most this presentation will be based
+on
+
+10
+00:00:35,309 --> 00:00:39,379
+the I kit learn documentation so for
+those have you
+
+11
+00:00:39,379 --> 00:00:43,219
+who are part A up keeping a
+documentation thank you
+
+12
+00:00:43,219 --> 00:00:47,239
+a little bit about me
+
+13
+00:00:47,239 --> 00:00:51,180
+on from Portland I'm the organizer
+
+14
+00:00:51,180 --> 00:00:55,329
+I love the Portland data Science Group
+we're basically
+
+15
+00:00:55,329 --> 00:00:58,670
+om again the people like visualizing
+data
+
+16
+00:00:58,670 --> 00:01:03,710
+like analyzing data once a month we have
+talked and once a month we have a half
+
+17
+00:01:03,710 --> 00:01:04,400
+day it's
+
+18
+00:01:04,400 --> 00:01:07,680
+really I we love this group I'm also
+
+19
+00:01:07,680 --> 00:01:11,830
+volunteer are hack Oregon hack or again
+is
+
+20
+00:01:11,830 --> 00:01:15,340
+us civic organization that takes
+campaign
+
+21
+00:01:15,340 --> 00:01:19,560
+data and makes it more I accessible to
+the people of the state
+
+22
+00:01:19,560 --> 00:01:23,229
+organ and I am also founder
+
+23
+00:01:23,229 --> 00:01:29,860
+I love the company PLB analytics what we
+cover today
+
+24
+00:01:29,860 --> 00:01:33,360
+a brief intro to machine learning
+
+25
+00:01:33,360 --> 00:01:39,220
+will go over psych it learn will explain
+the key
+
+26
+00:01:39,220 --> 00:01:42,479
+nearest neighbor algorithm and finally
+
+27
+00:01:42,479 --> 00:01:46,220
+we our demo will be based on the like it
+loan package
+
+28
+00:01:46,220 --> 00:01:50,439
+and K&N machine learning
+
+29
+00:01:50,439 --> 00:01:55,380
+what is machine learning we've had many
+presentations during the icon that
+
+30
+00:01:55,380 --> 00:01:58,360
+explains machine learning but I'm just
+going to get to the Corbett
+
+31
+00:01:58,360 --> 00:02:01,729
+machine learning is basically when
+
+32
+00:02:01,729 --> 00:02:05,950
+algorithm learns from the data takes the
+data
+
+33
+00:02:05,950 --> 00:02:10,959
+and and it makes sumptin what does
+machine learning algorithms use this
+
+34
+00:02:10,959 --> 00:02:11,739
+data for
+
+35
+00:02:11,739 --> 00:02:14,790
+well to give you a sampling
+
+36
+00:02:14,790 --> 00:02:19,489
+it creates predictive models classify
+
+37
+00:02:19,489 --> 00:02:23,349
+unknown entity and discovers patterns
+
+38
+00:02:23,349 --> 00:02:28,430
+once again this is a sampling up what
+machine learning algorithms can do
+
+39
+00:02:28,430 --> 00:02:32,489
+today we are mostly going to concentrate
+
+40
+00:02:32,489 --> 00:02:35,879
+on the creaking up predictive models and
+
+41
+00:02:35,879 --> 00:02:40,840
+classifying unknown entities this is
+
+42
+00:02:40,840 --> 00:02:44,410
+my basic workflow and machine learning
+when I'm dealing with data
+
+43
+00:02:44,410 --> 00:02:48,379
+I spend about seventy percent
+
+44
+00:02:48,379 --> 00:02:53,540
+cleaning standardizing data putting in
+to post crest
+
+45
+00:02:53,540 --> 00:02:57,400
+chasing stray commas away on
+
+46
+00:02:57,400 --> 00:03:01,560
+20 percent of my time issues to you are
+preprocessed
+
+47
+00:03:01,560 --> 00:03:05,349
+train and validate the data and
+
+48
+00:03:05,349 --> 00:03:09,819
+10 percent issues too analyze and
+visualize my data
+
+49
+00:03:09,819 --> 00:03:14,680
+way I visualize might data I a try to
+use of d3
+
+50
+00:03:14,680 --> 00:03:17,819
+on JavaScript it's a great package for
+
+51
+00:03:17,819 --> 00:03:22,709
+interactive on visualizations and it's a
+lot of fun to use
+
+52
+00:03:22,709 --> 00:03:25,780
+like it learn
+
+53
+00:03:25,780 --> 00:03:29,430
+so I can't learn is basically hyped on
+
+54
+00:03:29,430 --> 00:03:34,069
+answer to machine learning its up Python
+
+55
+00:03:34,069 --> 00:03:38,299
+machine learning package om I can't
+learn it's great
+
+56
+00:03:38,299 --> 00:03:42,080
+because it has very good documentation
+it is well
+
+57
+00:03:42,080 --> 00:03:45,299
+in and finally it has up
+
+58
+00:03:45,299 --> 00:03:49,959
+great dataset on for example the boston
+housing market today
+
+59
+00:03:49,959 --> 00:03:53,599
+we will be making use all a psych it
+learned
+
+60
+00:03:53,599 --> 00:03:56,680
+data set that already part of the
+package
+
+61
+00:03:56,680 --> 00:04:02,209
+if you're new to machine learning
+
+62
+00:04:02,209 --> 00:04:05,220
+and you're using Python this cheat sheet
+
+63
+00:04:05,220 --> 00:04:08,980
+is a great way to figure out or navigate
+
+64
+00:04:08,980 --> 00:04:14,920
+the I can't learn package first you can
+figure out well what is your sample size
+
+65
+00:04:14,920 --> 00:04:18,949
+do you have left in fifty on do you have
+
+66
+00:04:18,949 --> 00:04:22,300
+1,000,000 data points this is a good
+
+67
+00:04:22,300 --> 00:04:26,190
+wait to figure out what to do based on
+your sample size
+
+68
+00:04:26,190 --> 00:04:29,220
+and this is a great way for you to
+identify
+
+69
+00:04:29,220 --> 00:04:33,169
+what exactly do you want to do do you
+want to classify
+
+70
+00:04:33,169 --> 00:04:36,389
+clustered you and your regression or are
+you concerned
+
+71
+00:04:36,389 --> 00:04:39,919
+with dimensionality reduction
+
+72
+00:04:39,919 --> 00:04:43,139
+that being said it's very common for
+
+73
+00:04:43,139 --> 00:04:47,229
+on data scientist to use more than one
+algorithm
+
+74
+00:04:47,229 --> 00:04:51,080
+they can use several different
+algorithms in order to make sure
+
+75
+00:04:51,080 --> 00:04:58,080
+that their result their outcomes are I
+to increase the accuracy
+
+76
+00:04:58,120 --> 00:05:03,120
+many companies use I can't learn I
+actually used to work for a company
+
+77
+00:05:03,120 --> 00:05:06,830
+that you stomp like it learned
+
+78
+00:05:06,830 --> 00:05:10,770
+and but this is not wanna fuck ever know
+I did not work revenue
+
+79
+00:05:10,770 --> 00:05:15,070
+ever know is great Evernote saw good way
+for you to organize your notes
+
+80
+00:05:15,070 --> 00:05:18,389
+into notebooks and a use case
+
+81
+00:05:18,389 --> 00:05:23,160
+of I can't learn forever no is
+
+82
+00:05:23,160 --> 00:05:26,539
+are you a recipe I don't know about you
+bought
+
+83
+00:05:26,539 --> 00:05:30,470
+when I use Evernote I have different
+types %uh notebooks
+
+84
+00:05:30,470 --> 00:05:34,550
+ever know is a great way for me to keep
+track MyRecipes
+
+85
+00:05:34,550 --> 00:05:38,639
+keep track of my friends and keep track
+I love om
+
+86
+00:05:38,639 --> 00:05:41,830
+work and documentation so
+
+87
+00:05:41,830 --> 00:05:44,860
+whenever I go online and I
+
+88
+00:05:44,860 --> 00:05:48,690
+on find a note
+
+89
+00:05:48,690 --> 00:05:52,160
+Evernote suggest which notebook
+
+90
+00:05:52,160 --> 00:05:56,120
+I should put my note in to you on
+suggesting a notebooks is
+
+91
+00:05:56,120 --> 00:06:01,759
+classification problem and implemented
+naive Bayes classification
+
+92
+00:06:01,759 --> 00:06:06,190
+album which we're not going to get into
+today
+
+93
+00:06:06,190 --> 00:06:09,310
+that being said I'll just give you to
+form your own
+
+94
+00:06:09,310 --> 00:06:12,750
+the naive assumption up independence
+between every pair
+
+95
+00:06:12,750 --> 00:06:17,590
+featurette
+
+96
+00:06:17,590 --> 00:06:21,680
+supervised and unsupervised learning
+
+97
+00:06:21,680 --> 00:06:25,060
+in this session up icon icon 2014 I
+think
+
+98
+00:06:25,060 --> 00:06:28,810
+many of the presenters who will on look
+that machine learning
+
+99
+00:06:28,810 --> 00:06:32,750
+did a really good job love defining what
+is supervising what is unsupervised
+
+100
+00:06:32,750 --> 00:06:33,850
+learning
+
+101
+00:06:33,850 --> 00:06:37,880
+and we're going to go over that today as
+well
+
+102
+00:06:37,880 --> 00:06:41,520
+unsupervised learning is when your data
+point are not
+
+103
+00:06:41,520 --> 00:06:44,699
+labeled with outcomes so its
+
+104
+00:06:44,699 --> 00:06:48,060
+your algorithm that actually finding the
+pattern
+
+105
+00:06:48,060 --> 00:06:51,669
+of your data
+
+106
+00:06:51,669 --> 00:06:55,620
+supervised learning is when your samples
+are labeled
+
+107
+00:06:55,620 --> 00:06:59,349
+supervised learning can comment two
+different flavors
+
+108
+00:06:59,349 --> 00:07:06,039
+on classic classification and regression
+
+109
+00:07:06,039 --> 00:07:10,910
+this is the theoretical model are
+supervised learning
+
+110
+00:07:10,910 --> 00:07:14,740
+in supervised learning if you aren't
+making a prediction your predictions
+
+111
+00:07:14,740 --> 00:07:15,190
+based
+
+112
+00:07:15,190 --> 00:07:19,509
+on your features so you put your
+features in
+
+113
+00:07:19,509 --> 00:07:22,650
+and the out com is based on
+
+114
+00:07:22,650 --> 00:07:28,229
+on the dim your features and your
+predictors
+
+115
+00:07:28,229 --> 00:07:32,610
+remember when you're coming up with
+predictors and features on predictors
+
+116
+00:07:32,610 --> 00:07:36,410
+keep your sample size hi want to make
+sure that you have
+
+117
+00:07:36,410 --> 00:07:39,800
+plenty of samples but that being said
+
+118
+00:07:39,800 --> 00:07:44,560
+you of skipping keep your sample site hi
+
+119
+00:07:44,560 --> 00:07:48,270
+but keep in mind to keep your feature
+set low
+
+120
+00:07:48,270 --> 00:07:52,169
+the reason why it is instrumental to
+make sure that your feature set is low
+
+121
+00:07:52,169 --> 00:07:53,500
+because you do not
+
+122
+00:07:53,500 --> 00:07:58,250
+want to run the risk of overfitting
+
+123
+00:07:58,250 --> 00:08:03,300
+here some examples of how supervised
+learning is used
+
+124
+00:08:03,300 --> 00:08:09,940
+handwriting analysis it will all
+familiar spam filters
+
+125
+00:08:09,940 --> 00:08:13,639
+right next we're going to talk about
+
+126
+00:08:13,639 --> 00:08:16,800
+Kate nearest neighbor Alka the Katie
+
+127
+00:08:16,800 --> 00:08:19,810
+nearest neighbor algorithm if considered
+to be
+
+128
+00:08:19,810 --> 00:08:22,900
+simple lists machine learning algorithm
+
+129
+00:08:22,900 --> 00:08:26,220
+it is also considered to be to leave the
+algorithm
+
+130
+00:08:26,220 --> 00:08:29,509
+which means that it will not run
+computation
+
+131
+00:08:29,509 --> 00:08:33,409
+on your dataset until you give it a new
+data point
+
+132
+00:08:33,409 --> 00:08:36,899
+that you're trying to test
+
+133
+00:08:36,899 --> 00:08:40,300
+in our demo we're going to use K&N
+
+134
+00:08:40,300 --> 00:08:45,029
+for supervised learning that being said
+we have a little problem now where we
+
+135
+00:08:45,029 --> 00:08:45,660
+can
+
+136
+00:08:45,660 --> 00:08:51,269
+implement the Canaan near stable Apple
+algorithm
+
+137
+00:08:51,269 --> 00:08:54,380
+problem number one
+
+138
+00:08:54,380 --> 00:08:59,370
+let's say you have Apple's those apples
+and oranges
+
+139
+00:08:59,370 --> 00:09:02,410
+but you also have a mystery fruit
+
+140
+00:09:02,410 --> 00:09:05,930
+our goal is to figure out what
+
+141
+00:09:05,930 --> 00:09:10,350
+it that identity all the mystery fruit
+
+142
+00:09:10,350 --> 00:09:14,279
+so using can Canon were going to say
+
+143
+00:09:14,279 --> 00:09:19,140
+K&N to 3 which means we're going to look
+at the three
+
+144
+00:09:19,140 --> 00:09:23,060
+closest neighbors in this example
+
+145
+00:09:23,060 --> 00:09:27,589
+we have and Apple and two oranges
+
+146
+00:09:27,589 --> 00:09:31,500
+so based on our closest neighbors we can
+infer
+
+147
+00:09:31,500 --> 00:09:34,660
+that our mystery fruit is and
+
+148
+00:09:34,660 --> 00:09:38,860
+are inch
+
+149
+00:09:38,860 --> 00:09:42,080
+when you're looking at in nearest
+neighbors you're taking
+
+150
+00:09:42,080 --> 00:09:46,500
+up majority vote majority vote can be
+done in two different ways
+
+151
+00:09:46,500 --> 00:09:51,670
+on a majority vote can be giving equal
+weight where each cane and neighbor has
+
+152
+00:09:51,670 --> 00:09:55,930
+the ways equal you can also set this
+parameter to
+
+153
+00:09:55,930 --> 00:09:59,399
+on distant week where eat Canaan
+neighbor vote
+
+154
+00:09:59,399 --> 00:10:02,899
+is based on the distant how far the
+neighbor
+
+155
+00:10:02,899 --> 00:10:07,240
+it away from your sample
+
+156
+00:10:07,240 --> 00:10:10,320
+can and it uses simple a fag I'm the
+wrong
+
+157
+00:10:10,320 --> 00:10:13,450
+it's something that we learned in middle
+school and its
+
+158
+00:10:13,450 --> 00:10:17,110
+basically middle school math being
+useful
+
+159
+00:10:17,110 --> 00:10:21,110
+as you everything our research see
+
+160
+00:10:21,110 --> 00:10:24,800
+downside to K&N sent this minimal
+training
+
+161
+00:10:24,800 --> 00:10:28,570
+if the high computational cost in
+testing new data
+
+162
+00:10:28,570 --> 00:10:32,660
+another problem that you might encounter
+with K&N
+
+163
+00:10:32,660 --> 00:10:36,110
+if that sometimes a correlation is
+falsely high
+
+164
+00:10:36,110 --> 00:10:42,079
+which means that data points can be
+given too much weight
+
+165
+00:10:42,079 --> 00:10:46,920
+live Demel time before we get into a
+live demo
+
+166
+00:10:46,920 --> 00:10:50,820
+I will tell you that we're using ID
+defect from the thigh kit learn
+
+167
+00:10:50,820 --> 00:10:54,279
+documentation which means are
+
+168
+00:10:54,279 --> 00:10:59,200
+data is going to be
+
+169
+00:10:59,200 --> 00:11:02,649
+irises for those %uh view who have taken
+
+170
+00:11:02,649 --> 00:11:05,829
+a machine learning 101 class
+
+171
+00:11:05,829 --> 00:11:09,250
+classifying irises is considered to be a
+very
+
+172
+00:11:09,250 --> 00:11:12,430
+comin problem typical
+
+173
+00:11:12,430 --> 00:11:15,720
+typical dataset
+
+174
+00:11:15,720 --> 00:11:19,630
+the iris dataset actually predate I
+can't learn
+
+175
+00:11:19,630 --> 00:11:23,100
+it predates Python and it predates
+
+176
+00:11:23,100 --> 00:11:27,220
+most of us in this room the iris dataset
+
+177
+00:11:27,220 --> 00:11:30,860
+was a multivariate data set that was
+created in nineteen
+
+178
+00:11:30,860 --> 00:11:35,050
+30 6 it was analyzed by Sir
+
+179
+00:11:35,050 --> 00:11:38,290
+Ronald Fisher but it was gathered by
+
+180
+00:11:38,290 --> 00:11:43,700
+agar Anderson
+
+181
+00:11:43,700 --> 00:11:48,370
+the problem that we're trying to solve
+today were trying to identify
+
+182
+00:11:48,370 --> 00:11:52,209
+which height of iris that we have
+
+183
+00:11:52,209 --> 00:11:55,630
+weekend a dent defy which type iris we
+have
+
+184
+00:11:55,630 --> 00:12:00,000
+by measuring delaying and the with up
+the septal
+
+185
+00:12:00,000 --> 00:12:04,290
+for those %uh view on Inc myself
+included
+
+186
+00:12:04,290 --> 00:12:07,529
+who need a refresher in terms with a
+supple is located the supple
+
+187
+00:12:07,529 --> 00:12:11,209
+is below the pedal as labeled not
+diagrammed
+
+188
+00:12:11,209 --> 00:12:15,130
+something I wasn't aware until doing
+this
+
+189
+00:12:15,130 --> 00:12:20,649
+and to the right you have three
+different types up iris
+
+190
+00:12:20,649 --> 00:12:24,410
+this is actually skipping ahead 131 our
+dataset
+
+191
+00:12:24,410 --> 00:12:28,560
+this is going to be a result this is the
+plot from our use case
+
+192
+00:12:28,560 --> 00:12:32,310
+did dots that you see actually the
+training data
+
+193
+00:12:32,310 --> 00:12:35,470
+and the red green
+
+194
+00:12:35,470 --> 00:12:39,690
+and lilac would be are test data
+
+195
+00:12:39,690 --> 00:12:43,480
+the red the green channel I like it
+actually are decision
+
+196
+00:12:43,480 --> 00:12:50,360
+boundaries and if we move over to our
+second slide
+
+197
+00:12:50,360 --> 00:12:56,220
+the collars referred to the different
+tight up iris is that we
+
+198
+00:12:56,220 --> 00:13:02,829
+the different species okay
+
+199
+00:13:02,829 --> 00:13:09,389
+so I am going to
+
+200
+00:13:09,389 --> 00:13:16,389
+but E the moment we're going to you i pi
+fun
+
+201
+00:13:23,429 --> 00:13:26,349
+I python is great I Python comes in
+
+202
+00:13:26,349 --> 00:13:29,579
+on two different flavors you can use I a
+python
+
+203
+00:13:29,579 --> 00:13:33,299
+in the command line and you can also use
+I Python
+
+204
+00:13:33,299 --> 00:13:39,659
+18 your browser see
+
+205
+00:13:39,659 --> 00:13:45,329
+we have a bit of an issue so when I'm
+using I Python notebook
+
+206
+00:13:45,329 --> 00:13:48,719
+I go to the command line that is put I
+pipeline notebook
+
+207
+00:13:48,719 --> 00:13:55,719
+and ill give me the instant out by
+notebooks here we go
+
+208
+00:14:01,380 --> 00:14:04,320
+right so we begin with
+
+209
+00:14:04,320 --> 00:14:09,420
+importing our packages and
+
+210
+00:14:09,420 --> 00:14:13,790
+I'm going to display different flowers
+
+211
+00:14:13,790 --> 00:14:20,790
+this case you want to see irises again
+and in this example
+
+212
+00:14:22,330 --> 00:14:26,260
+we're going to set our nearest neighbors
+220
+
+213
+00:14:26,260 --> 00:14:31,200
+in this section
+
+214
+00:14:31,200 --> 00:14:34,600
+we r importing our dataset which irises
+
+215
+00:14:34,600 --> 00:14:38,010
+and target means that
+
+216
+00:14:38,010 --> 00:14:41,680
+these are the labels for our date sense
+we're doing
+
+217
+00:14:41,680 --> 00:14:48,120
+vacation I'm printing the shape of at
+actually
+
+218
+00:14:48,120 --> 00:14:51,240
+tells us how many on
+
+219
+00:14:51,240 --> 00:14:56,480
+training testing point so we have chain
+point excuse me
+
+220
+00:14:56,480 --> 00:15:01,480
+here we're actually making our mash
+
+221
+00:15:01,480 --> 00:15:05,640
+for the merger
+
+222
+00:15:05,640 --> 00:15:09,960
+we're going to actually have two plots
+are plots are going to be
+
+223
+00:15:09,960 --> 00:15:15,480
+uniform and distant in terms of majority
+vote this is our estimator
+
+224
+00:15:15,480 --> 00:15:18,600
+in our estimator on recruiting instant
+up
+
+225
+00:15:18,600 --> 00:15:23,760
+neighbor classifier and fitting the data
+we're creating
+
+226
+00:15:23,760 --> 00:15:27,450
+the min 0 max and maximum bar X&Y axis
+
+227
+00:15:27,450 --> 00:15:30,750
+finally were predicting
+
+228
+00:15:30,750 --> 00:15:35,090
+our training data and we're going to
+create the mash
+
+229
+00:15:35,090 --> 00:15:38,860
+and this is what we week get as a result
+
+230
+00:15:38,860 --> 00:15:42,780
+so
+
+231
+00:15:42,780 --> 00:15:46,140
+in Figure 1 are week is uniform
+
+232
+00:15:46,140 --> 00:15:53,140
+which means that each om training point
+equally counted and for distance
+
+233
+00:15:56,410 --> 00:15:59,440
+our training point is based on
+
+234
+00:15:59,440 --> 00:16:03,290
+the distance to the texting data so yes
+you can see
+
+235
+00:16:03,290 --> 00:16:06,520
+on our decision boundaries are different
+
+236
+00:16:06,520 --> 00:16:09,990
+in order to illustrate
+
+237
+00:16:09,990 --> 00:16:14,020
+and bring home the important I love the
+majority vote
+
+238
+00:16:14,020 --> 00:16:21,020
+why don't we run this again and in this
+case
+
+239
+00:16:24,540 --> 00:16:27,890
+we are going to say our nearest
+neighbour
+
+240
+00:16:27,890 --> 00:16:30,940
+from 20 250
+
+241
+00:16:30,940 --> 00:16:35,380
+every member a 150 if the amount of
+training data that we have
+
+242
+00:16:35,380 --> 00:16:42,380
+in total
+
+243
+00:16:46,910 --> 00:16:53,320
+so a reading
+
+244
+00:16:53,320 --> 00:16:57,040
+so far distance our decision boundaries
+are more or less
+
+245
+00:16:57,040 --> 00:17:00,390
+the same however if you look
+
+246
+00:17:00,390 --> 00:17:03,980
+at the majority vote for uniform
+
+247
+00:17:03,980 --> 00:17:07,670
+our decision boundaries are gone and we
+just have red
+
+248
+00:17:07,670 --> 00:17:11,790
+the reason why we have read it because
+instead of using
+
+249
+00:17:11,790 --> 00:17:14,850
+instead of using defense
+
+250
+00:17:14,850 --> 00:17:18,540
+it actually looks at the amount I love
+training data we have
+
+251
+00:17:18,540 --> 00:17:22,120
+we mostly have red trade training data
+points
+
+252
+00:17:22,120 --> 00:17:26,710
+and not influences our decision
+boundaries the great part about
+
+253
+00:17:26,710 --> 00:17:29,800
+I Python issue can play around with the
+parameters
+
+254
+00:17:29,800 --> 00:17:34,030
+and it just gives you it gives you
+different result and it gives you
+
+255
+00:17:34,030 --> 00:17:38,400
+on a more robust way up analyzing your
+training and testing
+
+256
+00:17:38,400 --> 00:17:41,770
+so that is it
+
+257
+00:17:41,770 --> 00:17:45,890
+for my a prison tation weekend
+
+258
+00:17:45,890 --> 00:17:52,890
+on have questions I like
+
+259
+00:18:01,690 --> 00:18:05,419
+I it for any questions %uh please come
+to the microphone in the middle and
+
+260
+00:18:05,419 --> 00:18:10,450
+Justyna either
+
+261
+00:18:10,450 --> 00:18:14,070
+I'm outta some basic method I'll
+
+262
+00:18:14,070 --> 00:18:17,150
+logical questions on ok as you mentioned
+two things
+
+263
+00:18:17,150 --> 00:18:20,510
+on the number near issue looking at in
+
+264
+00:18:20,510 --> 00:18:25,740
+making that judgment of classification
+what's the criteria to determine
+
+265
+00:18:25,740 --> 00:18:28,890
+how many neighbors should be picked
+that's the first question
+
+266
+00:18:28,890 --> 00:18:34,030
+on and y'all mention the risk of
+overfitting went to many primers
+
+267
+00:18:34,030 --> 00:18:39,299
+on I introduced so is there any criteria
+a test that can be done
+
+268
+00:18:39,299 --> 00:18:44,100
+to assess this risk of overfitting
+
+269
+00:18:44,100 --> 00:18:48,010
+well this I can't learn package
+
+270
+00:18:48,010 --> 00:18:51,690
+on have excellent documentation on this
+end
+
+271
+00:18:51,690 --> 00:18:54,790
+what I did not do and my talk
+
+272
+00:18:54,790 --> 00:18:57,970
+is I did not talk about validating your
+data
+
+273
+00:18:57,970 --> 00:19:01,840
+so once you're finished running either I
+think the best way to deal with this
+
+274
+00:19:01,840 --> 00:19:06,410
+if you're over 50 is to on validate the
+data and test the accuracy
+
+275
+00:19:06,410 --> 00:19:12,270
+hi
+
+276
+00:19:12,270 --> 00:19:16,799
+thank you for the talk I noticed in your
+results I it's that
+
+277
+00:19:16,799 --> 00:19:20,130
+the some the decision regions for
+discontinuous
+
+278
+00:19:20,130 --> 00:19:23,140
+I was wondering if you could talk a
+little about a little bit about
+
+279
+00:19:23,140 --> 00:19:27,260
+by that was and whether that's a feature
+a bug I
+
+280
+00:19:27,260 --> 00:19:30,600
+I'm sorry on
+
+281
+00:19:30,600 --> 00:19:33,760
+that with not a feature that was
+appalled
+
+282
+00:19:33,760 --> 00:19:37,419
+and Dom we can talk more about it third
+the
+
+283
+00:19:37,419 --> 00:19:41,280
+talk I can tell you about how howard got
+beat and how I am Alive
+
+284
+00:19:41,280 --> 00:19:44,559
+day and yeah I'll get into more detail
+
+285
+00:19:44,559 --> 00:19:47,660
+really enjoyed the talk
+
+286
+00:19:47,660 --> 00:19:51,210
+home one if you could talk about to
+leave real applications are working on
+
+287
+00:19:51,210 --> 00:19:51,760
+right now
+
+288
+00:19:51,760 --> 00:19:57,840
+is inching the real applications that I
+am using machine learning for
+
+289
+00:19:57,840 --> 00:20:02,150
+I do a lot of natural language
+processing so I'm using natural language
+
+290
+00:20:02,150 --> 00:20:03,169
+processing
+
+291
+00:20:03,169 --> 00:20:10,169
+to help assist with Search any more
+questions
+
+292
+00:20:12,669 --> 00:20:19,669
+right please give her up you I'm
+
+293
+00:20:21,450 --> 00:20:25,590
+I couldn't quite read the code that
+you're showing but is that just
+
+294
+00:20:25,590 --> 00:20:29,820
+is that K means that you ran with K&N no
+knowledge is pain
+
+295
+00:20:29,820 --> 00:20:33,360
+as k-means is clustering were doing
+classic
+
+296
+00:20:33,360 --> 00:20:36,940
+okay I thought you were bus transit
+things into
+
+297
+00:20:36,940 --> 00:20:43,940
+oh yeah ok and your question
+
+298
+00:20:44,630 --> 00:20:48,690
+right please give a half a Porsche
+

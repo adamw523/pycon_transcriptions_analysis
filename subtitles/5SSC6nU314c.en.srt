@@ -1,0 +1,3251 @@
+1
+00:00:05,150 --> 00:00:08,200
+good afternoon everyone my pleasure to
+welcome Michael Bair
+
+2
+00:00:08,200 --> 00:00:12,150
+long time speaker icon and the creator
+see crockery
+
+3
+00:00:12,150 --> 00:00:15,280
+is going to be talking to us today but
+building apps Websense o'clock
+
+4
+00:00:15,280 --> 00:00:22,280
+what's good my big on recross
+
+5
+00:00:24,350 --> 00:00:26,170
+hi on
+
+6
+00:00:26,170 --> 00:00:30,340
+I want to thank last-minute something at
+the comment and I Jason Meyers
+
+7
+00:00:30,340 --> 00:00:34,730
+for doing great talks on sick of me and
+Hellenic right for me so we can
+
+8
+00:00:34,730 --> 00:00:41,730
+trade for them it set me up to do that
+the either I'll talk to oversee
+
+9
+00:00:42,300 --> 00:00:42,930
+cockamamie
+
+10
+00:00:42,930 --> 00:00:46,699
+on so is called fun it's being there
+
+11
+00:00:46,699 --> 00:00:50,239
+that's right back writing the app I
+
+12
+00:00:50,239 --> 00:00:53,440
+what is this talk about
+
+13
+00:00:53,440 --> 00:00:58,550
+now this is about writing out larger out
+longer lives applications
+
+14
+00:00:58,550 --> 00:01:02,409
+out with relational databases and see
+clock me and I
+
+15
+00:01:02,409 --> 00:01:05,810
+house he bought me deals with that kinda
+by issue
+
+16
+00:01:05,810 --> 00:01:09,670
+I'm the foundation is what we call but
+
+17
+00:01:09,670 --> 00:01:12,909
+the code that we write when we first
+plug in our foundation are frameworks
+
+18
+00:01:12,909 --> 00:01:14,869
+and libraries so when you first start to
+rate your app
+
+19
+00:01:14,869 --> 00:01:18,520
+before you begin writing you use cases
+you have this thing that I call the
+
+20
+00:01:18,520 --> 00:01:19,010
+foundation
+
+21
+00:01:19,010 --> 00:01:22,049
+like your your data types that are
+special and other I
+
+22
+00:01:22,049 --> 00:01:26,060
+things to deal with constraints and
+orrin patterns I
+
+23
+00:01:26,060 --> 00:01:30,570
+I think that having a healthy amount not
+too much up-front code is a good thing
+
+24
+00:01:30,570 --> 00:01:34,289
+rather than a failure %uh libraries and
+frameworks to do everything
+
+25
+00:01:34,289 --> 00:01:38,289
+possible I'm sick of me as designs with
+
+26
+00:01:38,289 --> 00:01:44,520
+being able to write these foundations in
+mind so how do we define
+
+27
+00:01:44,520 --> 00:01:48,060
+but a foundation is and is not the
+foundation
+
+28
+00:01:48,060 --> 00:01:51,810
+it was the technology reusing like we're
+using plaster pyramid I
+
+29
+00:01:51,810 --> 00:01:56,020
+you know what libraries frameworks how
+we structure our directories name our
+
+30
+00:01:56,020 --> 00:01:56,759
+files
+
+31
+00:01:56,759 --> 00:02:01,189
+what kinds of architectural patterns
+were going to be using
+
+32
+00:02:01,189 --> 00:02:04,549
+I how we build without ever using
+integrated
+
+33
+00:02:04,549 --> 00:02:08,460
+I testing configuration on
+
+34
+00:02:08,460 --> 00:02:11,850
+so the decisions we make will be the
+foundation will determine
+
+35
+00:02:11,850 --> 00:02:15,470
+I'll when a new developer comes in the
+project what is that copper going to
+
+36
+00:02:15,470 --> 00:02:18,569
+need to understand in order to add new
+features to your project
+
+37
+00:02:18,569 --> 00:02:22,810
+I and it will kinda determine exactly
+what it's like when you start with hey
+
+38
+00:02:22,810 --> 00:02:25,340
+the customer wants this new feature
+where we start where we
+
+39
+00:02:25,340 --> 00:02:31,680
+to the middle in wedowee and so here the
+attack the italics around is
+
+40
+00:02:31,680 --> 00:02:37,409
+are the foundation years it's the source
+file database server application
+
+41
+00:02:37,409 --> 00:02:40,500
+its the the basis for patterns indians
+that we're gonna repeat
+
+42
+00:02:40,500 --> 00:02:43,980
+throughout the app it might be reusable
+
+43
+00:02:43,980 --> 00:02:48,599
+in other applications I'm and it
+represents have the way that we've
+
+44
+00:02:48,599 --> 00:02:52,680
+adapted the frameworks and libraries
+refusing to the the task at hand Asus
+
+45
+00:02:52,680 --> 00:02:58,180
+is sick specific so what we're doing so
+the foundation is not
+
+46
+00:02:58,180 --> 00:03:01,900
+I replacement for premature libraries
+
+47
+00:03:01,900 --> 00:03:08,230
+if not the start of our company's new
+app platform Celica writing our own
+
+48
+00:03:08,230 --> 00:03:10,909
+amazing system that we're gonna
+published its really meant to be
+
+49
+00:03:10,909 --> 00:03:12,069
+specific to what you get
+
+50
+00:03:12,069 --> 00:03:15,650
+what you're getting done it's about
+practicality purses trying to
+
+51
+00:03:15,650 --> 00:03:19,689
+make some bigger thing I not a
+reinvention at the wheel
+
+52
+00:03:19,689 --> 00:03:23,340
+on last the wheels you have a terrible
+
+53
+00:03:23,340 --> 00:03:28,870
+pretty obvious right so it's the
+foundation and actually the slide is the
+
+54
+00:03:28,870 --> 00:03:29,799
+plug for
+
+55
+00:03:29,799 --> 00:03:33,220
+the pyramid web framework I
+
+56
+00:03:33,220 --> 00:03:36,959
+you because we don't have any parent
+talk this year
+
+57
+00:03:36,959 --> 00:03:40,140
+and then we have three sick of me talk
+which is great but at
+
+58
+00:03:40,140 --> 00:03:43,720
+just I feel guilty that we have some
+talking term has not so act like you're
+
+59
+00:03:43,720 --> 00:03:46,209
+in it and the sample app we have here is
+a pair map
+
+60
+00:03:46,209 --> 00:03:51,200
+I like about here that I really love on
+the view are under my love this to you
+
+61
+00:03:51,200 --> 00:03:53,340
+make out your view function has a little
+decorator
+
+62
+00:03:53,340 --> 00:03:57,329
+that says this view well talk to this
+template this kinda template you back to
+
+63
+00:03:57,329 --> 00:03:58,110
+have several
+
+64
+00:03:58,110 --> 00:04:01,780
+render decorators I think it's really
+cool um
+
+65
+00:04:01,780 --> 00:04:05,599
+I think it's keeping it in the right
+places I like
+
+66
+00:04:05,599 --> 00:04:08,700
+it simpson testability at st.
+
+67
+00:04:08,700 --> 00:04:13,480
+to detail and of course when I work a
+pyramid nothing ever works
+
+68
+00:04:13,480 --> 00:04:17,820
+nothing ever breaks nothing ever does we
+don't expect his parents components are
+
+69
+00:04:17,820 --> 00:04:18,239
+like
+
+70
+00:04:18,239 --> 00:04:21,739
+super duper industrial rock solid and I
+always trust them
+
+71
+00:04:21,739 --> 00:04:26,270
+100 percent so it's really great and
+karen is a Quester marginally
+
+72
+00:04:26,270 --> 00:04:31,050
+like me and then of course you don't
+have to use
+
+73
+00:04:31,050 --> 00:04:34,680
+pyramid you know if you can write a
+foundation and framework meaning you can
+
+74
+00:04:34,680 --> 00:04:35,120
+of these
+
+75
+00:04:35,120 --> 00:04:39,960
+last I'm alright
+
+76
+00:04:39,960 --> 00:04:44,590
+sup this is the link that I met just
+made public on bitbucket hopefully
+
+77
+00:04:44,590 --> 00:04:48,870
+that work so if you want to go so
+basically this talk if you want to go to
+
+78
+00:04:48,870 --> 00:04:51,190
+this application
+
+79
+00:04:51,190 --> 00:04:53,620
+everything I'm talking about is going to
+be in it app and you can't download the
+
+80
+00:04:53,620 --> 00:04:55,100
+app and you can run and play with it and
+
+81
+00:04:55,100 --> 00:04:58,520
+I'm gonna have it up on the Secaucus
+site is kind of like the beginning
+
+82
+00:04:58,520 --> 00:04:59,670
+actually having
+
+83
+00:04:59,670 --> 00:05:03,590
+sample ap psych the pyramid tutorial had
+a sample app
+
+84
+00:05:03,590 --> 00:05:06,950
+and this will be another one I'm
+
+85
+00:05:06,950 --> 00:05:10,310
+so many girls next slide if he's going
+to make that bucket
+
+86
+00:05:10,310 --> 00:05:15,740
+see you got out busy name right
+
+87
+00:05:15,740 --> 00:05:19,540
+so an overview of what I'm going to try
+to cover
+
+88
+00:05:19,540 --> 00:05:24,520
+I the meta holder I asked conventions
+and recipes
+
+89
+00:05:24,520 --> 00:05:28,700
+session scoping which is the part that
+makes me nervous to talk about
+
+90
+00:05:28,700 --> 00:05:33,750
+a constraint naming I a little bit of
+migrations not too much
+
+91
+00:05:33,750 --> 00:05:37,090
+and then some some thought to have been
+testing
+
+92
+00:05:37,090 --> 00:05:41,850
+the medical there is something that I
+got from first working with pylons
+
+93
+00:05:41,850 --> 00:05:46,620
+one-pound bill that a project that have
+this file called medigap by:
+
+94
+00:05:46,620 --> 00:05:50,130
+and i actually break it out into several
+files and I just from that from the
+
+95
+00:05:50,130 --> 00:05:52,630
+minute I write the app I know there's
+gonna be a metaphor there
+
+96
+00:05:52,630 --> 00:05:55,840
+which will have the foundation will have
+fun
+
+97
+00:05:55,840 --> 00:05:59,140
+various files that are going to deal
+with the kinds of things I know that my
+
+98
+00:05:59,140 --> 00:05:59,830
+happiest
+
+99
+00:05:59,830 --> 00:06:04,830
+worry about so the name the app is ATM
+craft and hobby like model folder
+
+100
+00:06:04,830 --> 00:06:07,770
+and then inside a mock mile the first
+half but there's nada which were gonna
+
+101
+00:06:07,770 --> 00:06:08,990
+deal with
+
+102
+00:06:08,990 --> 00:06:14,220
+database stuff in the abstract
+
+103
+00:06:14,220 --> 00:06:17,320
+in there we have in it P Y which
+provides names to import from the
+
+104
+00:06:17,320 --> 00:06:18,630
+outside
+
+105
+00:06:18,630 --> 00:06:22,040
+are based by: is fundamental units like
+your session you're too tired
+
+106
+00:06:22,040 --> 00:06:26,820
+base I object-relational mapping helpers
+
+107
+00:06:26,820 --> 00:06:31,330
+I schema generation a definition helpers
+
+108
+00:06:31,330 --> 00:06:37,710
+and then things to do with II special
+data types
+
+109
+00:06:37,710 --> 00:06:42,450
+so the first part conventions slash
+recipes
+
+110
+00:06:42,450 --> 00:06:45,450
+I can't quite figure out the difference
+between a commissioner recipes that are
+
+111
+00:06:45,450 --> 00:06:47,370
+kinda interchangeable
+
+112
+00:06:47,370 --> 00:06:50,410
+the call the convention slash recipe is
+to reduce
+
+113
+00:06:50,410 --> 00:06:54,140
+as much repetition as possible and
+day-to-day code without taking it too
+
+114
+00:06:54,140 --> 00:06:55,760
+far
+
+115
+00:06:55,760 --> 00:06:59,190
+things we use her recipes are up i cant
+auctions make sense
+
+116
+00:06:59,190 --> 00:07:04,160
+sick of me events compiles recipes
+custom types
+
+117
+00:07:04,160 --> 00:07:07,520
+sick of me is really or if it was just
+kinda programming in Casa trying to
+
+118
+00:07:07,520 --> 00:07:10,850
+make the system work better more
+predictably it wasn't there in person
+
+119
+00:07:10,850 --> 00:07:14,570
+water too but as we've got to version 7
+89
+
+120
+00:07:14,570 --> 00:07:17,810
+it anymore more mature in protective all
+
+121
+00:07:17,810 --> 00:07:22,270
+but some recipes conventions become sick
+of me features la 72
+
+122
+00:07:22,270 --> 00:07:27,020
+on why aren't these conventions recipes
+part of the clock to start with
+
+123
+00:07:27,020 --> 00:07:30,770
+well one place that we often draw the
+line is with naming things
+
+124
+00:07:30,770 --> 00:07:33,900
+seek walking really doesn't ever
+watching name
+
+125
+00:07:33,900 --> 00:07:37,170
+anything it doesn't want to name a table
+here columns here constraints
+
+126
+00:07:37,170 --> 00:07:40,550
+something to do with naming are to be
+not outta the box to come up with some
+
+127
+00:07:40,550 --> 00:07:41,070
+way to
+
+128
+00:07:41,070 --> 00:07:47,170
+come up with names some conventions do
+become Peter shirley's partially
+
+129
+00:07:47,170 --> 00:07:51,190
+I'm the project rise to I know we like
+features
+
+130
+00:07:51,190 --> 00:07:54,040
+but we like to start with making
+something as a composable set of
+
+131
+00:07:54,040 --> 00:07:56,210
+components that you can kind of build
+
+132
+00:07:56,210 --> 00:07:59,840
+mix and match different things out of
+them rather than just a flag
+
+133
+00:07:59,840 --> 00:08:03,020
+like do this but rather you come up the
+recipe for like do this thing or maybe
+
+134
+00:08:03,020 --> 00:08:05,080
+this or something else could adapted
+
+135
+00:08:05,080 --> 00:08:08,580
+do that we think it's more flexible an
+open-ended and
+
+136
+00:08:08,580 --> 00:08:11,780
+force subplots be here is if you are you
+know
+
+137
+00:08:11,780 --> 00:08:14,890
+the famous proverb give someone a
+
+138
+00:08:14,890 --> 00:08:18,740
+fish and feed him for a day are or
+
+139
+00:08:18,740 --> 00:08:22,140
+give someone an event wasn't for fish
+available ok
+
+140
+00:08:22,140 --> 00:08:26,110
+and then you can fish for all the
+applications you
+
+141
+00:08:26,110 --> 00:08:29,280
+walk or something like that
+
+142
+00:08:29,280 --> 00:08:34,839
+or just to come
+
+143
+00:08:34,839 --> 00:08:38,140
+is a really really simple convention
+that I actually years
+
+144
+00:08:38,140 --> 00:08:41,700
+its it there are more complicated burns
+it at that are more flexible
+
+145
+00:08:41,700 --> 00:08:45,740
+but this is a simple one you want all
+your classes to have a primary key
+
+146
+00:08:45,740 --> 00:08:49,190
+that's an integer surrogate ID I sick of
+me
+
+147
+00:08:49,190 --> 00:08:52,290
+with declared it lets you make a mix in
+class
+
+148
+00:08:52,290 --> 00:08:56,740
+I that has ID so every if you any class
+that you apply surrogate PK to hear will
+
+149
+00:08:56,740 --> 00:08:58,540
+have an ID column
+
+150
+00:08:58,540 --> 00:09:01,949
+and then any class that wants to refer
+to another circuit PK can have a
+
+151
+00:09:01,949 --> 00:09:02,779
+function
+
+152
+00:09:02,779 --> 00:09:05,939
+I you'll see in a sec how the use this
+call reference call that will make
+
+153
+00:09:05,939 --> 00:09:07,180
+another column
+
+154
+00:09:07,180 --> 00:09:10,670
+with a foreign key that points to your
+ID column and this is very
+
+155
+00:09:10,670 --> 00:09:13,769
+obviously kinda hard coded there's more
+flexible persons
+
+156
+00:09:13,769 --> 00:09:17,360
+that are actually in the app I'm if you
+do this circuit pic. a reference call
+
+157
+00:09:17,360 --> 00:09:18,480
+thing
+
+158
+00:09:18,480 --> 00:09:21,680
+it looks like this so you might have a
+class
+
+159
+00:09:21,680 --> 00:09:25,250
+to use net called account balance I that
+subclasses
+
+160
+00:09:25,250 --> 00:09:29,230
+acquired base answer he PK and it has a
+table name
+
+161
+00:09:29,230 --> 00:09:34,459
+and then you have a reference call to
+another table called balance type
+
+162
+00:09:34,459 --> 00:09:37,750
+and then I as a lot of you might know
+she caught me has
+
+163
+00:09:37,750 --> 00:09:42,209
+the relationships by default separate
+from the foreign keys
+
+164
+00:09:42,209 --> 00:09:45,470
+so we have balanced type is related to
+the balance at class
+
+165
+00:09:45,470 --> 00:09:48,639
+so this is a little bit better and
+having
+
+166
+00:09:48,639 --> 00:09:51,990
+explicit I D E calls column integer
+primary key
+
+167
+00:09:51,990 --> 00:09:55,170
+was true balanced i buy tables column
+are in key
+
+168
+00:09:55,170 --> 00:09:58,870
+balance a little less verbose a little
+more repeatable and unless things to
+
+169
+00:09:58,870 --> 00:09:59,819
+type in
+
+170
+00:09:59,819 --> 00:10:03,579
+and more poorly last things to change if
+you want to change how you do things
+
+171
+00:10:03,579 --> 00:10:06,610
+arm this is a really really simple quick
+
+172
+00:10:06,610 --> 00:10:10,370
+quick and dirty pattern the example app
+has this pattern
+
+173
+00:10:10,370 --> 00:10:14,120
+what's implementation is a little bit
+more complicated so you wanna press lied
+
+174
+00:10:14,120 --> 00:10:17,420
+but this is the you know elusive
+
+175
+00:10:17,420 --> 00:10:22,930
+many 21 relationship so what many no one
+does a function that I
+
+176
+00:10:22,930 --> 00:10:27,699
+does does basically what you see here
+which does basically what you see here
+
+177
+00:10:27,699 --> 00:10:30,899
+so and I wrote a blog post about these
+years ago that's the clock me a call
+
+178
+00:10:30,899 --> 00:10:31,769
+that magic
+
+179
+00:10:31,769 --> 00:10:34,870
+a new RM and it really was in your
+honor's just
+
+180
+00:10:34,870 --> 00:10:38,399
+using recipes on topic walk in a2 make
+it less verbose and
+
+181
+00:10:38,399 --> 00:10:41,470
+and khaama press keys that work for your
+
+182
+00:10:41,470 --> 00:10:46,399
+use case at hand um and actually the 911
+too many have come up with a recipe now
+
+183
+00:10:46,399 --> 00:10:49,019
+that so-called I probably will lead a
+sick of me but
+
+184
+00:10:49,019 --> 00:10:52,370
+you get the point is that you can if you
+can see talking about for about you
+
+185
+00:10:52,370 --> 00:10:54,499
+should try to come up with patterns to
+kinda
+
+186
+00:10:54,499 --> 00:10:57,519
+are reduced how much typing based on the
+app at hand
+
+187
+00:10:57,519 --> 00:11:02,569
+on another example conventions are when
+your database you're talking more than
+
+188
+00:11:02,569 --> 00:11:04,269
+one database
+
+189
+00:11:04,269 --> 00:11:06,879
+or charges one day this and they have
+some kind of single function that you
+
+190
+00:11:06,879 --> 00:11:09,019
+want is have a python
+
+191
+00:11:09,019 --> 00:11:12,910
+I object that represents it like I often
+want to do our
+
+192
+00:11:12,910 --> 00:11:16,689
+the current time on a database up in UTC
+
+193
+00:11:16,689 --> 00:11:20,240
+and I if i'm talking post-crescent
+single server they have completely
+
+194
+00:11:20,240 --> 00:11:22,160
+different functions that do this
+
+195
+00:11:22,160 --> 00:11:25,910
+and progress has as far as I know this
+yeah this whole current timestamp a time
+
+196
+00:11:25,910 --> 00:11:26,800
+zone
+
+197
+00:11:26,800 --> 00:11:30,170
+UTC stop so if you have things like this
+with your database
+
+198
+00:11:30,170 --> 00:11:33,589
+you can make your own little quick ad
+hoc functions
+
+199
+00:11:33,589 --> 00:11:37,850
+and use the sick of a compiler extension
+which is documented on the site
+
+200
+00:11:37,850 --> 00:11:41,240
+to come up with a lot of functional
+things like this so that
+
+201
+00:11:41,240 --> 00:11:45,060
+when you use the UTC now function it
+well our resolve to
+
+202
+00:11:45,060 --> 00:11:48,949
+the current timestamp a time zone on
+post-crescent it will resolve to get
+
+203
+00:11:48,949 --> 00:11:53,019
+UTC date on da single server and then if
+other databases are available
+
+204
+00:11:53,019 --> 00:11:56,350
+up by default the Rays and then you have
+to implement how that would be done
+
+205
+00:11:56,350 --> 00:12:01,120
+brother david is a step on UTC now is
+another function that maybe we should at
+
+206
+00:12:01,120 --> 00:12:03,100
+the Sikh Aug it's pretty common but
+
+207
+00:12:03,100 --> 00:12:06,170
+the concept years ago some other weird
+funky you're using
+
+208
+00:12:06,170 --> 00:12:10,009
+you can you can use that as well
+
+209
+00:12:10,009 --> 00:12:14,720
+are using that recipe began I execute a
+SELECT statement select
+
+210
+00:12:14,720 --> 00:12:17,839
+UTC now are working as UTC now is the
+default
+
+211
+00:12:17,839 --> 00:12:21,600
+in a column so created that means that
+every time a row is inserted
+
+212
+00:12:21,600 --> 00:12:27,309
+into orders you get a default timestamp
+in created at
+
+213
+00:12:27,309 --> 00:12:32,360
+I and them another our way to
+conventions with events
+
+214
+00:12:32,360 --> 00:12:37,069
+I when you build up sick of me meta-data
+
+215
+00:12:37,069 --> 00:12:41,749
+I you get at the table and columns and
+meta-data things together
+
+216
+00:12:41,749 --> 00:12:45,480
+as those things are connected together
+sick of me admits events
+
+217
+00:12:45,480 --> 00:12:49,910
+that you can intercept and do things
+when they happen
+
+218
+00:12:49,910 --> 00:12:53,959
+the most useful friend in that regard
+after parent attach
+
+219
+00:12:53,959 --> 00:12:58,819
+it happens when you connect a column to
+a table or tables when the data
+
+220
+00:12:58,819 --> 00:13:02,470
+and constraints to table things like
+that this recipe will
+
+221
+00:13:02,470 --> 00:13:06,059
+at columns to all the tables that will
+store the
+
+222
+00:13:06,059 --> 00:13:09,720
+right be created at time for a row and
+the update at that time
+
+223
+00:13:09,720 --> 00:13:13,529
+for a row and this is a way that is that
+having all your tables X
+
+224
+00:13:13,529 --> 00:13:17,339
+at happys columns explicitly venues &
+event and to stick them on at each table
+
+225
+00:13:17,339 --> 00:13:18,800
+gets created
+
+226
+00:13:18,800 --> 00:13:22,189
+so that's a recipe on
+
+227
+00:13:22,189 --> 00:13:27,120
+custom types I everyone well have a lot
+of people use cutting types are very
+
+228
+00:13:27,120 --> 00:13:30,300
+handy for when you have some kind of
+special Python behavior
+
+229
+00:13:30,300 --> 00:13:33,999
+to take effect for a value that's going
+to the database and of no use this one
+
+230
+00:13:33,999 --> 00:13:35,110
+to be crypt
+
+231
+00:13:35,110 --> 00:13:38,319
+password tight I as data goes
+
+232
+00:13:38,319 --> 00:13:41,749
+out to the database it is run through be
+crypt first
+
+233
+00:13:41,749 --> 00:13:44,930
+as data comes back from the database it
+is wrapped with a
+
+234
+00:13:44,930 --> 00:13:49,519
+proper class called password that will
+do comparisons using be crypt
+
+235
+00:13:49,519 --> 00:13:52,670
+so this is you can try this out on the
+app as well in a 2-1 see with this thing
+
+236
+00:13:52,670 --> 00:13:53,870
+looks like
+
+237
+00:13:53,870 --> 00:13:57,240
+it means you can kinda add rose to the
+database
+
+238
+00:13:57,240 --> 00:14:00,959
+without giving the crypt at all you just
+put your secret I'm a secret
+
+239
+00:14:00,959 --> 00:14:04,709
+any insert Azadi cryptid value and then
+when you query
+
+240
+00:14:04,709 --> 00:14:10,480
+for a client record that has yet to fire
+that we want snowflake in this case
+
+241
+00:14:10,480 --> 00:14:15,100
+we can just compare the secret field
+which is actually the cryptid
+
+242
+00:14:15,100 --> 00:14:18,879
+persian you can't read it it's not plain
+text all the point X is gone
+
+243
+00:14:18,879 --> 00:14:23,720
+to you a plaintext password equality
+comparison here will actually run the
+
+244
+00:14:23,720 --> 00:14:24,860
+I'm a secret
+
+245
+00:14:24,860 --> 00:14:28,019
+token through the crib before doing a
+comparison so
+
+246
+00:14:28,019 --> 00:14:31,089
+using a sick of it because the typing a
+little ingenuity
+
+247
+00:14:31,089 --> 00:14:34,149
+you can you can have this site
+transparent a
+
+248
+00:14:34,149 --> 00:14:37,610
+encryption a password smiling caption
+
+249
+00:14:37,610 --> 00:14:41,569
+on so that the entire recipes and
+conventions
+
+250
+00:14:41,569 --> 00:14:45,230
+that is more in the sample app to be
+looked at
+
+251
+00:14:45,230 --> 00:14:48,369
+I and then apart which is more
+
+252
+00:14:48,369 --> 00:14:52,029
+concerns me a session scoping cuz I'm
+just
+
+253
+00:14:52,029 --> 00:14:54,699
+I was trying to people understand
+sessions coping this is really hard to
+
+254
+00:14:54,699 --> 00:14:55,689
+do cell
+
+255
+00:14:55,689 --> 00:14:58,939
+sick of me up sequential knapper defines
+access
+
+256
+00:14:58,939 --> 00:15:02,449
+the essential object known as the
+session
+
+257
+00:15:02,449 --> 00:15:05,829
+and when we write a web applications to
+thinking it to really worry about with
+
+258
+00:15:05,829 --> 00:15:07,089
+the session
+
+259
+00:15:07,089 --> 00:15:10,649
+out where we get when we handle the
+request
+
+260
+00:15:10,649 --> 00:15:14,540
+and when the request is over where is it
+where does it go and also had to be
+
+261
+00:15:14,540 --> 00:15:17,540
+initialize in the first place
+
+262
+00:15:17,540 --> 00:15:21,069
+so the pad is a lot of ways to do this
+
+263
+00:15:21,069 --> 00:15:24,819
+I'm gonna show three patterns for had a
+how to get the session during
+
+264
+00:15:24,819 --> 00:15:28,519
+our request on the method that most
+people are very familiar with and
+
+265
+00:15:28,519 --> 00:15:29,699
+everyone uses
+
+266
+00:15:29,699 --> 00:15:34,680
+is called the scope session the scope
+session is basically a wrapper around a
+
+267
+00:15:34,680 --> 00:15:35,449
+python
+
+268
+00:15:35,449 --> 00:15:39,199
+read local which means that when you
+talk to scope session and you say hey
+
+269
+00:15:39,199 --> 00:15:41,740
+mister scope session can I have a set in
+place
+
+270
+00:15:41,740 --> 00:15:44,999
+it will are consult a python preval
+variable
+
+271
+00:15:44,999 --> 00:15:49,430
+and return for US session object that is
+specific to the current threat
+
+272
+00:15:49,430 --> 00:15:52,970
+issue in a different thread you get a
+different session and that's really all
+
+273
+00:15:52,970 --> 00:15:53,980
+it does
+
+274
+00:15:53,980 --> 00:15:57,459
+ominous assumes that the web framework
+using is going to guess we have one
+
+275
+00:15:57,459 --> 00:15:58,329
+request
+
+276
+00:15:58,329 --> 00:16:01,949
+per threat at a time meaning it won't
+work if using like tornado
+
+277
+00:16:01,949 --> 00:16:05,589
+where you have not or question 13 I'm
+that are mixed up
+
+278
+00:16:05,589 --> 00:16:09,179
+um so if you're web system my eye
+
+279
+00:16:09,179 --> 00:16:13,610
+keys I request to threats you can use
+the scope session
+
+280
+00:16:13,610 --> 00:16:16,999
+and just have a session is local to the
+thread and that worked fine in this is
+
+281
+00:16:16,999 --> 00:16:18,029
+very common and I
+
+282
+00:16:18,029 --> 00:16:21,379
+is this an everyone uses this is very
+common
+
+283
+00:16:21,379 --> 00:16:24,699
+another parents on that is you can also
+use Cup session
+
+284
+00:16:24,699 --> 00:16:28,429
+not using a treble
+
+285
+00:16:28,429 --> 00:16:31,480
+have is not directly you can send a
+Skype session
+
+286
+00:16:31,480 --> 00:16:35,139
+a function called the scope funk which
+as a function that will give
+
+287
+00:16:35,139 --> 00:16:38,600
+this session the scope setting registry
+some kind of token they can use
+
+288
+00:16:38,600 --> 00:16:42,529
+toukie to you get the current session so
+with pyramid
+
+289
+00:16:42,529 --> 00:16:46,139
+you can use a function that they provide
+called get current request
+
+290
+00:16:46,139 --> 00:16:49,399
+which forever so you get from local but
+not within sick of me using it when
+
+291
+00:16:49,399 --> 00:16:50,499
+pyramid
+
+292
+00:16:50,499 --> 00:16:53,800
+which by the way they hate rather close
+but this will work I
+
+293
+00:16:53,800 --> 00:16:57,360
+you can say from character the whole in
+forget her request I
+
+294
+00:16:57,360 --> 00:17:01,199
+please give me the request for the
+current a thread and then please give me
+
+295
+00:17:01,199 --> 00:17:02,220
+the session at Scott
+
+296
+00:17:02,220 --> 00:17:05,780
+that quest so you can do this to and
+have carried you the trouble stopping
+
+297
+00:17:05,780 --> 00:17:07,160
+said it yet
+
+298
+00:17:07,160 --> 00:17:10,449
+and if you had a web framework that
+didn't have thread local
+
+299
+00:17:10,449 --> 00:17:13,790
+request model this would also work like
+you had a
+
+300
+00:17:13,790 --> 00:17:17,890
+a tornado Auction Co get her request you
+can you Skype session with tornado in
+
+301
+00:17:17,890 --> 00:17:18,490
+this
+
+302
+00:17:18,490 --> 00:17:21,730
+would probably work or have tried
+
+303
+00:17:21,730 --> 00:17:25,140
+and then the third method is don't use
+code: session at all
+
+304
+00:17:25,140 --> 00:17:28,110
+don't do any kind a global stuff like
+that you know when you work pyramid
+
+305
+00:17:28,110 --> 00:17:29,940
+there's always a request object
+
+306
+00:17:29,940 --> 00:17:33,210
+let's just put he on session
+
+307
+00:17:33,210 --> 00:17:36,310
+directly onto the pyramid request as an
+attribute
+
+308
+00:17:36,310 --> 00:17:39,490
+because everything we do in our apt is
+already has the request must get the
+
+309
+00:17:39,490 --> 00:17:42,070
+cousin from there and then there's no
+more tropical anything
+
+310
+00:17:42,070 --> 00:17:46,930
+and then you are on the good side of
+Chris McDonough Stamper
+
+311
+00:17:46,930 --> 00:17:50,480
+on cell yes so you can say
+
+312
+00:17:50,480 --> 00:17:53,410
+impairment they have an event called you
+request it gets fired becomes a new
+
+313
+00:17:53,410 --> 00:17:54,450
+request
+
+314
+00:17:54,450 --> 00:17:58,200
+so hey paramedic times the request I
+let's create a new
+
+315
+00:17:58,200 --> 00:18:01,650
+see caucus session and stick it on to
+your request and that's it
+
+316
+00:18:01,650 --> 00:18:05,240
+that's how it works so you can do that
+too I like that from local thing cuz
+
+317
+00:18:05,240 --> 00:18:08,250
+I I don't feel like having being
+required to have a request
+
+318
+00:18:08,250 --> 00:18:13,160
+everywhere all the time but to yourself
+
+319
+00:18:13,160 --> 00:18:16,530
+so after those three methods a acquiring
+the session how to get rid of the
+
+320
+00:18:16,530 --> 00:18:17,870
+session at the end
+
+321
+00:18:17,870 --> 00:18:21,590
+on everywhere prima has some kind of ok
+at the end of a request to clean things
+
+322
+00:18:21,590 --> 00:18:24,440
+up
+
+323
+00:18:24,440 --> 00:18:27,570
+as a sick of me docs I think everyone
+knows it
+
+324
+00:18:27,570 --> 00:18:31,140
+when you request is over do a finished
+call back
+
+325
+00:18:31,140 --> 00:18:37,370
+that will call session da clothes or
+Skype session that remove
+
+326
+00:18:37,370 --> 00:18:40,520
+everyone should you know be aware this
+is in the DOCSIS I kinda
+
+327
+00:18:40,520 --> 00:18:44,230
+where primer 101 and at the end of the
+terrible
+
+328
+00:18:44,230 --> 00:18:47,580
+sessions coping section possesses
+
+329
+00:18:47,580 --> 00:18:52,210
+i think is really simple and and it just
+while people are such problems with that
+
+330
+00:18:52,210 --> 00:18:56,130
+um constraint naming some new features
+in sick Bokoni
+
+331
+00:18:56,130 --> 00:18:59,340
+on database constraints like monkeys
+indexes I
+
+332
+00:18:59,340 --> 00:19:02,480
+UNIX acceptor a have names
+
+333
+00:19:02,480 --> 00:19:04,910
+so that you can target them in your
+migration scripts when you want to
+
+334
+00:19:04,910 --> 00:19:06,360
+create new ones are drop
+
+335
+00:19:06,360 --> 00:19:09,830
+existing ones and change what they have
+I am
+
+336
+00:19:09,830 --> 00:19:12,950
+controlling these names like having all
+your concerns me and especially as a
+
+337
+00:19:12,950 --> 00:19:14,680
+good idea but very tedious to do
+
+338
+00:19:14,680 --> 00:19:19,250
+I manually and sick of me as you know
+doesn't provide any names cuz he caught
+
+339
+00:19:19,250 --> 00:19:22,600
+me as I wanted you named it doesn't want
+to tell your d/b/a is your grumpy
+
+340
+00:19:22,600 --> 00:19:27,490
+DNA dvs what to name their stop so to go
+and what to do it but it doesn't want to
+
+341
+00:19:27,490 --> 00:19:30,650
+have a hard time it'll give you easy way
+to do it
+
+342
+00:19:30,650 --> 00:19:33,740
+we can make names on a Mac leasing
+scheme events %uh specifically that
+
+343
+00:19:33,740 --> 00:19:38,930
+after DL attached thing I after para
+task and I showed you earlier
+
+344
+00:19:38,930 --> 00:19:44,420
+on however sick of me is now made is a
+very comic convention to use events to
+
+345
+00:19:44,420 --> 00:19:45,880
+create names here
+
+346
+00:19:45,880 --> 00:19:49,760
+constraints and and other things we've
+added a new feature called naming
+
+347
+00:19:49,760 --> 00:19:50,600
+convention
+
+348
+00:19:50,600 --> 00:19:55,310
+which allows you to set up a naming
+convention up front with your meta data
+
+349
+00:19:55,310 --> 00:19:59,930
+and that will do the best thing for you
+so now in sick of me as your 92
+
+350
+00:19:59,930 --> 00:20:03,410
+dash 09 for meaning we fix the bugs with
+it
+
+351
+00:20:03,410 --> 00:20:08,280
+as a 094 most about I you can make up
+the salat
+
+352
+00:20:08,280 --> 00:20:11,350
+dictionary with your meta data that has
+about a string template
+
+353
+00:20:11,350 --> 00:20:14,800
+that will apply names to are a lot of a
+common
+
+354
+00:20:14,800 --> 00:20:19,450
+constrain topics like primary key
+foreign key UNIX checks and indexes
+
+355
+00:20:19,450 --> 00:20:22,880
+so when you use a convention like this
+one here and you can read the doctor how
+
+356
+00:20:22,880 --> 00:20:24,300
+it works
+
+357
+00:20:24,300 --> 00:20:28,100
+you create a buzz will look like this
+where you get all this handy
+
+358
+00:20:28,100 --> 00:20:30,640
+you can see all the constraints are
+named explicitly and so when you write
+
+359
+00:20:30,640 --> 00:20:31,860
+your lender migrations
+
+360
+00:20:31,860 --> 00:20:36,270
+I everything that you want to target has
+a name joint drop a primary key and
+
+361
+00:20:36,270 --> 00:20:37,800
+recreate it you know the name
+
+362
+00:20:37,800 --> 00:20:42,050
+the name isn't the weird auto-generated
+name that your back-end database my two
+
+363
+00:20:42,050 --> 00:20:45,210
+I you know if you're switching between
+different back ends
+
+364
+00:20:45,210 --> 00:20:47,710
+different databases have different
+naming conventions built in so this is
+
+365
+00:20:47,710 --> 00:20:49,200
+the way to override them
+
+366
+00:20:49,200 --> 00:20:52,680
+that make sense get
+
+367
+00:20:52,680 --> 00:20:56,500
+I've using Alembic I am
+
+368
+00:20:56,500 --> 00:20:59,810
+this really squeaky states can hear that
+
+369
+00:20:59,810 --> 00:21:03,620
+squeaky on Jerry limit migration I
+
+370
+00:21:03,620 --> 00:21:06,680
+we just had a great talk analytic
+migrants I'm sure you all know Olympic
+
+371
+00:21:06,680 --> 00:21:10,620
+following now I am pre-olympic mean
+
+372
+00:21:10,620 --> 00:21:14,470
+at what we're doing here is if you can
+best be have a lending look at your
+
+373
+00:21:14,470 --> 00:21:18,140
+database as exists right now and look at
+your
+
+374
+00:21:18,140 --> 00:21:22,160
+class meta data as it existed it will
+compare them
+
+375
+00:21:22,160 --> 00:21:26,320
+and it will generate a new migration
+script based on the diff of those things
+
+376
+00:21:26,320 --> 00:21:29,390
+on this is a pretty it works well
+
+377
+00:21:29,390 --> 00:21:32,630
+but not perfectly we want you to modify
+this we want to check the scripts not
+
+378
+00:21:32,630 --> 00:21:34,160
+perfect by any means
+
+379
+00:21:34,160 --> 00:21:38,730
+but this now if you get away islamic and
+to talk is your on foreign integrates
+
+380
+00:21:38,730 --> 00:21:39,140
+with
+
+381
+00:21:39,140 --> 00:21:43,390
+the naming convention Peter very nicely
+so that you get a migration script with
+
+382
+00:21:43,390 --> 00:21:46,610
+those naming conventions explicitly are
+right now
+
+383
+00:21:46,610 --> 00:21:50,220
+in your migration
+
+384
+00:21:50,220 --> 00:21:53,910
+so the only point is that Olympic up now
+integrates with the name a commission
+
+385
+00:21:53,910 --> 00:21:58,150
+feature in a in a better way than it did
+before
+
+386
+00:21:58,150 --> 00:22:01,210
+upcoming features for Olympic and Selena
+talk about this a little bit
+
+387
+00:22:01,210 --> 00:22:06,130
+I multiple virtual directories automatic
+branch resolution kinda like a merge
+
+388
+00:22:06,130 --> 00:22:10,230
+it's actually pretty easy to do I
+versions
+
+389
+00:22:10,230 --> 00:22:13,530
+up Olympic right now are a linear West
+
+390
+00:22:13,530 --> 00:22:18,210
+so it's like version a version B version
+seen as a straight
+
+391
+00:22:18,210 --> 00:22:21,370
+went west and now it's going to be is
+Paul on the feature
+
+392
+00:22:21,370 --> 00:22:24,800
+you know the morbid directed graph where
+any person file can have a number of
+
+393
+00:22:24,800 --> 00:22:26,120
+parents
+
+394
+00:22:26,120 --> 00:22:29,560
+I and Atlantic okay
+
+395
+00:22:29,560 --> 00:22:34,600
+and wanted the lightning round which is
+testing
+
+396
+00:22:34,600 --> 00:22:37,910
+and I've come up with some interesting
+things about testing that I want to show
+
+397
+00:22:37,910 --> 00:22:39,120
+you
+
+398
+00:22:39,120 --> 00:22:44,640
+um cell protesting database enables
+miles there's two approaches now there's
+
+399
+00:22:44,640 --> 00:22:46,320
+one person with them for a long time
+which is
+
+400
+00:22:46,320 --> 00:22:49,510
+the transactional approach that since he
+caught me docks
+
+401
+00:22:49,510 --> 00:22:53,170
+and recently on the job I had a client
+who want to
+
+402
+00:22:53,170 --> 00:22:57,080
+do a lot of tests that are against their
+model classes but they want to be able
+
+403
+00:22:57,080 --> 00:22:58,470
+to run without there being
+
+404
+00:22:58,470 --> 00:23:02,120
+database available so I worked up a new
+system
+
+405
+00:23:02,120 --> 00:23:06,010
+I which is called the mock approach and
+I think the mock approach really need
+
+406
+00:23:06,010 --> 00:23:06,830
+it's a little more
+
+407
+00:23:06,830 --> 00:23:10,900
+TDs but it kinda call and maybe next
+year I'll
+
+408
+00:23:10,900 --> 00:23:14,690
+think Mark is awesome I think right now
+it's it's interesting
+
+409
+00:23:14,690 --> 00:23:18,450
+so transaction so basically the the
+caller testing here who want to be able
+
+410
+00:23:18,450 --> 00:23:19,770
+to test
+
+411
+00:23:19,770 --> 00:23:23,610
+Armada classes and mr. class is really
+need to be able to query against the
+
+412
+00:23:23,610 --> 00:23:24,290
+database
+
+413
+00:23:24,290 --> 00:23:28,900
+to do things how to me test those
+classes
+
+414
+00:23:28,900 --> 00:23:32,830
+Sony transactional model this is an art
+our documentation what we do is
+
+415
+00:23:32,830 --> 00:23:36,160
+we I basically have the test run
+
+416
+00:23:36,160 --> 00:23:40,800
+in a database transaction and when the
+test is complete and tears down
+
+417
+00:23:40,800 --> 00:23:44,580
+the transaction is rolled back anything
+that happened within the task
+
+418
+00:23:44,580 --> 00:23:48,410
+it to the test can freebie reading right
+from the database
+
+419
+00:23:48,410 --> 00:23:51,810
+but everything it does is then rolled
+back so that test ultimately had no
+
+420
+00:23:51,810 --> 00:23:54,370
+effect on the database
+
+421
+00:23:54,370 --> 00:23:57,700
+so them the simplified structure for
+that is that in your set-up
+
+422
+00:23:57,700 --> 00:24:01,910
+you want to make a connection to your
+database you want to begin a transaction
+
+423
+00:24:01,910 --> 00:24:07,000
+and then you want to bind the session
+that you're using for your task to that
+
+424
+00:24:07,000 --> 00:24:10,090
+connection that is now open in
+transaction
+
+425
+00:24:10,090 --> 00:24:13,160
+the way see clock me does transactions
+that session
+
+426
+00:24:13,160 --> 00:24:17,050
+more say hey I'm a I'm a session I have
+any cash I'm gonna do some work to
+
+427
+00:24:17,050 --> 00:24:20,890
+and begin transaction and commit my
+transaction when session goes to commit
+
+428
+00:24:20,890 --> 00:24:25,520
+the transaction it won't actually commit
+because it's part of a broader context
+
+429
+00:24:25,520 --> 00:24:29,110
+that is scoped outside a the life span
+about session
+
+430
+00:24:29,110 --> 00:24:32,360
+and this was written this way very
+intentionally to support this kind a
+
+431
+00:24:32,360 --> 00:24:33,810
+pattern where you can nest
+
+432
+00:24:33,810 --> 00:24:40,320
+a transactional containers so in this
+test
+
+433
+00:24:40,320 --> 00:24:44,210
+in the picture we want to basically this
+added to the database freely
+
+434
+00:24:44,210 --> 00:24:48,580
+is ever ever you wanna test against and
+then your task you can query the
+
+435
+00:24:48,580 --> 00:24:49,470
+database really
+
+436
+00:24:49,470 --> 00:24:52,900
+and and just your test and then if
+you're session must commit date it's
+
+437
+00:24:52,900 --> 00:24:54,070
+fine
+
+438
+00:24:54,070 --> 00:24:57,250
+if your session wants to do a roll-back
+on
+
+439
+00:24:57,250 --> 00:25:00,540
+that can be done as well I actually
+worked out with someone on Twitter
+
+440
+00:25:00,540 --> 00:25:03,690
+this example will not do that but there
+is a way to add more than some more
+
+441
+00:25:03,690 --> 00:25:05,070
+complexity such that if you're
+
+442
+00:25:05,070 --> 00:25:08,420
+unit test was to also roll things back
+on a session
+
+443
+00:25:08,420 --> 00:25:12,610
+without the X X a including trans-acting
+back at that can be done as well
+
+444
+00:25:12,610 --> 00:25:15,990
+with a little more work and then when
+the track the test is over
+
+445
+00:25:15,990 --> 00:25:18,640
+we close the session the rollback the
+transaction and because the connection
+
+446
+00:25:18,640 --> 00:25:21,150
+returning it to the tech support
+
+447
+00:25:21,150 --> 00:25:26,000
+first this is kinda team failure at
+least art
+
+448
+00:25:26,000 --> 00:25:30,540
+everyone here only one person to say
+yeah and I'm like a right
+
+449
+00:25:30,540 --> 00:25:33,570
+in practice it looks kinda like this I
+you have a picture that's going to
+
+450
+00:25:33,570 --> 00:25:35,640
+create model objects
+
+451
+00:25:35,640 --> 00:25:39,350
+and then in your test your be basically
+calling upon a picture to get
+
+452
+00:25:39,350 --> 00:25:43,180
+the data set up that you need and then
+your in this case for testing a
+
+453
+00:25:43,180 --> 00:25:47,450
+a pyramid view kevin has awesome article
+that down the request but love it you
+
+454
+00:25:47,450 --> 00:25:50,050
+make it any request to put everything
+into it
+
+455
+00:25:50,050 --> 00:25:53,230
+and then here we're sorting that this
+request race a
+
+456
+00:25:53,230 --> 00:25:56,510
+a have 403 Erica
+
+457
+00:25:56,510 --> 00:26:00,920
+based on the token that has a that's
+been timed outside cabin game
+
+458
+00:26:00,920 --> 00:26:04,860
+to working that way
+
+459
+00:26:04,860 --> 00:26:08,960
+sojourner than the measured advantages a
+transactional testing
+
+460
+00:26:08,960 --> 00:26:13,300
+its easy I think it's easy I'm I think
+it will suit was integration test
+
+461
+00:26:13,300 --> 00:26:16,990
+integration testing your testing have a
+broader scupper functionality all the
+
+462
+00:26:16,990 --> 00:26:19,780
+way from your view all the way back to
+the database and back up again is coming
+
+463
+00:26:19,780 --> 00:26:20,740
+a whole stack
+
+464
+00:26:20,740 --> 00:26:24,950
+is happening it's really not as much as
+a unit test
+
+465
+00:26:24,950 --> 00:26:28,220
+and disadvantages are that it's could be
+slow you doing a lot of database
+
+466
+00:26:28,220 --> 00:26:32,400
+a set-up and tear-down the test might be
+to generalize you what you might want to
+
+467
+00:26:32,400 --> 00:26:33,220
+test a much more
+
+468
+00:26:33,220 --> 00:26:36,790
+up you might not want to have all the
+database stuff happening with your test
+
+469
+00:26:36,790 --> 00:26:38,430
+as well
+
+470
+00:26:38,430 --> 00:26:41,530
+and unit database so that's
+
+471
+00:26:41,530 --> 00:26:45,860
+transactional testing so the others mop
+cuttings mock testing
+
+472
+00:26:45,860 --> 00:26:50,080
+and if you're in the bucket repo this of
+I'll mock session P Y
+
+473
+00:26:50,080 --> 00:26:54,520
+I shows a basically what looks like a
+sick of me says in that really
+
+474
+00:26:54,520 --> 00:26:58,750
+this I module uses almost no sick of me
+at all uses the Python mock
+
+475
+00:26:58,750 --> 00:27:02,250
+library I was talking to Michael of your
+Don
+
+476
+00:27:02,250 --> 00:27:05,480
+out where he is the author of the paper
+mache library I love
+
+477
+00:27:05,480 --> 00:27:10,100
+I really love the Python mock library
+give it two thumbs up
+
+478
+00:27:10,100 --> 00:27:14,830
+and I this thing basically is 9 never
+sent out of the box
+
+479
+00:27:14,830 --> 00:27:18,230
+mock with a couple little twist to make
+it
+
+480
+00:27:18,230 --> 00:27:21,860
+I such that you can but setup stake
+
+481
+00:27:21,860 --> 00:27:25,380
+seek walking Aquarius that are
+parameterized meaning the different
+
+482
+00:27:25,380 --> 00:27:26,690
+parameters you give it
+
+483
+00:27:26,690 --> 00:27:30,620
+you can assign different return values
+to the not how many people here are
+
+484
+00:27:30,620 --> 00:27:32,850
+familiar with using MOX for testing in
+general
+
+485
+00:27:32,850 --> 00:27:36,560
+just the idea that you have this mock
+which kinda acts like something but it's
+
+486
+00:27:36,560 --> 00:27:37,900
+not really that something is just
+
+487
+00:27:37,900 --> 00:27:41,200
+actually a is an imposter it's like I am
+i pretending to be the thing you think I
+
+488
+00:27:41,200 --> 00:27:41,840
+am
+
+489
+00:27:41,840 --> 00:27:46,520
+so this thing is not a single guy says
+at all it's it's trippy just a mock
+
+490
+00:27:46,520 --> 00:27:51,310
+I but as you might be able see here we
+can have different queries and plug them
+
+491
+00:27:51,310 --> 00:27:53,220
+in return values that are different
+
+492
+00:27:53,220 --> 00:27:56,490
+and you can even plug on a side effect
+no result found and then later when you
+
+493
+00:27:56,490 --> 00:27:57,290
+go to query
+
+494
+00:27:57,290 --> 00:28:01,670
+but the the calling code is assumed you
+have to basically build up these queries
+
+495
+00:28:01,670 --> 00:28:03,590
+to be exactly what the calling code
+
+496
+00:28:03,590 --> 00:28:06,950
+will be calling upon which is one up
+reasons cop
+
+497
+00:28:06,950 --> 00:28:11,130
+and it'll get back data that was just
+like it was hitting database as you as
+
+498
+00:28:11,130 --> 00:28:12,370
+you tell
+
+499
+00:28:12,370 --> 00:28:16,490
+so the simplified structure marketing
+super duper crazy easy
+
+500
+00:28:16,490 --> 00:28:19,760
+there's no transactions ok act is
+nothing just get a
+
+501
+00:28:19,760 --> 00:28:23,440
+mock session and the set up and that's
+it and you maybe plug your mic session
+
+502
+00:28:23,440 --> 00:28:27,100
+interior interscope 72 think it depends
+on what session
+
+503
+00:28:27,100 --> 00:28:30,880
+scoping pattern using the picture is
+just
+
+504
+00:28:30,880 --> 00:28:34,280
+I setup the mock session with some pre
+cans
+
+505
+00:28:34,280 --> 00:28:37,670
+take results and then the task is
+
+506
+00:28:37,670 --> 00:28:41,170
+call upon the picture and then call a
+query as you need and and you get the
+
+507
+00:28:41,170 --> 00:28:45,150
+the object back so it's very easy but in
+practice is actually
+
+508
+00:28:45,150 --> 00:28:49,810
+I i've have found it is more difficult
+because you have to basically going to
+
+509
+00:28:49,810 --> 00:28:53,010
+the code that you're testing and look at
+all the cords doing
+
+510
+00:28:53,010 --> 00:28:57,040
+and you have to replicate every query it
+needs perfectly
+
+511
+00:28:57,040 --> 00:29:01,600
+so that you you can anticipate what
+query is the functions gonna call
+
+512
+00:29:01,600 --> 00:29:04,840
+how they're gonna look and what kinda
+returned I so here this
+
+513
+00:29:04,840 --> 00:29:08,330
+hoskins just the fixture part was
+performances but one row
+
+514
+00:29:08,330 --> 00:29:12,260
+one-line insert a record and scan it and
+you're done here we have to conduct a
+
+515
+00:29:12,260 --> 00:29:14,660
+spate what what the query is look like
+
+516
+00:29:14,660 --> 00:29:18,320
+right as I make sense why we need to do
+that so you can see in this
+
+517
+00:29:18,320 --> 00:29:22,340
+and and the pictures that are in the
+sample app you know go look at them
+
+518
+00:29:22,340 --> 00:29:25,270
+you know you can see the cattle you know
+it was just more tedious to write these
+
+519
+00:29:25,270 --> 00:29:26,440
+pictures
+
+520
+00:29:26,440 --> 00:29:31,320
+um but the end result is you can still
+write the test my utilities act the same
+
+521
+00:29:31,320 --> 00:29:35,160
+I and even nice are you can sometimes
+you can looking to the mock
+
+522
+00:29:35,160 --> 00:29:38,950
+and make sure certain things recalled as
+you expect on so the test themselves
+
+523
+00:29:38,950 --> 00:29:40,240
+look exactly the same
+
+524
+00:29:40,240 --> 00:29:44,560
+or or better um so that's the mock
+system and I found to be
+
+525
+00:29:44,560 --> 00:29:47,930
+very interesting once I got that mock
+session to work I was really like wow
+
+526
+00:29:47,930 --> 00:29:49,690
+this is kind of a mind blower
+
+527
+00:29:49,690 --> 00:29:54,070
+I but I'm still not sure I advantage to
+mark kasinga that there's no database
+
+528
+00:29:54,070 --> 00:29:55,840
+needed
+
+529
+00:29:55,840 --> 00:29:59,160
+a test can be focused a smaller units
+because you you know less over
+
+530
+00:29:59,160 --> 00:30:01,030
+immigration
+
+531
+00:30:01,030 --> 00:30:04,950
+in a person courage is your cutting a
+modular because and now we've got a
+
+532
+00:30:04,950 --> 00:30:08,500
+right these mock that are matching all
+the sequel foxes you really have to be
+
+533
+00:30:08,500 --> 00:30:10,600
+on top of higher cuz organized
+
+534
+00:30:10,600 --> 00:30:13,750
+such that if you know feasible to be
+mopped
+
+535
+00:30:13,750 --> 00:30:16,890
+and its past the snow did
+
+536
+00:30:16,890 --> 00:30:21,880
+there's no set up a tear down really
+
+537
+00:30:21,880 --> 00:30:27,240
+disadvantages to mocking is that the
+pictures are really tedious to create
+
+538
+00:30:27,240 --> 00:30:30,590
+army won't actually catch problems with
+your are amateur
+
+539
+00:30:30,590 --> 00:30:35,050
+like if you're sick of me or am isn't
+configured correctly or you're sick or
+
+540
+00:30:35,050 --> 00:30:38,600
+queries are right it what they want it
+will not actually cast at all
+
+541
+00:30:38,600 --> 00:30:43,110
+to testing class and then address the
+problem knocking in general I can people
+
+542
+00:30:43,110 --> 00:30:45,180
+than talks about this much better than
+me
+
+543
+00:30:45,180 --> 00:30:48,990
+I'm if you do too much mocking your
+kinda you can have been a writing a
+
+544
+00:30:48,990 --> 00:30:50,130
+mirror out
+
+545
+00:30:50,130 --> 00:30:54,410
+gotta up the code to your testing in the
+first place I'm so sometimes
+
+546
+00:30:54,410 --> 00:30:58,040
+your marked out tasks can end up just
+being test that the code
+
+547
+00:30:58,040 --> 00:31:01,640
+does what you told to do even though it
+still be in correcting the mock won't
+
+548
+00:31:01,640 --> 00:31:03,480
+actually know that so that kinda marking
+
+549
+00:31:03,480 --> 00:31:09,020
+issue um and then
+
+550
+00:31:09,020 --> 00:31:13,150
+for the final rounds we can look a
+little less so I mean
+
+551
+00:31:13,150 --> 00:31:16,590
+the example ap is I gave me the link and
+and we have purposed the
+
+552
+00:31:16,590 --> 00:31:19,920
+acting send the PDF first so you can get
+them online sup
+
+553
+00:31:19,920 --> 00:31:25,140
+um what I will do is the source of the
+source code you can go up to that fuckin
+
+554
+00:31:25,140 --> 00:31:27,370
+look at the source code please download
+it
+
+555
+00:31:27,370 --> 00:31:31,350
+I what we'll do here's will run the
+pyramid ap am run the quote-unquote
+
+556
+00:31:31,350 --> 00:31:33,340
+client
+
+557
+00:31:33,340 --> 00:31:36,500
+here comes the part where this will be
+great if it works
+
+558
+00:31:36,500 --> 00:31:39,810
+which showed so I have the pyramid ap
+
+559
+00:31:39,810 --> 00:31:43,030
+running in this window
+
+560
+00:31:43,030 --> 00:31:46,040
+Sosa serving I
+
+561
+00:31:46,040 --> 00:31:50,350
+on a its Xeon it's actually a on a web
+service that
+
+562
+00:31:50,350 --> 00:31:54,820
+acts like a miniature ATM machine for a
+bank see you can send
+
+563
+00:31:54,820 --> 00:31:58,040
+deposits and %uh money into it and it'll
+
+564
+00:31:58,040 --> 00:32:02,220
+basically store your account information
+on how much money you put and
+
+565
+00:32:02,220 --> 00:32:05,660
+and then you can make a withdrawal %um
+you can withdraw money from different
+
+566
+00:32:05,660 --> 00:32:07,530
+quote-unquote accounts
+
+567
+00:32:07,530 --> 00:32:10,700
+I and it now has a maybe five or six
+cables
+
+568
+00:32:10,700 --> 00:32:13,770
+I'm it's a cute little app
+
+569
+00:32:13,770 --> 00:32:17,660
+and over here is a job app that is
+actually going to be the client
+
+570
+00:32:17,660 --> 00:32:22,070
+on this java app I your see in a minute
+what it does it sir it's actually
+
+571
+00:32:22,070 --> 00:32:26,300
+at just just shot app is actually a
+client for the
+
+572
+00:32:26,300 --> 00:32:30,360
+pyramid ap but is also a server for the
+client
+
+573
+00:32:30,360 --> 00:32:37,360
+that I'm going to run and I don't know
+how much you can see
+
+574
+00:32:37,900 --> 00:32:42,140
+so this should be hosts home
+
+575
+00:32:42,140 --> 00:32:46,210
+works
+
+576
+00:32:46,210 --> 00:32:51,340
+so this client is a program for
+Minecraft
+
+577
+00:32:51,340 --> 00:32:54,820
+this is also known as the CAG at the end
+of the talk
+
+578
+00:32:54,820 --> 00:32:58,230
+like the talk was terrible what we
+should do that silly gag at the end
+
+579
+00:32:58,230 --> 00:33:01,510
+now that's cool so
+
+580
+00:33:01,510 --> 00:33:07,750
+own it it's nighttime okay so you can
+see the extreme right
+
+581
+00:33:07,750 --> 00:33:12,950
+fortunately our our ATM machines open 24
+hours
+
+582
+00:33:12,950 --> 00:33:17,850
+yep and that is busy as a chicken in my
+bank
+
+583
+00:33:17,850 --> 00:33:21,840
+K so the idea here and you what you want
+to do is kinda watch
+
+584
+00:33:21,840 --> 00:33:28,290
+the blue at the can you guys see that
+the terminal on the side there yet
+
+585
+00:33:28,290 --> 00:33:31,460
+in Minecraft ATM machines ready informa
+casts
+
+586
+00:33:31,460 --> 00:33:36,250
+something at the chest I it actually
+made a web service call
+
+587
+00:33:36,250 --> 00:33:39,490
+back to the pair met up and on
+
+588
+00:33:39,490 --> 00:33:43,070
+what it did was it had it basically has
+an auto connect a
+
+589
+00:33:43,070 --> 00:33:48,060
+for my session so basically this this
+test being open is like a sec is a Sat
+
+590
+00:33:48,060 --> 00:33:48,450
+is it
+
+591
+00:33:48,450 --> 00:33:52,270
+open session to the server and out the
+first thing that the
+
+592
+00:33:52,270 --> 00:33:58,010
+ATM craft I ap want to say is oh you
+have six diamonds and 6 I'll lapis
+
+593
+00:33:58,010 --> 00:33:59,370
+blocks
+
+594
+00:33:59,370 --> 00:34:02,740
+so is from there's a Minecraft I'm block
+codes
+
+595
+00:34:02,740 --> 00:34:06,550
+so there's my inventory and I can t take
+three diamonds out in a withdrawal
+
+596
+00:34:06,550 --> 00:34:10,190
+went down to happen here you can see
+something else happens
+
+597
+00:34:10,190 --> 00:34:13,950
+and basically said on I withdrew three
+diamonds
+
+598
+00:34:13,950 --> 00:34:18,889
+and you can see over here there's a with
+dropped call to the web service
+
+599
+00:34:18,889 --> 00:34:23,639
+I you now and I can collapsed last night
+sticks and stones
+
+600
+00:34:23,639 --> 00:34:27,270
+but the stone in the bank's IMing
+deposit the stone
+
+601
+00:34:27,270 --> 00:34:30,649
+and I if you look at the the channel its
+so basically
+
+602
+00:34:30,649 --> 00:34:37,649
+have that's what does a damaging
+
+603
+00:34:47,440 --> 00:34:49,080
+so if anyone has questions for Mike
+
+604
+00:34:49,080 --> 00:34:53,340
+in come on up I'm going to use my powers
+for evil and ask the first question
+
+605
+00:34:53,340 --> 00:34:56,570
+I'm you're talking about sessions coping
+
+606
+00:34:56,570 --> 00:35:00,030
+the thing you'd didn't want to talk but
+I apologize for going back to it but
+
+607
+00:35:00,030 --> 00:35:03,090
+a one thing that ever 100 a few times
+
+608
+00:35:03,090 --> 00:35:06,420
+in proms I'm trying to solve the idea of
+a long conversation where over multiple
+
+609
+00:35:06,420 --> 00:35:07,120
+requests
+
+610
+00:35:07,120 --> 00:35:10,980
+UN meeting the same ocean open session
+if your medical in a complex subject the
+
+611
+00:35:10,980 --> 00:35:12,170
+12 and under or something
+
+612
+00:35:12,170 --> 00:35:15,430
+are there any conventions that you would
+recommend you since you brought me for
+
+613
+00:35:15,430 --> 00:35:16,810
+letters and more dollar on
+
+614
+00:35:16,810 --> 00:35:21,340
+is it well on transaction or the
+question was was a good question
+
+615
+00:35:21,340 --> 00:35:25,220
+yeah so it along transaction that you're
+running yeah like let's say you have
+
+616
+00:35:25,220 --> 00:35:28,490
+somebody who's making a play doctor
+craske is already in a complex
+
+617
+00:35:28,490 --> 00:35:31,660
+object in a brother who just want to
+roll back plug it in the browser
+
+618
+00:35:31,660 --> 00:35:35,180
+down the ACP across the state was so you
+wouldn't have a transaction open between
+
+619
+00:35:35,180 --> 00:35:36,070
+requests
+
+620
+00:35:36,070 --> 00:35:40,090
+so I mean there's different ways to do
+it I would you the difference at Brees
+
+621
+00:35:40,090 --> 00:35:40,550
+request
+
+622
+00:35:40,550 --> 00:35:43,780
+and just kinda resuscitate the stated
+you need each time
+
+623
+00:35:43,780 --> 00:35:46,920
+I wouldn't try to get to basket at
+
+624
+00:35:46,920 --> 00:35:53,210
+bus thank you yeah eyes a possible to
+get their transactional rollbacks
+
+625
+00:35:53,210 --> 00:35:53,600
+working
+
+626
+00:35:53,600 --> 00:35:56,810
+signal light tapped out for a while and
+then to
+
+627
+00:35:56,810 --> 00:36:01,270
+the trend that you mean like DDL
+rollbacks alright nested transactions
+
+628
+00:36:01,270 --> 00:36:03,350
+and rolling back with Siegel light
+
+629
+00:36:03,350 --> 00:36:06,580
+for okay so nasty mean safe points
+
+630
+00:36:06,580 --> 00:36:09,990
+yeah I guess they should work in sick
+like aka
+
+631
+00:36:09,990 --> 00:36:13,470
+take points II believer working aka
+
+632
+00:36:13,470 --> 00:36:19,840
+yeah I had a question everything the
+talk %uh stop mocking start testing
+
+633
+00:36:19,840 --> 00:36:23,290
+from I believe I'll after two years ago
+at the Canton
+
+634
+00:36:23,290 --> 00:36:27,150
+up over your opinion on that especially
+with now this new mocking 7 Recovery
+
+635
+00:36:27,150 --> 00:36:27,400
+Disk
+
+636
+00:36:27,330 --> 00:36:31,780
+intruder thought what what what I didn't
+you stop mines are set by I knew the
+
+637
+00:36:31,780 --> 00:36:32,600
+idea is kinda
+
+638
+00:36:32,600 --> 00:36:35,960
+some things I was getting at right that
+yeah I mean thoughts
+
+639
+00:36:35,960 --> 00:36:39,740
+does my thought is that mocking I think
+it really call I'm I've kinda been
+
+640
+00:36:39,740 --> 00:36:41,140
+bitten by the Mockingbird
+
+641
+00:36:41,140 --> 00:36:46,150
+but I am have yet to you get bit by that
+bud
+
+642
+00:36:46,150 --> 00:36:50,560
+you know painfully so yeah I know those
+caveats up by having the market also I'm
+
+643
+00:36:50,560 --> 00:36:50,950
+kinda
+
+644
+00:36:50,950 --> 00:36:55,710
+swinging from one side to the other yeah
+hi
+
+645
+00:36:55,710 --> 00:36:59,350
+and wonder if you thought about making a
+pyramid scaffold
+
+646
+00:36:59,350 --> 00:37:02,520
+out of ATM craft I
+
+647
+00:37:02,520 --> 00:37:05,590
+okay if I knew it here at Scapa
+
+648
+00:37:05,590 --> 00:37:08,860
+what I could do that much as they like
+the template thing rehab I think press
+
+649
+00:37:08,860 --> 00:37:10,300
+like I already know you have
+
+650
+00:37:10,300 --> 00:37:13,970
+yeah you know what I venture yeah so I
+its yet so I A
+
+651
+00:37:13,970 --> 00:37:17,130
+is like it pp Pakistan play yeah I think
+I'll be a good idea on
+
+652
+00:37:17,130 --> 00:37:21,870
+I yep we should have people look at what
+idea to make sure I get I mean
+
+653
+00:37:21,870 --> 00:37:25,770
+it should use them more the way to 18
+pratt was written was very very
+
+654
+00:37:25,770 --> 00:37:28,080
+simplistically it doesn't use that that
+those ok
+
+655
+00:37:28,080 --> 00:37:32,260
+transactions that would you probably
+should years I'm said property to a
+
+656
+00:37:32,260 --> 00:37:33,190
+little more
+
+657
+00:37:33,190 --> 00:37:36,990
+stopping it but yeah I think yet that
+would be great
+
+658
+00:37:36,990 --> 00:37:41,940
+your I've got one more
+
+659
+00:37:41,940 --> 00:37:45,850
+sorry home what are the initial things
+that attracted me to see brought me
+
+660
+00:37:45,850 --> 00:37:49,920
+coming from hibernate was the ability to
+just use table mappings that I could
+
+661
+00:37:49,920 --> 00:37:52,140
+have my model objects be just plain ol
+Python objects
+
+662
+00:37:52,140 --> 00:37:55,990
+without having inherit from some magical
+base cost and then incident
+
+663
+00:37:55,990 --> 00:38:00,280
+martino sessions I be able to abstract
+might get access to repository or
+
+664
+00:38:00,280 --> 00:38:00,740
+something
+
+665
+00:38:00,740 --> 00:38:05,010
+how you feel but I've I've not seen not
+much Mike Turzai registers right you
+
+666
+00:38:05,010 --> 00:38:08,220
+what's economy is so strong I started
+out very
+
+667
+00:38:08,220 --> 00:38:12,450
+in in spire by hibernate and for the
+first
+
+668
+00:38:12,450 --> 00:38:16,090
+three or four berths been hacked Clarita
+we had um
+
+669
+00:38:16,090 --> 00:38:20,110
+just map like your class where poachers
+people pose
+
+670
+00:38:20,110 --> 00:38:24,370
+are I and then you have a table then you
+know the mapper and I just found
+
+671
+00:38:24,370 --> 00:38:26,350
+actually went to try to use that system
+
+672
+00:38:26,350 --> 00:38:31,230
+it was really tedious I some people do
+work that way
+
+673
+00:38:31,230 --> 00:38:34,240
+on but it just seems like
+
+674
+00:38:34,240 --> 00:38:38,010
+from a pragmatic point of view it just
+works at more easily to hack your
+
+675
+00:38:38,010 --> 00:38:39,530
+classes in Table somewhat
+
+676
+00:38:39,530 --> 00:38:42,530
+are sometimes use a certain style which
+is in the dock switched where you have
+
+677
+00:38:42,530 --> 00:38:43,180
+your class
+
+678
+00:38:43,180 --> 00:38:46,250
+laid out but instead having that the
+table columns
+
+679
+00:38:46,250 --> 00:38:52,220
+in line lbs a in air attributes
+underscore table point to a a complete a
+
+680
+00:38:52,220 --> 00:38:53,170
+by itself so
+
+681
+00:38:53,170 --> 00:38:56,610
+oftentimes do more of a hybrid approach
+on
+
+682
+00:38:56,610 --> 00:39:00,730
+but the separate I mean my work hiring
+have a section of house was really just
+
+683
+00:39:00,730 --> 00:39:04,420
+too much tarts are ya I don't I don't
+have a
+
+684
+00:39:04,420 --> 00:39:07,520
+a golden rule there which is why sick of
+me
+
+685
+00:39:07,520 --> 00:39:11,080
+is always so nice about everything
+because I really want to be kind of
+
+686
+00:39:11,080 --> 00:39:11,590
+open-ended
+
+687
+00:39:11,590 --> 00:39:18,590
+thank you if there aren't any other
+questions you can sync up with Mike
+
+688
+00:39:18,600 --> 00:39:19,430
+after the talk but
+
+689
+00:39:19,430 --> 00:39:26,430
+thank you very much Mike
+
+690
+00:39:41,730 --> 00:39:41,980
+in
+

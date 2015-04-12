@@ -1,0 +1,2342 @@
+1
+00:00:02,370 --> 00:00:09,370
+here
+
+2
+00:00:14,970 --> 00:00:18,450
+good afternoon everyone it's my honor to
+introduce Linda Coleman
+
+3
+00:00:18,450 --> 00:00:21,800
+she's a major contributor to PostgreSQL
+and
+
+4
+00:00:21,800 --> 00:00:24,850
+she founded by ladies PDX open source
+bridge
+
+5
+00:00:24,850 --> 00:00:28,750
+Postgres open do still keep chickens she
+still keeps chickens
+
+6
+00:00:28,750 --> 00:00:35,750
+slut so derby warm-up and she's going to
+talk about Olympic its iraq yeah there's
+
+7
+00:00:38,239 --> 00:00:39,780
+one that's even alive right now
+
+8
+00:00:39,780 --> 00:00:46,460
+skin back well dead chicken you were to
+start up the stack okay so I'm
+
+9
+00:00:46,460 --> 00:00:52,890
+you %uh so the stock is about dearest
+migrations and being seen about it
+
+10
+00:00:52,890 --> 00:00:56,980
+II uploaded the slimes are any sleep in
+
+11
+00:00:56,980 --> 00:01:02,579
+check him out there and and I wanted to
+start out by
+
+12
+00:01:02,579 --> 00:01:06,450
+saying thank you and I'm sorry Sina Mike
+Bair
+
+13
+00:01:06,450 --> 00:01:10,830
+to a who's there primary author Olympic
+and
+
+14
+00:01:10,830 --> 00:01:14,789
+he Saturday the speaking after after me
+so I don't think he's here right now
+
+15
+00:01:14,789 --> 00:01:18,580
+I and so for work
+
+16
+00:01:18,580 --> 00:01:23,260
+I work for Mozilla and I work on this
+tool called soco role which is in
+
+17
+00:01:23,260 --> 00:01:26,650
+open source crash management and
+
+18
+00:01:26,650 --> 00:01:30,159
+a business intelligence system that we
+run to
+
+19
+00:01:30,159 --> 00:01:35,310
+analyze primarily Firefox crashes you
+can check out our source code
+
+20
+00:01:35,310 --> 00:01:39,659
+at that URL when you can also see our
+production site that's running
+
+21
+00:01:39,659 --> 00:01:42,920
+and we use on back for all for
+migrations and
+
+22
+00:01:42,920 --> 00:01:48,229
+while I have been app-icon actually my
+coworkers have been running migrations
+
+23
+00:01:48,229 --> 00:01:49,439
+all on their own
+
+24
+00:01:49,439 --> 00:01:53,640
+is amazing and awesome ASO
+
+25
+00:01:53,640 --> 00:01:57,000
+as you might imagine from that
+introduction
+
+26
+00:01:57,000 --> 00:02:00,079
+we use purse %uh so most
+
+27
+00:02:00,079 --> 00:02:04,070
+these things thank you am
+
+28
+00:02:04,070 --> 00:02:08,610
+a I I'm pretty sure that all the stuff I
+wanna talk about today would work with
+
+29
+00:02:08,610 --> 00:02:10,440
+another database and I know that
+
+30
+00:02:10,440 --> 00:02:13,739
+Mike developed quite a bit for Oracle
+
+31
+00:02:13,739 --> 00:02:17,850
+but I'm just to let you know that all my
+experience
+
+32
+00:02:17,850 --> 00:02:24,250
+has to do with using Olympic with as
+Chris so I think the first thing to note
+
+33
+00:02:24,250 --> 00:02:29,060
+about databases is it delivery systems
+
+34
+00:02:29,060 --> 00:02:32,570
+and maybe they also the people that
+maintain them
+
+35
+00:02:32,570 --> 00:02:37,060
+very much resists change and this
+
+36
+00:02:37,060 --> 00:02:40,100
+is my idea sir the evolution
+
+37
+00:02:40,100 --> 00:02:44,070
+have schema change process over time he
+started out with
+
+38
+00:02:44,070 --> 00:02:47,430
+the yellow approach on the bottom there
+and
+
+39
+00:02:47,430 --> 00:02:50,579
+people and another familiar with the
+slash df command that that
+
+40
+00:02:50,579 --> 00:02:54,750
+allows you to actually at it strict
+procedures and post press interactively
+
+41
+00:02:54,750 --> 00:02:56,250
+and the psql command line
+
+42
+00:02:56,250 --> 00:03:00,609
+so people do that products pretty
+awesome that's gone on a
+
+43
+00:03:00,609 --> 00:03:03,780
+but pre camarena
+
+44
+00:03:03,780 --> 00:03:08,430
+evolutionary scale on and then over time
+people figure out that maybe
+
+45
+00:03:08,430 --> 00:03:11,609
+you know they want a little more process
+involved in their scanner management
+
+46
+00:03:11,609 --> 00:03:12,820
+they start doing things like
+
+47
+00:03:12,820 --> 00:03:17,290
+using revision control on their schemas
+and then eventually
+
+48
+00:03:17,290 --> 00:03:20,540
+they do things like have a roll-back
+plans and code review
+
+49
+00:03:20,540 --> 00:03:25,139
+and finally finally we sometimes
+occasionally get
+
+50
+00:03:25,139 --> 00:03:29,049
+two tests that are run using generated a
+ton of his honey
+
+51
+00:03:29,049 --> 00:03:32,350
+purity that contests on house
+
+52
+00:03:32,350 --> 00:03:37,970
+hey my people here K and then you might
+move on to testing on prod like
+
+53
+00:03:37,970 --> 00:03:41,430
+data which is exciting and then finally
+make it to testing
+
+54
+00:03:41,430 --> 00:03:45,780
+it completes each environment that has a
+copy a production did and I will say
+
+55
+00:03:45,780 --> 00:03:46,780
+that I am
+
+56
+00:03:46,780 --> 00:03:50,699
+want it is very fortunate few that has a
+complete copy of production
+
+57
+00:03:50,699 --> 00:03:53,859
+data in my staging environment and it
+makes my life
+
+58
+00:03:53,859 --> 00:03:56,970
+a lot easier so here to say it can be
+done
+
+59
+00:03:56,970 --> 00:04:01,130
+happens so what is seen
+
+60
+00:04:01,130 --> 00:04:05,070
+ski management well I think I to find
+that as
+
+61
+00:04:05,070 --> 00:04:08,970
+executing a schema change in a
+controlled and repeatable way
+
+62
+00:04:08,970 --> 00:04:13,190
+while you're working with developers and
+also operations
+
+63
+00:04:13,190 --> 00:04:17,340
+I think that this is the only way that
+you can get it to be controlled and
+
+64
+00:04:17,340 --> 00:04:21,130
+repeatable as if you have both the
+developers and the operations folks can
+
+65
+00:04:21,130 --> 00:04:22,049
+i working together
+
+66
+00:04:22,049 --> 00:04:26,620
+notes the devil skewer but it it really
+you really do need people
+
+67
+00:04:26,620 --> 00:04:31,400
+collaborating on this and the other
+thing I have realized as i've
+
+68
+00:04:31,400 --> 00:04:34,979
+had to maintain the system for last
+couple years
+
+69
+00:04:34,979 --> 00:04:38,569
+is a migration tools really are
+configuration management tools for your
+
+70
+00:04:38,569 --> 00:04:39,229
+database
+
+71
+00:04:39,229 --> 00:04:42,500
+and one of a kind of quicksand had other
+people that are working on these
+
+72
+00:04:42,500 --> 00:04:43,159
+problems
+
+73
+00:04:43,159 --> 00:04:47,400
+in some ways it can make the
+conversations easier about really how
+
+74
+00:04:47,400 --> 00:04:50,180
+this is Manish why you need cover here
+
+75
+00:04:50,180 --> 00:04:56,720
+and why having downgrade scripts is
+actually a really good idea
+
+76
+00:04:56,720 --> 00:05:00,990
+so has ever gonna talk about today
+migrations there about communicating
+
+77
+00:05:00,990 --> 00:05:02,009
+change
+
+78
+00:05:02,009 --> 00:05:05,330
+communicating process and like I said X
+hearing stuff
+
+79
+00:05:05,330 --> 00:05:10,539
+in a controlled and repeatable way with
+both developers and operations
+
+80
+00:05:10,539 --> 00:05:14,569
+so when he came here for Olympic it's a
+schema migration tool that integrates
+
+81
+00:05:14,569 --> 00:05:18,310
+with seek welcoming and I'm gonna get
+into a lot of details about exactly how
+
+82
+00:05:18,310 --> 00:05:19,430
+to use it
+
+83
+00:05:19,430 --> 00:05:23,020
+I am i talked today might act
+
+84
+00:05:23,020 --> 00:05:25,780
+so my assumptions about people's
+environments and why you might want to
+
+85
+00:05:25,780 --> 00:05:28,580
+use something like Olympic specifically
+is that
+
+86
+00:05:28,580 --> 00:05:33,460
+human migrations are frequent automation
+a schema migration as a whole
+
+87
+00:05:33,460 --> 00:05:36,919
+am we currently have an environment that
+runs
+
+88
+00:05:36,919 --> 00:05:40,789
+a downgrade and an upgrade in Jenkins
+before every build
+
+89
+00:05:40,789 --> 00:05:44,689
+afar a production code
+
+90
+00:05:44,689 --> 00:05:48,240
+am that your station varmint is enough
+like production for testing
+
+91
+00:05:48,240 --> 00:05:51,500
+it doesn't have to be an exact duplicate
+like ours but it needs to be enough
+
+92
+00:05:51,500 --> 00:05:52,830
+unease to have enough
+
+93
+00:05:52,830 --> 00:05:56,159
+bad data in it or whatever else it is
+that you deal with him production so
+
+94
+00:05:56,159 --> 00:05:58,530
+that it can make it real
+
+95
+00:05:58,530 --> 00:06:01,969
+and also I assume that reading a small
+amount of code is OK
+
+96
+00:06:01,969 --> 00:06:04,740
+and sometimes this can be a problem if
+you're working environment where you
+
+97
+00:06:04,740 --> 00:06:05,930
+have to hand
+
+98
+00:06:05,930 --> 00:06:09,409
+things of wholesale to the DBAs I know
+that
+
+99
+00:06:09,409 --> 00:06:14,499
+Mike wrote did Olympic with that
+specific situation and mine in there are
+
+100
+00:06:14,499 --> 00:06:19,090
+tools built into it to help you with
+that so you can just can rust sequel of
+
+101
+00:06:19,090 --> 00:06:25,610
+to a group of TBS if thats hired by me
+runs
+
+102
+00:06:25,610 --> 00:06:29,620
+yeah so but no tools perfect I'm gonna
+
+103
+00:06:29,620 --> 00:06:32,990
+talk a little bit about some other
+things that I think that
+
+104
+00:06:32,990 --> 00:06:36,039
+a limit kid learn and change and
+
+105
+00:06:36,039 --> 00:06:39,469
+things about it that that could change
+in the future
+
+106
+00:06:39,469 --> 00:06:43,509
+I really think ultimately deviation
+drive migration told twice cuz otherwise
+
+107
+00:06:43,509 --> 00:06:45,819
+are probably just not going to use it
+
+108
+00:06:45,819 --> 00:06:48,879
+and it really helps to have a toilet
+DBAs and developers like
+
+109
+00:06:48,879 --> 00:06:53,389
+and I have to say a art darker skinned
+areas both
+
+110
+00:06:53,389 --> 00:06:57,499
+really like go on the clock so here's
+how the whole talkers are organized for
+
+111
+00:06:57,499 --> 00:06:59,870
+someone and share with you some day be a
+problem
+
+112
+00:06:59,870 --> 00:07:03,270
+one specific one that I've had on her
+talk a little bit about picking
+
+113
+00:07:03,270 --> 00:07:06,430
+the right migration to a long while a
+nickel prolly work for you
+
+114
+00:07:06,430 --> 00:07:10,900
+and go through basic commands and talk
+about lessons learned
+
+115
+00:07:10,900 --> 00:07:15,169
+and if I may some other things that I
+think on that could learn from
+
+116
+00:07:15,169 --> 00:07:18,569
+my production environment
+
+117
+00:07:18,569 --> 00:07:22,539
+sign off that's very easy to read but
+hand this is something that I had to do
+
+118
+00:07:22,539 --> 00:07:23,650
+to my database
+
+119
+00:07:23,650 --> 00:07:29,180
+not too long ago I'm and to just cut to
+the punch line here it's kinda scary bit
+
+120
+00:07:29,180 --> 00:07:34,379
+have peel PG SQL have recently had to
+drop and replace
+
+121
+00:07:34,379 --> 00:07:39,479
+about 200 partition constraints that had
+the wrong
+
+122
+00:07:39,479 --> 00:07:43,569
+a constraint on them they were just
+using timestamp instead of time stamped
+
+123
+00:07:43,569 --> 00:07:45,259
+with time zone
+
+124
+00:07:45,259 --> 00:07:49,150
+missus count one of those really
+horrible messy d/b/a problems that comes
+
+125
+00:07:49,150 --> 00:07:50,229
+up that
+
+126
+00:07:50,229 --> 00:07:54,639
+is used as our reasoner it's an excuse
+about why
+
+127
+00:07:54,639 --> 00:07:57,689
+people don't wanna use migration systems
+
+128
+00:07:57,689 --> 00:08:01,210
+this is one of those hard messy problems
+that a that yeah
+
+129
+00:08:01,210 --> 00:08:04,689
+that you may not want to put in your
+migration system
+
+130
+00:08:04,689 --> 00:08:09,479
+but I'm I actually used Olympic to run
+mess
+
+131
+00:08:09,479 --> 00:08:13,819
+and that link their is the code the
+actual revision file
+
+132
+00:08:13,819 --> 00:08:16,830
+that's in our our production release
+that
+
+133
+00:08:16,830 --> 00:08:22,319
+has this code in it and it works really
+well
+
+134
+00:08:22,319 --> 00:08:27,240
+and what what's act about this was this
+wasn't the first time that we've had to
+
+135
+00:08:27,240 --> 00:08:29,409
+deal with this particular issue
+
+136
+00:08:29,409 --> 00:08:34,360
+I'll and it was a motivating factor for
+getting Olympic into our environment
+
+137
+00:08:34,360 --> 00:08:37,930
+the change just sort of snack n
+
+138
+00:08:37,930 --> 00:08:42,219
+us sometime between January and April
+into the production database
+
+139
+00:08:42,219 --> 00:08:46,880
+we at the time didn't have any useful
+otter trail for how that happened
+
+140
+00:08:46,880 --> 00:08:50,190
+and some partitions were affected but
+not others
+
+141
+00:08:50,190 --> 00:08:54,959
+and the original airdate it back to life
+2010
+
+142
+00:08:54,959 --> 00:08:59,230
+so it was time for us to examine the
+process of how we're managing our scheme
+
+143
+00:08:59,230 --> 00:09:01,829
+and so I did that I broke it down
+
+144
+00:09:01,829 --> 00:09:05,529
+and this is what it look like
+
+145
+00:09:05,529 --> 00:09:09,290
+I'm so first of all we created Ross
+equal
+
+146
+00:09:09,290 --> 00:09:12,500
+files for each change in reply test it
+locally on some
+
+147
+00:09:12,500 --> 00:09:16,820
+some system is half an hour left up a
+copy in at it some template files
+
+148
+00:09:16,820 --> 00:09:20,699
+recreate the old schema run and shell
+script on it
+
+149
+00:09:20,699 --> 00:09:25,329
+update the migration on on on you know
+commit things and then one other
+
+150
+00:09:25,329 --> 00:09:29,240
+worse most horrifying things that we had
+to do was test it on stage
+
+151
+00:09:29,240 --> 00:09:33,040
+and then dumped the schema at a stage in
+recommit that back
+
+152
+00:09:33,040 --> 00:09:37,209
+into our production refile I really want
+to get away from this it was
+
+153
+00:09:37,209 --> 00:09:40,589
+it was really frustrating and often
+times that staffer
+
+154
+00:09:40,589 --> 00:09:43,670
+committing the schema back wickets kept
+because it was so
+
+155
+00:09:43,670 --> 00:09:47,100
+frustrating to do and this is our
+process
+
+156
+00:09:47,100 --> 00:09:50,800
+pretty much now you know we create an
+old schema
+
+157
+00:09:50,800 --> 00:09:53,889
+we actually use a clock made it to do
+that with a model that pie
+
+158
+00:09:53,889 --> 00:09:57,199
+create an Olympic revision tests an
+upgrade
+
+159
+00:09:57,199 --> 00:10:00,910
+commit their vision to the repo and
+that's the last time that we touched the
+
+160
+00:10:00,910 --> 00:10:05,089
+production code at that point it's ready
+to go
+
+161
+00:10:05,089 --> 00:10:08,370
+so just quickly yes so anyway
+
+162
+00:10:08,370 --> 00:10:11,610
+is great now to use on its management
+changes
+
+163
+00:10:11,610 --> 00:10:15,459
+on experimentation on this particular
+problem that I had revealed
+
+164
+00:10:15,459 --> 00:10:18,800
+you know which partitions could be
+modified without deadlocking
+
+165
+00:10:18,800 --> 00:10:22,130
+I mean we just got to run it a a few
+times over norian
+
+166
+00:10:22,130 --> 00:10:25,980
+to get the final change rolled out
+everywhere and I was able to roll out
+
+167
+00:10:25,980 --> 00:10:27,139
+this partition
+
+168
+00:10:27,139 --> 00:10:30,209
+management change in regular business
+hours
+
+169
+00:10:30,209 --> 00:10:33,639
+I didn't have to take a downtime to do
+it which
+
+170
+00:10:33,639 --> 00:10:37,250
+for me was pretty amazing
+
+171
+00:10:37,250 --> 00:10:40,529
+so to without the visual
+
+172
+00:10:40,529 --> 00:10:43,620
+here's here's the steps I'm
+
+173
+00:10:43,620 --> 00:10:47,339
+to do this process with the limit to
+make the changes to your mom about
+
+174
+00:10:47,339 --> 00:10:52,259
+higher maybe rustic well files you're an
+Alembic revision dash a shadow generate
+
+175
+00:10:52,259 --> 00:10:56,199
+you editor vision file and the commit
+the changes
+
+176
+00:10:56,199 --> 00:11:00,910
+and we also have another separate brand
+re actually run manually the migration
+
+177
+00:11:00,910 --> 00:11:04,389
+on stage after the other to play ever
+release
+
+178
+00:11:04,389 --> 00:11:08,350
+but another thing that we've just
+started doing the last like month
+
+179
+00:11:08,350 --> 00:11:12,449
+is we have Jenkins run the downgrade an
+upgrade as part of the test suite
+
+180
+00:11:12,449 --> 00:11:15,519
+and once were satisfied that that's
+working well for everyone we're gonna
+
+181
+00:11:15,519 --> 00:11:17,709
+have migrations run automatically
+
+182
+00:11:17,709 --> 00:11:21,709
+on stage and may be on production are
+nice little
+
+183
+00:11:21,709 --> 00:11:28,709
+still sketchy but I'm I'm hoping that we
+get to that point
+
+184
+00:11:29,730 --> 00:11:32,600
+sorry I don't know if these are the same
+kinds of problems are you guys run into
+
+185
+00:11:32,600 --> 00:11:33,410
+you back
+
+186
+00:11:33,410 --> 00:11:36,670
+we really wanted to have an easy way
+including
+
+187
+00:11:36,670 --> 00:11:40,550
+and user-defined functions am in the
+migrations
+
+188
+00:11:40,550 --> 00:11:43,639
+for dev and stage and we can embed bra
+
+189
+00:11:43,639 --> 00:11:46,680
+sequel in these migrations am
+
+190
+00:11:46,680 --> 00:11:50,209
+by default it includes downgrades which
+you know if using South that's also
+
+191
+00:11:50,209 --> 00:11:51,070
+something
+
+192
+00:11:51,070 --> 00:11:55,579
+that happens there on it really enables
+data is changed as a plan
+
+193
+00:11:55,579 --> 00:11:59,320
+this is how I get the developers to
+review are changes
+
+194
+00:11:59,320 --> 00:12:03,060
+I send them a python file heard that
+house in sick on that and they're much
+
+195
+00:12:03,060 --> 00:12:04,730
+more willing to review it
+
+196
+00:12:04,730 --> 00:12:08,740
+I'm so now we have a lot of code review
+discipline in our process
+
+197
+00:12:08,740 --> 00:12:12,870
+I'm and the revisions themselves are
+decoupled from release versions
+
+198
+00:12:12,870 --> 00:12:17,110
+and the branch min.order: rich I'll talk
+a little bit more later
+
+199
+00:12:17,110 --> 00:12:20,940
+and I'll ask you promise of rest I was
+able to remove a hundred thousand lines
+
+200
+00:12:20,940 --> 00:12:21,970
+of code
+
+201
+00:12:21,970 --> 00:12:26,740
+ok and that wasn't a former shell
+scripts
+
+202
+00:12:26,740 --> 00:12:30,850
+I
+
+203
+00:12:30,850 --> 00:12:35,009
+and I was like the number one
+contributor for that carter's so great
+
+204
+00:12:35,009 --> 00:12:39,850
+alteration I
+
+205
+00:12:39,850 --> 00:12:43,620
+I we had no more post deployment scheme
+in check ans
+
+206
+00:12:43,620 --> 00:12:46,949
+are horrible and and now
+
+207
+00:12:46,949 --> 00:12:50,399
+were you know we're deploying tested you
+noticed an odd
+
+208
+00:12:50,399 --> 00:12:53,740
+well and anyway this enabled attested an
+automated stage
+
+209
+00:12:53,740 --> 00:12:58,190
+kleiman and we finally separated the
+schema definition from
+
+210
+00:12:58,190 --> 00:13:01,600
+version specific configuration which is
+incredibly
+
+211
+00:13:01,600 --> 00:13:04,769
+also important for stability so you
+visit me
+
+212
+00:13:04,769 --> 00:13:08,519
+hi happy so happy now it's really great
+
+213
+00:13:08,519 --> 00:13:12,500
+I'm so if you're in the position of
+needing to pick
+
+214
+00:13:12,500 --> 00:13:16,220
+data migration to a server choose your
+own adventure a little bit
+
+215
+00:13:16,220 --> 00:13:19,279
+I and hear some other questions I think
+it's important
+
+216
+00:13:19,279 --> 00:13:23,949
+can ask about a before you dive in to
+any particular one
+
+217
+00:13:23,949 --> 00:13:27,230
+for small how often does your schema
+change like if it's almost never
+
+218
+00:13:27,230 --> 00:13:31,250
+you may not need a tool hike Olympic
+right I may just be
+
+219
+00:13:31,250 --> 00:13:35,399
+kinda wasted your time on do you need
+the migrations well
+
+220
+00:13:35,399 --> 00:13:39,940
+it delivers what do you need my gracious
+rerun without you and also can you
+
+221
+00:13:39,940 --> 00:13:44,009
+have them run without you individual
+percent that knows a lot about the
+
+222
+00:13:44,009 --> 00:13:45,259
+schema
+
+223
+00:13:45,259 --> 00:13:49,220
+an are you able to test the migration
+before you run and production
+
+224
+00:13:49,220 --> 00:13:52,319
+surprisingly this is not a question that
+everyone asks
+
+225
+00:13:52,319 --> 00:13:55,730
+100 where they implement a system
+
+226
+00:13:55,730 --> 00:14:01,190
+I'm also can developers create a new
+scheme I without your help
+
+227
+00:14:01,190 --> 00:14:04,569
+this is incredibly important for us for
+new contributors because we have
+
+228
+00:14:04,569 --> 00:14:08,209
+outside countries contributing code to
+this business intelligence system
+
+229
+00:14:08,209 --> 00:14:11,060
+three years for analyzing crashes and
+it's kind of amazing and they really
+
+230
+00:14:11,060 --> 00:14:11,720
+need
+
+231
+00:14:11,720 --> 00:14:16,829
+too ill to do this without me a how hard
+is it to get from the old schema to
+
+232
+00:14:16,829 --> 00:14:19,819
+anyone like we've got people that have
+adopted so Coral Way way in the past
+
+233
+00:14:19,819 --> 00:14:22,810
+year ago and I sometimes need to
+generate
+
+234
+00:14:22,810 --> 00:14:26,529
+her need I try to help them generate
+migrations
+
+235
+00:14:26,529 --> 00:14:30,699
+from ancient versions up-to-date to get
+them up today
+
+236
+00:14:30,699 --> 00:14:34,430
+I'm and also are changed rollbacks a
+standard
+
+237
+00:14:34,430 --> 00:14:39,360
+use a patrol some people some people
+don't ever go back to the donor of art
+
+238
+00:14:39,360 --> 00:14:39,940
+so
+
+239
+00:14:39,940 --> 00:14:43,430
+that's important to know whether he
+better not
+
+240
+00:14:43,430 --> 00:14:47,940
+so for us we need to communicate change
+when you apply changes in the right
+
+241
+00:14:47,940 --> 00:14:48,779
+order
+
+242
+00:14:48,779 --> 00:14:51,889
+we need apply changes only one
+
+243
+00:14:51,889 --> 00:14:54,800
+we need to use a lot arrest people were
+needed because we have a lot of the
+
+244
+00:14:54,800 --> 00:14:56,910
+skill pts QR code
+
+245
+00:14:56,910 --> 00:14:59,940
+and we want to provide a single
+interface
+
+246
+00:14:59,940 --> 00:15:04,160
+for those changes and finally I really
+want us to be able to roll
+
+247
+00:15:04,160 --> 00:15:07,519
+bro back Chris Lee for stress makes that
+pretty easy because if the
+
+248
+00:15:07,519 --> 00:15:11,079
+support for transactions which is really
+nice sometimes
+
+249
+00:15:11,079 --> 00:15:15,920
+you know he many that another system as
+well
+
+250
+00:15:15,920 --> 00:15:19,379
+saw I'm one thing that I struggled with
+
+251
+00:15:19,379 --> 00:15:22,550
+and was that the DBAs were not
+
+252
+00:15:22,550 --> 00:15:27,060
+super excited about what I'm gonna stand
+this next
+
+253
+00:15:27,060 --> 00:15:30,920
+really hated the idea how to use the NRM
+at all
+
+254
+00:15:30,920 --> 00:15:35,490
+on and and went on to say about that
+
+255
+00:15:35,490 --> 00:15:38,600
+is a before we implemented on Nick we
+had three different ways of defining
+
+256
+00:15:38,600 --> 00:15:41,199
+scheme in our tests
+
+257
+00:15:41,199 --> 00:15:44,279
+and they were all you post
+
+258
+00:15:44,279 --> 00:15:47,779
+I different parts for the code and so
+this is an opportunity
+
+259
+00:15:47,779 --> 00:15:51,970
+to show them how having a central source
+or truth would be really helpful for
+
+260
+00:15:51,970 --> 00:15:53,899
+maintaining the schema
+
+261
+00:15:53,899 --> 00:15:59,029
+I'm sorry ass on USO is about having
+that our Antioch
+
+262
+00:15:59,029 --> 00:16:02,649
+I don't have a whole lotta time to go
+over all the details about this that
+
+263
+00:16:02,649 --> 00:16:06,120
+basically having a single source of
+truth really helps a lot of stuff then
+
+264
+00:16:06,120 --> 00:16:08,449
+you end up with reusable components
+
+265
+00:16:08,449 --> 00:16:11,970
+and database version: independence from
+the rest the code
+
+266
+00:16:11,970 --> 00:16:15,949
+on and also this ability to use rocks
+equal
+
+267
+00:16:15,949 --> 00:16:19,709
+a some other stuff that we talked a lot
+about was fitting into the existing
+
+268
+00:16:19,709 --> 00:16:20,459
+touring
+
+269
+00:16:20,459 --> 00:16:24,029
+enabling partnership with developers in
+integrating in with the testing
+
+270
+00:16:24,029 --> 00:16:24,870
+framework
+
+271
+00:16:24,870 --> 00:16:27,459
+which is still something that I'm
+struggling with now cuz I inherited this
+
+272
+00:16:27,459 --> 00:16:28,310
+huge
+
+273
+00:16:28,310 --> 00:16:32,730
+America that had no tests and now we at
+least have a framework in
+
+274
+00:16:32,730 --> 00:16:36,230
+few task but you know that's kinda my
+next large body of work is
+
+275
+00:16:36,230 --> 00:16:41,439
+implementing complete ass for our
+database schema
+
+276
+00:16:41,439 --> 00:16:46,790
+yeah anyway this might help you if you
+end up having to have that d/b/a talk
+
+277
+00:16:46,790 --> 00:16:50,250
+so I miss you actually using I'm back
+
+278
+00:16:50,250 --> 00:16:53,430
+so I wrote a blog post that walks you
+through you
+
+279
+00:16:53,430 --> 00:16:56,939
+very practically narrative style like
+how to do this
+
+280
+00:16:56,939 --> 00:17:00,339
+on hell that was interesting thank you
+OpenOffice
+
+281
+00:17:00,339 --> 00:17:04,370
+am so ironic has a redox site
+
+282
+00:17:04,370 --> 00:17:07,350
+and the documentation there is really
+great it's got a lot of best practices
+
+283
+00:17:07,350 --> 00:17:08,230
+built into it
+
+284
+00:17:08,230 --> 00:17:11,060
+some other vocabulary we're gonna have
+to deal with right off the bat that may
+
+285
+00:17:11,060 --> 00:17:11,870
+be different
+
+286
+00:17:11,870 --> 00:17:14,910
+then other migrations news for small
+revision
+
+287
+00:17:14,910 --> 00:17:18,660
+as a single migration a downer vision is
+the previous migration
+
+288
+00:17:18,660 --> 00:17:22,480
+upgrade actually applying the change
+downgrade
+
+289
+00:17:22,480 --> 00:17:25,780
+rolling back are downgrading and then
+offline mode
+
+290
+00:17:25,780 --> 00:17:29,640
+which is emitting Ross equal for a
+particular change
+
+291
+00:17:29,640 --> 00:17:33,380
+she had her on that in a minute
+
+292
+00:17:33,380 --> 00:17:37,620
+these are all the commands at uni to use
+to set up a limit for the first time
+
+293
+00:17:37,620 --> 00:17:40,620
+it'll create a directory Psychonomic
+slash
+
+294
+00:17:40,620 --> 00:17:43,910
+and then some stuff underneath their an
+
+295
+00:17:43,910 --> 00:17:47,990
+you know I I use for transfer all the
+stuff so I put that in there too
+
+296
+00:17:47,990 --> 00:17:51,850
+and then when you're creating your
+vision you can just a revision
+
+297
+00:17:51,850 --> 00:17:55,100
+and you give it a message half and put
+our
+
+298
+00:17:55,100 --> 00:17:59,630
+a bug numbers in there as well sausage
+fixes bug whatever
+
+299
+00:17:59,630 --> 00:18:03,600
+and their message and then you can use a
+great hand and
+
+300
+00:18:03,600 --> 00:18:07,520
+it's got this nice position all sin
+taxes while Rican downgrading its a -1
+
+301
+00:18:07,520 --> 00:18:08,210
+yr
+
+302
+00:18:08,210 --> 00:18:15,210
+minus Tanner whenever actor upgrade or
+downgrade
+
+303
+00:18:15,270 --> 00:18:18,480
+so if you have a scheme to find an
+armada higher
+
+304
+00:18:18,480 --> 00:18:22,440
+you don't have to do this but you can
+you can just import that into your hands
+
+305
+00:18:22,440 --> 00:18:23,640
+up high and then
+
+306
+00:18:23,640 --> 00:18:29,120
+on Dec does the right thing through the
+great
+
+307
+00:18:29,120 --> 00:18:32,250
+if you have helper functions and I have
+
+308
+00:18:32,250 --> 00:18:35,600
+quite a few of these for dealing with
+like weird stuff that we have in our
+
+309
+00:18:35,600 --> 00:18:37,390
+scheme and also doing things like
+
+310
+00:18:37,390 --> 00:18:40,700
+applying permissions on particular
+tables
+
+311
+00:18:40,700 --> 00:18:44,740
+for me without having to do a lot
+actually work you can just import that
+
+312
+00:18:44,740 --> 00:18:46,060
+in your hand up I as well
+
+313
+00:18:46,060 --> 00:18:50,230
+make it available
+
+314
+00:18:50,230 --> 00:18:53,290
+I one thing that I've had to you also is
+I'm just
+
+315
+00:18:53,290 --> 00:18:56,120
+showing you like a couple these things
+show you how easy it is to come to
+
+316
+00:18:56,120 --> 00:18:59,070
+integrate to the typical TBA tasks in
+here
+
+317
+00:18:59,070 --> 00:19:02,940
+but we need to ignore some scheme
+elements that were not actively
+
+318
+00:19:02,940 --> 00:19:07,400
+a maintaining ash say in our production
+database
+
+319
+00:19:07,400 --> 00:19:10,940
+with this particular Kobe 60 include
+symbol
+
+320
+00:19:10,940 --> 00:19:15,150
+you can put things like ignoring a bunch
+of partitions you can see there
+
+321
+00:19:15,150 --> 00:19:19,040
+got a regular expression to ignore
+things that have eight digits
+
+322
+00:19:19,040 --> 00:19:23,460
+at the univer- much indicator a database
+partition and I'm also ignoring the ski
+
+323
+00:19:23,460 --> 00:19:24,760
+Michael Dixie which were
+
+324
+00:19:24,760 --> 00:19:29,360
+for deprecating
+
+325
+00:19:29,360 --> 00:19:34,860
+another thing am that I've done is I am
+managing a lot of Prosecco files
+
+326
+00:19:34,860 --> 00:19:38,200
+that have plp JSQ on them and I just put
+a
+
+327
+00:19:38,200 --> 00:19:43,040
+create or replace function in there and
+then I just shove the whole file in this
+
+328
+00:19:43,040 --> 00:19:49,340
+directory in this is how I love them
+every time
+
+329
+00:19:49,340 --> 00:19:53,440
+a when you first set up a database
+initially needed television
+
+330
+00:19:53,440 --> 00:19:56,600
+you're at in your Olympic return so
+there's
+
+331
+00:19:56,600 --> 00:20:00,280
+command called stamp that's provided so
+you can do that and so an example for
+
+332
+00:20:00,280 --> 00:20:01,010
+you might do that
+
+333
+00:20:01,010 --> 00:20:05,170
+is like we have a setup DB command and
+then at the end of that we just stamp it
+
+334
+00:20:05,170 --> 00:20:05,460
+with
+
+335
+00:20:05,460 --> 00:20:10,700
+sir most recent revision in our system
+
+336
+00:20:10,700 --> 00:20:15,070
+and here's the of Lima am what you do is
+you create
+
+337
+00:20:15,070 --> 00:20:18,130
+you're changing a leaky changer model in
+some way
+
+338
+00:20:18,130 --> 00:20:21,690
+and then you say and then you create
+your vision file which we already did
+
+339
+00:20:21,690 --> 00:20:25,570
+you know couple commands back and then
+you tell it to upgrade a particular
+
+340
+00:20:25,570 --> 00:20:26,810
+vision here's where the
+
+341
+00:20:26,810 --> 00:20:30,710
+position all sent actually other
+relatives in tax resale like -1 yr
+
+342
+00:20:30,710 --> 00:20:34,290
+plus one or something that doesn't work
+need to use the actual
+
+343
+00:20:34,290 --> 00:20:38,460
+a you know actual revision id:
+
+344
+00:20:38,460 --> 00:20:41,610
+and then you'd just a dash dash sequel
+and it will emit
+
+345
+00:20:41,610 --> 00:20:45,680
+rustic well a same for downgrade for you
+have to do it
+
+346
+00:20:45,680 --> 00:20:51,290
+arrange that works great
+
+347
+00:20:51,290 --> 00:20:55,060
+so summer my lessons learned hand them
+
+348
+00:20:55,060 --> 00:20:59,190
+and dealing with implementing this
+migration system
+
+349
+00:20:59,190 --> 00:21:02,270
+I was put the migrations in a separate
+commit from
+
+350
+00:21:02,270 --> 00:21:06,340
+the rest of my schema changes so that if
+I have to for some reason rollback or
+
+351
+00:21:06,340 --> 00:21:07,770
+production code I still
+
+352
+00:21:07,770 --> 00:21:11,740
+have the migration in the repo we deploy
+our
+
+353
+00:21:11,740 --> 00:21:15,050
+approaching code under duress the same
+would apply everywhere
+
+354
+00:21:15,050 --> 00:21:19,530
+so I'm this is really helped make its
+way to Camelback
+
+355
+00:21:19,530 --> 00:21:23,120
+yeah so and then when you revert to
+commit for
+
+356
+00:21:23,120 --> 00:21:26,300
+a general change you still have the
+revision file itself
+
+357
+00:21:26,300 --> 00:21:30,680
+some people also separate their a
+migration scripts out two completely
+
+358
+00:21:30,680 --> 00:21:31,430
+separate
+
+359
+00:21:31,430 --> 00:21:37,140
+as urs controlled retail and that might
+might work better for you
+
+360
+00:21:37,140 --> 00:21:42,380
+I'm we and you know I try to store the
+scheme objects in the smallest
+
+361
+00:21:42,380 --> 00:21:43,340
+reasonable
+
+362
+00:21:43,340 --> 00:21:47,320
+composable unit that mean different
+things for you
+
+363
+00:21:47,320 --> 00:21:51,000
+we have a very large scheme as you may
+have a
+
+364
+00:21:51,000 --> 00:21:55,090
+relies on a 20-yard removed her
+thousands lined the code
+
+365
+00:21:55,090 --> 00:21:58,620
+but we use are in for the course Kiama
+and then I put all the types
+
+366
+00:21:58,620 --> 00:22:01,630
+the user-defined functions and the views
+and their own separate
+
+367
+00:22:01,630 --> 00:22:05,060
+sequel files I am yeah like I said
+
+368
+00:22:05,060 --> 00:22:08,310
+consider storing the schema and their
+visions in a separate
+
+369
+00:22:08,310 --> 00:22:12,330
+source control repo if that's
+appropriate for your environment
+
+370
+00:22:12,330 --> 00:22:16,470
+if you write tests run them every time
+
+371
+00:22:16,470 --> 00:22:19,510
+I am a we wrote a really simple tool
+
+372
+00:22:19,510 --> 00:22:22,970
+to generate a new schema from scratch
+that we could run the tests on them
+
+373
+00:22:22,970 --> 00:22:26,280
+we're a simple tool to make fake data
+for us
+
+374
+00:22:26,280 --> 00:22:29,790
+and then we also protests for those
+tools from such of
+
+375
+00:22:29,790 --> 00:22:33,050
+and it has helped us kinda stay on us
+with everything
+
+376
+00:22:33,050 --> 00:22:38,280
+I'm and when things failing immigration
+process read another test
+
+377
+00:22:38,280 --> 00:22:42,220
+my more harping on testing testing
+testing as have a couple more minutes 0
+
+378
+00:22:42,220 --> 00:22:45,720
+to quickly say here some other stuff
+that I think
+
+379
+00:22:45,720 --> 00:22:49,070
+would be really helpful to be core
+functionality in Olympic
+
+380
+00:22:49,070 --> 00:22:52,520
+one is just understanding database
+partitions out of the box would be
+
+381
+00:22:52,520 --> 00:22:55,850
+really nice so they don't have to add
+this thing to ignore them
+
+382
+00:22:55,850 --> 00:22:59,500
+a another thing would be to never to a
+
+383
+00:22:59,500 --> 00:23:04,020
+apply it to halt to a new column so in
+progress little performance optimization
+
+384
+00:23:04,020 --> 00:23:04,920
+or if you don't
+
+385
+00:23:04,920 --> 00:23:09,310
+applied to fall I don't take out as many
+locks doesn't take as long to add a
+
+386
+00:23:09,310 --> 00:23:09,920
+column
+
+387
+00:23:09,920 --> 00:23:14,770
+AB nice if the or are sorry its Olympic
+understood that
+
+388
+00:23:14,770 --> 00:23:17,990
+I'm help us manage user defined
+functions little better that's a tall
+
+389
+00:23:17,990 --> 00:23:18,930
+order but
+
+390
+00:23:18,930 --> 00:23:23,850
+her be so awesome if a there was service
+in the Salish patterns
+
+391
+00:23:23,850 --> 00:23:27,910
+the pattern that we have having the
+separate files works pretty well
+
+392
+00:23:27,910 --> 00:23:32,220
+but there are some drawbacks to it
+having on it understand index
+
+393
+00:23:32,220 --> 00:23:32,890
+concurrently
+
+394
+00:23:32,890 --> 00:23:36,040
+when we're at it indexes would be really
+nice on
+
+395
+00:23:36,040 --> 00:23:39,690
+having a little bit prettier syntax for
+multi committee Francisca sometimes I
+
+396
+00:23:39,690 --> 00:23:43,360
+need to do things in a certain order and
+I don't want my entire
+
+397
+00:23:43,360 --> 00:23:46,780
+a migration to run in a single
+transaction
+
+398
+00:23:46,780 --> 00:23:50,320
+be nice if there's little prettier
+syntax for that
+
+399
+00:23:50,320 --> 00:23:53,560
+and finally am this is something that
+Mike Rd
+
+400
+00:23:53,560 --> 00:23:57,150
+his or and and wants work on can have
+some
+
+401
+00:23:57,150 --> 00:24:01,000
+stuff out there for is supporting
+multiple branches in history currently
+
+402
+00:24:01,000 --> 00:24:04,530
+your history with Olympic just needs to
+be in a single order which I understand
+
+403
+00:24:04,530 --> 00:24:05,590
+is different than
+
+404
+00:24:05,590 --> 00:24:09,660
+am urging the immigration system and so
+in the future
+
+405
+00:24:09,660 --> 00:24:12,870
+that's gonna be possible and I have some
+ideas for maybe like a
+
+406
+00:24:12,870 --> 00:24:17,420
+sprint thing on Monday for hacking and
+something but he's got some great ideas
+
+407
+00:24:17,420 --> 00:24:18,750
+for making this work
+
+408
+00:24:18,750 --> 00:24:23,690
+a more holistically in future
+
+409
+00:24:23,690 --> 00:24:27,420
+so just to close on I'll say
+
+410
+00:24:27,420 --> 00:24:30,760
+in looking out the different roles in
+our particular school is perfect for all
+
+411
+00:24:30,760 --> 00:24:31,950
+situations
+
+412
+00:24:31,950 --> 00:24:34,970
+I think Olympic personally well for us
+because we have a large
+
+413
+00:24:34,970 --> 00:24:39,430
+we have a large schema amber really our
+team is really into on a mission we have
+
+414
+00:24:39,430 --> 00:24:41,940
+a really good relationship with our
+operations
+
+415
+00:24:41,940 --> 00:24:44,960
+team so that works for for us
+
+416
+00:24:44,960 --> 00:24:49,130
+and I think that a big part of that was
+choosing a tool that both the developers
+
+417
+00:24:49,130 --> 00:24:52,690
+and the DBAs could could like
+
+418
+00:24:52,690 --> 00:24:55,940
+at the same time so I'm awfully
+
+419
+00:24:55,940 --> 00:24:59,050
+hopefully this subcontractors you
+
+420
+00:24:59,050 --> 00:25:02,500
+something mister from sure some other
+tools that I looked at
+
+421
+00:25:02,500 --> 00:25:05,590
+in my person my researching your
+
+422
+00:25:05,590 --> 00:25:08,680
+suggests definitely giving them a look
+if
+
+423
+00:25:08,680 --> 00:25:12,210
+on it doesn't seem to fit for your use
+case
+
+424
+00:25:12,210 --> 00:25:15,620
+and then hear some resources related to
+lameque helper
+
+425
+00:25:15,620 --> 00:25:22,620
+faulty a thank you
+
+426
+00:25:25,360 --> 00:25:32,360
+so if anyone has questions for so you
+know we have a five minutes for
+
+427
+00:25:36,360 --> 00:25:39,520
+so I think you missed a step in the 20
+to 10 churches I'm
+
+428
+00:25:39,520 --> 00:25:44,350
+is the toolkit yours isn't still
+maintained aa effect suggests
+
+429
+00:25:44,350 --> 00:25:47,630
+possibly techniques for migrating from
+one migration system to another
+
+430
+00:25:47,630 --> 00:25:48,760
+migration system
+
+431
+00:25:48,760 --> 00:25:52,870
+not naming any names here but I need to
+make a migration I
+
+432
+00:25:52,870 --> 00:25:56,650
+well so when I
+
+433
+00:25:56,650 --> 00:26:02,150
+when I did this I E want one thing the
+Olympic enables is you don't have to
+
+434
+00:26:02,150 --> 00:26:04,090
+have on
+
+435
+00:26:04,090 --> 00:26:08,030
+like it completes you don't have to
+start from zero
+
+436
+00:26:08,030 --> 00:26:11,810
+with it all so I just dove and and
+started writing
+
+437
+00:26:11,810 --> 00:26:16,300
+migrations based on what the current
+define skin was and I didn't even bother
+
+438
+00:26:16,300 --> 00:26:20,380
+migrating any the old stuff and i'd just
+removed
+
+439
+00:26:20,380 --> 00:26:23,920
+so yeah
+
+440
+00:26:23,920 --> 00:26:29,300
+and it wasn't a requirement from our
+Open Source users that we make those
+
+441
+00:26:29,300 --> 00:26:30,370
+migrations
+
+442
+00:26:30,370 --> 00:26:34,710
+work I'm I don't have a lot of great
+suggestions
+
+443
+00:26:34,710 --> 00:26:38,930
+I was talking to someone a couple days
+ago about what they were planning on
+
+444
+00:26:38,930 --> 00:26:40,610
+doing and basically they
+
+445
+00:26:40,610 --> 00:26:44,840
+the restaurant or to translate the old
+migrations finance our
+
+446
+00:26:44,840 --> 00:26:48,230
+sorry it's a crappy situation I'm in my
+
+447
+00:26:48,230 --> 00:26:52,550
+my my best suggestion is set play
+ignoring
+
+448
+00:26:52,550 --> 00:26:59,550
+and a smear foreign yeah got two quick
+questions for you want as you mentioned
+
+449
+00:27:00,320 --> 00:27:01,720
+a tool to generate data
+
+450
+00:27:01,720 --> 00:27:04,840
+is that open source is that you have a
+name for that project
+
+451
+00:27:04,840 --> 00:27:08,030
+oh yeah yeah now on
+
+452
+00:27:08,030 --> 00:27:11,560
+I know if I can cell
+
+453
+00:27:11,560 --> 00:27:15,670
+so my whole thing that we did its it's
+very specific to us
+
+454
+00:27:15,670 --> 00:27:19,240
+and so I don't know if it will be very
+helpful but it might be a good pattern
+
+455
+00:27:19,240 --> 00:27:22,860
+but the score repo itself which is just
+
+456
+00:27:22,860 --> 00:27:26,130
+mazzola CL put up this
+
+457
+00:27:26,130 --> 00:27:33,130
+action and so if you go to this a car
+repair
+
+458
+00:27:33,170 --> 00:27:36,250
+an in there researcher fake data
+
+459
+00:27:36,250 --> 00:27:39,890
+dot pie Rob Homer wrote that and
+
+460
+00:27:39,890 --> 00:27:43,390
+it sir great you know first step we
+
+461
+00:27:43,390 --> 00:27:47,440
+we talked about trying to turn it into
+like a more modular scalable not really
+
+462
+00:27:47,440 --> 00:27:48,940
+sure what other people needed so if you
+
+463
+00:27:48,940 --> 00:27:52,780
+talk listen to last like how we could
+make that better weekend
+
+464
+00:27:52,780 --> 00:27:56,450
+spell it out cool thanks are many other
+question you
+
+465
+00:27:56,450 --> 00:28:00,360
+base you touched on how South angry
+scissors sequential how does
+
+466
+00:28:00,360 --> 00:28:04,260
+Olympic dress exert their sequential now
+I'm back
+
+467
+00:28:04,260 --> 00:28:08,770
+there's some plans an architecture
+designed to
+
+468
+00:28:08,770 --> 00:28:12,610
+make it so that you can have you know
+multiple
+
+469
+00:28:12,610 --> 00:28:17,280
+children from one parent and thats you
+note that some work that mike has
+
+470
+00:28:17,280 --> 00:28:20,290
+that's ongoing that you can use funding
+for anybody's got
+
+471
+00:28:20,290 --> 00:28:24,150
+deep pockets that would be awesome
+that's that's the plan
+
+472
+00:28:24,150 --> 00:28:27,410
+referred to be there my idea for like a
+quick hack
+
+473
+00:28:27,410 --> 00:28:32,690
+is just to create a file that generates
+conflicts when you try to merge
+
+474
+00:28:32,690 --> 00:28:37,020
+and and so I'm I'm prolly gonna hack
+something like that and for us
+
+475
+00:28:37,020 --> 00:28:40,540
+that's that's kinda biggest stumbling
+block for developers is still
+
+476
+00:28:40,540 --> 00:28:44,990
+commit to a migrations at the same time
+that are unrelated
+
+477
+00:28:44,990 --> 00:28:48,530
+and then Olympic is like don't do not
+her
+
+478
+00:28:48,530 --> 00:28:51,610
+and Jenkins was a but I'm that's really
+the only
+
+479
+00:28:51,610 --> 00:28:54,990
+the major the only major operation think
+we need to fix it this time
+
+480
+00:28:54,990 --> 00:28:58,830
+so you also said
+
+481
+00:28:58,830 --> 00:29:02,570
+that you run migrations during the
+testing step on your
+
+482
+00:29:02,570 --> 00:29:06,330
+continuous integration server yes
+database migration gonna take a long
+
+483
+00:29:06,330 --> 00:29:07,600
+time how do you do that
+
+484
+00:29:07,600 --> 00:29:14,400
+in a reasonable amount of time yeah
+
+485
+00:29:14,400 --> 00:29:17,410
+I well their
+
+486
+00:29:17,410 --> 00:29:21,110
+II the short answer is on I use
+
+487
+00:29:21,110 --> 00:29:25,290
+every possible trick in the book that I
+can to make
+
+488
+00:29:25,290 --> 00:29:29,420
+migrations take out as few lakhs as
+possible and to apply the changes as
+
+489
+00:29:29,420 --> 00:29:31,550
+quickly as possible in all situations
+
+490
+00:29:31,550 --> 00:29:34,560
+regardless of how much data is involved
+an
+
+491
+00:29:34,560 --> 00:29:38,330
+so that's that's my quick answer there's
+a longer answer
+
+492
+00:29:38,330 --> 00:29:42,750
+which is very long but yeah I just use
+lotsa tricks
+
+493
+00:29:42,750 --> 00:29:47,410
+and I teach the developers like how to
+do that stuff so I have and
+
+494
+00:29:47,410 --> 00:29:51,120
+a presentation I gave that are last team
+work week you know that
+
+495
+00:29:51,120 --> 00:29:56,870
+was basically less tricks to make the
+migrations run fast unfortunately it's
+
+496
+00:29:56,870 --> 00:29:58,460
+all we have time for let's give Selina
+
+497
+00:29:58,460 --> 00:29:59,100
+the ground repost
+

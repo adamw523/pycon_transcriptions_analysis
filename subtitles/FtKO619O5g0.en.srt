@@ -1,0 +1,3831 @@
+1
+00:00:00,049 --> 00:00:03,460
+are we have to talks in this afternoon
+session
+
+2
+00:00:03,460 --> 00:00:07,390
+the first one will be a forty
+five-minute spots so that will translate
+
+3
+00:00:07,390 --> 00:00:08,139
+to
+
+4
+00:00:08,139 --> 00:00:13,750
+roughly 37 and minutes and 33 seconds
+for talk
+
+5
+00:00:13,750 --> 00:00:19,109
+II and the remainder for questions so
+I'd like to introduce Greg Wilson Craig
+
+6
+00:00:19,109 --> 00:00:21,600
+Wilson is the creator software carpentry
+
+7
+00:00:21,600 --> 00:00:25,380
+a crash course in computing skills for
+scientists and engineers
+
+8
+00:00:25,380 --> 00:00:28,619
+his work for 25 years in high
+performance computing
+
+9
+00:00:28,619 --> 00:00:33,610
+data visualization computer security and
+academia in
+
+10
+00:00:33,610 --> 00:00:37,079
+and is the author or editor several
+books on computing
+
+11
+00:00:37,079 --> 00:00:40,870
+including the 2008 drawer wardrobe
+
+12
+00:00:40,870 --> 00:00:44,520
+up winner beautiful coed and two books
+for children
+
+13
+00:00:44,520 --> 00:00:49,450
+great received the PhD in computer
+science from University vendor in 1993
+
+14
+00:00:49,450 --> 00:00:53,440
+and presently runs the software
+carpentry project for the Mozilla
+
+15
+00:00:53,440 --> 00:00:55,550
+Foundation so %uh let's welcome
+
+16
+00:00:55,550 --> 00:00:58,870
+upgrade for his talk about softer
+carpentry
+
+17
+00:00:58,870 --> 00:01:02,539
+and the lessons learned thank you
+
+18
+00:01:02,539 --> 00:01:08,159
+so there are the boring details what you
+really want to do is hop on that if your
+
+19
+00:01:08,159 --> 00:01:08,810
+pad
+
+20
+00:01:08,810 --> 00:01:13,220
+arm that's what the pad looks like
+please come join take notes and ask
+
+21
+00:01:13,220 --> 00:01:14,790
+questions collaborate
+
+22
+00:01:14,790 --> 00:01:18,799
+so here's what we're gonna do we're
+gonna recap a series of conversations
+
+23
+00:01:18,799 --> 00:01:22,619
+I've had and I'm gonna do both voices
+because I have a little kid I've had a
+
+24
+00:01:22,619 --> 00:01:24,350
+lot of practice doing funny voices
+
+25
+00:01:24,350 --> 00:01:27,360
+I'm and also singing the chorus love
+
+26
+00:01:27,360 --> 00:01:32,210
+the song from frozen over and over and
+over and over so
+
+27
+00:01:32,210 --> 00:01:36,460
+1997 hi I'm a program I'm starting a web
+company would you do
+
+28
+00:01:36,460 --> 00:01:40,240
+0 I'm a designer I know how to select in
+range text and images in ways that are
+
+29
+00:01:40,240 --> 00:01:42,490
+appealing informative news about hot
+
+30
+00:01:42,490 --> 00:01:46,140
+that seems pretty simple to me I mean I
+know how to use a fine selection dialog
+
+31
+00:01:46,140 --> 00:01:49,829
+I don't think I need to hire you few
+years later
+
+32
+00:01:49,829 --> 00:01:53,729
+pumped into the designer so I just are
+not go and tanked
+
+33
+00:01:53,729 --> 00:01:57,649
+people so that my site was agree in
+confusing I guess I've learned my lesson
+
+34
+00:01:57,649 --> 00:02:00,930
+2014 hi
+
+35
+00:02:00,930 --> 00:02:04,320
+I'm starting an online education company
+what do you do when a teacher
+
+36
+00:02:04,320 --> 00:02:06,979
+I know how to select and arrange
+learning materials with repealing
+
+37
+00:02:06,979 --> 00:02:08,140
+informative interactive
+
+38
+00:02:08,140 --> 00:02:11,860
+har that seems pretty simple to me
+retire you
+
+39
+00:02:11,860 --> 00:02:16,690
+welcome to my life here we go are in a
+project called suffer carpentry
+
+40
+00:02:16,690 --> 00:02:21,310
+we r lab skills for scientific computing
+this project started because I was
+
+41
+00:02:21,310 --> 00:02:22,050
+working
+
+42
+00:02:22,050 --> 00:02:25,870
+with his assistance to run misusing
+first-generation parallel computers
+
+43
+00:02:25,870 --> 00:02:29,540
+and they would come into my office with
+the 50,000 support when asked me to make
+
+44
+00:02:29,540 --> 00:02:31,150
+a zillion times faster
+
+45
+00:02:31,150 --> 00:02:34,560
+and they had never heard a version
+control and we're
+
+46
+00:02:34,560 --> 00:02:39,459
+really sure why they should be writing
+functions because nobody had ever talked
+
+47
+00:02:39,459 --> 00:02:39,980
+them
+
+48
+00:02:39,980 --> 00:02:44,190
+and his unfair to look down on people
+who aren't doing things right if you've
+
+49
+00:02:44,190 --> 00:02:45,530
+never shown them how
+
+50
+00:02:45,530 --> 00:02:49,489
+I did anyway it's difficult to look down
+on physicists but I managed
+
+51
+00:02:49,489 --> 00:02:53,650
+I'm but I realized by the mid-nineteen
+ninety's that I was doing more harm than
+
+52
+00:02:53,650 --> 00:02:54,390
+good
+
+53
+00:02:54,390 --> 00:02:58,250
+if you give a supercomputer to the
+average scientist it is rather like
+
+54
+00:02:58,250 --> 00:03:00,659
+giving a Ferrari to the average
+sixteen-year-old
+
+55
+00:03:00,659 --> 00:03:04,810
+and the crash rates are similar so
+starting in late 90's
+
+56
+00:03:04,810 --> 00:03:08,989
+we begin running classes to teach them
+all that stuff that is boring
+
+57
+00:03:08,989 --> 00:03:12,560
+but works version control shell
+scripting
+
+58
+00:03:12,560 --> 00:03:16,750
+how to marginal rise a program how to
+manage data I'm
+
+59
+00:03:16,750 --> 00:03:20,409
+we don't have enough DT yet
+
+60
+00:03:20,409 --> 00:03:24,220
+to publish but the feedback we get is
+that a two-day workshop
+
+61
+00:03:24,220 --> 00:03:28,280
+will save most scientists day week for
+the rest of their careers
+
+62
+00:03:28,280 --> 00:03:32,250
+no to any faculty members in the
+audience this does not mean they will
+
+63
+00:03:32,250 --> 00:03:35,150
+finish the degree earlier they will
+still go to end the funding first 10
+
+64
+00:03:35,150 --> 00:03:35,890
+percent
+
+65
+00:03:35,890 --> 00:03:39,450
+but they'll get more done in the publish
+more on the contactor problems that
+
+66
+00:03:39,450 --> 00:03:41,099
+could not tackle before
+
+67
+00:03:41,099 --> 00:03:44,190
+we teach the UNIX shell
+
+68
+00:03:44,190 --> 00:03:47,230
+get you can get help Python were or
+
+69
+00:03:47,230 --> 00:03:50,230
+ins SQL but what we're really teaching
+
+70
+00:03:50,230 --> 00:03:53,530
+his task automation how to track ensure
+you work
+
+71
+00:03:53,530 --> 00:03:58,330
+had a modularized your code how to turn
+it into functions that are readable
+
+72
+00:03:58,330 --> 00:04:01,799
+testable in reusable one that does in
+fact all the same thing
+
+73
+00:04:01,799 --> 00:04:05,260
+we teach them a skill but what we're
+really teach teams with structured data
+
+74
+00:04:05,260 --> 00:04:05,720
+is
+
+75
+00:04:05,720 --> 00:04:10,129
+what's a key want to know why do I care
+so it's beaten switch
+
+76
+00:04:10,129 --> 00:04:13,200
+we advertise the things on the left
+because they've heard those and will
+
+77
+00:04:13,200 --> 00:04:13,860
+show up
+
+78
+00:04:13,860 --> 00:04:18,320
+we teach them the things on the right
+last year
+
+79
+00:04:18,320 --> 00:04:22,060
+103 instructors 97 two day event in 12
+different countries
+
+80
+00:04:22,060 --> 00:04:25,930
+about 3500 people went through we're
+going to increase all those numbers by
+
+81
+00:04:25,930 --> 00:04:28,199
+about 50 percent this year
+
+82
+00:04:28,199 --> 00:04:32,759
+so we're not huge but we're not small
+and we're growing
+
+83
+00:04:32,759 --> 00:04:36,120
+that's where we've been and you can see
+the numbers in the yellows but were
+
+84
+00:04:36,120 --> 00:04:36,710
+everywhere
+
+85
+00:04:36,710 --> 00:04:40,229
+and if you want to help community showed
+but that's not here and
+
+86
+00:04:40,229 --> 00:04:44,290
+what I'm here to talk about today nor my
+here to talk about all the volunteers
+
+87
+00:04:44,290 --> 00:04:46,320
+who make this possible
+
+88
+00:04:46,320 --> 00:04:50,759
+our instructors are volunteers post for
+the workshop is the travel and
+
+89
+00:04:50,759 --> 00:04:53,610
+accommodation but they volunteer their
+time
+
+90
+00:04:53,610 --> 00:04:57,050
+partly to make the world a better place
+partly because it's more fun to work
+
+91
+00:04:57,050 --> 00:04:59,290
+with people who know these things
+
+92
+00:04:59,290 --> 00:05:03,030
+and partly because it's a real boost to
+their careers
+
+93
+00:05:03,030 --> 00:05:07,120
+the academic job market is pretty tight
+right now so if Trevor raise your hand
+
+94
+00:05:07,120 --> 00:05:07,620
+Trafford
+
+95
+00:05:07,620 --> 00:05:11,530
+who's one for instructors wants to get a
+job at MIT going down in teaching a
+
+96
+00:05:11,530 --> 00:05:16,330
+workshop in Boston showing people just
+how useful he is
+
+97
+00:05:16,330 --> 00:05:20,419
+gets his resume over the big stack and
+short stack right away
+
+98
+00:05:20,419 --> 00:05:23,570
+so first thing I've learned
+
+99
+00:05:23,570 --> 00:05:27,570
+most scientists think a programming as
+attacks they have to pay in order to do
+
+100
+00:05:27,570 --> 00:05:28,350
+science
+
+101
+00:05:28,350 --> 00:05:31,410
+this idea that we're gonna teach
+everybody programming other organ wanna
+
+102
+00:05:31,410 --> 00:05:32,070
+learn
+
+103
+00:05:32,070 --> 00:05:35,440
+is wrong and we just need to get past
+that
+
+104
+00:05:35,440 --> 00:05:41,259
+how many do home run apps I'm if you
+enjoy doing home reno's
+
+105
+00:05:41,259 --> 00:05:45,910
+hey Chris out we put up his hand this is
+a guy who enjoys refactoring make files
+
+106
+00:05:45,910 --> 00:05:46,460
+like
+
+107
+00:05:46,460 --> 00:05:50,370
+we're talking about way here on the bell
+curve for most of us
+
+108
+00:05:50,370 --> 00:05:53,580
+hanging drywall is something we have to
+get done not something that we really
+
+109
+00:05:53,580 --> 00:05:54,979
+look forward to
+
+110
+00:05:54,979 --> 00:05:59,350
+similarly if you take the average
+chemist she could have chosen to go into
+
+111
+00:05:59,350 --> 00:06:00,780
+computer science
+
+112
+00:06:00,780 --> 00:06:03,900
+she chose to do chemistry that's what
+she wants to do
+
+113
+00:06:03,900 --> 00:06:06,660
+programming something she has to do
+along the way in the same way that
+
+114
+00:06:06,660 --> 00:06:09,560
+statistics is something she has to do
+along the way
+
+115
+00:06:09,560 --> 00:06:13,620
+so we say wow this is really exciting
+let me talk about recursion
+
+116
+00:06:13,620 --> 00:06:17,180
+we're not helping her I'm
+
+117
+00:06:17,180 --> 00:06:20,680
+the number two and this one took me a
+long time
+
+118
+00:06:20,680 --> 00:06:23,870
+the curriculum is fall
+
+119
+00:06:23,870 --> 00:06:27,580
+every time we want to add something and
+any level
+
+120
+00:06:27,580 --> 00:06:30,800
+we have to identify something to take
+out
+
+121
+00:06:30,800 --> 00:06:34,000
+and right now I use this as an acid test
+if you tell me we should have more
+
+122
+00:06:34,000 --> 00:06:37,330
+programming in schools my very first
+question is what will you removed to
+
+123
+00:06:37,330 --> 00:06:39,270
+make room
+
+124
+00:06:39,270 --> 00:06:42,880
+if you're not willing to do that I'm not
+interested in talking to you because
+
+125
+00:06:42,880 --> 00:06:45,280
+you're not being honest
+
+126
+00:06:45,280 --> 00:06:48,669
+yes I absolutely believe we should be
+teaching programming in high schools
+
+127
+00:06:48,669 --> 00:06:53,180
+to give them less Jim so the more obese
+
+128
+00:06:53,180 --> 00:06:55,910
+do we teach them once about French or
+English depending on which part of
+
+129
+00:06:55,910 --> 00:06:56,940
+Canada red
+
+130
+00:06:56,940 --> 00:07:00,080
+about we teach them once map right
+
+131
+00:07:00,080 --> 00:07:04,250
+we give them was music every time you
+want to add something
+
+132
+00:07:04,250 --> 00:07:08,030
+you gotta take something out and if you
+want to do this evening or weekend the
+
+133
+00:07:08,030 --> 00:07:10,789
+new cutting into all the things we
+currently do with that time
+
+134
+00:07:10,789 --> 00:07:13,849
+and if you want to put more computing
+into the undergrad program in mechanical
+
+135
+00:07:13,849 --> 00:07:14,889
+engineering
+
+136
+00:07:14,889 --> 00:07:18,630
+you have to convince a product that is
+more important to mechanical engineers
+
+137
+00:07:18,630 --> 00:07:19,660
+education
+
+138
+00:07:19,660 --> 00:07:23,840
+to implement an Amex turn
+
+139
+00:07:23,840 --> 00:07:27,199
+if you're willing to do that the new
+being honest about the challenges we
+
+140
+00:07:27,199 --> 00:07:28,780
+face
+
+141
+00:07:28,780 --> 00:07:31,550
+and this has been a real struggle for me
+and this is why we run this two-day
+
+142
+00:07:31,550 --> 00:07:32,599
+workshops
+
+143
+00:07:32,599 --> 00:07:35,770
+outside the normal system our goal
+
+144
+00:07:35,770 --> 00:07:40,300
+is to reach graduate students and in
+week fifteen years
+
+145
+00:07:40,300 --> 00:07:43,729
+so that they will rise up through the
+ranks to their sitting on the curriculum
+
+146
+00:07:43,729 --> 00:07:44,370
+committee
+
+147
+00:07:44,370 --> 00:07:48,930
+and they can decide what to take owed to
+make room for the stuff
+
+148
+00:07:48,930 --> 00:07:52,610
+this is how statistics became part of
+the education in the life sciences
+
+149
+00:07:52,610 --> 00:07:53,590
+medicine
+
+150
+00:07:53,590 --> 00:07:57,000
+the generation that had to learn it
+during the second world war
+
+151
+00:07:57,000 --> 00:08:00,530
+particularly in the UK under Norman
+Fischer
+
+152
+00:08:00,530 --> 00:08:04,240
+fifteen and twenty years later when they
+work on the curriculum committees at
+
+153
+00:08:04,240 --> 00:08:05,660
+Oxford and Harvard
+
+154
+00:08:05,660 --> 00:08:10,539
+and Cambridge in UC London they said
+right we're going to take this out
+
+155
+00:08:10,539 --> 00:08:15,410
+and this was different in every school
+so the people have to learn stance
+
+156
+00:08:15,410 --> 00:08:19,229
+you gotta play alone game I'm
+
+157
+00:08:19,229 --> 00:08:22,710
+I hate that idea I'm not by nature a
+patient man
+
+158
+00:08:22,710 --> 00:08:26,520
+but this is how it works on you booking
+police line
+
+159
+00:08:26,520 --> 00:08:29,560
+science advances one funeral at a time
+
+160
+00:08:29,560 --> 00:08:32,830
+Kirk but all the stuff is in the paper
+
+161
+00:08:32,830 --> 00:08:35,990
+go read the paper it short I think it's
+well-written
+
+162
+00:08:35,990 --> 00:08:39,729
+and its open access so let me tell you
+something useful
+
+163
+00:08:39,729 --> 00:08:44,560
+let me tell you some things that are
+really in the paper
+
+164
+00:08:44,560 --> 00:08:48,830
+victory comes from the accumulation of
+small advantages
+
+165
+00:08:48,830 --> 00:08:52,529
+if you want your workshops to work if
+you want your teaching to work
+
+166
+00:08:52,529 --> 00:08:57,630
+there is no single slam dunk there are a
+lot of things that can go badly wrong
+
+167
+00:08:57,630 --> 00:09:01,470
+but in terms which you do right it's a
+collection of small things
+
+168
+00:09:01,470 --> 00:09:05,880
+how many do live coding when you're
+teaching could no slight you plug in
+
+169
+00:09:05,880 --> 00:09:10,510
+you start typing do you know why it's
+better
+
+170
+00:09:10,510 --> 00:09:17,300
+reason number one this the script why is
+that better
+
+171
+00:09:17,300 --> 00:09:22,399
+they can see how to diagnose and recover
+from mistakes
+
+172
+00:09:22,399 --> 00:09:25,820
+collateral knowledge transfer they see
+what to do when it goes wrong
+
+173
+00:09:25,820 --> 00:09:29,470
+because that's never in the textbook and
+that's never on your slides
+
+174
+00:09:29,470 --> 00:09:33,029
+ride they also get the reassurance of
+knowing that a
+
+175
+00:09:33,029 --> 00:09:36,680
+if that the teachers can screw up it's
+okay for me to screw up
+
+176
+00:09:36,680 --> 00:09:41,330
+you giving them permission heater pad
+
+177
+00:09:41,330 --> 00:09:45,000
+we always run a need to pack when we're
+teaching there are students who will not
+
+178
+00:09:45,000 --> 00:09:48,470
+raise their hand for whatever reason to
+ask a question but alas could
+
+179
+00:09:48,470 --> 00:09:52,190
+on any three-pound because my shared
+note-taking recapture way to share
+
+180
+00:09:52,190 --> 00:09:53,560
+snippets of code
+
+181
+00:09:53,560 --> 00:09:57,800
+either petr something like it is the
+best teaching tool I found in years
+
+182
+00:09:57,800 --> 00:10:04,029
+except for one other how many if you
+teach was sticky notes
+
+183
+00:10:04,029 --> 00:10:08,180
+okay the next time you teach go and get
+two pats a sticky notes
+
+184
+00:10:08,180 --> 00:10:12,089
+one red when green everybody gets too
+sticky notes
+
+185
+00:10:12,089 --> 00:10:16,140
+when things are going well you have a
+green sticky note on your laptop
+
+186
+00:10:16,140 --> 00:10:19,279
+when you need help you put up a red
+sticking up
+
+187
+00:10:19,279 --> 00:10:22,540
+people who will not ask for help when
+they have to do this
+
+188
+00:10:22,540 --> 00:10:27,320
+can just very discreetly say am as if
+they were building a high-priced auction
+
+189
+00:10:27,320 --> 00:10:30,380
+from the front of the room you can
+immediately see who's finished in neat
+
+190
+00:10:30,380 --> 00:10:32,480
+open redirect people
+
+191
+00:10:32,480 --> 00:10:37,120
+people's people with the shells it's
+cheap it works incredibly well
+
+192
+00:10:37,120 --> 00:10:40,600
+it's a poor man's clicker do this
+
+193
+00:10:40,600 --> 00:10:44,339
+and you'll never go back we are teaching
+workshops here on Monday and Tuesday
+
+194
+00:10:44,339 --> 00:10:46,920
+hands up if you're actually gonna
+teaching one of those are helping have
+
+195
+00:10:46,920 --> 00:10:49,300
+one of those and we've got a few people
+in the room
+
+196
+00:10:49,300 --> 00:10:52,750
+okay we are going to be handing out
+sticky notes
+
+197
+00:10:52,750 --> 00:10:56,140
+and most of the people who attend those
+workshops will then use them when they
+
+198
+00:10:56,140 --> 00:10:57,880
+teach
+
+199
+00:10:57,880 --> 00:11:01,860
+I'm it's a wonderful little technique
+minute card is Tracy here
+
+200
+00:11:01,860 --> 00:11:05,110
+i'm looking straight into a bright light
+tree city on the back introduced me to
+
+201
+00:11:05,110 --> 00:11:06,180
+this
+
+202
+00:11:06,180 --> 00:11:09,779
+so you've been teaching in the pin doing
+sticky notes to ask for help which
+
+203
+00:11:09,779 --> 00:11:11,140
+number status
+
+204
+00:11:11,140 --> 00:11:14,750
+yes sir no we're ready to go on however
+you use them
+
+205
+00:11:14,750 --> 00:11:18,089
+coffee break comes around everybody
+takes the red sticky note and very
+
+206
+00:11:18,089 --> 00:11:21,790
+quickly jots down one thing they didn't
+get one thing they didn't understand
+
+207
+00:11:21,790 --> 00:11:25,640
+in on the green thing one thing they
+learned we put them on the table on the
+
+208
+00:11:25,640 --> 00:11:27,890
+way to the room to grab coffee
+
+209
+00:11:27,890 --> 00:11:31,360
+in room forty people pick Super two
+minutes to go through those
+
+210
+00:11:31,360 --> 00:11:34,570
+so that when they come back from coffee
+you know which part of the Western you
+
+211
+00:11:34,570 --> 00:11:36,810
+need to repeat
+
+212
+00:11:36,810 --> 00:11:40,329
+they won't come up and say I didn't
+understand axe
+
+213
+00:11:40,329 --> 00:11:43,980
+and if they do it's 10 to 40 you don't
+have that's representative
+
+214
+00:11:43,980 --> 00:11:47,149
+but if they do that on the way out and
+they come back and say let's just go
+
+215
+00:11:47,149 --> 00:11:49,899
+over coal stocks one more time
+
+216
+00:11:49,899 --> 00:11:54,720
+they will thank you for it and you never
+go back to the old way of teaching
+
+217
+00:11:54,720 --> 00:11:59,670
+signing up with friends we discovered
+this by accident
+
+218
+00:11:59,670 --> 00:12:02,440
+and then I discovered the people doing
+educational psychology research have
+
+219
+00:12:02,440 --> 00:12:04,630
+known this for about fifty five years
+
+220
+00:12:04,630 --> 00:12:08,540
+watch what I do with my hand so
+
+221
+00:12:08,540 --> 00:12:12,260
+our workshops used to have the same
+crappy gender ratio that you see in
+
+222
+00:12:12,260 --> 00:12:14,079
+computer science undergrad class
+
+223
+00:12:14,079 --> 00:12:18,829
+12 to 15 percent female by accident
+
+224
+00:12:18,829 --> 00:12:23,329
+sort have we ran a workshop in London
+where people were supposed to sign up in
+
+225
+00:12:23,329 --> 00:12:24,870
+groups
+
+226
+00:12:24,870 --> 00:12:27,820
+don't sign up as an individual round up
+a few let me to friends and come as a
+
+227
+00:12:27,820 --> 00:12:28,800
+group
+
+228
+00:12:28,800 --> 00:12:33,660
+gender parity why
+
+229
+00:12:33,660 --> 00:12:36,750
+you but when I guess
+
+230
+00:12:36,750 --> 00:12:41,430
+you know the answer in bed in the back
+there
+
+231
+00:12:41,430 --> 00:12:45,279
+less scared because you know that you're
+with people you trust
+
+232
+00:12:45,279 --> 00:12:48,300
+even if they're not also from the
+underrepresented group in somebody's got
+
+233
+00:12:48,300 --> 00:12:50,760
+your back to somebody you can turn to
+for help
+
+234
+00:12:50,760 --> 00:12:53,550
+you're not going to be the dumbest
+person in the room cuz come on this
+
+235
+00:12:53,550 --> 00:12:54,240
+issue let me
+
+236
+00:12:54,240 --> 00:12:57,410
+you know they're stupid issuer in so
+
+237
+00:12:57,410 --> 00:13:00,839
+the work on this was done in the early
+nineteen fifties trying to get
+
+238
+00:13:00,839 --> 00:13:04,639
+recent immigrants particularly Jewish
+kids in New York to sign up for sports
+
+239
+00:13:04,639 --> 00:13:07,019
+activities in neighborhoods
+
+240
+00:13:07,019 --> 00:13:09,980
+even if they're not signing up with the
+Jewish kids the fact that they know
+
+241
+00:13:09,980 --> 00:13:11,829
+those people in trust them
+
+242
+00:13:11,829 --> 00:13:15,339
+makes the at risk under-represented
+groups more likely to show up
+
+243
+00:13:15,339 --> 00:13:18,459
+and I hope of the size but cannot prove
+
+244
+00:13:18,459 --> 00:13:22,380
+that one of the reasons we slow down or
+teaching over the last two years
+
+245
+00:13:22,380 --> 00:13:25,570
+is that we're actually finally reaching
+the people who need our help
+
+246
+00:13:25,570 --> 00:13:30,540
+most because the underrepresented group
+in our workshops used to be
+
+247
+00:13:30,540 --> 00:13:34,139
+the people who really didn't know how to
+program
+
+248
+00:13:34,139 --> 00:13:36,519
+and they were free to commit to
+programming workshop because nobody
+
+249
+00:13:36,519 --> 00:13:38,290
+wants to be the dumbest in room
+
+250
+00:13:38,290 --> 00:13:42,860
+but now they're showing up with other
+people who are just as backward
+
+251
+00:13:42,860 --> 00:13:46,350
+through their K so do group sign up
+
+252
+00:13:46,350 --> 00:13:50,769
+I promise you will increase diversity on
+several axes
+
+253
+00:13:50,769 --> 00:13:54,670
+editors are hard things that
+
+254
+00:13:54,670 --> 00:13:59,329
+we take for granted are really hard for
+them
+
+255
+00:13:59,329 --> 00:14:02,329
+into the biggest mistake we make
+
+256
+00:14:02,329 --> 00:14:05,459
+is to use the word just
+
+257
+00:14:05,459 --> 00:14:08,519
+how many be used the word just when you
+teaching
+
+258
+00:14:08,519 --> 00:14:14,070
+really please stop right it's the
+passive dismiss objective
+
+259
+00:14:14,070 --> 00:14:18,209
+oh yes you just install a virtual
+machine and you just installed Ubuntu on
+
+260
+00:14:18,209 --> 00:14:21,170
+topic that would just make sure it's the
+right version of Ubuntu and then you
+
+261
+00:14:21,170 --> 00:14:23,079
+just synchronize the
+
+262
+00:14:23,079 --> 00:14:26,910
+network card so you can just transfer
+data network
+
+263
+00:14:26,910 --> 00:14:29,930
+getting editors to run getting to
+understand
+
+264
+00:14:29,930 --> 00:14:32,990
+a text editor which is different from
+something with word
+
+265
+00:14:32,990 --> 00:14:35,920
+and how to save files in the root
+directory so they can find them to run
+
+266
+00:14:35,920 --> 00:14:36,880
+them
+
+267
+00:14:36,880 --> 00:14:41,290
+is hard because it is intrinsically hard
+it just we've been bitten by the so
+
+268
+00:14:41,290 --> 00:14:45,589
+often that we've got so much scar tissue
+we can feel the teeth anymore
+
+269
+00:14:45,589 --> 00:14:49,199
+with production that there was something
+there to learn and this is part of what
+
+270
+00:14:49,199 --> 00:14:52,070
+we do with our instructor training is
+try to remind people
+
+271
+00:14:52,070 --> 00:14:55,740
+that there is something there that needs
+to be learned we are one other note if
+
+272
+00:14:55,740 --> 00:14:56,930
+you're organising workshops
+
+273
+00:14:56,930 --> 00:15:00,040
+make sure the russians remarked
+
+274
+00:15:00,040 --> 00:15:03,250
+cuz it the you can dress that story
+tells itself right
+
+275
+00:15:03,250 --> 00:15:06,350
+the other party that story is make sure
+the campus security knows you're
+
+276
+00:15:06,350 --> 00:15:08,649
+supposed to be in the room
+
+277
+00:15:08,649 --> 00:15:13,880
+you can fill in the rest about brief but
+exciting story as well
+
+278
+00:15:13,880 --> 00:15:18,550
+his lesson for and have I could send a
+tweet back in time
+
+279
+00:15:18,550 --> 00:15:21,750
+five years a ten years Intel myself
+something
+
+280
+00:15:21,750 --> 00:15:25,940
+this is what i would tell myself as a
+species
+
+281
+00:15:25,940 --> 00:15:31,060
+we actually know a great deal about how
+people learn how to teach them
+
+282
+00:15:31,060 --> 00:15:35,730
+there is as much evidence-based research
+in education has risen medicine
+
+283
+00:15:35,730 --> 00:15:39,880
+the differences you're probably more
+where if the research in medicine
+
+284
+00:15:39,880 --> 00:15:44,620
+when you are the research in education
+if you can do one thing after the stalk
+
+285
+00:15:44,620 --> 00:15:48,870
+going grab a copy that work and read the
+learning sciences group Carnegie Mellon
+
+286
+00:15:48,870 --> 00:15:49,949
+put this together
+
+287
+00:15:49,949 --> 00:15:55,110
+this is a summary as of 2010 for
+non-specialists were willing to read
+
+288
+00:15:55,110 --> 00:15:58,519
+dense taxed up what we know about
+
+289
+00:15:58,519 --> 00:16:01,750
+cognitive psychology educational
+psychology instructional design social
+
+290
+00:16:01,750 --> 00:16:02,970
+forces shaping
+
+291
+00:16:02,970 --> 00:16:08,060
+learning this it's the everything we've
+got boiled down into one book
+
+292
+00:16:08,060 --> 00:16:12,100
+it is not an exciting read menachem back
+to doubt
+
+293
+00:16:12,100 --> 00:16:15,100
+it isn't an exciting read but it's a
+really useful when happen if you have
+
+294
+00:16:15,100 --> 00:16:15,740
+kids
+
+295
+00:16:15,740 --> 00:16:20,079
+please yes and the kids in the back put
+up their hair
+
+296
+00:16:20,079 --> 00:16:23,720
+excellent working I really like
+
+297
+00:16:23,720 --> 00:16:28,360
+knowing enough about education to fact
+check my daughter's teachers
+
+298
+00:16:28,360 --> 00:16:31,519
+in the same way that I like knowing
+enough about medicine to fact check my
+
+299
+00:16:31,519 --> 00:16:34,940
+sisters oncologist when she was sick
+
+300
+00:16:34,940 --> 00:16:38,750
+how many here in a startup do you like
+knowing enough
+
+301
+00:16:38,750 --> 00:16:42,430
+a boat tax law business legislation
+commercial property
+
+302
+00:16:42,430 --> 00:16:47,820
+that you don't have to take the Warriors
+word-for-word
+
+303
+00:16:47,820 --> 00:16:51,300
+you don't you don't have to be an expert
+but corman
+
+304
+00:16:51,300 --> 00:16:55,110
+250 pages that's a good investment of
+time
+
+305
+00:16:55,110 --> 00:16:59,310
+so footnote to this lesson is most
+programmers
+
+306
+00:16:59,310 --> 00:17:02,009
+and most people in business and most
+people in government even ones that are
+
+307
+00:17:02,009 --> 00:17:03,699
+really excited about teaching
+
+308
+00:17:03,699 --> 00:17:07,760
+don't know that this knowledge exists
+
+309
+00:17:07,760 --> 00:17:11,850
+it was a lotta social forces around that
+we can go into in question period
+
+310
+00:17:11,850 --> 00:17:15,169
+but the ultimate answer is that we have
+heard work on some time so you never
+
+311
+00:17:15,169 --> 00:17:16,970
+fart
+
+312
+00:17:16,970 --> 00:17:22,010
+most programmers would rather spend a
+week remote hacking on a new mic website
+
+313
+00:17:22,010 --> 00:17:26,110
+Fernan our reading research papers to
+discover that the pedagogy embedded in
+
+314
+00:17:26,110 --> 00:17:27,079
+the website
+
+315
+00:17:27,079 --> 00:17:30,220
+is actually useless I'm not mentioning
+any
+
+316
+00:17:30,220 --> 00:17:33,620
+platforms by name contradictory but
+
+317
+00:17:33,620 --> 00:17:37,530
+what too many people are doing
+
+318
+00:17:37,530 --> 00:17:41,470
+is taking bad teaching an accelerating
+it by putting it on the web
+
+319
+00:17:41,470 --> 00:17:44,980
+rather than finding it would good
+teaching is and then exhilarating
+
+320
+00:17:44,980 --> 00:17:48,679
+that
+
+321
+00:17:48,679 --> 00:17:52,840
+let me give you some examples and the
+slides will all be up
+
+322
+00:17:52,840 --> 00:17:57,090
+I'm sorry for the long URL but I'll come
+back to this and watch the piston to pad
+
+323
+00:17:57,090 --> 00:18:00,280
+really good slideshow from a few months
+ago
+
+324
+00:18:00,280 --> 00:18:04,039
+from John Hattie in New Zealand what he
+does
+
+325
+00:18:04,039 --> 00:18:09,789
+is collected Studies in Education into
+the mysteries on top of that
+
+326
+00:18:09,789 --> 00:18:12,880
+so his database has almost 200,000
+
+327
+00:18:12,880 --> 00:18:17,900
+studies from the last half-century on
+various teaching and learning techniques
+
+328
+00:18:17,900 --> 00:18:22,410
+and what he does is look at what is
+called effect size K basically
+
+329
+00:18:22,410 --> 00:18:26,730
+what fraction of a standard deviation
+can you attribute to this thing
+
+330
+00:18:26,730 --> 00:18:31,780
+now for those of you who don't know as a
+very very rough rule a farm
+
+331
+00:18:31,780 --> 00:18:35,760
+each grade in the public school system
+is about one standard deviation up from
+
+332
+00:18:35,760 --> 00:18:36,919
+the one before it
+
+333
+00:18:36,919 --> 00:18:40,360
+so think about these numbers as
+fractions of the year
+
+334
+00:18:40,360 --> 00:18:43,580
+in public education his primary looking
+at k12
+
+335
+00:18:43,580 --> 00:18:47,270
+he's not interested in tertiary
+education adult education
+
+336
+00:18:47,270 --> 00:18:51,340
+so with those caveats let's have a look
+
+337
+00:18:51,340 --> 00:18:56,280
+shifting schools cost you $30 per year
+with nothing else going on
+
+338
+00:18:56,280 --> 00:19:00,320
+moving a kid return prime sticking to
+another cost members third if you're in
+
+339
+00:19:00,320 --> 00:19:01,640
+the education
+
+340
+00:19:01,640 --> 00:19:05,630
+it's disruptive could web-based learning
+
+341
+00:19:05,630 --> 00:19:10,720
+the effect is so small that it's just
+not worth worrying about
+
+342
+00:19:10,720 --> 00:19:14,320
+teacher subject matter knowledge turns
+out to be relatively unimportant
+
+343
+00:19:14,320 --> 00:19:17,919
+misery love farm you looking for bro 2.4
+
+344
+00:19:17,919 --> 00:19:21,750
+to get excited anything below 0.4 your
+
+345
+00:19:21,750 --> 00:19:24,850
+not to worry about it teacher subject
+matter knowledge you don't have to be an
+
+346
+00:19:24,850 --> 00:19:25,720
+expert to teach
+
+347
+00:19:25,720 --> 00:19:29,280
+and in fact we from a softer carpentry
+is it's better if you're not
+
+348
+00:19:29,280 --> 00:19:33,200
+because experts don't remember when
+officers don't know
+
+349
+00:19:33,200 --> 00:19:37,520
+what about class size people get really
+excited about this
+
+350
+00:19:37,520 --> 00:19:40,730
+it turns out there's a week a fact
+
+351
+00:19:40,730 --> 00:19:45,380
+when there are problems that are
+attributed to class size they're usually
+
+352
+00:19:45,380 --> 00:19:46,730
+do something else
+
+353
+00:19:46,730 --> 00:19:50,510
+take a look at the bottom one there
+strongest effect found
+
+354
+00:19:50,510 --> 00:19:54,390
+to improve learning is to get rid of the
+disruptive students
+
+355
+00:19:54,390 --> 00:19:57,830
+and much love the miss attribution to
+class size
+
+356
+00:19:57,830 --> 00:20:00,309
+is simply a reflection of the fact that
+a larger classes more likely to have
+
+357
+00:20:00,309 --> 00:20:02,230
+disruptive students in it
+
+358
+00:20:02,230 --> 00:20:06,010
+if you can control for that the class
+size affect goes away
+
+359
+00:20:06,010 --> 00:20:09,159
+that's interesting motivation
+
+360
+00:20:09,159 --> 00:20:12,250
+K motivated kids
+
+361
+00:20:12,250 --> 00:20:15,309
+learn faster
+
+362
+00:20:15,309 --> 00:20:19,789
+I'm we're a concept mapping to simple no
+picking technique where you draw
+
+363
+00:20:19,789 --> 00:20:22,380
+pictures and the ideas the relationships
+
+364
+00:20:22,380 --> 00:20:26,020
+K would appear to drink getting the kids
+to teach each other
+
+365
+00:20:26,020 --> 00:20:30,230
+I mean if you care program can come in
+if you pair learned
+
+366
+00:20:30,230 --> 00:20:34,280
+even informally look at the price you
+happy year
+
+367
+00:20:34,280 --> 00:20:38,340
+that's a pretty cool thing formidable
+valuation for teachers let me give you a
+
+368
+00:20:38,340 --> 00:20:40,320
+scary statistic
+
+369
+00:20:40,320 --> 00:20:43,770
+in the canadian and american public
+education systems
+
+370
+00:20:43,770 --> 00:20:47,630
+the average teacher has another teacher
+in his or her classroom four hours a
+
+371
+00:20:47,630 --> 00:20:49,470
+year
+
+372
+00:20:49,470 --> 00:20:53,520
+in the Finnish school system the average
+teacher has another teacher in his or
+
+373
+00:20:53,520 --> 00:20:54,919
+her classroom three hours
+
+374
+00:20:54,919 --> 00:20:59,960
+a week a movie play a musical instrument
+
+375
+00:20:59,960 --> 00:21:04,059
+how much to learn from having another
+musician listen and give you feedback
+
+376
+00:21:04,059 --> 00:21:07,850
+how many feet do a sport even if they
+know better than you getting the
+
+377
+00:21:07,850 --> 00:21:12,419
+feedback cleanup and repair if I some if
+you get code reviews
+
+378
+00:21:12,419 --> 00:21:16,130
+the rest if you please don't record for
+me okay
+
+379
+00:21:16,130 --> 00:21:20,679
+it's a normal practice in some school
+systems isn't in English language school
+
+380
+00:21:20,679 --> 00:21:21,610
+systems
+
+381
+00:21:21,610 --> 00:21:26,090
+look at the effect size right it's one
+of the top five
+
+382
+00:21:26,090 --> 00:21:29,090
+how canst teachers improve if they're
+not getting feedback on the teacher
+
+383
+00:21:29,090 --> 00:21:32,179
+there is a commercial site no could be a
+smart cookie dot com
+
+384
+00:21:32,179 --> 00:21:36,289
+teachers can post videos of themselves
+teaching to get feedback from other
+
+385
+00:21:36,289 --> 00:21:37,900
+teachers
+
+386
+00:21:37,900 --> 00:21:42,049
+this is brilliant this is absolutely
+brilliant it's like
+
+387
+00:21:42,049 --> 00:21:46,010
+YouTube where people posting videos and
+songs playing guitar to get feedback on
+
+388
+00:21:46,010 --> 00:21:49,130
+their playing not on how good the song
+is put on how will be doing the keyboard
+
+389
+00:21:49,130 --> 00:21:50,950
+in from work
+
+390
+00:21:50,950 --> 00:21:54,010
+K this is what the internet is for
+
+391
+00:21:54,010 --> 00:21:58,409
+to look at some other things
+
+392
+00:21:58,409 --> 00:22:02,350
+there are broadly speaking and I am
+going to generalize my father taught me
+
+393
+00:22:02,350 --> 00:22:06,669
+never hesitate to sacrifice troops for
+clarity so I'm about to do that
+
+394
+00:22:06,669 --> 00:22:10,190
+basically three mental stages with very
+clear divide between them
+
+395
+00:22:10,190 --> 00:22:14,510
+novices do not know what they don't know
+they do not have a mental map it the
+
+396
+00:22:14,510 --> 00:22:15,679
+terrain
+
+397
+00:22:15,679 --> 00:22:19,010
+they don't know what the key concepts
+are with the relationships are so if you
+
+398
+00:22:19,010 --> 00:22:23,679
+give them what's up know what you were
+actually pushing them further back
+
+399
+00:22:23,679 --> 00:22:27,289
+because what they're going to do is take
+those facts and put them into the box is
+
+400
+00:22:27,289 --> 00:22:28,360
+that they've got
+
+401
+00:22:28,360 --> 00:22:32,010
+but those are the wrong box is how many
+viewers 38 a programming class you've
+
+402
+00:22:32,010 --> 00:22:33,850
+been wondering helped us okay
+
+403
+00:22:33,850 --> 00:22:36,610
+you know the people coming in and asking
+the questions and the questions just
+
+404
+00:22:36,610 --> 00:22:39,500
+don't make sense
+
+405
+00:22:39,500 --> 00:22:43,370
+that's why they've taken the knowledge
+and they try to fit into the existing
+
+406
+00:22:43,370 --> 00:22:46,600
+model of the world and that models one
+but they don't know that it's the only
+
+407
+00:22:46,600 --> 00:22:47,530
+one that got
+
+408
+00:22:47,530 --> 00:22:52,030
+so the most important thing with novices
+is not to give them information
+
+409
+00:22:52,030 --> 00:22:56,260
+its to give me correct conceptual model
+in or have to the introduction to Unix
+
+410
+00:22:56,260 --> 00:22:58,789
+we teach them exactly fifteen
+
+411
+00:22:58,789 --> 00:23:03,590
+Unix commands in three hours but we
+teach them the paper and filter model
+
+412
+00:23:03,590 --> 00:23:07,940
+we teach them history we teach them how
+to read a for loop in the show which is
+
+413
+00:23:07,940 --> 00:23:09,590
+not to say things in shell script
+
+414
+00:23:09,590 --> 00:23:13,669
+we teach them the file in directory
+structure so now they've got a map above
+
+415
+00:23:13,669 --> 00:23:15,059
+the terrain
+
+416
+00:23:15,059 --> 00:23:17,679
+they knew where the pieces are in how
+they're supposed to fit together in them
+
+417
+00:23:17,679 --> 00:23:20,289
+they can fill it in with knowledge
+faster than I can talk and you're
+
+418
+00:23:20,289 --> 00:23:21,030
+discovering
+
+419
+00:23:21,030 --> 00:23:24,070
+I can talk pretty fast
+
+420
+00:23:24,070 --> 00:23:28,780
+second stage is competent competent
+practitioners can do normal tasks
+
+421
+00:23:28,780 --> 00:23:31,860
+normally that's where most people stop
+
+422
+00:23:31,860 --> 00:23:35,850
+how many be drive a car look at you
+probably a normal drive
+
+423
+00:23:35,850 --> 00:23:39,850
+ride I mean helicopter gunship comes
+swooping in but a bit about you don't
+
+424
+00:23:39,850 --> 00:23:40,740
+know what to do
+
+425
+00:23:40,740 --> 00:23:44,010
+normal situation right happens in the
+movies all the time was come also
+
+426
+00:23:44,010 --> 00:23:44,840
+restore
+
+427
+00:23:44,840 --> 00:23:47,919
+happens less often in Canada right
+
+428
+00:23:47,919 --> 00:23:52,010
+summer Europe from the state's drawn
+capital of the world okay
+
+429
+00:23:52,010 --> 00:23:55,390
+competent practitioners are the middle
+to curve
+
+430
+00:23:55,390 --> 00:23:59,400
+what distinguishes experts from
+competent practitioners
+
+431
+00:23:59,400 --> 00:24:02,799
+it is not how much knowledge they have
+
+432
+00:24:02,799 --> 00:24:06,370
+no but how's that reflect what is
+experience turn into because you can do
+
+433
+00:24:06,370 --> 00:24:08,860
+things over and over
+
+434
+00:24:08,860 --> 00:24:12,970
+what different sheets the expert is the
+density of connections
+
+435
+00:24:12,970 --> 00:24:16,610
+in relationships between the fact that
+they know
+
+436
+00:24:16,610 --> 00:24:20,830
+think but in terms of the ground if your
+graphs personally connected to go from
+
+437
+00:24:20,830 --> 00:24:22,080
+the idea you've got
+
+438
+00:24:22,080 --> 00:24:25,620
+to the idea you need to solve the
+problem might be five parts
+
+439
+00:24:25,620 --> 00:24:29,330
+but for new me who got a much more
+densely connected graph it might only be
+
+440
+00:24:29,330 --> 00:24:30,980
+one or two
+
+441
+00:24:30,980 --> 00:24:34,299
+and this is why experts are usually bad
+a teaching novices
+
+442
+00:24:34,299 --> 00:24:37,600
+because for the expert idea a an idea no
+
+443
+00:24:37,600 --> 00:24:41,549
+are adjacent there's a link for the
+competent practitioners
+
+444
+00:24:41,549 --> 00:24:46,000
+a two-seater hope LeBron opposite aid to
+be
+
+445
+00:24:46,000 --> 00:24:49,100
+overdue said to cuba y back 2c 2d
+
+446
+00:24:49,100 --> 00:24:53,270
+the can't see the jump they don't have
+that link
+
+447
+00:24:53,270 --> 00:24:56,330
+K all you teaching has to be based
+around us
+
+448
+00:24:56,330 --> 00:25:00,210
+you have to know which group you're
+talking to
+
+449
+00:25:00,210 --> 00:25:05,679
+the most important thing to get from
+competent expert is self reflection
+
+450
+00:25:05,679 --> 00:25:08,900
+as far as we know you do not become an
+expert with the reflecting on your own
+
+451
+00:25:08,900 --> 00:25:09,799
+practice
+
+452
+00:25:09,799 --> 00:25:12,980
+again how many few code reviews
+
+453
+00:25:12,980 --> 00:25:16,779
+pic I do not believe you can become an
+expert programmer with ok
+
+454
+00:25:16,779 --> 00:25:20,970
+reviewing your own code any more than
+you can become an expert musician
+
+455
+00:25:20,970 --> 00:25:24,070
+without learning to hear yourself
+
+456
+00:25:24,070 --> 00:25:28,000
+so if you wanna make that transition
+what you have to do is teach company
+
+457
+00:25:28,000 --> 00:25:29,870
+people have to look at each other's work
+
+458
+00:25:29,870 --> 00:25:33,830
+how to read and critique somebody else's
+movie review how to tell somebody
+
+459
+00:25:33,830 --> 00:25:36,890
+that their shoulders with rushing on the
+swimming whatever it is
+
+460
+00:25:36,890 --> 00:25:40,390
+so that they can apply that technique to
+themselves
+
+461
+00:25:40,390 --> 00:25:43,990
+close the feedback loop and become an
+expert
+
+462
+00:25:43,990 --> 00:25:47,260
+okay everything I have to strip told you
+is backed up
+
+463
+00:25:47,260 --> 00:25:51,850
+by hundreds and hundreds of studies this
+evidence behind with routier's more
+
+464
+00:25:51,850 --> 00:25:52,380
+quickly
+
+465
+00:25:52,380 --> 00:25:56,380
+how many can appear instruction peer
+instruction is a teaching technique
+
+466
+00:25:56,380 --> 00:25:58,460
+which probably produces better results
+
+467
+00:25:58,460 --> 00:26:01,650
+in less time here's how we do it
+
+468
+00:26:01,650 --> 00:26:04,929
+thing number one i ask you multiple
+choice question and you all have to poke
+
+469
+00:26:04,929 --> 00:26:06,020
+you got
+
+470
+00:26:06,020 --> 00:26:09,070
+you know ABCD or colored cards were
+clickers
+
+471
+00:26:09,070 --> 00:26:13,350
+case you poke committed to an answer
+step number two
+
+472
+00:26:13,350 --> 00:26:17,090
+you talk to your neighbors little groups
+3&4 trying to persuade them that you're
+
+473
+00:26:17,090 --> 00:26:18,470
+right
+
+474
+00:26:18,470 --> 00:26:22,450
+step number three you have to vote again
+
+475
+00:26:22,450 --> 00:26:25,640
+stepped in before I tell you with the
+right answers and now they're step
+
+476
+00:26:25,640 --> 00:26:27,860
+number five
+
+477
+00:26:27,860 --> 00:26:31,150
+you get to talk to your neighbors again
+
+478
+00:26:31,150 --> 00:26:34,440
+if you interrupt this process after each
+state you discover that almost all for
+
+479
+00:26:34,440 --> 00:26:37,000
+learning happens in step number five
+
+480
+00:26:37,000 --> 00:26:40,270
+wine because in the discussion with you
+three
+
+481
+00:26:40,270 --> 00:26:43,760
+you realized why he believes the wrong
+answer
+
+482
+00:26:43,760 --> 00:26:48,000
+so in the second round of discussion you
+can correct his misconception
+
+483
+00:26:48,000 --> 00:26:52,429
+it gives you the power of 121 tutoring
+in a scaleable fashion
+
+484
+00:26:52,429 --> 00:26:55,700
+look for a written answers work we have
+twenty years
+
+485
+00:26:55,700 --> 00:26:59,580
+evidence to back this up but Simon's
+work at UC San Diego has replicated two
+
+486
+00:26:59,580 --> 00:27:01,539
+studies with several hundred students
+
+487
+00:27:01,539 --> 00:27:05,460
+over the course of five years none of
+the existing platforms directly support
+
+488
+00:27:05,460 --> 00:27:07,549
+construction
+
+489
+00:27:07,549 --> 00:27:10,840
+and most if you don't use in classrooms
+when you teach because you've never seen
+
+490
+00:27:10,840 --> 00:27:12,929
+it yourself
+
+491
+00:27:12,929 --> 00:27:16,770
+okay this is kind of cool
+
+492
+00:27:16,770 --> 00:27:20,320
+I got him is what I have to accelerate
+multimedia channel company persons for
+
+493
+00:27:20,320 --> 00:27:22,640
+concert extra some was mostly okay
+
+494
+00:27:22,640 --> 00:27:25,559
+here's the most importantly I will come
+back if there are questions train your
+
+495
+00:27:25,559 --> 00:27:27,429
+trainers
+
+496
+00:27:27,429 --> 00:27:31,960
+K I now run it class to teach people how
+to teach programming
+
+497
+00:27:31,960 --> 00:27:35,210
+the next one starts in June its online
+tell me
+
+498
+00:27:35,210 --> 00:27:39,360
+this is the one thing i really wanna
+showed about not only
+
+499
+00:27:39,360 --> 00:27:43,279
+do people learn how to teach they learn
+how their colleagues are going to be
+
+500
+00:27:43,279 --> 00:27:46,020
+approaching the problem it doesn't
+matter what your PlayBook is it matters
+
+501
+00:27:46,020 --> 00:27:46,850
+that everybody's
+
+502
+00:27:46,850 --> 00:27:51,940
+on the same page i'd and yes there is a
+great deal you can learn it does improve
+
+503
+00:27:51,940 --> 00:27:52,820
+things
+
+504
+00:27:52,820 --> 00:27:56,649
+you can go there teaching to suffer
+carpentry .org or
+
+505
+00:27:56,649 --> 00:28:00,789
+you can go there we are running a class
+on Monday
+
+506
+00:28:00,789 --> 00:28:04,039
+gonna try to squeeze a few key ideas
+down into one day
+
+507
+00:28:04,039 --> 00:28:07,700
+they're still succeeds open if you're
+interested I will put the Euro up again
+
+508
+00:28:07,700 --> 00:28:11,270
+but I to speed up here's bus number six
+by country didn't matter
+
+509
+00:28:11,270 --> 00:28:14,899
+okay I've been teaching for sixteen
+years I have never met anyone who
+
+510
+00:28:14,899 --> 00:28:17,679
+switched appointment because I anything
+in Python 3
+
+511
+00:28:17,679 --> 00:28:20,760
+it did not bring us a single new user
+
+512
+00:28:20,760 --> 00:28:24,270
+what we could have done that would make
+a tremendous difference to my teaching
+
+513
+00:28:24,270 --> 00:28:27,350
+other than fixing the installation
+problems which the working on we should
+
+514
+00:28:27,350 --> 00:28:29,600
+fix the standard library
+
+515
+00:28:29,600 --> 00:28:32,690
+watching novices try to find things in
+the standard libraries
+
+516
+00:28:32,690 --> 00:28:36,850
+Weser always stop after maybe assure you
+tiller maybe it's I don't know fred
+
+517
+00:28:36,850 --> 00:28:41,600
+ride string I oversee string I on the
+list goes on and on
+
+518
+00:28:41,600 --> 00:28:47,440
+most importantly we should have done
+some usability testing
+
+519
+00:28:47,440 --> 00:28:50,760
+under stuff etc published a paper in
+2011
+
+520
+00:28:50,760 --> 00:28:55,309
+my love this work can sorry about the
+crappy formatting
+
+521
+00:28:55,309 --> 00:28:58,659
+there's the borough are posted up what
+he did
+
+522
+00:28:58,659 --> 00:29:02,230
+was compare how readable programs are
+
+523
+00:29:02,230 --> 00:29:06,289
+to novices who've had brief instruction
+
+524
+00:29:06,289 --> 00:29:10,899
+in three programming languages pearl
+quorum
+
+525
+00:29:10,899 --> 00:29:17,370
+which is one that they're designing and
+one with a randomly generated syntax
+
+526
+00:29:17,370 --> 00:29:21,539
+people given pearl performed just as
+badly as people given language with a
+
+527
+00:29:21,539 --> 00:29:25,539
+randomly generated syntax
+
+528
+00:29:25,539 --> 00:29:28,600
+in the internet responded as it always
+does
+
+529
+00:29:28,600 --> 00:29:31,620
+people went to the trouble with looking
+up his students names in order to some
+
+530
+00:29:31,620 --> 00:29:34,020
+hate mail
+
+531
+00:29:34,020 --> 00:29:39,250
+and one of them drop to the program's
+result you can guess her gender
+
+532
+00:29:39,250 --> 00:29:43,960
+k if this is how the internet response
+to me doing research promoter K
+
+533
+00:29:43,960 --> 00:29:48,730
+what's interesting in those comments is
+the people who are saying
+
+534
+00:29:48,730 --> 00:29:52,899
+you result in statistically significant
+twitches response is yes they are here's
+
+535
+00:29:52,899 --> 00:29:56,429
+my data here's my statistical analysis
+beauty is less than 0.05
+
+536
+00:29:56,429 --> 00:29:59,860
+it statistically significant where
+people really means I don't want to
+
+537
+00:29:59,860 --> 00:30:01,770
+answer the free must be wrong
+
+538
+00:30:01,770 --> 00:30:05,480
+so he went back and he read it that
+study
+
+539
+00:30:05,480 --> 00:30:09,070
+but he turned up the volume step in
+seabird
+
+540
+00:30:09,070 --> 00:30:12,200
+are you can find copies at that if you
+google for it
+
+541
+00:30:12,200 --> 00:30:15,460
+the idiots abuse him put everything
+behind paywalls
+
+542
+00:30:15,460 --> 00:30:18,799
+you can read the so let me give you high
+points
+
+543
+00:30:18,799 --> 00:30:23,659
+step number one is go through with lists
+of words and terms and symbols to ask
+
+544
+00:30:23,659 --> 00:30:24,630
+novices
+
+545
+00:30:24,630 --> 00:30:28,210
+which ones have these do you think mean
+the following things
+
+546
+00:30:28,210 --> 00:30:32,399
+interesting discovery in a list of 20
+words
+
+547
+00:30:32,399 --> 00:30:36,380
+the ones the place bottom for meaning to
+this multiple times
+
+548
+00:30:36,380 --> 00:30:39,840
+or four and while they are the least
+likely
+
+549
+00:30:39,840 --> 00:30:43,730
+to novices to mean repeat things because
+for means do it for somebody else in
+
+550
+00:30:43,730 --> 00:30:46,120
+while mean something to do with time
+
+551
+00:30:46,120 --> 00:30:50,490
+nobody guess is that means repeat if you
+change it so that the key word is
+
+552
+00:30:50,490 --> 00:30:51,279
+repeated
+
+553
+00:30:51,279 --> 00:30:55,309
+people find the concept easier to learn
+because they don't have to unlearn the
+
+554
+00:30:55,309 --> 00:30:55,860
+old meaning
+
+555
+00:30:55,860 --> 00:31:00,450
+that's a step 1: bus to step 2 once
+people have had a big construction
+
+556
+00:31:00,450 --> 00:31:01,700
+language
+
+557
+00:31:01,700 --> 00:31:05,720
+let's see the accuracy with which they
+can identify construct in
+
+558
+00:31:05,720 --> 00:31:09,789
+rebbe Java prepay fun random 0 that's
+the round one and core
+
+559
+00:31:09,789 --> 00:31:13,929
+note that every feature in corn has been
+a be tested before two-putting for
+
+560
+00:31:13,929 --> 00:31:17,039
+language
+
+561
+00:31:17,039 --> 00:31:20,450
+languages will see style syntax do not
+go perform a randomly generated
+
+562
+00:31:20,450 --> 00:31:22,830
+languages
+
+563
+00:31:22,830 --> 00:31:27,029
+pearl in Java both sucked as much as
+random
+
+564
+00:31:27,029 --> 00:31:31,669
+Ruby and Python who performed in Coram
+outperformed both
+
+565
+00:31:31,669 --> 00:31:36,120
+gosh isn't that interesting how many
+people web sites
+
+566
+00:31:36,120 --> 00:31:40,370
+how many to usability testing and web
+sites how many to usability testing on
+
+567
+00:31:40,370 --> 00:31:41,840
+your language
+
+568
+00:31:41,840 --> 00:31:45,240
+how many people were seen a usability
+test attached to a PAP proposing a
+
+569
+00:31:45,240 --> 00:31:47,010
+change in the price on language
+
+570
+00:31:47,010 --> 00:31:50,159
+why the hell not we can do it
+
+571
+00:31:50,159 --> 00:31:53,820
+and building more usable language k last
+thing because it's time for me to wrap
+
+572
+00:31:53,820 --> 00:31:54,120
+up
+
+573
+00:31:54,120 --> 00:31:57,970
+would you like me to buy you and the
+person of your choice dinner
+
+574
+00:31:57,970 --> 00:32:01,570
+convince me that you have an answer to
+the following question:
+
+575
+00:32:01,570 --> 00:32:05,190
+why the hell do we write lessons that we
+read software encyclopedia is
+
+576
+00:32:05,190 --> 00:32:08,190
+how many you contribute to an open
+source project
+
+577
+00:32:08,190 --> 00:32:12,260
+okay so we know from hundreds of
+projects that you can have thousands of
+
+578
+00:32:12,260 --> 00:32:14,019
+people over the course of a decade
+
+579
+00:32:14,019 --> 00:32:17,980
+contribute small bits and pieces to
+improve something
+
+580
+00:32:17,980 --> 00:32:21,340
+how many if you have ever edit Wikipedia
+page
+
+581
+00:32:21,340 --> 00:32:24,820
+okay so we know that we can have
+thousands of people over the course of a
+
+582
+00:32:24,820 --> 00:32:25,830
+decade or more
+
+583
+00:32:25,830 --> 00:32:28,840
+collaborative we create something which
+is complex
+
+584
+00:32:28,840 --> 00:32:33,390
+and readable read the Wikipedia article
+on the causes of the American Revolution
+
+585
+00:32:33,390 --> 00:32:38,960
+its beautiful prose it explains concert
+complex things and had several hundred
+
+586
+00:32:38,960 --> 00:32:40,269
+contributors
+
+587
+00:32:40,269 --> 00:32:44,100
+how many people have ever seen a lesson
+or lesson plan
+
+588
+00:32:44,100 --> 00:32:48,799
+that had more than three offers more
+than 10
+
+589
+00:32:48,799 --> 00:32:55,019
+more than 50 yep olivia is a note lawyer
+here I'll be talking to you later sir
+
+590
+00:32:55,019 --> 00:32:58,570
+why don't we do this
+
+591
+00:32:58,570 --> 00:33:03,090
+now I can understand that this was
+nineteen ninety-five nobody at flattered
+
+592
+00:33:03,090 --> 00:33:08,640
+but we've had Wikipedia as an example
+for what a dick in hand
+
+593
+00:33:08,640 --> 00:33:12,159
+you can't say it's because the
+technology is hard been teachers may not
+
+594
+00:33:12,159 --> 00:33:14,899
+be programs but they can edit Wikipedia
+articles
+
+595
+00:33:14,899 --> 00:33:19,100
+you can't say that it's because there's
+no benefit to the teachers themselves
+
+596
+00:33:19,100 --> 00:33:22,179
+I really like being able to take
+somebody else a slider can't we could
+
+597
+00:33:22,179 --> 00:33:23,929
+use other peoples exercises
+
+598
+00:33:23,929 --> 00:33:27,620
+you can't say that it's because people
+are afraid to put themselves out there
+
+599
+00:33:27,620 --> 00:33:29,980
+on stage this is the Internet
+
+600
+00:33:29,980 --> 00:33:34,880
+right it was invented so the people
+psychological disorders could get jobs
+
+601
+00:33:34,880 --> 00:33:39,750
+right get respect from the community but
+every single thing every single reason
+
+602
+00:33:39,750 --> 00:33:40,960
+you can think of why
+
+603
+00:33:40,960 --> 00:33:45,440
+teachers and other educators don't
+collaborate on the construction teaching
+
+604
+00:33:45,440 --> 00:33:48,309
+materials that we we collaborate on code
+with other people collaborate on
+
+605
+00:33:48,309 --> 00:33:48,990
+Wikipedia
+
+606
+00:33:48,990 --> 00:33:52,110
+every single one of those points equal
+to these two cases
+
+607
+00:33:52,110 --> 00:33:56,169
+and yet despite dozens of attempts in
+different countries
+
+608
+00:33:56,169 --> 00:33:59,419
+and by different communities I don't
+know with anything
+
+609
+00:33:59,419 --> 00:34:02,750
+like Wikipedia los materiales things
+like CNX
+
+610
+00:34:02,750 --> 00:34:05,960
+are up with the slide decks with the
+people can download it there is
+
+611
+00:34:05,960 --> 00:34:09,800
+no merge there is no culture of
+contribution
+
+612
+00:34:09,800 --> 00:34:14,119
+if you want to change education but
+really change education
+
+613
+00:34:14,119 --> 00:34:17,790
+expand right
+
+614
+00:34:17,790 --> 00:34:22,030
+that would be cool so this is me
+
+615
+00:34:22,030 --> 00:34:27,730
+and there's apparently some 16 updates
+available so one should just ignore them
+
+616
+00:34:27,730 --> 00:34:31,129
+thank you ample okay so I suffer
+carpentry dork
+
+617
+00:34:31,129 --> 00:34:35,030
+all of our lessons really get a free
+porn we get people talking K
+
+618
+00:34:35,030 --> 00:34:38,399
+there's another protocol the
+architecture open source applications
+
+619
+00:34:38,399 --> 00:34:42,530
+and we are current lease looking for
+technical reviewers for things call 501
+
+620
+00:34:42,530 --> 00:34:43,990
+zealous let me wrap up
+
+621
+00:34:43,990 --> 00:34:46,929
+please ask me but the scraping sprint
+with just me but the turtle sprint to
+
+622
+00:34:46,929 --> 00:34:48,419
+please ask me but indeed if
+
+623
+00:34:48,419 --> 00:34:55,419
+please ask people 500 lines thank you
+very much
+
+624
+00:34:58,750 --> 00:35:03,180
+okay thank you we actually have even a a
+minute or two more for questions so we
+
+625
+00:35:03,180 --> 00:35:04,690
+have a mic back here
+
+626
+00:35:04,690 --> 00:35:09,320
+anybody who wants to ask questions arm
+maybe about why there is no
+
+627
+00:35:09,320 --> 00:35:13,160
+are Wikipedia for to a lesson plans any
+of that please go back to that
+
+628
+00:35:13,160 --> 00:35:15,520
+microphone and will take questions
+
+629
+00:35:15,520 --> 00:35:19,660
+and also scripted MacBook should put
+those on one slide
+
+630
+00:35:19,660 --> 00:35:22,730
+certain time pipe
+
+631
+00:35:22,730 --> 00:35:25,839
+how can I make you look better hi Greg
+you already have
+
+632
+00:35:25,839 --> 00:35:29,349
+but %ah um you how you can make my life
+better
+
+633
+00:35:29,349 --> 00:35:32,950
+the whole send me right here thing only
+kinda freaky go ahead
+
+634
+00:35:32,950 --> 00:35:37,020
+trip %ah
+
+635
+00:35:37,020 --> 00:35:41,020
+I think the first time ask your question
+%um poke fun at my glasses services
+
+636
+00:35:41,020 --> 00:35:44,130
+par for the course um
+
+637
+00:35:44,130 --> 00:35:48,820
+are so I was wondering if group sign ups
+could be used
+
+638
+00:35:48,820 --> 00:35:52,990
+as a mechanism for addressing the gender
+parity issue
+
+639
+00:35:52,990 --> 00:35:58,240
+with our regards to conferences so I
+propose this first type II boat
+
+640
+00:35:58,240 --> 00:36:01,599
+up for various financial reasons I
+wasn't able to happen and could be a
+
+641
+00:36:01,599 --> 00:36:02,790
+play that their
+
+642
+00:36:02,790 --> 00:36:06,670
+I could it don't happen up I can't do
+the experiment in report back
+
+643
+00:36:06,670 --> 00:36:09,910
+quite quite seriously yep we can make
+arguments both ways
+
+644
+00:36:09,910 --> 00:36:14,140
+more and more a pensar que no te
+Scottish verdict is
+
+645
+00:36:14,140 --> 00:36:17,190
+okay juries in Scotland are unique in
+the english-speaking world in that they
+
+646
+00:36:17,190 --> 00:36:18,960
+can return one of three verdicts
+
+647
+00:36:18,960 --> 00:36:22,190
+innocent guilty or not proven
+
+648
+00:36:22,190 --> 00:36:25,230
+increasingly I think that we should
+adopt Scottish for two more cases than
+
+649
+00:36:25,230 --> 00:36:26,040
+we do
+
+650
+00:36:26,040 --> 00:36:30,720
+we don't have evidence it's plausible
+argument try it and tell us if it works
+
+651
+00:36:30,720 --> 00:36:34,190
+get rate literate okay who's up next
+
+652
+00:36:34,190 --> 00:36:37,880
+hi thank you for great talk I I teach
+programming to teenagers
+
+653
+00:36:37,880 --> 00:36:41,280
+I have been so for about a year with the
+number from the Bay Area we recently
+
+654
+00:36:41,280 --> 00:36:43,050
+tried adopting
+
+655
+00:36:43,050 --> 00:36:47,589
+pair programming one of the main
+challenges I fine with teenagers
+
+656
+00:36:47,589 --> 00:36:50,800
+is are so none of them know each other
+before the course
+
+657
+00:36:50,800 --> 00:36:55,349
+and teenagers are very much iz they're
+very hard to mention pair sometimes one
+
+658
+00:36:55,349 --> 00:36:55,970
+will get
+
+659
+00:36:55,970 --> 00:36:59,160
+stuff at the speed of light yet when
+will struggle uterus which bears around
+
+660
+00:36:59,160 --> 00:37:00,530
+but then you just
+
+661
+00:37:00,530 --> 00:37:04,320
+have to lay the problem other group is
+kind of hell to measure teenagers
+
+662
+00:37:04,320 --> 00:37:07,250
+and used you've already identified the
+problem we don't know each other coming
+
+663
+00:37:07,250 --> 00:37:08,310
+into the room
+
+664
+00:37:08,310 --> 00:37:11,730
+yes okay fix that and the other problem
+go away
+
+665
+00:37:11,730 --> 00:37:14,880
+and thank you pictures hidden bolivia
+
+666
+00:37:14,880 --> 00:37:19,030
+so I disagree with the statement that's
+known the on-screen
+
+667
+00:37:19,030 --> 00:37:22,190
+is so if you go to math Academy don't
+org am
+
+668
+00:37:22,190 --> 00:37:25,470
+that's a website that's powered by get
+help on the back and
+
+669
+00:37:25,470 --> 00:37:28,920
+soup anyone can contribute and that
+shows
+
+670
+00:37:28,920 --> 00:37:32,280
+lesson plans in a graphical qua and you
+know
+
+671
+00:37:32,280 --> 00:37:35,960
+you can plan your course so many people
+here have seen math Academy .org annuity
+
+672
+00:37:35,960 --> 00:37:37,940
+just make Academy
+
+673
+00:37:37,940 --> 00:37:41,150
+sir meta medicare to me my apologies
+
+674
+00:37:41,150 --> 00:37:44,369
+so that's my first attempts at getting a
+
+675
+00:37:44,369 --> 00:37:48,290
+free dinner okay you you don't have of
+
+676
+00:37:48,290 --> 00:37:52,400
+of winnowing you have to explain to me
+why this isn't normal
+
+677
+00:37:52,400 --> 00:37:56,180
+ready shown that you can do it with
+heroic effort and you have put in her
+
+678
+00:37:56,180 --> 00:37:58,359
+work effortlessly don't know prolly
+eight
+
+679
+00:37:58,359 --> 00:38:02,500
+he deserves a round of applause as well
+but none you have to convince me you
+
+680
+00:38:02,500 --> 00:38:03,700
+know why this has not
+
+681
+00:38:03,700 --> 00:38:07,470
+normal is just starting its just people
+figured that's the right way to do it
+
+682
+00:38:07,470 --> 00:38:11,720
+Paul anyway this is just a temp number
+one you can leave lol we can decide
+
+683
+00:38:11,720 --> 00:38:14,920
+attempt number two will come when this
+
+684
+00:38:14,920 --> 00:38:18,140
+being that is film now will be put up on
+YouTube
+
+685
+00:38:18,140 --> 00:38:22,060
+or and then later on someone built a
+course on course era
+
+686
+00:38:22,060 --> 00:38:26,000
+that tries to get lots of people to use
+tools like that so at that stage
+
+687
+00:38:26,000 --> 00:38:29,829
+out of tens hundreds of thousands of
+people
+
+688
+00:38:29,829 --> 00:38:33,140
+maybe you know a hundred 200 300
+teachers
+
+689
+00:38:33,140 --> 00:38:36,900
+actually start using those tools K and I
+first heard this is just around the
+
+690
+00:38:36,900 --> 00:38:37,410
+corner
+
+691
+00:38:37,410 --> 00:38:40,460
+in 1996 right K
+
+692
+00:38:40,460 --> 00:38:43,270
+and so I don't believe it's just around
+the corner I believe there is a force
+
+693
+00:38:43,270 --> 00:38:46,740
+acting in the other direction that I
+don't understand my model the world
+
+694
+00:38:46,740 --> 00:38:50,010
+predicts that this should be the normal
+thing
+
+695
+00:38:50,010 --> 00:38:53,329
+it is not a normal thing so I'm wrong
+about something there's something I
+
+696
+00:38:53,329 --> 00:38:54,780
+don't understand
+
+697
+00:38:54,780 --> 00:38:58,480
+K and people again and could just
+convince we have the tools now to make
+
+698
+00:38:58,480 --> 00:38:59,670
+your we had materials
+
+699
+00:38:59,670 --> 00:39:02,280
+we have the tools as long as it's been
+Wikipedia stay tuned for a temp number
+
+700
+00:39:02,280 --> 00:39:04,680
+two perfectly sir
+
+701
+00:39:04,680 --> 00:39:08,440
+so I just went in open space just before
+his conference on education
+
+702
+00:39:08,440 --> 00:39:12,329
+and I am amazed that's you brought up
+the same point that I
+
+703
+00:39:12,329 --> 00:39:16,400
+brought up where and concerning
+translations actually because
+
+704
+00:39:16,400 --> 00:39:19,869
+agreed that we don't have any with book
+
+705
+00:39:19,869 --> 00:39:23,750
+as programmers its easy to collaborate
+but as educators and fork on and we
+
+706
+00:39:23,750 --> 00:39:26,040
+don't have any platform any good yes we
+do
+
+707
+00:39:26,040 --> 00:39:29,960
+it's called Wikipedia the other will you
+just work on its not for education
+
+708
+00:39:29,960 --> 00:39:33,369
+course appeal earn a period the end the
+Learning Commons there have been dozens
+
+709
+00:39:33,369 --> 00:39:36,910
+attempts to take exactly that's offered
+popping up in the teachers to do this
+
+710
+00:39:36,910 --> 00:39:37,230
+and that
+
+711
+00:39:37,230 --> 00:39:40,740
+all failed at least all the ones in the
+english-speaking world I cannot speak
+
+712
+00:39:40,740 --> 00:39:43,800
+for the communities I would love to know
+if this has worked in
+
+713
+00:39:43,800 --> 00:39:47,020
+you know Brazil South Africa China
+someplace else that I can't see into
+
+714
+00:39:47,020 --> 00:39:48,510
+because my language disability
+
+715
+00:39:48,510 --> 00:39:51,859
+well I'd say that to him worked at all
+because we don't have any platform
+
+716
+00:39:51,859 --> 00:39:52,770
+translate actually
+
+717
+00:39:52,770 --> 00:39:55,940
+into have any good plan from a Trembley
+content Inc on
+
+718
+00:39:55,940 --> 00:40:00,260
+demanding okay okay that's a possible
+technical issues go
+
+719
+00:40:00,260 --> 00:40:04,420
+um so I wanted the Python code ads and
+
+720
+00:40:04,420 --> 00:40:08,060
+one other things we have is for love
+this stuff
+
+721
+00:40:08,060 --> 00:40:11,609
+if we want to take any of this feedback
+we have to go hunting for it
+
+722
+00:40:11,609 --> 00:40:15,290
+in academic papers all somewhere else
+
+723
+00:40:15,290 --> 00:40:18,579
+come talk to us the and mailing lists
+are open
+
+724
+00:40:18,579 --> 00:40:21,829
+yes we can be an asshole sometimes but
+
+725
+00:40:21,829 --> 00:40:26,460
+sometime in yes something I'm on the PSF
+listener
+
+726
+00:40:26,460 --> 00:40:29,810
+the BSF is not my thing that
+
+727
+00:40:29,810 --> 00:40:33,359
+a and and BSS getting better too to al
+
+728
+00:40:33,359 --> 00:40:36,599
+but it it's the thing I love okee its
+
+729
+00:40:36,599 --> 00:40:40,730
+there is wonderful stuff we should be
+doing um
+
+730
+00:40:40,730 --> 00:40:44,140
+but we have no money we haven't known
+resources but we
+
+731
+00:40:44,140 --> 00:40:47,790
+and but he beat you coming to us for
+teachers to
+
+732
+00:40:47,790 --> 00:40:51,599
+so I heard teachers why aren't high
+school math teachers
+
+733
+00:40:51,599 --> 00:40:55,010
+who have rock-solid curriculum in
+fixed-point problem
+
+734
+00:40:55,010 --> 00:40:59,050
+doing this now they opted to the same
+text books a white card
+
+735
+00:40:59,050 --> 00:41:03,240
+the doing this rights not just for
+programmers why our social studies
+
+736
+00:41:03,240 --> 00:41:04,200
+teachers not
+
+737
+00:41:04,200 --> 00:41:07,170
+collaborative billing West plans because
+they're used to using other people's
+
+738
+00:41:07,170 --> 00:41:07,680
+material
+
+739
+00:41:07,680 --> 00:41:11,240
+you really have to build raw material
+most people teachers don't
+
+740
+00:41:11,240 --> 00:41:15,319
+they take standard material improvise on
+topic then with jazz musicians improvise
+
+741
+00:41:15,319 --> 00:41:15,790
+on top
+
+742
+00:41:15,790 --> 00:41:20,190
+score so the idea that we have to build
+all this ourselves
+
+743
+00:41:20,190 --> 00:41:24,589
+I with the idea that it's a technical
+challenge I'm still not buying dinner
+
+744
+00:41:24,589 --> 00:41:28,220
+but yeah I think you permit incentives
+II back it being in sentence
+
+745
+00:41:28,220 --> 00:41:31,680
+okay I might like to take a crack at the
+dinner the case of all the arguments
+
+746
+00:41:31,680 --> 00:41:34,980
+saying they don't have incentives
+applied equally well to open source and
+
+747
+00:41:34,980 --> 00:41:35,930
+I was there
+
+748
+00:41:35,930 --> 00:41:38,790
+in the eighties and nineties when people
+were saying open source will never take
+
+749
+00:41:38,790 --> 00:41:41,470
+off because why would anybody give away
+software
+
+750
+00:41:41,470 --> 00:41:44,550
+they have disincentives to via the
+Internet okay
+
+751
+00:41:44,550 --> 00:41:51,550
+please
+
+752
+00:41:55,210 --> 00:41:58,150
+but
+
+753
+00:41:58,150 --> 00:42:05,150
+absolutely
+
+754
+00:42:06,790 --> 00:42:07,590
+we point
+
+755
+00:42:07,590 --> 00:42:11,610
+social studies teachers in Ontario apt
+an instance the week
+
+756
+00:42:11,610 --> 00:42:14,740
+the week media software and sister
+Camille pin their I'm not
+
+757
+00:42:14,740 --> 00:42:18,180
+I'm not looking at this is a
+programmer's or programming problem
+
+758
+00:42:18,180 --> 00:42:22,160
+I it is routine now for teachers to
+
+759
+00:42:22,160 --> 00:42:25,740
+not just use that headed Wikipedia
+articles
+
+760
+00:42:25,740 --> 00:42:28,850
+in the process a building course
+material take a look at who the
+
+761
+00:42:28,850 --> 00:42:29,590
+contributors
+
+762
+00:42:29,590 --> 00:42:34,320
+are so why are they not taking exactly
+that and doing it for less it but it's
+
+763
+00:42:34,320 --> 00:42:35,270
+not about programs
+
+764
+00:42:35,270 --> 00:42:41,990
+yup
+
+765
+00:42:41,990 --> 00:42:46,240
+in again we can find point solutions
+
+766
+00:42:46,240 --> 00:42:52,810
+why is that not normal okay
+
+767
+00:42:52,810 --> 00:42:56,330
+okay and that's the challenge is why has
+this not already become just the normal
+
+768
+00:42:56,330 --> 00:42:57,230
+way of doing things
+
+769
+00:42:57,230 --> 00:43:01,700
+okay I'm sorry she's got a couple
+examples like CS unplugged
+
+770
+00:43:01,700 --> 00:43:05,140
+where there are people clambering on
+curriculum the open source text book
+
+771
+00:43:05,140 --> 00:43:05,730
+that
+
+772
+00:43:05,730 --> 00:43:09,030
+different you know this contributed to
+there are a few points solutions that
+
+773
+00:43:09,030 --> 00:43:12,770
+are a few instances there is nothing
+that has been widely used for has spread
+
+774
+00:43:12,770 --> 00:43:15,920
+I'd it says that the only open source
+software
+
+775
+00:43:15,920 --> 00:43:20,720
+in the world was going to you max okay
+now I'm depressed
+
+776
+00:43:20,720 --> 00:43:26,580
+ok that was a bad vision I
+
+777
+00:43:26,580 --> 00:43:30,420
+okay the argument that was the teaching
+us to localize
+
+778
+00:43:30,420 --> 00:43:34,720
+I'm sorry have you looked at the Common
+Core might have you looked at sent we
+
+779
+00:43:34,720 --> 00:43:35,690
+mandate a teacher
+
+780
+00:43:35,690 --> 00:43:38,310
+okay I'm so we're gonna have to go to
+the next one but argue with me
+
+781
+00:43:38,310 --> 00:43:39,930
+afterwards I'd love to buy you dinner
+
+782
+00:43:39,930 --> 00:43:46,270
+that came out so wrong go ahead please
+please his microphone please use the mic
+
+783
+00:43:46,270 --> 00:43:49,640
+yep okay so I'm at the chart but I miss
+you then
+
+784
+00:43:49,640 --> 00:43:53,030
+and I can tell something up from a
+different perspective
+
+785
+00:43:53,030 --> 00:43:56,860
+a because at my school when I lost high
+school
+
+786
+00:43:56,860 --> 00:44:00,150
+I am my teacher muffs the shower
+
+787
+00:44:00,150 --> 00:44:03,740
+deter organize something like math comp
+
+788
+00:44:03,740 --> 00:44:10,140
+and it was like mmm dark done by
+students by us for us
+
+789
+00:44:10,140 --> 00:44:14,200
+it was like we are totally into it I
+mean we take we are seeking part into
+
+790
+00:44:14,200 --> 00:44:17,200
+not signed yet it was also like a
+
+791
+00:44:17,200 --> 00:44:20,260
+in computers in computer science but
+
+792
+00:44:20,260 --> 00:44:26,710
+the we students the just found out about
+the topics want alarm there was a group
+
+793
+00:44:26,710 --> 00:44:27,500
+of people
+
+794
+00:44:27,500 --> 00:44:32,050
+could I mean those students it was not a
+school it was very important
+
+795
+00:44:32,050 --> 00:44:35,380
+and that we went somewhere with our
+teacher
+
+796
+00:44:35,380 --> 00:44:38,500
+it was like free as calls from
+
+797
+00:44:38,500 --> 00:44:41,570
+my country and it was like from them
+
+798
+00:44:41,570 --> 00:44:45,480
+a very morning deliver evening enter its
+were
+
+799
+00:44:45,480 --> 00:44:48,920
+running short on time so is the question
+were proposal in
+
+800
+00:44:48,920 --> 00:44:53,070
+know is like it way well internal to
+bury you
+
+801
+00:44:53,070 --> 00:44:58,810
+call us: well minotaur so the book that
+has changed my mind about teaching the
+
+802
+00:44:58,810 --> 00:45:01,920
+most is seeing like a state hands up if
+you've read this
+
+803
+00:45:01,920 --> 00:45:06,330
+hands up if you work in a large
+dysfunctional organization in those two
+
+804
+00:45:06,330 --> 00:45:07,280
+words are the same
+
+805
+00:45:07,280 --> 00:45:12,370
+okay this is why over and over again
+large organizations prefer the allusion
+
+806
+00:45:12,370 --> 00:45:15,630
+a central control over productivity for
+success
+
+807
+00:45:15,630 --> 00:45:19,520
+think booklet device for me understand a
+priest 1:20 a.m.
+
+808
+00:45:19,520 --> 00:45:22,560
+as much food brigade Moscow the Aleutian
+
+809
+00:45:22,560 --> 00:45:25,830
+that everybody's doing things the way
+they wanted think about softer
+
+810
+00:45:25,830 --> 00:45:26,980
+development at IBM
+
+811
+00:45:26,980 --> 00:45:30,690
+I lived through that was
+indistinguishable from click device for
+
+812
+00:45:30,690 --> 00:45:30,980
+me
+
+813
+00:45:30,980 --> 00:45:34,910
+so this is a really good book and their
+
+814
+00:45:34,910 --> 00:45:39,490
+case after case after case and what we
+see with centralized curriculum
+
+815
+00:45:39,490 --> 00:45:43,100
+is that we have to squeeze out the
+individuality which actually leads
+
+816
+00:45:43,100 --> 00:45:48,100
+to better performance so I'm so I
+understand bad as a possible argument
+
+817
+00:45:48,100 --> 00:45:52,290
+what I don't understand is when nobody's
+managed to break past that an amount of
+
+818
+00:45:52,290 --> 00:45:53,050
+time on time
+
+819
+00:45:53,050 --> 00:45:55,840
+okay ladies and gentlemen thank you very
+much at all just burning rubber
+

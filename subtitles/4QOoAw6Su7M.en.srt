@@ -1,0 +1,3202 @@
+1
+00:00:00,070 --> 00:00:03,169
+good morning everyone and to make sure
+the slider
+
+2
+00:00:03,169 --> 00:00:06,359
+area perfect okay so this is not about
+Python
+
+3
+00:00:06,359 --> 00:00:10,050
+the next teaching the next generation a
+Python programmers and
+
+4
+00:00:10,050 --> 00:00:13,190
+on this to talk that uses a lot of data
+from the United States because that's
+
+5
+00:00:13,190 --> 00:00:16,550
+where I live in where I went to school
+or I have the best and personal
+
+6
+00:00:16,550 --> 00:00:20,630
+experience but I think a lot have are
+the lessons and opportunities to
+
+7
+00:00:20,630 --> 00:00:21,980
+collaborate based on
+
+8
+00:00:21,980 --> 00:00:25,320
+I we talk about and transcend national
+boundaries
+
+9
+00:00:25,320 --> 00:00:29,780
+I'm are you really does start I am
+particular state in the United States
+
+10
+00:00:29,780 --> 00:00:30,180
+though
+
+11
+00:00:30,180 --> 00:00:34,770
+%uh this is Tennessee tennessee is
+famous for a lot of things are most
+
+12
+00:00:34,770 --> 00:00:35,510
+notably
+
+13
+00:00:35,510 --> 00:00:38,570
+country music and Jack Daniels I
+
+14
+00:00:38,570 --> 00:00:42,530
+but it is also the place where I went to
+high school and where my family now
+
+15
+00:00:42,530 --> 00:00:43,170
+lives
+
+16
+00:00:43,170 --> 00:00:48,850
+their 285,000 high school students in
+Tennessee
+
+17
+00:00:48,850 --> 00:00:53,150
+I and how many than you think are taking
+
+18
+00:00:53,150 --> 00:00:57,800
+Advanced Placement computer science
+which is on the most common
+
+19
+00:00:57,800 --> 00:01:01,040
+our computer science class a high school
+students in the US can take
+
+20
+00:01:01,040 --> 00:01:05,590
+I'm international law exam now to 35,000
+students
+
+21
+00:01:05,590 --> 00:01:10,920
+how are we doing so
+
+22
+00:01:10,920 --> 00:01:13,960
+reaction have an exact number the number
+is 251
+
+23
+00:01:13,960 --> 00:01:18,549
+so Western .1 percent have a high school
+students are taking
+
+24
+00:01:18,549 --> 00:01:23,720
+the most common our computer science
+exam so with that framework and my name
+
+25
+00:01:23,720 --> 00:01:26,479
+is Jessica I'm a director for the
+Pythons after foundation
+
+26
+00:01:26,479 --> 00:01:31,330
+I'm I spend a lot of time I and energy
+and money thinking about this problem in
+
+27
+00:01:31,330 --> 00:01:31,990
+particular
+
+28
+00:01:31,990 --> 00:01:35,909
+how the Python community can be apart
+addressing this
+
+29
+00:01:35,909 --> 00:01:39,070
+lack of engagement so bad as well we'll
+talk about
+
+30
+00:01:39,070 --> 00:01:43,720
+today of your statistics for you
+
+31
+00:01:43,720 --> 00:01:49,900
+first are in the United States there's a
+lot of enthusiasm for students learning
+
+32
+00:01:49,900 --> 00:01:50,860
+how to code
+
+33
+00:01:50,860 --> 00:01:53,869
+a lot I really important and famous and
+rich people
+
+34
+00:01:53,869 --> 00:01:57,439
+even the President of the United States
+believe very strongly that I'm all
+
+35
+00:01:57,439 --> 00:01:58,409
+students should have
+
+36
+00:01:58,409 --> 00:02:01,439
+at least the opportunity to learn how to
+program in school
+
+37
+00:02:01,439 --> 00:02:08,439
+unfortunately reality is lagging
+significantly behind the enthusiasm
+
+38
+00:02:08,719 --> 00:02:13,450
+and so this is a graph I have and
+participation in all over the Advanced
+
+39
+00:02:13,450 --> 00:02:14,129
+Placement
+
+40
+00:02:14,129 --> 00:02:19,370
+exams all these national I am exams on
+friday is subject to the top we have
+
+41
+00:02:19,370 --> 00:02:20,980
+English Language and Composition
+
+42
+00:02:20,980 --> 00:02:26,900
+arm and source skimming down the west we
+see that I'm narrowly beating out
+
+43
+00:02:26,900 --> 00:02:30,019
+2d studio art is computer science
+
+44
+00:02:30,019 --> 00:02:33,680
+I about an order of magnitude behind the
+most popular classes
+
+45
+00:02:33,680 --> 00:02:39,620
+and this black and Asian actually hit
+home for me very person likes I actually
+
+46
+00:02:39,620 --> 00:02:40,599
+have a sister
+
+47
+00:02:40,599 --> 00:02:46,709
+in bolivia who is in high school right
+now and she is a perfect candidate for
+
+48
+00:02:46,709 --> 00:02:50,749
+this type of Clash she loves electronics
+this is a picture her soldering
+
+49
+00:02:50,749 --> 00:02:56,519
+a radio kit I she loves math but in her
+high school she goes to a public high
+
+50
+00:02:56,519 --> 00:02:58,159
+school in Nashville Tennessee
+
+51
+00:02:58,159 --> 00:03:01,709
+on the closest class that she can take
+to a computer in class
+
+52
+00:03:01,709 --> 00:03:06,919
+I is a casa teachers how to use
+Microsoft Word I'm
+
+53
+00:03:06,919 --> 00:03:11,389
+and her experience is actually the
+typical one now because of the way that
+
+54
+00:03:11,389 --> 00:03:12,519
+education works in the US
+
+55
+00:03:12,519 --> 00:03:15,769
+its decentralized throughout the state
+we don't actually have good data
+
+56
+00:03:15,769 --> 00:03:20,859
+on engagement in non AP Computer Science
+classes were using AP as the benchmark
+
+57
+00:03:20,859 --> 00:03:22,949
+in there is one that is most common
+
+58
+00:03:22,949 --> 00:03:26,779
+I we know many schools teach apcs and we
+know how many public high schools there
+
+59
+00:03:26,779 --> 00:03:27,150
+are
+
+60
+00:03:27,150 --> 00:03:31,739
+so we can %ah per pound you know how
+likely you are to be able to take a
+
+61
+00:03:31,739 --> 00:03:33,169
+computer science class in school
+
+62
+00:03:33,169 --> 00:03:36,579
+the answer is that most students simply
+don't have any opportunity
+
+63
+00:03:36,579 --> 00:03:40,180
+so this is a
+
+64
+00:03:40,180 --> 00:03:44,249
+are kinda bomber are but actually gets a
+lot more troubling than that
+
+65
+00:03:44,249 --> 00:03:47,319
+okay sir in Tennessee last year
+
+66
+00:03:47,319 --> 00:03:50,749
+251 students took the exam the CS exam
+
+67
+00:03:50,749 --> 00:03:55,139
+and 165 past offer pass rate of
+sixty-six percent which is actually
+
+68
+00:03:55,139 --> 00:04:01,900
+at pretty normal for TP exam at the pass
+rate for african-american students was
+
+69
+00:04:01,900 --> 00:04:02,680
+less than half
+
+70
+00:04:02,680 --> 00:04:07,639
+that and actually their entire states
+
+71
+00:04:07,639 --> 00:04:10,760
+in the United States were no
+african-american students take the exam
+
+72
+00:04:10,760 --> 00:04:11,309
+at all
+
+73
+00:04:11,309 --> 00:04:15,650
+their state's 10 Hispanic students have
+taken the exam
+
+74
+00:04:15,650 --> 00:04:19,780
+and despite being fifty percent of the
+population there
+
+75
+00:04:19,780 --> 00:04:24,600
+even states were no girls took the exam
+
+76
+00:04:24,600 --> 00:04:28,050
+and you ever gonna look at these matters
+should be honest about the statistics
+
+77
+00:04:28,050 --> 00:04:32,380
+I'm it may or may not be statistically
+significant in so many states
+
+78
+00:04:32,380 --> 00:04:35,950
+on you're out there may just not be that
+many african-american high school
+
+79
+00:04:35,950 --> 00:04:37,660
+students in montana
+
+80
+00:04:37,660 --> 00:04:41,340
+you know that that may be true but I
+think this is no
+
+81
+00:04:41,340 --> 00:04:45,980
+real comfort to the students who
+represent these demographics
+
+82
+00:04:45,980 --> 00:04:50,190
+if I were a girl in mississippi and I
+were thinking about taking a computing
+
+83
+00:04:50,190 --> 00:04:51,420
+class
+
+84
+00:04:51,420 --> 00:04:54,680
+are and I knew that if I took apcs
+
+85
+00:04:54,680 --> 00:04:58,540
+I might be the only girl in the state to
+do it
+
+86
+00:04:58,540 --> 00:05:02,780
+that does not make me feel like this is
+something that people like me deal
+
+87
+00:05:02,780 --> 00:05:07,020
+but they were supposed to do. and I damn
+well better pass the exam otherwise I'm
+
+88
+00:05:07,020 --> 00:05:11,930
+gonna be a statistic that people talk
+about
+
+89
+00:05:11,930 --> 00:05:15,000
+I we have gender data for all %uh VP
+classes I
+
+90
+00:05:15,000 --> 00:05:18,530
+and a really interesting way I'm looking
+at this data is to plot a log
+
+91
+00:05:18,530 --> 00:05:22,480
+the ratio I'm so here is that plot I'm
+so
+
+92
+00:05:22,480 --> 00:05:26,510
+I for for all the classes and issues
+right that means there are more girls
+
+93
+00:05:26,510 --> 00:05:28,270
+and boys taking the exam
+
+94
+00:05:28,270 --> 00:05:31,950
+its use laughing these are more boys
+than girls
+
+95
+00:05:31,950 --> 00:05:35,670
+and this crap is is really interesting
+for for a lot of reasons I mean actually
+
+96
+00:05:35,670 --> 00:05:37,310
+if you look at this and there are more
+
+97
+00:05:37,310 --> 00:05:41,510
+AP classes in which girls outnumber boys
+right we see at the top
+
+98
+00:05:41,510 --> 00:05:45,060
+but as soon as we start looking at math
+and science classes it starts going the
+
+99
+00:05:45,060 --> 00:05:46,340
+other way
+
+100
+00:05:46,340 --> 00:05:50,710
+and in fact computer science is the most
+gender skewed
+
+101
+00:05:50,710 --> 00:05:53,990
+class
+
+102
+00:05:53,990 --> 00:06:00,120
+and this matters to us this matters to
+us because we spend an inordinate amount
+
+103
+00:06:00,120 --> 00:06:01,350
+of time
+
+104
+00:06:01,350 --> 00:06:04,870
+and energy and money and blood and sweat
+
+105
+00:06:04,870 --> 00:06:08,470
+and actual tears I'm doing some modus
+
+106
+00:06:08,470 --> 00:06:11,580
+any quality representation that starts
+in high school
+
+107
+00:06:11,580 --> 00:06:16,750
+and an earlier so this absolutely
+matters to us
+
+108
+00:06:16,750 --> 00:06:20,430
+does blow leaky pipeline matters to us
+but it actually matters to me for a lot
+
+109
+00:06:20,430 --> 00:06:23,500
+more reasons I suspect it matters to you
+from a reasons as well
+
+110
+00:06:23,500 --> 00:06:26,550
+no one reason I want students to at
+least have the opportunity to learn how
+
+111
+00:06:26,550 --> 00:06:30,000
+to program to engage in computational
+thinking skills
+
+112
+00:06:30,000 --> 00:06:34,670
+is because I understand how impact our
+ring programming is
+
+113
+00:06:34,670 --> 00:06:38,070
+like learning how to program changes the
+way that you think about and interact
+
+114
+00:06:38,070 --> 00:06:39,490
+with the world
+
+115
+00:06:39,490 --> 00:06:43,130
+I want more people have that experience
+I want our politicians worm
+
+116
+00:06:43,130 --> 00:06:46,300
+making decisions about the way that my
+country is run
+
+117
+00:06:46,300 --> 00:06:49,720
+actor to have that experience
+
+118
+00:06:49,720 --> 00:06:53,130
+and also as Python he says %uh this is
+important to us for the long term
+
+119
+00:06:53,130 --> 00:06:54,470
+success the language
+
+120
+00:06:54,470 --> 00:06:57,960
+it's important to us that people are
+learning how to program preferably in
+
+121
+00:06:57,960 --> 00:07:01,420
+paper I'm
+
+122
+00:07:01,420 --> 00:07:04,940
+okay well this has been sort of a
+depressing in traction and it seems like
+
+123
+00:07:04,940 --> 00:07:05,300
+it
+
+124
+00:07:05,300 --> 00:07:08,360
+impossibly huge intractable problem
+
+125
+00:07:08,360 --> 00:07:15,010
+so what can you and I am actually doing
+a space
+
+126
+00:07:15,010 --> 00:07:18,900
+well we can actually take art in so many
+statistics okay so
+
+127
+00:07:18,900 --> 00:07:22,320
+AP Computer Science Camino state is the
+most gender skewed
+
+128
+00:07:22,320 --> 00:07:26,180
+Advanced Placement exam by its
+
+129
+00:07:26,180 --> 00:07:29,700
+in Tennessee my home state
+
+130
+00:07:29,700 --> 00:07:33,240
+almost a third of the test takers are
+actually girls
+
+131
+00:07:33,240 --> 00:07:39,389
+I and this is the highest percentage of
+any state United States last year
+
+132
+00:07:39,389 --> 00:07:43,680
+can guess why this is the guest
+
+133
+00:07:43,680 --> 00:07:47,820
+it
+
+134
+00:07:47,820 --> 00:07:52,220
+the reason is one person as one teacher
+her name is Joe
+
+135
+00:07:52,220 --> 00:07:56,139
+and she teaches computer science an all
+girls Preparatory School
+
+136
+00:07:56,139 --> 00:07:59,570
+school in chattanooga tennessee sheet
+almost half
+
+137
+00:07:59,570 --> 00:08:06,570
+RB apcs test takers who are girls last
+year
+
+138
+00:08:12,349 --> 00:08:15,069
+and what this really means is that one
+
+139
+00:08:15,069 --> 00:08:18,430
+motivated teacher can set a national
+record
+
+140
+00:08:18,430 --> 00:08:23,069
+and this is one person and i'm looking
+out across the room and thinking about
+
+141
+00:08:23,069 --> 00:08:24,779
+the people who watch this video
+
+142
+00:08:24,779 --> 00:08:28,069
+and I ask an honest an earnest question
+which is what
+
+143
+00:08:28,069 --> 00:08:31,529
+what can a 200,000 per cent community
+
+144
+00:08:31,529 --> 00:08:35,860
+like ours that spans the globe do if
+we're serious about this
+
+145
+00:08:35,860 --> 00:08:40,860
+we want to do something about this well
+
+146
+00:08:40,860 --> 00:08:44,410
+I asked I'm about you people I I asked
+my job
+
+147
+00:08:44,410 --> 00:08:48,839
+CS education researchers I how to answer
+this question I
+
+148
+00:08:48,839 --> 00:08:53,070
+arms with a giant pile on community out
+what are some things that we can do to
+
+149
+00:08:53,070 --> 00:08:53,970
+make a difference
+
+150
+00:08:53,970 --> 00:08:57,399
+I was going to be the fire hose
+responses
+
+151
+00:08:57,399 --> 00:09:01,130
+I'm I'm gonna give you everything and
+not all these ideas have to resonate
+
+152
+00:09:01,130 --> 00:09:03,380
+with you but I hope that at least one
+guy's
+
+153
+00:09:03,380 --> 00:09:06,940
+let you leave here with something that
+you believe that you could be a
+
+154
+00:09:06,940 --> 00:09:11,089
+are going to talk in for a big area some
+policy
+
+155
+00:09:11,089 --> 00:09:14,890
+student engagement supporting teachers
+and curriculum
+
+156
+00:09:14,890 --> 00:09:19,180
+developments and for such as policy
+
+157
+00:09:19,180 --> 00:09:26,180
+gears map in the states that counts a
+computer science for something
+
+158
+00:09:27,060 --> 00:09:31,120
+to graduate high school and even if you
+don't live in the US
+
+159
+00:09:31,120 --> 00:09:35,040
+I if you're probably in in a similar
+situation
+
+160
+00:09:35,040 --> 00:09:39,769
+on there is a problem that computer
+scientist typically only an elective
+
+161
+00:09:39,769 --> 00:09:42,790
+and this is a problem because it does
+not
+
+162
+00:09:42,790 --> 00:09:45,930
+align incentives for the people involved
+
+163
+00:09:45,930 --> 00:09:49,220
+if you're an enterprise a high school
+student you are already way too busy
+
+164
+00:09:49,220 --> 00:09:51,630
+trying to graduate and can I resume
+
+165
+00:09:51,630 --> 00:09:54,630
+you can hopefully get a scholarship to
+afford college
+
+166
+00:09:54,630 --> 00:09:58,630
+I'm and you're not gonna waste time on
+some elective on some topic that you
+
+167
+00:09:58,630 --> 00:09:59,570
+don't know anything about
+
+168
+00:09:59,570 --> 00:10:04,620
+and assume so I take it schools don't
+offer and teachers definitely don't want
+
+169
+00:10:04,620 --> 00:10:04,910
+it
+
+170
+00:10:04,910 --> 00:10:09,220
+invest their career and training in some
+class that will have dubious
+
+171
+00:10:09,220 --> 00:10:15,399
+attendance so here's a very concrete
+thing that each of us in this room could
+
+172
+00:10:15,399 --> 00:10:15,860
+do
+
+173
+00:10:15,860 --> 00:10:18,959
+begun a fun call our local legislatures
+
+174
+00:10:18,959 --> 00:10:23,610
+we call our school board's and ask for
+computer science to count as a math or
+
+175
+00:10:23,610 --> 00:10:24,470
+science credit
+
+176
+00:10:24,470 --> 00:10:28,250
+in our state said your stay is not green
+
+177
+00:10:28,250 --> 00:10:31,670
+where you live outside the US and this
+fact is true for you too
+
+178
+00:10:31,670 --> 00:10:35,930
+pick up the phone on Monday and helped
+change the sadistic
+
+179
+00:10:35,930 --> 00:10:40,910
+here's another problem
+
+180
+00:10:40,910 --> 00:10:44,560
+on there's actually not a way for people
+to consist to
+
+181
+00:10:44,560 --> 00:10:49,519
+are you nationally find data on what the
+graduation requirements are
+
+182
+00:10:49,519 --> 00:10:52,630
+or how teachers get credential to teach
+computer science
+
+183
+00:10:52,630 --> 00:10:57,050
+so if I'm a policymaker I'm a school
+board member I actually don't have a way
+
+184
+00:10:57,050 --> 00:10:57,959
+to know
+
+185
+00:10:57,959 --> 00:11:01,240
+and I am way behind my neighbors and I
+should be embarrassed
+
+186
+00:11:01,240 --> 00:11:06,199
+and this is a problem for the
+policymakers because they don't know how
+
+187
+00:11:06,199 --> 00:11:07,579
+to fix this problem
+
+188
+00:11:07,579 --> 00:11:10,930
+like they don't know how to get the
+state an aggregate it put it somewhere
+
+189
+00:11:10,930 --> 00:11:12,010
+that would be useful
+
+190
+00:11:12,010 --> 00:11:15,730
+but this is for sure something that you
+and i could honestly probably fix in a
+
+191
+00:11:15,730 --> 00:11:16,490
+weekend
+
+192
+00:11:16,490 --> 00:11:19,740
+like at this friends on Monday we could
+
+193
+00:11:19,740 --> 00:11:23,940
+rights in Python that automates the
+process and I getting this data from the
+
+194
+00:11:23,940 --> 00:11:24,540
+various
+
+195
+00:11:24,540 --> 00:11:27,949
+state and local science on and produce
+I'm
+
+196
+00:11:27,949 --> 00:11:31,269
+away for policy makers to actually make
+good choices
+
+197
+00:11:31,269 --> 00:11:36,160
+around his head X so this is something
+that we can actually do
+
+198
+00:11:36,160 --> 00:11:43,160
+tomorrow Chur
+
+199
+00:11:44,040 --> 00:11:47,230
+should I take of no aka
+
+200
+00:11:47,230 --> 00:11:50,880
+is this
+
+201
+00:11:50,880 --> 00:11:56,220
+is this podium enough is a good kick it
+here's the problem
+
+202
+00:11:56,220 --> 00:11:59,569
+a computer scientist of hot in Java
+
+203
+00:11:59,569 --> 00:12:03,290
+and I'm not hitting on Jonah like not
+because it's cool
+
+204
+00:12:03,290 --> 00:12:07,550
+john is a great language in a lot of
+contacts the job is a problem for CS
+
+205
+00:12:07,550 --> 00:12:10,730
+education because it is a bad language
+to teach in
+
+206
+00:12:10,730 --> 00:12:14,910
+and I'm not saying this teachers say
+this me think about it here in a Java
+
+207
+00:12:14,910 --> 00:12:17,720
+program think about which goes into
+hello world in Java
+
+208
+00:12:17,720 --> 00:12:22,120
+is very hard to differ talking about
+classes headed to differ talking I did
+
+209
+00:12:22,120 --> 00:12:24,120
+oriented programming it's a total
+nightmare
+
+210
+00:12:24,120 --> 00:12:29,329
+if you've never written a for loop
+before and actually just be a quick
+
+211
+00:12:29,329 --> 00:12:32,839
+picture hands here taking out a walk
+down memory lane
+
+212
+00:12:32,839 --> 00:12:36,850
+arm to who didn't UTPA BCS exam
+
+213
+00:12:36,850 --> 00:12:40,160
+in Pascal after yeah now
+
+214
+00:12:40,160 --> 00:12:45,170
+yeah feedback on steep of class so it's
+impossible to class
+
+215
+00:12:45,170 --> 00:12:49,170
+k Java goal okay so so job
+
+216
+00:12:49,170 --> 00:12:52,370
+is have actually been around for a long
+time and is getting pretty long in the
+
+217
+00:12:52,370 --> 00:12:53,360
+tooth
+
+218
+00:12:53,360 --> 00:12:56,980
+and rubs a problem because it's not a
+great way and exciting scenes about
+
+219
+00:12:56,980 --> 00:12:58,199
+programming
+
+220
+00:12:58,199 --> 00:13:03,439
+I we have data on this because ends on
+people have been gathering data on what
+
+221
+00:13:03,439 --> 00:13:04,510
+languages
+
+222
+00:13:04,510 --> 00:13:09,529
+colleges use and also what languages
+teachers wish they were you saying and
+
+223
+00:13:09,529 --> 00:13:10,839
+what languages teachers
+
+224
+00:13:10,839 --> 00:13:15,750
+think they will be using ten years from
+now in a compendium called Brians list
+
+225
+00:13:15,750 --> 00:13:20,149
+which has been going on for for decades
+
+226
+00:13:20,149 --> 00:13:23,670
+and replaced is really interesting to us
+says Python
+
+227
+00:13:23,670 --> 00:13:27,140
+users here we see that every summer 2012
+reads list
+
+228
+00:13:27,140 --> 00:13:32,149
+pied you're still in third place Java is
+has a lock on first still
+
+229
+00:13:32,149 --> 00:13:35,630
+but if you ask teachers what they wish
+they were using
+
+230
+00:13:35,630 --> 00:13:42,630
+they all say Python
+
+231
+00:13:45,660 --> 00:13:49,770
+here's another fact about Reid's list it
+was actually last updated in 2012
+
+232
+00:13:49,770 --> 00:13:53,640
+and the reason is because the way to
+read list is gathered
+
+233
+00:13:53,640 --> 00:13:58,260
+is that a human being calls up a bunch
+of other human beings and ask them about
+
+234
+00:13:58,260 --> 00:13:59,420
+this information
+
+235
+00:13:59,420 --> 00:14:04,080
+and this sucks for us because if we had
+the data for 2012 for 2013 and 2014
+
+236
+00:14:04,080 --> 00:14:07,340
+we would see Python skyrocketing of that
+list
+
+237
+00:14:07,340 --> 00:14:11,540
+and this matters to us because the way
+you back College Board be announced
+
+238
+00:14:11,540 --> 00:14:15,130
+during organization behind AP the way to
+decide what language you use
+
+239
+00:14:15,130 --> 00:14:19,340
+is based on were industry is trending
+towards and what teachers once
+
+240
+00:14:19,340 --> 00:14:23,960
+cell imagine a world in which
+
+241
+00:14:23,960 --> 00:14:28,390
+AP Computer Science for tot in Python
+imagine a world in which
+
+242
+00:14:28,390 --> 00:14:31,010
+high school students in their learning
+how to program a lot how to program a
+
+243
+00:14:31,010 --> 00:14:31,620
+python
+
+244
+00:14:31,620 --> 00:14:35,310
+like that would be an amazing world for
+us for a long-term
+
+245
+00:14:35,310 --> 00:14:39,250
+you for the longevity of the language
+will also be a more fine computing
+
+246
+00:14:39,250 --> 00:14:40,500
+experience and high school
+
+247
+00:14:40,500 --> 00:14:44,410
+and this is not a pipe dream if we got
+the data to college word
+
+248
+00:14:44,410 --> 00:14:47,470
+this change I think would happen in four
+to six years
+
+249
+00:14:47,470 --> 00:14:52,630
+so you're excited about that possibility
+let's get them the date is Vic can make
+
+250
+00:14:52,630 --> 00:14:53,640
+good choices
+
+251
+00:14:53,640 --> 00:14:58,170
+good to hear a couple of our policy
+opportunities
+
+252
+00:14:58,170 --> 00:15:01,980
+next up
+
+253
+00:15:01,980 --> 00:15:06,490
+student engagement there's a really
+basic problem here which is
+
+254
+00:15:06,490 --> 00:15:09,670
+students don't know what computer
+sciences so that i won a ticket
+
+255
+00:15:09,670 --> 00:15:13,350
+high schools almost too late for the
+reason we talked about earlier you are
+
+256
+00:15:13,350 --> 00:15:15,600
+busy training graduate and get the hell
+outta there
+
+257
+00:15:15,600 --> 00:15:19,100
+so we need to engage people before that
+
+258
+00:15:19,100 --> 00:15:22,390
+we need to provide a earlier
+opportunities for exposure
+
+259
+00:15:22,390 --> 00:15:28,060
+and you what I can do this we do not
+have term we do not have to invent
+
+260
+00:15:28,060 --> 00:15:32,130
+how to do this we can hook into a lot of
+existing infrastructure
+
+261
+00:15:32,130 --> 00:15:36,500
+4 engaging students about computing
+here's one great example
+
+262
+00:15:36,500 --> 00:15:40,960
+are the pilots are foundation sponsored
+18 tech camp in raleigh-durham
+
+263
+00:15:40,960 --> 00:15:45,390
+was run by people in this room for
+summer camp for kids learn how to
+
+264
+00:15:45,390 --> 00:15:46,830
+program in Python
+
+265
+00:15:46,830 --> 00:15:53,590
+on raspberry PIs there are groups like
+The Girl Scout and Boy Scouts to
+
+266
+00:15:53,590 --> 00:15:58,140
+are have a ton and experience on
+teaching skills to kids
+
+267
+00:15:58,140 --> 00:16:01,300
+right they have the kids and they have
+the infrastructure
+
+268
+00:16:01,300 --> 00:16:04,280
+they just don't have a program that's
+the only piece to the puzzle that they
+
+269
+00:16:04,280 --> 00:16:04,880
+need
+
+270
+00:16:04,880 --> 00:16:09,000
+there are times after school programs
+where
+
+271
+00:16:09,000 --> 00:16:12,240
+were kids on especially go through
+modules they're learning about
+
+272
+00:16:12,240 --> 00:16:15,060
+are in their learning about music and
+they would love to be learning about
+
+273
+00:16:15,060 --> 00:16:17,980
+programming as well but they were really
+don't have the teachers like the old
+
+274
+00:16:17,980 --> 00:16:20,240
+they have the computing labs may have
+the students
+
+275
+00:16:20,240 --> 00:16:23,360
+and how the parents excitement but they
+don't have the people who know how to
+
+276
+00:16:23,360 --> 00:16:24,450
+actually do this
+
+277
+00:16:24,450 --> 00:16:30,360
+service idea engaging students directly
+is exciting to you
+
+278
+00:16:30,360 --> 00:16:34,390
+it's actually very tractable problem
+just take advantage of existing
+
+279
+00:16:34,390 --> 00:16:35,800
+infrastructure
+
+280
+00:16:35,800 --> 00:16:39,420
+you can make a real difference in your
+local community airtight have a local
+
+281
+00:16:39,420 --> 00:16:40,460
+opportunities here
+
+282
+00:16:40,460 --> 00:16:45,960
+a couple soon engagement options
+
+283
+00:16:45,960 --> 00:16:50,130
+number three supporting teachers
+
+284
+00:16:50,130 --> 00:16:53,250
+here they sad fact of life
+
+285
+00:16:53,250 --> 00:16:56,800
+for CS teachers if your computer science
+teacher in high school
+
+286
+00:16:56,800 --> 00:17:02,000
+you're probably the only one your high
+school to imagine if you went to work
+
+287
+00:17:02,000 --> 00:17:04,270
+today and you're the only person who did
+what you did
+
+288
+00:17:04,270 --> 00:17:08,170
+and if you had a problem for you had a
+terrible day at work you didn't really
+
+289
+00:17:08,170 --> 00:17:09,560
+have anyone to talk to you
+
+290
+00:17:09,560 --> 00:17:13,330
+if your stock on something if you
+working on cricket Obama you don't know
+
+291
+00:17:13,330 --> 00:17:13,830
+what to do
+
+292
+00:17:13,830 --> 00:17:17,209
+you don't have anybody to talk to you
+this sucks
+
+293
+00:17:17,209 --> 00:17:21,300
+but we have a huge community let's bring
+man
+
+294
+00:17:21,300 --> 00:17:27,270
+into it there are a lot of really easy
+ways to support teachers
+
+295
+00:17:27,270 --> 00:17:30,930
+once upon a service call a person an
+email your a local teacher teacher at
+
+296
+00:17:30,930 --> 00:17:32,250
+your local high schools okay
+
+297
+00:17:32,250 --> 00:17:35,390
+i think is really cool you're teaching
+computer science
+
+298
+00:17:35,390 --> 00:17:39,860
+and if you have any questions about
+curriculum stuff for your sake I boger
+
+299
+00:17:39,860 --> 00:17:41,560
+environment so that you can buy it
+
+300
+00:17:41,560 --> 00:17:45,520
+I would love to help argue BT A in the
+class
+
+301
+00:17:45,520 --> 00:17:49,070
+or offer to visit the class and and tell
+the kids would really like to be
+
+302
+00:17:49,070 --> 00:17:53,920
+a programmer your brain to local user
+could agree with a camera kirkum
+
+303
+00:17:53,920 --> 00:17:54,480
+problems
+
+304
+00:17:54,480 --> 00:18:00,390
+be on all of us at our local Python
+project night sela to really easy ways
+
+305
+00:18:00,390 --> 00:18:02,370
+to support teachers just by bringing man
+
+306
+00:18:02,370 --> 00:18:07,340
+into the community
+
+307
+00:18:07,340 --> 00:18:11,300
+number for curriculum development this
+is this is really interesting is a
+
+308
+00:18:11,300 --> 00:18:15,190
+really interesting time for Python
+
+309
+00:18:15,190 --> 00:18:19,160
+in this area so what exciting things did
+you know but there's a new advanced
+
+310
+00:18:19,160 --> 00:18:21,120
+placement computer science
+
+311
+00:18:21,120 --> 00:18:24,320
+class as being piloted right now
+
+312
+00:18:24,320 --> 00:18:28,100
+in the United States is called CS
+Principles and this is really exciting
+
+313
+00:18:28,100 --> 00:18:29,090
+to me
+
+314
+00:18:29,090 --> 00:18:32,340
+because look at what it focuses on
+
+315
+00:18:32,340 --> 00:18:36,760
+if some programming but also a lot of
+really interesting ideas that will
+
+316
+00:18:36,760 --> 00:18:39,990
+appeal to a much broader range students
+
+317
+00:18:39,990 --> 00:18:44,010
+pairing programming with creativity and
+data and the internet how to make it
+
+318
+00:18:44,010 --> 00:18:47,390
+impact with the skills
+
+319
+00:18:47,390 --> 00:18:51,100
+this seems like a really exciting way to
+increasing engagement where
+
+320
+00:18:51,100 --> 00:18:54,180
+the apcs a hasn't
+
+321
+00:18:54,180 --> 00:18:58,620
+on but unfortunately there's actually no
+did a CS curriculum 4
+
+322
+00:18:58,620 --> 00:19:01,950
+AP computing principles
+
+323
+00:19:01,950 --> 00:19:07,050
+in any language and I C span i guess i
+say hey this is like a huge market
+
+324
+00:19:07,050 --> 00:19:09,270
+opportunity for Python
+
+325
+00:19:09,270 --> 00:19:14,130
+like money if the most awesome way to
+teach kids
+
+326
+00:19:14,130 --> 00:19:17,480
+this AP curriculum was in Python
+everyone would use it
+
+327
+00:19:17,480 --> 00:19:20,950
+right teachers have a limited amount of
+time a Thursday bangin
+
+328
+00:19:20,950 --> 00:19:24,720
+I'm curriculum make use of a shelf
+they're going to use it most
+
+329
+00:19:24,720 --> 00:19:30,540
+teachers on have the time to invent
+their own curriculum on a fly
+
+330
+00:19:30,540 --> 00:19:35,080
+and the stuff seems so cool here's an
+example the lesson plans from the
+
+331
+00:19:35,080 --> 00:19:35,980
+website
+
+332
+00:19:35,980 --> 00:19:40,050
+crypto graffiti like Alex Gaynor where
+are you let's write this car parking lot
+
+333
+00:19:40,050 --> 00:19:42,120
+in together
+
+334
+00:19:42,120 --> 00:19:47,480
+data as arts inventing and sorting
+algorithms this is fine mist of and we
+
+335
+00:19:47,480 --> 00:19:48,450
+just need
+
+336
+00:19:48,450 --> 00:19:52,690
+I is enhanced tackling this problem
+
+337
+00:19:52,690 --> 00:19:56,140
+and this is also sonya transcends your
+national boundaries
+
+338
+00:19:56,140 --> 00:19:59,720
+on there just aren't that many curricula
+
+339
+00:19:59,720 --> 00:20:03,000
+that that meet their curriculum
+guidelines for schools
+
+340
+00:20:03,000 --> 00:20:07,890
+but you can use to teach programming in
+high school
+
+341
+00:20:07,890 --> 00:20:11,480
+get here's a good example is actually
+surfing Python my favorite introductory
+
+342
+00:20:11,480 --> 00:20:12,190
+tax
+
+343
+00:20:12,190 --> 00:20:15,620
+written by alan dow name is probably in
+this room on
+
+344
+00:20:15,620 --> 00:20:20,070
+it's great at the college level but on
+there are some problems with tactically
+
+345
+00:20:20,070 --> 00:20:22,080
+deploying this and high schools
+
+346
+00:20:22,080 --> 00:20:27,040
+which is includes that you're off in a
+really locked down computing environment
+
+347
+00:20:27,040 --> 00:20:30,630
+are not so what one person I talk to you
+measuring about how
+
+348
+00:20:30,630 --> 00:20:35,190
+no in his computer lab and in addition
+every me firewall of
+
+349
+00:20:35,190 --> 00:20:39,130
+on even the teachers don't have the
+ability to install software on machines
+
+350
+00:20:39,130 --> 00:20:42,210
+Anish for good measure they would glue
+gun shot
+
+351
+00:20:42,210 --> 00:20:45,640
+the USB ports system like a duck
+
+352
+00:20:45,640 --> 00:20:49,520
+as their only option in if this is your
+computing environments to do stuff
+
+353
+00:20:49,520 --> 00:20:54,370
+in the browser right and people love
+Python so much
+
+354
+00:20:54,370 --> 00:20:57,840
+that there is some people are have
+created a project it's all open sources
+
+355
+00:20:57,840 --> 00:20:59,080
+online on github
+
+356
+00:20:59,080 --> 00:21:02,880
+that ports thing Python to an
+interactive web
+
+357
+00:21:02,880 --> 00:21:05,940
+curriculum
+
+358
+00:21:05,940 --> 00:21:08,750
+and perhaps the most famous or the the
+most-used example has right now is
+
+359
+00:21:08,750 --> 00:21:11,890
+sculpt which is a javascript and
+traditional Python that is used by
+
+360
+00:21:11,890 --> 00:21:13,210
+course era
+
+361
+00:21:13,210 --> 00:21:17,450
+the teach hundreds of thousands of kids
+a program but here's the thing:
+
+362
+00:21:17,450 --> 00:21:21,650
+this is online on get hard and there are
+things that teachers what's called
+
+363
+00:21:21,650 --> 00:21:25,960
+to do that it can't deal there are Open
+tickets on get hub
+
+364
+00:21:25,960 --> 00:21:29,660
+for things they wish they could do.
+
+365
+00:21:29,660 --> 00:21:33,770
+I'm good at fixing bugs bye week whether
+we want this to be the case or not it is
+
+366
+00:21:33,770 --> 00:21:36,710
+possible that the future of teaching
+programming in teaching Python in
+
+367
+00:21:36,710 --> 00:21:37,300
+schools is
+
+368
+00:21:37,300 --> 00:21:40,990
+in the browser so we should pay
+attention to that
+
+369
+00:21:40,990 --> 00:21:45,300
+shouldn't be a sideline issue
+
+370
+00:21:45,300 --> 00:21:49,320
+so you're into n their attire really
+interesting Creek you landed on
+
+371
+00:21:49,320 --> 00:21:53,750
+opportunity is for us specifically in
+the context of teaching
+
+372
+00:21:53,750 --> 00:21:57,260
+programming to kids
+
+373
+00:21:57,260 --> 00:22:04,260
+better for big areas that is my fires
+for you
+
+374
+00:22:12,440 --> 00:22:15,419
+and what kind of interesting about
+there's a first time for such terrible
+
+375
+00:22:15,419 --> 00:22:19,500
+absolute numbers in such terrible
+percentages but it really doesn't mean
+
+376
+00:22:19,500 --> 00:22:20,010
+bad
+
+377
+00:22:20,010 --> 00:22:24,210
+if UN I do one thing it has the
+potential to make a significant
+
+378
+00:22:24,210 --> 00:22:27,850
+impact on these numbers to make a
+significant impact on the bottom line
+
+379
+00:22:27,850 --> 00:22:33,400
+and also fortunately we are part of the
+community has incredible network of
+
+380
+00:22:33,400 --> 00:22:34,580
+support to how
+
+381
+00:22:34,580 --> 00:22:39,020
+I S make these changes in the world we
+have the Python Software Foundation
+
+382
+00:22:39,020 --> 00:22:42,659
+and we will give you money and we will
+connect you with people and we will give
+
+383
+00:22:42,659 --> 00:22:43,700
+you resources
+
+384
+00:22:43,700 --> 00:22:47,539
+if you are willing to take that time to
+reach in Turkey your community
+
+385
+00:22:47,539 --> 00:22:51,230
+and make one of these changes so here
+are a couple ways we can help
+
+386
+00:22:51,230 --> 00:22:54,710
+running sprints
+
+387
+00:22:54,710 --> 00:22:58,100
+hey if you're excited about your sexy
+nurse call to buy eggs
+
+388
+00:22:58,100 --> 00:23:01,320
+we will feed you pizza why you do it
+enough your friendly
+
+389
+00:23:01,320 --> 00:23:05,669
+in that unit with your group local user
+group we have in our region Education
+
+390
+00:23:05,669 --> 00:23:06,309
+Committee
+
+391
+00:23:06,309 --> 00:23:09,679
+specifically devoted to doing this kind
+of outreach
+
+392
+00:23:09,679 --> 00:23:14,250
+on you now if you wanna run a tech camp
+I'm doing is designed curriculum like
+
+393
+00:23:14,250 --> 00:23:18,159
+we can help find that this happening and
+then we also have a general grants
+
+394
+00:23:18,159 --> 00:23:19,169
+program sour
+
+395
+00:23:19,169 --> 00:23:23,080
+now let your imagination go wild really
+anything is possible and and where we
+
+396
+00:23:23,080 --> 00:23:25,120
+would be excited to hear from you
+
+397
+00:23:25,120 --> 00:23:29,340
+okay
+
+398
+00:23:29,340 --> 00:23:33,770
+who challenged here here gonna be back
+here in this room
+
+399
+00:23:33,770 --> 00:23:38,450
+a year from now am I ask is do one thing
+
+400
+00:23:38,450 --> 00:23:42,179
+just one thing whatever resonated with
+you all you have time for us to call
+
+401
+00:23:42,179 --> 00:23:43,130
+someone
+
+402
+00:23:43,130 --> 00:23:46,350
+do that if you wanna run a sprint to do
+that
+
+403
+00:23:46,350 --> 00:23:50,190
+you wanna help it the summer camp do
+that but do one thing
+
+404
+00:23:50,190 --> 00:23:55,669
+much report back next year and see how
+those numbers see how that bottom line
+
+405
+00:23:55,669 --> 00:24:01,919
+has changed here a couple resources for
+you some classic
+
+406
+00:24:01,919 --> 00:24:05,539
+tax on why things are the way they are
+as well as
+
+407
+00:24:05,539 --> 00:24:09,150
+I'm saw all the data that i've been
+reporting at all are publicly available
+
+408
+00:24:09,150 --> 00:24:12,710
+see you wanna check it and you're now
+sees you are Apsley able to add
+
+409
+00:24:12,710 --> 00:24:16,360
+this is my pitch to you thank you all so
+much
+
+410
+00:24:16,360 --> 00:24:23,360
+for listening if you want to talk more
+about this
+
+411
+00:24:27,690 --> 00:24:34,690
+half thank you
+
+412
+00:24:36,349 --> 00:24:39,459
+so I would love to talk with you all at
+yeah I'm headed home for the summer
+
+413
+00:24:39,459 --> 00:24:44,320
+basically and Leslie so I will first
+I'll be at the rally with the expo hall
+
+414
+00:24:44,320 --> 00:24:48,299
+and directly after the the break are at
+the break on and I would love to hear
+
+415
+00:24:48,299 --> 00:24:50,940
+the study gotta get free stuff like free
+books
+
+416
+00:24:50,940 --> 00:24:54,909
+at at the booth I'm but I'm also you
+know happy to talk for hours and hours
+
+417
+00:24:54,909 --> 00:24:55,639
+over dinner
+
+418
+00:24:55,639 --> 00:24:59,509
+so thank you so much and I look forward
+to seeing what we do in the upcoming
+
+419
+00:24:59,509 --> 00:24:59,940
+year
+
+420
+00:24:59,940 --> 00:25:06,940
+the horror stories war stories
+
+421
+00:25:07,479 --> 00:25:13,489
+good stories I homeless addition
+
+422
+00:25:13,489 --> 00:25:17,029
+are as much as you can in royal
+
+423
+00:25:17,029 --> 00:25:20,099
+university students was a
+
+424
+00:25:20,099 --> 00:25:24,239
+they can help bettered each young kids
+by Tim
+
+425
+00:25:24,239 --> 00:25:28,159
+compared to teachers may be good they
+can relate to in also
+
+426
+00:25:28,159 --> 00:25:31,200
+force you was in her new to programming
+
+427
+00:25:31,200 --> 00:25:34,609
+the best way to learn is to teach and is
+better side but
+
+428
+00:25:34,609 --> 00:25:39,849
+gets but if in both university students
+I did take them to you a city or
+
+429
+00:25:39,849 --> 00:25:44,479
+get one appears to high school up the
+kids can relate more to us
+
+430
+00:25:44,479 --> 00:25:48,950
+then the teachers thank you and is
+teaching teachers problem in particular
+
+431
+00:25:48,950 --> 00:25:50,139
+is really interesting
+
+432
+00:25:50,139 --> 00:25:53,229
+I'm in the US but also a lot of other
+places
+
+433
+00:25:53,229 --> 00:25:56,749
+empty going to you at the UK right now
+be people are starting to realize this
+
+434
+00:25:56,749 --> 00:25:59,879
+is important our passing policies that
+say hey we're going out is hinting at a
+
+435
+00:25:59,879 --> 00:26:00,389
+program
+
+436
+00:26:00,389 --> 00:26:03,389
+but we actually haven't figured out how
+to teach teachers how to teach
+
+437
+00:26:03,389 --> 00:26:04,859
+programming at scale
+
+438
+00:26:04,859 --> 00:26:08,389
+so that's a whole interest in Canada
+forums as is worth thinking about
+
+439
+00:26:08,389 --> 00:26:11,629
+thank you you 100 percent II a
+
+440
+00:26:11,629 --> 00:26:14,959
+can have had something related to the
+use in this AM
+
+441
+00:26:14,959 --> 00:26:20,679
+as mark a question a on speaking with
+the teachers especially the science
+
+442
+00:26:20,679 --> 00:26:21,839
+teachers because
+
+443
+00:26:21,839 --> 00:26:25,289
+size becoming so much more
+interdisciplinary and
+
+444
+00:26:25,289 --> 00:26:30,119
+unit the University levy see everyone
+needing programmers to do things for
+
+445
+00:26:30,119 --> 00:26:35,599
+biologist mathematicians do and did you
+see any the teachers at the high school
+
+446
+00:26:35,599 --> 00:26:36,559
+level
+
+447
+00:26:36,559 --> 00:26:41,489
+wanting to learn how to program and what
+was there feeling about that
+
+448
+00:26:41,489 --> 00:26:47,929
+soon hit I think that the state in power
+in house was actually pretty depressing
+
+449
+00:26:47,929 --> 00:26:49,139
+and porcelain particularly his
+
+450
+00:26:49,139 --> 00:26:53,829
+schools don't have a bucket computer
+science often in the business
+
+451
+00:26:53,829 --> 00:26:58,359
+silo and not in their science silo in it
+there was music like the people
+
+452
+00:26:58,359 --> 00:26:59,299
+available
+
+453
+00:26:59,299 --> 00:27:04,049
+to teach maybe don't super match that
+that the skill set that is required
+
+454
+00:27:04,049 --> 00:27:07,469
+on I think lots of teachers are excited
+
+455
+00:27:07,469 --> 00:27:10,989
+about the idea to do his program and
+they're frustrated by the fact that
+
+456
+00:27:10,989 --> 00:27:12,279
+there's no credentialing
+
+457
+00:27:12,279 --> 00:27:15,799
+and aren't like clear classes are they
+can take
+
+458
+00:27:15,799 --> 00:27:20,789
+to on to learn the skills they need to
+actually do it
+
+459
+00:27:20,789 --> 00:27:23,839
+I'm sad I think I think excited but
+they're fresher IT infrastructure
+
+460
+00:27:23,839 --> 00:27:24,579
+problems
+
+461
+00:27:24,579 --> 00:27:28,479
+make Jessica
+
+462
+00:27:28,479 --> 00:27:31,909
+caroling I do outreach and San Diego
+
+463
+00:27:31,909 --> 00:27:36,960
+and for the Fab Lab and I haven't
+seventeen year old and a 19-year-old
+
+464
+00:27:36,960 --> 00:27:40,700
+I'm worked with teachers and wanna
+
+465
+00:27:40,700 --> 00:27:45,320
+the really I'm relatively new to Python
+in last couple years and one other
+
+466
+00:27:45,320 --> 00:27:50,299
+super cool things even be on language
+which i think is so fun the program in
+
+467
+00:27:50,299 --> 00:27:53,359
+is the breath I'll
+
+468
+00:27:53,359 --> 00:27:57,769
+libraries on the things you can do
+
+469
+00:27:57,769 --> 00:28:01,989
+in astronomy music a biology
+
+470
+00:28:01,989 --> 00:28:06,489
+those are things that really resonate
+with kids
+
+471
+00:28:06,489 --> 00:28:10,999
+and kids are sort of sucking up the
+Instructables and that kinda stuff from
+
+472
+00:28:10,999 --> 00:28:11,379
+like
+
+473
+00:28:11,379 --> 00:28:16,499
+late elementary school on and it seems
+like we've got a great community of
+
+474
+00:28:16,499 --> 00:28:18,659
+people with a variety of interests
+
+475
+00:28:18,659 --> 00:28:23,329
+it would be really nice if like the
+Python Software Foundation could somehow
+
+476
+00:28:23,329 --> 00:28:27,219
+even just I Python no perks on cool
+subjects
+
+477
+00:28:27,219 --> 00:28:32,799
+and have sir the clearinghouse for them
+even beyond just the formal curriculum
+
+478
+00:28:32,799 --> 00:28:35,929
+because I think if you touch the kid and
+engage the kid
+
+479
+00:28:35,929 --> 00:28:39,859
+they will suck it up they're like
+sponges
+
+480
+00:28:39,859 --> 00:28:42,859
+cell I totally agree and in particular
+yeah
+
+481
+00:28:42,859 --> 00:28:47,099
+if a bunch of us are going go out in the
+schools and we want give our best pitch
+
+482
+00:28:47,099 --> 00:28:49,789
+for why I programming is empowering
+interesting
+
+483
+00:28:49,789 --> 00:28:53,359
+you're having a clearing house in and
+suggestions just
+
+484
+00:28:53,359 --> 00:28:59,659
+pre pre-written press it would be really
+useful out first just a reminder sending
+
+485
+00:28:59,659 --> 00:29:03,289
+what is the base of logarithm in your
+ratio chart
+
+486
+00:29:03,289 --> 00:29:06,690
+I am at a2
+
+487
+00:29:06,690 --> 00:29:10,779
+now I think so and okie thank you and
+the actual question is
+
+488
+00:29:10,779 --> 00:29:14,179
+I'm are there in you are efforts to
+
+489
+00:29:14,179 --> 00:29:18,249
+lets a cold sores them I curriculum
+
+490
+00:29:18,249 --> 00:29:21,519
+creating the effort because to me it
+sounds like a problem that
+
+491
+00:29:21,519 --> 00:29:25,440
+technology console 50 your treasure map
+
+492
+00:29:25,440 --> 00:29:29,509
+crowdsourcing I mean I wouldn't call it
+that is certainly there are distributed
+
+493
+00:29:29,509 --> 00:29:31,529
+efforts on line that are happening for
+sure
+
+494
+00:29:31,529 --> 00:29:34,849
+Eminem I find it incredibly encouraging
+that the thing that has evolved as
+
+495
+00:29:34,849 --> 00:29:35,599
+people
+
+496
+00:29:35,599 --> 00:29:39,200
+developing some unease to tools yeah in
+the open
+
+497
+00:29:39,200 --> 00:29:42,879
+under permissive license on Getty up but
+actually a a pretty good said in the
+
+498
+00:29:42,879 --> 00:29:46,450
+world so any get collaborating on the
+staff
+
+499
+00:29:46,450 --> 00:29:49,569
+get a crowdsourcing a sub is absolutely
+possible way to see the people
+
+500
+00:29:49,569 --> 00:29:53,319
+do it and people who are who are talking
+to teachers while they're doing it like
+
+501
+00:29:53,319 --> 00:29:54,569
+doing it in a vacuum
+
+502
+00:29:54,569 --> 00:29:57,419
+probably wouldn't be successful but you
+engage in the people who will be using
+
+503
+00:29:57,419 --> 00:29:59,539
+the common
+
+504
+00:29:59,539 --> 00:30:03,429
+I'm I I come from a country called Oman
+in the Middle East
+
+505
+00:30:03,429 --> 00:30:07,779
+and I'm over there I'm quite privileged
+
+506
+00:30:07,779 --> 00:30:11,579
+in terms of economic status and so on I
+live here in Montreal now
+
+507
+00:30:11,579 --> 00:30:16,109
+but computer science is not a respected
+I'm
+
+508
+00:30:16,109 --> 00:30:20,219
+discipline in the middle east by the
+people who are in the upper middle class
+
+509
+00:30:20,219 --> 00:30:23,460
+and upwards the decisionmaking
+policymaking people
+
+510
+00:30:23,460 --> 00:30:26,619
+I was wondering if you know any groups
+who
+
+511
+00:30:26,619 --> 00:30:29,889
+or projects at work towards raising
+awareness because I'm pretty sure I can
+
+512
+00:30:29,889 --> 00:30:32,829
+count on one hand or two the number of
+people I know
+
+513
+00:30:32,829 --> 00:30:36,190
+were intact for my country on
+
+514
+00:30:36,190 --> 00:30:39,599
+and that's a real shame and
+
+515
+00:30:39,599 --> 00:30:44,249
+you know there's such as an opportunity
+there to get people involved but
+
+516
+00:30:44,249 --> 00:30:47,569
+you know everything here is about
+getting it to work
+
+517
+00:30:47,569 --> 00:30:50,559
+in a place where it already respected
+but it is not even respected how do we
+
+518
+00:30:50,559 --> 00:30:51,779
+go about that
+
+519
+00:30:51,779 --> 00:30:56,759
+yeah it's really a question on there
+certainly resources that are somewhat US
+
+520
+00:30:56,759 --> 00:31:00,719
+Pacific that I can say like Co .org has
+allotted
+
+521
+00:31:00,719 --> 00:31:03,929
+data and glossy material to present
+
+522
+00:31:03,929 --> 00:31:06,399
+in your own way to treat digestive or
+the people and something that may
+
+523
+00:31:06,399 --> 00:31:07,359
+translate
+
+524
+00:31:07,359 --> 00:31:10,399
+across national boundaries then we can
+talk to find out more international
+
+525
+00:31:10,399 --> 00:31:11,599
+efforts into space
+
+526
+00:31:11,599 --> 00:31:15,440
+agreement hi I have two questions
+
+527
+00:31:15,440 --> 00:31:19,649
+a the the first one is our what is the
+role
+
+528
+00:31:19,649 --> 00:31:23,339
+or how do you see the role of our Khan
+Academy
+
+529
+00:31:23,339 --> 00:31:26,979
+in or similar online
+
+530
+00:31:26,979 --> 00:31:30,009
+kinda like universities or schools
+
+531
+00:31:30,009 --> 00:31:33,539
+from and the second one is I'm
+
+532
+00:31:33,539 --> 00:31:38,069
+is there any the centralized 'em
+
+533
+00:31:38,069 --> 00:31:41,879
+curriculum or centralize project that
+house definitive
+
+534
+00:31:41,879 --> 00:31:45,309
+time time line or people dedicated to it
+because
+
+535
+00:31:45,309 --> 00:31:49,779
+um Brett like we the first step of
+solving a problem is identifying India I
+
+536
+00:31:49,779 --> 00:31:51,579
+think he did a very good job
+
+537
+00:31:51,579 --> 00:31:55,200
+explaining what the problem is arm and
+things we could do
+
+538
+00:31:55,200 --> 00:31:58,379
+arm but I think I getting
+
+539
+00:31:58,379 --> 00:32:02,960
+a rallying people is a good step but we
+also need
+
+540
+00:32:02,960 --> 00:32:05,979
+arm a good project with
+
+541
+00:32:05,979 --> 00:32:09,869
+people they can raise hands and say I
+can do this specific thing
+
+542
+00:32:09,869 --> 00:32:13,479
+and it might not be only decentralize to
+this room so
+
+543
+00:32:13,479 --> 00:32:17,859
+what's water than your next steps on on
+this rallying call:
+
+544
+00:32:17,859 --> 00:32:21,299
+and here those are by two questions got
+
+545
+00:32:21,299 --> 00:32:24,309
+I think I can ease grade and it's great
+because
+
+546
+00:32:24,309 --> 00:32:28,499
+it is on it clearly is delivering value
+to a lot of students in a lot of
+
+547
+00:32:28,499 --> 00:32:30,159
+teachers and because
+
+548
+00:32:30,159 --> 00:32:34,960
+it is and yeah it is one of many actors
+in this space irv
+
+549
+00:32:34,960 --> 00:32:38,210
+on massive online learning and that the
+more competition there is there that the
+
+550
+00:32:38,210 --> 00:32:41,279
+more we learn about what is a fact and
+the better it will be
+
+551
+00:32:41,279 --> 00:32:46,639
+on don't tell you the second question
+
+552
+00:32:46,639 --> 00:32:51,079
+I I think that what people folks
+finalists are doing this is is
+
+553
+00:32:51,079 --> 00:32:55,219
+that I'm a lot in these initiatives are
+necessarily super local
+
+554
+00:32:55,219 --> 00:32:59,109
+so so how you there are mailing lists
+for people interested in a7 our mailing
+
+555
+00:32:59,109 --> 00:33:00,440
+lists for
+
+556
+00:33:00,440 --> 00:33:04,049
+for teachers interested in programming
+on but fundamentally it's
+
+557
+00:33:04,049 --> 00:33:07,429
+your every every school and every school
+district is
+
+558
+00:33:07,429 --> 00:33:11,700
+difference and you end up on meeting
+with the people locally who who
+
+559
+00:33:11,700 --> 00:33:15,049
+on know how to make it work in in that
+particular context
+
+560
+00:33:15,049 --> 00:33:19,309
+so so or so while there are worse on
+your mailing list in
+
+561
+00:33:19,309 --> 00:33:21,169
+national/international at on
+
+562
+00:33:21,169 --> 00:33:24,470
+ways to connect with people I think that
+fundamentally these are problems are
+
+563
+00:33:24,470 --> 00:33:25,190
+solved
+
+564
+00:33:25,190 --> 00:33:29,749
+piece by piece locally are you going to
+track it
+
+565
+00:33:29,749 --> 00:33:36,389
+I'm I i cant I die I don't have a
+solution to this whole problem
+
+566
+00:33:36,389 --> 00:33:40,369
+appear on the stage but I'm sure that if
+there's interest in that type of project
+
+567
+00:33:40,369 --> 00:33:44,259
+I we could think it's thanks
+
+568
+00:33:44,259 --> 00:33:48,829
+you mom third mentioned the the teaching
+teachers problem
+
+569
+00:33:48,829 --> 00:33:51,839
+arm in one actions you didn't mention
+was actually
+
+570
+00:33:51,839 --> 00:33:55,159
+programmers becoming teachers arm
+
+571
+00:33:55,159 --> 00:33:58,409
+is that something you you know
+
+572
+00:33:58,409 --> 00:34:02,429
+in US teaching certificate or as the
+difficult career
+
+573
+00:34:02,429 --> 00:34:05,929
+challenging I'm we would do you think
+about that
+
+574
+00:34:05,929 --> 00:34:09,819
+love a programmer's actually become
+teachers yet at the really question
+
+575
+00:34:09,819 --> 00:34:15,720
+on so B&B teachers really hard and
+teachers go through a ton of training
+
+576
+00:34:15,720 --> 00:34:18,980
+on to become really good at what they do
+and I have a lot of experience and make
+
+577
+00:34:18,980 --> 00:34:20,500
+some good at what they do.
+
+578
+00:34:20,500 --> 00:34:24,190
+I'm and and hour if he if you
+
+579
+00:34:24,190 --> 00:34:27,609
+were trained as a programmer you
+definitely can be a good teacher but
+
+580
+00:34:27,609 --> 00:34:31,970
+there's a lot of context around teaching
+pedagogy that you you would have to
+
+581
+00:34:31,970 --> 00:34:35,279
+catch up on to be as effective as you
+can be
+
+582
+00:34:35,279 --> 00:34:38,649
+so that's about one aspect I think TPA
+teaching
+
+583
+00:34:38,649 --> 00:34:42,929
+add p.m. developing the infrastructure
+so that people who were trained as
+
+584
+00:34:42,929 --> 00:34:45,139
+teachers can become computer science
+teachers
+
+585
+00:34:45,139 --> 00:34:49,559
+on is probably a good idea even if we
+can tap into some external resources to
+
+586
+00:34:49,559 --> 00:34:50,440
+get teachers and
+
+587
+00:34:50,440 --> 00:34:54,220
+your promise and there's an insider's
+problem you have to really love teaching
+
+588
+00:34:54,220 --> 00:34:54,889
+kids
+
+589
+00:34:54,889 --> 00:34:58,299
+to dump your of free food and
+
+590
+00:34:58,299 --> 00:35:01,789
+$250k job to go make 40k
+
+591
+00:35:01,789 --> 00:35:05,119
+innis yet in an environment that is
+really really tough
+
+592
+00:35:05,119 --> 00:35:10,339
+and yeah solidarity that some
+
+593
+00:35:10,339 --> 00:35:13,500
+I'm I'm so I met a couple teachers and
+
+594
+00:35:13,500 --> 00:35:17,349
+for our live by a school the other day
+and on when the ladies is really gone
+
+595
+00:35:17,349 --> 00:35:19,009
+her she teaches web design
+
+596
+00:35:19,009 --> 00:35:22,359
+and she's awesome and she wants to teach
+my time but it
+
+597
+00:35:22,359 --> 00:35:27,250
+Sun is just not encouraged so what
+they're doing is on the person is
+
+598
+00:35:27,250 --> 00:35:29,509
+teaching programming at the high school
+
+599
+00:35:29,509 --> 00:35:33,680
+on is usually like one in the US
+teachers on the land is lowest in a
+
+600
+00:35:33,680 --> 00:35:34,660
+temple
+
+601
+00:35:34,660 --> 00:35:39,099
+and they do not want to teach it so an
+S&D has and knows nothing about that
+
+602
+00:35:39,099 --> 00:35:42,170
+computer science says nothing about
+program and could really care less
+
+603
+00:35:42,170 --> 00:35:46,480
+on and so right now there's a one in
+teaching and on
+
+604
+00:35:46,480 --> 00:35:49,759
+her comment the other day well as that
+on
+
+605
+00:35:49,759 --> 00:35:53,859
+she really didn't care about it and that
+and there were a lot of girls in the
+
+606
+00:35:53,859 --> 00:35:55,279
+class and she said
+
+607
+00:35:55,279 --> 00:35:59,630
+financially programmers anyway on so I'm
+just very frustrated
+
+608
+00:35:59,630 --> 00:36:02,690
+you know charleston south carolina
+minutes you know a little backwards
+
+609
+00:36:02,690 --> 00:36:07,239
+but on I I is it's very frustrating to
+hear that and
+
+610
+00:36:07,239 --> 00:36:11,299
+on you know as there's some people
+they're sending us back in its actually
+
+611
+00:36:11,299 --> 00:36:15,020
+some other women are anchor setting the
+women that and I don't get it
+
+612
+00:36:15,020 --> 00:36:18,650
+I don't know what to do I don't know
+what to do with that year the change is
+
+613
+00:36:18,650 --> 00:36:21,910
+gonna be slow if you'd be incremental
+but it will definitely happen
+
+614
+00:36:21,910 --> 00:36:25,279
+yeah if we put our collective efforts
+together %uh
+
+615
+00:36:25,279 --> 00:36:29,859
+will converge on a thing you wanna see
+here I definitely believe that
+
+616
+00:36:29,859 --> 00:36:33,529
+pay I just wanted to shut out one more
+organization one that I don't think I
+
+617
+00:36:33,529 --> 00:36:34,500
+heard you mention
+
+618
+00:36:34,500 --> 00:36:38,690
+black girls poet is enough you big
+cities across the country
+
+619
+00:36:38,690 --> 00:36:43,009
+arm I volunteered with them when you
+show up your
+
+620
+00:36:43,009 --> 00:36:46,849
+only to commit to a single day usually a
+Saturday eight hours
+
+621
+00:36:46,849 --> 00:36:50,839
+and the experience it you have with
+those middle school girls
+
+622
+00:36:50,839 --> 00:36:54,509
+does it all reflect within the
+presentation they're excited they're
+
+623
+00:36:54,509 --> 00:36:56,880
+engaged they learn quickly
+
+624
+00:36:56,880 --> 00:37:00,450
+and it is that the wonderful thing to do
+so if you've got a free Saturday
+
+625
+00:37:00,450 --> 00:37:03,670
+and they're in your area or you wanna
+bring to your area
+
+626
+00:37:03,670 --> 00:37:06,880
+strongly encourage you to make it happen
+Ass'n cock
+
+627
+00:37:06,880 --> 00:37:11,579
+a game at early engagement is is so
+critical
+
+628
+00:37:11,579 --> 00:37:14,809
+Center really have a question I'm gonna
+hijacked the might cure for minutes make
+
+629
+00:37:14,809 --> 00:37:16,150
+an announcement
+
+630
+00:37:16,150 --> 00:37:19,270
+um I had the privilege of seeing an
+alpha version is talk down at Pi
+
+631
+00:37:19,270 --> 00:37:20,220
+Tennessee
+
+632
+00:37:20,220 --> 00:37:24,309
+and as a result in conversation that I
+had with some people there after that
+
+633
+00:37:24,309 --> 00:37:28,690
+I was back down in nashville two weeks
+later for workshop called click
+
+634
+00:37:28,690 --> 00:37:32,869
+arm the idea behind click was to put 50
+working software developers
+
+635
+00:37:32,869 --> 00:37:37,089
+in 50 teachers in a room together let
+them get lightning talks tell stories
+
+636
+00:37:37,089 --> 00:37:39,630
+talk about problems and solutions
+
+637
+00:37:39,630 --> 00:37:43,250
+and then spend the afternoon coding a
+project together in scraps
+
+638
+00:37:43,250 --> 00:37:47,119
+just as away as sorry develop those
+teachers support relationship suggests
+
+639
+00:37:47,119 --> 00:37:52,210
+it was talking about so um I'm actually
+I want the organism cope i
+
+640
+00:37:52,210 --> 00:37:55,890
+and in Columbus the local paper on user
+group along with a number of other
+
+641
+00:37:55,890 --> 00:37:56,809
+sigues
+
+642
+00:37:56,809 --> 00:38:00,380
+in central Ohio we are going to do click
+Columbus
+
+643
+00:38:00,380 --> 00:38:03,779
+in first quarter of 2015 arm if anybody
+
+644
+00:38:03,779 --> 00:38:07,390
+is in the room from Ohio and you want to
+get involved were in the very early
+
+645
+00:38:07,390 --> 00:38:09,220
+stages of planning this
+
+646
+00:38:09,220 --> 00:38:12,270
+on the guy one around the conference
+wearing a pile higher t-shirt
+
+647
+00:38:12,270 --> 00:38:15,579
+find me thank you acid in it sound like
+a model that could definitely be
+
+648
+00:38:15,579 --> 00:38:18,920
+replicated in other cities and at that
+screen
+
+649
+00:38:18,920 --> 00:38:24,569
+the last question now your are several
+years ago maybe five or seven I
+
+650
+00:38:24,569 --> 00:38:27,969
+actually contacted my old high school
+program teacher
+
+651
+00:38:27,969 --> 00:38:32,890
+and I'll given open-ended have what can
+I do to help
+
+652
+00:38:32,890 --> 00:38:37,539
+with the bring up how love love the game
+here I'm
+
+653
+00:38:37,539 --> 00:38:41,559
+I'm very involved in local geek
+community
+
+654
+00:38:41,559 --> 00:38:45,789
+and would love to help and have gave me
+a
+
+655
+00:38:45,789 --> 00:38:49,480
+well get back to you and never did
+
+656
+00:38:49,480 --> 00:38:52,520
+and have
+
+657
+00:38:52,520 --> 00:38:56,549
+that was it so do you have any count
+pointers for
+
+658
+00:38:56,549 --> 00:39:00,950
+alright well i really wanna help my
+local community how do I
+
+659
+00:39:00,950 --> 00:39:04,630
+how do i crack that not how do I get in
+there in and
+
+660
+00:39:04,630 --> 00:39:07,900
+get to the people who may be willing
+
+661
+00:39:07,900 --> 00:39:11,250
+to engage with the local
+
+662
+00:39:11,250 --> 00:39:15,190
+community are to bring in that help to
+make it happen to have any thoughts on
+
+663
+00:39:15,190 --> 00:39:16,349
+that
+
+664
+00:39:16,349 --> 00:39:19,719
+yet you know it teachers are a tough
+spot made they are
+
+665
+00:39:19,719 --> 00:39:23,059
+teaching everything her in the trenches
+every day and I had a very much time
+
+666
+00:39:23,059 --> 00:39:26,430
+to to plan outside and when you're
+actually teaching and I think that
+
+667
+00:39:26,430 --> 00:39:30,650
+to the senate you can give specific
+actions that you can take
+
+668
+00:39:30,650 --> 00:39:35,890
+on that and it harder for them to
+consider the options in and get back to
+
+669
+00:39:35,890 --> 00:39:36,859
+you if you say hey
+
+670
+00:39:36,859 --> 00:39:41,930
+I noticed there all over your students
+are dunes I would like to help fix that
+
+671
+00:39:41,930 --> 00:39:42,599
+by
+
+672
+00:39:42,599 --> 00:39:45,880
+recruiting from these other spaces that
+they may be really receptive to that
+
+673
+00:39:45,880 --> 00:39:47,480
+country ID our saying hey
+
+674
+00:39:47,480 --> 00:39:51,410
+I'm available on these days next two
+weeks to come talk about programming
+
+675
+00:39:51,410 --> 00:39:53,410
+with your kids would that be interesting
+
+676
+00:39:53,410 --> 00:39:56,410
+and so I think your specific actions are
+the other
+
+677
+00:39:56,410 --> 00:39:59,700
+are the best way to appeal to teachers
+who are super hurt all the time
+
+678
+00:39:59,700 --> 00:40:04,270
+on and then even dirtier there's also
+you know
+
+679
+00:40:04,270 --> 00:40:07,109
+the schools in a school boards are a lot
+of pieces within the local community
+
+680
+00:40:07,109 --> 00:40:10,950
+that can be engaged with our answer
+specific actions
+
+681
+00:40:10,950 --> 00:40:14,239
+any and all I got that phone call to
+your local legislator your local school
+
+682
+00:40:14,239 --> 00:40:17,299
+board saying hey please make this
+Candice matter science credit is another
+
+683
+00:40:17,299 --> 00:40:18,969
+example very specific
+
+684
+00:40:18,969 --> 00:40:22,829
+concrete action thanks begin
+
+685
+00:40:22,829 --> 00:40:26,079
+are yeah I read
+
+686
+00:40:26,079 --> 00:40:28,670
+okay thank you thank you all so much
+come find me any extra
+

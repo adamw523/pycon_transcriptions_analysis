@@ -1,0 +1,1859 @@
+1
+00:00:04,480 --> 00:00:05,109
+alright
+
+2
+00:00:05,109 --> 00:00:08,800
+let's welcome Allison captures she's
+going to be presenting on important
+
+3
+00:00:08,800 --> 00:00:09,519
+decisions
+
+4
+00:00:09,519 --> 00:00:16,519
+is the idea okay here
+
+5
+00:00:18,420 --> 00:00:22,750
+great I nelson captor I'm a facilitator
+at her school
+
+6
+00:00:22,750 --> 00:00:26,019
+writers retreat for programmers in New
+York City to get questions about how to
+
+7
+00:00:26,019 --> 00:00:28,970
+school come find me at any point in the
+weekend I'd love to talk to you about
+
+8
+00:00:28,970 --> 00:00:29,470
+that
+
+9
+00:00:29,470 --> 00:00:32,980
+I'm so with the 30 or so high schoolers
+who are here now
+
+10
+00:00:32,980 --> 00:00:36,930
+here some places you can find me this is
+my get have been Twitter
+
+11
+00:00:36,930 --> 00:00:40,510
+if you don't get a chance to get your
+questions answered and this stock
+
+12
+00:00:40,510 --> 00:00:45,610
+feel free to tweet at me I'll try to get
+back to you there so
+
+13
+00:00:45,610 --> 00:00:48,710
+I wanna see a picture selves in
+Amsterdam in 1989
+
+14
+00:00:48,710 --> 00:00:53,199
+inventing Python for the next half hour
+we are the PDF else
+
+15
+00:00:53,199 --> 00:00:57,289
+now unfortunately I don't think we have
+time to invent
+
+16
+00:00:57,289 --> 00:01:00,899
+olive Python in the next half an hour so
+we're just going in at one piece and
+
+17
+00:01:00,899 --> 00:01:01,789
+that's important
+
+18
+00:01:01,789 --> 00:01:06,229
+now our hypothetical here is that
+everything else in Python already exists
+
+19
+00:01:06,229 --> 00:01:10,590
+so we can write code that we need to
+implement import we're going to start
+
+20
+00:01:10,590 --> 00:01:11,670
+with a very simple
+
+21
+00:01:11,670 --> 00:01:15,159
+and very limited solution and then we'll
+gradually look at problems as they arise
+
+22
+00:01:15,159 --> 00:01:16,490
+and try to solve them
+
+23
+00:01:16,490 --> 00:01:20,009
+will also look at some other decisions
+we could have made
+
+24
+00:01:20,009 --> 00:01:23,920
+and and see how other languages choose
+to solve these problems
+
+25
+00:01:23,920 --> 00:01:27,439
+as a side note import existed in its
+
+26
+00:01:27,439 --> 00:01:31,350
+essentially its current form in the
+first open source release a pipeline and
+
+27
+00:01:31,350 --> 00:01:32,509
+ground 1991
+
+28
+00:01:32,509 --> 00:01:36,939
+so there's not record up decision-making
+around the structure
+
+29
+00:01:36,939 --> 00:01:41,280
+this is the days before mailing list
+before perhaps before the change line
+
+30
+00:01:41,280 --> 00:01:41,680
+even
+
+31
+00:01:41,680 --> 00:01:47,790
+so the main source for and actual
+history at import is quite as brain
+
+32
+00:01:47,790 --> 00:01:53,159
+per and I'll come back to that a little
+bit later on so what's your problem
+
+33
+00:01:53,159 --> 00:01:54,079
+really clearly
+
+34
+00:01:54,079 --> 00:01:57,430
+this is one of shimmering in reusing
+code
+
+35
+00:01:57,430 --> 00:02:00,240
+so to get some cut up on BART on the
+board here that we can talk about
+
+36
+00:02:00,240 --> 00:02:01,219
+concrete link
+
+37
+00:02:01,219 --> 00:02:04,610
+suppose on the left ensign we had
+written some function
+
+38
+00:02:04,610 --> 00:02:08,819
+it was very hard work and so very useful
+function and some time later
+
+39
+00:02:08,819 --> 00:02:13,140
+on the right hand side we need to use
+that function again so what are we going
+
+40
+00:02:13,140 --> 00:02:14,830
+to do in the absence import
+
+41
+00:02:14,830 --> 00:02:18,060
+well the first thing we could do is the
+decision
+
+42
+00:02:18,060 --> 00:02:21,160
+that the novice programmer would make
+someone who is very new to programming
+
+43
+00:02:21,160 --> 00:02:24,830
+they would say this is the easy I can
+copy and paste
+
+44
+00:02:24,830 --> 00:02:29,540
+now there clearly a lot of disadvantages
+with the strategy but it's worth noting
+
+45
+00:02:29,540 --> 00:02:31,099
+that there are advantages to you
+
+46
+00:02:31,099 --> 00:02:35,560
+for one thing it's very clear what we've
+done so if you're reading this function
+
+47
+00:02:35,560 --> 00:02:38,830
+this file later a useful function is
+defined right there we don't have to go
+
+48
+00:02:38,830 --> 00:02:39,980
+hunting for it somewhere
+
+49
+00:02:39,980 --> 00:02:44,519
+I'm their love disadvantages and to have
+them
+
+50
+00:02:44,519 --> 00:02:48,250
+are that this is annoying to you by Hans
+and if we subsequently fined by
+
+51
+00:02:48,250 --> 00:02:51,680
+in a useful function we have to go fix
+in two places so
+
+52
+00:02:51,680 --> 00:02:54,890
+at a minimum we want an automatic
+solution that doesn't require
+
+53
+00:02:54,890 --> 00:02:57,900
+manual copying and pasting that's
+probably not the best solution
+
+54
+00:02:57,900 --> 00:03:02,599
+if we can come up with and we want the
+code to stay in sync everything changes
+
+55
+00:03:02,599 --> 00:03:07,720
+so what imagine some kind of magical
+copy and paste
+
+56
+00:03:07,720 --> 00:03:11,290
+so we've got a special symbol the copy
+and paste your code for you
+
+57
+00:03:11,290 --> 00:03:15,159
+and we pass in your file name or
+something like that and we can imagine
+
+58
+00:03:15,159 --> 00:03:18,159
+implementing this without any knowledge
+a python at all
+
+59
+00:03:18,159 --> 00:03:21,260
+basically they just use our source code
+as text files
+
+60
+00:03:21,260 --> 00:03:25,220
+and manipulates them as text files so we
+look for this special symbol that gives
+
+61
+00:03:25,220 --> 00:03:26,230
+us a file name
+
+62
+00:03:26,230 --> 00:03:30,129
+we go find that file and then replace
+the line
+
+63
+00:03:30,129 --> 00:03:34,590
+in our the file reading today with the
+contents of that file that we found
+
+64
+00:03:34,590 --> 00:03:39,379
+and right now the stakes entire files to
+include
+
+65
+00:03:39,379 --> 00:03:43,040
+so we could just be more specific to say
+really want this range
+
+66
+00:03:43,040 --> 00:03:47,989
+line numbers pasted into file reading
+today that has a lot of comes as well we
+
+67
+00:03:47,989 --> 00:03:49,879
+have to keep the line numbers and sink
+
+68
+00:03:49,879 --> 00:03:54,129
+that's probably not ideal but it's worth
+noting that this is an improvement
+
+69
+00:03:54,129 --> 00:03:58,890
+who we now have an automatic solution
+that's not manual copying and pasting
+
+70
+00:03:58,890 --> 00:04:02,099
+and we don't have to fix bugs in two
+places are could stay since Inc
+
+71
+00:04:02,099 --> 00:04:06,299
+so there are lots of problems with the
+solution still a look at for those for
+
+72
+00:04:06,299 --> 00:04:07,900
+the course in the next 20 or so minutes
+
+73
+00:04:07,900 --> 00:04:11,560
+for one thing this is static we can
+change behavior on the program is
+
+74
+00:04:11,560 --> 00:04:12,060
+running
+
+75
+00:04:12,060 --> 00:04:16,139
+for another we have name collisions if
+we have two things with the same name we
+
+76
+00:04:16,139 --> 00:04:17,600
+can't tell that that'll happen
+
+77
+00:04:17,600 --> 00:04:20,880
+we're executing our files multiple times
+
+78
+00:04:20,880 --> 00:04:24,389
+which may be inefficient but has a much
+more serious problem object identity
+
+79
+00:04:24,389 --> 00:04:28,310
+will spend more time on it later in its
+very rigid there's currently only one
+
+80
+00:04:28,310 --> 00:04:29,910
+way to do this
+
+81
+00:04:29,910 --> 00:04:33,960
+so stick is one in time we're so far
+manipulating
+
+82
+00:04:33,960 --> 00:04:38,340
+are Python files as if they're simply
+text files with no knowledge at all have
+
+83
+00:04:38,340 --> 00:04:42,860
+Python or the fact that Python source
+code can be used to make Python objects
+
+84
+00:04:42,860 --> 00:04:45,840
+that we've invented this really great
+dynamic language for everything happens
+
+85
+00:04:45,840 --> 00:04:46,690
+at runtime
+
+86
+00:04:46,690 --> 00:04:50,310
+so prison where Inc aren't in clear
+import solution here should happen in
+
+87
+00:04:50,310 --> 00:04:53,440
+time to
+
+88
+00:04:53,440 --> 00:04:56,660
+so let's go one step better we can't we
+can call function
+
+89
+00:04:56,660 --> 00:05:00,880
+to include I external source code
+
+90
+00:05:00,880 --> 00:05:05,880
+so this function recalling magical paste
+takes a file named as an argument
+
+91
+00:05:05,880 --> 00:05:09,630
+goes and finds that filing opens in
+reason the source code
+
+92
+00:05:09,630 --> 00:05:14,020
+and then uses the exact keyword to
+execute that source code
+
+93
+00:05:14,020 --> 00:05:17,460
+at the moment we're using exact in the
+simplest way to Sir regular way
+
+94
+00:05:17,460 --> 00:05:21,030
+but i wanna spend just a minute on this
+in part because exact is not something
+
+95
+00:05:21,030 --> 00:05:22,419
+you often see in
+
+96
+00:05:22,419 --> 00:05:25,139
+add production code and in part because
+we're going to get more Cuttack
+
+97
+00:05:25,139 --> 00:05:27,770
+complexes that in just a minute
+
+98
+00:05:27,770 --> 00:05:31,590
+so exact takes a string and executed as
+Python code
+
+99
+00:05:31,590 --> 00:05:35,680
+now it differs from even now in that
+even dollars for evaluating expressions
+
+100
+00:05:35,680 --> 00:05:38,820
+and exact is for any kinda I think a
+
+101
+00:05:38,820 --> 00:05:42,300
+so here to find a function when booking
+that function it works just the way you
+
+102
+00:05:42,300 --> 00:05:44,990
+expect it to you
+
+103
+00:05:44,990 --> 00:05:49,800
+so now we have a way to dynamically run
+python code
+
+104
+00:05:49,800 --> 00:05:55,100
+and this code s current will work we'll
+have a useful function available to us
+
+105
+00:05:55,100 --> 00:06:00,430
+by invoking are magical paste function
+
+106
+00:06:00,430 --> 00:06:04,340
+so we can solve this problem a doing
+through the static analysis for dynamic
+
+107
+00:06:04,340 --> 00:06:06,120
+language which was not a great idea
+
+108
+00:06:06,120 --> 00:06:11,400
+by using a python and native function
+
+109
+00:06:11,400 --> 00:06:15,169
+what's in the second problem love name
+collisions so suppose that we had
+
+110
+00:06:15,169 --> 00:06:16,250
+another file
+
+111
+00:06:16,250 --> 00:06:20,080
+the defined another I nother function
+named a useful function
+
+112
+00:06:20,080 --> 00:06:23,569
+one of those would supersede the other
+we have to know that would happen
+
+113
+00:06:23,569 --> 00:06:26,630
+we couldn't tell that it would happen
+without reading all the relevant source
+
+114
+00:06:26,630 --> 00:06:28,000
+code
+
+115
+00:06:28,000 --> 00:06:31,169
+to how we're going to solve this well
+luckily for us
+
+116
+00:06:31,169 --> 00:06:34,350
+we've had one honking great idea
+
+117
+00:06:34,350 --> 00:06:37,919
+we can use namespaces to avoid name
+collisions just as is mentioned in the
+
+118
+00:06:37,919 --> 00:06:39,789
+senate Python
+
+119
+00:06:39,789 --> 00:06:43,340
+now since we're inventing new spaces
+what's been a minute talking about them
+
+120
+00:06:43,340 --> 00:06:46,880
+we could have two objects that were have
+the same name that pointy different
+
+121
+00:06:46,880 --> 00:06:47,650
+things sonya
+
+122
+00:06:47,650 --> 00:06:52,800
+could have Montreal a city in Canada and
+Montreal a town in France
+
+123
+00:06:52,800 --> 00:06:56,590
+and when we're speaking English we would
+add extra information to disambiguate
+
+124
+00:06:56,590 --> 00:07:00,620
+to you now mean is more convenient for
+us to put
+
+125
+00:07:00,620 --> 00:07:04,000
+order to start with the larger container
+and then get more specific as we
+
+126
+00:07:04,000 --> 00:07:05,500
+progress
+
+127
+00:07:05,500 --> 00:07:10,240
+and we have this idea a container not
+contain or has some sort boundary
+
+128
+00:07:10,240 --> 00:07:13,240
+energy graphic example we have the the
+country in the boundaries are
+
+129
+00:07:13,240 --> 00:07:16,650
+obvious on Google Maps and will have to
+decide
+
+130
+00:07:16,650 --> 00:07:20,349
+what defines the boundary needs but now
+we have this mapping
+
+131
+00:07:20,349 --> 00:07:26,580
+names to objects now let's are using the
+word module for container
+
+132
+00:07:26,580 --> 00:07:30,349
+is a model just another kind on objects
+like a class and we'll see this
+
+133
+00:07:30,349 --> 00:07:34,460
+is the decision is made in some other
+languages but for us
+
+134
+00:07:34,460 --> 00:07:38,500
+let's make some some different choices
+will say that the banners a module
+
+135
+00:07:38,500 --> 00:07:43,580
+are one file you don't need to use an
+explicit keywords create a model
+
+136
+00:07:43,580 --> 00:07:46,650
+you also say that the module by default
+has the same name
+
+137
+00:07:46,650 --> 00:07:50,419
+as the file containing its source code
+so we got a direct mapping onto the
+
+138
+00:07:50,419 --> 00:07:51,379
+filesystem
+
+139
+00:07:51,379 --> 00:07:56,099
+which allows us to look at where models
+live really easily
+
+140
+00:07:56,099 --> 00:08:00,039
+the upshot of these two decisions is
+that every time a Python programmer
+
+141
+00:08:00,039 --> 00:08:04,000
+rights any program she's written a model
+so we're sort tricking novice
+
+142
+00:08:04,000 --> 00:08:05,440
+programmers and using modules
+
+143
+00:08:05,440 --> 00:08:08,729
+right off the bat
+
+144
+00:08:08,729 --> 00:08:11,910
+so what's modifier our function that
+uses exact so the
+
+145
+00:08:11,910 --> 00:08:15,710
+includes a namespace this is something
+tax that is not
+
+146
+00:08:15,710 --> 00:08:19,500
+terribly common and suggested two runs
+or how it works we can create an empty
+
+147
+00:08:19,500 --> 00:08:21,759
+dictionary to use as our namespace
+
+148
+00:08:21,759 --> 00:08:25,240
+and then exact are QWERTY in that
+namespace
+
+149
+00:08:25,240 --> 00:08:28,819
+when we then inspect the keys and the
+namespace we see that we picked up a
+
+150
+00:08:28,819 --> 00:08:30,190
+reference to built-ins
+
+151
+00:08:30,190 --> 00:08:33,500
+which happens when you exact any code in
+any context
+
+152
+00:08:33,500 --> 00:08:39,159
+and we've also picked up ki hai the
+corresponds to our function object
+
+153
+00:08:39,159 --> 00:08:42,750
+now if we try to invoke the function hi
+in the current scope in the rebel
+
+154
+00:08:42,750 --> 00:08:43,550
+session
+
+155
+00:08:43,550 --> 00:08:47,000
+we got in a manner and this is exactly
+behavior that we want
+
+156
+00:08:47,000 --> 00:08:50,610
+we see the executing this code in
+another namespace has protected our
+
+157
+00:08:50,610 --> 00:08:51,970
+current namespace
+
+158
+00:08:51,970 --> 00:08:55,440
+from all of those names and objects
+
+159
+00:08:55,440 --> 00:08:58,480
+we can reach into the namespace using
+the key
+
+160
+00:08:58,480 --> 00:09:01,730
+it is that is the name and get the
+function object itself
+
+161
+00:09:01,730 --> 00:09:05,269
+and then invoke it normally
+
+162
+00:09:05,269 --> 00:09:09,570
+some modifications to our magical paste
+function are to create this namespace
+
+163
+00:09:09,570 --> 00:09:13,170
+executors source code in that in space
+and then return the namespace object
+
+164
+00:09:13,170 --> 00:09:15,529
+itself
+
+165
+00:09:15,529 --> 00:09:20,180
+so I'm cheating in one way on the slide
+by using module syntax instead a
+
+166
+00:09:20,180 --> 00:09:22,570
+dictionary syntax which I should be
+using
+
+167
+00:09:22,570 --> 00:09:26,070
+so if we make that change then we have
+valid code here we have this
+
+168
+00:09:26,070 --> 00:09:30,959
+suitor module idea it is a simple
+namespace a mapping it means
+
+169
+00:09:30,959 --> 00:09:34,850
+objects so we saw her from name
+collisions
+
+170
+00:09:34,850 --> 00:09:38,310
+we can you can use models and we can use
+namespaces to avoid name question
+
+171
+00:09:38,310 --> 00:09:40,830
+entirely
+
+172
+00:09:40,830 --> 00:09:44,970
+let's look at this third problem love
+the code XQ multiple times
+
+173
+00:09:44,970 --> 00:09:49,110
+so this could be an efficient if we had
+a module that defined 100 functions
+
+174
+00:09:49,110 --> 00:09:50,810
+instead of just one function
+
+175
+00:09:50,810 --> 00:09:54,339
+we probably wouldn't want to run it more
+times than necessary
+
+176
+00:09:54,339 --> 00:09:57,790
+are our model could be side affecting in
+some way
+
+177
+00:09:57,790 --> 00:10:01,820
+or we could suppose that module a
+requires bc&d
+
+178
+00:10:01,820 --> 00:10:05,630
+Marshall B requires CNT and so on so
+that as we
+
+179
+00:10:05,630 --> 00:10:11,290
+hurt step through this these series
+models the problem gets worse and worse
+
+180
+00:10:11,290 --> 00:10:15,550
+in fact there's a more serious problem
+with are codex key multiple times and
+
+181
+00:10:15,550 --> 00:10:17,410
+that's one object identity
+
+182
+00:10:17,410 --> 00:10:21,260
+in many cases even in most cases we
+don't want
+
+183
+00:10:21,260 --> 00:10:24,970
+just an identical object or another copy
+of the object we have
+
+184
+00:10:24,970 --> 00:10:29,250
+we want the same object so we can
+imagine reading a module
+
+185
+00:10:29,250 --> 00:10:32,640
+that 9 set up some object to control the
+server
+
+186
+00:10:32,640 --> 00:10:36,620
+and then spins up that server if we
+include that module in another file
+
+187
+00:10:36,620 --> 00:10:40,850
+we probably don't want another server
+object spun up and running somewhere
+
+188
+00:10:40,850 --> 00:10:44,089
+we want to reference the one we already
+have
+
+189
+00:10:44,089 --> 00:10:47,110
+so how do we solve this problem
+
+190
+00:10:47,110 --> 00:10:50,529
+so one way to fix this kind of problem
+is that memorization
+
+191
+00:10:50,529 --> 00:10:54,440
+the idea behind memorization is we keep
+a record of calculations that we've
+
+192
+00:10:54,440 --> 00:10:55,350
+already done
+
+193
+00:10:55,350 --> 00:10:59,390
+we don't repeat calculations we already
+know the answer the classic example is
+
+194
+00:10:59,390 --> 00:11:01,680
+the Fibonacci sequence
+
+195
+00:11:01,680 --> 00:11:05,060
+naively workers imitation will make to
+riker's calls for each
+
+196
+00:11:05,060 --> 00:11:08,310
+function call as a calculating infinity
+and n
+
+197
+00:11:08,310 --> 00:11:11,310
+Press two then and function cause which
+is incredibly inefficient
+
+198
+00:11:11,310 --> 00:11:15,890
+mission take more than an so we can
+solve this problem by storing a cash
+
+199
+00:11:15,890 --> 00:11:19,029
+here just a dictionary have mapping an
+
+200
+00:11:19,029 --> 00:11:22,910
+input/output essentially and we've
+already conquered an answer
+
+201
+00:11:22,910 --> 00:11:26,060
+we just return it and we don't actually
+began
+
+202
+00:11:26,060 --> 00:11:29,990
+so we can use this strategy are magical
+peace fashion achieve a mapping
+
+203
+00:11:29,990 --> 00:11:33,640
+a in a dictionary file names to new
+space objects
+
+204
+00:11:33,640 --> 00:11:38,940
+and we are you execute a file name we
+won't execute again
+
+205
+00:11:38,940 --> 00:11:42,060
+so members asians office from about
+eight to 10 any and all since helps our
+
+206
+00:11:42,060 --> 00:11:44,410
+kitchens
+
+207
+00:11:44,410 --> 00:11:47,640
+our fourth promise that this function is
+very rigid there's only one way to
+
+208
+00:11:47,640 --> 00:11:51,579
+include other code and that's including
+entire model
+
+209
+00:11:51,579 --> 00:11:56,300
+so we can imagine and what options an
+but that doesn't get us very far
+
+210
+00:11:56,300 --> 00:12:00,670
+and also note that for example on line
+14 I have to say useful twice
+
+211
+00:12:00,670 --> 00:12:04,440
+and we decided that modulus by default
+have the same name as the file
+
+212
+00:12:04,440 --> 00:12:09,300
+that contains our source code work early
+not implementing an idea at all
+
+213
+00:12:09,300 --> 00:12:12,320
+so it could if we had options we get
+summer
+
+214
+00:12:12,320 --> 00:12:15,970
+you get more flexible behavior but we
+wouldn't solve this this problem and how
+
+215
+00:12:15,970 --> 00:12:18,329
+to say things twice
+
+216
+00:12:18,329 --> 00:12:21,339
+and in fact there's not really a
+solution that uses a function that
+
+217
+00:12:21,339 --> 00:12:22,639
+solves that problem
+
+218
+00:12:22,639 --> 00:12:26,779
+because it would be very surprising if a
+function modified the namespace
+
+219
+00:12:26,779 --> 00:12:30,680
+its collar there's that that doesn't
+happen generally speaking for good
+
+220
+00:12:30,680 --> 00:12:31,980
+reason
+
+221
+00:12:31,980 --> 00:12:35,490
+will this be ugly we want to have more
+
+222
+00:12:35,490 --> 00:12:39,220
+fine control over namespace so we can
+use keywords
+
+223
+00:12:39,220 --> 00:12:43,100
+instead function calls the advantage
+that we get is that is more flexible in
+
+224
+00:12:43,100 --> 00:12:44,130
+syntax
+
+225
+00:12:44,130 --> 00:12:47,529
+nicer looking at statically we don't
+have to remember all these parameters in
+
+226
+00:12:47,529 --> 00:12:49,630
+what order they go in and so forth
+
+227
+00:12:49,630 --> 00:12:54,389
+in we can modify the caller's name space
+without that being totally weird
+
+228
+00:12:54,389 --> 00:12:58,500
+function should not modify the content
+is let's not change that
+
+229
+00:12:58,500 --> 00:13:01,589
+implementing this is a keyword requires
+more work for massive
+
+230
+00:13:01,589 --> 00:13:05,870
+we have two modify pythons grammar we
+have to teach the parser what it means
+
+231
+00:13:05,870 --> 00:13:06,910
+to see
+
+232
+00:13:06,910 --> 00:13:11,870
+magical paste but all these are
+relatively straightforward
+
+233
+00:13:11,870 --> 00:13:14,769
+so we can increase the flexibility of
+the solution by using keywords and said
+
+234
+00:13:14,769 --> 00:13:16,649
+it functions
+
+235
+00:13:16,649 --> 00:13:20,450
+we're not relatively close to the actual
+implementation
+
+236
+00:13:20,450 --> 00:13:23,470
+know what's take a look at actual
+important to give a name and see what's
+
+237
+00:13:23,470 --> 00:13:24,810
+in these ideas appear
+
+238
+00:13:24,810 --> 00:13:27,889
+so in actual important first step the
+interpreter takes
+
+239
+00:13:27,889 --> 00:13:31,800
+is to check system modules to see if the
+names are imported
+
+240
+00:13:31,800 --> 00:13:35,139
+if not it makes an empty module to use
+as a namespace
+
+241
+00:13:35,139 --> 00:13:38,399
+then goes and finds the source can
+executes that source code
+
+242
+00:13:38,399 --> 00:13:42,420
+in the context of that new empty
+namespace that answers the module
+
+243
+00:13:42,420 --> 00:13:45,600
+in the system models and finally binds a
+given name
+
+244
+00:13:45,600 --> 00:13:49,990
+in the cars namespace if at the first
+step we have already imported this model
+
+245
+00:13:49,990 --> 00:13:54,949
+we skip all the rest to the steps and
+just find the name
+
+246
+00:13:54,949 --> 00:13:58,660
+of course we're not all the way to
+actual import here said abbreviated list
+
+247
+00:13:58,660 --> 00:14:01,060
+of things we have not done
+
+248
+00:14:01,060 --> 00:14:04,500
+we have created real models we're
+currently pretending that dictionary
+
+249
+00:14:04,500 --> 00:14:06,170
+support actually look up
+
+250
+00:14:06,170 --> 00:14:09,709
+to proceed out we have in separate
+packages
+
+251
+00:14:09,709 --> 00:14:12,970
+and in fact packages didn't get support
+until three or four years after the
+
+252
+00:14:12,970 --> 00:14:15,850
+first release a fight on it as open
+source
+
+253
+00:14:15,850 --> 00:14:19,690
+we haven't worried about how r magical
+piecing
+
+254
+00:14:19,690 --> 00:14:23,449
+finds the source code in in our example
+we just assume that it lived in the same
+
+255
+00:14:23,449 --> 00:14:24,750
+directory as the
+
+256
+00:14:24,750 --> 00:14:27,750
+code that we're importing into but
+that's an idea that obviously doesn't
+
+257
+00:14:27,750 --> 00:14:30,430
+scale very well
+
+258
+00:14:30,430 --> 00:14:33,930
+and we have been reading all that air
+handling so if something goes wrong in
+
+259
+00:14:33,930 --> 00:14:35,510
+the course an excuse for stern
+
+260
+00:14:35,510 --> 00:14:39,800
+were not Hannah gracefully anyway
+
+261
+00:14:39,800 --> 00:14:42,389
+we could make different decisions all
+these different points and let's take a
+
+262
+00:14:42,389 --> 00:14:47,550
+quick look at some solutions and other
+languages that are instructive
+
+263
+00:14:47,550 --> 00:14:50,959
+the first one look at his pound include
+and see which was might have acquiesce
+
+264
+00:14:50,959 --> 00:14:54,149
+inspirations and especially in terms of
+the path for learning
+
+265
+00:14:54,149 --> 00:14:57,699
+it somewhat similar to but we're calling
+magical copy and paste at the very
+
+266
+00:14:57,699 --> 00:14:58,940
+beginning
+
+267
+00:14:58,940 --> 00:15:02,560
+and peace in the code that is in the
+included file before compiling the main
+
+268
+00:15:02,560 --> 00:15:03,550
+file
+
+269
+00:15:03,550 --> 00:15:07,120
+now see avoids many at the downside so
+is every Python
+
+270
+00:15:07,120 --> 00:15:10,420
+because she is not a dynamic language so
+it can use lingers in compiler
+
+271
+00:15:10,420 --> 00:15:11,639
+optimizations
+
+272
+00:15:11,639 --> 00:15:14,699
+and generally can have a much better
+idea of how the program is going to
+
+273
+00:15:14,699 --> 00:15:15,529
+execute
+
+274
+00:15:15,529 --> 00:15:19,360
+before we start running the program
+
+275
+00:15:19,360 --> 00:15:22,540
+we did make some syntax in DRAM modules
+we touched on a bit
+
+276
+00:15:22,540 --> 00:15:26,800
+and Ruby for example creating a model is
+very much like creating a class
+
+277
+00:15:26,800 --> 00:15:30,880
+you explicitly use a keyword spartan and
+at the end of it
+
+278
+00:15:30,880 --> 00:15:34,810
+you could have more than one model in a
+file and you can a model something
+
+279
+00:15:34,810 --> 00:15:35,820
+different than
+
+280
+00:15:35,820 --> 00:15:40,310
+the file name is more explicit in some
+ways and less experts and others
+
+281
+00:15:40,310 --> 00:15:43,410
+we look for one we lose this mapping I
+have and
+
+282
+00:15:43,410 --> 00:15:46,440
+file names too much on ames its if we
+see
+
+283
+00:15:46,440 --> 00:15:50,149
+require terrific elsewhere in our code
+we don't necessarily know where that
+
+284
+00:15:50,149 --> 00:15:51,019
+lives
+
+285
+00:15:51,019 --> 00:15:54,240
+we also lose this idea of tricking the
+knots programmer
+
+286
+00:15:54,240 --> 00:15:57,600
+into programming this way and stuff you
+have to sort
+
+287
+00:15:57,600 --> 00:16:02,620
+seek out this this pattern and start
+using
+
+288
+00:16:02,620 --> 00:16:07,160
+in 1989 models more to give in and Guido
+said that the language nodular
+
+289
+00:16:07,160 --> 00:16:07,740
+particularly
+
+290
+00:16:07,740 --> 00:16:11,930
+modular 2 and layer was a significant
+influence on his thinking
+
+291
+00:16:11,930 --> 00:16:16,360
+we can notice that at least in 1976
+models were so far from obvious that the
+
+292
+00:16:16,360 --> 00:16:19,459
+model author chose to name the language
+after them
+
+293
+00:16:19,459 --> 00:16:23,420
+now today I think it's fair to say that
+modular programming is pervasive
+
+294
+00:16:23,420 --> 00:16:26,870
+most languages have native modules and
+those that don't
+
+295
+00:16:26,870 --> 00:16:31,949
+are often looking at them so and here we
+have it explicit definition of what
+
+296
+00:16:31,949 --> 00:16:36,420
+module meant in 1976 and we can see that
+we haven't moved very far from
+
+297
+00:16:36,420 --> 00:16:40,820
+that idea in the current imitation
+
+298
+00:16:40,820 --> 00:16:45,230
+so I wanna spend just a minute on this
+team pervasive paradigm stay
+
+299
+00:16:45,230 --> 00:16:48,649
+when I'm sure many you're familiar with
+this quote from David Foster Wallace
+
+300
+00:16:48,649 --> 00:16:52,089
+nurse there these two young fish
+swimming along and they haven't made all
+
+301
+00:16:52,089 --> 00:16:53,459
+the fish so many other way
+
+302
+00:16:53,459 --> 00:16:56,810
+not to them and says morning boys how's
+the water
+
+303
+00:16:56,810 --> 00:17:00,009
+and the two young fish swim on for a bit
+and then eventually one of them looks
+
+304
+00:17:00,009 --> 00:17:01,389
+over at the other anchors
+
+305
+00:17:01,389 --> 00:17:04,439
+what the hell's water
+
+306
+00:17:04,439 --> 00:17:07,949
+so I can now reveal the alternate title
+for the stock which is invisible blind
+
+307
+00:17:07,949 --> 00:17:11,160
+spots a Python programmers when it comes
+to import
+
+308
+00:17:11,160 --> 00:17:14,610
+ivan is a mature language today and
+unfortunately I think we probably lost
+
+309
+00:17:14,610 --> 00:17:17,189
+the opportunity to become TfL's
+
+310
+00:17:17,189 --> 00:17:21,490
+at least Python for those who are native
+speakers a python
+
+311
+00:17:21,490 --> 00:17:25,160
+meaning items are for spurning language
+sony's decisions embedded in the
+
+312
+00:17:25,160 --> 00:17:26,660
+language are so familiar
+
+313
+00:17:26,660 --> 00:17:30,539
+the company's or how is he going to
+address the conference this weekend
+
+314
+00:17:30,539 --> 00:17:34,270
+and as you continue to use Python I have
+to keep an eye out for these decisions
+
+315
+00:17:34,270 --> 00:17:37,120
+that are hidden by their familiarity
+
+316
+00:17:37,120 --> 00:17:44,120
+and with that I'll take your questions
+
+317
+00:17:48,429 --> 00:17:51,370
+if you have a question come over to the
+microphone over here or chrome aside
+
+318
+00:17:51,370 --> 00:17:52,600
+raise your hand and I'll come to you
+
+319
+00:17:52,600 --> 00:17:56,010
+either arm one quick question
+
+320
+00:17:56,010 --> 00:17:59,659
+I have there been any discussions about
+version modulus
+
+321
+00:17:59,659 --> 00:18:02,909
+up for example let's hear that I know
+that I require
+
+322
+00:18:02,909 --> 00:18:07,279
+a model to be a version 1.4 how you
+would define not whether that would be
+
+323
+00:18:07,279 --> 00:18:09,039
+supported and are there any good
+
+324
+00:18:09,039 --> 00:18:12,419
+a reasons why not to allow that to a
+
+325
+00:18:12,419 --> 00:18:16,390
+know my thinking would be it's good to
+catch those are certainly on
+
+326
+00:18:16,390 --> 00:18:20,679
+yeah absolutely I think this gets into
+the idea that
+
+327
+00:18:20,679 --> 00:18:24,320
+time the difference between a module on
+a package I think it makes a a lot of
+
+328
+00:18:24,320 --> 00:18:25,279
+sense to do you
+
+329
+00:18:25,279 --> 00:18:29,149
+version versioning at the package level
+as opposed to it that
+
+330
+00:18:29,149 --> 00:18:32,399
+at the module level as it allows us a
+little bit of a have
+
+331
+00:18:32,399 --> 00:18:35,880
+pure Python you at Marshalls while
+keeping an
+
+332
+00:18:35,880 --> 00:18:39,929
+package management and versioning in in
+the tools where
+
+333
+00:18:39,929 --> 00:18:46,929
+that there's already been a lot of work
+in that area anyone else
+
+334
+00:18:56,790 --> 00:18:59,920
+so if you drop down a news exec for
+things to springs to mind all kinds of
+
+335
+00:18:59,920 --> 00:19:00,340
+wonderful
+
+336
+00:19:00,340 --> 00:19:03,880
+evil things you could do for example
+people often
+
+337
+00:19:03,880 --> 00:19:06,740
+who are new to Python ask you on
+Wednesday and shit a new copy of them
+
+338
+00:19:06,740 --> 00:19:07,290
+Marshall
+
+339
+00:19:07,290 --> 00:19:11,000
+well that's what people think you can
+figure some other is the people we can
+
+340
+00:19:11,000 --> 00:19:12,210
+perpetrate with this
+
+341
+00:19:12,210 --> 00:19:16,150
+power a some other third
+
+342
+00:19:16,150 --> 00:19:18,980
+that people in the audience here to tell
+you that I tend to specialize in bad
+
+343
+00:19:18,980 --> 00:19:20,080
+ideas in Python
+
+344
+00:19:20,080 --> 00:19:24,080
+time which are the most fun in my
+opinion a
+
+345
+00:19:24,080 --> 00:19:29,580
+now in terms if ways to intentionally
+rinsed and she ate models
+
+346
+00:19:29,580 --> 00:19:33,270
+an I would say just put out a system
+model since that's that
+
+347
+00:19:33,270 --> 00:19:37,550
+the check an inter and then it has other
+
+348
+00:19:37,550 --> 00:19:40,570
+other bad ideas that you could have an
+
+349
+00:19:40,570 --> 00:19:44,090
+that the list from leon us
+
+350
+00:19:44,090 --> 00:19:48,520
+patsy 10 one person I was working with
+recently
+
+351
+00:19:48,520 --> 00:19:52,050
+chose to change the key word from import
+to something else
+
+352
+00:19:52,050 --> 00:19:55,660
+her to Osseo for her Harry Potter themed
+eitan
+
+353
+00:19:55,660 --> 00:19:59,520
+she's overriding almost all the bill
+tense but important can over at that
+
+354
+00:19:59,520 --> 00:20:00,030
+easily
+
+355
+00:20:00,030 --> 00:20:03,720
+so once you get down in cancer this it
+there's basically no limit
+
+356
+00:20:03,720 --> 00:20:08,660
+sir you talked a little bit at had it
+like
+
+357
+00:20:08,660 --> 00:20:11,920
+right important pipeline and the like
+got partly there
+
+358
+00:20:11,920 --> 00:20:15,690
+on in Python is import really
+implemented by them
+
+359
+00:20:15,690 --> 00:20:21,600
+and doesn't use exactly I think this
+site we can all language summit or
+
+360
+00:20:21,600 --> 00:20:23,220
+someone describe Python as
+
+361
+00:20:23,220 --> 00:20:27,010
+now that 1500 files around exactly in
+namespace
+
+362
+00:20:27,010 --> 00:20:31,220
+an know it it depends a little bit on
+what you mean by really implemented in
+
+363
+00:20:31,220 --> 00:20:31,830
+Python
+
+364
+00:20:31,830 --> 00:20:35,380
+I'm so my country in particular you can
+look at my import lead and
+
+365
+00:20:35,380 --> 00:20:38,470
+in module to see all the piper metal
+hooks
+
+366
+00:20:38,470 --> 00:20:41,650
+and Stan everything that import humor
+does
+
+367
+00:20:41,650 --> 00:20:45,470
+is actually architected by the diner
+import function as we just had this
+
+368
+00:20:45,470 --> 00:20:49,260
+different interface to essentially I'm
+so in that sense it's really written in
+
+369
+00:20:49,260 --> 00:20:49,830
+Python
+
+370
+00:20:49,830 --> 00:20:56,830
+an in circle /url sense of course it's
+not
+
+371
+00:21:12,929 --> 00:21:17,930
+any apart about reload shirt pocket
+that's very loud
+
+372
+00:21:17,930 --> 00:21:21,000
+up so reloaded if you're not familiar is
+this
+
+373
+00:21:21,000 --> 00:21:24,660
+is it will essentially really important
+module and
+
+374
+00:21:24,660 --> 00:21:29,040
+ants its most often useful if you're
+circling around in a rebel session
+
+375
+00:21:29,040 --> 00:21:33,250
+ands want to make some changes in your
+in your source module
+
+376
+00:21:33,250 --> 00:21:38,010
+and want to test at those changes an the
+thing that I find most confusing about
+
+377
+00:21:38,010 --> 00:21:39,360
+reload is that
+
+378
+00:21:39,360 --> 00:21:44,740
+it if you've done a from important
+beginning select from my module import
+
+379
+00:21:44,740 --> 00:21:45,540
+some object
+
+380
+00:21:45,540 --> 00:21:50,170
+you can't reload by the model name not
+and you also can't repeat your from
+
+381
+00:21:50,170 --> 00:21:50,740
+import
+
+382
+00:21:50,740 --> 00:21:54,050
+and says I think back to be very
+confusing
+
+383
+00:21:54,050 --> 00:21:58,050
+especially for for the new programmer
+poking around the rebel time
+
+384
+00:21:58,050 --> 00:22:01,170
+one of the things i think is
+particularly interesting about the way
+
+385
+00:22:01,170 --> 00:22:01,610
+that
+
+386
+00:22:01,610 --> 00:22:06,100
+important structured is that the from
+import almost makes it look like the
+
+387
+00:22:06,100 --> 00:22:06,590
+rest
+
+388
+00:22:06,590 --> 00:22:10,150
+a module is not executed when in fact it
+is
+
+389
+00:22:10,150 --> 00:22:13,590
+see you the only step it differs in a
+from importance that binding
+
+390
+00:22:13,590 --> 00:22:17,070
+at no I'm sure there are
+
+391
+00:22:17,070 --> 00:22:21,680
+I think it's useful to have an interface
+to that relay module that's not
+
+392
+00:22:21,680 --> 00:22:25,250
+him mucking around using exact I think
+the implementation
+
+393
+00:22:25,250 --> 00:22:32,250
+pics specifically with from is somewhat
+confusing to beginners
+
+394
+00:22:37,360 --> 00:22:38,610
+all right now said thank you so much
+

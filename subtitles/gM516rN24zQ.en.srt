@@ -1,0 +1,1845 @@
+1
+00:00:00,900 --> 00:00:03,470
+good afternoon hike on and is a couple
+
+2
+00:00:03,470 --> 00:00:06,730
+announcement before we get started here
+am just like to remind
+
+3
+00:00:06,730 --> 00:00:10,160
+auction winners to pick up their
+winnings ago right down to the
+
+4
+00:00:10,160 --> 00:00:11,519
+registration desk now
+
+5
+00:00:11,519 --> 00:00:15,330
+if you won an auction last night and I
+would like to mention the sprints
+
+6
+00:00:15,330 --> 00:00:19,070
+will be holding developments prints am
+from tomorrow onwards anybody wants to
+
+7
+00:00:19,070 --> 00:00:20,080
+contribute to the
+
+8
+00:00:20,080 --> 00:00:23,930
+live in the north as acceptor I am
+please stick around for messages
+
+9
+00:00:23,930 --> 00:00:27,359
+after their lightning towards an
+introduction to the springs and if you'd
+
+10
+00:00:27,359 --> 00:00:28,630
+like to lead a sprint
+
+11
+00:00:28,630 --> 00:00:31,710
+these prepare a short twenty seconds
+only
+
+12
+00:00:31,710 --> 00:00:35,380
+description your Sprint I am and be
+prepared to give that after the
+
+13
+00:00:35,380 --> 00:00:36,210
+lightning talks
+
+14
+00:00:36,210 --> 00:00:40,010
+okay and I would like to present hi new
+crossing
+
+15
+00:00:40,010 --> 00:00:43,969
+and he's gonna tell us the PostgreSQL a
+really is web-scale
+
+16
+00:00:43,969 --> 00:00:50,969
+smiley face
+
+17
+00:00:53,770 --> 00:00:54,120
+so
+
+18
+00:00:54,120 --> 00:00:59,440
+hello nice to be here last talks I think
+
+19
+00:00:59,440 --> 00:01:03,180
+in this conference time
+
+20
+00:01:03,180 --> 00:01:06,930
+going to talk about skating post sir
+
+21
+00:01:06,930 --> 00:01:11,550
+hearst how we what the peace how was
+stated that Skype
+
+22
+00:01:11,550 --> 00:01:15,490
+what your ways to scale it cannot be
+unseen
+
+23
+00:01:15,490 --> 00:01:18,620
+and also I have
+
+24
+00:01:18,620 --> 00:01:21,930
+tight pussy some more stuff about using
+
+25
+00:01:21,930 --> 00:01:25,600
+from Pike so why me to go already cost
+
+26
+00:01:25,600 --> 00:01:28,720
+in some places fortunately creko
+
+27
+00:01:28,720 --> 00:01:32,229
+already year spoke about some things
+
+28
+00:01:32,229 --> 00:01:36,060
+I had prepared so I can skip over these
+really cost
+
+29
+00:01:36,060 --> 00:01:41,619
+and so let's get started so
+
+30
+00:01:41,619 --> 00:01:48,619
+her undercutting ok
+
+31
+00:01:51,469 --> 00:01:53,820
+your con the word I
+
+32
+00:01:53,820 --> 00:01:57,960
+by feels her since about version 1 maybe
+
+33
+00:01:57,960 --> 00:02:01,020
+edited before post she also sings
+
+34
+00:02:01,020 --> 00:02:04,280
+course before it to us SQL
+
+35
+00:02:04,280 --> 00:02:08,080
+it someplace very ok suppose cuz
+
+36
+00:02:08,080 --> 00:02:13,299
+she was telling was called post players
+sorry essentially a new SQL database
+
+37
+00:02:13,299 --> 00:02:17,700
+here though it was already a friend
+relational database
+
+38
+00:02:17,700 --> 00:02:20,970
+your swat at Pacha
+
+39
+00:02:20,970 --> 00:02:23,989
+contributor do both high command post
+Chris
+
+40
+00:02:23,989 --> 00:02:27,690
+both her small amounts of Michael been
+
+41
+00:02:27,690 --> 00:02:31,239
+I Ross first PBA and they have is
+architected Skype
+
+42
+00:02:31,239 --> 00:02:35,079
+it's the newspaper had
+
+43
+00:02:35,079 --> 00:02:39,420
+fortnight most risk consultant second
+part on
+
+44
+00:02:39,420 --> 00:02:44,430
+secular say say company that the bros
+
+45
+00:02:44,430 --> 00:02:48,170
+most largest number of top space cadet
+up
+
+46
+00:02:48,170 --> 00:02:51,430
+got social support 2013 some
+
+47
+00:02:51,430 --> 00:02:55,750
+high-level help them come to us and they
+are so
+
+48
+00:02:55,750 --> 00:02:58,810
+think the code
+
+49
+00:02:58,810 --> 00:03:02,140
+investment company of this tone and
+holding yes Skype so
+
+50
+00:03:02,140 --> 00:03:05,489
+they have some very interesting stuff
+night help them
+
+51
+00:03:05,489 --> 00:03:08,900
+evaluated I have also
+
+52
+00:03:08,900 --> 00:03:12,510
+to books under PostgreSQL it'd
+
+53
+00:03:12,510 --> 00:03:16,139
+who okay I see that they're
+
+54
+00:03:16,139 --> 00:03:19,310
+under echoes sure what to do about it
+
+55
+00:03:19,310 --> 00:03:23,739
+one of them is have a close guess good
+administration
+
+56
+00:03:23,739 --> 00:03:27,489
+Ohio together simon rex police their
+
+57
+00:03:27,489 --> 00:03:31,970
+hit KO for second car truck or so away
+with this
+
+58
+00:03:31,970 --> 00:03:35,280
+both discussed several programming a
+book which
+
+59
+00:03:35,280 --> 00:03:38,470
+physically tells you how to write stuff
+insight
+
+60
+00:03:38,470 --> 00:03:44,099
+both Tesco server that turns your see
+B&B just let it be a python
+
+61
+00:03:44,099 --> 00:03:47,280
+see the art auction skating and so on
+
+62
+00:03:47,280 --> 00:03:50,419
+so what this python
+
+63
+00:03:50,419 --> 00:03:54,689
+okay actually know what that by Tony so
+I'll going to bed
+
+64
+00:03:54,689 --> 00:03:59,200
+but its really I sent universal language
+is
+
+65
+00:03:59,200 --> 00:04:03,269
+for almost ever Fink what is no escape
+
+66
+00:04:03,269 --> 00:04:09,500
+know it's girl is usually yes mostly
+it's a storage
+
+67
+00:04:09,500 --> 00:04:15,530
+some thanks it has some language in it
+it can be a secret keeper Justo riches
+
+68
+00:04:15,530 --> 00:04:21,299
+the structure values Press databases
+distributed
+
+69
+00:04:21,299 --> 00:04:24,530
+she's some do you use
+
+70
+00:04:24,530 --> 00:04:27,979
+it's good so already somewhat
+
+71
+00:04:27,979 --> 00:04:31,050
+for what I am discredit late skating
+
+72
+00:04:31,050 --> 00:04:34,050
+can also lets the West Center not
+
+73
+00:04:34,050 --> 00:04:38,330
+the only esker so
+
+74
+00:04:38,330 --> 00:04:42,199
+why people used the West its pissed it's
+simple to
+
+75
+00:04:42,199 --> 00:04:46,139
+implement its quite often the
+
+76
+00:04:46,139 --> 00:04:50,030
+really a great variation other team that
+lets use fights for Speed
+
+77
+00:04:50,030 --> 00:04:53,949
+which works small-scale and doesn't work
+very well
+
+78
+00:04:53,949 --> 00:04:57,699
+large-scale now they somehow less girls
+adroit
+
+79
+00:04:57,699 --> 00:05:00,830
+to play large
+
+80
+00:05:00,830 --> 00:05:04,669
+your city's it such a cheap to get
+started
+
+81
+00:05:04,669 --> 00:05:09,010
+see for the initial development and 80s
+
+82
+00:05:09,010 --> 00:05:15,750
+skoo storage layer what a pink shirt
+
+83
+00:05:15,750 --> 00:05:19,520
+no SQL usually sacrifices compared to
+we'll see Korea
+
+84
+00:05:19,520 --> 00:05:23,010
+database test the that
+
+85
+00:05:23,010 --> 00:05:27,389
+for be things that databases offer
+
+86
+00:05:27,389 --> 00:05:31,139
+relational databases are Tommy at the
+message the consistency
+
+87
+00:05:31,139 --> 00:05:34,620
+isolation and durability at the mission
+it means
+
+88
+00:05:34,620 --> 00:05:37,750
+that everything guy that happens
+
+89
+00:05:37,750 --> 00:05:42,050
+at once so does it happen doors most of
+
+90
+00:05:42,050 --> 00:05:46,719
+the West but they did have some form of
+it quite often now
+
+91
+00:05:46,719 --> 00:05:50,349
+most often it's done just by looking
+ever in the collection
+
+92
+00:05:50,349 --> 00:05:53,650
+and solar you can
+
+93
+00:05:53,650 --> 00:05:57,990
+happy daughter cell and enter you should
+at least have a single
+
+94
+00:05:57,990 --> 00:06:02,099
+statement told back some so texan's
+
+95
+00:06:02,099 --> 00:06:07,349
+but again have multiple come ons
+multiple updates on
+
+96
+00:06:07,349 --> 00:06:11,529
+back together if you didn't like them
+consistency is something that
+
+97
+00:06:11,529 --> 00:06:14,710
+most know it's good that the device is
+by definition don't have
+
+98
+00:06:14,710 --> 00:06:20,990
+they are she must resolve that was
+nothing to be consistent with isolation
+
+99
+00:06:20,990 --> 00:06:24,860
+again which means that on bus I the sea
+
+100
+00:06:24,860 --> 00:06:28,449
+ever seem to be intersection or see
+nothing
+
+101
+00:06:28,449 --> 00:06:32,139
+again quite closely
+
+102
+00:06:32,139 --> 00:06:37,010
+paid at the Mississippi and meeting that
+course
+
+103
+00:06:37,010 --> 00:06:40,060
+your door he was blocking and
+
+104
+00:06:40,060 --> 00:06:44,020
+usually having by X doing evasion
+
+105
+00:06:44,020 --> 00:06:47,240
+everyplace database for the duration for
+time
+
+106
+00:06:47,240 --> 00:06:50,539
+and the durability the many
+
+107
+00:06:50,539 --> 00:06:55,580
+year he newest the database is actually
+replaced by your application
+
+108
+00:06:55,580 --> 00:06:59,229
+make tend to have some kind of local job
+elite day
+
+109
+00:06:59,229 --> 00:07:02,479
+but day usually BC limited
+
+110
+00:07:02,479 --> 00:07:05,500
+quite slow passionate I this week but
+
+111
+00:07:05,500 --> 00:07:09,610
+in my date every few seconds already
+
+112
+00:07:09,610 --> 00:07:13,029
+for some type of like the head low
+
+113
+00:07:13,029 --> 00:07:20,029
+usual again not not to any cost what
+this post
+
+114
+00:07:20,620 --> 00:07:24,229
+this the database I most to work where
+
+115
+00:07:24,229 --> 00:07:28,169
+then haven't allowed buscas curly hair
+
+116
+00:07:28,169 --> 00:07:32,650
+to relational database management system
+that the changes
+
+117
+00:07:32,650 --> 00:07:36,259
+it has been in development almost thirty
+years
+
+118
+00:07:36,259 --> 00:07:39,720
+last twenty years
+
+119
+00:07:39,720 --> 00:07:43,080
+search an open source project very
+active community
+
+120
+00:07:43,080 --> 00:07:46,449
+its from the
+
+121
+00:07:46,449 --> 00:07:50,229
+the beginning it has had a highly
+concurrent design
+
+122
+00:07:50,229 --> 00:07:53,639
+and it asks for donations
+
+123
+00:07:53,639 --> 00:07:59,169
+and it has also and she's done to this
+girl language implementation
+
+124
+00:07:59,169 --> 00:08:05,370
+it's not ever cheat cell and if we want
+to get
+
+125
+00:08:05,370 --> 00:08:08,389
+already to some
+
+126
+00:08:08,389 --> 00:08:12,830
+sacrifices for PostgreSQL Ben
+
+127
+00:08:12,830 --> 00:08:16,620
+there are things that they can switch
+off all it without
+
+128
+00:08:16,620 --> 00:08:19,669
+at the mission the always fun
+
+129
+00:08:19,669 --> 00:08:23,479
+you'll on comet
+
+130
+00:08:23,479 --> 00:08:27,490
+Hall of the work or it never happened
+said
+
+131
+00:08:27,490 --> 00:08:31,009
+for example of the crash some of your
+work the city sums not
+
+132
+00:08:31,009 --> 00:08:34,520
+you can do well consistency
+
+133
+00:08:34,520 --> 00:08:37,659
+you can eat out point should be
+
+134
+00:08:37,659 --> 00:08:40,669
+XQ in Orlando the checks
+
+135
+00:08:40,669 --> 00:08:45,160
+Hill don't want any they protect
+
+136
+00:08:45,160 --> 00:08:49,689
+on the models and you can use chase next
+reached or
+
+137
+00:08:49,689 --> 00:08:56,339
+so you have toward freedom to store what
+they like to know that the bases
+
+138
+00:08:56,339 --> 00:08:59,980
+isolation is always on again other
+paralyzed
+
+139
+00:08:59,980 --> 00:09:03,280
+sconce he your Hoffman work today either
+
+140
+00:09:03,280 --> 00:09:07,180
+by the sea or or nothing but depends
+which of
+
+141
+00:09:07,180 --> 00:09:11,439
+for durability in many levels
+
+142
+00:09:11,439 --> 00:09:16,310
+Japan your subsequent scummy which means
+that you have a few milliseconds self
+
+143
+00:09:16,310 --> 00:09:20,319
+Taylor window express happens right
+after you did call me
+
+144
+00:09:20,319 --> 00:09:23,870
+you may lose some data or
+
+145
+00:09:23,870 --> 00:09:27,370
+for much more speed
+
+146
+00:09:27,370 --> 00:09:30,720
+and their but do with the
+
+147
+00:09:30,720 --> 00:09:33,939
+at you're gonna lose or the date though
+
+148
+00:09:33,939 --> 00:09:37,260
+you can use on low papers which means
+that the day
+
+149
+00:09:37,260 --> 00:09:40,839
+papers are written only once there are
+no guarantees that day
+
+150
+00:09:40,839 --> 00:09:44,430
+will be there after cash but under
+normal operations
+
+151
+00:09:44,430 --> 00:09:48,939
+the the although I was just trying and
+also follow orders
+
+152
+00:09:48,939 --> 00:09:52,930
+no mentors
+
+153
+00:09:52,930 --> 00:09:57,910
+so Bush cassius much more than a story
+slayer
+
+154
+00:09:57,910 --> 00:10:01,880
+but it has very good stories layer been
+
+155
+00:10:01,880 --> 00:10:05,520
+and a penalty as a separate storage if
+you so wish
+
+156
+00:10:05,520 --> 00:10:09,779
+if you want to like Joe applications in
+
+157
+00:10:09,779 --> 00:10:13,370
+that to become the West Coast night
+
+158
+00:10:13,370 --> 00:10:16,730
+and which will usually be said to have
+to create
+
+159
+00:10:16,730 --> 00:10:21,839
+the complex parts like locking for and
+comprise a controller
+
+160
+00:10:21,839 --> 00:10:25,290
+and and joins there and
+
+161
+00:10:25,290 --> 00:10:29,529
+more lot of complex stuff no application
+
+162
+00:10:29,529 --> 00:10:34,770
+it easyer there it would be her big hard
+cock
+
+163
+00:10:34,770 --> 00:10:38,689
+but there sometimes it's support for
+scalability
+
+164
+00:10:38,689 --> 00:10:42,260
+issue and their publisher or moving
+
+165
+00:10:42,260 --> 00:10:45,850
+from an existing no SQL
+
+166
+00:10:45,850 --> 00:10:50,100
+database to post this then you can start
+exactly as to where I'm
+
+167
+00:10:50,100 --> 00:10:56,559
+mortal mall perform on mall consistent
+way slater
+
+168
+00:10:56,559 --> 00:11:00,949
+I did some tests compare memcached
+radius
+
+169
+00:11:00,949 --> 00:11:04,130
+PostgreSQL but the the
+
+170
+00:11:04,130 --> 00:11:07,910
+top lines care all
+
+171
+00:11:07,910 --> 00:11:13,809
+men has set records they are this
+command Kasey Kahne consistent
+
+172
+00:11:13,809 --> 00:11:19,050
+ABC's not non-durable Medicis kind of
+two-electron
+
+173
+00:11:19,050 --> 00:11:22,400
+their its doors at state tower
+
+174
+00:11:22,400 --> 00:11:26,500
+every few second several tens of seconds
+
+175
+00:11:26,500 --> 00:11:30,140
+and it gets forms like this this post
+discuss
+
+176
+00:11:30,140 --> 00:11:33,300
+repair for months basis PostgreSQL
+
+177
+00:11:33,300 --> 00:11:37,730
+mister quite stable write performance
+
+178
+00:11:37,730 --> 00:11:41,990
+not favor doable eighth under our sink
+order
+
+179
+00:11:41,990 --> 00:11:45,100
+which means that tomatoes a few
+milliseconds
+
+180
+00:11:45,100 --> 00:11:48,910
+if I would have been almost there non
+log table the same
+
+181
+00:11:48,910 --> 00:11:53,120
+I guess their performance would be I
+don't care
+
+182
+00:11:53,120 --> 00:11:56,720
+and these two planes are among the DB
+again this maybe
+
+183
+00:11:56,720 --> 00:11:59,810
+very with additional nobody be because
+it's a single
+
+184
+00:11:59,810 --> 00:12:02,910
+E database Mongo DB
+
+185
+00:12:02,910 --> 00:12:06,170
+what the Easter present at the their
+lowest line
+
+186
+00:12:06,170 --> 00:12:09,250
+would cease their durable storage Mongo
+DB
+
+187
+00:12:09,250 --> 00:12:14,040
+which is summer around here unit 64
+
+188
+00:12:14,040 --> 00:12:18,820
+I'll clients sit still only a few
+thousands
+
+189
+00:12:18,820 --> 00:12:23,230
+Russ her both processes for the house ok
+
+190
+00:12:23,230 --> 00:12:27,649
+inserts were all the sex and gets a
+second tape she says
+
+191
+00:12:27,649 --> 00:12:30,899
+good primary key year
+
+192
+00:12:30,899 --> 00:12:34,440
+we won running backs NB and Jason
+
+193
+00:12:34,440 --> 00:12:38,019
+Baker so
+
+194
+00:12:38,019 --> 00:12:42,060
+familiar Craig already went over these
+
+195
+00:12:42,060 --> 00:12:45,269
+her all kinds of
+
+196
+00:12:45,269 --> 00:12:48,639
+called and technical features a post gus
+has a piece rarely
+
+197
+00:12:48,639 --> 00:12:51,990
+it doesn't act former not till my tester
+
+198
+00:12:51,990 --> 00:12:55,560
+just a database a kind we define
+everything
+
+199
+00:12:55,560 --> 00:12:59,170
+you can
+
+200
+00:12:59,170 --> 00:13:04,220
+entrance how it works everywhere
+
+201
+00:13:04,220 --> 00:13:08,459
+and when your sink papi pipe n you can
+ne'er
+
+202
+00:13:08,459 --> 00:13:12,000
+or so do weight BC
+
+203
+00:13:12,000 --> 00:13:15,180
+or like things for example
+
+204
+00:13:15,180 --> 00:13:18,500
+it's not very hard do like the smaller
+
+205
+00:13:18,500 --> 00:13:22,250
+paying let's chill replace your
+
+206
+00:13:22,250 --> 00:13:25,130
+select a year
+
+207
+00:13:25,130 --> 00:13:28,330
+some meta programming and Bender
+
+208
+00:13:28,330 --> 00:13:32,010
+can make papers look like they wear
+
+209
+00:13:32,010 --> 00:13:35,210
+are 80 or collections of for
+
+210
+00:13:35,210 --> 00:13:40,020
+classes policy collections of rose a
+
+211
+00:13:40,020 --> 00:13:43,790
+very small but now let's get the scaling
+which we
+
+212
+00:13:43,790 --> 00:13:47,470
+will tear have door have time to talk
+about
+
+213
+00:13:47,470 --> 00:13:50,840
+anyway at the old so what they're for
+
+214
+00:13:50,840 --> 00:13:54,070
+once expected to grew
+
+215
+00:13:54,070 --> 00:13:57,950
+hun it happened about the same time s
+
+216
+00:13:57,950 --> 00:14:01,690
+Amazon and Google develop their large
+database solutions
+
+217
+00:14:01,690 --> 00:14:05,200
+except that we did on-base done post
+Chris
+
+218
+00:14:05,200 --> 00:14:10,140
+tested or somebody cascading speak
+binary
+
+219
+00:14:10,140 --> 00:14:13,370
+functionality at some point this doesn't
+
+220
+00:14:13,370 --> 00:14:17,480
+work any more than just our shot the
+papers especially
+
+221
+00:14:17,480 --> 00:14:22,290
+if you have like most adults like we had
+Skype
+
+222
+00:14:22,290 --> 00:14:26,690
+are but the beasts things that way more
+than ninety percent right
+
+223
+00:14:26,690 --> 00:14:30,290
+because they are seldom read only when
+you go to any water
+
+224
+00:14:30,290 --> 00:14:33,800
+your computer other way all
+
+225
+00:14:33,800 --> 00:14:40,050
+all our time they're just 3.2 and wants
+you will have gone to shot think you can
+
+226
+00:14:40,050 --> 00:14:40,320
+on
+
+227
+00:14:40,320 --> 00:14:45,760
+do lots of your original casey ten
+people aboard water-related 8.2
+
+228
+00:14:45,760 --> 00:14:49,740
+tapes Hartzell you still have
+consistency inside the charger can write
+
+229
+00:14:49,740 --> 00:14:50,770
+simple SQL
+
+230
+00:14:50,770 --> 00:14:54,510
+simple programs in other languages still
+
+231
+00:14:54,510 --> 00:14:58,130
+work close to the Baker
+
+232
+00:14:58,130 --> 00:15:01,860
+and we wear able to no basically
+
+233
+00:15:01,860 --> 00:15:05,130
+your maintaining from clients
+
+234
+00:15:05,130 --> 00:15:08,690
+site the US Equal had a single big
+database
+
+235
+00:15:08,690 --> 00:15:12,580
+butter and their we had their
+
+236
+00:15:12,580 --> 00:15:16,810
+one of their way through the dross coded
+all access to their
+
+237
+00:15:16,810 --> 00:15:19,850
+tables or to the databases as functions
+
+238
+00:15:19,850 --> 00:15:23,320
+which means that the clients that I saw
+or so any papers
+
+239
+00:15:23,320 --> 00:15:27,660
+visual contact the supplier usually
+ordered you Miller paper Texas store to
+
+240
+00:15:27,660 --> 00:15:28,500
+see our
+
+241
+00:15:28,500 --> 00:15:31,950
+functions in which
+
+242
+00:15:31,950 --> 00:15:35,340
+here and do
+
+243
+00:15:35,340 --> 00:15:39,040
+would basically just their which we need
+to call another database
+
+244
+00:15:39,040 --> 00:15:42,450
+spend a year yours Pitre like W
+
+245
+00:15:42,450 --> 00:15:46,530
+the used take a PT connected to other
+database query their
+
+246
+00:15:46,530 --> 00:15:49,760
+it on nurse red
+
+247
+00:15:49,760 --> 00:15:54,280
+to treat me seconds so daughter
+
+248
+00:15:54,280 --> 00:15:58,820
+performance problem and their
+
+249
+00:15:58,820 --> 00:16:03,170
+ok and then ok
+
+250
+00:16:03,170 --> 00:16:07,260
+that the first one was for vertical
+scaling limit for example just big door
+
+251
+00:16:07,260 --> 00:16:08,380
+look at some place a call
+
+252
+00:16:08,380 --> 00:16:11,770
+from another database at
+
+253
+00:16:11,770 --> 00:16:15,210
+horizontal scaling States took whether
+Polanski
+
+254
+00:16:15,210 --> 00:16:18,750
+tapered paper missing that they can
+raise anymore
+
+255
+00:16:18,750 --> 00:16:21,900
+there we started selecting
+
+256
+00:16:21,900 --> 00:16:25,190
+fractured database connection inside the
+function
+
+257
+00:16:25,190 --> 00:16:29,370
+and where there and for Easter
+
+258
+00:16:29,370 --> 00:16:32,390
+after under often enough we
+
+259
+00:16:32,390 --> 00:16:36,310
+maybe the special language which
+
+260
+00:16:36,310 --> 00:16:39,390
+basically the source code about
+
+261
+00:16:39,390 --> 00:16:43,290
+where to run the function and
+
+262
+00:16:43,290 --> 00:16:47,300
+we had two iterations of it first of its
+kind of
+
+263
+00:16:47,300 --> 00:16:50,360
+one big block of code then
+
+264
+00:16:50,360 --> 00:16:53,760
+mockery voted speak out
+
+265
+00:16:53,760 --> 00:16:56,850
+be a proxy connection for our and and
+
+266
+00:16:56,850 --> 00:17:00,430
+PO Box Hill and was proper cook
+
+267
+00:17:00,430 --> 00:17:03,560
+and after that almost everything
+
+268
+00:17:03,560 --> 00:17:07,180
+get Skype us week in shot at Manor
+
+269
+00:17:07,180 --> 00:17:10,510
+you have checked it's a function written
+in
+
+270
+00:17:10,510 --> 00:17:14,620
+I that the ambitious girl Plesk
+
+271
+00:17:14,620 --> 00:17:18,950
+sometimes be a fighter on the shots and
+then how the talks
+
+272
+00:17:18,950 --> 00:17:23,990
+functions on many proxy machines which
+can be the same machines this
+
+273
+00:17:23,990 --> 00:17:27,170
+service as the database to a concert by
+
+274
+00:17:27,170 --> 00:17:30,170
+can be separate machines and then
+
+275
+00:17:30,170 --> 00:17:34,540
+you connect to any point and they'll get
+the data from was actually stored
+
+276
+00:17:34,540 --> 00:17:39,870
+with ca
+
+277
+00:17:39,870 --> 00:17:44,180
+basically like export function at the
+preschool
+
+278
+00:17:44,180 --> 00:17:47,530
+their
+
+279
+00:17:47,530 --> 00:17:50,590
+hearses with a security source a good
+for me
+
+280
+00:17:50,590 --> 00:17:54,670
+dance bet really tree the separation of
+interfaces
+
+281
+00:17:54,670 --> 00:17:58,170
+you need to pick something you don't
+need to shut down plants it just
+
+282
+00:17:58,170 --> 00:17:58,740
+redefine
+
+283
+00:17:58,740 --> 00:18:02,660
+function glance continuous before we
+
+284
+00:18:02,660 --> 00:18:05,700
+you don't need to settle down type
+upgrades
+
+285
+00:18:05,700 --> 00:18:12,700
+on the way to Bayside of course need to
+test and also a shiney
+
+286
+00:18:13,570 --> 00:18:16,810
+to some kind of peace to meditation at
+the dole database
+
+287
+00:18:16,810 --> 00:18:20,700
+vanity easy to add two functions and
+
+288
+00:18:20,700 --> 00:18:24,100
+decir the lesser found out the man
+
+289
+00:18:24,100 --> 00:18:27,190
+it was all too easy to skate because to
+easily by
+
+290
+00:18:27,190 --> 00:18:31,260
+developing a language be a proxy and
+then
+
+291
+00:18:31,260 --> 00:18:34,570
+stop Inc using it forever
+
+292
+00:18:34,570 --> 00:18:39,710
+ok ok
+
+293
+00:18:39,710 --> 00:18:43,520
+and we've heard from problem with your
+
+294
+00:18:43,520 --> 00:18:47,260
+punches being too limited we initially
+let our web developers and
+
+295
+00:18:47,260 --> 00:18:50,600
+or to apply their own functions and only
+went
+
+296
+00:18:50,600 --> 00:18:53,700
+product was deployed then it went to be
+BK stuff
+
+297
+00:18:53,700 --> 00:19:00,700
+forward pics stuff to make more
+performant need
+
+298
+00:19:08,539 --> 00:19:13,240
+ok and the court thing care about the be
+a toxic skies harding key step in the
+
+299
+00:19:13,240 --> 00:19:14,309
+end we still can
+
+300
+00:19:14,309 --> 00:19:18,289
+like for go with that
+
+301
+00:19:18,289 --> 00:19:22,309
+only once in one accessing the database
+
+302
+00:19:22,309 --> 00:19:26,909
+can those tough told many many related
+papers
+
+303
+00:19:26,909 --> 00:19:30,900
+it or consistent its Texas controlled
+
+304
+00:19:30,900 --> 00:19:34,000
+the tests for your AC guarantees there
+
+305
+00:19:34,000 --> 00:19:37,880
+and the show
+
+306
+00:19:37,880 --> 00:19:42,539
+to running from place and then you can
+might be silly decorate their cell that
+
+307
+00:19:42,539 --> 00:19:43,590
+the basic
+
+308
+00:19:43,590 --> 00:19:47,190
+you know go and just poor
+
+309
+00:19:47,190 --> 00:19:50,380
+the database functions as if notable
+attractions
+
+310
+00:19:50,380 --> 00:19:54,750
+sees or so I have done it a few times
+
+311
+00:19:54,750 --> 00:19:58,679
+it's not hard its just look up our the
+code is work
+
+312
+00:19:58,679 --> 00:20:04,179
+it's done here is a sample how
+
+313
+00:20:04,179 --> 00:20:08,630
+be a proxy works it can
+
+314
+00:20:08,630 --> 00:20:13,029
+just proxy course and be for an extinct
+another database
+
+315
+00:20:13,029 --> 00:20:18,080
+did also can select the database
+
+316
+00:20:18,080 --> 00:20:22,220
+based on charting say has text of your
+surname
+
+317
+00:20:22,220 --> 00:20:25,830
+or select job and get closest database
+
+318
+00:20:25,830 --> 00:20:30,049
+already basically can be anything you
+can also have function that
+
+319
+00:20:30,049 --> 00:20:34,840
+identical Nexus think based on on the
+
+320
+00:20:34,840 --> 00:20:38,770
+they have time and for example if you
+want to take some
+
+321
+00:20:38,770 --> 00:20:42,130
+mustered a touchdown for night good
+
+322
+00:20:42,130 --> 00:20:45,340
+Alexis still read on a database is that
+sometimes
+
+323
+00:20:45,340 --> 00:20:48,630
+it's easy to set up
+
+324
+00:20:48,630 --> 00:20:51,929
+fuel tree functions partitioning
+function
+
+325
+00:20:51,929 --> 00:20:56,700
+which basically returns the power of two
+
+326
+00:20:56,700 --> 00:21:00,440
+next remix cluster vision functions
+
+327
+00:21:00,440 --> 00:21:04,220
+which is the one that's always consulted
+and exchanges
+
+328
+00:21:04,220 --> 00:21:08,240
+then the partition function board again
+and cashed
+
+329
+00:21:08,240 --> 00:21:11,330
+and there is also possibly to the parlor
+
+330
+00:21:11,330 --> 00:21:15,660
+have across the Conficker rate from
+function their
+
+331
+00:21:15,660 --> 00:21:20,570
+first addition function troll two
+partitions
+
+332
+00:21:20,570 --> 00:21:23,760
+can be your and usually more than 20
+
+333
+00:21:23,760 --> 00:21:29,450
+various class division function
+
+334
+00:21:29,450 --> 00:21:32,960
+basically of they have changed by
+stationing just
+
+335
+00:21:32,960 --> 00:21:37,090
+redefine this function to attend another
+number it must be kept on
+
+336
+00:21:37,090 --> 00:21:42,520
+last month so that configuration would
+be reloaded and if you want to set some
+
+337
+00:21:42,520 --> 00:21:43,250
+options
+
+338
+00:21:43,250 --> 00:21:48,340
+news said options an owl
+
+339
+00:21:48,340 --> 00:21:52,620
+because this this function know the
+cluster name your toes
+
+340
+00:21:52,620 --> 00:21:56,130
+then you can easily Chester seder
+
+341
+00:21:56,130 --> 00:21:59,250
+yours cluster your service on has tix
+
+342
+00:21:59,250 --> 00:22:02,740
+no surname and when your money
+
+343
+00:22:02,740 --> 00:22:05,900
+to the end function get scored in the
+light shot
+
+344
+00:22:05,900 --> 00:22:09,660
+does whatever the fight to and then it
+comes back
+
+345
+00:22:09,660 --> 00:22:13,640
+and their mother fast to networks
+
+346
+00:22:13,640 --> 00:22:17,600
+basic stuff hope at Sir
+
+347
+00:22:17,600 --> 00:22:21,000
+usually less than a second to the hell
+country of
+
+348
+00:22:21,000 --> 00:22:25,230
+of the choir so
+
+349
+00:22:25,230 --> 00:22:29,470
+before us how you already have a skate
+database whole we
+
+350
+00:22:29,470 --> 00:22:32,480
+scaling heater day or would be fine
+
+351
+00:22:32,480 --> 00:22:35,990
+more then more shots in the beginning
+
+352
+00:22:35,990 --> 00:22:40,100
+thank you have actually met critical she
+took his
+
+353
+00:22:40,100 --> 00:22:43,530
+databases first developed break lotion
+up
+
+354
+00:22:43,530 --> 00:22:46,670
+each then we need to move
+
+355
+00:22:46,670 --> 00:22:51,040
+you'll move only sure shot
+
+356
+00:22:51,040 --> 00:22:56,210
+and separate from to for politicians in
+a few steps
+
+357
+00:22:56,210 --> 00:23:01,000
+this is how you end up and basically
+
+358
+00:23:01,000 --> 00:23:04,690
+babys actually moving just under budget
+replication
+
+359
+00:23:04,690 --> 00:23:09,330
+the to really develop these say in the
+back to Skype Dorsett scored
+
+360
+00:23:09,330 --> 00:23:12,730
+lungfish which is name of
+
+361
+00:23:12,730 --> 00:23:16,210
+to your left hand from in Estonian to
+this book
+
+362
+00:23:16,210 --> 00:23:19,880
+because everything both Chris has his
+
+363
+00:23:19,880 --> 00:23:24,520
+somehow related to defense and
+
+364
+00:23:24,520 --> 00:23:28,750
+basically said that occasion and then
+wat how it takes
+
+365
+00:23:28,750 --> 00:23:32,090
+how long it takes and then you have some
+pic
+
+366
+00:23:32,090 --> 00:23:37,250
+so but Bishop don't have function
+interface then there is a nice
+
+367
+00:23:37,250 --> 00:23:40,760
+think info stress for point data purpose
+
+368
+00:23:40,760 --> 00:23:43,930
+basically you can invite function
+
+369
+00:23:43,930 --> 00:23:47,580
+additionally see what's presents
+
+370
+00:23:47,580 --> 00:23:50,800
+tapering shapes to post Chris and
+
+371
+00:23:50,800 --> 00:23:54,790
+the some nice people have written to
+record multi-colour
+
+372
+00:23:54,790 --> 00:23:58,230
+which led to the sea pipe so we'll
+
+373
+00:23:58,230 --> 00:24:01,530
+like the pika class and expose s
+
+374
+00:24:01,530 --> 00:24:05,820
+papered posts it comes 15
+
+375
+00:24:05,820 --> 00:24:12,820
+no Escala comey TS yet I tasted funny
+they develop a sexist I'm at to assess
+
+376
+00:24:12,950 --> 00:24:16,380
+help the samples that expose
+
+377
+00:24:16,380 --> 00:24:19,830
+cooperman mailbox as
+
+378
+00:24:19,830 --> 00:24:22,960
+tapered so you can query them
+
+379
+00:24:22,960 --> 00:24:26,020
+from database for shopping
+
+380
+00:24:26,020 --> 00:24:29,340
+Europe for anything to basically the
+right
+
+381
+00:24:29,340 --> 00:24:33,710
+close in Payson there
+
+382
+00:24:33,710 --> 00:24:37,790
+and then expose their make the store
+that database
+
+383
+00:24:37,790 --> 00:24:41,000
+that Bush Chris pastor Craig extension
+multi-core
+
+384
+00:24:41,000 --> 00:24:44,020
+page you don't need to talk it because
+it didn't exist
+
+385
+00:24:44,020 --> 00:24:47,790
+from Mexico they don't create the point
+they cover
+
+386
+00:24:47,790 --> 00:24:51,140
+her and then you'll create the point
+table using
+
+387
+00:24:51,140 --> 00:24:54,390
+its wrapper and then you can just query
+from me
+
+388
+00:24:54,390 --> 00:24:59,030
+that's my sister like this class has a
+few functions
+
+389
+00:24:59,030 --> 00:25:04,180
+issue 3 only then you need only accepted
+method which esquire is headquartered
+
+390
+00:25:04,180 --> 00:25:07,530
+columns column to column name squalid
+cell actually
+
+391
+00:25:07,530 --> 00:25:11,600
+day XXXL ColumnName operator and value
+
+392
+00:25:11,600 --> 00:25:15,700
+you can use the story me told Mike they
+title
+
+393
+00:25:15,700 --> 00:25:18,720
+week that how much they don't get from
+external stuff
+
+394
+00:25:18,720 --> 00:25:22,850
+external database in this case I am
+doing again
+
+395
+00:25:22,850 --> 00:25:27,130
+think very similar to be a proxy
+physical a select their
+
+396
+00:25:27,130 --> 00:25:30,620
+based on for on the radio coral
+
+397
+00:25:30,620 --> 00:25:34,550
+and then directed only rose that been
+
+398
+00:25:34,550 --> 00:25:38,570
+and then from his petition I dent does
+that they needed their
+
+399
+00:25:38,570 --> 00:25:43,370
+say fights hit update DB you have or so
+to section controlled
+
+400
+00:25:43,370 --> 00:25:46,780
+at the end of detection kantle commit or
+rollback
+
+401
+00:25:46,780 --> 00:25:50,190
+recommit if you want to do two-phase
+commit so
+
+402
+00:25:50,190 --> 00:25:54,540
+the Pacey basic blocks out there
+
+403
+00:25:54,540 --> 00:25:58,180
+and the nice thing going they seized
+
+404
+00:25:58,180 --> 00:26:01,890
+kind basic different from BL Python
+
+405
+00:26:01,890 --> 00:26:07,400
+be sexually Kendall Street at the
+financially stable and then select ok.
+
+406
+00:26:07,400 --> 00:26:11,380
+hearst and those from me and it doesn't
+blow up database
+
+407
+00:26:11,380 --> 00:26:15,880
+stars the L fighter
+
+408
+00:26:15,880 --> 00:26:19,400
+said action okay or
+
+409
+00:26:19,400 --> 00:26:26,400
+most type
+
+410
+00:26:31,120 --> 00:26:38,120
+okay we do have three or four minutes
+for questions
+
+411
+00:26:46,549 --> 00:26:53,549
+no takers okay thank you very much I
+know way
+
+412
+00:26:56,240 --> 00:27:03,240
+me
+
+413
+00:27:06,529 --> 00:27:06,779
+me
+

@@ -1,0 +1,2071 @@
+1
+00:00:05,070 --> 00:00:09,760
+hello everyone and welcome to the third
+session in our security track
+
+2
+00:00:09,760 --> 00:00:14,549
+and I am happy to present young leave
+who will be talking to us about
+
+3
+00:00:14,549 --> 00:00:18,039
+multi-factor authentication and
+possession factors
+
+4
+00:00:18,039 --> 00:00:21,509
+be hand for young players I
+
+5
+00:00:21,509 --> 00:00:26,759
+so
+
+6
+00:00:26,759 --> 00:00:31,099
+hi my name is yang I work at Rackspace
+am NOT on authentication
+
+7
+00:00:31,099 --> 00:00:35,130
+but thank you all for coming despite
+that I know the sock is supposed to be
+
+8
+00:00:35,130 --> 00:00:36,829
+about multi-factor authentication
+
+9
+00:00:36,829 --> 00:00:41,600
+I'm actually going to go slightly off
+script and answered I'm just gonna tell
+
+10
+00:00:41,600 --> 00:00:43,930
+you a story about two people named Alice
+and Bob
+
+11
+00:00:43,930 --> 00:00:47,660
+bob is a gamer he really likes playing
+games
+
+12
+00:00:47,660 --> 00:00:52,170
+so he built his own an enema MMO called
+world to Bob Kraft
+
+13
+00:00:52,170 --> 00:00:55,579
+it became incredibly popular so much so
+that in game items
+
+14
+00:00:55,579 --> 00:00:58,730
+and gold became worth real money on the
+open market so
+
+15
+00:00:58,730 --> 00:01:03,589
+ceiling counts became a very profitable
+business one day
+
+16
+00:01:03,589 --> 00:01:07,310
+Alice a long time only player with lots
+of high-level items and gold
+
+17
+00:01:07,310 --> 00:01:11,230
+reporter or regular I don't have been
+liquidated her gold stolen by someone
+
+18
+00:01:11,230 --> 00:01:12,470
+who hijacked a recount
+
+19
+00:01:12,470 --> 00:01:16,340
+bob has to spend all they verify her
+story and restoring her counts and
+
+20
+00:01:16,340 --> 00:01:17,140
+possessions
+
+21
+00:01:17,140 --> 00:01:21,540
+every day more and more players are
+reporting their accounts to one
+
+22
+00:01:21,540 --> 00:01:25,490
+Bob spends all his time restoring
+accounts rather than making new content
+
+23
+00:01:25,490 --> 00:01:30,880
+which makes bob sad he read about how
+companies like get her Google Facebook
+
+24
+00:01:30,880 --> 00:01:33,770
+and Blizzard at a two-factor
+authentication to their services to
+
+25
+00:01:33,770 --> 00:01:35,070
+increase account security
+
+26
+00:01:35,070 --> 00:01:38,530
+the seem to involve asking for two
+things are like an insider one
+
+27
+00:01:38,530 --> 00:01:42,230
+Sabah that the second password
+requirement to the world a bobcat login
+
+28
+00:01:42,230 --> 00:01:46,680
+and account discontinue and Bob
+continues being sad
+
+29
+00:01:46,680 --> 00:01:52,020
+why what did I do wrong well
+multi-factor authentication doesn't mean
+
+30
+00:01:52,020 --> 00:01:54,070
+just asking for any two things are like
+in
+
+31
+00:01:54,070 --> 00:01:57,390
+it requires at least two different
+factors which
+
+32
+00:01:57,390 --> 00:02:01,050
+are something you know such as a
+password or PIN something you have such
+
+33
+00:02:01,050 --> 00:02:03,550
+as an ATM card phone or are set again
+
+34
+00:02:03,550 --> 00:02:06,890
+and something you are meeting something
+inherent you such as your fingerprints
+
+35
+00:02:06,890 --> 00:02:08,020
+are your rental pattern
+
+36
+00:02:08,020 --> 00:02:12,060
+to the same factors like bugs to require
+passwords don't count
+
+37
+00:02:12,060 --> 00:02:16,250
+the reason they don't count is that
+using multiple passwords is like putting
+
+38
+00:02:16,250 --> 00:02:18,819
+a secret but say the account data you
+want to protect
+
+39
+00:02:18,819 --> 00:02:22,109
+inside a box which represents a password
+
+40
+00:02:22,109 --> 00:02:25,409
+and ap ok
+
+41
+00:02:25,409 --> 00:02:32,409
+more compact around 10 for her
+
+42
+00:02:33,140 --> 00:02:35,829
+the point to this completely legitimate
+and legal fair use of copyrighted
+
+43
+00:02:35,829 --> 00:02:37,010
+material
+
+44
+00:02:37,010 --> 00:02:40,849
+is that where's the boxes do not protect
+against an attacker who can't open
+
+45
+00:02:40,849 --> 00:02:44,150
+even a single box because they can do
+the same to all the boxes
+
+46
+00:02:44,150 --> 00:02:48,299
+for instance a keylogger was still any
+number password as easily is all still
+
+47
+00:02:48,299 --> 00:02:48,790
+one
+
+48
+00:02:48,790 --> 00:02:53,370
+without any further cost the attacker
+multi-factor of is like placing a
+
+49
+00:02:53,370 --> 00:02:55,239
+security guard in front of your box
+
+50
+00:02:55,239 --> 00:02:58,640
+an attacker has to be a to both get
+around the security guard and opened the
+
+51
+00:02:58,640 --> 00:02:59,200
+box
+
+52
+00:02:59,200 --> 00:03:02,810
+even if they still in the key to the box
+from you your password in this analogy
+
+53
+00:03:02,810 --> 00:03:05,969
+they don't automatically get past the
+security guard without having to do more
+
+54
+00:03:05,969 --> 00:03:06,590
+work
+
+55
+00:03:06,590 --> 00:03:11,340
+each type a factor has a difference had
+a vulnerability is our weaknesses that
+
+56
+00:03:11,340 --> 00:03:12,499
+an attacker like this
+
+57
+00:03:12,499 --> 00:03:16,560
+can use a break in it's important to
+consider with this attackers going to do
+
+58
+00:03:16,560 --> 00:03:19,510
+and how your defense will prevent
+against that rather than just throwing
+
+59
+00:03:19,510 --> 00:03:21,609
+up defenses willy nilly with apt
+
+60
+00:03:21,609 --> 00:03:26,549
+them actually doing anything stress in
+some attacks against password
+
+61
+00:03:26,549 --> 00:03:28,909
+authentication include man in the middle
+attacks
+
+62
+00:03:28,909 --> 00:03:32,760
+when attackers sits between Alice and
+Bob and pretend he's bout hours and
+
+63
+00:03:32,760 --> 00:03:36,400
+contends he's asked Bob and reason
+perhaps modifies traffic that tells you
+
+64
+00:03:36,400 --> 00:03:37,989
+something to Bob or vice versa
+
+65
+00:03:37,989 --> 00:03:42,010
+password authentication is also
+vulnerable to phishing attacks
+
+66
+00:03:42,010 --> 00:03:45,370
+where an attacker tries to trick us into
+giving her password
+
+67
+00:03:45,370 --> 00:03:49,269
+cute keep key logging attacks were an
+attack a lot of the key threats analysis
+
+68
+00:03:49,269 --> 00:03:50,290
+machine
+
+69
+00:03:50,290 --> 00:03:53,529
+and replay one attacker may not be able
+to read traffic
+
+70
+00:03:53,529 --> 00:03:57,269
+but he can copy traffic from oust about
+without being and understand or modify
+
+71
+00:03:57,269 --> 00:04:01,370
+and replace the traffic back to bob at a
+later point while pretending to be Alice
+
+72
+00:04:01,370 --> 00:04:05,689
+possession factors are also vulnerable
+to men in the military
+
+73
+00:04:05,689 --> 00:04:09,239
+axe and they can be physically stolen
+and then the attacker would be in
+
+74
+00:04:09,239 --> 00:04:11,409
+possession analysis possession factor
+
+75
+00:04:11,409 --> 00:04:15,040
+various types the possession factors
+also have their own weaknesses but these
+
+76
+00:04:15,040 --> 00:04:16,410
+are the general attacks against
+
+77
+00:04:16,410 --> 00:04:21,180
+opposition factors without going into
+specifics biometric factors like
+
+78
+00:04:21,180 --> 00:04:23,140
+fingerprints can also be stolen
+
+79
+00:04:23,140 --> 00:04:26,320
+people leave them everywhere son
+attacker can easily obtain them
+
+80
+00:04:26,320 --> 00:04:29,390
+since fingerprints to change the
+credentials can never be revoked
+
+81
+00:04:29,390 --> 00:04:34,040
+and they're vulnerable to replay attacks
+but the stock is just gonna discuss two
+
+82
+00:04:34,040 --> 00:04:35,190
+factor authentication
+
+83
+00:04:35,190 --> 00:04:38,960
+to FA if you ever see this acronym are
+using knowledge and possession factors
+
+84
+00:04:38,960 --> 00:04:42,770
+because this is currently the most
+common combination
+
+85
+00:04:42,770 --> 00:04:46,240
+went to factor are combined the attacks
+against a factor of
+
+86
+00:04:46,240 --> 00:04:49,850
+is the intersection against one factor
+and the attacks against the other
+
+87
+00:04:49,850 --> 00:04:53,340
+so an attack that works only against one
+factor is insufficient to compromise
+
+88
+00:04:53,340 --> 00:04:55,410
+like an
+
+89
+00:04:55,410 --> 00:04:59,860
+if an attacker keylogger else's password
+login is a protected by the token factor
+
+90
+00:04:59,860 --> 00:05:03,130
+and the way most possession factors work
+is that they produce a one-time password
+
+91
+00:05:03,130 --> 00:05:07,300
+which can only be used once so even if
+an attacker gets alice is complete login
+
+92
+00:05:07,300 --> 00:05:08,580
+by which I mean password
+
+93
+00:05:08,580 --> 00:05:13,100
+and Pat a RTP they can't use the token
+
+94
+00:05:13,100 --> 00:05:16,330
+led by as if the possession factor
+stolen the law gonna so protected by the
+
+95
+00:05:16,330 --> 00:05:18,460
+password
+
+96
+00:05:18,460 --> 00:05:21,560
+the goal is to minimize this
+intersection of attacks and that's why
+
+97
+00:05:21,560 --> 00:05:23,620
+bob has to include at least two factors
+
+98
+00:05:23,620 --> 00:05:28,100
+at the same factor say two passwords it
+is used twice
+
+99
+00:05:28,100 --> 00:05:31,320
+the intersection of attacks the same as
+that for single factor password
+
+100
+00:05:31,320 --> 00:05:32,650
+authentication
+
+101
+00:05:32,650 --> 00:05:35,490
+it just because two factors are used
+doesn't mean that the intersection is a
+
+102
+00:05:35,490 --> 00:05:37,740
+smart it could be
+
+103
+00:05:37,740 --> 00:05:41,790
+after provides after Kan's likable
+authenticator of the annual security
+
+104
+00:05:41,790 --> 00:05:44,710
+can run on phones and make it really
+easy for our cities multi-factor
+
+105
+00:05:44,710 --> 00:05:47,550
+authentication without having to buy a
+heart again
+
+106
+00:05:47,550 --> 00:05:51,100
+the phones are general-purpose computing
+devices meaning they can be exploited
+
+107
+00:05:51,100 --> 00:05:55,290
+meaning the token and password can be
+compromised at the same time
+
+108
+00:05:55,290 --> 00:05:59,170
+so this intersection becomes this
+
+109
+00:05:59,170 --> 00:06:02,160
+I'm when using a softer going on to
+found the intersection contains another
+
+110
+00:06:02,160 --> 00:06:05,480
+attack which is exploit the fun
+
+111
+00:06:05,480 --> 00:06:08,310
+as you can see there still fewer attacks
+than in single factor password
+
+112
+00:06:08,310 --> 00:06:09,420
+authentication
+
+113
+00:06:09,420 --> 00:06:12,890
+so it's not that Allah should not use of
+tokens on a fun it's that she should be
+
+114
+00:06:12,890 --> 00:06:14,210
+aware the other attack
+
+115
+00:06:14,210 --> 00:06:18,250
+and take extra care the security on her
+son
+
+116
+00:06:18,250 --> 00:06:21,970
+so now knowing what multi-factor
+authentication is Bob surveys other
+
+117
+00:06:21,970 --> 00:06:23,270
+sites that provide it
+
+118
+00:06:23,270 --> 00:06:27,630
+and find the most commonly supported
+possession factors
+
+119
+00:06:27,630 --> 00:06:31,000
+these possession factor operatives
+tokens that are one-time passwords
+
+120
+00:06:31,000 --> 00:06:34,910
+meaning they X expire after beef time
+expire after single-use
+
+121
+00:06:34,910 --> 00:06:39,380
+or both the most common tokens on
+smartphones
+
+122
+00:06:39,380 --> 00:06:42,640
+which are supported by the previously
+mentioned aP's are open authentication
+
+123
+00:06:42,640 --> 00:06:45,910
+time-based one-time password steer
+teepees
+
+124
+00:06:45,910 --> 00:06:50,510
+which usually expire after about 30
+seconds this is 08 %eh not
+
+125
+00:06:50,510 --> 00:06:54,470
+of this is authentication our office for
+authorization
+
+126
+00:06:54,470 --> 00:06:58,340
+which I know is super clear
+
+127
+00:06:58,340 --> 00:07:02,390
+2tb again time this one-time passwords
+require shared secret between the client
+
+128
+00:07:02,390 --> 00:07:03,290
+and server
+
+129
+00:07:03,290 --> 00:07:07,230
+and are generated using the secret and
+the current time the TOTP generated by
+
+130
+00:07:07,230 --> 00:07:08,600
+Alice's ap is valid
+
+131
+00:07:08,600 --> 00:07:11,840
+if it matches the TAT be generated by
+world Bob Kraft
+
+132
+00:07:11,840 --> 00:07:16,130
+algorithms pressure in simple
+unspecified and those are sees
+
+133
+00:07:16,130 --> 00:07:19,860
+and there are many people either is that
+support it for instance cryptography not
+
+134
+00:07:19,860 --> 00:07:22,850
+only supports it that many other
+cryptographic capabilities
+
+135
+00:07:22,850 --> 00:07:27,400
+OOTP of just supports 28 th and but also
+includes a nice example how to generate
+
+136
+00:07:27,400 --> 00:07:28,550
+a QR code
+
+137
+00:07:28,550 --> 00:07:31,580
+am from the shared secret so that you
+can communicate the shared secret to
+
+138
+00:07:31,580 --> 00:07:33,710
+your user
+
+139
+00:07:33,710 --> 00:07:37,380
+many sites also support SMS based
+one-time passwords about
+
+140
+00:07:37,380 --> 00:07:41,000
+be would text else around MOT p and she
+must provide a back
+
+141
+00:07:41,000 --> 00:07:44,900
+this works even if else doesn't have a
+smartphone
+
+142
+00:07:44,900 --> 00:07:48,640
+clear provides a REST API that can let
+bob send nm as a nest Alice
+
+143
+00:07:48,640 --> 00:07:52,620
+allowing him to support SMS based
+authentication an HTTP client can be
+
+144
+00:07:52,620 --> 00:07:57,020
+years but will they also provides an
+expert on Trulia client
+
+145
+00:07:57,020 --> 00:08:00,140
+a commonly supported consume her talking
+to the you keep
+
+146
+00:08:00,140 --> 00:08:03,800
+which acts as a USB keyboard ass just
+has to plug it in
+
+147
+00:08:03,800 --> 00:08:07,350
+press the button and a generator no TP
+based on a counter
+
+148
+00:08:07,350 --> 00:08:10,370
+you go provides validation service as
+well as an open source validation
+
+149
+00:08:10,370 --> 00:08:14,230
+servers so that I can write once run one
+on his own rather than depend on you the
+
+150
+00:08:14,230 --> 00:08:16,250
+cap
+
+151
+00:08:16,250 --> 00:08:18,850
+there are quite a few Python client
+libraries that support access to the
+
+152
+00:08:18,850 --> 00:08:20,070
+validation API
+
+153
+00:08:20,070 --> 00:08:23,740
+I'm the first one is the official one
+second one is the one that will be using
+
+154
+00:08:23,740 --> 00:08:27,720
+examples because typing a shorter
+
+155
+00:08:27,720 --> 00:08:30,930
+okay so what does bob need to do to
+support possession factors
+
+156
+00:08:30,930 --> 00:08:34,729
+he has till et al sad factors her
+account yes to validate the factor when
+
+157
+00:08:34,729 --> 00:08:36,060
+I was logged in
+
+158
+00:08:36,060 --> 00:08:40,079
+and his lapels remove factors from her
+account
+
+159
+00:08:40,079 --> 00:08:42,990
+but the years out the general pattern
+tattoo factor of from scratch to a
+
+160
+00:08:42,990 --> 00:08:44,550
+general pipe an application
+
+161
+00:08:44,550 --> 00:08:48,899
+which also placed at using frameworks
+such as flask and twisted
+
+162
+00:08:48,899 --> 00:08:51,670
+the Nexus lies are going to assume
+year's model that looks something like
+
+163
+00:08:51,670 --> 00:08:52,709
+this:
+
+164
+00:08:52,709 --> 00:08:56,410
+it has a collection of possession
+factors in order of preference in Dallas
+
+165
+00:08:56,410 --> 00:08:59,889
+because bob would like to support backup
+devices in case Alice loses her
+
+166
+00:08:59,889 --> 00:09:01,189
+preferred device
+
+167
+00:09:01,189 --> 00:09:05,189
+which would be the first at factor in
+the collection
+
+168
+00:09:05,189 --> 00:09:08,870
+all bob's factors will have this
+interface arm
+
+169
+00:09:08,870 --> 00:09:12,310
+has a function to check whether no TB is
+Alan a start
+
+170
+00:09:12,310 --> 00:09:15,660
+because some factors require set up
+before every 0 TP
+
+171
+00:09:15,660 --> 00:09:19,910
+a start function that does the third set
+up and a prop the prompt is for later
+
+172
+00:09:19,910 --> 00:09:23,879
+when bob has to ask alice furlaud TP
+
+173
+00:09:23,879 --> 00:09:27,170
+so first we're gonna cover TRT peace
+
+174
+00:09:27,170 --> 00:09:31,490
+the flow is that bob generates a shared
+secret communicate the shared secret be
+
+175
+00:09:31,490 --> 00:09:33,540
+at two alisya QR code
+
+176
+00:09:33,540 --> 00:09:37,199
+and then one else wants to authenticate
+using this factor XII generator TOTP
+
+177
+00:09:37,199 --> 00:09:38,790
+from the shared secret
+
+178
+00:09:38,790 --> 00:09:42,199
+which she gets back to bob and bob has
+to match against the TTP that he
+
+179
+00:09:42,199 --> 00:09:44,970
+produces from the shared secret
+
+180
+00:09:44,970 --> 00:09:48,439
+for the fact occurred and Bob generates
+a random Jersey good
+
+181
+00:09:48,439 --> 00:09:51,860
+and he's though to be of library to
+check the validity of the test other
+
+182
+00:09:51,860 --> 00:09:55,749
+RTP given the secret there's no setup
+except on first configuring the factors
+
+183
+00:09:55,749 --> 00:09:59,189
+so the start function does nothing
+
+184
+00:09:59,189 --> 00:10:02,870
+to configure the factor Bob send a cure
+can like the diagrams as
+
+185
+00:10:02,870 --> 00:10:06,050
+with her response and if the token
+checks out by being at the factored her
+
+186
+00:10:06,050 --> 00:10:07,279
+account
+
+187
+00:10:07,279 --> 00:10:10,600
+and they get user input function here is
+synchronous
+
+188
+00:10:10,600 --> 00:10:15,300
+and is also not implemented in the slut
+entered imported from the made-up module
+
+189
+00:10:15,300 --> 00:10:18,629
+for weather maps the QR code and a form
+would have to be rendered on appears so
+
+190
+00:10:18,629 --> 00:10:23,029
+in reality asking the user for their TP
+is probably a synchronous stateful and
+
+191
+00:10:23,029 --> 00:10:25,589
+much more complex
+
+192
+00:10:25,589 --> 00:10:29,139
+speaking if your records this is the
+general form at the right to be included
+
+193
+00:10:29,139 --> 00:10:30,470
+in the Cure occurred
+
+194
+00:10:30,470 --> 00:10:33,980
+and its best by the other them use the
+issuer and the username
+
+195
+00:10:33,980 --> 00:10:38,029
+because else that may be generating 30
+piece from multiple services
+
+196
+00:10:38,029 --> 00:10:41,199
+this helps apt label which took emblems
+the world Bob Kraft
+
+197
+00:10:41,199 --> 00:10:45,259
+and which took emblems the world Carol
+craft
+
+198
+00:10:45,259 --> 00:10:50,110
+OOTP of generates this year I when given
+the relevant information services what
+
+199
+00:10:50,110 --> 00:10:54,490
+the generate QR code function looks like
+
+200
+00:10:54,490 --> 00:10:59,100
+for the SMS factor bobby is truly a to
+send SMS's
+
+201
+00:10:59,100 --> 00:11:02,829
+and the way SMS tokens work is that
+Allah's give up her phone number
+
+202
+00:11:02,829 --> 00:11:06,569
+but generate some random token text the
+towers at that number
+
+203
+00:11:06,569 --> 00:11:11,850
+and the token that I ask is back to bob
+has to match what Bob texted her
+
+204
+00:11:11,850 --> 00:11:15,160
+bob for sneezing accounts really oh so
+that he can provide his account ID and
+
+205
+00:11:15,160 --> 00:11:16,860
+are talking to the rest clients
+
+206
+00:11:16,860 --> 00:11:20,259
+and he also needs a toy a number you can
+send us a message from
+
+207
+00:11:20,259 --> 00:11:23,379
+because the start function stores the
+generated 0 TP
+
+208
+00:11:23,379 --> 00:11:27,629
+Texas hours at the number she gave them
+from Bob's number registered with
+
+209
+00:11:27,629 --> 00:11:29,079
+William
+
+210
+00:11:29,079 --> 00:11:32,600
+validating the ATP is just checking that
+matches the store 21
+
+211
+00:11:32,600 --> 00:11:36,170
+and this is a night implementation that
+doesn't take into account sending Alice
+
+212
+00:11:36,170 --> 00:11:38,209
+multiple tokens token expiry
+
+213
+00:11:38,209 --> 00:11:43,110
+or API failures but this is the general
+idea
+
+214
+00:11:43,110 --> 00:11:46,120
+and there's one extra check in this ad
+factor function
+
+215
+00:11:46,120 --> 00:11:49,740
+the configuration only continues if the
+phone number has not already been to fit
+
+216
+00:11:49,740 --> 00:11:51,170
+configured for Alice
+
+217
+00:11:51,170 --> 00:11:55,309
+it's already on our asses account at
+Bill's that if it is then this
+
+218
+00:11:55,309 --> 00:12:00,050
+then proceed like the diagram Bob text
+Alice ask is back about 30 p.m.
+
+219
+00:12:00,050 --> 00:12:04,930
+the phone numbers at Alice's account as
+a possession packed
+
+220
+00:12:04,930 --> 00:12:09,509
+so now for the you key factor and before
+you begin it's good to know that every
+
+221
+00:12:09,509 --> 00:12:11,360
+time the UB key button has passed
+
+222
+00:12:11,360 --> 00:12:15,930
+and OOTP is produced that has the idea
+the you keep which never changes
+
+223
+00:12:15,930 --> 00:12:19,699
+concatenated to the actual 0 TP part
+which changes every time and is exactly
+
+224
+00:12:19,699 --> 00:12:21,220
+thirty two characters
+
+225
+00:12:21,220 --> 00:12:28,069
+said to get the ID you just chomp of
+their last 32 characters at the Ukiah TP
+
+226
+00:12:28,069 --> 00:12:31,930
+so whenever Allah's provides an ATP Bob
+checks in with you because servers
+
+227
+00:12:31,930 --> 00:12:37,149
+an extract also extract the idea the UK
+which is that cookie looking thing
+
+228
+00:12:37,149 --> 00:12:40,709
+am I D matches the one that hours
+previously registered in
+
+229
+00:12:40,709 --> 00:12:43,800
+then alice is using the same you be key
+issued registered
+
+230
+00:12:43,800 --> 00:12:46,800
+and if you go also says that about 30 P
+then
+
+231
+00:12:46,800 --> 00:12:49,980
+yea alice is authenticated
+
+232
+00:12:49,980 --> 00:12:53,600
+to validate against you care about has
+generated a client ID and secret magic
+
+233
+00:12:53,600 --> 00:12:55,240
+key for all the Bob Kraft
+
+234
+00:12:55,240 --> 00:12:58,540
+the keys used by you Curtis I and the
+responses to the partners
+
+235
+00:12:58,540 --> 00:13:01,869
+responses from you cannot spooked by an
+attacker
+
+236
+00:13:01,869 --> 00:13:06,999
+let the 2:30 p.m. the start function
+does nothing cuz there's no setup
+
+237
+00:13:06,999 --> 00:13:10,730
+the checker TP kar dan just as with the
+diagram am
+
+238
+00:13:10,730 --> 00:13:14,869
+described it validates 30 P and the
+client validates the signature
+
+239
+00:13:14,869 --> 00:13:18,029
+extract the Bahia de cheques it against
+the store and I D
+
+240
+00:13:18,029 --> 00:13:21,110
+and again this is a simplified
+implementation does not take into
+
+241
+00:13:21,110 --> 00:13:21,529
+account
+
+242
+00:13:21,529 --> 00:13:26,689
+API failures and what happens if their
+signature failures
+
+243
+00:13:26,689 --> 00:13:31,749
+when adding a Yuki else needs to provide
+30 p.m. and if the factor that the
+
+244
+00:13:31,749 --> 00:13:35,160
+with that particular you be here I D
+hasn't been configured already
+
+245
+00:13:35,160 --> 00:13:38,589
+and RTP validates the Bob can add that
+you pick your ID
+
+246
+00:13:38,589 --> 00:13:42,369
+as a factor for her account
+
+247
+00:13:42,369 --> 00:13:46,050
+soon after validating a token I log in
+despite a simpler because most the work
+
+248
+00:13:46,050 --> 00:13:48,629
+was already done in the factor
+obstructions which is what made the
+
+249
+00:13:48,629 --> 00:13:51,379
+previous part time are complex and
+lengthy
+
+250
+00:13:51,379 --> 00:13:55,910
+am the logic is that Alice gives bob her
+username and password
+
+251
+00:13:55,910 --> 00:13:59,439
+Bob checks that the user exists that the
+password checks out
+
+252
+00:13:59,439 --> 00:14:03,029
+sees a palace has a second factor
+configured and if so he asked Allah's
+
+253
+00:14:03,029 --> 00:14:04,970
+for the second factor credentials
+
+254
+00:14:04,970 --> 00:14:08,129
+arm then Alice gives those credentials
+back to bob
+
+255
+00:14:08,129 --> 00:14:12,040
+and Bob validates those credentials
+
+256
+00:14:12,040 --> 00:14:15,629
+hear about stop-start start off with a
+leg infection which checks the user
+
+257
+00:14:15,629 --> 00:14:20,350
+the password in the possession factor on
+bob also made it take a post login
+
+258
+00:14:20,350 --> 00:14:23,439
+argument which is a callable that
+executes post login logic
+
+259
+00:14:23,439 --> 00:14:26,819
+am will see why in a sec
+
+260
+00:14:26,819 --> 00:14:29,850
+checking the possession factor just
+means that bob sees when Alice has at
+
+261
+00:14:29,850 --> 00:14:31,639
+least one configured possession factor
+
+262
+00:14:31,639 --> 00:14:35,910
+as though he asks for the RTP validated
+using the preferred factor which is the
+
+263
+00:14:35,910 --> 00:14:37,660
+first factor in the collection
+
+264
+00:14:37,660 --> 00:14:41,279
+if everything's good postal outpost
+login logic executes
+
+265
+00:14:41,279 --> 00:14:44,569
+I remember how each factor has a start
+function for set up an impromptu asked
+
+266
+00:14:44,569 --> 00:14:45,990
+for these are stoking
+
+267
+00:14:45,990 --> 00:14:49,290
+it speaks so that this function could be
+factor independent rather than giant
+
+268
+00:14:49,290 --> 00:14:49,779
+nested
+
+269
+00:14:49,779 --> 00:14:52,800
+Elstree
+
+270
+00:14:52,800 --> 00:14:56,579
+to spur backup devices but asks for both
+the type a factor and the token
+
+271
+00:14:56,579 --> 00:15:00,050
+the default factor would of course be
+the preferred factor but ass can pick a
+
+272
+00:15:00,050 --> 00:15:00,959
+different factor
+
+273
+00:15:00,959 --> 00:15:04,929
+on her back to factors if the ticket is
+validated the talking is validated
+
+274
+00:15:04,929 --> 00:15:08,339
+no matter what but if the factor she
+picked as a backup factor
+
+275
+00:15:08,339 --> 00:15:11,889
+then email sent to her warning her that
+a backup factor not her preferred
+
+276
+00:15:11,889 --> 00:15:13,029
+accuracy is
+
+277
+00:15:13,029 --> 00:15:18,129
+because the should be an unusual
+occurrence and might be an attacker
+
+278
+00:15:18,129 --> 00:15:21,619
+so now is perfect for its actions and
+login implementation established
+
+279
+00:15:21,619 --> 00:15:25,860
+revocation is even simpler there's not
+even a diagram
+
+280
+00:15:25,860 --> 00:15:29,660
+removing a factor is just a leading from
+the collection but since this could be
+
+281
+00:15:29,660 --> 00:15:31,980
+an attacker trying to decrease account
+security
+
+282
+00:15:31,980 --> 00:15:36,569
+a warning email should be centel's any
+time factors removed
+
+283
+00:15:36,569 --> 00:15:39,389
+even better would be if I privilege
+functionality like this would require
+
+284
+00:15:39,389 --> 00:15:41,199
+Alice to log in again
+
+285
+00:15:41,199 --> 00:15:44,290
+I remember how to login function took a
+purse login
+
+286
+00:15:44,290 --> 00:15:48,249
+callable so up for a more secure remove
+factor function
+
+287
+00:15:48,249 --> 00:15:53,529
+and back our book can be the non suited
+remove factor function
+
+288
+00:15:53,529 --> 00:15:56,819
+sup that was adding to factor out from
+scratch due to application the full code
+
+289
+00:15:56,819 --> 00:16:00,050
+is up I'm I get a beeper 30 run as a
+little command line demo
+
+290
+00:16:00,050 --> 00:16:04,209
+the made-up module is actually
+implemented
+
+291
+00:16:04,209 --> 00:16:08,050
+for something more flask specific the
+200 block has a very nice example had
+
+292
+00:16:08,050 --> 00:16:09,999
+TOTP is an SMS factors
+
+293
+00:16:09,999 --> 00:16:15,110
+to a flask ap but certain parts are
+ruled by Kraft use Django
+
+294
+00:16:15,110 --> 00:16:19,869
+and there's anger middleware that
+handles to factor of free in
+
+295
+00:16:19,869 --> 00:16:23,149
+where the most complete plugins as
+Django TP it's a framework that provides
+
+296
+00:16:23,149 --> 00:16:26,100
+support for all the previously mentioned
+authentication methods
+
+297
+00:16:26,100 --> 00:16:29,989
+although trillion you be key supporter
+separate plugins on that has models for
+
+298
+00:16:29,989 --> 00:16:31,050
+the devices
+
+299
+00:16:31,050 --> 00:16:34,339
+and it updates the user model to include
+whether two factor authentication is
+
+300
+00:16:34,339 --> 00:16:35,809
+enabled
+
+301
+00:16:35,809 --> 00:16:40,059
+all you need to do is install them and
+at the middle classes and install the
+
+302
+00:16:40,059 --> 00:16:40,910
+app's to
+
+303
+00:16:40,910 --> 00:16:45,230
+a dang good on tap Settings tab by
+
+304
+00:16:45,230 --> 00:16:48,679
+there's another project gender to factor
+of which integrates tango TP
+
+305
+00:16:48,679 --> 00:16:52,579
+into jaggers built an authentication
+framework and makes it really easy to
+
+306
+00:16:52,579 --> 00:16:55,709
+pass the login here to be a multi-factor
+like nvm
+
+307
+00:16:55,709 --> 00:16:59,999
+and there's no US support for Yuki
+devices yet but there's a park or if
+
+308
+00:16:59,999 --> 00:17:03,189
+there's an issue out for that
+
+309
+00:17:03,189 --> 00:17:07,339
+Bob just add some more install the app's
+an 11-year-old to Settings app I
+
+310
+00:17:07,339 --> 00:17:10,819
+along with his credentials First Folio
+account
+
+311
+00:17:10,819 --> 00:17:15,339
+and yet the two-factor your own route as
+the login routes
+
+312
+00:17:15,339 --> 00:17:19,100
+and alice when logged and can now enable
+to factor authentication
+
+313
+00:17:19,100 --> 00:17:23,709
+and configure her preferred list at her
+preferred factor
+
+314
+00:17:23,709 --> 00:17:26,760
+if the configuration floods went by
+really quickly don't worry I'm the docs
+
+315
+00:17:26,760 --> 00:17:29,730
+for Django TB describe the installation
+and configuration
+
+316
+00:17:29,730 --> 00:17:33,480
+in detail more than the slides do
+
+317
+00:17:33,480 --> 00:17:37,120
+and Django to factor of has just as
+extensive darts and also comes with a
+
+318
+00:17:37,120 --> 00:17:37,549
+nice
+
+319
+00:17:37,549 --> 00:17:41,460
+example Django out that demonstrate its
+use which is where the PB screen shots
+
+320
+00:17:41,460 --> 00:17:42,330
+came from
+
+321
+00:17:42,330 --> 00:17:46,559
+example app is available to train line
+and of course Bob Rowe dollars own views
+
+322
+00:17:46,559 --> 00:17:49,700
+and themed everything for world but Bob
+Kraft but I gave them a good idea what
+
+323
+00:17:49,700 --> 00:17:51,769
+to do
+
+324
+00:17:51,769 --> 00:17:55,140
+but could also have used a device like
+to the security or of the which would
+
+325
+00:17:55,140 --> 00:17:55,490
+handle
+
+326
+00:17:55,490 --> 00:18:00,049
+else the second factor completely Bob
+just has to register with the device
+
+327
+00:18:00,049 --> 00:18:05,360
+and let them know about Alice and the
+service does all these things about how
+
+328
+00:18:05,360 --> 00:18:07,169
+to do before about stuff
+
+329
+00:18:07,169 --> 00:18:10,860
+house has to register her devices with
+the service and cerebral the Bob Kraft
+
+330
+00:18:10,860 --> 00:18:13,929
+but then when she logs and Bob validates
+your password
+
+331
+00:18:13,929 --> 00:18:17,190
+the service handles her second factor
+
+332
+00:18:17,190 --> 00:18:21,110
+so now authentication is secure and bob
+is happily ever after creating content
+
+333
+00:18:21,110 --> 00:18:25,730
+Alice never loses control for a dungeon
+loot again rates
+
+334
+00:18:25,730 --> 00:18:29,179
+well there's other ways for them to be
+needing a player to world the Bob Kraft
+
+335
+00:18:29,179 --> 00:18:33,990
+not just log in and login has been
+protected by Bob using multi-factor
+
+336
+00:18:33,990 --> 00:18:34,799
+authentication
+
+337
+00:18:34,799 --> 00:18:38,840
+but not every request made world by
+Kraft requires a password and token
+
+338
+00:18:38,840 --> 00:18:43,039
+an attacker CSO an attacker can use some
+other form other than to cation
+
+339
+00:18:43,039 --> 00:18:46,809
+for instance after login world bypasses
+the session key for Alice to
+
+340
+00:18:46,809 --> 00:18:49,340
+authenticate ran subsequent requests
+
+341
+00:18:49,340 --> 00:18:52,559
+until she lives outs an attacker who
+eavesdrops the ski
+
+342
+00:18:52,559 --> 00:18:56,210
+then has a full access to Alice's
+account
+
+343
+00:18:56,210 --> 00:18:59,419
+is dropping can be mitigated using TLS
+also known as SSL
+
+344
+00:18:59,419 --> 00:19:04,210
+I'm sorry to encrypt all traffic however
+include to traffic won't help with alice
+
+345
+00:19:04,210 --> 00:19:07,460
+is man in the middle with an attack who
+pretends to be well the Bob Kraft
+
+346
+00:19:07,460 --> 00:19:11,269
+so but has to provide a valid till
+certificate and house is quiet must
+
+347
+00:19:11,269 --> 00:19:12,190
+verify it
+
+348
+00:19:12,190 --> 00:19:16,230
+very important in order to mitigate the
+threat at the man and millet ac
+
+349
+00:19:16,230 --> 00:19:19,309
+but as we've seen from this year
+learning from a Nextag
+
+350
+00:19:19,309 --> 00:19:23,390
+earlier on TLS um libraries that provide
+tailored support can have on our
+
+351
+00:19:23,390 --> 00:19:24,250
+abilities
+
+352
+00:19:24,250 --> 00:19:27,620
+summer which negate the point of using
+it in the first place so both Alstom Bob
+
+353
+00:19:27,620 --> 00:19:31,230
+have to respond immediately to any
+required patching up the last libraries
+
+354
+00:19:31,230 --> 00:19:34,730
+and keep everything up today okay
+
+355
+00:19:34,730 --> 00:19:41,080
+something else is vulnerable to man in
+the middle attacks and is not anymore
+
+356
+00:19:41,080 --> 00:19:44,919
+another tether that occasion is API keys
+access tokens
+
+357
+00:19:44,919 --> 00:19:47,929
+such as of: not 08 %eh this time
+
+358
+00:19:47,929 --> 00:19:50,570
+for applications that need to
+authenticate in the background without
+
+359
+00:19:50,570 --> 00:19:53,360
+any interaction with the user
+
+360
+00:19:53,360 --> 00:19:57,039
+for instance the world a bobcat mobile
+app which allows als checker auctions
+
+361
+00:19:57,039 --> 00:20:00,309
+and in game mail
+
+362
+00:20:00,309 --> 00:20:03,590
+but make sure that every app has to
+request a different API key
+
+363
+00:20:03,590 --> 00:20:07,809
+so they're all revoke a bowl and
+auditable independently of each other
+
+364
+00:20:07,809 --> 00:20:11,320
+and he also limit how much access each
+API key has given it only as much
+
+365
+00:20:11,320 --> 00:20:12,580
+privilege as it needs
+
+366
+00:20:12,580 --> 00:20:16,340
+so that an attacker who stormed hours as
+mobile API key doesn't have full access
+
+367
+00:20:16,340 --> 00:20:19,559
+to our account
+
+368
+00:20:19,559 --> 00:20:23,159
+but makes use agenda ATP's go to be
+required decorated which behaves like
+
+369
+00:20:23,159 --> 00:20:24,929
+anchors log in required decorator
+
+370
+00:20:24,929 --> 00:20:28,169
+that requires that these are have to be
+logged in using multi-factor
+
+371
+00:20:28,169 --> 00:20:34,100
+of I'm potentially dangerous changes
+like changing passwords token factors
+
+372
+00:20:34,100 --> 00:20:34,809
+are emails
+
+373
+00:20:34,809 --> 00:20:38,440
+can compromise the security on account
+so changes like these would be good
+
+374
+00:20:38,440 --> 00:20:39,970
+candidates for acquiring
+
+375
+00:20:39,970 --> 00:20:43,720
+that these are be logged in with not a
+factor of even better would be to
+
+376
+00:20:43,720 --> 00:20:46,070
+require hours to provide credentials
+again
+
+377
+00:20:46,070 --> 00:20:50,220
+as you would for if you are executing
+pseudo commands at all such dangers
+
+378
+00:20:50,220 --> 00:20:51,210
+actions
+
+379
+00:20:51,210 --> 00:20:54,690
+should result in a warning email being
+sent Alice in case they're taken by an
+
+380
+00:20:54,690 --> 00:20:56,240
+attacker and not her
+
+381
+00:20:56,240 --> 00:21:00,200
+and Alice much more careful now because
+our account had been stolen
+
+382
+00:21:00,200 --> 00:21:03,389
+his careful attention to these emails
+even though they might seem annoying are
+
+383
+00:21:03,389 --> 00:21:05,559
+kinda spendy
+
+384
+00:21:05,559 --> 00:21:09,210
+by doing all these things bob protect
+access to Alice's account as much as
+
+385
+00:21:09,210 --> 00:21:09,779
+possible
+
+386
+00:21:09,779 --> 00:21:13,529
+while keeping usability is a back says
+hi
+
+387
+00:21:13,529 --> 00:21:17,019
+as mentioned before world Bob Kraft
+provide the recovery mechanism in case
+
+388
+00:21:17,019 --> 00:21:18,570
+else has to change her credentials
+
+389
+00:21:18,570 --> 00:21:22,399
+account recovery is just log in again
+anyone who recovers an account is just
+
+390
+00:21:22,399 --> 00:21:25,279
+resetting the account credentials
+
+391
+00:21:25,279 --> 00:21:29,570
+recovery should be audible and rear all
+such changes should be live so that
+
+392
+00:21:29,570 --> 00:21:32,590
+malicious attempts to reset credentials
+can be identified
+
+393
+00:21:32,590 --> 00:21:36,620
+and research should be difficult at
+least as much as regular login or all
+
+394
+00:21:36,620 --> 00:21:39,919
+attackers will just go after the lowest
+hanging fruit which is account reset
+
+395
+00:21:39,919 --> 00:21:44,860
+which is why Bob keeps obsessing over
+this
+
+396
+00:21:44,860 --> 00:21:49,090
+so bob has provided backup devices so
+that asking is a backup to open to login
+
+397
+00:21:49,090 --> 00:21:52,590
+and is in disable the primary token
+which
+
+398
+00:21:52,590 --> 00:21:56,350
+is supported by Django to factor of but
+bob could have also emailed
+
+399
+00:21:56,350 --> 00:21:59,720
+hours with the reset link forcing hours
+to prove that she's in possession of the
+
+400
+00:21:59,720 --> 00:22:01,539
+email account associated with her
+
+401
+00:22:01,539 --> 00:22:06,169
+account arm this is a standard mechanism
+that services with only single factor of
+
+402
+00:22:06,169 --> 00:22:07,830
+provide to reset passwords
+
+403
+00:22:07,830 --> 00:22:11,299
+but even services with multi-factor of
+fall back on this if the user doesn't
+
+404
+00:22:11,299 --> 00:22:13,769
+have backup device is configured
+
+405
+00:22:13,769 --> 00:22:17,049
+unfortunately emails negated by
+multi-factor arts so it turns into
+
+406
+00:22:17,049 --> 00:22:17,690
+something
+
+407
+00:22:17,690 --> 00:22:22,880
+you know something you know that bob
+started with so
+
+408
+00:22:22,880 --> 00:22:27,210
+what has Elliston alice is set up to
+factor of for all the Bob Kraft
+
+409
+00:22:27,210 --> 00:22:30,899
+she set up backup factors that she
+doesn't have to resort to in our set
+
+410
+00:22:30,899 --> 00:22:34,590
+she's chosen different strong passwords
+for both world by Kraft and her email
+
+411
+00:22:34,590 --> 00:22:35,490
+account
+
+412
+00:22:35,490 --> 00:22:38,710
+and she set up to factor of other e-mail
+too because she really wants to receive
+
+413
+00:22:38,710 --> 00:22:40,029
+those warning emails
+
+414
+00:22:40,029 --> 00:22:44,139
+and gary said he knows I'm she's careful
+about what he does your phone
+
+415
+00:22:44,139 --> 00:22:47,260
+she set up a lock screen and promote
+white so that she could keep her soft
+
+416
+00:22:47,260 --> 00:22:48,309
+open safe
+
+417
+00:22:48,309 --> 00:22:51,580
+and she keeps our systems up to date so
+that any vulnerabilities can be passed
+
+418
+00:22:51,580 --> 00:22:53,179
+as soon as possible
+
+419
+00:22:53,179 --> 00:22:55,909
+she has not had any more incidents of
+account that and is now the highest
+
+420
+00:22:55,909 --> 00:22:59,519
+level was its neighbor and while the Bob
+Kraft
+
+421
+00:22:59,519 --> 00:23:03,760
+bob is implemented in saree promoting
+multi-factor of two of his players
+
+422
+00:23:03,760 --> 00:23:07,730
+you provide secure and auditable
+recovery options includes all traffic
+
+423
+00:23:07,730 --> 00:23:11,370
+and limits privileges have less secure
+forms authentication
+
+424
+00:23:11,370 --> 00:23:15,179
+I'm he keeps all the crew to libraries
+needed to provide said security up to
+
+425
+00:23:15,179 --> 00:23:16,019
+date
+
+426
+00:23:16,019 --> 00:23:20,299
+and now account that is down world Bob
+Kraft not gone because not all players
+
+427
+00:23:20,299 --> 00:23:22,179
+are careful analysis
+
+428
+00:23:22,179 --> 00:23:29,179
+um but he spends much higher percentage
+of the time designing contents
+
+429
+00:23:31,610 --> 00:23:37,000
+sorry it's not moving
+
+430
+00:23:37,000 --> 00:23:41,429
+ok whenever so and they both lived
+happily
+
+431
+00:23:41,429 --> 00:23:48,429
+and it visually ever after thanks for
+coming everyone
+
+432
+00:23:51,139 --> 00:23:54,990
+thank you so much game arm we don't have
+time for questions right now
+
+433
+00:23:54,990 --> 00:23:59,919
+but there is space out for a hallway
+bomb if you would like to ask you any
+
+434
+00:23:59,919 --> 00:24:02,230
+questions about her presentation
+
+435
+00:24:02,230 --> 00:24:05,519
+we are now taking a break for a few
+minutes
+
+436
+00:24:05,519 --> 00:24:09,909
+please feel free to go down there is
+still some swag laughed
+
+437
+00:24:09,909 --> 00:24:13,610
+in the exposition hall with all the
+sponsors please check them out
+
+438
+00:24:13,610 --> 00:24:17,860
+and give them a moment of your time
+thank you
+
+439
+00:24:17,860 --> 00:24:18,210
+story
+

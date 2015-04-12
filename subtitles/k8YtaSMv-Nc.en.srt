@@ -1,0 +1,1487 @@
+1
+00:00:06,520 --> 00:00:09,179
+good afternoon everybody reading it
+started with a Nextag collecting dues
+
+2
+00:00:09,179 --> 00:00:12,240
+kevin is gonna be talking about building
+a high-throughput systems a pipeline
+
+3
+00:00:12,240 --> 00:00:19,240
+I say again my name is Kevin
+
+4
+00:00:21,750 --> 00:00:24,890
+I work for a company called tell apart
+we build
+
+5
+00:00:24,890 --> 00:00:28,670
+a data platform for retailers I and we
+deal with some
+
+6
+00:00:28,670 --> 00:00:32,380
+fairly hi high traffic rates low
+latencies
+
+7
+00:00:32,380 --> 00:00:35,590
+on and we use Python to do pretty much
+all it
+
+8
+00:00:35,590 --> 00:00:39,260
+so today I'm gonna talk about a project
+called topper
+
+9
+00:00:39,260 --> 00:00:42,410
+which is a distributed event at big
+Asian service
+
+10
+00:00:42,410 --> 00:00:45,649
+basically what does helps you in
+straight your code by
+
+11
+00:00:45,649 --> 00:00:49,600
+putting calls to record events and then
+those get aggregated into a central
+
+12
+00:00:49,600 --> 00:00:50,280
+location
+
+13
+00:00:50,280 --> 00:00:53,920
+where you can then freedom so for
+example we can
+
+14
+00:00:53,920 --> 00:00:56,920
+record the the particular win price with
+type: bid
+
+15
+00:00:56,920 --> 00:01:00,910
+and then period for for example the 10
+minute sliding window in some
+
+16
+00:01:00,910 --> 00:01:01,719
+percentiles
+
+17
+00:01:01,719 --> 00:01:05,580
+so tough is built using Python
+
+18
+00:01:05,580 --> 00:01:10,150
+uses red is a back in store we have a a
+cluster those instances
+
+19
+00:01:10,150 --> 00:01:14,549
+I make heavy use have G a vent and does
+some optimizations using five on
+
+20
+00:01:14,549 --> 00:01:17,750
+arm and it does a fairly high in just
+great uses
+
+21
+00:01:17,750 --> 00:01:21,479
+multiple over a hundred different
+processors for the relatively
+
+22
+00:01:21,479 --> 00:01:25,360
+large-scale deployment so
+
+23
+00:01:25,360 --> 00:01:29,470
+instead of talking today about the the
+architecture and how it's implemented
+
+24
+00:01:29,470 --> 00:01:32,939
+are we more useful to talk about summer
+the lessons learned
+
+25
+00:01:32,939 --> 00:01:36,310
+I'm when trying to build large-scale
+distributed systems
+
+26
+00:01:36,310 --> 00:01:40,159
+using Python so left number one
+
+27
+00:01:40,159 --> 00:01:45,119
+are is get your data model right so any
+given problem has a number of different
+
+28
+00:01:45,119 --> 00:01:47,630
+ways you can solve it number different
+ways you can model it
+
+29
+00:01:47,630 --> 00:01:51,360
+um and the one you go with really
+
+30
+00:01:51,360 --> 00:01:55,009
+limits or informs what your application
+is capable of doing
+
+31
+00:01:55,009 --> 00:01:58,630
+and some very subtle differences in the
+way the model program
+
+32
+00:01:58,630 --> 00:02:02,649
+can have massive impact on your ability
+to perform later
+
+33
+00:02:02,649 --> 00:02:06,020
+and once you've committed to a model it
+is
+
+34
+00:02:06,020 --> 00:02:09,110
+extremely important arts extremely
+difficult to
+
+35
+00:02:09,110 --> 00:02:12,040
+go back and change it especially in a
+distributed system where you have things
+
+36
+00:02:12,040 --> 00:02:14,670
+deployed all over the place and you have
+protocols between different
+
+37
+00:02:14,670 --> 00:02:20,030
+components it's very hard to change so
+at a high level
+
+38
+00:02:20,030 --> 00:02:23,180
+this is kind with the data model for
+title looks like you have
+
+39
+00:02:23,180 --> 00:02:27,489
+a large room with an switcher generated
+by clients both get aggregated
+
+40
+00:02:27,489 --> 00:02:30,900
+into the state objects arm 1 per tag
+
+41
+00:02:30,900 --> 00:02:35,360
+which is essentially them the metric and
+the source on and those get stored in a
+
+42
+00:02:35,360 --> 00:02:36,010
+database
+
+43
+00:02:36,010 --> 00:02:39,930
+and then when you perform a query be
+states but not that great a combined
+
+44
+00:02:39,930 --> 00:02:40,769
+into an aggregate
+
+45
+00:02:40,769 --> 00:02:44,209
+those different objects look like this
+
+46
+00:02:44,209 --> 00:02:47,430
+so in Aventis basically a tuba love be
+
+47
+00:02:47,430 --> 00:02:50,980
+the name the type the time and some
+payload ominous
+
+48
+00:02:50,980 --> 00:02:54,580
+in this example other moving interval
+counter the state is
+
+49
+00:02:54,580 --> 00:02:57,870
+I basically some bucket eyes counts in
+totals
+
+50
+00:02:57,870 --> 00:03:01,349
+overture certain time range and those
+states are stored as
+
+51
+00:03:01,349 --> 00:03:05,080
+compact efficient binary objects like
+because there they go over the wire a
+
+52
+00:03:05,080 --> 00:03:05,720
+lot they
+
+53
+00:03:05,720 --> 00:03:09,980
+get edited very often severe extremely
+efficient in terms of space
+
+54
+00:03:09,980 --> 00:03:13,300
+and mutability the aggregates
+
+55
+00:03:13,300 --> 00:03:16,989
+are responses to queries so they're the
+friendly
+
+56
+00:03:16,989 --> 00:03:20,319
+chase on text that you'd wanna consumed
+by now service
+
+57
+00:03:20,319 --> 00:03:24,069
+so when we can go
+
+58
+00:03:24,069 --> 00:03:27,950
+we can respond to queries go-between
+state snag gets is
+
+59
+00:03:27,950 --> 00:03:31,360
+to convert each state into an aggregate
+to simply representation
+
+60
+00:03:31,360 --> 00:03:35,099
+and then combine those together so
+require that every counter type for
+
+61
+00:03:35,099 --> 00:03:36,230
+every metre type has
+
+62
+00:03:36,230 --> 00:03:40,280
+a way to combine was aggregates and the
+seems like a reasonable thing to do
+
+63
+00:03:40,280 --> 00:03:44,860
+these aggregate object so much simpler
+up there much simpler ski muscle bear be
+
+64
+00:03:44,860 --> 00:03:46,680
+easier to implement a way to combine
+them
+
+65
+00:03:46,680 --> 00:03:49,840
+I'm however there's a problem with this
+
+66
+00:03:49,840 --> 00:03:55,230
+approach an aftershock you may have
+picked up on it that you can't cash this
+
+67
+00:03:55,230 --> 00:03:58,330
+right if you were to you
+
+68
+00:03:58,330 --> 00:04:01,900
+cash the the projection aggregation
+ahead of time
+
+69
+00:04:01,900 --> 00:04:05,360
+you'd be losing some other data like you
+lose the temporal data
+
+70
+00:04:05,360 --> 00:04:08,959
+in that in that efficient state
+representation
+
+71
+00:04:08,959 --> 00:04:12,510
+and so you can actually respond to
+queries correctly
+
+72
+00:04:12,510 --> 00:04:17,310
+if you catch that had a time so the
+solution is the change model
+
+73
+00:04:17,310 --> 00:04:21,250
+so that you provide a way are you choir
+that there's a way to combine the
+
+74
+00:04:21,250 --> 00:04:22,530
+state's together
+
+75
+00:04:22,530 --> 00:04:25,940
+and by doing that you can actually catch
+those on
+
+76
+00:04:25,940 --> 00:04:30,580
+those combinations ahead a time any
+respond to queries almost instantly
+
+77
+00:04:30,580 --> 00:04:34,040
+and change model in this way has nothing
+benefit
+
+78
+00:04:34,040 --> 00:04:37,280
+in that you can actually do pipelining
+so instead of
+
+79
+00:04:37,280 --> 00:04:42,100
+having the requirement that all the
+incoming events have to be
+
+80
+00:04:42,100 --> 00:04:44,880
+combined directly into the database
+what's available you can actually
+
+81
+00:04:44,880 --> 00:04:47,880
+convert them into partial state and then
+combines these together because you
+
+82
+00:04:47,880 --> 00:04:48,440
+already have
+
+83
+00:04:48,440 --> 00:04:53,139
+primitive so these examples are very
+specific topper
+
+84
+00:04:53,139 --> 00:04:57,699
+but the the main takeaway is that on
+
+85
+00:04:57,699 --> 00:05:01,660
+the model the way that you treat data
+the way flow data through a system
+
+86
+00:05:01,660 --> 00:05:04,570
+I'm could mean big differences in
+performance even if its small
+
+87
+00:05:04,570 --> 00:05:06,020
+differences in the way you handle it
+
+88
+00:05:06,020 --> 00:05:09,240
+so that the small difference between I'm
+projecting
+
+89
+00:05:09,240 --> 00:05:12,340
+and then combining versus the mining and
+then projecting
+
+90
+00:05:12,340 --> 00:05:16,020
+means that queries can be responded to
+in a matter of milliseconds as opposed
+
+91
+00:05:16,020 --> 00:05:21,479
+to a matter of minutes
+
+92
+00:05:21,479 --> 00:05:24,600
+so less number two a state is hard
+
+93
+00:05:24,600 --> 00:05:29,130
+maintaining consistent and durable state
+is a very difficult problem it's one of
+
+94
+00:05:29,130 --> 00:05:31,789
+the most fundamental problems with
+computer science
+
+95
+00:05:31,789 --> 00:05:35,500
+I'm and there are a lot of tools out
+there that do this very well
+
+96
+00:05:35,500 --> 00:05:40,199
+and whenever possible you want to not
+reinvent that we'll
+
+97
+00:05:40,199 --> 00:05:43,530
+you want to offload the state into
+subsystems that
+
+98
+00:05:43,530 --> 00:05:47,380
+are designed to handle it which are
+basically database systems
+
+99
+00:05:47,380 --> 00:05:51,840
+or offload your clients
+
+100
+00:05:51,840 --> 00:05:55,130
+missus be up basic architecture other
+
+101
+00:05:55,130 --> 00:05:58,539
+the top a back-end so in the center
+there we have the
+
+102
+00:05:58,539 --> 00:06:02,900
+cluster apprentice instances that store
+all the state in the system
+
+103
+00:06:02,900 --> 00:06:06,960
+its a hardon some service Army uses
+master-slave replication use the
+
+104
+00:06:06,960 --> 00:06:08,669
+Sentinels for failover
+
+105
+00:06:08,669 --> 00:06:12,030
+does periodic snapshot ing on offsite
+backups
+
+106
+00:06:12,030 --> 00:06:15,050
+that small component of the entire
+system is
+
+107
+00:06:15,050 --> 00:06:19,440
+very well protected and uses a lot of
+features a readiness to maintain that
+
+108
+00:06:19,440 --> 00:06:23,240
+consistent state the rest the system
+
+109
+00:06:23,240 --> 00:06:27,150
+which compose a these front and back
+ends which run a number instances of the
+
+110
+00:06:27,150 --> 00:06:30,789
+public server process are completely
+stateless next to the front and back in
+
+111
+00:06:30,789 --> 00:06:32,220
+from the exact same code
+
+112
+00:06:32,220 --> 00:06:37,030
+exact same image the only difference is
+be traffic but they get sent
+
+113
+00:06:37,030 --> 00:06:40,580
+and because those are totally state was
+the only actual state
+
+114
+00:06:40,580 --> 00:06:43,650
+the house is whatever's in there working
+memory whatever prop request they're
+
+115
+00:06:43,650 --> 00:06:44,740
+working on now
+
+116
+00:06:44,740 --> 00:06:48,169
+um and those requests are always stored
+somewhere else while they're being
+
+117
+00:06:48,169 --> 00:06:49,280
+processed
+
+118
+00:06:49,280 --> 00:06:52,810
+big because at that this is very
+resistant
+
+119
+00:06:52,810 --> 00:06:56,680
+to failure so if any other fun and go
+down in the back and go down
+
+120
+00:06:56,680 --> 00:07:00,539
+it doesn't matter traffic I'll just get
+simply rerouted somewhere else
+
+121
+00:07:00,539 --> 00:07:04,979
+it also means we can very easily scale
+up and down
+
+122
+00:07:04,979 --> 00:07:08,710
+based on the the current load so if we
+
+123
+00:07:08,710 --> 00:07:12,840
+need to handle spike we can double the
+number %uh service doesn't matter
+
+124
+00:07:12,840 --> 00:07:15,860
+I'm or if at the middle in the middle of
+the night you know when there's not a
+
+125
+00:07:15,860 --> 00:07:16,460
+lot of traffic
+
+126
+00:07:16,460 --> 00:07:21,139
+we can shut down half the cost and we
+actually do code pushes in this way
+
+127
+00:07:21,139 --> 00:07:24,009
+so we have a little script that one
+machine boots up it down was leaves cone
+
+128
+00:07:24,009 --> 00:07:25,060
+starts running at
+
+129
+00:07:25,060 --> 00:07:28,530
+to do a push just upload the latest
+bundle shut down the entire cluster
+
+130
+00:07:28,530 --> 00:07:35,530
+started back up and it starts up with
+the new code
+
+131
+00:07:36,210 --> 00:07:40,750
+Solis number three this is a an
+interesting pattern
+
+132
+00:07:40,750 --> 00:07:45,270
+about that back that comes about when
+when using agreements and generators
+
+133
+00:07:45,270 --> 00:07:48,810
+ob the they work extremely well together
+especially
+
+134
+00:07:48,810 --> 00:07:55,810
+in processing pipelines data
+
+135
+00:07:57,440 --> 00:08:01,139
+so this this pattern that occurs
+allotment have a code his concept
+
+136
+00:08:01,139 --> 00:08:05,370
+a sickness iterator so basically what it
+is is you have this object
+
+137
+00:08:05,370 --> 00:08:09,720
+which acts like an iterator with a
+generator it has an input queue
+
+138
+00:08:09,720 --> 00:08:13,090
+I love a objects that its
+
+139
+00:08:13,090 --> 00:08:16,710
+processing from a a source iterator and
+as number up
+
+140
+00:08:16,710 --> 00:08:20,569
+agreements that are acting as workers
+and I'll pick you that
+
+141
+00:08:20,569 --> 00:08:25,180
+is exposed as be as the open at the
+iterator
+
+142
+00:08:25,180 --> 00:08:28,970
+and the trick is that the internal cues
+are perfect size
+
+143
+00:08:28,970 --> 00:08:32,289
+so that when you try to put something
+into a fork you are removed from an
+
+144
+00:08:32,289 --> 00:08:33,320
+empty one
+
+145
+00:08:33,320 --> 00:08:36,630
+that current agreement will block arm
+
+146
+00:08:36,630 --> 00:08:40,409
+and the one remix block what they do is
+they switch to another one immediately
+
+147
+00:08:40,409 --> 00:08:43,610
+so you can actually cheney's into a long
+series
+
+148
+00:08:43,610 --> 00:08:46,860
+love processors that will
+
+149
+00:08:46,860 --> 00:08:49,940
+basically jump around to wherever in the
+chain
+
+150
+00:08:49,940 --> 00:08:53,690
+currently requires processing and you
+can because I've the
+
+151
+00:08:53,690 --> 00:08:57,580
+the wage if it works you can actually
+hide some fairly complicated network
+
+152
+00:08:57,580 --> 00:09:00,660
+work inside these these work agreements
+
+153
+00:09:00,660 --> 00:09:03,830
+I'm and when you get the network a
+digital John somewhere else
+
+154
+00:09:03,830 --> 00:09:07,230
+so you can do real time processing on a
+stream of data
+
+155
+00:09:07,230 --> 00:09:11,089
+I without having to explicitly you to do
+four batches
+
+156
+00:09:11,089 --> 00:09:15,160
+or you synchronization between different
+points in a chain kinda happens
+
+157
+00:09:15,160 --> 00:09:19,980
+automatically
+
+158
+00:09:19,980 --> 00:09:23,769
+so what left thing wanna talk about are
+is
+
+159
+00:09:23,769 --> 00:09:26,930
+the so this is specific to see Python
+arm
+
+160
+00:09:26,930 --> 00:09:30,209
+and I'm assuming a Linux system um it
+does suffer from
+
+161
+00:09:30,209 --> 00:09:35,670
+memory fragmentation I an extra couple
+really great parks
+
+162
+00:09:35,670 --> 00:09:38,690
+earlier today about memory management in
+Python I'll
+
+163
+00:09:38,690 --> 00:09:42,240
+and I will be all that going to nearly
+as much detail I think it bears
+
+164
+00:09:42,240 --> 00:09:44,130
+repeating here
+
+165
+00:09:44,130 --> 00:09:47,300
+so fragmentation is when a process
+
+166
+00:09:47,300 --> 00:09:50,680
+keepers in a fictional used that is be I
+
+167
+00:09:50,680 --> 00:09:53,940
+operating system will report a
+
+168
+00:09:53,940 --> 00:09:58,330
+much larger in number in terms the
+amount member used then
+
+169
+00:09:58,330 --> 00:10:03,120
+the a garbage collector well member both
+be right
+
+170
+00:10:03,120 --> 00:10:07,680
+and the reason for this is that you end
+up with lots of chunks memory which are
+
+171
+00:10:07,680 --> 00:10:13,350
+not not optimally usable fragmentation
+happens bustle sees you start with the
+
+172
+00:10:13,350 --> 00:10:14,750
+keep it looks like this
+
+173
+00:10:14,750 --> 00:10:18,410
+it's perfectly allocated your
+application continues to
+
+174
+00:10:18,410 --> 00:10:23,920
+execute I'll and as prime the execution
+you're you're free up some blocks of
+
+175
+00:10:23,920 --> 00:10:25,760
+memory
+
+176
+00:10:25,760 --> 00:10:30,110
+some blocks will be allocated and at
+some point you'll want to
+
+177
+00:10:30,110 --> 00:10:34,649
+allocating object love this yellow sites
+here
+
+178
+00:10:34,649 --> 00:10:39,420
+and that object is smaller than the
+total amount of remembering
+
+179
+00:10:39,420 --> 00:10:43,060
+but because objects have to be
+contiguous memory there's no one place
+
+180
+00:10:43,060 --> 00:10:44,470
+to put it
+
+181
+00:10:44,470 --> 00:10:47,620
+so you have to what ends up happening is
+that the interpreter will have to go
+
+182
+00:10:47,620 --> 00:10:49,279
+back to the operating system
+
+183
+00:10:49,279 --> 00:10:56,279
+I'm request more keep and put it at the
+end
+
+184
+00:10:57,320 --> 00:11:00,399
+so the ways to fight fragmentation
+
+185
+00:11:00,399 --> 00:11:03,690
+you want to avoid large numbers of small
+objects
+
+186
+00:11:03,690 --> 00:11:07,540
+and because small objects tend to get
+placed wherever there is space for them
+
+187
+00:11:07,540 --> 00:11:08,310
+in the heap
+
+188
+00:11:08,310 --> 00:11:12,940
+arm and thats mostly true to some
+optimizations that the interpreter
+
+189
+00:11:12,940 --> 00:11:14,079
+lecture do for
+
+190
+00:11:14,079 --> 00:11:17,899
+for very common objects like to people's
+lists
+
+191
+00:11:17,899 --> 00:11:21,320
+but generally small objects will get
+placed arbitrarily threat the heap
+
+192
+00:11:21,320 --> 00:11:25,370
+and then when your quest that generated
+them completes
+
+193
+00:11:25,370 --> 00:11:29,050
+until get collected from arbitrary place
+
+194
+00:11:29,050 --> 00:11:33,130
+he pee in the potty a little spaces in
+this gets much worse if you're dealing
+
+195
+00:11:33,130 --> 00:11:34,880
+with a combination of
+
+196
+00:11:34,880 --> 00:11:38,000
+a few large objects in many small %ah
+just because then there's
+
+197
+00:11:38,000 --> 00:11:41,370
+never a good place to put those few
+large objects in the always having to
+
+198
+00:11:41,370 --> 00:11:44,130
+keep growing he
+
+199
+00:11:44,130 --> 00:11:48,420
+so another way to pay pregnant Asians to
+minimizing flight data
+
+200
+00:11:48,420 --> 00:11:52,459
+so less number used means less memory
+fragmented and generators like I
+
+201
+00:11:52,459 --> 00:11:53,570
+mentioned earlier are
+
+202
+00:11:53,570 --> 00:11:57,220
+a really great use for this I N
+
+203
+00:11:57,220 --> 00:12:01,649
+of a good piece of advice in general is
+whenever possible reference
+
+204
+00:12:01,649 --> 00:12:04,980
+don't copy
+
+205
+00:12:04,980 --> 00:12:09,470
+so we use another technique in Tyler on
+we will actually use iPhone
+
+206
+00:12:09,470 --> 00:12:13,950
+which for those not familiar sight on is
+a kinda hybrid C Python language Rican
+
+207
+00:12:13,950 --> 00:12:15,570
+switch between the two
+
+208
+00:12:15,570 --> 00:12:19,120
+obviously line the line abt we use I
+kinda
+
+209
+00:12:19,120 --> 00:12:22,910
+to go down to the sea level and you
+manual memory allocation on a particular
+
+210
+00:12:22,910 --> 00:12:24,899
+type of object
+
+211
+00:12:24,899 --> 00:12:31,570
+on and we been hand those objects of the
+GC and let handle it normally
+
+212
+00:12:31,570 --> 00:12:35,850
+so so you have this requests coming in
+this is a an HP quest with from Jason
+
+213
+00:12:35,850 --> 00:12:36,920
+data
+
+214
+00:12:36,920 --> 00:12:40,880
+what you would normally do is decoder
+and it would
+
+215
+00:12:40,880 --> 00:12:44,200
+generate a lot since little strings in
+little reference objects in the go
+
+216
+00:12:44,200 --> 00:12:45,600
+wherever confinement
+
+217
+00:12:45,600 --> 00:12:49,260
+someplace for them keep I what we do
+instead
+
+218
+00:12:49,260 --> 00:12:53,600
+is that we decoded insight phone arm and
+then we allocate
+
+219
+00:12:53,600 --> 00:12:57,779
+pagesize wats up memory that point back
+to
+
+220
+00:12:57,779 --> 00:13:01,149
+out Rangers up text in that original
+blog
+
+221
+00:13:01,149 --> 00:13:05,029
+data and their first pass that seems a
+little efficient because
+
+222
+00:13:05,029 --> 00:13:09,760
+you could be allocating an entire 4k
+page just hold a couple pointers
+
+223
+00:13:09,760 --> 00:13:12,899
+I'm but the the main takeaway is that
+
+224
+00:13:12,899 --> 00:13:16,740
+by putting pieces a memory that are
+
+225
+00:13:16,740 --> 00:13:20,910
+related next which other you end up when
+you end up finishing that request and
+
+226
+00:13:20,910 --> 00:13:22,010
+free memory
+
+227
+00:13:22,010 --> 00:13:25,470
+you get large continued ting contiguous
+blocks memory
+
+228
+00:13:25,470 --> 00:13:29,579
+that are freed all at once and large
+walks are more useful for storing
+
+229
+00:13:29,579 --> 00:13:32,639
+more incoming data and there is also
+much higher chance to look at released
+
+230
+00:13:32,639 --> 00:13:37,510
+back to the operating system
+
+231
+00:13:37,510 --> 00:13:41,380
+more thing wanna talk about is the
+concept of ratcheting
+
+232
+00:13:41,380 --> 00:13:44,550
+and that's kinda a pathological case a
+fragmentation
+
+233
+00:13:44,550 --> 00:13:48,290
+caused by the fact that he passed to be
+contiguous I'm in a little Astrix I
+
+234
+00:13:48,290 --> 00:13:49,449
+contiguous because that's not
+
+235
+00:13:49,449 --> 00:13:52,730
+a hundred percent true on it depends on
+
+236
+00:13:52,730 --> 00:13:56,420
+be platform in the allocator using and
+some alligators are worse than others
+
+237
+00:13:56,420 --> 00:14:02,760
+but for pipe on Linux using standard out
+here this is mostly true
+
+238
+00:14:02,760 --> 00:14:06,260
+so so you have this heap that's fairly
+efficiently allocated
+
+239
+00:14:06,260 --> 00:14:10,250
+I and you get a request that requires
+you to al Qaeda really big chunk a
+
+240
+00:14:10,250 --> 00:14:11,470
+memory see it's really big
+
+241
+00:14:11,470 --> 00:14:15,190
+is a text store so goes the operating
+system
+
+242
+00:14:15,190 --> 00:14:19,750
+request a whole bunch a heap and put it
+in there and everything's fine
+
+243
+00:14:19,750 --> 00:14:23,660
+so you prosecute continue processing
+your request and at some point some
+
+244
+00:14:23,660 --> 00:14:25,139
+background process
+
+245
+00:14:25,139 --> 00:14:28,440
+the runs and allocate some small object
+
+246
+00:14:28,440 --> 00:14:32,959
+and decide the place it right at the end
+to the
+
+247
+00:14:32,959 --> 00:14:36,370
+your quest completes it collects that
+big :love: data
+
+248
+00:14:36,370 --> 00:14:40,209
+but that little object was al Qaeda in
+the background sticks around
+
+249
+00:14:40,209 --> 00:14:43,290
+and because they're that one little
+object right at the end of the heap
+
+250
+00:14:43,290 --> 00:14:47,680
+it can shrink so you end up in a
+situation we have this really terrible
+
+251
+00:14:47,680 --> 00:14:48,490
+memory usage
+
+252
+00:14:48,490 --> 00:14:53,000
+and you can't create the operating
+system because at one point the object
+
+253
+00:14:53,000 --> 00:14:56,970
+and this is is the basic limitation up
+the way see pythons implemented
+
+254
+00:14:56,970 --> 00:15:00,010
+I'm it can't move objects around in
+memory
+
+255
+00:15:00,010 --> 00:15:04,050
+monster allocated um
+
+256
+00:15:04,050 --> 00:15:07,600
+see a E basic leaders be
+
+257
+00:15:07,600 --> 00:15:11,019
+there's no way to move it see catching
+the
+
+258
+00:15:11,019 --> 00:15:16,230
+so some ways to fight this um
+
+259
+00:15:16,230 --> 00:15:21,010
+so avoid persons objects o'clock it's a
+really common offenders here
+
+260
+00:15:21,010 --> 00:15:24,800
+um they especially in connection pools
+
+261
+00:15:24,800 --> 00:15:27,839
+so when you're applications under its
+highest load
+
+262
+00:15:27,839 --> 00:15:31,130
+that typically when it's using the most
+memory and when there's most
+
+263
+00:15:31,130 --> 00:15:35,089
+the most pressure on the connection pool
+if the pool is implemented poorly
+
+264
+00:15:35,089 --> 00:15:38,560
+it'll actually allocates a new socket at
+that point
+
+265
+00:15:38,560 --> 00:15:41,589
+it could stick it near the end they keep
+and if it does that
+
+266
+00:15:41,589 --> 00:15:45,779
+that object will never die you'll never
+be able to keep down
+
+267
+00:15:45,779 --> 00:15:49,509
+so you want to avoid person objects as
+much as possible everything should have
+
+268
+00:15:49,509 --> 00:15:50,320
+a lifetime
+
+269
+00:15:50,320 --> 00:15:53,639
+a cash is another good example here I'm
+everything in a cash
+
+270
+00:15:53,639 --> 00:15:56,769
+should have a finite lifetime you should
+always try to clear out your
+
+271
+00:15:56,769 --> 00:16:01,420
+anything cash anything that has to be
+persistent
+
+272
+00:16:01,420 --> 00:16:05,959
+should be created when the application
+starts up so soon as possible before you
+
+273
+00:16:05,959 --> 00:16:07,570
+start crossing a data
+
+274
+00:16:07,570 --> 00:16:11,279
+and by doing that you'll get pretty much
+all other objects
+
+275
+00:16:11,279 --> 00:16:15,329
+fairly compactly down near the bottom of
+the heap on C don't get this
+
+276
+00:16:15,329 --> 00:16:18,820
+issue we have long-lived objects near
+the top
+
+277
+00:16:18,820 --> 00:16:22,769
+and obviously let's the avoid letting
+the keep growing first place
+
+278
+00:16:22,769 --> 00:16:27,610
+on again less memory means less
+fragmented memory means less
+
+279
+00:16:27,610 --> 00:16:31,839
+ratchet memory
+
+280
+00:16:31,839 --> 00:16:35,519
+soil at all the blessings I had for
+today arm
+
+281
+00:16:35,519 --> 00:16:39,620
+the code for toppers upon get help if
+anybody's interested and I B
+
+282
+00:16:39,620 --> 00:16:46,180
+happy to answer any questions
+
+283
+00:16:46,180 --> 00:16:53,180
+got any questions there's the like in
+the middle here
+
+284
+00:17:02,300 --> 00:17:05,589
+so I wasn't able to make it to the
+earlier talks I'm garbage collection
+
+285
+00:17:05,589 --> 00:17:09,130
+birch you're talking about this
+fragmentation problem
+
+286
+00:17:09,130 --> 00:17:12,439
+see pipeline is the same true II
+
+287
+00:17:12,439 --> 00:17:15,760
+are you were good question I'm
+
+288
+00:17:15,760 --> 00:17:21,110
+a its not it whites fragmentation is
+always an issue in dynamic languages
+
+289
+00:17:21,110 --> 00:17:25,870
+on but pipe I is able to move things
+around in memory
+
+290
+00:17:25,870 --> 00:17:30,200
+I'm so we can do carry on a compaction
+and you don't get nearly as bad
+
+291
+00:17:30,200 --> 00:17:30,910
+performance
+
+292
+00:17:30,910 --> 00:17:36,880
+relook at nearly as bad fragmentation a
+ratcheting hi
+
+293
+00:17:36,880 --> 00:17:40,270
+our thanks for the talk um we found done
+
+294
+00:17:40,270 --> 00:17:44,130
+a little bit a benchmarking we've G
+event intensive concurrency
+
+295
+00:17:44,130 --> 00:17:47,410
+and in a very artificial
+
+296
+00:17:47,410 --> 00:17:51,150
+condoms Saints like much benchmarks I'm
+we ran into
+
+297
+00:17:51,150 --> 00:17:55,030
+like a CPU package issues so much CPU
+
+298
+00:17:55,030 --> 00:17:58,760
+that was the first thing ran into did
+you seem like you doing
+
+299
+00:17:58,760 --> 00:18:02,090
+lot concurrent requests we I G what was
+that
+
+300
+00:18:02,090 --> 00:18:05,620
+I guess the fisting you ran into stop
+denying
+
+301
+00:18:05,620 --> 00:18:10,230
+more concurrently how did you get around
+out so
+
+302
+00:18:10,230 --> 00:18:14,309
+are bottleneck was actually network i/o
+arm and for those can use cases the
+
+303
+00:18:14,309 --> 00:18:15,770
+event is great because
+
+304
+00:18:15,770 --> 00:18:19,179
+it me designed specifically for
+switching contacts on
+
+305
+00:18:19,179 --> 00:18:23,350
+I O I'm personally I found that the
+event is pretty good for any work
+
+306
+00:18:23,350 --> 00:18:24,910
+although that's not CPU bound
+
+307
+00:18:24,910 --> 00:18:28,940
+arm if you are CPU bound though it's
+actually it has a lot of problems
+
+308
+00:18:28,940 --> 00:18:30,050
+because
+
+309
+00:18:30,050 --> 00:18:34,370
+it uses a non preemptive model so you
+end up
+
+310
+00:18:34,370 --> 00:18:37,679
+you can actually end up in a in a state
+where one green light will hog the CPU
+
+311
+00:18:37,679 --> 00:18:40,280
+for a long time and that actually
+prevent anything else would happen
+
+312
+00:18:40,280 --> 00:18:40,910
+including
+
+313
+00:18:40,910 --> 00:18:44,559
+responding to requests um so G event is
+
+314
+00:18:44,559 --> 00:18:51,559
+yep rate for network found not great for
+CPU downloads thanks
+
+315
+00:18:56,310 --> 00:18:58,960
+well another questions that 12
+
+316
+00:18:58,960 --> 00:19:00,830
+thank you for for listening to talk
+

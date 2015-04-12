@@ -1,0 +1,2317 @@
+1
+00:00:01,170 --> 00:00:04,880
+I'll it's my privilege to introduce dan
+crossed on
+
+2
+00:00:04,880 --> 00:00:08,960
+with the Leapfrog prom in junior
+magnetic from Adam
+
+3
+00:00:08,960 --> 00:00:14,889
+K
+
+4
+00:00:14,889 --> 00:00:18,900
+hey everyone I'm thanks for coming out
+on my notes and other day but
+
+5
+00:00:18,900 --> 00:00:22,900
+I hope that there's going to be exciting
+and interesting for all views so
+
+6
+00:00:22,900 --> 00:00:26,180
+my name's Dan cross to I work at
+magnetic
+
+7
+00:00:26,180 --> 00:00:29,750
+I'm here today to talk about performance
+testing
+
+8
+00:00:29,750 --> 00:00:34,270
+and profiling arm but first I'd like to
+just give a little bit a background
+
+9
+00:00:34,270 --> 00:00:38,719
+about arm why this matters to us and
+sort of what my experiences with
+
+10
+00:00:38,719 --> 00:00:40,059
+performance task in profile
+
+11
+00:00:40,059 --> 00:00:43,079
+so and magnetic um
+
+12
+00:00:43,079 --> 00:00:46,410
+we work Mr online advertising space um
+
+13
+00:00:46,410 --> 00:00:50,800
+we see on a given day somewhere from
+route you may be five to 10 percent
+
+14
+00:00:50,800 --> 00:00:53,820
+US Internet traffic so we get a lot of
+requests or servers
+
+15
+00:00:53,820 --> 00:00:57,890
+I at peak times the sands up being over
+a hundred
+
+16
+00:00:57,890 --> 00:01:01,949
+sometimes a 150 year a little bit more
+thousand requests per second
+
+17
+00:01:01,949 --> 00:01:05,740
+as as you can imagine performance
+matters for quite a lot to us and
+
+18
+00:01:05,740 --> 00:01:09,600
+and to our applications arm stability
+and uptime responsiveness
+
+19
+00:01:09,600 --> 00:01:12,740
+arm
+
+20
+00:01:12,740 --> 00:01:16,100
+so that's why I'm here um you guys are
+here
+
+21
+00:01:16,100 --> 00:01:20,710
+either because you've heard that I'm
+very good speaker or because you care
+
+22
+00:01:20,710 --> 00:01:23,119
+about me want to learn more about
+performance testing
+
+23
+00:01:23,119 --> 00:01:26,900
+on the good news is I'm gonna be able to
+to deliver on one of those promises
+
+24
+00:01:26,900 --> 00:01:29,640
+I'm so here's a little bit about what
+we're gonna be talking about for the
+
+25
+00:01:29,640 --> 00:01:31,130
+next 20 minutes or so
+
+26
+00:01:31,130 --> 00:01:35,759
+arm a suspect that most people are
+working in the store web application
+
+27
+00:01:35,759 --> 00:01:37,189
+space on a focus
+
+28
+00:01:37,189 --> 00:01:40,250
+on web applications by these techniques
+are
+
+29
+00:01:40,250 --> 00:01:44,590
+pretty generally applicable to any sort
+love performance estimate you might want
+
+30
+00:01:44,590 --> 00:01:46,540
+to do for any others are about occasion
+
+31
+00:01:46,540 --> 00:01:52,270
+um look a little bit at what some other
+standard library offerings are as far as
+
+32
+00:01:52,270 --> 00:01:53,079
+Sir getting
+
+33
+00:01:53,079 --> 00:01:56,860
+profiling which is sort of in-depth
+information about how long things are
+
+34
+00:01:56,860 --> 00:01:58,430
+taking inside your application
+
+35
+00:01:58,430 --> 00:02:01,540
+and then finally will soar to close the
+loop with
+
+36
+00:02:01,540 --> 00:02:05,200
+instrumentation which is a a real time
+where performance monitoring
+
+37
+00:02:05,200 --> 00:02:08,259
+and I'll describe what I call a virtuous
+circle love
+
+38
+00:02:08,259 --> 00:02:12,849
+performance improvement arm
+
+39
+00:02:12,849 --> 00:02:16,319
+so what his performance testing a at the
+end of the day it basically boils down
+
+40
+00:02:16,319 --> 00:02:19,520
+to this: to generate a bunch of requests
+against your application
+
+41
+00:02:19,520 --> 00:02:23,780
+on what we call loading and then you
+measure how long your application takes
+
+42
+00:02:23,780 --> 00:02:25,400
+to respond to those things
+
+43
+00:02:25,400 --> 00:02:29,230
+and perhaps you care about error rates
+we do in our performance tests
+
+44
+00:02:29,230 --> 00:02:33,300
+arm and that's basically it so it's it's
+really just you throw a bunch of stuff
+
+45
+00:02:33,300 --> 00:02:35,260
+in your app and you see what actually
+happens
+
+46
+00:02:35,260 --> 00:02:38,840
+arm one thing that's really easy in that
+we
+
+47
+00:02:38,840 --> 00:02:43,170
+the use a magnetic that's a to best
+practice redeveloped is just
+
+48
+00:02:43,170 --> 00:02:46,239
+will take logs from our production
+servers arm
+
+49
+00:02:46,239 --> 00:02:49,420
+run through setup scripts to adapt them
+for load testing environment
+
+50
+00:02:49,420 --> 00:02:54,620
+and then jus replay those logs guns that
+were testing program arm
+
+51
+00:02:54,620 --> 00:02:57,720
+but actually John to head a little bit
+arm gonna take a step back so there's
+
+52
+00:02:57,720 --> 00:03:00,590
+several different types a performance
+testing that you can do against
+
+53
+00:03:00,590 --> 00:03:03,670
+when application arm today wanna talk
+about
+
+54
+00:03:03,670 --> 00:03:08,370
+the the top two which are sort of the
+arm the ones we get the most value
+
+55
+00:03:08,370 --> 00:03:12,580
+up I'm not gonna talk about spike
+testing and soak testing although those
+
+56
+00:03:12,580 --> 00:03:14,110
+are very interesting topics as well
+
+57
+00:03:14,110 --> 00:03:17,019
+and if you're interested in that sort of
+stuff I recommend doing some research
+
+58
+00:03:17,019 --> 00:03:17,720
+online
+
+59
+00:03:17,720 --> 00:03:23,739
+arm
+
+60
+00:03:23,739 --> 00:03:27,670
+so a stress test arm this is I suspect
+what most people think of when they
+
+61
+00:03:27,670 --> 00:03:28,900
+think of the phrase
+
+62
+00:03:28,900 --> 00:03:33,310
+load testing our performance testing on
+their deal with the stress test is
+
+63
+00:03:33,310 --> 00:03:37,290
+is to take your application and really
+push as hard as you can arm
+
+64
+00:03:37,290 --> 00:03:40,909
+and find the spot where break somewhere
+falls over where response times become
+
+65
+00:03:40,909 --> 00:03:41,560
+too high
+
+66
+00:03:41,560 --> 00:03:46,040
+arm typically this means during a lot of
+requests their application may be a high
+
+67
+00:03:46,040 --> 00:03:47,540
+degree of concurrency
+
+68
+00:03:47,540 --> 00:03:51,590
+I maybe you pick out those requests that
+are serve slowest her heart is for
+
+69
+00:03:51,590 --> 00:03:53,019
+application to process
+
+70
+00:03:53,019 --> 00:03:56,260
+arm the serve
+
+71
+00:03:56,260 --> 00:03:59,430
+goal here is to find a you know how much
+cum Application do before totally falls
+
+72
+00:03:59,430 --> 00:03:59,900
+over
+
+73
+00:03:59,900 --> 00:04:03,709
+on this is interesting in this can be
+exciting I'm specially if you're sort of
+
+74
+00:04:03,709 --> 00:04:06,489
+stressed as in someone else's
+application that can be a lot of fun
+
+75
+00:04:06,489 --> 00:04:10,220
+I actually think that it's not the most
+valuable so to perform in testing that
+
+76
+00:04:10,220 --> 00:04:11,019
+you can do
+
+77
+00:04:11,019 --> 00:04:14,569
+on because almost by definition when
+your application is breaking
+
+78
+00:04:14,569 --> 00:04:17,870
+armed you're not getting a very good
+picture above what's actually going on
+
+79
+00:04:17,870 --> 00:04:19,229
+inside that application
+
+80
+00:04:19,229 --> 00:04:22,979
+on PSO the one thing that I do recommend
+is to
+
+81
+00:04:22,979 --> 00:04:26,600
+to use a load test arm and the
+difference between a low test
+
+82
+00:04:26,600 --> 00:04:31,180
+and a stress test is that a low test
+you're generating some specific amount
+
+83
+00:04:31,180 --> 00:04:32,080
+of load
+
+84
+00:04:32,080 --> 00:04:36,570
+arm typically will run more tests with a
+sort of level concurrency in a number of
+
+85
+00:04:36,570 --> 00:04:38,009
+requests per second
+
+86
+00:04:38,009 --> 00:04:42,070
+that's typical of our servers and
+production arm in some cases we use a
+
+87
+00:04:42,070 --> 00:04:45,460
+slightly exaggerated amount upload it
+matter represents
+
+88
+00:04:45,460 --> 00:04:49,240
+what have we got 10 percent more traffic
+or if a couple of our servers failed in
+
+89
+00:04:49,240 --> 00:04:51,759
+the others had to take over that traffic
+
+90
+00:04:51,759 --> 00:04:54,930
+arm blood tests are yours or bread and
+butter performance as the really good
+
+91
+00:04:54,930 --> 00:04:57,020
+for capacity planning
+
+92
+00:04:57,020 --> 00:05:01,120
+arm and preserve learning how your
+system performs and as we'll see it sort
+
+93
+00:05:01,120 --> 00:05:03,479
+of fits in with his performance
+improvement
+
+94
+00:05:03,479 --> 00:05:07,699
+I'm cycle that we can get into
+
+95
+00:05:07,699 --> 00:05:12,000
+so a few other best practices that we've
+developed a magnetic over the past
+
+96
+00:05:12,000 --> 00:05:13,440
+couple years and during this
+
+97
+00:05:13,440 --> 00:05:16,460
+arm I hope these are obvious but just
+ate them
+
+98
+00:05:16,460 --> 00:05:21,380
+for the record anyway I'm arm so you
+want to isolate your performance testing
+
+99
+00:05:21,380 --> 00:05:24,610
+from any external influences that you
+know about and that you can reasonably
+
+100
+00:05:24,610 --> 00:05:26,620
+isolate your app from
+
+101
+00:05:26,620 --> 00:05:29,520
+arms what this means for us as we have a
+dedicated performance testing
+
+102
+00:05:29,520 --> 00:05:30,750
+environment
+
+103
+00:05:30,750 --> 00:05:33,820
+arm it's much smaller than our
+production environment obviously because
+
+104
+00:05:33,820 --> 00:05:34,850
+we don't have
+
+105
+00:05:34,850 --> 00:05:39,210
+sort of gobs of money to spend on it arm
+but smaller in such a way that we know
+
+106
+00:05:39,210 --> 00:05:41,580
+how to solder extrapolate from
+
+107
+00:05:41,580 --> 00:05:45,900
+performance as a result into production
+arm and we do this by sorry just scaling
+
+108
+00:05:45,900 --> 00:05:48,979
+down to the components so the
+application servers some other database
+
+109
+00:05:48,979 --> 00:05:50,190
+servers
+
+110
+00:05:50,190 --> 00:05:55,509
+arms on the login servers and and pieces
+like that
+
+111
+00:05:55,509 --> 00:05:58,860
+on the other really important thing to
+remember arm is that is very important
+
+112
+00:05:58,860 --> 00:06:00,000
+to generate loading
+
+113
+00:06:00,000 --> 00:06:03,440
+in a consistent and repeatable way arm
+
+114
+00:06:03,440 --> 00:06:07,389
+apps a
+
+115
+00:06:07,389 --> 00:06:10,569
+sorry about that %uh so a lot of people
+will
+
+116
+00:06:10,569 --> 00:06:14,690
+think you know okay arm I'm gonna set up
+a load test and I'm going to you
+
+117
+00:06:14,690 --> 00:06:17,600
+you have a pool up ten different URL's
+I'm going to just sort of picked
+
+118
+00:06:17,600 --> 00:06:18,850
+randomly from
+
+119
+00:06:18,850 --> 00:06:22,470
+and fire one off after the other arm
+that's interesting
+
+120
+00:06:22,470 --> 00:06:25,889
+but then if you run to those in a row
+they're actually not the same test and
+
+121
+00:06:25,889 --> 00:06:29,259
+so if you want to compare the results
+between those two testing runs
+
+122
+00:06:29,259 --> 00:06:33,340
+you have no sir principled way to do
+that um
+
+123
+00:06:33,340 --> 00:06:36,560
+finally when you do something like
+report from production replaying your
+
+124
+00:06:36,560 --> 00:06:38,350
+performance test environment
+
+125
+00:06:38,350 --> 00:06:42,770
+arm if you can sort automate this whole
+process and get it down ideally to us or
+
+126
+00:06:42,770 --> 00:06:44,460
+to one click testing
+
+127
+00:06:44,460 --> 00:06:47,509
+I process right one click to start the
+test
+
+128
+00:06:47,509 --> 00:06:51,340
+arm that actually means that it's its
+serve at the level
+
+129
+00:06:51,340 --> 00:06:54,910
+love a repeatability where people
+actually use it
+
+130
+00:06:54,910 --> 00:07:01,039
+and it could become part of sort of a
+daily development pretty
+
+131
+00:07:01,039 --> 00:07:04,099
+okay so um once we should have our
+
+132
+00:07:04,099 --> 00:07:08,599
+are performance testing setup arm we
+might find that things are a little too
+
+133
+00:07:08,599 --> 00:07:09,860
+far a little too slow
+
+134
+00:07:09,860 --> 00:07:13,160
+arm too fast as always good and so what
+we wanna
+
+135
+00:07:13,160 --> 00:07:16,900
+understand as you know where is it slow
+and why is it slow arm
+
+136
+00:07:16,900 --> 00:07:20,310
+so profiling assorted the answer to to
+those questions is the technique to
+
+137
+00:07:20,310 --> 00:07:21,960
+answer those questions
+
+138
+00:07:21,960 --> 00:07:25,370
+on following papon's batteries included
+omphalocele be
+
+139
+00:07:25,370 --> 00:07:28,840
+there's ways to profiling right within
+the standard library
+
+140
+00:07:28,840 --> 00:07:32,550
+arm unfortunately the documentation
+around profiling
+
+141
+00:07:32,550 --> 00:07:36,599
+is sort of not that good I and some the
+API's are also
+
+142
+00:07:36,599 --> 00:07:40,910
+pretty terrible in my opinion arm so
+wanna do is show you sort of the
+
+143
+00:07:40,910 --> 00:07:44,400
+the right way to do it or at least the
+way that I recommend to do it
+
+144
+00:07:44,400 --> 00:07:48,039
+arm and so for profiling that looks like
+this so you import the sea profile
+
+145
+00:07:48,039 --> 00:07:49,240
+module
+
+146
+00:07:49,240 --> 00:07:53,370
+arm you set up a profile or objects were
+profile object
+
+147
+00:07:53,370 --> 00:07:57,440
+you call enable on it you do some stuff
+can you call disable
+
+148
+00:07:57,440 --> 00:08:01,900
+arm each time you saw repair this enable
+and disable call
+
+149
+00:08:01,900 --> 00:08:05,740
+the profile object is going to
+accumulate more results
+
+150
+00:08:05,740 --> 00:08:09,340
+arm by timings for everything happens
+between those calls
+
+151
+00:08:09,340 --> 00:08:11,720
+comments 0 you consider sprinklers are
+on your program if there are only
+
+152
+00:08:11,720 --> 00:08:13,940
+certain sections that you want to do
+
+153
+00:08:13,940 --> 00:08:19,080
+im arm you can also obviously just sorta
+do it around the whole run a program
+
+154
+00:08:19,080 --> 00:08:23,199
+arm it would be really nice up a
+standard library offered these things as
+
+155
+00:08:23,199 --> 00:08:25,759
+your contacts manager or a decorator
+
+156
+00:08:25,759 --> 00:08:29,120
+are it doesn't but it would be fairly
+easy as you can see here too
+
+157
+00:08:29,120 --> 00:08:32,289
+disorder make that
+
+158
+00:08:32,289 --> 00:08:35,830
+arm once you collected those profound
+result and save them to a file
+
+159
+00:08:35,830 --> 00:08:40,599
+you use the key stats module two begin
+to interact with that profiling data
+
+160
+00:08:40,599 --> 00:08:43,620
+arm so the sort of simple as possible
+thing that you can do
+
+161
+00:08:43,620 --> 00:08:47,290
+look something like this: you look at
+the stats are you sort them by something
+
+162
+00:08:47,290 --> 00:08:49,860
+in this case the number of calls to each
+function
+
+163
+00:08:49,860 --> 00:08:53,430
+and then print them out
+
+164
+00:08:53,430 --> 00:08:58,459
+so what's actually see what this looks
+like
+
+165
+00:08:58,459 --> 00:09:01,830
+I okay so what I have here
+
+166
+00:09:01,830 --> 00:09:06,700
+I is a very simple low test against a
+very simple web application
+
+167
+00:09:06,700 --> 00:09:10,600
+arm and there's basically three
+different actions that we support here
+
+168
+00:09:10,600 --> 00:09:11,769
+so
+
+169
+00:09:11,769 --> 00:09:16,510
+there's a log in there's a lockout and
+there's a sort of say hello and point
+
+170
+00:09:16,510 --> 00:09:20,060
+arm and wanted to find a couple
+different behaviors that this low test
+
+171
+00:09:20,060 --> 00:09:20,910
+is gonna carry out
+
+172
+00:09:20,910 --> 00:09:23,930
+are now I know I said before that random
+is not a good choice
+
+173
+00:09:23,930 --> 00:09:27,670
+arm so please pretend that I'm not using
+random here but this is just sort of a
+
+174
+00:09:27,670 --> 00:09:30,269
+simpler way to go about it particularly
+since this is an
+
+175
+00:09:30,269 --> 00:09:33,580
+actually a real application is running
+anywhere
+
+176
+00:09:33,580 --> 00:09:37,070
+arm so one-fifth the time we're gonna
+perform an invalid login
+
+177
+00:09:37,070 --> 00:09:40,140
+the one for the timer in a login and
+logout
+
+178
+00:09:40,140 --> 00:09:43,180
+and three-fifths sixty percent of the
+time we're going to login
+
+179
+00:09:43,180 --> 00:09:49,630
+and say hello to someone so using the
+sort of third and point the application
+
+180
+00:09:49,630 --> 00:09:53,610
+arm so I can run missile test here
+
+181
+00:09:53,610 --> 00:09:57,980
+I as you can see a shorter run a couple
+times in the past lips
+
+182
+00:09:57,980 --> 00:10:01,490
+had it
+
+183
+00:10:01,490 --> 00:10:06,320
+on our run it in a loop
+
+184
+00:10:06,320 --> 00:10:09,050
+I'm so we can see that it's are making
+summer class that's the longer the
+
+185
+00:10:09,050 --> 00:10:10,550
+application above
+
+186
+00:10:10,550 --> 00:10:15,250
+okay women fifty your question four
+seconds the average latency the average
+
+187
+00:10:15,250 --> 00:10:17,320
+time it took for the request to come
+back
+
+188
+00:10:17,320 --> 00:10:22,170
+I is a few milliseconds on but the
+median is three male seconds
+
+189
+00:10:22,170 --> 00:10:25,110
+I'm so immediately what I'm seeing here
+is that there's something going on right
+
+190
+00:10:25,110 --> 00:10:26,510
+so the average
+
+191
+00:10:26,510 --> 00:10:29,769
+as much higher than me dinner or vice
+versa that means that there's some sort
+
+192
+00:10:29,769 --> 00:10:31,899
+of an imbalance and how long the
+different
+
+193
+00:10:31,899 --> 00:10:34,910
+apart some application take
+
+194
+00:10:34,910 --> 00:10:41,910
+arm sock with the app a Python shell
+
+195
+00:10:52,899 --> 00:10:56,470
+arm and has run a coalition the previous
+slide okay so
+
+196
+00:10:56,470 --> 00:11:00,309
+a what we can see is that even for a
+trivial applications applications like
+
+197
+00:11:00,309 --> 00:11:03,749
+maybe 25 lines long it collects a lot of
+data
+
+198
+00:11:03,749 --> 00:11:07,100
+I'm there's a lot of noise in here so we
+can see that there's something going on
+
+199
+00:11:07,100 --> 00:11:11,039
+with basic HTTP Server Error there's
+some CFI going on
+
+200
+00:11:11,039 --> 00:11:13,859
+I don't really know how to make sense of
+this it doesn't fit on the projection
+
+201
+00:11:13,859 --> 00:11:14,529
+screen
+
+202
+00:11:14,529 --> 00:11:18,910
+arm so fortunately the keys that model
+although it doesn't really documented
+
+203
+00:11:18,910 --> 00:11:20,989
+very well has ways to sort of narrow
+
+204
+00:11:20,989 --> 00:11:24,839
+I'm filter this down arms to the first
+thing I might do
+
+205
+00:11:24,839 --> 00:11:28,709
+arm is provide a filter to the Prince
+dats function where I can say
+
+206
+00:11:28,709 --> 00:11:32,160
+I'm only interested in in certain things
+I'm in this case I'm actually only
+
+207
+00:11:32,160 --> 00:11:33,039
+interested
+
+208
+00:11:33,039 --> 00:11:36,119
+in things that are in the file called
+web app top I
+
+209
+00:11:36,119 --> 00:11:40,129
+how much is the name of this application
+arm so here we can see the three
+
+210
+00:11:40,129 --> 00:11:42,689
+different and points how many times
+which ones called
+
+211
+00:11:42,689 --> 00:11:45,949
+a the total amount of time that was
+spent
+
+212
+00:11:45,949 --> 00:11:49,199
+arm calling those functions up
+
+213
+00:11:49,199 --> 00:11:53,189
+so that a lot of time spent in the body
+and those functions and that divided by
+
+214
+00:11:53,189 --> 00:11:54,149
+the number calls
+
+215
+00:11:54,149 --> 00:11:57,720
+and the next column is the total amount
+of time spent in that function plus all
+
+216
+00:11:57,720 --> 00:11:58,409
+the things that
+
+217
+00:11:58,409 --> 00:12:01,629
+it called and then that divided by the
+number calls
+
+218
+00:12:01,629 --> 00:12:05,600
+arm so it's pretty obvious there's
+something going on here with the login
+
+219
+00:12:05,600 --> 00:12:06,289
+function
+
+220
+00:12:06,289 --> 00:12:09,350
+arm so how can we find out what that
+actually is and what's causing your apt
+
+221
+00:12:09,350 --> 00:12:10,049
+to be slow
+
+222
+00:12:10,049 --> 00:12:13,339
+arm instead of calling Prince stats
+
+223
+00:12:13,339 --> 00:12:16,459
+we can do print holly is
+
+224
+00:12:16,459 --> 00:12:19,509
+in other words everything this function
+is called
+
+225
+00:12:19,509 --> 00:12:25,669
+arm and as a filter on going to just
+basically copy exactly that
+
+226
+00:12:25,669 --> 00:12:29,369
+arm and pass then
+
+227
+00:12:29,369 --> 00:12:36,369
+but
+
+228
+00:12:37,860 --> 00:12:40,790
+it's just right this
+
+229
+00:12:40,790 --> 00:12:42,060
+there
+
+230
+00:12:42,060 --> 00:12:47,320
+arm so now I think we can finalize or to
+see what's actually going on what's
+
+231
+00:12:47,320 --> 00:12:50,260
+causing the imbalance and performance
+and its applications about logging
+
+232
+00:12:50,260 --> 00:12:52,149
+function is doing something with the
+crypt
+
+233
+00:12:52,149 --> 00:12:56,750
+arm be crips up for those who don't know
+about it is an hour then thats
+
+234
+00:12:56,750 --> 00:13:00,889
+actually designed to be slow which is
+why I chose it for this demo arm
+
+235
+00:13:00,889 --> 00:13:04,240
+the way it works is it basically will
+take your password and sorta repeatedly
+
+236
+00:13:04,240 --> 00:13:04,769
+hasher
+
+237
+00:13:04,769 --> 00:13:08,760
+some enormous number of times ominous
+designed to be slow to make it harder to
+
+238
+00:13:08,760 --> 00:13:09,300
+crack
+
+239
+00:13:09,300 --> 00:13:12,300
+arm but I thought it made a a nice hors
+d'oeuvres example
+
+240
+00:13:12,300 --> 00:13:16,560
+arm so some of the other things that are
+good to know about the peace that model
+
+241
+00:13:16,560 --> 00:13:18,130
+that you'll definitely want to
+
+242
+00:13:18,130 --> 00:13:21,790
+to sort of having your from your pocket
+when you're working with this
+
+243
+00:13:21,790 --> 00:13:26,639
+arm the print methods there are 3 items
+are printed at Sprint holly is
+
+244
+00:13:26,639 --> 00:13:31,269
+I we've seen by those imprint callers
+arm which is everyone who was called
+
+245
+00:13:31,269 --> 00:13:34,829
+a certain function on so you can see
+what that looks like
+
+246
+00:13:34,829 --> 00:13:38,050
+say hash
+
+247
+00:13:38,050 --> 00:13:43,959
+PW I'm so that we can see about Ashley W
+function is only being called from login
+
+248
+00:13:43,959 --> 00:13:47,269
+arm so these things Baltic strings
+
+249
+00:13:47,269 --> 00:13:50,660
+that act as filters in with bill filter
+is basically everything that shows up in
+
+250
+00:13:50,660 --> 00:13:51,890
+that rightmost column
+
+251
+00:13:51,890 --> 00:13:55,040
+arms which typically is the path and
+file name
+
+252
+00:13:55,040 --> 00:13:59,880
+arm up the function that's being timed
+um
+
+253
+00:13:59,880 --> 00:14:04,170
+you can also give them a a number which
+says a
+
+254
+00:14:04,170 --> 00:14:07,820
+you know only print but top and have
+something so resort by calls
+
+255
+00:14:07,820 --> 00:14:11,360
+and print the top 15
+
+256
+00:14:11,360 --> 00:14:15,870
+print stats on then it's good just
+restrict with a prince out to
+
+257
+00:14:15,870 --> 00:14:19,350
+only 15 rows most I'm you can sort of
+combined these things together
+
+258
+00:14:19,350 --> 00:14:24,050
+arm I've been sorting by the number of
+calls so far but there's a few other
+
+259
+00:14:24,050 --> 00:14:24,949
+things here that are
+
+260
+00:14:24,949 --> 00:14:28,000
+but I use pre frequently so cumulative
+
+261
+00:14:28,000 --> 00:14:31,269
+asserts by the column here that is
+labeled hume time
+
+262
+00:14:31,269 --> 00:14:35,069
+on what you have to pay out carefully
+arm
+
+263
+00:14:35,069 --> 00:14:38,600
+and so as you can see it or sort by that
+column arm
+
+264
+00:14:38,600 --> 00:14:42,649
+it doesn't in all cases take the name of
+the column
+
+265
+00:14:42,649 --> 00:14:46,639
+as a value that you can sort by in fact
+there's a list of like
+
+266
+00:14:46,639 --> 00:14:51,230
+28 different specific abbreviations and
+prefix is that it will accept that you
+
+267
+00:14:51,230 --> 00:14:53,279
+can sort it look up if you take into
+this model
+
+268
+00:14:53,279 --> 00:14:56,510
+what I've done what I recommend as
+disorder play with it
+
+269
+00:14:56,510 --> 00:14:59,600
+eventually learn what works and adults
+or become habitual for you
+
+270
+00:14:59,600 --> 00:15:02,870
+so your for instance 0
+
+271
+00:15:02,870 --> 00:15:06,230
+smaller okay
+
+272
+00:15:06,230 --> 00:15:12,350
+Sonic is actually does work arm let's
+see is anything else I wanted to say
+
+273
+00:15:12,350 --> 00:15:19,350
+about profiling no I think that's good
+
+274
+00:15:24,580 --> 00:15:29,160
+so arm what profile is going to tell us
+is why our application is slow
+
+275
+00:15:29,160 --> 00:15:32,720
+arm so performance testing load testing
+and stress testing will tell us
+
+276
+00:15:32,720 --> 00:15:36,070
+that it is slow arm profiling
+
+277
+00:15:36,070 --> 00:15:41,060
+will tell us why it's slow release where
+it's as we saw here if you don't know
+
+278
+00:15:41,060 --> 00:15:44,090
+the details would be cryptic might not
+be obvious why that's much slower than
+
+279
+00:15:44,090 --> 00:15:45,140
+the rest the code
+
+280
+00:15:45,140 --> 00:15:49,140
+on its very good personal identifying
+areas for optimization
+
+281
+00:15:49,140 --> 00:15:52,640
+arm in fact I'd recommend actually not
+optimizing anything
+
+282
+00:15:52,640 --> 00:15:57,080
+into your profile didn't proved that a
+it is called very frequently
+
+283
+00:15:57,080 --> 00:16:04,080
+and be that it actually is slowing is
+sort of a target for improvement arm
+
+284
+00:16:04,390 --> 00:16:08,190
+one other thing that a we'll do a
+magnetic is
+
+285
+00:16:08,190 --> 00:16:12,340
+in our performance testing environment
+arm there's a future flight that we can
+
+286
+00:16:12,340 --> 00:16:15,430
+send your application that will
+basically toggle profiling are off
+
+287
+00:16:15,430 --> 00:16:19,100
+so that same one click on performance
+testing run
+
+288
+00:16:19,100 --> 00:16:23,150
+we can use to trigger a profiling run it
+all clicked profound results and
+
+289
+00:16:23,150 --> 00:16:26,700
+basically save that file summer for us
+to analyze after the fact
+
+290
+00:16:26,700 --> 00:16:32,280
+so that was the
+
+291
+00:16:32,280 --> 00:16:35,790
+standard library profiling model arm
+
+292
+00:16:35,790 --> 00:16:39,130
+there are many other profiles that are
+out there on third-party profilers
+
+293
+00:16:39,130 --> 00:16:39,550
+there's
+
+294
+00:16:39,550 --> 00:16:42,650
+to you that I want to call out today %uh
+the first
+
+295
+00:16:42,650 --> 00:16:47,330
+is one called line profiler on the way
+the wind profiler works is it gives you
+
+296
+00:16:47,330 --> 00:16:49,620
+a decorator that you can wrap around a
+function
+
+297
+00:16:49,620 --> 00:16:53,590
+arm and then it's going to measures or
+literally a huge line in that function
+
+298
+00:16:53,590 --> 00:16:55,490
+how many times that line was called
+
+299
+00:16:55,490 --> 00:17:00,030
+on how long it took to execute that line
+some cases where
+
+300
+00:17:00,030 --> 00:17:02,980
+profile herbs or tell you that a
+function is slow but you don't
+
+301
+00:17:02,980 --> 00:17:05,449
+understand why it's slow this can be a
+good way
+
+302
+00:17:05,449 --> 00:17:09,650
+to dig in a little bit further arm and
+secondly
+
+303
+00:17:09,650 --> 00:17:13,820
+there's an alternative provider called
+gappy arm
+
+304
+00:17:13,820 --> 00:17:17,900
+which has a couple love me a additions
+to be on what the standard library
+
+305
+00:17:17,900 --> 00:17:21,329
+provide so first is that it lets you
+profile
+
+306
+00:17:21,329 --> 00:17:26,380
+arm cold across multiple threads of your
+friends and your application
+
+307
+00:17:26,380 --> 00:17:29,420
+arm yeah people actually capture
+providing results
+
+308
+00:17:29,420 --> 00:17:33,650
+on because that executing on any thread
+arm
+
+309
+00:17:33,650 --> 00:17:38,440
+and additionally it will let you choose
+whether you want to measures or wall
+
+310
+00:17:38,440 --> 00:17:39,490
+clock time:
+
+311
+00:17:39,490 --> 00:17:43,750
+or CPU clocked on arm so in most cases
+
+312
+00:17:43,750 --> 00:17:47,990
+wall clock time is what you actually
+want if you want to sort of disregard
+
+313
+00:17:47,990 --> 00:17:48,520
+certain
+
+314
+00:17:48,520 --> 00:17:52,220
+external influences like how long a napi
+took to respond
+
+315
+00:17:52,220 --> 00:17:57,120
+during this particular profound run than
+the CPU time is is really want the
+
+316
+00:17:57,120 --> 00:17:59,920
+measures or how much time is spent in
+your code rather than
+
+317
+00:17:59,920 --> 00:18:05,470
+waiting on the network or waiting on the
+database or something like that arm
+
+318
+00:18:05,470 --> 00:18:09,100
+mine profiler the output is just thing
+that it prints at you
+
+319
+00:18:09,100 --> 00:18:12,810
+arm yeah people actually save the
+profound results in the same format as
+
+320
+00:18:12,810 --> 00:18:15,980
+see profile does seek inspected using
+the peace that model
+
+321
+00:18:15,980 --> 00:18:22,760
+I in the same way as we just
+demonstrated I okay
+
+322
+00:18:22,760 --> 00:18:26,310
+so the next thing i wanna talk about it
+instrumentation arm
+
+323
+00:18:26,310 --> 00:18:29,890
+this can be more two different things um
+what I mean here specifically
+
+324
+00:18:29,890 --> 00:18:33,060
+is a certain type of performance
+instrumentation
+
+325
+00:18:33,060 --> 00:18:36,730
+armbar you actually add code your
+application in order to get
+
+326
+00:18:36,730 --> 00:18:42,280
+absorb performance metrics out a bit so
+what we do a magnetic as we use
+
+327
+00:18:42,280 --> 00:18:43,700
+something called stats d
+
+328
+00:18:43,700 --> 00:18:46,920
+arm and what that does is it gives you
+
+329
+00:18:46,920 --> 00:18:50,120
+a serve named time series metrics
+
+330
+00:18:50,120 --> 00:18:53,660
+us so I came I can go in and say I want
+to count I
+
+331
+00:18:53,660 --> 00:18:56,960
+how many times this function is called
+are how long it took
+
+332
+00:18:56,960 --> 00:18:59,960
+each time I call that function arm
+
+333
+00:18:59,960 --> 00:19:03,950
+Saturday the
+
+334
+00:19:03,950 --> 00:19:08,280
+and then the syrup community of tools
+that exist rounded I'm also let you sort
+
+335
+00:19:08,280 --> 00:19:08,880
+of graph
+
+336
+00:19:08,880 --> 00:19:12,220
+and computer and compare this data arm
+
+337
+00:19:12,220 --> 00:19:15,730
+look at you know maybe a week ago verses
+today on you can
+
+338
+00:19:15,730 --> 00:19:21,190
+combine it so you can say arm you can
+divide to metric so if you have
+
+339
+00:19:21,190 --> 00:19:24,580
+as we do an ad space will have a certain
+number times that we bid
+
+340
+00:19:24,580 --> 00:19:28,960
+as are numb times that we win arm a
+particular ad then we can compete to win
+
+341
+00:19:28,960 --> 00:19:31,080
+rate just by dividing those two metrics
+
+342
+00:19:31,080 --> 00:19:34,430
+on that has become sort of a valuable
+tool both for
+
+343
+00:19:34,430 --> 00:19:37,530
+performance monitoring production but
+also for to
+
+344
+00:19:37,530 --> 00:19:40,850
+business monitoring so if we see that
+that ray Cooper down
+
+345
+00:19:40,850 --> 00:19:44,760
+that might mean that we have a you know
+some situation that we need to
+
+346
+00:19:44,760 --> 00:19:45,460
+investigate
+
+347
+00:19:45,460 --> 00:19:48,850
+I'm possibly an engineering on the
+engineering team and possibly another
+
+348
+00:19:48,850 --> 00:19:55,480
+two
+
+349
+00:19:55,480 --> 00:19:58,590
+so this is what are musings that she
+looks like
+
+350
+00:19:58,590 --> 00:20:02,179
+for timing functions there's just a
+handy decorator that you can wrap around
+
+351
+00:20:02,179 --> 00:20:03,260
+your function
+
+352
+00:20:03,260 --> 00:20:06,160
+and that's gonna log basically every
+time this function is called how long it
+
+353
+00:20:06,160 --> 00:20:08,160
+took
+
+354
+00:20:08,160 --> 00:20:11,630
+are meant for counters for those how
+often did something happen
+
+355
+00:20:11,630 --> 00:20:15,360
+army use the stats do that incoming call
+arm
+
+356
+00:20:15,360 --> 00:20:17,960
+if you're just going to buy one you
+don't need actually have that argument
+
+357
+00:20:17,960 --> 00:20:20,580
+here but I've shown it just for
+completeness
+
+358
+00:20:20,580 --> 00:20:24,370
+arm so what's happening behind the
+scenes here is that every time we call
+
+359
+00:20:24,370 --> 00:20:27,530
+into stats tea into one of these
+insurance arm
+
+360
+00:20:27,530 --> 00:20:31,179
+its firing a you keep active of to you
+another service that's running on the
+
+361
+00:20:31,179 --> 00:20:32,710
+same shem
+
+362
+00:20:32,710 --> 00:20:36,370
+arm and the way it's coded in the way
+it's designed
+
+363
+00:20:36,370 --> 00:20:40,260
+is too sore to minimize the impact to
+your actual running application
+
+364
+00:20:40,260 --> 00:20:43,450
+I every time this is called so it's it's
+something that a
+
+365
+00:20:43,450 --> 00:20:47,350
+not only is it safe to serve have on
+production I'm it's recommended to have
+
+366
+00:20:47,350 --> 00:20:53,120
+it on a production is designed for that
+sort of Use Case
+
+367
+00:20:53,120 --> 00:20:56,190
+arm and I actually have sort of a demo
+of this but just to give a
+
+368
+00:20:56,190 --> 00:20:59,250
+a sense for what it feels like once you
+have these metrics
+
+369
+00:20:59,250 --> 00:21:03,290
+arms here's a graph love the number of
+requests per second that we had
+
+370
+00:21:03,290 --> 00:21:06,630
+this was I think earlier today arm
+
+371
+00:21:06,630 --> 00:21:10,830
+here we've actually serve subdivided
+this this one time series metric
+
+372
+00:21:10,830 --> 00:21:13,990
+into two different graphs here's one is
+for East Coast data center and one is
+
+373
+00:21:13,990 --> 00:21:17,470
+for West Coast
+
+374
+00:21:17,470 --> 00:21:21,190
+arm and here's a sort of the result to
+that timing function arm
+
+375
+00:21:21,190 --> 00:21:24,740
+so sorta looking we don't happen on the
+same side here but
+
+376
+00:21:24,740 --> 00:21:28,300
+looking at these two you can see that
+you know there's a relationship between
+
+377
+00:21:28,300 --> 00:21:29,600
+his two metrics
+
+378
+00:21:29,600 --> 00:21:32,850
+as a number for press per second goes up
+%uh so does the amount of time it takes
+
+379
+00:21:32,850 --> 00:21:35,110
+for us to actually service that request
+
+380
+00:21:35,110 --> 00:21:38,320
+I was not particularly surprising but
+it's good to actually be able to sort of
+
+381
+00:21:38,320 --> 00:21:39,360
+see that
+
+382
+00:21:39,360 --> 00:21:42,850
+and know what your applications doing
+
+383
+00:21:42,850 --> 00:21:45,970
+so instrumentation much to learn you
+know what's normal for my application
+
+384
+00:21:45,970 --> 00:21:48,370
+how many requests to actually get
+
+385
+00:21:48,370 --> 00:21:51,780
+how long do they typically take arm
+
+386
+00:21:51,780 --> 00:21:56,300
+hours that's the package as a bonus also
+let us alert about this thing so
+
+387
+00:21:56,300 --> 00:22:00,880
+typically work or not I'm staring at
+these day today are all day long rather
+
+388
+00:22:00,880 --> 00:22:05,470
+arm was or learn for particular metric
+what looks good and what looks healthy
+
+389
+00:22:05,470 --> 00:22:10,800
+arm and set alerts so for instance if
+the 95th percentile request I'm
+
+390
+00:22:10,800 --> 00:22:14,400
+grows above I think 50 milliseconds
+where we have our alerts at
+
+391
+00:22:14,400 --> 00:22:17,679
+on for more than a couple minutes it'll
+actually shoot an email to us and no to
+
+392
+00:22:17,679 --> 00:22:19,620
+fire on covert Asian
+
+393
+00:22:19,620 --> 00:22:23,070
+arm there could be many reasons why that
+situation is happening but at least now
+
+394
+00:22:23,070 --> 00:22:24,390
+we know about it
+
+395
+00:22:24,390 --> 00:22:27,520
+ongoing investigative
+
+396
+00:22:27,520 --> 00:22:31,830
+arm instrumentation also is it serves as
+sort of a backstop particularly like
+
+397
+00:22:31,830 --> 00:22:34,040
+after a new code release
+
+398
+00:22:34,040 --> 00:22:38,100
+arm you know that thing which I did what
+I thought was going to make things
+
+399
+00:22:38,100 --> 00:22:39,530
+faster
+
+400
+00:22:39,530 --> 00:22:42,850
+is it actually making things faster are
+we actually handling more question
+
+401
+00:22:42,850 --> 00:22:43,950
+production
+
+402
+00:22:43,950 --> 00:22:48,620
+arm the fastest way to know is is just
+by looking at your stats the dashboard
+
+403
+00:22:48,620 --> 00:22:54,500
+and pulling up a metric and see if it's
+actually true
+
+404
+00:22:54,500 --> 00:22:57,520
+um so finally now I think we have all
+the pieces to to put together the
+
+405
+00:22:57,520 --> 00:22:59,520
+virtuous cycle so we have
+
+406
+00:22:59,520 --> 00:23:03,120
+our instrumentation and production arm
+which is going to tell us
+
+407
+00:23:03,120 --> 00:23:06,550
+basically when we need to look deeper
+and when we need to optimize
+
+408
+00:23:06,550 --> 00:23:09,429
+I mean that's when production is to
+slower when we're not handling number
+
+409
+00:23:09,429 --> 00:23:11,640
+for bus that we need to
+
+410
+00:23:11,640 --> 00:23:15,340
+arm we have load tests and maybe in some
+cases stress tests which will help us
+
+411
+00:23:15,340 --> 00:23:16,440
+sort of
+
+412
+00:23:16,440 --> 00:23:19,590
+isolate the problem in be able to
+reproduce it so we can study and
+
+413
+00:23:19,590 --> 00:23:21,650
+understand what's going on
+
+414
+00:23:21,650 --> 00:23:25,330
+army profiling which is going to let us
+sort of dig really deep in find the
+
+415
+00:23:25,330 --> 00:23:26,410
+actual underlying
+
+416
+00:23:26,410 --> 00:23:31,270
+recalls arm and then we have ourselves
+right programmers and we can actually go
+
+417
+00:23:31,270 --> 00:23:31,890
+and
+
+418
+00:23:31,890 --> 00:23:35,590
+deal with that code and optimizes or
+rewrite it if it needs to be or
+
+419
+00:23:35,590 --> 00:23:39,110
+at cashing I'm whatever the right
+technique is depending on what that
+
+420
+00:23:39,110 --> 00:23:41,490
+recalls problem is that we found
+
+421
+00:23:41,490 --> 00:23:44,440
+on that we roll it out in production we
+use our instrumentation and are
+
+422
+00:23:44,440 --> 00:23:49,970
+monitoring production to make sure that
+actually does what we wanted to do
+
+423
+00:23:49,970 --> 00:23:56,970
+thanks everyone
+
+424
+00:24:00,380 --> 00:24:00,730
+as
+
+425
+00:24:00,730 --> 00:24:07,730
+anyone have any questions
+
+426
+00:24:14,220 --> 00:24:16,240
+you talked about
+
+427
+00:24:16,240 --> 00:24:20,010
+like so sorry first well thats tend to
+have a lot of lightning
+
+428
+00:24:20,010 --> 00:24:23,669
+parts like maybe there's a TV caller
+there's some key-value story reading
+
+429
+00:24:23,669 --> 00:24:24,320
+from
+
+430
+00:24:24,320 --> 00:24:28,049
+how do you serve minimize that when you
+doing from assisting how to make sure
+
+431
+00:24:28,049 --> 00:24:29,260
+that those factors
+
+432
+00:24:29,260 --> 00:24:33,650
+don't impactor test yes so the question
+is
+
+433
+00:24:33,650 --> 00:24:38,710
+on how to howie take some compile a
+database or key value cash
+
+434
+00:24:38,710 --> 00:24:41,710
+and make sure that we've sort of
+isolated um
+
+435
+00:24:41,710 --> 00:24:46,830
+in Quincy might have on our performance
+test I'm so there's there's
+
+436
+00:24:46,830 --> 00:24:50,710
+for two parts to the answers the first
+is um in our performance testing
+
+437
+00:24:50,710 --> 00:24:52,059
+environment we have
+
+438
+00:24:52,059 --> 00:24:55,440
+a copy of it so it's not handling any
+load other than what's coming from the
+
+439
+00:24:55,440 --> 00:24:56,370
+performance test
+
+440
+00:24:56,370 --> 00:25:01,870
+arm and the other is that it is actually
+a part of the application and so if in
+
+441
+00:25:01,870 --> 00:25:04,169
+your performance testing environment I
+
+442
+00:25:04,169 --> 00:25:07,490
+maybe you're testing a new version that
+you haven't ruled out to production yet
+
+443
+00:25:07,490 --> 00:25:12,230
+if that's too slow and too slow because
+your overwhelming memcached let's say
+
+444
+00:25:12,230 --> 00:25:15,280
+but that's actually really important to
+find out about that before you roll it
+
+445
+00:25:15,280 --> 00:25:17,130
+out and production arm
+
+446
+00:25:17,130 --> 00:25:20,620
+so to a certain extent you actually do
+want the influence of it in the results
+
+447
+00:25:20,620 --> 00:25:22,000
+and performance test because
+
+448
+00:25:22,000 --> 00:25:29,000
+at how things actually do run in the
+real world for a
+
+449
+00:25:30,730 --> 00:25:35,780
+loading up the results from c:\program
+
+450
+00:25:35,780 --> 00:25:39,630
+as one point out that to Kohls runs Nick
+run
+
+451
+00:25:39,630 --> 00:25:43,250
+who actually had help you visualize here
+
+452
+00:25:43,250 --> 00:25:46,990
+age it was a square metre going window
+handle
+
+453
+00:25:46,990 --> 00:25:51,090
+like is it quick overview what is
+actually taking the most part time
+
+454
+00:25:51,090 --> 00:25:51,690
+individual
+
+455
+00:25:51,690 --> 00:25:55,059
+fashion yahoo.com every ship it to
+
+456
+00:25:55,059 --> 00:25:58,450
+I've looked around saying run a little
+bit I've actually
+
+457
+00:25:58,450 --> 00:26:01,900
+a rather my preferences is to be to work
+with text
+
+458
+00:26:01,900 --> 00:26:05,309
+common or more comfortable there but I'm
+glad you brought it up and I i should
+
+459
+00:26:05,309 --> 00:26:08,630
+have put in the sides just so folks can
+find it some
+
+460
+00:26:08,630 --> 00:26:13,250
+I had a question on have you ever heard
+talk all our mechanized
+
+461
+00:26:13,250 --> 00:26:16,460
+for Python and what is your opinion
+other arm
+
+462
+00:26:16,460 --> 00:26:20,440
+mechanize is it that's a load generation
+we're testing tool
+
+463
+00:26:20,440 --> 00:26:24,059
+I arm I've never actually used it arm
+
+464
+00:26:24,059 --> 00:26:29,010
+so I have no opinion about it in
+particular um what I can say is that
+
+465
+00:26:29,010 --> 00:26:32,150
+a for our use case at least um
+
+466
+00:26:32,150 --> 00:26:35,490
+were a little bit different so we're
+dealing with lots of requests but
+
+467
+00:26:35,490 --> 00:26:36,630
+there's no sort so
+
+468
+00:26:36,630 --> 00:26:40,650
+sessions or anything in our applications
+each request is totally independent on
+
+469
+00:26:40,650 --> 00:26:43,309
+which makes it really easy for us to do
+that thing that I recommended which is
+
+470
+00:26:43,309 --> 00:26:45,360
+just taking production logs and replay
+mom
+
+471
+00:26:45,360 --> 00:26:48,929
+arm we can basically take large for any
+server %uh
+
+472
+00:26:48,929 --> 00:26:52,610
+just sir quickly reformat the data arm
+
+473
+00:26:52,610 --> 00:26:56,530
+and we throw it into you know the
+fastest see you are testing tool that we
+
+474
+00:26:56,530 --> 00:26:57,200
+can find
+
+475
+00:26:57,200 --> 00:27:01,250
+arm Tucson minimize the influence a
+below testing tool on the results
+
+476
+00:27:01,250 --> 00:27:05,770
+arm but I i've as far as mechanized as
+if you have never worked with it thanks
+
+477
+00:27:05,770 --> 00:27:11,270
+beat-up I wanted to ask if you recommend
+any load testing
+
+478
+00:27:11,270 --> 00:27:14,280
+up by then based tools um
+
+479
+00:27:14,280 --> 00:27:17,580
+so do I recommend any Python baseline
+testing tools um
+
+480
+00:27:17,580 --> 00:27:20,809
+as a researcher saying so for our
+application the
+
+481
+00:27:20,809 --> 00:27:24,250
+amount of clothing to generate is
+actually arm
+
+482
+00:27:24,250 --> 00:27:29,330
+probably more than we could easily
+generate from Python so we use
+
+483
+00:27:29,330 --> 00:27:33,429
+aren't actually a custom testing tool
+that's written in C I'm wrapping with
+
+484
+00:27:33,429 --> 00:27:34,100
+curls
+
+485
+00:27:34,100 --> 00:27:38,020
+it's just sort of the smallest amount of
+code you can write to make libcurl
+
+486
+00:27:38,020 --> 00:27:39,409
+actually make a request
+
+487
+00:27:39,409 --> 00:27:43,440
+are now that said the part of our
+testing environment
+
+488
+00:27:43,440 --> 00:27:48,240
+um we use bees with machine guns which
+is a python tool and what that does is
+
+489
+00:27:48,240 --> 00:27:49,750
+basically got Amazon
+
+490
+00:27:49,750 --> 00:27:53,919
+a spin up some number of machines and
+then launched protests from all of them
+
+491
+00:27:53,919 --> 00:27:57,549
+arm so you can generate a lot of load
+from a lot of different machines
+
+492
+00:27:57,549 --> 00:27:59,380
+basically from one command and so that's
+
+493
+00:27:59,380 --> 00:28:06,380
+I actually really important part of our
+culture me better
+
+494
+00:28:07,950 --> 00:28:08,760
+act things around
+

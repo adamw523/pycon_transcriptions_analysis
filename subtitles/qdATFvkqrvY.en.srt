@@ -1,0 +1,2128 @@
+1
+00:00:14,370 --> 00:00:14,719
+make
+
+2
+00:00:14,719 --> 00:00:17,210
+nom Gartner 1
+
+3
+00:00:17,210 --> 00:00:21,300
+are you %ah get so we have
+
+4
+00:00:21,300 --> 00:00:25,239
+we have two very exciting talks we have
+two arm hardware
+
+5
+00:00:25,239 --> 00:00:28,509
+our talks in a row in this room so you
+you probably wanna
+
+6
+00:00:28,509 --> 00:00:31,949
+stick around are and starting this blog
+we have
+
+7
+00:00:31,949 --> 00:00:36,180
+opera some homes I with his stock
+lending art technology like
+
+8
+00:00:36,180 --> 00:00:39,820
+bite them for an active in real time LED
+insulations
+
+9
+00:00:39,820 --> 00:00:46,820
+let's give a hand to present right lol
+thanks for coming out
+
+10
+00:00:49,250 --> 00:00:54,390
+term means Preston I do few Python thing
+they do some cloudy things
+
+11
+00:00:54,390 --> 00:00:59,410
+and I have sort of a closeted artistic
+side that I'm getting some love you have
+
+12
+00:00:59,410 --> 00:01:03,190
+some interest in in Arden created and
+actually argue that almost everyone here
+
+13
+00:01:03,190 --> 00:01:06,490
+icon is is a creative person because
+code ultimately is
+
+14
+00:01:06,490 --> 00:01:12,270
+is a creative process so the Wyoming
+antibodies in in the answer super simple
+
+15
+00:01:12,270 --> 00:01:13,420
+it's because for
+
+16
+00:01:13,420 --> 00:01:17,250
+forever we've been fascinated by twinkly
+lights were there looking at the night
+
+17
+00:01:17,250 --> 00:01:18,080
+sky
+
+18
+00:01:18,080 --> 00:01:21,250
+staring at firefight in a forest
+assertive
+
+19
+00:01:21,250 --> 00:01:25,150
+doing an awning at fireworks in the sky
+and
+
+20
+00:01:25,150 --> 00:01:28,900
+in working with LED's has a lot of parts
+and so when I'm gonna really try to do
+
+21
+00:01:28,900 --> 00:01:31,030
+is give a full stack overview
+
+22
+00:01:31,030 --> 00:01:35,520
+up all the layers here and go all the
+way from electrons to motions
+
+23
+00:01:35,520 --> 00:01:39,310
+talk about LED at the material the
+controller hardware in San the
+
+24
+00:01:39,310 --> 00:01:40,909
+integrated circuitry involved
+
+25
+00:01:40,909 --> 00:01:44,560
+interfaces and protocols that are
+required to speak to these devices
+
+26
+00:01:44,560 --> 00:01:48,560
+summer software libraries that can be
+used and finally some creative design
+
+27
+00:01:48,560 --> 00:01:49,360
+pattern so it's
+
+28
+00:01:49,360 --> 00:01:53,060
+it's quite a full stack on so conduct
+dive right in
+
+29
+00:01:53,060 --> 00:01:57,320
+LED light emitting diode I'm guessing
+everyone can understand what the light
+
+30
+00:01:57,320 --> 00:02:01,149
+and meeting part is by default here so
+I'll talk just very briefly about what
+
+31
+00:02:01,149 --> 00:02:02,090
+diet is
+
+32
+00:02:02,090 --> 00:02:05,149
+that essentially is a Tulare sandwich
+
+33
+00:02:05,149 --> 00:02:09,269
+to semiconductor materials were 1/2 is
+doped in a way that it is
+
+34
+00:02:09,269 --> 00:02:12,989
+as an excessive liked runs and the other
+side is dope the way it has sort of a
+
+35
+00:02:12,989 --> 00:02:15,549
+shortage electrons is a cold electron
+holes
+
+36
+00:02:15,549 --> 00:02:18,850
+and this result in a structure where
+current can really only
+
+37
+00:02:18,850 --> 00:02:22,640
+flow in one direction for the Houston
+circuits to act as for check valves
+
+38
+00:02:22,640 --> 00:02:26,450
+and in the case of light emitting diode
+what happens is when electron dropped
+
+39
+00:02:26,450 --> 00:02:30,580
+into a hole it goes from higher energy
+state to lower energy state and releases
+
+40
+00:02:30,580 --> 00:02:30,830
+a
+
+41
+00:02:30,790 --> 00:02:34,370
+a vote on which we can see is visible
+light and
+
+42
+00:02:34,370 --> 00:02:38,819
+so we're many view from the witness
+former up LED this is kinda blinky light
+
+43
+00:02:38,819 --> 00:02:41,910
+the US start of it as a hardware project
+I just wish other
+
+44
+00:02:41,910 --> 00:02:46,010
+LED materialists or that one small
+square and for
+
+45
+00:02:46,010 --> 00:02:49,540
+for more creative purposes were
+interested in RGB LED's and these are in
+
+46
+00:02:49,540 --> 00:02:50,030
+fact
+
+47
+00:02:50,030 --> 00:02:54,610
+three separate LED's closely put
+together into a package like this work
+
+48
+00:02:54,610 --> 00:02:58,370
+each of these have been chemically set
+up to nearly the red green or blue light
+
+49
+00:02:58,370 --> 00:03:01,849
+in this case it's in what's called a
+50-50 package which just means that the
+
+50
+00:03:01,849 --> 00:03:04,260
+five no nearby five millimeter square
+
+51
+00:03:04,260 --> 00:03:07,560
+and by having them this close together
+when you apply different amount of power
+
+52
+00:03:07,560 --> 00:03:09,840
+that you took the red green and blue
+LED's
+
+53
+00:03:09,840 --> 00:03:13,519
+the colors blend in we can perceive it
+as a as a full spectrum
+
+54
+00:03:13,519 --> 00:03:17,190
+when you start working with LED is one
+of the terms you come
+
+55
+00:03:17,190 --> 00:03:21,489
+come across really quickly as smart
+verses done LED's and a dumb LED is
+
+56
+00:03:21,489 --> 00:03:22,150
+simply
+
+57
+00:03:22,150 --> 00:03:27,299
+one of these LED packages has no logic
+circuitry involved it's just you apply
+
+58
+00:03:27,299 --> 00:03:31,640
+voltages and and they emit light and if
+you have a stripper have done LED's
+
+59
+00:03:31,640 --> 00:03:36,049
+when you play voltage and you make
+purple all the LED's are the same color
+
+60
+00:03:36,049 --> 00:03:37,040
+at the same time
+
+61
+00:03:37,040 --> 00:03:42,150
+smart LED's involve some sort of logic
+circuitry insists
+
+62
+00:03:42,150 --> 00:03:45,170
+the Sumter integrated ship along the
+along the way
+
+63
+00:03:45,170 --> 00:03:48,769
+that allows it to receive a data
+protocol
+
+64
+00:03:48,769 --> 00:03:52,409
+and each light along the strip can be
+
+65
+00:03:52,409 --> 00:03:56,959
+individually controlled as its own color
+on brightness et cetera
+
+66
+00:03:56,959 --> 00:04:00,280
+and they've actually now gotten to the
+point where they're building these
+
+67
+00:04:00,280 --> 00:04:04,180
+integrated circuits directly into the
+LED package
+
+68
+00:04:04,180 --> 00:04:09,340
+so so these things require these sort of
+protocols and there's a variety of them
+
+69
+00:04:09,340 --> 00:04:14,110
+but a and before going into that they
+these packages come in she different
+
+70
+00:04:14,110 --> 00:04:15,049
+shapes and sizes
+
+71
+00:04:15,049 --> 00:04:19,390
+so there's some varieties here where
+there are more than one
+
+72
+00:04:19,390 --> 00:04:22,740
+LED per control chip so this
+
+73
+00:04:22,740 --> 00:04:26,580
+unit of control is called a pic so often
+called an LED pixel
+
+74
+00:04:26,580 --> 00:04:31,360
+nan an LED pixel may have more than one
+LED in the package the date they come in
+
+75
+00:04:31,360 --> 00:04:35,210
+a variety of forms but the unit have
+control is called a pixel
+
+76
+00:04:35,210 --> 00:04:39,020
+and the datatypes take take tend to be
+served
+
+77
+00:04:39,020 --> 00:04:42,700
+specialized very high clock rate serial
+formats
+
+78
+00:04:42,700 --> 00:04:47,219
+that am essentially boiled down to an
+array of bytes
+
+79
+00:04:47,219 --> 00:04:50,330
+and each of these chips will simply take
+off pop off
+
+80
+00:04:50,330 --> 00:04:54,479
+three bites use it for our GNP but for
+the remaining bite and then for them
+
+81
+00:04:54,479 --> 00:04:56,000
+down the line to the each
+
+82
+00:04:56,000 --> 00:05:00,050
+pixel along the chip doesn't really know
+that it's pixel number five it just
+
+83
+00:05:00,050 --> 00:05:02,930
+simply part of tree by 10:40 remaining
+
+84
+00:05:02,930 --> 00:05:07,200
+and these protocols while they very they
+are all very high clock rate very
+
+85
+00:05:07,200 --> 00:05:11,159
+precision timing or into protocols and
+they're not something that a
+
+86
+00:05:11,159 --> 00:05:15,560
+sort of kernel-based operating system
+based program can generate reliably
+
+87
+00:05:15,560 --> 00:05:19,300
+you need something that's going to
+maintain really high
+
+88
+00:05:19,300 --> 00:05:23,719
+fidelity in the timing and so what what
+kinda things can use to
+
+89
+00:05:23,719 --> 00:05:27,399
+to create the signals we can you heard
+me know and there's really actually
+
+90
+00:05:27,399 --> 00:05:29,250
+fantastic art Mina library called
+
+91
+00:05:29,250 --> 00:05:32,830
+fast LED but limitations barred windows
+are that
+
+92
+00:05:32,830 --> 00:05:36,029
+you know there's a limit to how many of
+these people you can actually connect to
+
+93
+00:05:36,029 --> 00:05:37,550
+one at one time
+
+94
+00:05:37,550 --> 00:05:40,909
+and center here Pike on I just have to
+be a loss are you can't really
+
+95
+00:05:40,909 --> 00:05:42,270
+effectively use
+
+96
+00:05:42,270 --> 00:05:46,990
+bite on directly on it we know so what
+what's or some other choices there
+
+97
+00:05:46,990 --> 00:05:50,700
+and in in the do yourself hard disk
+space there's a these are kinda the two
+
+98
+00:05:50,700 --> 00:05:53,570
+main players there there's varieties up
+them but these
+
+99
+00:05:53,570 --> 00:05:57,529
+these manufactures and what these boards
+do is they take as an input
+
+100
+00:05:57,529 --> 00:06:01,320
+a standard lighting protocol which will
+talk about the second
+
+101
+00:06:01,320 --> 00:06:04,870
+and they have embedded in their own
+circuitry
+
+102
+00:06:04,870 --> 00:06:08,360
+I'm in there from where the ability to
+translate into the whole range of the
+
+103
+00:06:08,360 --> 00:06:08,909
+different
+
+104
+00:06:08,909 --> 00:06:13,709
+pixel specific timings and formats and
+they have enough capacity to allow you
+
+105
+00:06:13,709 --> 00:06:16,339
+to plug in many other these pixels
+
+106
+00:06:16,339 --> 00:06:21,289
+so this is the kinda bored but that you
+of news and I i have one up here they'll
+
+107
+00:06:21,289 --> 00:06:25,750
+demo democrat the morning so I said
+these take a a lighting protocol
+
+108
+00:06:25,750 --> 00:06:30,099
+input and so to talk a little bit about
+that I have to tell you about tnx
+
+109
+00:06:30,099 --> 00:06:35,260
+on actually not that the attacks this is
+is DMX 512
+
+110
+00:06:35,260 --> 00:06:38,599
+and its and it's the lighting protocol
+that was initially established for a
+
+111
+00:06:38,599 --> 00:06:40,050
+theater lighting so
+
+112
+00:06:40,050 --> 00:06:44,399
+real quick at their history is initially
+all the best eight tonight in theaters
+
+113
+00:06:44,399 --> 00:06:44,919
+use have
+
+114
+00:06:44,919 --> 00:06:47,750
+manual de Mures that we read a bit from
+the stage in that country become a
+
+115
+00:06:47,750 --> 00:06:48,990
+painful so
+
+116
+00:06:48,990 --> 00:06:52,770
+they initially created DC motors that
+would turn the dimmers and control the
+
+117
+00:06:52,770 --> 00:06:54,959
+DC motors from the back to the house
+
+118
+00:06:54,959 --> 00:06:58,599
+and that was sort of cumbersome so
+eventually became serialize
+
+119
+00:06:58,599 --> 00:07:04,640
+into sparkled call DMX 512 and it's able
+to address 512 individual
+
+120
+00:07:04,640 --> 00:07:07,680
+channels have data in this in the SERPs
+slots
+
+121
+00:07:07,680 --> 00:07:13,409
+a its lot and and initially I'm sure
+this is this is called one universe 512
+
+122
+00:07:13,409 --> 00:07:15,839
+channels called one university a max
+
+123
+00:07:15,839 --> 00:07:19,599
+because I'm sure what are the cliche
+have 512 channels ass has to be enough
+
+124
+00:07:19,599 --> 00:07:21,860
+for anyone right now and can any more
+than five earned
+
+125
+00:07:21,860 --> 00:07:25,709
+chance what things grew things got more
+complex and they didn't so
+
+126
+00:07:25,709 --> 00:07:29,190
+eventually they're you have to run
+multiple have surface
+
+127
+00:07:29,190 --> 00:07:32,849
+serial cable to control more than 512
+channels
+
+128
+00:07:32,849 --> 00:07:35,890
+for the evolution of the protocol move
+towards wrapping these
+
+129
+00:07:35,890 --> 00:07:38,959
+data packet into Ethernet packets
+
+130
+00:07:38,959 --> 00:07:43,149
+as a very catchy name you 1.3 one as the
+standard in the lighting industry now
+
+131
+00:07:43,149 --> 00:07:43,969
+for sending
+
+132
+00:07:43,969 --> 00:07:47,669
+DMX over Ethernet and it is in fact
+
+133
+00:07:47,669 --> 00:07:51,459
+this protocol that has now become the
+most common way of controlling
+
+134
+00:07:51,459 --> 00:07:55,870
+the lighting circuitry well thats that's
+a really now that we're talking about
+
+135
+00:07:55,870 --> 00:07:58,979
+even that we can start talking about
+software that runs
+
+136
+00:07:58,979 --> 00:08:02,839
+in a familiar turf operating system
+environment
+
+137
+00:08:02,839 --> 00:08:06,500
+not talk about that a there's a lot I
+just
+
+138
+00:08:06,500 --> 00:08:09,800
+softer out there that's very specific
+and as monolithic in it it simply
+
+139
+00:08:09,800 --> 00:08:11,260
+handles
+
+140
+00:08:11,260 --> 00:08:16,320
+the rendering up data and then the
+translation of that data into a protocol
+
+141
+00:08:16,320 --> 00:08:19,349
+on if you're interested in quickly
+hacking on something that's
+
+142
+00:08:19,349 --> 00:08:22,550
+that's not too interesting you might you
+party more interesting looking at
+
+143
+00:08:22,550 --> 00:08:24,140
+something that allows you to use
+
+144
+00:08:24,140 --> 00:08:27,360
+a library that takes data and does the
+conversion
+
+145
+00:08:27,360 --> 00:08:30,440
+for you and so
+
+146
+00:08:30,440 --> 00:08:34,529
+processor up Python programmers we want
+to be leveraged something like an
+
+147
+00:08:34,529 --> 00:08:36,839
+interface library that handles all the
+
+148
+00:08:36,839 --> 00:08:40,779
+specific protocol format we just want to
+give it an array of values
+
+149
+00:08:40,779 --> 00:08:45,430
+on would just give credit there's a
+project called open leading architecture
+
+150
+00:08:45,430 --> 00:08:48,910
+its through the Swiss Army Knife
+lighting protocols
+
+151
+00:08:48,910 --> 00:08:54,090
+tools it will you can get a data has
+great python bindings and it will render
+
+152
+00:08:54,090 --> 00:08:55,200
+it out to you
+
+153
+00:08:55,200 --> 00:08:58,300
+any of the various hardware types out
+there on
+
+154
+00:08:58,300 --> 00:09:01,530
+and it's very flexible but its it kinda
+kitchen sink
+
+155
+00:09:01,530 --> 00:09:05,260
+that heavyweight and for for a while
+until recently was hard to get to run on
+
+156
+00:09:05,260 --> 00:09:07,180
+something like a Raspberry Pi so
+
+157
+00:09:07,180 --> 00:09:10,820
+I went ahead and Rhoda a pure Python
+implementation a minimalist input
+
+158
+00:09:10,820 --> 00:09:14,030
+implementation just that you won 3-1
+protocol
+
+159
+00:09:14,030 --> 00:09:17,560
+in Python but there but they're both
+
+160
+00:09:17,560 --> 00:09:20,570
+perfectly usable now that layer
+
+161
+00:09:20,570 --> 00:09:23,840
+the software takes care of talking to
+the hardware but it's not
+
+162
+00:09:23,840 --> 00:09:28,600
+where the creative process happens and
+so when we look at the side of software
+
+163
+00:09:28,600 --> 00:09:30,910
+that is user focus user
+
+164
+00:09:30,910 --> 00:09:35,310
+sorta purpose there's a sense of
+american talk about in the theater
+
+165
+00:09:35,310 --> 00:09:36,150
+industry
+
+166
+00:09:36,150 --> 00:09:40,230
+that's mostly around on scenes switching
+scenes
+
+167
+00:09:40,230 --> 00:09:44,890
+a lot of the innovation in dynamic
+displays has come from that the
+
+168
+00:09:44,890 --> 00:09:46,620
+Christmas lighting folks
+
+169
+00:09:46,620 --> 00:09:49,830
+here they want to do the crazy animated
+Christmas light shows
+
+170
+00:09:49,830 --> 00:09:53,390
+and for a long time before there were
+RGB pixels to work with
+
+171
+00:09:53,390 --> 00:09:56,850
+you still at a relatively small number
+of channels to work within you end up
+
+172
+00:09:56,850 --> 00:09:58,280
+with a program
+
+173
+00:09:58,280 --> 00:10:02,300
+that often we just take the project
+dividing time into slices
+
+174
+00:10:02,300 --> 00:10:06,610
+31 row is one of your channels and then
+you slice it into columns and you simply
+
+175
+00:10:06,610 --> 00:10:07,800
+address
+
+176
+00:10:07,800 --> 00:10:11,780
+a leveller value in each square the grid
+
+177
+00:10:11,780 --> 00:10:15,180
+but when you start to get many many many
+channels kinda
+
+178
+00:10:15,180 --> 00:10:19,270
+individually filling in all these boxes
+is pretty tedious
+
+179
+00:10:19,270 --> 00:10:22,440
+another approach to the current to stay
+Dr is
+
+180
+00:10:22,440 --> 00:10:26,470
+is DJ matrices you know these big
+two-dimensional matrices that are not
+
+181
+00:10:26,470 --> 00:10:27,130
+quote in
+
+182
+00:10:27,130 --> 00:10:30,220
+and those kind of things and there's
+very expensive you noticed several
+
+183
+00:10:30,220 --> 00:10:32,630
+thousand dollars to to use
+
+184
+00:10:32,630 --> 00:10:36,630
+test takes on a screen saver and Adrian
+and projected onto a 2d matrix
+
+185
+00:10:36,630 --> 00:10:42,310
+so stunning run in 2010 I started
+thinking about a wave
+
+186
+00:10:42,310 --> 00:10:45,620
+experimenting with another model of
+taking a
+
+187
+00:10:45,620 --> 00:10:48,940
+an abstraction three three layers that
+inputs
+
+188
+00:10:48,940 --> 00:10:52,960
+elements and outputs where the input
+would be sorta events that happen
+
+189
+00:10:52,960 --> 00:10:58,060
+from some sort of device input device or
+other sort of I'll
+
+190
+00:10:58,060 --> 00:11:01,920
+these would trigger actions in elements
+would
+
+191
+00:11:01,920 --> 00:11:05,120
+take care rendering the data over time
+and then ship it out
+
+192
+00:11:05,120 --> 00:11:09,130
+output in this library is called bird
+fish
+
+193
+00:11:09,130 --> 00:11:14,010
+it on it's really just my East certain
+testbed sketch pad for experimenting
+
+194
+00:11:14,010 --> 00:11:16,240
+with some the stuff you've got what a
+rough edges
+
+195
+00:11:16,240 --> 00:11:20,010
+it's really a classic terminally pre
+alpha psi project
+
+196
+00:11:20,010 --> 00:11:24,580
+so this is this is minutes it's what I
+use for the demoss here but it's now
+
+197
+00:11:24,580 --> 00:11:25,720
+down
+
+198
+00:11:25,720 --> 00:11:29,020
+you know i win I wouldn't go around
+Disney it shows light on it
+
+199
+00:11:29,020 --> 00:11:32,980
+I talked about the input so we'll start
+there am
+
+200
+00:11:32,980 --> 00:11:38,080
+in a vent really in a sense falls into
+two categories: either to trigger event
+
+201
+00:11:38,080 --> 00:11:40,740
+in a trigger event is you you can think
+about is simply
+
+202
+00:11:40,740 --> 00:11:44,170
+a light switch on of on of and
+
+203
+00:11:44,170 --> 00:11:47,200
+these on of events occur over time
+
+204
+00:11:47,200 --> 00:11:50,230
+and each channel in your lighting system
+
+205
+00:11:50,230 --> 00:11:54,090
+can have its own Series event see you
+get the sort of player piano
+
+206
+00:11:54,090 --> 00:11:57,570
+look to it and this a
+
+207
+00:11:57,570 --> 00:12:02,070
+player piano analogy is not without some
+
+208
+00:12:02,070 --> 00:12:05,430
+well you'll see impact later in the
+sense that music
+
+209
+00:12:05,430 --> 00:12:08,660
+I've I've learned a lot from what
+electronic music has done
+
+210
+00:12:08,660 --> 00:12:13,110
+around rendering a fax in real time with
+sound
+
+211
+00:12:13,110 --> 00:12:17,290
+a lot applies to music to trigger
+venture one type of thing these are very
+
+212
+00:12:17,290 --> 00:12:20,620
+discreet on of events and then the other
+type up at the end are
+
+213
+00:12:20,620 --> 00:12:23,960
+were caught napping dance in the end and
+long to this is it if you think I've
+
+214
+00:12:23,960 --> 00:12:25,350
+turning a dial
+
+215
+00:12:25,350 --> 00:12:31,270
+these are values a change there you know
+in a very varied way over time
+
+216
+00:12:31,270 --> 00:12:35,150
+so the overall model looks a little
+something like this you have a vents
+
+217
+00:12:35,150 --> 00:12:38,790
+that are coming in at the time I need a
+trigger a map these
+
+218
+00:12:38,790 --> 00:12:42,010
+on a pencil and onto these
+
+219
+00:12:42,010 --> 00:12:45,460
+elements in the elements our code
+objects that respond to
+
+220
+00:12:45,460 --> 00:12:49,200
+triggers triggers on trigger of and its
+these objects to take care
+
+221
+00:12:49,200 --> 00:12:54,310
+generating data overtime and end up
+resulting in sort of a torrent updated
+
+222
+00:12:54,310 --> 00:12:55,270
+because
+
+223
+00:12:55,270 --> 00:12:58,840
+the hardware itself only cares about an
+instantaneous value but get any sort of
+
+224
+00:12:58,840 --> 00:13:00,430
+an effect over time
+
+225
+00:13:00,430 --> 00:13:03,600
+you need to continuously changing
+streams have
+
+226
+00:13:03,600 --> 00:13:08,880
+up data to get the hard way to do
+anything interesting
+
+227
+00:13:08,880 --> 00:13:13,279
+on in terms of the actual hardware to
+create
+
+228
+00:13:13,279 --> 00:13:17,670
+the events I've Iveco use primarily to
+one is MIDI which is
+
+229
+00:13:17,670 --> 00:13:21,640
+what electronic musical instrument use
+its alder
+
+230
+00:13:21,640 --> 00:13:25,779
+army its it's pretty reliable but it
+does it's limited to
+
+231
+00:13:25,779 --> 00:13:28,980
+7 did values are 0 to 127
+
+232
+00:13:28,980 --> 00:13:33,090
+I'm 16 channels per sorta minibus
+
+233
+00:13:33,090 --> 00:13:37,430
+and in they often involves a lot about
+OS specific
+
+234
+00:13:37,430 --> 00:13:41,690
+am driver level stuff too can become a
+pain to work with
+
+235
+00:13:41,690 --> 00:13:45,950
+open some controls a bit more modern at
+UTPB East
+
+236
+00:13:45,950 --> 00:13:49,760
+on use it for the demo today because
+wireless on live demos pretty painful
+
+237
+00:13:49,760 --> 00:13:50,360
+but
+
+238
+00:13:50,360 --> 00:13:54,540
+on and is very flexible that how you
+specify the value
+
+239
+00:13:54,540 --> 00:13:58,760
+so this graphic is actually about other
+program called touch OSCE for Iowa's
+
+240
+00:13:58,760 --> 00:14:03,800
+they have an Android version as well and
+what it does is it allows you to sort of
+
+241
+00:14:03,800 --> 00:14:07,920
+give a a you are I essentially to some
+value want
+
+242
+00:14:07,920 --> 00:14:12,120
+and and give you either floating point
+values for any range of these controls
+
+243
+00:14:12,120 --> 00:14:17,400
+or you can set a minimum and maximum so
+very flexible gives you that serve rock
+
+244
+00:14:17,400 --> 00:14:19,060
+controller input
+
+245
+00:14:19,060 --> 00:14:23,089
+you can then turn into something up your
+own choosing
+
+246
+00:14:23,089 --> 00:14:28,600
+alright let's get into a a little bit if
+actual pipe on now and some koto
+
+247
+00:14:28,600 --> 00:14:34,150
+um essentially this is the minimal
+starting point for some sort of
+
+248
+00:14:34,150 --> 00:14:39,290
+british-based light show light show
+itself is the object that takes care
+
+249
+00:14:39,290 --> 00:14:43,890
+rendering the main event loop its the
+and primary orchestration
+
+250
+00:14:43,890 --> 00:14:47,210
+object in in this am you then
+
+251
+00:14:47,210 --> 00:14:50,920
+bring in a dispatcher for the event
+something that listening to input
+
+252
+00:14:50,920 --> 00:14:51,980
+hardware
+
+253
+00:14:51,980 --> 00:14:56,750
+and sending triggers to the specific
+light elements themselves
+
+254
+00:14:56,750 --> 00:15:00,880
+and then finally need some output where
+the day to get sent to
+
+255
+00:15:00,880 --> 00:15:04,050
+to be turned into hardware actual events
+for the
+
+256
+00:15:04,050 --> 00:15:08,560
+for the lights themselves the next step
+is to actually create
+
+257
+00:15:08,560 --> 00:15:12,570
+a light element this is the thing that
+takes triggers as inputs
+
+258
+00:15:12,570 --> 00:15:17,520
+and renders out data every frame as far
+as what it should do
+
+259
+00:15:17,520 --> 00:15:21,350
+so receive the trigger on it says start
+sending
+
+260
+00:15:21,350 --> 00:15:25,830
+channel date out lights trigger of stop
+sending channel data out to the lights
+
+261
+00:15:25,830 --> 00:15:29,300
+you then have to kind of wire up some in
+these pieces you get a
+
+262
+00:15:29,300 --> 00:15:33,330
+you have to add the output network to
+the show so it knows about you at the
+
+263
+00:15:33,330 --> 00:15:35,460
+element to the show so it knows about it
+
+264
+00:15:35,460 --> 00:15:38,870
+and then finally here at the bottom you
+you tell the
+
+265
+00:15:38,870 --> 00:15:43,089
+MIDI instrument in this case I'm using a
+a Nana pad controller that
+
+266
+00:15:43,089 --> 00:15:47,210
+this button which gives me denote 49
+
+267
+00:15:47,210 --> 00:15:50,810
+I didn't decide that that's just the way
+the hardware is built this is the thing
+
+268
+00:15:50,810 --> 00:15:52,510
+that should be connected to
+
+269
+00:15:52,510 --> 00:15:55,800
+that binding element
+
+270
+00:15:55,800 --> 00:16:00,000
+I'm so if the demigods will and then
+finally we go ahead we start the
+
+271
+00:16:00,000 --> 00:16:00,960
+dispatcher
+
+272
+00:16:00,960 --> 00:16:04,589
+the MIDI listener runs in its own thread
+the show is a blocking
+
+273
+00:16:04,589 --> 00:16:07,830
+you know run loop and
+
+274
+00:16:07,830 --> 00:16:11,510
+will see now if I can get this to
+
+275
+00:16:11,510 --> 00:16:17,230
+I've had some issues with my USB based
+
+276
+00:16:17,230 --> 00:16:20,370
+and the democrats are not working with
+me
+
+277
+00:16:20,370 --> 00:16:27,180
+today so my backup is video
+
+278
+00:16:27,180 --> 00:16:30,690
+I can show you what this would look like
+working
+
+279
+00:16:30,690 --> 00:16:33,800
+it was earlier
+
+280
+00:16:33,800 --> 00:16:37,589
+so you touch the button and you get the
+light comes on
+
+281
+00:16:37,589 --> 00:16:42,430
+release button because of on that enough
+itself is not very
+
+282
+00:16:42,430 --> 00:16:46,529
+creative so the next step really is to
+look at
+
+283
+00:16:46,529 --> 00:16:51,290
+what can be done around giving things a
+more organic feel
+
+284
+00:16:51,290 --> 00:16:54,570
+things in nature don't stopped and
+
+285
+00:16:54,570 --> 00:16:58,080
+start and stop very suddenly like that
+and so the people who
+
+286
+00:16:58,080 --> 00:17:01,050
+first I work with electronic music
+realize too that musical instruments
+
+287
+00:17:01,050 --> 00:17:01,820
+have
+
+288
+00:17:01,820 --> 00:17:06,589
+to have a new russia and sound in things
+come months of planning of softly
+
+289
+00:17:06,589 --> 00:17:10,439
+on so there's a concept in in
+sympathizers called
+
+290
+00:17:10,439 --> 00:17:14,679
+a an attack decay sustain release and
+love and if you think about what the
+
+291
+00:17:14,679 --> 00:17:18,049
+volume up an instrument is as you hit a
+key on a keyboard
+
+292
+00:17:18,049 --> 00:17:21,860
+things can come on gradually reach a
+peak decay
+
+293
+00:17:21,860 --> 00:17:24,870
+sustain for some time and then when you
+let go of the key in a piano the
+
+294
+00:17:24,870 --> 00:17:26,350
+cleaning up the pedal down
+
+295
+00:17:26,350 --> 00:17:30,140
+the sound falls off so we can use that
+same concept
+
+296
+00:17:30,140 --> 00:17:37,140
+on in in lighting amplitude
+
+297
+00:17:38,470 --> 00:17:41,800
+up I'm actually without a border
+
+298
+00:17:41,800 --> 00:17:45,260
+so this is to show that and element
+doesn't have to be a single light an
+
+299
+00:17:45,260 --> 00:17:47,420
+element can be a group of lights
+
+300
+00:17:47,420 --> 00:17:51,590
+and that the trigger in this case is
+still a single trigger but in our fax
+
+301
+00:17:51,590 --> 00:17:56,730
+a whole group of lights
+
+302
+00:17:56,730 --> 00:18:00,880
+this is the demo to show what happens if
+you have a an envelope so in this case
+
+303
+00:18:00,880 --> 00:18:02,490
+there's still a single
+
+304
+00:18:02,490 --> 00:18:05,690
+simple trigger trigger on trigger are
+
+305
+00:18:05,690 --> 00:18:09,809
+but the lighting element is handling the
+rendering of the fading on
+
+306
+00:18:09,809 --> 00:18:15,350
+fading of overtime without it being
+required from the control side and so it
+
+307
+00:18:15,350 --> 00:18:18,929
+still rendering 40 frames per second
+worth
+
+308
+00:18:18,929 --> 00:18:25,929
+have control data
+
+309
+00:18:30,340 --> 00:18:36,640
+and the same idea can be applied to a
+array of flights where the
+
+310
+00:18:36,640 --> 00:18:41,150
+behavior this element is called a light
+chase
+
+311
+00:18:41,150 --> 00:18:45,000
+so that the behavior over time which
+light in arrays let
+
+312
+00:18:45,000 --> 00:18:49,180
+is being determined by the light element
+the trigger itself is still
+
+313
+00:18:49,180 --> 00:18:52,610
+just a simple on/off but in this case
+we're getting to add
+
+314
+00:18:52,610 --> 00:18:59,010
+serve a slightly more complex layered on
+
+315
+00:18:59,010 --> 00:19:03,930
+the other thing when you get to these
+
+316
+00:19:03,930 --> 00:19:07,100
+this idea them lips is that animation
+has
+
+317
+00:19:07,100 --> 00:19:10,890
+always brought in this concept of
+twinning element so what we know I'm
+
+318
+00:19:10,890 --> 00:19:12,330
+into something that tends to
+
+319
+00:19:12,330 --> 00:19:16,860
+easy in easy out and the idea is to have
+non linear motion
+
+320
+00:19:16,860 --> 00:19:20,310
+gives a a electronic
+
+321
+00:19:20,310 --> 00:19:23,980
+device a more natural and interesting
+creative team or
+
+322
+00:19:23,980 --> 00:19:29,220
+creative flexibility so if you had
+simple animations in a in a 3d animated
+
+323
+00:19:29,220 --> 00:19:30,210
+movie that moved
+
+324
+00:19:30,210 --> 00:19:34,800
+only linearly and stopped they wouldn't
+look very interesting so you can apply
+
+325
+00:19:34,800 --> 00:19:38,510
+a range of these creative curves not
+only to
+
+326
+00:19:38,510 --> 00:19:43,810
+brightness or motion but you can apply
+them to things like
+
+327
+00:19:43,810 --> 00:19:47,900
+changed the rate of change of color the
+rate of change in saturation
+
+328
+00:19:47,900 --> 00:19:52,200
+am the rate of change two things I want
+in seeking create these
+
+329
+00:19:52,200 --> 00:19:56,730
+envelopes have changed over time and
+build them as attributes have the
+
+330
+00:19:56,730 --> 00:19:59,100
+behaviour wannabes lighting elements
+
+331
+00:19:59,100 --> 00:20:03,480
+and I have more great times
+
+332
+00:20:03,480 --> 00:20:09,130
+love to show you but and
+
+333
+00:20:09,130 --> 00:20:13,560
+believe that once my once my hardware is
+falling down it's fallen down
+
+334
+00:20:13,560 --> 00:20:17,770
+yep I miss my
+
+335
+00:20:17,770 --> 00:20:22,830
+my Mac Book to have a hard wired
+Ethernet port alright so
+
+336
+00:20:22,830 --> 00:20:27,080
+not not to dwell on that here's just
+some
+
+337
+00:20:27,080 --> 00:20:30,110
+examples have some other sort of
+nonlinearity that you can get
+
+338
+00:20:30,110 --> 00:20:34,310
+so you can see a sort of a spray pattern
+where
+
+339
+00:20:34,310 --> 00:20:39,090
+a essentially the velocity is changing
+over time slowing down
+
+340
+00:20:39,090 --> 00:20:46,090
+that's one a fact
+
+341
+00:20:49,940 --> 00:20:53,340
+mister show some elasticity in the
+motion where there's a will spring back
+
+342
+00:20:53,340 --> 00:20:54,600
+and it also shows
+
+343
+00:20:54,600 --> 00:20:58,419
+there's another envelope applied to the
+edges up that light curve
+
+344
+00:20:58,419 --> 00:21:02,539
+the way it fade off from the bright
+point in the center to the edges gives
+
+345
+00:21:02,539 --> 00:21:03,039
+it a
+
+346
+00:21:03,039 --> 00:21:08,399
+serve soft edges there's even a further
+check in this demo where I have sort of
+
+347
+00:21:08,399 --> 00:21:10,940
+sub-pixel anti-aliasing so that the
+
+348
+00:21:10,940 --> 00:21:15,649
+center point out that motion is not
+lockstep to a single
+
+349
+00:21:15,649 --> 00:21:20,480
+point and
+
+350
+00:21:20,480 --> 00:21:27,179
+just one more the server bounce motion
+
+351
+00:21:27,179 --> 00:21:32,620
+so the key is to remember that we
+started with the simple LED material and
+
+352
+00:21:32,620 --> 00:21:33,070
+we're
+
+353
+00:21:33,070 --> 00:21:36,630
+working with hardware that isn't
+completely dumb about
+
+354
+00:21:36,630 --> 00:21:39,980
+what'd renders out and intend to the
+lighting hardware
+
+355
+00:21:39,980 --> 00:21:43,549
+it just requires an instantaneous value
+to give a certain brightness
+
+356
+00:21:43,549 --> 00:21:48,529
+anything that looks like behavior has to
+come from the software itself
+
+357
+00:21:48,529 --> 00:21:53,110
+and that sort of but I was looking at in
+terms trying to build a toolkit for
+
+358
+00:21:53,110 --> 00:21:54,200
+building that's kinda
+
+359
+00:21:54,200 --> 00:21:58,769
+fax and in a way that could be reactor
+have
+
+360
+00:21:58,769 --> 00:22:04,169
+worked within a real time that isn't
+being pre-rendered don't see
+
+361
+00:22:04,169 --> 00:22:09,510
+so actually have because my demos have
+failed I have one more
+
+362
+00:22:09,510 --> 00:22:13,380
+bonus material I will go into and that
+is
+
+363
+00:22:13,380 --> 00:22:17,940
+around the idea of I've adapted frame
+rate so I talked about
+
+364
+00:22:17,940 --> 00:22:22,860
+to get something to look like motion you
+need to have the least ten to twelve
+
+365
+00:22:22,860 --> 00:22:26,049
+frames per second and that looks kinda
+jittery if you've ever worked with the
+
+366
+00:22:26,049 --> 00:22:26,960
+books it sort of
+
+367
+00:22:26,960 --> 00:22:30,149
+flip books or maybe in the 10 frames per
+second rate
+
+368
+00:22:30,149 --> 00:22:33,720
+to get something more fluid I mean if
+you're a video game person you know you
+
+369
+00:22:33,720 --> 00:22:34,419
+want those
+
+370
+00:22:34,419 --> 00:22:37,919
+super high frame rates II shoot for
+around 40 frames per second
+
+371
+00:22:37,919 --> 00:22:42,630
+the problem is that depending on how
+complex the effects are and how many
+
+372
+00:22:42,630 --> 00:22:45,659
+other than you're trying to render in
+real time that can be taxing on
+
+373
+00:22:45,659 --> 00:22:50,669
+on the CPU so the goal is how can you
+come up with a way of consistently
+
+374
+00:22:50,669 --> 00:22:51,590
+delivering
+
+375
+00:22:51,590 --> 00:22:54,789
+the expected a fact to
+
+376
+00:22:54,789 --> 00:22:59,240
+and never be synchronized a certain
+point I'm your frame start taking longer
+
+377
+00:22:59,240 --> 00:23:00,039
+to render
+
+378
+00:23:00,039 --> 00:23:04,450
+so in this case this is the ideal
+scenario every every frame up these 20
+
+379
+00:23:04,450 --> 00:23:06,450
+frames across one second are being
+
+380
+00:23:06,450 --> 00:23:11,559
+evenly calculated and we and the color
+fade each of these dart is sort of like
+
+381
+00:23:11,559 --> 00:23:15,690
+represents a a light and an array the
+yellow lights represent for these
+
+382
+00:23:15,690 --> 00:23:16,889
+chasers across
+
+383
+00:23:16,889 --> 00:23:20,370
+went back in and that the color fade the
+problem is that
+
+384
+00:23:20,370 --> 00:23:23,620
+if one is free and takes a while we
+still want to and
+
+385
+00:23:23,620 --> 00:23:26,690
+at the exact same place at one second
+time
+
+386
+00:23:26,690 --> 00:23:31,190
+and so the idea is to come up with her
+this adaptive loop where
+
+387
+00:23:31,190 --> 00:23:35,130
+at the beginning of each loop I I
+anticipate what's the
+
+388
+00:23:35,130 --> 00:23:39,610
+next expected frame in time frame
+catlett all the values
+
+389
+00:23:39,610 --> 00:23:44,679
+and if I and done ahead of time I can
+just sit around waiting ship the date of
+
+390
+00:23:44,679 --> 00:23:46,100
+and then begin the next loop
+
+391
+00:23:46,100 --> 00:23:49,740
+however five I'm overdue and I've missed
+the mark
+
+392
+00:23:49,740 --> 00:23:54,510
+I can reduce the frame rate so that the
+next frame I calculate I'm giving myself
+
+393
+00:23:54,510 --> 00:23:56,139
+more time to calculate
+
+394
+00:23:56,139 --> 00:24:01,520
+and and sort of give your feedback to
+what the frame rate is at any given time
+
+395
+00:24:01,520 --> 00:24:02,309
+in this kinda
+
+396
+00:24:02,309 --> 00:24:05,669
+I'd I honestly don't know how other
+games are other systems do it is
+
+397
+00:24:05,669 --> 00:24:08,929
+something I was kind of just came up
+with to address my challenge here
+
+398
+00:24:08,929 --> 00:24:12,850
+and the result is something that looks
+like this where we now have taken
+
+399
+00:24:12,850 --> 00:24:16,139
+16 frames to do an incentive 20
+
+400
+00:24:16,139 --> 00:24:20,399
+and a couple others frames have become
+taken longer to render but
+
+401
+00:24:20,399 --> 00:24:24,539
+end result is that the end up one second
+we still are where we
+
+402
+00:24:24,539 --> 00:24:28,690
+expect to be in the overall affect arm
+
+403
+00:24:28,690 --> 00:24:32,360
+that is what I have I am
+
+404
+00:24:32,360 --> 00:24:36,350
+so go forth and be creative and
+
+405
+00:24:36,350 --> 00:24:40,059
+we certainly have some time for
+questions in and if you want to chase me
+
+406
+00:24:40,059 --> 00:24:42,010
+down I can try and reboot this demo on
+
+407
+00:24:42,010 --> 00:24:45,559
+and see if we can get see if we can get
+a gun but non
+
+408
+00:24:45,559 --> 00:24:52,559
+not to worry about thank you
+
+409
+00:24:55,429 --> 00:24:56,549
+so take a person
+
+410
+00:24:56,549 --> 00:25:00,210
+and if you have some questions please
+job form a line here in the mike
+
+411
+00:25:00,210 --> 00:25:07,210
+and and state your question spur stuff
+
+412
+00:25:12,020 --> 00:25:16,140
+we talk it's good to see offer you
+brought this you know
+
+413
+00:25:16,140 --> 00:25:19,580
+as a medium on
+
+414
+00:25:19,580 --> 00:25:22,910
+obviously it's has the hardware
+component on
+
+415
+00:25:22,910 --> 00:25:28,350
+but the idea like DJ is really cool
+where'd you get starters for is like
+
+416
+00:25:28,350 --> 00:25:31,790
+equipment you know going
+
+417
+00:25:31,790 --> 00:25:35,049
+things and yeah I mean
+
+418
+00:25:35,049 --> 00:25:39,610
+the availability of that the smart
+pixels is
+
+419
+00:25:39,610 --> 00:25:43,780
+is become better used to be I I got a
+lot of my actual lights from China
+
+420
+00:25:43,780 --> 00:25:48,410
+director to only bother expresso one of
+those types of places but
+
+421
+00:25:48,410 --> 00:25:51,400
+that the hardest boards available
+they're pretty cheap you can actually
+
+422
+00:25:51,400 --> 00:25:53,360
+buy the risk it to buy them assembled
+
+423
+00:25:53,360 --> 00:25:59,030
+and then a number sorta spark fun in a
+data type place stores
+
+424
+00:25:59,030 --> 00:26:03,220
+have some in the picture now but you you
+really can't play with the software
+
+425
+00:26:03,220 --> 00:26:04,360
+until you have at least
+
+426
+00:26:04,360 --> 00:26:08,380
+some the hardware because the softer by
+itself is pretty boring
+
+427
+00:26:08,380 --> 00:26:13,299
+higher
+
+428
+00:26:13,299 --> 00:26:16,600
+pretty on
+
+429
+00:26:16,600 --> 00:26:20,630
+I'm just wondering on there are other
+
+430
+00:26:20,630 --> 00:26:24,710
+their frameworks that seem wells needed
+for this kind of thing
+
+431
+00:26:24,710 --> 00:26:29,200
+namely processing which connects to a
+lot of different
+
+432
+00:26:29,200 --> 00:26:32,580
+hardwares and software owns
+
+433
+00:26:32,580 --> 00:26:36,240
+and so I'm just wondering year on
+
+434
+00:26:36,240 --> 00:26:39,270
+you think there's any particular
+advantages
+
+435
+00:26:39,270 --> 00:26:43,000
+choosing hi time for an application like
+this
+
+436
+00:26:43,000 --> 00:26:46,429
+and where its strengths my why
+
+437
+00:26:46,429 --> 00:26:50,270
+yeah I mean I would say that
+
+438
+00:26:50,270 --> 00:26:55,210
+against processing there is no
+particular advantage accept that
+
+439
+00:26:55,210 --> 00:26:58,549
+I'm eitan Eastern its my by two
+
+440
+00:26:58,549 --> 00:27:02,760
+choice in and I'm not gonna I'm not
+gonna really try to claim it better
+
+441
+00:27:02,760 --> 00:27:07,210
+I think one of the strengths hitman has
+in many of the domains that
+
+442
+00:27:07,210 --> 00:27:11,510
+might be used is that there are lots and
+lotsa
+
+443
+00:27:11,510 --> 00:27:15,690
+resources out there for connecting other
+things
+
+444
+00:27:15,690 --> 00:27:19,440
+into it so there are lots of ways to
+integrate
+
+445
+00:27:19,440 --> 00:27:23,020
+you know our web server duper there's
+just lots of
+
+446
+00:27:23,020 --> 00:27:26,770
+that the Brett through the pipe on you
+can ok system
+
+447
+00:27:26,770 --> 00:27:30,150
+allows you to hi this part delighting
+
+448
+00:27:30,150 --> 00:27:33,650
+system into anything else that Python
+
+449
+00:27:33,650 --> 00:27:36,690
+might be connected to and leverage and
+as leverage to
+
+450
+00:27:36,690 --> 00:27:40,480
+the brat that the ecosystem as far as
+the actual rendering a fax
+
+451
+00:27:40,480 --> 00:27:44,730
+you know processing is phenomenal I know
+people done amazing things on our
+
+452
+00:27:44,730 --> 00:27:51,730
+cleaners with processing
+
+453
+00:27:52,500 --> 00:27:53,150
+right thank you
+

@@ -1,0 +1,3963 @@
+1
+00:00:07,370 --> 00:00:08,580
+good afternoon
+
+2
+00:00:08,580 --> 00:00:12,500
+our next talk is designing politically
+PI's I aircrews
+
+3
+00:00:12,500 --> 00:00:16,689
+Eric works at Mozilla and by your
+account right way too many bite on my
+
+4
+00:00:16,689 --> 00:00:17,360
+marriage
+
+5
+00:00:17,360 --> 00:00:24,360
+pre-game warm welcome
+
+6
+00:00:26,730 --> 00:00:29,500
+Wow thanks for packing and out in here
+guys is a fantastic
+
+7
+00:00:29,500 --> 00:00:33,740
+up today we're going to take a look at
+psychology and anthropology
+
+8
+00:00:33,740 --> 00:00:37,560
+and history of our own field and public
+figure out how to write
+
+9
+00:00:37,560 --> 00:00:42,080
+more beautiful API's before we get
+started I have a confession to make
+
+10
+00:00:42,080 --> 00:00:45,410
+which is that I am not a poet
+unfortunately I know
+
+11
+00:00:45,410 --> 00:00:49,020
+but potent programmers we have a lot in
+common
+
+12
+00:00:49,020 --> 00:00:52,260
+we both deal with very precisely
+formulated language
+
+13
+00:00:52,260 --> 00:00:55,780
+and we both make up new terms backed
+programmers do this
+
+14
+00:00:55,780 --> 00:00:59,140
+all the time whenever you name a
+variable or coin new function
+
+15
+00:00:59,140 --> 00:01:04,220
+you're essentially making up a new piece
+language if this invention have language
+
+16
+00:01:04,220 --> 00:01:09,040
+and the mental processes the go on with
+that an akita rating excellent API's
+
+17
+00:01:09,040 --> 00:01:12,500
+it's vital that we create new language
+with care
+
+18
+00:01:12,500 --> 00:01:16,440
+because the language you use influences
+the thoughts that you can think
+
+19
+00:01:16,440 --> 00:01:21,100
+have ever had anyone to tell you should
+colorless been go learn haskell it'll
+
+20
+00:01:21,100 --> 00:01:22,910
+change the way you think about
+programming
+
+21
+00:01:22,910 --> 00:01:26,170
+yeah well there's something to that as
+it turns out
+
+22
+00:01:26,170 --> 00:01:32,459
+there's a sold a psychological theory
+called the superior work hypothesis
+
+23
+00:01:32,459 --> 00:01:36,729
+and how goes is the language that you
+speak
+
+24
+00:01:36,729 --> 00:01:40,429
+determines in limits thought that you
+can think and
+
+25
+00:01:40,429 --> 00:01:44,110
+soon as shaking her head there yes it
+has gone out of fashion lately
+
+26
+00:01:44,110 --> 00:01:47,660
+but there was some evidence released
+anecdote in its favor for a while
+
+27
+00:01:47,660 --> 00:01:52,209
+for example take the case a Ildefonso a
+Mayan man who was born deaf
+
+28
+00:01:52,209 --> 00:01:55,780
+into a poor family and so they didn't
+have a lot of resources to invest in
+
+29
+00:01:55,780 --> 00:01:56,569
+things like a
+
+30
+00:01:56,569 --> 00:02:01,000
+sign language training or lip reading
+and so he was actually brought up
+
+31
+00:02:01,000 --> 00:02:05,069
+without language he didn't acquire
+language until he was 27 years old
+
+32
+00:02:05,069 --> 00:02:08,869
+and during this early period of his life
+he couldn't do math
+
+33
+00:02:08,869 --> 00:02:12,280
+with quantities beyond 10 for obvious
+reasons
+
+34
+00:02:12,280 --> 00:02:15,440
+but now that he has language for and
+
+35
+00:02:15,440 --> 00:02:19,730
+he's received training he can do just
+fine you can calculate with the best of
+
+36
+00:02:19,730 --> 00:02:20,080
+them
+
+37
+00:02:20,080 --> 00:02:23,380
+because he has the language for it now
+
+38
+00:02:23,380 --> 00:02:26,569
+for this strong sapir work hypothesis
+which I'm still getting better looks
+
+39
+00:02:26,569 --> 00:02:27,580
+from someone about
+
+40
+00:02:27,580 --> 00:02:30,950
+has been disproved by counter example
+when you can be connected to this is a
+
+41
+00:02:30,950 --> 00:02:31,800
+thought experiment
+
+42
+00:02:31,800 --> 00:02:36,960
+here we are in Montreal a bilingual City
+and satisfying translations are possible
+
+43
+00:02:36,960 --> 00:02:40,080
+when I came into the airport I want to
+grab a sandwich I got in late
+
+44
+00:02:40,080 --> 00:02:43,080
+I went to Subway the guy was making my
+sandwich spoke French
+
+45
+00:02:43,080 --> 00:02:46,780
+I spoke English we used fresh words in
+english words and
+
+46
+00:02:46,780 --> 00:02:50,030
+girls have language we use I would've
+gotten the same sandwich out afterwards
+
+47
+00:02:50,030 --> 00:02:53,260
+pickens time write some
+
+48
+00:02:53,260 --> 00:02:57,350
+some pretty down-and-dirty philosophy
+now you can translate that
+
+49
+00:02:57,350 --> 00:03:00,630
+that very precise German into English
+and the
+
+50
+00:03:00,630 --> 00:03:04,150
+argument still make sensor at least say
+much since they did for
+
+51
+00:03:04,150 --> 00:03:08,160
+but there's still a flavor to each
+language right
+
+52
+00:03:08,160 --> 00:03:12,080
+who has an accused a colleague are you
+reading job in Python knock it off
+
+53
+00:03:12,080 --> 00:03:14,570
+you're in Python a standard expire in 10
+ml
+
+54
+00:03:14,570 --> 00:03:17,750
+bite on naturally makes you reach for
+hash tables
+
+55
+00:03:17,750 --> 00:03:21,810
+functional languages make use of things
+in terms of map unfold
+
+56
+00:03:21,810 --> 00:03:25,550
+JavaScript everything's a closure and
+this is the week form
+
+57
+00:03:25,550 --> 00:03:28,840
+disappear work hard but we're fed up her
+work hypothesis
+
+58
+00:03:28,840 --> 00:03:32,270
+which I dare you to say five times fast
+and I think it does hold
+
+59
+00:03:32,270 --> 00:03:35,600
+but the language you use influences
+
+60
+00:03:35,600 --> 00:03:39,900
+a thought for you think now I'm getting
+not thank you so
+
+61
+00:03:39,900 --> 00:03:43,700
+the balance at this influence have been
+marked out experimentally
+
+62
+00:03:43,700 --> 00:03:47,150
+for example in English we don't have a
+whole lot a good words
+
+63
+00:03:47,150 --> 00:03:51,540
+four colors in the red orange range now
+if you show an English speaker bunch of
+
+64
+00:03:51,540 --> 00:03:52,560
+color swatches
+
+65
+00:03:52,560 --> 00:03:56,530
+they can certainly distinguish between
+them visually but
+
+66
+00:03:56,530 --> 00:03:59,000
+if you can distract them with a card
+game or something and bring them back
+
+67
+00:03:59,000 --> 00:03:59,880
+later
+
+68
+00:03:59,880 --> 00:04:03,430
+they won't be able to remember us what
+you ask them to remember
+
+69
+00:04:03,430 --> 00:04:07,140
+if it didn't have a hand in a min their
+language so it seems that having a
+
+70
+00:04:07,140 --> 00:04:09,080
+symbol for something a word for
+something
+
+71
+00:04:09,080 --> 00:04:13,050
+makes it mentally later wat when you
+draw simple like
+
+72
+00:04:13,050 --> 00:04:18,900
+red over budget details like well 632
+617 animators wavelength
+
+73
+00:04:18,900 --> 00:04:22,900
+it acts like a mental abstraction you
+can kick all the details out of your
+
+74
+00:04:22,900 --> 00:04:23,530
+head
+
+75
+00:04:23,530 --> 00:04:26,690
+and say that mental space for
+higher-level pursuits like building
+
+76
+00:04:26,690 --> 00:04:30,630
+sentences with the word red abstracting
+out symbols
+
+77
+00:04:30,630 --> 00:04:34,539
+is the root all human language
+
+78
+00:04:34,539 --> 00:04:39,810
+but it's also the route all software
+engineering
+
+79
+00:04:39,810 --> 00:04:43,050
+now the pointer software engineering
+what differentiates it from just hacking
+
+80
+00:04:43,050 --> 00:04:45,110
+around spaghetti code
+
+81
+00:04:45,110 --> 00:04:48,539
+is making supper intellectually
+intelligible by finding good
+
+82
+00:04:48,539 --> 00:04:50,169
+abstractions
+
+83
+00:04:50,169 --> 00:04:53,490
+tough talk about API's in creating an
+API
+
+84
+00:04:53,490 --> 00:04:56,680
+you make up your own symbols and their
+meanings functions
+
+85
+00:04:56,680 --> 00:05:00,569
+variable names data structures and with
+the names and semantics that you choose
+
+86
+00:05:00,569 --> 00:05:04,529
+you shape all future thought about that
+system
+
+87
+00:05:04,529 --> 00:05:07,319
+remembered all the fun so couldn't get
+above the number 10 until we had the
+
+88
+00:05:07,319 --> 00:05:08,680
+word sport
+
+89
+00:05:08,680 --> 00:05:11,909
+when you make a good API you give those
+who come after you
+
+90
+00:05:11,909 --> 00:05:15,639
+including your future self those numbers
+after 10
+
+91
+00:05:15,639 --> 00:05:19,069
+letting people think the thought that
+they couldn't before
+
+92
+00:05:19,069 --> 00:05:25,150
+for example let's take a look at your
+lip to versus requests
+
+93
+00:05:25,150 --> 00:05:29,449
+right so you're a live do is pretty
+horrendous labor boasts it's hard to do
+
+94
+00:05:29,449 --> 00:05:30,620
+common things
+
+95
+00:05:30,620 --> 00:05:33,840
+part about it is because it has a
+greater scope and is a shitty p but i
+
+96
+00:05:33,840 --> 00:05:35,020
+picking on it
+
+97
+00:05:35,020 --> 00:05:39,249
+requests a third party library have
+become a rapid defacto standard
+
+98
+00:05:39,249 --> 00:05:42,529
+because introduces this brilliant new
+symbol called the
+
+99
+00:05:42,529 --> 00:05:45,680
+HTTP request
+
+100
+00:05:45,680 --> 00:05:48,539
+and i think is even more brilliant
+because apparently some people have
+
+101
+00:05:48,539 --> 00:05:51,949
+already heard of this abstraction and
+had in their heads already
+
+102
+00:05:51,949 --> 00:05:55,659
+so one thing you can do is ask yourself
+what a naive user
+
+103
+00:05:55,659 --> 00:06:00,610
+imagine my API should look like if there
+are already existing symbols out there
+
+104
+00:06:00,610 --> 00:06:03,779
+just make them work that's easy one now
+
+105
+00:06:03,779 --> 00:06:07,259
+it's silly to try to turn good design
+into a process that you can follow
+
+106
+00:06:07,259 --> 00:06:12,229
+or for real you can apply but I've got
+hadn't taken a swing at anyway
+
+107
+00:06:12,229 --> 00:06:16,210
+there some requests code for comparison
+so today I'm gonna give you
+
+108
+00:06:16,210 --> 00:06:19,460
+seven rules of thumb that you can use as
+a checklist
+
+109
+00:06:19,460 --> 00:06:22,809
+he may not give you good design for free
+but it will guide you along and it will
+
+110
+00:06:22,809 --> 00:06:23,939
+keep you from
+
+111
+00:06:23,939 --> 00:06:27,199
+up falling off all the worst clips
+
+112
+00:06:27,199 --> 00:06:30,550
+so the first principle is something not
+to do
+
+113
+00:06:30,550 --> 00:06:35,529
+don't be an architecture astronaut my
+first step in designing a new library
+
+114
+00:06:35,529 --> 00:06:39,199
+is actually two not designed a new
+library
+
+115
+00:06:39,199 --> 00:06:42,949
+it's all well and good to try to do good
+design the abstract
+
+116
+00:06:42,949 --> 00:06:46,469
+but design is basically imagination and
+imagination
+
+117
+00:06:46,469 --> 00:06:50,409
+is little more than half part the sizing
+and you know from history what happens
+
+118
+00:06:50,409 --> 00:06:53,089
+when you have part the size without
+continually bring those high parties
+
+119
+00:06:53,089 --> 00:06:55,580
+back down to earth and testing them
+against reality
+
+120
+00:06:55,580 --> 00:06:59,069
+you end up with alchemy rather than
+chemistry right
+
+121
+00:06:59,069 --> 00:07:04,089
+it can be academic interesting it can be
+visually impressive art sparks in bright
+
+122
+00:07:04,089 --> 00:07:05,259
+colors
+
+123
+00:07:05,259 --> 00:07:08,270
+but when it comes down to it it's just a
+self-consistent certain
+
+124
+00:07:08,270 --> 00:07:13,180
+nonsense not a lot of practical value
+that im gonna go love that led
+
+125
+00:07:13,180 --> 00:07:17,210
+so to bring our efforts back in Akkar
+them in the realm of science
+
+126
+00:07:17,210 --> 00:07:22,289
+remember that the best libraries are
+extracted not invented
+
+127
+00:07:22,289 --> 00:07:25,479
+what this means is he should have one
+
+128
+00:07:25,479 --> 00:07:28,860
+hopefully even to or as many as you can
+Consuegra
+
+129
+00:07:28,860 --> 00:07:32,919
+applications that already do what your
+library was going to do
+
+130
+00:07:32,919 --> 00:07:36,770
+and then you take the better than their
+in common and you factor them up
+
+131
+00:07:36,770 --> 00:07:41,710
+into your library for example I wrote a
+plugin called knows progressive
+
+132
+00:07:41,710 --> 00:07:45,699
+plugs into the popular test framework
+knows and its purpose in life is to
+
+133
+00:07:45,699 --> 00:07:47,150
+display a progress bar
+
+134
+00:07:47,150 --> 00:07:51,930
+and fancy trace backs and just generally
+make output easier to crock
+
+135
+00:07:51,930 --> 00:07:55,520
+now makes use a lot of terminals keep
+codes for things like colors and bold
+
+136
+00:07:55,520 --> 00:07:56,949
+and positioning
+
+137
+00:07:56,949 --> 00:08:01,979
+and the code looks something like this
+love terminal setup kinda intertwined
+
+138
+00:08:01,979 --> 00:08:03,629
+with the operative code lotsa
+
+139
+00:08:03,629 --> 00:08:07,770
+abbreviations for different betterment
+purse strings
+
+140
+00:08:07,770 --> 00:08:12,129
+and there ought to I rock term capital
+SGR 0 not very friendly thanks
+
+141
+00:08:12,129 --> 00:08:15,129
+are see the FAQ looking aside the
+documentation to figure out what they
+
+142
+00:08:15,129 --> 00:08:16,889
+mean
+
+143
+00:08:16,889 --> 00:08:19,999
+every time I have to do some formatting
+I would think
+
+144
+00:08:19,999 --> 00:08:23,199
+oil shares a decent abstraction around
+this I would have to look at all the
+
+145
+00:08:23,199 --> 00:08:24,399
+time
+
+146
+00:08:24,399 --> 00:08:27,759
+and this is the magic point when you
+have a real useful program with a
+
+147
+00:08:27,759 --> 00:08:29,899
+library struggling to get out
+
+148
+00:08:29,899 --> 00:08:34,539
+that you should come down from orbit and
+start thinking about library design
+
+149
+00:08:34,539 --> 00:08:38,380
+in this case I ended up extracting the
+terminal handling into lab recalled
+
+150
+00:08:38,380 --> 00:08:39,430
+blessings
+
+151
+00:08:39,430 --> 00:08:44,110
+and I want to use it as the first
+example our extraction process
+
+152
+00:08:44,110 --> 00:08:47,399
+the first thing to do is dump everything
+on the workbench
+
+153
+00:08:47,399 --> 00:08:51,190
+I what sort of things up a library to do
+well want to print some texts for
+
+154
+00:08:51,190 --> 00:08:51,820
+mattered
+
+155
+00:08:51,820 --> 00:08:54,589
+any weapons and text may be at a
+location like the bottom screen with a
+
+156
+00:08:54,589 --> 00:08:55,649
+progress bar is
+
+157
+00:08:55,649 --> 00:08:59,450
+and then snap back to what we were doing
+up by the trace backs
+
+158
+00:08:59,450 --> 00:09:02,270
+what tools do we have well got
+everything that's in a different
+
+159
+00:09:02,270 --> 00:09:02,960
+language
+
+160
+00:09:02,960 --> 00:09:06,570
+we've got functions with option a large
+in positional arcs
+
+161
+00:09:06,570 --> 00:09:10,950
+we've got to decorators those are fun
+context managers
+
+162
+00:09:10,950 --> 00:09:15,050
+and classes let you do inheritance but
+we also have
+
+163
+00:09:15,050 --> 00:09:18,630
+common patterns the come from a culture
+and from the thing at the library
+
+164
+00:09:18,630 --> 00:09:19,630
+encourages
+
+165
+00:09:19,630 --> 00:09:24,200
+again weeks after work sequences taken
+for the brown iterators
+
+166
+00:09:24,200 --> 00:09:28,030
+and mappings then we shake the workbench
+up
+
+167
+00:09:28,030 --> 00:09:31,520
+and we see if you can find some good
+pairings between these things
+
+168
+00:09:31,520 --> 00:09:36,460
+what guys you in this consistency
+
+169
+00:09:36,460 --> 00:09:39,910
+you have the entire technical and
+culture with the language
+
+170
+00:09:39,910 --> 00:09:43,490
+as well as the accumulated habits have
+influential libraries and the programmer
+
+171
+00:09:43,490 --> 00:09:45,210
+community behind you
+
+172
+00:09:45,210 --> 00:09:49,060
+or designing website we think this way
+people spend ninety percent other time I
+
+173
+00:09:49,060 --> 00:09:50,320
+other people sites
+
+174
+00:09:50,320 --> 00:09:53,920
+so yet put your logo on the upper left
+to make it like your homepage
+
+175
+00:09:53,920 --> 00:09:57,860
+but Login link in the upper right call
+your shopping cart shopping cart not
+
+176
+00:09:57,860 --> 00:09:59,130
+take up basket
+
+177
+00:09:59,130 --> 00:10:02,390
+make your links blue and so on now when
+you're reading an API
+
+178
+00:10:02,390 --> 00:10:05,920
+you can use the same sort of thing users
+spend ninety percent other time
+
+179
+00:10:05,920 --> 00:10:10,670
+calling other people's API's so if you
+have to you can be weird and clever
+
+180
+00:10:10,670 --> 00:10:14,960
+but if you can stick with conventions
+you get a lot of bonuses
+
+181
+00:10:14,960 --> 00:10:18,400
+first bought your conveyor spektr users
+you're not some
+
+182
+00:10:18,400 --> 00:10:22,500
+outsider who's gonna come in to make
+their code a massive clashing styles
+
+183
+00:10:22,500 --> 00:10:26,090
+bad case conventions and weird fact
+rings how many times have you
+
+184
+00:10:26,090 --> 00:10:29,030
+encountered a job API masquerading as a
+python one
+
+185
+00:10:29,030 --> 00:10:34,350
+thrown away in disgust second you'll get
+learning speed and retention
+
+186
+00:10:34,350 --> 00:10:36,740
+if it's the same as everything else
+there's less to learn in Leicester
+
+187
+00:10:36,740 --> 00:10:38,930
+member
+
+188
+00:10:38,930 --> 00:10:42,870
+as the brilliant thing about the early
+mcintosh project
+
+189
+00:10:42,870 --> 00:10:45,990
+they had explicit written down Human
+Interface Guidelines because
+
+190
+00:10:45,990 --> 00:10:49,390
+very soon after hiring the first
+programmers they heard a whole buncha
+
+191
+00:10:49,390 --> 00:10:51,620
+technical writers
+
+192
+00:10:51,620 --> 00:10:55,500
+every program had the same commands
+open/close quit copy/paste
+
+193
+00:10:55,500 --> 00:10:59,340
+and they all lived in the same menus and
+had the same keyboard shortcuts
+
+194
+00:10:59,340 --> 00:11:04,390
+so in a very real sense when you learned
+one program you had learned the mall
+
+195
+00:11:04,390 --> 00:11:07,890
+now API design is the same in so many
+ways
+
+196
+00:11:07,890 --> 00:11:11,470
+as UI design and we can apply a lot of
+the same principles
+
+197
+00:11:11,470 --> 00:11:16,110
+like the principal love least
+astonishment so try to surprise the user
+
+198
+00:11:16,110 --> 00:11:19,650
+if you implement up some kinda mapping
+type
+
+199
+00:11:19,650 --> 00:11:23,200
+and you have something that acts a lot
+like a python mapping
+
+200
+00:11:23,200 --> 00:11:26,620
+you should call its gets get method get
+should take
+
+201
+00:11:26,620 --> 00:11:30,020
+key and then default should call batch
+universe
+
+202
+00:11:30,020 --> 00:11:33,750
+the arguments people pick it up faster
+and remember it
+
+203
+00:11:33,750 --> 00:11:37,050
+better if you just plain old get plus
+you get polymorphism
+
+204
+00:11:37,050 --> 00:11:40,950
+right I'm if you're consistent things
+Hannah
+
+205
+00:11:40,950 --> 00:11:44,510
+how likely happen to you like I like a
+substitute addict in
+
+206
+00:11:44,510 --> 00:11:47,650
+for my read us riding a mapping class
+
+207
+00:11:47,650 --> 00:11:51,140
+and use it to mock something's up my
+tests or I can even
+
+208
+00:11:51,140 --> 00:11:54,960
+deploy small sites just using a big
+ramírez in a dictionary is that have
+
+209
+00:11:54,960 --> 00:11:59,790
+talking over a socket and having a
+set-up cost
+
+210
+00:11:59,790 --> 00:12:03,960
+so coming back to our terminal for
+Manning example how we bang those tasks
+
+211
+00:12:03,960 --> 00:12:07,120
+against are justing language features
+and conventions
+
+212
+00:12:07,120 --> 00:12:12,240
+well here quantity over quality rules
+and to the same color of my views on
+
+213
+00:12:12,240 --> 00:12:14,100
+designing you are just get as many
+
+214
+00:12:14,100 --> 00:12:19,270
+alternatives out there on the workbench
+as possible I call these my sketches
+
+215
+00:12:19,270 --> 00:12:23,860
+now for printing something at a location
+there really only two choices
+
+216
+00:12:23,860 --> 00:12:27,210
+but for these are okay but second one
+gives us the flexibility of putting
+
+217
+00:12:27,210 --> 00:12:28,730
+multiple statements inside
+
+218
+00:12:28,730 --> 00:12:32,050
+loops another calls out other functions
+
+219
+00:12:32,050 --> 00:12:37,280
+and then you could easily write printout
+the first one in terms of the second one
+
+220
+00:12:37,280 --> 00:12:41,690
+to the second one is the winner here the
+sketches for text formatting
+
+221
+00:12:41,690 --> 00:12:44,950
+we've got some square brackets in there
+we've got some dots and some string
+
+222
+00:12:44,950 --> 00:12:46,120
+concatenation
+
+223
+00:12:46,120 --> 00:12:49,330
+couple function calls with keyword
+arguments summer positional
+
+224
+00:12:49,330 --> 00:12:52,970
+required arguments now most of these
+separate the printing from the
+
+225
+00:12:52,970 --> 00:12:53,650
+formatting
+
+226
+00:12:53,650 --> 00:12:58,150
+action to a good idea but to the first
+one combine them together
+
+227
+00:12:58,150 --> 00:13:01,320
+I have a couple papers here there's this
+one
+
+228
+00:13:01,320 --> 00:13:05,080
+it gives you a very familiar nested
+function call syntax its composable
+
+229
+00:13:05,080 --> 00:13:10,310
+and frankly look a lot like HTML so poet
+from ear to ear wide swath your audience
+
+230
+00:13:10,310 --> 00:13:13,600
+trouble is that didn't happen to be a
+portable way up
+
+231
+00:13:13,600 --> 00:13:20,600
+turning off bold in terminals so that
+was kinda out
+
+232
+00:13:20,660 --> 00:13:23,900
+now this I am
+
+233
+00:13:23,900 --> 00:13:27,390
+this just uses attributes and say that's
+a great deal complexity went to score a
+
+234
+00:13:27,390 --> 00:13:29,210
+waste stayed to have any kind of
+
+235
+00:13:29,210 --> 00:13:32,740
+a big stable object for dragging around
+remember if we turned on bold so that we
+
+236
+00:13:32,740 --> 00:13:34,140
+can meet the code later
+
+237
+00:13:34,140 --> 00:13:37,140
+now we just admit he met the exact
+
+238
+00:13:37,140 --> 00:13:42,570
+terminal codes as attributes are trial
+class
+
+239
+00:13:42,570 --> 00:13:45,890
+now to support the nesting case
+
+240
+00:13:45,890 --> 00:13:49,690
+I should mention on notice that I'm
+using this with Python's built-in
+
+241
+00:13:49,690 --> 00:13:52,690
+arm template formatting
+
+242
+00:13:52,690 --> 00:13:56,280
+syntax to buy being considerate language
+features we get this for free without
+
+243
+00:13:56,280 --> 00:13:59,270
+ever on tumbling language which so many
+terminal language
+
+244
+00:13:59,270 --> 00:14:02,570
+trouble for many libraries do
+
+245
+00:14:02,570 --> 00:14:06,290
+now support nest in case we have this
+kinda mash it altogether syntax
+
+246
+00:14:06,290 --> 00:14:10,970
+red ball Orica said Red Bull Don white
+
+247
+00:14:10,970 --> 00:14:14,880
+now admittedly this is a bit novel but I
+kept this example in the consistency
+
+248
+00:14:14,880 --> 00:14:15,840
+section because
+
+249
+00:14:15,840 --> 00:14:18,500
+I think it's really good to see that
+these principles are all about
+
+250
+00:14:18,500 --> 00:14:19,760
+trade-offs
+
+251
+00:14:19,760 --> 00:14:23,290
+we can't just for all the knobs all the
+way up to 11 or you just do that all the
+
+252
+00:14:23,290 --> 00:14:23,790
+time
+
+253
+00:14:23,790 --> 00:14:28,400
+and we would need to think about this at
+all and I wouldn't be giving the stock
+
+254
+00:14:28,400 --> 00:14:31,560
+so if you're going to do something a
+little bit weird at least be
+
+255
+00:14:31,560 --> 00:14:36,110
+self-consistent this mashed together
+multi word syntax
+
+256
+00:14:36,110 --> 00:14:39,110
+is used for everything a6 formatting
+
+257
+00:14:39,110 --> 00:14:42,580
+foreground color background color it's
+hard to get it wrong
+
+258
+00:14:42,580 --> 00:14:46,010
+you can put the for matters in any order
+and it just works
+
+259
+00:14:46,010 --> 00:14:49,770
+and there's cashing for speed to not to
+worry about using some favored
+
+260
+00:14:49,770 --> 00:14:51,590
+representation
+
+261
+00:14:51,590 --> 00:14:55,080
+to the user doesn't have to keep on
+making a trip back to the docs
+
+262
+00:14:55,080 --> 00:14:58,820
+the internalize one slightly weird idea
+and that carries them through all the
+
+263
+00:14:58,820 --> 00:15:00,710
+use cases
+
+264
+00:15:00,710 --> 00:15:04,290
+another released report example this is
+jane goes RM syntax
+
+265
+00:15:04,290 --> 00:15:08,140
+got those double underscores right
+nobody else does at
+
+266
+00:15:08,140 --> 00:15:11,760
+but this is used consistently throughout
+the RM you learn at once
+
+267
+00:15:11,760 --> 00:15:14,890
+and you played everywhere
+
+268
+00:15:14,890 --> 00:15:21,890
+so when your belly when your consistency
+watch out for these red flags
+
+269
+00:15:22,260 --> 00:15:25,340
+if you find yourself really referencing
+your own documentation
+
+270
+00:15:25,340 --> 00:15:28,610
+or the source code library previously
+written
+
+271
+00:15:28,610 --> 00:15:32,530
+as your building the stuff up I when I
+call that tonight but the
+
+272
+00:15:32,530 --> 00:15:36,720
+argument in this order that order maybe
+you should go back and I try to clarify
+
+273
+00:15:36,720 --> 00:15:38,570
+things
+
+274
+00:15:38,570 --> 00:15:41,810
+if you feel like you're inventing novel
+syntax
+
+275
+00:15:41,810 --> 00:15:45,470
+make sure you stop and check yourself
+you should judgment when you do novelty
+
+276
+00:15:45,470 --> 00:15:47,070
+make sure that it pays off
+
+277
+00:15:47,070 --> 00:15:50,550
+rather than just shows up
+
+278
+00:15:50,550 --> 00:15:54,980
+our thermal today's brevity how to make
+common think short
+
+279
+00:15:54,980 --> 00:15:58,180
+in tokens I'm in but sometimes even in
+terms of characters if it doesn't hurt
+
+280
+00:15:58,180 --> 00:16:01,000
+your inability to much
+
+281
+00:16:01,000 --> 00:16:04,940
+user excerpt from earlier and I will go
+into I used to smash together syntax
+
+282
+00:16:04,940 --> 00:16:06,820
+little bit more
+
+283
+00:16:06,820 --> 00:16:10,610
+since formatting something and then
+returning to plain text is the most
+
+284
+00:16:10,610 --> 00:16:11,730
+common operation
+
+285
+00:16:11,730 --> 00:16:16,029
+we try to make it shortest here's a
+shortcut
+
+286
+00:16:16,029 --> 00:16:20,440
+these two lines are cooked you can
+actually use this is a string like above
+
+287
+00:16:20,440 --> 00:16:26,420
+or you can just call it and it's cooked
+but not everything has to be brief
+
+288
+00:16:26,420 --> 00:16:29,400
+this for example is a way to get down
+and dirty and really control exactly
+
+289
+00:16:29,400 --> 00:16:31,290
+that bites that you're admitting
+
+290
+00:16:31,290 --> 00:16:34,360
+now most people don't need this they can
+do the easier thing above but if you
+
+291
+00:16:34,360 --> 00:16:36,740
+wanna get down crazy in dirty
+
+292
+00:16:36,740 --> 00:16:40,470
+the slower thing lets you do it at the
+cost of just being a little bit longer
+
+293
+00:16:40,470 --> 00:16:45,880
+the general principle is you should pay
+for what you get
+
+294
+00:16:45,880 --> 00:16:49,029
+ask yourself these questions about
+pretty you find yourself
+
+295
+00:16:49,029 --> 00:16:52,420
+cupping chunks of code from your
+examples
+
+296
+00:16:52,420 --> 00:16:56,040
+it's probably too hard to type that
+stuff
+
+297
+00:16:56,040 --> 00:16:59,450
+do you find yourself typing something
+irrelevant saying I have to pass true
+
+298
+00:16:59,450 --> 00:17:01,010
+for this argument always true
+
+299
+00:17:01,010 --> 00:17:05,539
+why can't you just assume that well that
+the default right there
+
+300
+00:17:05,539 --> 00:17:10,029
+another is to manifest is very long
+argument lists on
+
+301
+00:17:10,029 --> 00:17:14,179
+you could be missing defaults maybe just
+every complex data every better
+
+302
+00:17:14,179 --> 00:17:15,919
+encapsulated as a class they can
+
+303
+00:17:15,919 --> 00:17:20,880
+intention it once and then commented on
+
+304
+00:17:20,880 --> 00:17:24,779
+impossibility making your abstractions
+composable means being able to reuse
+
+305
+00:17:24,779 --> 00:17:25,490
+them
+
+306
+00:17:25,490 --> 00:17:30,380
+in lots of different situations and put
+them together in unforeseen ways
+
+307
+00:17:30,380 --> 00:17:34,200
+other million ways to say this of
+flexibility loose coupling
+
+308
+00:17:34,200 --> 00:17:38,450
+small pieces loosely joined it all comes
+down to the minimisation
+
+309
+00:17:38,450 --> 00:17:42,550
+assumptions other two ways you can go
+about this
+
+310
+00:17:42,550 --> 00:17:47,610
+want the wrong let's go back to another
+worker done by six
+
+311
+00:17:47,610 --> 00:17:51,050
+we could have a jammed together printing
+
+312
+00:17:51,050 --> 00:17:54,340
+and formatting on one go like this now
+
+313
+00:17:54,340 --> 00:17:57,660
+my friend Jeff lost put together a
+really neat bulletin board system called
+
+314
+00:17:57,660 --> 00:17:58,540
+X 84
+
+315
+00:17:58,540 --> 00:18:02,690
+it's really old school it works over
+telnet and it uses blessings
+
+316
+00:18:02,690 --> 00:18:08,160
+in a multi-process design I fog patches
+got server process for most of the
+
+317
+00:18:08,160 --> 00:18:09,930
+action happens including the formatting
+
+318
+00:18:09,930 --> 00:18:13,750
+and then it doles out our two children
+processes which
+
+319
+00:18:13,750 --> 00:18:17,120
+handle each socket each client
+connection so
+
+320
+00:18:17,120 --> 00:18:22,309
+with the first line here there's no way
+to past the output to the children
+
+321
+00:18:22,309 --> 00:18:26,110
+effect neither these first one personal
+scores first one
+
+322
+00:18:26,110 --> 00:18:29,170
+because we assume that there's that
+coupling that printing and formatting
+
+323
+00:18:29,170 --> 00:18:31,600
+would happen all in one go
+
+324
+00:18:31,600 --> 00:18:34,809
+now the wrong way to solve this a
+beeline to at an option
+
+325
+00:18:34,809 --> 00:18:38,559
+say pass in a filehandle but now your
+balls gotta
+
+326
+00:18:38,559 --> 00:18:41,760
+instantiate some file handler strongly
+object even if you just want to keep
+
+327
+00:18:41,760 --> 00:18:43,670
+that string in memory
+
+328
+00:18:43,670 --> 00:18:48,470
+but makes the API more complicated
+you've got a document that option
+
+329
+00:18:48,470 --> 00:18:51,640
+you gots to put a branch in your code
+for it
+
+330
+00:18:51,640 --> 00:18:55,080
+and then you gotta write test the test
+that branch
+
+331
+00:18:55,080 --> 00:18:57,820
+every time I think about adding an
+option I look around for any other
+
+332
+00:18:57,820 --> 00:18:59,990
+escape route first
+
+333
+00:18:59,990 --> 00:19:03,990
+so a better way here is to break that
+coupling at the assumption point
+
+334
+00:19:03,990 --> 00:19:07,010
+dividing into two orthogonal pieces
+print
+
+335
+00:19:07,010 --> 00:19:11,160
+and format now because we've all the
+composer ability rule of thumb and
+
+336
+00:19:11,160 --> 00:19:12,790
+blessings like this
+
+337
+00:19:12,790 --> 00:19:16,730
+Jeff was able to stick format strings
+into memory really easily and pass them
+
+338
+00:19:16,730 --> 00:19:18,790
+off to a child processes
+
+339
+00:19:18,790 --> 00:19:22,500
+and despite the fact that he started X
+84 10 years before but things even
+
+340
+00:19:22,500 --> 00:19:23,350
+existed
+
+341
+00:19:23,350 --> 00:19:26,680
+& imy a lot of architectural commitment
+and decisions it was really easy
+
+342
+00:19:26,680 --> 00:19:27,600
+retrofit
+
+343
+00:19:27,600 --> 00:19:32,790
+because it minimizes assumptions are
+made
+
+344
+00:19:32,790 --> 00:19:36,270
+so watch out for these red flags and
+compose ability
+
+345
+00:19:36,270 --> 00:19:40,350
+classes with a lot state make me think
+that there are multiple little classes
+
+346
+00:19:40,350 --> 00:19:40,950
+inside
+
+347
+00:19:40,950 --> 00:19:44,440
+just struggling to get out each serving
+a single purpose
+
+348
+00:19:44,440 --> 00:19:48,720
+so other pylas text search connection
+object library for talking to elastic
+
+349
+00:19:48,720 --> 00:19:49,680
+search for Python
+
+350
+00:19:49,680 --> 00:19:54,250
+and it needed a penalty box for elastic
+church nodes that work responding
+
+351
+00:19:54,250 --> 00:19:57,460
+and wanna keep on trying these know that
+they were responding a given five or ten
+
+352
+00:19:57,460 --> 00:19:59,530
+minutes to recover
+
+353
+00:19:59,530 --> 00:20:03,110
+now I was tempted at this directly to
+the connection object
+
+354
+00:20:03,110 --> 00:20:06,150
+but I found out it was better back to
+separate them
+
+355
+00:20:06,150 --> 00:20:09,110
+at a separate thing I can now use this
+and other projects and this doesn't even
+
+356
+00:20:09,110 --> 00:20:09,760
+know
+
+357
+00:20:09,760 --> 00:20:13,590
+doesn't even assume it's for connections
+all it happens to have any is
+
+358
+00:20:13,590 --> 00:20:17,350
+Buehrle's represent the nodes a
+commitment from there it doesn't care
+
+359
+00:20:17,350 --> 00:20:20,830
+all it knows is you can be a bunch of
+things you tell me which ones are dead
+
+360
+00:20:20,830 --> 00:20:21,750
+and alive
+
+361
+00:20:21,750 --> 00:20:25,820
+and I run a timer and give you wanna
+random
+
+362
+00:20:25,820 --> 00:20:30,020
+another thing you have to watch out for
+is deep inheritance hierarchies
+
+363
+00:20:30,020 --> 00:20:34,190
+people say in their right to the
+composition is better than inheritance
+
+364
+00:20:34,190 --> 00:20:39,140
+and here's why they say that if you
+inherit your object does get easy access
+
+365
+00:20:39,140 --> 00:20:40,500
+to the functionality the parents
+
+366
+00:20:40,500 --> 00:20:44,300
+that much is true but it also inherits
+
+367
+00:20:44,300 --> 00:20:48,600
+all the invariant baggage parent s it's
+required
+
+368
+00:20:48,600 --> 00:20:52,950
+to maintain those in variance what
+you've done now is just increase
+
+369
+00:20:52,950 --> 00:20:57,140
+the attack surface if you like the
+amount of codesa tiptoe around
+
+370
+00:20:57,140 --> 00:21:02,910
+those in variance
+
+371
+00:21:02,910 --> 00:21:09,070
+the law of Demeter at the says if you do
+choose to compose objects
+
+372
+00:21:09,070 --> 00:21:12,929
+no cheating so vlasic search contains
+
+373
+00:21:12,929 --> 00:21:16,670
+penalty box object US the church object
+can call methods
+
+374
+00:21:16,670 --> 00:21:20,320
+on that penalty box but if not comment
+heads
+
+375
+00:21:20,320 --> 00:21:24,620
+object inside the penalty box so the
+covers the 1.1
+
+376
+00:21:24,620 --> 00:21:29,270
+it up be is fine it upbeat at sea is
+less fine a lot be a C-dot
+
+377
+00:21:29,270 --> 00:21:33,840
+D is right out good if you decide you
+reaching and everything like that you're
+
+378
+00:21:33,840 --> 00:21:35,630
+making assumptions all over the place
+
+379
+00:21:35,630 --> 00:21:38,230
+and there's no point putting up these
+objects to begin with you might evolve
+
+380
+00:21:38,230 --> 00:21:42,300
+might want to solve dumped in one
+namespace
+
+381
+00:21:42,300 --> 00:21:46,679
+marking and tests I above two minds
+about market I think
+
+382
+00:21:46,679 --> 00:21:50,360
+if you hundreds of marking up too many
+dependencies your code
+
+383
+00:21:50,360 --> 00:21:54,500
+you could estimate independence for
+example how to test
+
+384
+00:21:54,500 --> 00:21:58,160
+this you have to reach into sis
+
+385
+00:21:58,160 --> 00:22:03,370
+and mark out maybe standard how to
+minimum effort put back afterwards and
+
+386
+00:22:03,370 --> 00:22:07,660
+marking library maybe to help you do
+that easily on the other hand this
+
+387
+00:22:07,660 --> 00:22:11,260
+doesn't require any market just compare
+the returned string and bring about
+
+388
+00:22:11,260 --> 00:22:11,830
+printing
+
+389
+00:22:11,830 --> 00:22:15,890
+test will code is decoupled Co
+
+390
+00:22:15,890 --> 00:22:20,480
+and then finally bolt-on options look
+out for those
+
+391
+00:22:20,480 --> 00:22:23,830
+another rule of thumb the helps with
+reusability is plane data
+
+392
+00:22:23,830 --> 00:22:28,250
+sort of native data types
+
+393
+00:22:28,250 --> 00:22:31,710
+whenever possible your API should speak
+with its callers using
+
+394
+00:22:31,710 --> 00:22:35,140
+simple built-in types Dixon in and
+strings
+
+395
+00:22:35,140 --> 00:22:38,500
+not big hairy custom data structures
+
+396
+00:22:38,500 --> 00:22:41,470
+and the aim here which should be
+sounding eerily familiar now is to
+
+397
+00:22:41,470 --> 00:22:42,100
+reduce
+
+398
+00:22:42,100 --> 00:22:45,140
+barriers to reuse what a barrier
+
+399
+00:22:45,140 --> 00:22:50,350
+all barriers the config parser class are
+the Python standard lip
+
+400
+00:22:50,350 --> 00:22:54,400
+and is that excerpt of its API its
+purpose in life history windows style
+
+401
+00:22:54,400 --> 00:22:59,230
+I and i files now unfortunately convict
+parser is not just a parser that does
+
+402
+00:22:59,230 --> 00:23:02,530
+its job and translate for file into a
+stringer
+
+403
+00:23:02,530 --> 00:23:05,010
+couple a dictionary is mister
+dictionaries or whatever and get that
+
+404
+00:23:05,010 --> 00:23:06,110
+way
+
+405
+00:23:06,110 --> 00:23:10,220
+now it hangs around and you have to
+write your entire program in terms
+
+406
+00:23:10,220 --> 00:23:15,200
+a bit API under but has option calls and
+and get calls all over the place
+
+407
+00:23:15,200 --> 00:23:18,350
+but they're not idiomatic Python thinks
+
+408
+00:23:18,350 --> 00:23:22,590
+I get for example it's not your normal
+get it section option
+
+409
+00:23:22,590 --> 00:23:26,230
+not key default at a little confusing
+
+410
+00:23:26,230 --> 00:23:29,679
+and you can imagine even has option
+section option
+
+411
+00:23:29,679 --> 00:23:32,980
+we care about the whole thing as when s
+the map you know
+
+412
+00:23:32,980 --> 00:23:37,160
+bracket section back adoption and away
+you go
+
+413
+00:23:37,160 --> 00:23:41,860
+and later I if you want to make your
+program more flexible and people &
+
+414
+00:23:41,860 --> 00:23:44,350
+Gamble configuration or something else
+
+415
+00:23:44,350 --> 00:23:47,980
+I you're still stuck to this API right
+you have to put if senior Cody shiny to
+
+416
+00:23:47,980 --> 00:23:48,960
+configuration
+
+417
+00:23:48,960 --> 00:23:53,440
+we have to write your own abstraction
+layer on top of this
+
+418
+00:23:53,440 --> 00:23:56,870
+so only pick on it a little bit more and
+
+419
+00:23:56,870 --> 00:24:00,059
+liar just a little bit about AP I'm
+gonna say has a a read
+
+420
+00:24:00,059 --> 00:24:05,340
+command which it does it takes a single
+file name: which actually doesn't
+
+421
+00:24:05,340 --> 00:24:09,880
+this might feel like a convenient since
+configure often comes out files
+
+422
+00:24:09,880 --> 00:24:14,160
+actually its a bear a method should take
+what it needs
+
+423
+00:24:14,160 --> 00:24:17,410
+in no more you need string
+
+424
+00:24:17,410 --> 00:24:21,150
+you need to file for any reason the
+config files not 500 megabytes
+
+425
+00:24:21,150 --> 00:24:24,520
+can be seeking around in it there's no
+reason it a filehandle
+
+426
+00:24:24,520 --> 00:24:27,950
+now if you want at the convenience back
+that's fine you can a helper function
+
+427
+00:24:27,950 --> 00:24:30,799
+like file contents can be used in
+combination with this
+
+428
+00:24:30,799 --> 00:24:34,900
+string taking method or you can now you
+can go ahead and add a convenience
+
+429
+00:24:34,900 --> 00:24:36,850
+function also that does both parts
+
+430
+00:24:36,850 --> 00:24:40,299
+but make sure you also provide the core
+method that takes the minimum thing it
+
+431
+00:24:40,299 --> 00:24:44,040
+needs
+
+432
+00:24:44,040 --> 00:24:47,420
+even when you have an inherently more
+complicated data structure
+
+433
+00:24:47,420 --> 00:24:51,610
+cunt exposed as much of it as possible
+has built-in interface
+
+434
+00:24:51,610 --> 00:24:56,040
+this little snippet from Beiber that I'm
+working on called spider funk
+
+435
+00:24:56,040 --> 00:24:59,950
+and it does static analysis JavaScript
+code
+
+436
+00:24:59,950 --> 00:25:03,049
+now I was ashamed to find
+
+437
+00:25:03,049 --> 00:25:06,190
+in my travels that I actually did a
+doubly linked
+
+438
+00:25:06,190 --> 00:25:09,770
+tree to represent the abstract syntax
+tree a
+
+439
+00:25:09,770 --> 00:25:12,990
+simply link wouldn't do it I could just
+have nested lists
+
+440
+00:25:12,990 --> 00:25:16,330
+I need to be able to walk from the
+analysts out to the other lists were up
+
+441
+00:25:16,330 --> 00:25:17,799
+the tree
+
+442
+00:25:17,799 --> 00:25:20,970
+so I had to make this node class and
+
+443
+00:25:20,970 --> 00:25:24,020
+it hurt my soul but there you have it
+
+444
+00:25:24,020 --> 00:25:28,820
+but the first thing I did was to break
+back into the Python idiom by exposing
+
+445
+00:25:28,820 --> 00:25:32,920
+things as a had a built-in language
+constructs in this case
+
+446
+00:25:32,920 --> 00:25:36,960
+a try transit up the tree as an iterator
+
+447
+00:25:36,960 --> 00:25:40,809
+now because I then expose this is
+something that the language kinda gives
+
+448
+00:25:40,809 --> 00:25:41,770
+preference to
+
+449
+00:25:41,770 --> 00:25:45,429
+I could do pretty complicated things
+with such a little one-liners like this
+
+450
+00:25:45,429 --> 00:25:47,740
+comprehension generator expressions
+
+451
+00:25:47,740 --> 00:25:51,929
+this fines with scope a penny a
+javascript St node
+
+452
+00:25:51,929 --> 00:25:55,320
+by walking on up and taking the first
+one that looks like a school be kinda
+
+453
+00:25:55,320 --> 00:25:58,990
+node so if you can't have pointed
+everywhere
+
+454
+00:25:58,990 --> 00:26:02,400
+get back to it ASAP
+
+455
+00:26:02,400 --> 00:26:06,330
+I get a warning signs if users take your
+output immediately change it to
+
+456
+00:26:06,330 --> 00:26:07,850
+something else
+
+457
+00:26:07,850 --> 00:26:11,940
+bucks at a given the something else if
+conversely
+
+458
+00:26:11,940 --> 00:26:14,950
+you make them instantiate some massive
+custom object
+
+459
+00:26:14,950 --> 00:26:19,250
+just to pass a tour Tina viewers well
+maybe should just take those individual
+
+460
+00:26:19,250 --> 00:26:20,450
+things individually
+
+461
+00:26:20,450 --> 00:26:23,710
+unless you see them using lobbies in
+bundles
+
+462
+00:26:23,710 --> 00:26:27,120
+and if you find yourself rewriting
+things that the language already
+
+463
+00:26:27,120 --> 00:26:29,160
+provides in different terms
+
+464
+00:26:29,160 --> 00:26:32,630
+like convict parser had that get things
+took a section in a key
+
+465
+00:26:32,630 --> 00:26:39,320
+where it's really just one key access
+two key access
+
+466
+00:26:39,320 --> 00:26:42,380
+so I have this idea that you have my API
+
+467
+00:26:42,380 --> 00:26:45,970
+should spend most of their time in the
+group
+
+468
+00:26:45,970 --> 00:26:49,679
+and I don't just mean performing well or
+doing their work easily
+
+469
+00:26:49,679 --> 00:26:53,059
+I mean it in a more strictly physical
+sets so
+
+470
+00:26:53,059 --> 00:26:56,750
+if you think a programming as walking
+across a plane
+
+471
+00:26:56,750 --> 00:27:01,260
+and there's this groove on the plane
+it's got it's a nice smooth path that
+
+472
+00:27:01,260 --> 00:27:01,920
+has kind of
+
+473
+00:27:01,920 --> 00:27:05,150
+Kirby side the 10 to keep you centered
+in the groove
+
+474
+00:27:05,150 --> 00:27:08,400
+you can close your eyes and and walk
+through it because even if the group is
+
+475
+00:27:08,400 --> 00:27:11,410
+curving it got these nice a gently
+sloping sides
+
+476
+00:27:11,410 --> 00:27:14,950
+the push back into the center so
+
+477
+00:27:14,950 --> 00:27:17,540
+even if there's nothing keeping you from
+stepping are the group in walking
+
+478
+00:27:17,540 --> 00:27:18,690
+somewhere else
+
+479
+00:27:18,690 --> 00:27:22,740
+the group was very attractive a new
+users are drawn their first
+
+480
+00:27:22,740 --> 00:27:26,900
+here couple ideas on how to cut groove
+in your API's
+
+481
+00:27:26,900 --> 00:27:30,960
+avoid nonsense representations
+
+482
+00:27:30,960 --> 00:27:34,120
+tough talk about I'll ask search briefly
+again
+
+483
+00:27:34,120 --> 00:27:37,950
+there are two ways degree elastic search
+
+484
+00:27:37,950 --> 00:27:41,179
+you pass a big Jason blob very capable
+but complicated
+
+485
+00:27:41,179 --> 00:27:45,650
+order to pass at this more limited but
+tertiary string syntax
+
+486
+00:27:45,650 --> 00:27:48,830
+is no such thing as unless the church
+choir that uses both formats at once
+
+487
+00:27:48,830 --> 00:27:52,450
+or neither format you have to choose one
+
+488
+00:27:52,450 --> 00:27:56,580
+now here's a pile after church used to
+look like all charger optional
+
+489
+00:27:56,580 --> 00:28:00,830
+you could you have to pass in the string
+style crews using the Q argument
+
+490
+00:28:00,830 --> 00:28:03,990
+and the Jason once using the body are
+kept
+
+491
+00:28:03,990 --> 00:28:07,240
+of course this meant but nothing stopped
+you from doing this
+
+492
+00:28:07,240 --> 00:28:11,770
+or even s both which are complete
+nonsense
+
+493
+00:28:11,770 --> 00:28:15,030
+and I'd say shouldn't even be able to
+get that far
+
+494
+00:28:15,030 --> 00:28:17,990
+you certainly should Nico near library
+to reject this kind of silliness which
+
+495
+00:28:17,990 --> 00:28:19,480
+were used to need
+
+496
+00:28:19,480 --> 00:28:23,010
+the new pylas to church looks like this
+
+497
+00:28:23,010 --> 00:28:26,520
+we replace that mess with a single
+required argument to which you can pass
+
+498
+00:28:26,520 --> 00:28:27,330
+either string
+
+499
+00:28:27,330 --> 00:28:31,020
+or adjacent dictionary you can't go
+wrong because the interpreter won't let
+
+500
+00:28:31,020 --> 00:28:31,919
+you
+
+501
+00:28:31,919 --> 00:28:36,440
+it's much group you're now incidentally
+this turns up another principle which is
+
+502
+00:28:36,440 --> 00:28:38,260
+to fail shallowly
+
+503
+00:28:38,260 --> 00:28:42,710
+in language is the commute respects this
+is a very nice convenience
+
+504
+00:28:42,710 --> 00:28:46,260
+but if heaven forbid using language that
+doesn't like a lot of JavaScript
+
+505
+00:28:46,260 --> 00:28:47,600
+implementations
+
+506
+00:28:47,600 --> 00:28:51,429
+this is absolutely vital and this is one
+of the things that drives me nuts about
+
+507
+00:28:51,429 --> 00:28:52,710
+JavaScript design
+
+508
+00:28:52,710 --> 00:28:57,690
+job you know you have how'd under fines
+and man's can pop out of things
+
+509
+00:28:57,690 --> 00:28:59,400
+squirreled away in data structures
+
+510
+00:28:59,400 --> 00:29:03,390
+only to appear 500 function calls later
+and he spent all afternoon trying to
+
+511
+00:29:03,390 --> 00:29:05,540
+trace where these things came from
+
+512
+00:29:05,540 --> 00:29:10,260
+fail shallowly another way to provide
+group is
+
+513
+00:29:10,260 --> 00:29:13,900
+REI
+
+514
+00:29:13,900 --> 00:29:18,440
+this is a possible balloon class but as
+you can see you when you first construct
+
+515
+00:29:18,440 --> 00:29:19,270
+one it has
+
+516
+00:29:19,270 --> 00:29:22,840
+0 errant kneecap up a balloon has no air
+
+517
+00:29:22,840 --> 00:29:25,880
+right you might imagine sings and
+documentation
+
+518
+00:29:25,880 --> 00:29:30,700
+that says before popping a balloon make
+sure you fill it with care
+
+519
+00:29:30,700 --> 00:29:34,549
+now that's broken design a pop a balloon
+clash should be pop ball all the time
+
+520
+00:29:34,549 --> 00:29:37,610
+full stop right these are shouldn't have
+to head over the docs to figure out what
+
+521
+00:29:37,610 --> 00:29:39,179
+went wrong
+
+522
+00:29:39,179 --> 00:29:42,950
+so a better way here is to require
+explicitness
+
+523
+00:29:42,950 --> 00:29:46,380
+which we know is a good thing reply
+thanks to us
+
+524
+00:29:46,380 --> 00:29:49,760
+a better ways to take the initial full
+amount to construction
+
+525
+00:29:49,760 --> 00:29:53,540
+users required to provide it gets air
+they don't and so there's no wondering
+
+526
+00:29:53,540 --> 00:29:57,600
+later on why the balloon just went
+squish when you picked it
+
+527
+00:29:57,600 --> 00:30:04,049
+REI eyes to more specific case love
+don't have been variants that art
+
+528
+00:30:04,049 --> 00:30:08,200
+and a fine away providing cruises
+through compelling examples
+
+529
+00:30:08,200 --> 00:30:11,490
+and these are the most over sorted group
+the user knows that they're being
+
+530
+00:30:11,490 --> 00:30:13,059
+advised
+
+531
+00:30:13,059 --> 00:30:17,020
+is a screenshot from Mac paint 1.0 who's
+actually seen this in the flesh on
+
+532
+00:30:17,020 --> 00:30:18,750
+original hardware
+
+533
+00:30:18,750 --> 00:30:21,760
+gotta lotta are people who love me and
+here's great
+
+534
+00:30:21,760 --> 00:30:26,059
+health on the left menus from the top
+and looks familiar to everybody in this
+
+535
+00:30:26,059 --> 00:30:26,460
+room
+
+536
+00:30:26,460 --> 00:30:30,210
+even those who didn't put their hand up
+because Photoshop and Illustrator the
+
+537
+00:30:30,210 --> 00:30:33,760
+camp in Pixelmator picture pro in MS
+Paint have been slavishly following this
+
+538
+00:30:33,760 --> 00:30:36,860
+pattern for the last thirty years
+
+539
+00:30:36,860 --> 00:30:39,900
+another great example is it had a
+platformers right
+
+540
+00:30:39,900 --> 00:30:42,770
+this is original stuff on this hardware
+outing but it done anything like this
+
+541
+00:30:42,770 --> 00:30:43,720
+before
+
+542
+00:30:43,720 --> 00:30:48,020
+but even today we're still jumping and
+running to the right
+
+543
+00:30:48,020 --> 00:30:51,440
+set a good example people will happily
+follow for ever
+
+544
+00:30:51,440 --> 00:30:56,010
+now a stir at my example code and really
+liked the tactic fashion long outrageous
+
+545
+00:30:56,010 --> 00:30:58,640
+variable names inefficiency
+
+546
+00:30:58,640 --> 00:31:03,820
+for dehydrated efficiency tradeoff for
+clarity
+
+547
+00:31:03,820 --> 00:31:06,580
+and i ended up having to stop doing that
+because people were doing was they would
+
+548
+00:31:06,580 --> 00:31:07,960
+you take my code
+
+549
+00:31:07,960 --> 00:31:11,120
+example code in like paste into the
+production systems
+
+550
+00:31:11,120 --> 00:31:13,809
+and that even leave the comments there
+are the docs if they didn't apply
+
+551
+00:31:13,809 --> 00:31:15,270
+anymore
+
+552
+00:31:15,270 --> 00:31:18,440
+so I had I had actually dropped down and
+realize that the
+
+553
+00:31:18,440 --> 00:31:22,820
+by users are dose I'll they will do
+exactly what you tell them to do
+
+554
+00:31:22,820 --> 00:31:26,169
+and it's not that they're not that
+they're not smart
+
+555
+00:31:26,169 --> 00:31:29,770
+they're just not interested in solving
+that problem that you solved
+
+556
+00:31:29,770 --> 00:31:31,740
+they want to get in get the
+functionality and get back to the
+
+557
+00:31:31,740 --> 00:31:33,850
+interesting problem that they're trying
+to solve of
+
+558
+00:31:33,850 --> 00:31:39,280
+so be a good library status and give
+good examples
+
+559
+00:31:39,280 --> 00:31:42,710
+previous yeah so look out for
+representable States
+
+560
+00:31:42,710 --> 00:31:48,059
+that are nonsense should even be able to
+state nonsense
+
+561
+00:31:48,059 --> 00:31:51,260
+look out for in variance that are to
+bury it and
+
+562
+00:31:51,260 --> 00:31:55,039
+watch new users and see if they don't
+know where to start
+
+563
+00:31:55,039 --> 00:31:58,410
+the up tech writers in the early
+mcintosh project but often come back to
+
+564
+00:31:58,410 --> 00:31:59,900
+the programmers and say hey you know
+this
+
+565
+00:31:59,900 --> 00:32:04,100
+suis totally confusing I'm having to
+write all this documentation or to
+
+566
+00:32:04,100 --> 00:32:05,580
+explain it
+
+567
+00:32:05,580 --> 00:32:09,030
+bed design becomes obvious when you try
+to document it
+
+568
+00:32:09,030 --> 00:32:12,280
+if you guys too hard to explain it's
+probably too complicated
+
+569
+00:32:12,280 --> 00:32:16,580
+so let's go back and fix the design
+incidentally this is why I like to write
+
+570
+00:32:16,580 --> 00:32:17,570
+the read me
+
+571
+00:32:17,570 --> 00:32:21,390
+first thing before writing any code
+documentation driven design makes for
+
+572
+00:32:21,390 --> 00:32:24,640
+better UI
+
+573
+00:32:24,640 --> 00:32:27,900
+now we get to the walls
+
+574
+00:32:27,900 --> 00:32:30,990
+water to keep you from hurting yourself
+or others
+
+575
+00:32:30,990 --> 00:32:34,280
+I just as in the physical metaphor
+there's a continuum between groups and
+
+576
+00:32:34,280 --> 00:32:35,419
+walls
+
+577
+00:32:35,419 --> 00:32:39,000
+the more damage you can do with the
+feature the higher the wall should be
+
+578
+00:32:39,000 --> 00:32:44,130
+the more barbed wire should happen to me
+know the dogs in front of it should be
+
+579
+00:32:44,130 --> 00:32:47,340
+here's a horrible API with not enough
+walls
+
+580
+00:32:47,340 --> 00:32:51,740
+anybody see what's wrong with this maybe
+it's better you in the past
+
+581
+00:32:51,740 --> 00:32:54,340
+who hears wiped out a whole database
+column because they forgot the WHERE
+
+582
+00:32:54,340 --> 00:32:55,919
+clause
+
+583
+00:32:55,919 --> 00:32:59,179
+at on money wasted in this room
+
+584
+00:32:59,179 --> 00:33:02,610
+so one way we could maybe fix that is to
+require you to
+
+585
+00:33:02,610 --> 00:33:06,580
+say all when you mean all less
+mathematically elegant
+
+586
+00:33:06,580 --> 00:33:09,500
+but think of all the money in time in
+here would say since the advent of
+
+587
+00:33:09,500 --> 00:33:12,390
+sequel
+
+588
+00:33:12,390 --> 00:33:16,690
+general just not as the pretty common
+thing to do right
+
+589
+00:33:16,690 --> 00:33:21,400
+trouble is to do it first trip type:
+this switches seriously bad news
+
+590
+00:33:21,400 --> 00:33:25,669
+don't have returned by accident now
+maybe we could require dash
+
+591
+00:33:25,669 --> 00:33:29,010
+F for the sort of thing I think actually
+some shells a start doing this which is
+
+592
+00:33:29,010 --> 00:33:31,919
+fantastic
+
+593
+00:33:31,919 --> 00:33:35,210
+a very similar sort of thing happened in
+pylas to church missile at the Delete
+
+594
+00:33:35,210 --> 00:33:36,630
+method used to look like
+
+595
+00:33:36,630 --> 00:33:40,970
+on pylas to church can delete a document
+based on an ID
+
+596
+00:33:40,970 --> 00:33:44,750
+but one of its faults is if you don't
+pass and ID it'll just we all the
+
+597
+00:33:44,750 --> 00:33:45,530
+documents
+
+598
+00:33:45,530 --> 00:33:49,429
+thank you very convenient I
+
+599
+00:33:49,429 --> 00:33:54,850
+and I D here if you notice is optional
+
+600
+00:33:54,850 --> 00:33:58,669
+I can certainly imagine pretty my and
+print disease too soon are putting my ID
+
+601
+00:33:58,669 --> 00:34:02,220
+in there but I for got together arc so
+it turns out to be a doctype not really
+
+602
+00:34:02,220 --> 00:34:03,600
+an ID
+
+603
+00:34:03,600 --> 00:34:06,940
+so we fix that and I here's how it looks
+now
+
+604
+00:34:06,940 --> 00:34:10,599
+ID is mandatory pardon me
+
+605
+00:34:10,599 --> 00:34:13,839
+and a we introduced a separate to leave
+
+606
+00:34:13,839 --> 00:34:17,069
+all method for that weird case we will
+delete all the documents
+
+607
+00:34:17,069 --> 00:34:22,889
+they can't possibly screw that up by
+actor only screw up on purpose
+
+608
+00:34:22,889 --> 00:34:25,919
+the other thing to consider is how to
+report errors said you have two choices
+
+609
+00:34:25,919 --> 00:34:27,240
+not to the time
+
+610
+00:34:27,240 --> 00:34:31,490
+and throwing exception is a lot better
+than returning something because as we
+
+611
+00:34:31,490 --> 00:34:32,530
+all know from C
+
+612
+00:34:32,530 --> 00:34:38,359
+its way too easy to ignore return value
+
+613
+00:34:38,359 --> 00:34:42,190
+warning signs for shaved if you up back
+to the docs again
+
+614
+00:34:42,190 --> 00:34:45,899
+if you're reading your docs in to see
+the you're saying abram remember to
+
+615
+00:34:45,899 --> 00:34:49,500
+or make sure you do this on
+
+616
+00:34:49,500 --> 00:34:52,780
+maybe should make it so you don't have
+to remember to or if it's a
+
+617
+00:34:52,780 --> 00:34:56,530
+make sure you do this before or make
+sure you do this after consider context
+
+618
+00:34:56,530 --> 00:34:57,210
+managers
+
+619
+00:34:57,210 --> 00:35:01,270
+at a really great way in Python wrapping
+things
+
+620
+00:35:01,270 --> 00:35:04,730
+second ask yourself what's the most
+dangerous thing I can do
+
+621
+00:35:04,730 --> 00:35:07,960
+with my library and then make sure
+they're barking dogs in front
+
+622
+00:35:07,960 --> 00:35:11,440
+you can't do that by accident
+
+623
+00:35:11,440 --> 00:35:15,010
+beware that most people won't
+self-reports safety issues
+
+624
+00:35:15,010 --> 00:35:18,859
+a there's a stool culture blaming the
+user that goes on in programming
+
+625
+00:35:18,859 --> 00:35:22,780
+we have to work to stop this out so
+users are embarrassed to register to
+
+626
+00:35:22,780 --> 00:35:23,490
+admit they
+
+627
+00:35:23,490 --> 00:35:27,200
+made what they see as a mistake actually
+designed mistake right
+
+628
+00:35:27,200 --> 00:35:31,090
+if you have an electrified doorknob it's
+not you didn't go get asbestos Mitt
+
+629
+00:35:31,090 --> 00:35:34,450
+first a non-conductive met its that
+should have an electrified or not what
+
+630
+00:35:34,450 --> 00:35:36,450
+you doing
+
+631
+00:35:36,450 --> 00:35:39,609
+32 actively watch out for users and
+solicitor
+
+632
+00:35:39,609 --> 00:35:44,080
+solicit mistakes people mistakes people
+made
+
+633
+00:35:44,080 --> 00:35:47,150
+those are my seven principles send
+hereof compile them into a national
+
+634
+00:35:47,150 --> 00:35:48,580
+checklist
+
+635
+00:35:48,580 --> 00:35:51,510
+and if you bang your API's against the
+Meijer designing them you should avoid
+
+636
+00:35:51,510 --> 00:35:54,250
+the most common pitfalls
+
+637
+00:35:54,250 --> 00:35:58,910
+but let me get met up for a second you
+may have noticed there were no big black
+
+638
+00:35:58,910 --> 00:36:03,070
+lines between the some these principles
+the kinda bleed into each other like
+
+639
+00:36:03,070 --> 00:36:07,440
+plane data helped compose ability and
+brevity aids grittiness because you to
+
+640
+00:36:07,440 --> 00:36:09,090
+remember things
+
+641
+00:36:09,090 --> 00:36:14,290
+so began to wonder does any order arise
+other relationships between these
+
+642
+00:36:14,290 --> 00:36:17,500
+and it turns out that it does
+
+643
+00:36:17,500 --> 00:36:21,160
+if you leave them all out and draw a
+rose between them that indicate this one
+
+644
+00:36:21,160 --> 00:36:23,260
+contributes to that one
+
+645
+00:36:23,260 --> 00:36:27,349
+you see them kinda divide almost
+perfectly into two clusters
+
+646
+00:36:27,349 --> 00:36:31,490
+the left cluster is a things the canopy
+bade a quantitative definition
+
+647
+00:36:31,490 --> 00:36:35,670
+compactness groupings mister more for
+human comprehension
+
+648
+00:36:35,670 --> 00:36:39,720
+well things on the right a more
+calculable things you can imagine having
+
+649
+00:36:39,720 --> 00:36:43,290
+absolute impact on the number of lines
+of code in the system
+
+650
+00:36:43,290 --> 00:36:46,619
+ignoring human comprehensibility if you
+like
+
+651
+00:36:46,619 --> 00:36:53,310
+the left is Lingle and the right is
+mathematical
+
+652
+00:36:53,310 --> 00:36:56,480
+now have often thought you can approach
+computer science
+
+653
+00:36:56,480 --> 00:37:00,070
+from either of these directions is if
+its language or its math
+
+654
+00:37:00,070 --> 00:37:05,030
+I mean like math in school I'm was okay
+at it but I I didn't love it
+
+655
+00:37:05,030 --> 00:37:08,359
+up I still argue with people who say the
+programming this actually map because
+
+656
+00:37:08,359 --> 00:37:10,359
+I'm a little thick
+
+657
+00:37:10,359 --> 00:37:13,900
+but both these things are necessary to
+get anything to actually work
+
+658
+00:37:13,900 --> 00:37:17,349
+right so the spotlight spotlights the
+thing that that
+
+659
+00:37:17,349 --> 00:37:21,070
+other programming languages have over
+ordinary human languages
+
+660
+00:37:21,070 --> 00:37:25,630
+programs are alive they not only mean
+things when people read them
+
+661
+00:37:25,630 --> 00:37:28,990
+but they actually do things when run
+
+662
+00:37:28,990 --> 00:37:33,020
+so very literally a program with
+carefully chosen symbols
+
+663
+00:37:33,020 --> 00:37:36,700
+is poetry in motion
+
+664
+00:37:36,700 --> 00:37:43,700
+pretty neat thank you very much
+
+665
+00:37:55,240 --> 00:37:55,980
+mike is on
+
+666
+00:37:55,980 --> 00:37:59,740
+barrier Chur um your talk is good and
+you should feel good
+
+667
+00:37:59,740 --> 00:38:06,310
+thank you I thank you valued
+
+668
+00:38:06,310 --> 00:38:10,520
+and I say I mean basically you agree
+with my belief so we must not leap but
+
+669
+00:38:10,520 --> 00:38:11,760
+we must both be right
+
+670
+00:38:11,760 --> 00:38:15,030
+is be slowly cuz it echoes all over the
+place okay
+
+671
+00:38:15,030 --> 00:38:18,490
+um I'm just a flatter you that's all arm
+
+672
+00:38:18,490 --> 00:38:23,200
+I I wanted to mention a couple of
+additional resources
+
+673
+00:38:23,200 --> 00:38:26,640
+from people who came out of this talk
+and said
+
+674
+00:38:26,640 --> 00:38:29,930
+wears more good arm in the book
+
+675
+00:38:29,930 --> 00:38:33,160
+making software what really works and
+why we believe it
+
+676
+00:38:33,160 --> 00:38:36,860
+edited by Greg Wilson who's here and
+Andy Orem
+
+677
+00:38:36,860 --> 00:38:40,370
+there's a chapter about API usability
+
+678
+00:38:40,370 --> 00:38:45,040
+man there's a chapter about what
+different languages cause people to
+
+679
+00:38:45,040 --> 00:38:46,740
+think when trying to do the same
+
+680
+00:38:46,740 --> 00:38:50,560
+exercise with data structures they reach
+for and stuff like that
+
+681
+00:38:50,560 --> 00:38:54,190
+case studies that be fascinating exactly
+and
+
+682
+00:38:54,190 --> 00:38:57,690
+arm your design philosophy seems to
+accord with
+
+683
+00:38:57,690 --> 00:39:01,440
+that proposed in RESTful web API's
+
+684
+00:39:01,440 --> 00:39:05,570
+the book my spouse wrote and how he made
+a beautiful soup
+
+685
+00:39:05,570 --> 00:39:08,720
+the um which you know I sorta watched
+him do
+
+686
+00:39:08,720 --> 00:39:12,390
+cell thank you very much I I agree with
+all the ideas Thank You
+
+687
+00:39:12,390 --> 00:39:16,360
+you're quite welcome pick a similar iraq
+thank you
+
+688
+00:39:16,360 --> 00:39:19,910
+I just want to know what's the EPI for
+popping the pop a balloon
+
+689
+00:39:19,910 --> 00:39:22,980
+what is the API for popping a balloon
+
+690
+00:39:22,980 --> 00:39:26,350
+I suppose we have a pop method but it is
+in Java you
+
+691
+00:39:26,350 --> 00:39:29,690
+construct a pin factory factor and then
+apply it
+
+692
+00:39:29,690 --> 00:39:33,270
+took but but if it's apartment that the
+more you end up with both
+
+693
+00:39:33,270 --> 00:39:37,330
+pop a balloon that you can't pop anymore
+yes
+
+694
+00:39:37,330 --> 00:39:40,680
+that's represented by nonsense
+
+695
+00:39:40,680 --> 00:39:46,570
+%ah sorry echoes really bad here any
+others
+
+696
+00:39:46,570 --> 00:39:50,680
+few
+
+697
+00:39:50,680 --> 00:39:54,850
+have to mark so many dependencies you
+should have instabilities
+
+698
+00:39:54,850 --> 00:39:59,340
+what if instead
+
+699
+00:39:59,340 --> 00:40:02,600
+do you still believe in working well
+
+700
+00:40:02,600 --> 00:40:06,220
+a few a.m. so this is a whole separate
+talkin testing
+
+701
+00:40:06,220 --> 00:40:10,340
+if you have to mark a little then you
+have to mark a little
+
+702
+00:40:10,340 --> 00:40:14,140
+I sometimes are limited by our framework
+and you can trip back to things how you
+
+703
+00:40:14,140 --> 00:40:14,650
+want to
+
+704
+00:40:14,650 --> 00:40:18,530
+there's also trade after mating testing
+between it with an integration test want
+
+705
+00:40:18,530 --> 00:40:20,630
+to unit test in which do you value more
+
+706
+00:40:20,630 --> 00:40:25,530
+on myself I'm not making something super
+complex right need those tests to
+
+707
+00:40:25,530 --> 00:40:29,380
+to prove things to prove my way up out
+and to reach for integration tests first
+
+708
+00:40:29,380 --> 00:40:31,290
+just because they do test the whole
+system
+
+709
+00:40:31,290 --> 00:40:34,540
+and their even though they won't tell me
+specifically what
+
+710
+00:40:34,540 --> 00:40:38,020
+wrong if something breaks and the
+integration tests are often
+
+711
+00:40:38,020 --> 00:40:42,030
+more couple been your tests and do
+sparking so
+
+712
+00:40:42,030 --> 00:40:45,290
+you could bend that way if you wanted to
+as to what the marking but
+
+713
+00:40:45,290 --> 00:40:49,350
+markings intrinsically evil with the
+smell I don't like
+
+714
+00:40:49,350 --> 00:40:52,470
+things changed ok so
+
+715
+00:40:52,470 --> 00:40:58,460
+thank you top
+
+716
+00:40:58,460 --> 00:41:01,580
+thanks for coming get right up to the
+mike
+
+717
+00:41:01,580 --> 00:41:04,940
+yeah so I am just what you think
+
+718
+00:41:04,940 --> 00:41:08,650
+from your lingo versus man dichotomy on
+how you
+
+719
+00:41:08,650 --> 00:41:12,290
+name classes are Mon things as
+real-world
+
+720
+00:41:12,290 --> 00:41:16,730
+ish verses more computer abstract answer
+the truck
+
+721
+00:41:16,730 --> 00:41:19,920
+versus car yes
+
+722
+00:41:19,920 --> 00:41:23,700
+I like my code to read like it was
+English prose
+
+723
+00:41:23,700 --> 00:41:26,790
+I and something up for doing lately is
+
+724
+00:41:26,790 --> 00:41:31,040
+incentive many my functions after burbs
+you know sort whatever
+
+725
+00:41:31,040 --> 00:41:34,700
+I'll start naming them after now its so
+you know
+
+726
+00:41:34,700 --> 00:41:37,750
+assorted for example there is a good
+example the center library
+
+727
+00:41:37,750 --> 00:41:40,900
+so that I can just kinda Read Across and
+say well this is the
+
+728
+00:41:40,900 --> 00:41:44,280
+sort of thing at the red thing and the
+stacked thing
+
+729
+00:41:44,280 --> 00:41:47,930
+on the nice thing about that is
+consistent with the purpose of making
+
+730
+00:41:47,930 --> 00:41:49,580
+functions and abstractions
+
+731
+00:41:49,580 --> 00:41:53,240
+at all which is to hide the details I
+don't really care that it's doing a
+
+732
+00:41:53,240 --> 00:41:54,800
+quick story I just wanna sordid
+
+733
+00:41:54,800 --> 00:41:59,100
+the details may change later right so
+you know his first name goes
+
+734
+00:41:59,100 --> 00:42:03,750
+don't put anything in the name that
+isn't should become cared about the call
+
+735
+00:42:03,750 --> 00:42:04,280
+side
+
+736
+00:42:04,280 --> 00:42:08,990
+I'm
+
+737
+00:42:08,990 --> 00:42:12,500
+so I know there are a lot of other kind
+really good
+
+738
+00:42:12,500 --> 00:42:16,100
+API design principles that I guess all a
+bit more on the technical side like no
+
+739
+00:42:16,100 --> 00:42:17,070
+global stay
+
+740
+00:42:17,070 --> 00:42:21,280
+or or injector dependencies and things
+like that you think those
+
+741
+00:42:21,280 --> 00:42:24,350
+necessarily follow from these principles
+do you think they can have separate
+
+742
+00:42:24,350 --> 00:42:27,650
+Prince well that no global state thing
+is a matter decoupling
+
+743
+00:42:27,650 --> 00:42:31,140
+if you have global state everywhere but
+sharing in a couple at that point
+
+744
+00:42:31,140 --> 00:42:34,150
+I'm Peniche Witcher 2 pence injection
+one on
+
+745
+00:42:34,150 --> 00:42:38,140
+dependency injection just the idea
+castings in
+
+746
+00:42:38,140 --> 00:42:41,870
+instead a showing them behind-the-scene
+again at the decoupling
+
+747
+00:42:41,870 --> 00:42:46,110
+think it is local state exactly I
+decoupling has its
+
+748
+00:42:46,110 --> 00:42:49,740
+we caught tendrils and a lot of
+different places you can see how it
+
+749
+00:42:49,740 --> 00:42:51,810
+connects to so many different things
+
+750
+00:42:51,810 --> 00:42:55,680
+call graph by the way thank you
+
+751
+00:42:55,680 --> 00:42:59,000
+my circles back on
+
+752
+00:42:59,000 --> 00:43:02,260
+I thought your point about the plastic
+surgery PI with the
+
+753
+00:43:02,260 --> 00:43:06,220
+on with deletion was especially
+interesting as I recall correctly
+
+754
+00:43:06,220 --> 00:43:11,040
+on the actual last text search REST API
+does require you to explicitly say
+
+755
+00:43:11,040 --> 00:43:15,220
+all doesn't it didn't as a .9
+
+756
+00:43:15,220 --> 00:43:19,850
+the point something or other they made a
+fix that 1.0 be a breaking change
+
+757
+00:43:19,850 --> 00:43:23,970
+on it was a really good breaking change
+if they did I i believe the
+
+758
+00:43:23,970 --> 00:43:27,730
+the at least allow you to say oh now on
+
+759
+00:43:27,730 --> 00:43:31,740
+it do that with indexes I know I i found
+that the a interesting example of how
+
+760
+00:43:31,740 --> 00:43:32,600
+you can
+
+761
+00:43:32,600 --> 00:43:36,470
+on sorta hang yourself by when when
+translating
+
+762
+00:43:36,470 --> 00:43:39,550
+between as it were different languages
+your
+
+763
+00:43:39,550 --> 00:43:43,530
+arm the looks like what happened was
+that
+
+764
+00:43:43,530 --> 00:43:47,330
+an API that was safe on one side had
+become unsafe by applying in other
+
+765
+00:43:47,330 --> 00:43:49,620
+languages principles to it
+
+766
+00:43:49,620 --> 00:43:53,700
+really I'm in this case we wrapped it
+with a safer API because it was just too
+
+767
+00:43:53,700 --> 00:43:54,250
+great
+
+768
+00:43:54,250 --> 00:43:57,540
+version wherever you could simply
+providing non and have a delete
+
+769
+00:43:57,540 --> 00:43:59,150
+everything
+
+770
+00:43:59,150 --> 00:44:03,130
+yeah um I'm not sure if the wrapping
+introduced that I mean
+
+771
+00:44:03,130 --> 00:44:06,920
+the original recipe I was like that if
+you type class you delete more kinda
+
+772
+00:44:06,920 --> 00:44:07,950
+like the RM
+
+773
+00:44:07,950 --> 00:44:12,740
+yes star thing yes and now that im now
+that you mention it I do know that last
+
+774
+00:44:12,740 --> 00:44:14,160
+a church 1.0
+
+775
+00:44:14,160 --> 00:44:17,600
+has the same problem with indices if you
+say to leave indexes
+
+776
+00:44:17,600 --> 00:44:21,670
+and say nothing to leave the mall really
+yes bad news
+
+777
+00:44:21,670 --> 00:44:24,790
+and as a service center you can sectors
+to not but that work which
+
+778
+00:44:24,790 --> 00:44:28,370
+I said it's the opposite the question is
+trying to ask
+
+779
+00:44:28,370 --> 00:44:32,250
+the perils of completion in this case
+translation adding safety
+
+780
+00:44:32,250 --> 00:44:36,720
+yes I and when you can
+
+781
+00:44:36,720 --> 00:44:39,880
+which brings up another interesting
+question actually I mention breaking
+
+782
+00:44:39,880 --> 00:44:40,820
+changes like
+
+783
+00:44:40,820 --> 00:44:44,250
+do you think how do you think change
+management and API's fits into this
+
+784
+00:44:44,250 --> 00:44:45,860
+framework is it like
+
+785
+00:44:45,860 --> 00:44:49,650
+on is it just is a mostly just a matter
+of play
+
+786
+00:44:49,650 --> 00:44:52,670
+I mean I know there are some people who
+are advocating the philosophy of never
+
+787
+00:44:52,670 --> 00:44:53,400
+break any
+
+788
+00:44:53,400 --> 00:44:56,610
+day but then there are some people who
+are the
+
+789
+00:44:56,610 --> 00:44:59,780
+I like boys but I'm there but then
+
+790
+00:44:59,780 --> 00:45:03,130
+but or is it a matter of you have to you
+
+791
+00:45:03,130 --> 00:45:07,540
+you have to balance whether it's a
+really important change purses /a
+
+792
+00:45:07,540 --> 00:45:11,480
+just a minor thing that like so let's
+say you realize later
+
+793
+00:45:11,480 --> 00:45:15,490
+I have a better way to do something sure
+by it's not necessarily a dangerous
+
+794
+00:45:15,490 --> 00:45:17,000
+thing like taking away
+
+795
+00:45:17,000 --> 00:45:20,530
+like requiring especially tall men it's
+just a better way to do it
+
+796
+00:45:20,530 --> 00:45:24,410
+a breaking change on the less to break
+into sure your compatibility is a is
+
+797
+00:45:24,410 --> 00:45:24,890
+actually
+
+798
+00:45:24,890 --> 00:45:30,750
+on my scripts lighter than quite make
+the cut and compatibility
+
+799
+00:45:30,750 --> 00:45:34,550
+only basic philosophy is
+
+800
+00:45:34,550 --> 00:45:37,940
+you cemented burgeoning first ball if
+you really gonna change something
+
+801
+00:45:37,940 --> 00:45:41,700
+up compatibility is a place where I can
+be
+
+802
+00:45:41,700 --> 00:45:45,000
+prevailed upon to actually bought on an
+argument
+
+803
+00:45:45,000 --> 00:45:48,120
+on now if I've design AP on a decoupled
+way
+
+804
+00:45:48,120 --> 00:45:51,840
+like I was gonna this classic church API
+that
+
+805
+00:45:51,840 --> 00:45:55,690
+to had a Bach index method but then it
+set up taking a whole bunch of different
+
+806
+00:45:55,690 --> 00:45:59,610
+options I have a bunch helper procedures
+which I could use to build a big data
+
+807
+00:45:59,610 --> 00:46:00,400
+structure
+
+808
+00:46:00,400 --> 00:46:04,150
+balking many documents and past that
+into bach index
+
+809
+00:46:04,150 --> 00:46:07,790
+those things I could an obsolete
+individually deprecate them and add new
+
+810
+00:46:07,790 --> 00:46:08,430
+ones
+
+811
+00:46:08,430 --> 00:46:11,940
+here use this one instead in past bach
+index without changing bach index a
+
+812
+00:46:11,940 --> 00:46:13,400
+signature
+
+813
+00:46:13,400 --> 00:46:17,380
+that's one way to do it through
+decoupling again refused a couple right
+
+814
+00:46:17,380 --> 00:46:21,490
+on the other things compatibility adds
+another dimension to this
+
+815
+00:46:21,490 --> 00:46:25,340
+it puts us in four-dimensional space and
+so then you start thinking about
+
+816
+00:46:25,340 --> 00:46:28,810
+coupling between time periods
+
+817
+00:46:28,810 --> 00:46:35,810
+and I haven't thought about but it would
+make a great talk
+
+818
+00:46:36,300 --> 00:46:42,000
+so with the LASIK surgery sample of how
+do you think about the trade off between
+
+819
+00:46:42,000 --> 00:46:45,190
+kinda having a more transparent layer
+between
+
+820
+00:46:45,190 --> 00:46:49,540
+the library thing you're communicating
+versus building up
+
+821
+00:46:49,540 --> 00:46:53,270
+your own API matches language or your
+idea
+
+822
+00:46:53,270 --> 00:46:57,130
+how it should work and making a lot of
+translations between
+
+823
+00:46:57,130 --> 00:47:00,730
+the service talking exactly
+
+824
+00:47:00,730 --> 00:47:04,370
+what's it like who i cant find
+disaffection thought occurred well there
+
+825
+00:47:04,370 --> 00:47:05,090
+is
+
+826
+00:47:05,090 --> 00:47:09,630
+a there's what you say a very 121 API
+
+827
+00:47:09,630 --> 00:47:13,190
+hiding inside my last text search
+
+828
+00:47:13,190 --> 00:47:16,330
+and sees and request
+
+829
+00:47:16,330 --> 00:47:19,840
+I can look at them to track monitor is
+actually there is that an API
+
+830
+00:47:19,840 --> 00:47:23,580
+inside my last text search papi the with
+an expose publicly
+
+831
+00:47:23,580 --> 00:47:28,010
+echo both public but the one we advocate
+is a little bit more aware gets rid of
+
+832
+00:47:28,010 --> 00:47:30,590
+the the dangerous things but some walls
+up
+
+833
+00:47:30,590 --> 00:47:35,200
+and then on on top up I'll ask church
+there even friendlier libraries like
+
+834
+00:47:35,200 --> 00:47:36,660
+elastic utils
+
+835
+00:47:36,660 --> 00:47:40,650
+that but you do kinda Django or I'm like
+things under under filter
+
+836
+00:47:40,650 --> 00:47:44,410
+that kind of thing the way round it is
+actually build March
+
+837
+00:47:44,410 --> 00:47:47,620
+exactly there's another scripts like
+that I'd enough time for called fractal
+
+838
+00:47:47,620 --> 00:47:52,400
+us so they can API should be usable at
+any little attraction to care for
+
+839
+00:47:52,400 --> 00:47:56,630
+some cases higher level be controlled on
+starch care to
+
+840
+00:47:56,630 --> 00:47:59,840
+schorr
+
+841
+00:47:59,840 --> 00:48:03,080
+thank you X for skipping lunch
+
