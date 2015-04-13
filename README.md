@@ -1,4 +1,4 @@
-## [nbviewer view of notebook](http://nbviewer.ipython.org/github/adamw523/pycon_transcriptions_analysis/blob/master/notebooks/PyCon%20Transcripts.ipynb)
+[nbviewer view of notebook](http://nbviewer.ipython.org/github/adamw523/pycon_transcriptions_analysis/blob/master/notebooks/PyCon%20Transcripts.ipynb)
 
 # Development
 
